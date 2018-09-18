@@ -95,6 +95,7 @@ MartGoldenrod2F1:
 	db AWAKENING
 	db BURN_HEAL
 	db ICE_HEAL
+	db SILK_SCARF
 	db -1 ; end
 
 MartGoldenrod2F2:

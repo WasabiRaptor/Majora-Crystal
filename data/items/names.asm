@@ -168,7 +168,7 @@ ItemNames::
 	db "NORMAL BOX@"
 	db "GORGEOUS BOX@"
 	db "SUN STONE@"
-	db "POLKADOT BOW@"
+	db "SILK SCARF@"
 	db "TERU-SAMA@"
 	db "UP-GRADE@"
 	db "BERRY@"

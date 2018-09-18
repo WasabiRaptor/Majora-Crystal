@@ -1,10 +1,10 @@
 	db CELEBI ; 251
 
 	db 100, 100, 100, 100, 100, 100
-	evs  0,   0,   0,   0,   0,   0
+	evs  3,   0,   0,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db PSYCHIC, GRASS ; type
+	db FAIRY, GRASS ; type
 	db 45 ; catch rate
 	db 64 ; base exp
 	db NO_ITEM, MIRACLEBERRY ; items

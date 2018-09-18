@@ -179,7 +179,7 @@ TuscanyScript:
 .MetTuscany:
 	writetext TuscanyGivesGiftText
 	buttonsound
-	verbosegiveitem PINK_BOW
+	verbosegiveitem SILK_SCARF
 	iffalse TuscanyDoneScript
 	setevent EVENT_GOT_PINK_BOW_FROM_TUSCANY
 	writetext TuscanyGaveGiftText
@@ -366,7 +366,7 @@ TuscanyGivesGiftText:
 	line "duction, please"
 
 	para "accept this gift,"
-	line "a PINK BOW."
+	line "a SILK SCARF."
 	done
 
 TuscanyGaveGiftText:
