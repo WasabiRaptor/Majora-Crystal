@@ -6229,6 +6229,15 @@ LoadEnemyMon:
 ; Set level
 	ld a, [wCurPartyLevel]
 	ld [wEnemyMonLevel], a
+
+;make there be a chance for the wild pokemon to copy the player's pokemon level
+	cp 123
+	jr nz, .DoNotCopyPlayerPartyLevel
+
+	ld a, [wPartyMon1Level]
+	ld [wEnemyMonLevel], a
+
+.DoNotCopyPlayerPartyLevel
 ; Fill stats
 	ld de, wEnemyMonMaxHP
 	ld b, FALSE
@@ -6420,6 +6429,8 @@ LoadEnemyMon:
 	call CopyBytes
 
 	ret
+
+
 
 CheckSleepingTreeMon:
 ; Return carry if species is in the list
