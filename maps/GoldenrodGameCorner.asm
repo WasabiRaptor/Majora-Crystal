@@ -68,7 +68,7 @@ GoldenrodGameCornerTMVendor_LoopScript:
 	jump GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 
 .Thunder:
-    checkItem TM_THUNDER
+    checkitem TM_THUNDER
 	iftrue GoldenrodGameCornerPrizeVendor_AlreadyHaveTMScript
 	checkcoins 5500
 	ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
@@ -81,7 +81,7 @@ GoldenrodGameCornerTMVendor_LoopScript:
 	jump GoldenrodGameCornerTMVendor_FinishScript
 
 .Blizzard:
-    checkItem TM_BLIZZARD
+    checkitem TM_BLIZZARD
 	iftrue GoldenrodGameCornerPrizeVendor_AlreadyHaveTMScript
 	checkcoins 5500
 	ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
@@ -94,7 +94,7 @@ GoldenrodGameCornerTMVendor_LoopScript:
 	jump GoldenrodGameCornerTMVendor_FinishScript
 
 .FireBlast:
-    checkItem TM_FIRE_BLAST
+    checkitem TM_FIRE_BLAST
 	iftrue GoldenrodGameCornerPrizeVendor_AlreadyHaveTMScript
 	checkcoins 5500
 	ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
