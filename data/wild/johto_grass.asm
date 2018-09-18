@@ -1226,23 +1226,23 @@ JohtoGrassWildMons:
 	db 4, PIDGEY
 	db 3, WEEDLE
 	db 4, HOPPIP
-	db 4, HOPPIP
+	db 123, HOPPIP
 	; day
 	db 3, PIDGEY
 	db 3, CATERPIE
 	db 4, CATERPIE
-	db 4, PIDGEY
+	db 4, LEDYBA
 	db 3, WEEDLE
-	db 4, HOPPIP
-	db 4, HOPPIP
+	db 4, SUNKERN
+	db 123, SUNKERN
 	; nite
 	db 3, SPINARAK
 	db 3, HOOTHOOT
-	db 4, POLIWAG
+	db 4, WEEDLE
 	db 4, HOOTHOOT
-	db 3, ZUBAT
-	db 4, HOOTHOOT
-	db 4, HOOTHOOT
+	db 3, POLIWAG
+	db 4, ZUBAT
+	db 123, ZUBAT
 
 	map_id ROUTE_31
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
