@@ -1,6 +1,6 @@
 MoveDescriptions::
 ; entries correspond to move ids (see constants/move_constants.asm)
-	dw PoundDescription
+	dw PlayRoughDescription
 	dw KarateChopDescription
 	dw DoubleslapDescription
 	dw CometPunchDescription
@@ -264,9 +264,9 @@ MoveFFDescription:
 Move00Description:
 	db "?@"
 
-PoundDescription:
-	db   "Pounds with fore-"
-	next "legs or tail.@"
+PlayRoughDescription:
+	db   "Plays roughly and"
+	next "can lower attack.@"
 
 KarateChopDescription:
 	db   "Has a high criti-"

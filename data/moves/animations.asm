@@ -1,7 +1,7 @@
 BattleAnimations::
 ; entries correspond to constants/move_constants.asm
 	dw BattleAnim_0
-	dw BattleAnim_Pound
+	dw BattleAnim_PlayRough
 	dw BattleAnim_KarateChop
 	dw BattleAnim_Doubleslap
 	dw BattleAnim_CometPunch
@@ -649,7 +649,7 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
-BattleAnim_Pound:
+BattleAnim_PlayRough:
 	anim_1gfx ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_POUND
 	anim_obj ANIM_OBJ_08, 136, 56, $0
