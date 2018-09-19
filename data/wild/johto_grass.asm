@@ -1251,25 +1251,25 @@ JohtoGrassWildMons:
 	db 4, CATERPIE
 	db 5, BELLSPROUT
 	db 5, PIDGEY
-	db 4, WEEDLE
-	db 5, HOPPIP
-	db 5, HOPPIP
+	db 4, PIDGEY
+	db 5, KAKUNA
+	db 123, KAKUNA
 	; day
 	db 4, PIDGEY
 	db 4, CATERPIE
 	db 5, BELLSPROUT
 	db 5, PIDGEY
 	db 4, WEEDLE
-	db 5, HOPPIP
-	db 5, HOPPIP
+	db 5, METAPOD
+	db 123, METAPOD
 	; nite
 	db 4, SPINARAK
-	db 4, POLIWAG
-	db 5, BELLSPROUT
 	db 5, HOOTHOOT
-	db 4, ZUBAT
+	db 5, WEEDLE
+	db 5, ZUBAT
+	db 4, POLIWAG
 	db 5, GASTLY
-	db 5, GASTLY
+	db 123, GASTLY
 
 	map_id ROUTE_32
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
