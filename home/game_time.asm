@@ -36,6 +36,15 @@ UpdateGameTimer::
 	bit GAMETIMERPAUSE_TIMER_PAUSED_F, [hl]
 	ret z
 
+;accelerate the ingame time
+	ld hl, hSeconds
+	ld a, [hl]
+	inc a
+
+	cp 60 ; frames/ingame minute
+	jr nc, .ingameMinute
+	ld [hl], a
+
 ; Is the timer already capped?
 	ld hl, wGameTimeCap
 	bit 0, [hl]
@@ -49,6 +58,51 @@ UpdateGameTimer::
 	cp 60 ; frames/second
 	jr nc, .second
 
+	ld [hl], a
+	ret
+
+.ingameMinute
+	xor a
+	ld [hl], a
+
+	ld hl, hMinutes
+	ld a, [hl]
+	inc a
+
+	cp 60 ;seconds/ingame hour
+	jr nc, .ingameHour
+	ld [hl], a
+	ret
+
+.ingameHour
+	xor a
+	ld [hl], a
+
+	ld hl, hHours
+	ld a, [hl]
+	inc a
+
+	cp 24 ;minutes/ingame day
+	jr nc, .ingameDay
+	ld [hl], a
+	ret
+
+.ingameDay
+	xor a
+	ld [hl], a
+
+	ld hl, wCurDay
+	ld a, [hl]
+	inc a
+
+	cp 7 ;about 2.8 hours/ingame week 
+	jr nc, .EndOfCycle
+	ld [hl], a
+	ret
+
+.EndOfCycle
+	;make the week actually cycle for now
+	xor a
 	ld [hl], a
 	ret
 

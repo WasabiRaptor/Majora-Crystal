@@ -1,25 +1,6 @@
-Unreferenced_StopRTC:
-	ld a, SRAM_ENABLE
-	ld [MBC3SRamEnable], a
-	call LatchClock
-	ld a, RTC_DH
-	ld [MBC3SRamBank], a
-	ld a, [MBC3RTC]
-	set 6, a ; halt
-	ld [MBC3RTC], a
-	call CloseSRAM
-	ret
+
 
 StartRTC:
-	ld a, SRAM_ENABLE
-	ld [MBC3SRamEnable], a
-	call LatchClock
-	ld a, RTC_DH
-	ld [MBC3SRamBank], a
-	ld a, [MBC3RTC]
-	res 6, a ; halt
-	ld [MBC3RTC], a
-	call CloseSRAM
 	ret
 
 GetTimeOfDay::
@@ -89,9 +70,8 @@ SaveRTC:
 	ret
 
 StartClock::
-	call GetClock
 	call Function1409b
-	call FixDays
+	;call FixDays
 	jr nc, .skip_set
 	; bit 5: Day count exceeds 139
 	; bit 6: Day count exceeds 255
@@ -153,8 +133,7 @@ Function140ae:
 	ret
 
 _InitTime::
-	call GetClock
-	call FixDays
+	;call FixDays
 	ld hl, hRTCSeconds
 	ld de, wStartSecond
 
