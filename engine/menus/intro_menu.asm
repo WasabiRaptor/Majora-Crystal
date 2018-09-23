@@ -625,7 +625,6 @@ Continue_DisplayGameTime:
 	jp PrintNum
 
 OakSpeech:
-	farcall InitClock
 	call RotateFourPalettesLeft
 	call ClearTileMap
 
