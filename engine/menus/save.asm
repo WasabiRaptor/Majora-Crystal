@@ -229,9 +229,6 @@ _SavingDontTurnOffThePower:
 	call SavingDontTurnOffThePower
 SavedTheGame:
 	call _SaveGameData
-	; wait 32 frames
-	ld c, 32
-	call DelayFrames
 	; copy the original text speed setting to the stack
 	ld a, [wOptions]
 	push af
@@ -247,12 +244,9 @@ SavedTheGame:
 	ld de, SFX_SAVE
 	call WaitPlaySFX
 	call WaitSFX
-	; wait 30 frames
-	ld c, 30
-	call DelayFrames
 	ret
 
-_SaveGameData:
+_SaveGameData::
 	ld a, TRUE
 	ld [wSaveFileExists], a
 	farcall StageRTCTimeForSave

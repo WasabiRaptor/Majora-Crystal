@@ -1538,3 +1538,23 @@ _OakText5::
 	para "That's why I study"
 	line "#MON every day."
 	prompt
+
+SomethingIsStirringText::
+	text "...Something is"
+	line "stirring."
+	done
+
+SomethingIsApproachingText::
+	text "...Something is"
+	line "approaching."
+	done
+
+ItsGettingCloserText::
+	text "It's getting"
+	line "closer!"
+	done
+
+ItsRightNearText::
+	text "It's right near!"
+	line "It's gusting hard!"
+	done

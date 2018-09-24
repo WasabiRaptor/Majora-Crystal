@@ -36,6 +36,13 @@ UpdateGameTimer::
 	bit GAMETIMERPAUSE_TIMER_PAUSED_F, [hl]
 	ret z
 
+;check if out of time
+	ld hl, wCurDay
+	ld a, [hl]
+
+	cp 7 ;about 2.8 hours/ingame week 
+	jr nc, .SkipAcceleratingTime
+
 ;accelerate the ingame time
 	ld hl, hSeconds
 	ld a, [hl]
@@ -45,6 +52,7 @@ UpdateGameTimer::
 	jr nc, .ingameMinute
 	ld [hl], a
 
+.SkipAcceleratingTime
 ; Is the timer already capped?
 	ld hl, wGameTimeCap
 	bit 0, [hl]
@@ -94,16 +102,13 @@ UpdateGameTimer::
 	ld hl, wCurDay
 	ld a, [hl]
 	inc a
-
-	cp 7 ;about 2.8 hours/ingame week 
-	jr nc, .EndOfCycle
+	cp 7
+	jr nc, .ItsRightNear
 	ld [hl], a
 	ret
 
-.EndOfCycle
-	;make the week actually cycle for now
-	xor a
-	ld [hl], a
+.ItsRightNear
+	setevent EVENT_ITS_RIGHT_NEAR
 	ret
 
 .second
