@@ -2745,7 +2745,13 @@ wYanmaMapGroup:: db ; dc5a
 wYanmaMapNumber:: db
 wPlayerMonSelection:: ds 3
 wdc5f:: ds 1
-wdc60:: ds 19
+wdc60:: ds 18
+wCycleProgress:: db
+;0 nothing
+;1 Something is stirring
+;2 Something is approaching
+;3 Its getting closer
+;4 Its right near
 
 wStepCount:: db ; dc73
 wPoisonStepCount:: db ; dc74

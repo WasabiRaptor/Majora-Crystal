@@ -1,27 +1,46 @@
 EndOfCycleStep::
-	ld a, BANK(CheckCycleEvents)
-	ld hl, CheckCycleEvents
-	call CallScript
-	scf
-	ret
+	ld hl, wCycleProgress
+	ld a, [hl]
+	cp 0 
+	jr nc, .nope
+;I think this might be where the issues are?
+	cp 4
+	jr nc, .ItsRightNearScript
+	cp 3
+	jr nc, .ItsGettingCloserScript
+	cp 2
+	jr nc, .SomethingIsApproachingScript
+	cp 1
+	jr nc, .SomethingIsStirringScript
 
-CheckCycleEvents:
-	checkevent EVENT_ITS_RIGHT_NEAR
-	iftrue .ItsRightNearScript
+;this is how you need to call a script from a footstep and I know this is correct
+.ItsRightNearScript
+	ld a, BANK(ItsRightNearScript)
+	ld hl, ItsRightNearScript
+	jp .callscript
 
-	checkevent EVENT_ITS_GETTING_CLOSER
-	iftrue .ItsGettingCloserScript
+.ItsGettingCloserScript
+	ld a, BANK(ItsGettingCloserScript)
+	ld hl, ItsGettingCloserScript
+	jp .callscript
 
-	checkevent EVENT_SOMETHING_IS_APPROACHING
-	iftrue .SomethingIsApproachingScript
-
-	checkevent EVENT_SOMETHING_IS_STIRRING
-	iftrue .SomethingIsStirringScript
-	end
-
+.SomethingIsApproachingScript
+	ld a, BANK(SomethingIsApproachingScript)
+	ld hl, SomethingIsApproachingScript
+	jp .callscript
 
 .SomethingIsStirringScript
-	clearevent EVENT_SOMETHING_IS_STIRRING
+	ld a, BANK(SomethingIsStirringScript)
+	ld hl, SomethingIsStirringScript
+.callscript
+	call CallScript
+	scf
+	ld hl, wCycleProgress ;set it to 0 so that the messages aren't triggered multiple times
+	ld [hl], 0
+.nope
+	ret
+
+SomethingIsStirringScript:
 	opentext
 	writetext .SomethingIsStirringtext
 	waitbutton
@@ -32,9 +51,7 @@ CheckCycleEvents:
 	text_jump SomethingIsStirringText
 	db "@"
 
-.SomethingIsApproachingScript
-	clearevent EVENT_SOMETHING_IS_STIRRING
-	clearevent EVENT_SOMETHING_IS_APPROACHING
+SomethingIsApproachingScript:
 	opentext
 	writetext .SomethingIsApproachingtext
 	waitbutton
@@ -45,10 +62,7 @@ CheckCycleEvents:
 	text_jump SomethingIsApproachingText
 	db "@"
 
-.ItsGettingCloserScript
-	clearevent EVENT_SOMETHING_IS_STIRRING
-	clearevent EVENT_SOMETHING_IS_APPROACHING
-	clearevent EVENT_ITS_GETTING_CLOSER
+ItsGettingCloserScript:
 	opentext
 	writetext .ItsGettingClosertext
 	waitbutton
@@ -59,15 +73,11 @@ CheckCycleEvents:
 	text_jump ItsGettingCloserText
 	db "@"
 
-.ItsRightNearScript
-	clearevent EVENT_SOMETHING_IS_STIRRING
-	clearevent EVENT_SOMETHING_IS_APPROACHING
-	clearevent EVENT_ITS_GETTING_CLOSER
-	clearevent EVENT_ITS_RIGHT_NEAR
+ItsRightNearScript:
 	opentext
 	writetext .ItsRightNeartext
+	;farcall _SaveGameData
 	waitbutton
-	farcall _SaveGameData
 	closetext
 	end
 

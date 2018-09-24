@@ -370,7 +370,15 @@ Continue:
 	jr z, .SpawnAfterE4
 	ld a, MAPSETUP_CONTINUE
 	ldh [hMapEntryMethod], a
+	ld hl, wCurDay
+	ld [hl], 0
+	ld a, [wSpawnAfterChampion]
+	cp 0
+	jr nz, .ResetStuff
 	jp FinishContinueFunction
+
+.ResetStuff
+	ret
 
 .FailToLoad:
 	ret

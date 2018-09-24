@@ -36,7 +36,7 @@ UpdateGameTimer::
 	bit GAMETIMERPAUSE_TIMER_PAUSED_F, [hl]
 	ret z
 
-;check if out of time
+;check if out of time and set some time events
 	ld hl, wCurDay
 	ld a, [hl]
 
@@ -77,6 +77,8 @@ UpdateGameTimer::
 	ld a, [hl]
 	inc a
 
+	;just add some more inc a here if you need to speed up the clock for testing purposes but make sure its a factor of 60
+
 	cp 60 ;seconds/ingame hour
 	jr nc, .ingameHour
 	ld [hl], a
@@ -93,6 +95,26 @@ UpdateGameTimer::
 	cp 24 ;minutes/ingame day
 	jr nc, .ingameDay
 	ld [hl], a
+
+	;check some time based things hopefully, this might be where the issues are
+	ld hl, wCurDay
+	ld a, [hl]
+
+	cp SATURDAY 
+	jr nc, .FinalDay
+	ret
+
+.FinalDay
+	ld hl, hHours
+	ld a, [hl]
+	cp 18
+	jr nc, .ItsGettingCloser 
+
+	cp 12
+	jr nc, .SomethingIsApproaching
+
+	cp 0
+	jr nc, .SomethingIsStirring
 	ret
 
 .ingameDay
@@ -102,13 +124,31 @@ UpdateGameTimer::
 	ld hl, wCurDay
 	ld a, [hl]
 	inc a
-	cp 7
-	jr nc, .ItsRightNear
 	ld [hl], a
+
+	cp 7 ;use weekdays in allcaps or 0-6 here to test for actual days, if its 7 that means time is up
+	jr nc, .ItsRightNear
+	ret
+
+;these should correspond to things in endofcycle.asm that get checked upon a footstep
+.SomethingIsStirring
+	ld hl, wCycleProgress
+	ld [hl], 1
+	ret
+
+.SomethingIsApproaching
+	ld hl, wCycleProgress
+	ld [hl], 2
+	ret
+
+.ItsGettingCloser
+	ld hl, wCycleProgress
+	ld [hl], 3
 	ret
 
 .ItsRightNear
-	setevent EVENT_ITS_RIGHT_NEAR
+	ld hl, wCycleProgress
+	ld [hl], 4
 	ret
 
 .second
