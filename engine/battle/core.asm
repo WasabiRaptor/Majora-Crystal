@@ -6228,7 +6228,6 @@ LoadEnemyMon:
 	ld [wEnemyMonHappiness], a
 ; Set level
 	ld a, [wCurPartyLevel]
-	ld [wEnemyMonLevel], a
 
 ;make there be a chance for the wild pokemon to copy the player's pokemon level
 	cp 123
@@ -6273,9 +6272,9 @@ LoadEnemyMon:
 	call SimpleDivide
 	ld a, b
 	ld [wCurPartyLevel], a
-	ld [wEnemyMonLevel], a
 
 .DoNotCopyPlayerPartyLevel
+	ld [wEnemyMonLevel], a
 ; Fill stats
 	ld de, wEnemyMonMaxHP
 	ld b, FALSE
