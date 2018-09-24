@@ -6233,8 +6233,46 @@ LoadEnemyMon:
 ;make there be a chance for the wild pokemon to copy the player's pokemon level
 	cp 123
 	jr nz, .DoNotCopyPlayerPartyLevel
+	
+	ld a, [wPartyMon6Level]
+	ld b, a
 
+	ld a, [wPartyMon5Level]
+	ld c, a
+	ld a, b
+	add a, c
+	ld b, a
+	
+	ld a, [wPartyMon4Level]
+	ld c, a
+	ld a, b
+	add a, c
+	ld b, a
+	
+	ld a, [wPartyMon3Level]
+	ld c, a
+	ld a, b
+	add a, c
+	ld b, a
+	
+	ld a, [wPartyMon2Level]
+	ld c, a
+	ld a, b
+	add a, c
+	ld b, a
+	
 	ld a, [wPartyMon1Level]
+	ld c, a
+	ld a, b
+	add a, c
+	ld b, a
+	
+	ld a, [wPartyCount]
+	ld c, a
+	ld a, b
+	call SimpleDivide
+	ld a, b
+	ld [wCurPartyLevel], a
 	ld [wEnemyMonLevel], a
 
 .DoNotCopyPlayerPartyLevel
