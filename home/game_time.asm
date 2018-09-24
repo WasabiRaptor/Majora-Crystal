@@ -36,7 +36,7 @@ UpdateGameTimer::
 	bit GAMETIMERPAUSE_TIMER_PAUSED_F, [hl]
 	ret z
 
-;check if out of time and set some time events
+;check if out of time and skip if time is up
 	ld hl, wCurDay
 	ld a, [hl]
 
@@ -77,7 +77,7 @@ UpdateGameTimer::
 	ld a, [hl]
 	inc a
 
-	;just add some more inc a here if you need to speed up the clock for testing purposes but make sure its a factor of 60
+	;just add some more 'inc a' here if you need to speed up the clock for testing purposes but make sure its a factor of 60
 
 	cp 60 ;seconds/ingame hour
 	jr nc, .ingameHour

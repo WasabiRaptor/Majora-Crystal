@@ -13,7 +13,7 @@ EndOfCycleStep::
 	cp 1
 	jr nc, .SomethingIsStirringScript
 
-;this is how you need to call a script from a footstep and I know this is correct
+;this is how you need to call a script from a footstep and I know these are correct as when forced to be jumped to they call their script correctly and the game continues but the part above I just don't know why it isn't working and I don't know if its because I've done all the cp's and jumps incorrectly or if its because in home/game_time.asm its never actually writing to wCycleProgress for some reason? I just don't know what I've done wrong here
 .ItsRightNearScript
 	ld a, BANK(ItsRightNearScript)
 	ld hl, ItsRightNearScript
