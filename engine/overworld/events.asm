@@ -865,10 +865,6 @@ CountStep:
 	and a
 	jr nz, .done
 
-	;check if the end of the cycle has passed
-	farcall EndOfCycleStep
-	jr c, .doscript
-
 	; If there is a special phone call, don't count the step.
 	farcall CheckSpecialPhoneCall
 	jr c, .doscript
@@ -913,6 +909,11 @@ CountStep:
 	jr c, .doscript
 
 .skip_poison
+
+	;check if the end of the cycle has passed
+	farcall EndOfCycleStep
+	jr c, .doscript
+
 	farcall DoBikeStep
 
 .done
