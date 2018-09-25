@@ -416,14 +416,6 @@ IntroScenes:
 	dw IntroScene12
 	dw IntroScene13
 	dw IntroScene14
-	dw IntroScene15
-	dw IntroScene16
-	dw IntroScene17
-	dw IntroScene18
-	dw IntroScene19
-	dw IntroScene20
-	dw IntroScene21
-	dw IntroScene22
 	dw IntroScene23
 	dw IntroScene24
 	dw IntroScene25
@@ -749,20 +741,8 @@ IntroScene8:
 	ld a, [hl]
 	inc [hl]
 	cp $40
-	jr z, .suicune_sound
-	jr nc, .animate_suicune
-	call Intro_PerspectiveScrollBG
-	ret
-
-.suicune_sound
-	ld de, SFX_INTRO_SUICUNE_3
-	call PlaySFX
-.animate_suicune
-	ld a, [wGlobalAnimXOffset]
-	and a
 	jr z, .finish
-	sub $8
-	ld [wGlobalAnimXOffset], a
+	call Intro_PerspectiveScrollBG
 	ret
 
 .finish
@@ -967,42 +947,55 @@ IntroScene12:
 	db -1
 
 IntroScene13:
-; Switch scenes again.
+; More setup. Transition to the outdoor scene.
 	call Intro_ClearBGPals
 	call ClearSprites
 	call ClearTileMap
 	xor a
 	ldh [hBGMapMode], a
+
 	ld a, $1
 	ldh [rVBK], a
 	ld hl, IntroTilemap003
 	debgcoord 0, 0
 	call Intro_DecompressRequest2bpp_64Tiles
+
+	ld hl, IntroPichuWooperGFX
+	ld de, vTiles0 tile $00
+	call Intro_DecompressRequest2bpp_128Tiles
+
 	ld a, $0
 	ldh [rVBK], a
 	ld hl, IntroSuicuneRunGFX
 	ld de, vTiles0 tile $00
 	call Intro_DecompressRequest2bpp_255Tiles
+
 	ld hl, IntroBackgroundGFX
 	ld de, vTiles2 tile $00
 	call Intro_DecompressRequest2bpp_128Tiles
+
 	ld hl, IntroTilemap004
 	debgcoord 0, 0
 	call Intro_DecompressRequest2bpp_64Tiles
+
 	ldh a, [rSVBK]
 	push af
 	ld a, BANK(wBGPals1)
 	ldh [rSVBK], a
+
 	ld hl, IntroPalette1
 	ld de, wBGPals1
 	ld bc, 16 palettes
 	call CopyBytes
+
 	ld hl, IntroPalette1
 	ld de, wBGPals2
 	ld bc, 16 palettes
 	call CopyBytes
+
 	pop af
 	ldh [rSVBK], a
+
 	xor a
 	ldh [hSCX], a
 	ldh [hSCY], a
@@ -1010,13 +1003,12 @@ IntroScene13:
 	ldh [hWX], a
 	ld a, $90
 	ldh [hWY], a
+	call Intro_ResetLYOverrides
 	farcall ClearSpriteAnims
-	depixel 13, 11, 4, 0
+	depixel 13, 27, 4, 0
 	ld a, SPRITE_ANIM_INDEX_INTRO_SUICUNE
 	call _InitSpriteAnimStruct
-	ld de, MUSIC_CRYSTAL_OPENING
-	call PlayMusic
-	xor a
+	ld a, $f0
 	ld [wGlobalAnimXOffset], a
 	call Intro_SetCGBPalUpdate
 	xor a
@@ -1026,334 +1018,29 @@ IntroScene13:
 	ret
 
 IntroScene14:
-; Suicune runs then jumps.
-	ldh a, [hSCX]
-	sub 10
-	ldh [hSCX], a
 	ld hl, wIntroSceneFrameCounter
+	xor a
 	ld a, [hl]
 	inc [hl]
-	cp $80
-	jr z, .done
-	cp $60
-	jr z, .jump
-	jr nc, .asm_e4e1a
-	cp $40
-	jr nc, .asm_e4e33
+	cp $C0
+	jr z, .finish
+	call Intro_PerspectiveScrollBG
 	ret
 
-.jump
-	ld de, SFX_INTRO_SUICUNE_4
+.finish
+	ld de, SFX_INTRO_SUICUNE_2
 	call PlaySFX
 
-.asm_e4e1a
-	ld a, $1
-	ld [wIntroSceneTimer], a
-	ld a, [wGlobalAnimXOffset]
-	cp $88
-	jr c, .asm_e4e2c
-	sub $8
-	ld [wGlobalAnimXOffset], a
-	ret
-
-.asm_e4e2c
 	farcall DeinitializeAllSprites
-	ret
 
-.asm_e4e33
-	ld a, [wGlobalAnimXOffset]
-	sub $2
-	ld [wGlobalAnimXOffset], a
-	ret
-
-.done
-	call NextIntroScene
-	ret
-
-IntroScene15:
-; Transition to a new scene.
-	call Intro_ClearBGPals
-	call ClearSprites
-	call ClearTileMap
-	xor a
-	ldh [hBGMapMode], a
-	ld a, $1
-	ldh [rVBK], a
-	ld hl, IntroTilemap009
-	debgcoord 0, 0
-	call Intro_DecompressRequest2bpp_64Tiles
-	ld a, $0
-	ldh [rVBK], a
-	ld hl, IntroSuicuneJumpGFX
-	ld de, vTiles2 tile $00
-	call Intro_DecompressRequest2bpp_128Tiles
-	ld hl, IntroUnownBackGFX
-	ld de, vTiles0 tile $00
-	call Intro_DecompressRequest2bpp_128Tiles
-	ld de, IntroGrass4GFX
-	ld hl, vTiles1 tile $00
-	lb bc, BANK(IntroGrass4GFX), 1
-	call Request2bpp
-	ld hl, IntroTilemap010
-	debgcoord 0, 0
-	call Intro_DecompressRequest2bpp_64Tiles
-	call Intro_LoadTilemap
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wBGPals1)
-	ldh [rSVBK], a
-	ld hl, IntroPalette5
-	ld de, wBGPals1
-	ld bc, 16 palettes
-	call CopyBytes
-	ld hl, IntroPalette5
-	ld de, wBGPals2
-	ld bc, 16 palettes
-	call CopyBytes
-	pop af
-	ldh [rSVBK], a
-	xor a
-	ldh [hSCX], a
-	ld a, $90
-	ldh [hSCY], a
-	ld a, $7
-	ldh [hWX], a
-	ld a, $90
-	ldh [hWY], a
-	farcall ClearSpriteAnims
-	call Intro_SetCGBPalUpdate
-	depixel 8, 5
-	ld a, SPRITE_ANIM_INDEX_INTRO_UNOWN_F
-	call _InitSpriteAnimStruct
-	depixel 12, 0
-	ld a, SPRITE_ANIM_INDEX_INTRO_SUICUNE_AWAY
-	call _InitSpriteAnimStruct
-	xor a
-	ld [wIntroSceneFrameCounter], a
-	ld [wIntroSceneTimer], a
-	call NextIntroScene
-	ret
-
-IntroScene16:
-; Suicune shows its face. An Unown appears in front.
-	ld hl, wIntroSceneFrameCounter
-	ld a, [hl]
-	inc [hl]
-	cp $80
-	jr nc, .done
-	call Intro_Scene16_AnimateSuicune
-	ldh a, [hSCY]
-	and a
-	ret z
-	add 8
-	ldh [hSCY], a
-	ret
-.done
-	call NextIntroScene
-	ret
-
-IntroScene17:
-; ...
-	call Intro_ClearBGPals
-	call ClearSprites
-	call ClearTileMap
-	xor a
-	ldh [hBGMapMode], a
-	ld a, $1
-	ldh [rVBK], a
-	ld hl, IntroTilemap011
-	debgcoord 0, 0
-	call Intro_DecompressRequest2bpp_64Tiles
-	ld a, $0
-	ldh [rVBK], a
-	ld hl, IntroSuicuneCloseGFX
-	ld de, vTiles1 tile $00
-	call Intro_DecompressRequest2bpp_255Tiles
-	ld hl, IntroTilemap012
-	debgcoord 0, 0
-	call Intro_DecompressRequest2bpp_64Tiles
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wBGPals1)
-	ldh [rSVBK], a
-	ld hl, IntroPalette4
-	ld de, wBGPals1
-	ld bc, 16 palettes
-	call CopyBytes
-	ld hl, IntroPalette4
-	ld de, wBGPals2
-	ld bc, 16 palettes
-	call CopyBytes
-	pop af
-	ldh [rSVBK], a
-	xor a
-	ldh [hSCX], a
-	ldh [hSCY], a
-	ld a, $7
-	ldh [hWX], a
-	ld a, $90
-	ldh [hWY], a
-	farcall ClearSpriteAnims
-	call Intro_SetCGBPalUpdate
-	xor a
-	ld [wIntroSceneFrameCounter], a
-	ld [wIntroSceneTimer], a
-	call NextIntroScene
-	ret
-
-IntroScene18:
-; Suicune close up.
-	ld hl, wIntroSceneFrameCounter
-	ld a, [hl]
-	inc [hl]
-	cp $60
-	jr nc, .done
-	ldh a, [hSCX]
-	cp $60
-	ret z
-	add 8
-	ldh [hSCX], a
-	ret
-.done
-	call NextIntroScene
-	ret
-
-IntroScene19:
-; More setup.
-	call Intro_ClearBGPals
-	call ClearSprites
-	call ClearTileMap
-	xor a
-	ldh [hBGMapMode], a
-	ld a, $1
-	ldh [rVBK], a
-	ld hl, IntroTilemap013
-	debgcoord 0, 0
-	call Intro_DecompressRequest2bpp_64Tiles
-	ld a, $0
-	ldh [rVBK], a
-	ld hl, IntroSuicuneBackGFX
-	ld de, vTiles2 tile $00
-	call Intro_DecompressRequest2bpp_128Tiles
-	ld hl, IntroUnownsGFX
-	ld de, vTiles1 tile $00
-	call Intro_DecompressRequest2bpp_128Tiles
-	ld de, IntroGrass4GFX
-	ld hl, vTiles1 tile $7f
-	lb bc, BANK(IntroGrass4GFX), 1
-	call Request2bpp
-	ld hl, IntroTilemap014
-	debgcoord 0, 0
-	call Intro_DecompressRequest2bpp_64Tiles
-	call Intro_LoadTilemap
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wBGPals1)
-	ldh [rSVBK], a
-	ld hl, IntroPalette5
-	ld de, wBGPals1
-	ld bc, 16 palettes
-	call CopyBytes
-	ld hl, IntroPalette5
-	ld de, wBGPals2
-	ld bc, 16 palettes
-	call CopyBytes
-	pop af
-	ldh [rSVBK], a
-	xor a
-	ldh [hSCX], a
-	ld a, $d8
-	ldh [hSCY], a
-	ld a, $7
-	ldh [hWX], a
-	ld a, $90
-	ldh [hWY], a
-	farcall ClearSpriteAnims
-	ld hl, wSpriteAnimDict
-	xor a
-	ld [hli], a
-	ld [hl], $7f
-	call Intro_SetCGBPalUpdate
-	depixel 12, 0
-	ld a, SPRITE_ANIM_INDEX_INTRO_SUICUNE_AWAY
-	call _InitSpriteAnimStruct
-	xor a
-	ld [wIntroSceneFrameCounter], a
-	ld [wIntroSceneTimer], a
-	call NextIntroScene
-	ret
-
-IntroScene20:
-; Suicune running away. A bunch of Unown appear.
-	ld hl, wIntroSceneFrameCounter
-	ld a, [hl]
-	inc [hl]
-	cp $98
-	jr nc, .finished
-	cp $58
-	ret nc
-	cp $40
-	jr nc, .AppearUnown
-	cp $28
-	ret nc
-	ldh a, [hSCY]
-	inc a
-	ldh [hSCY], a
-	ret
-
-.AppearUnown:
-	sub $18
-	ld c, a
-	and $3
-	cp $3
-	ret nz
-	ld a, c
-	and $1c
-	srl a
-	srl a
-	ld [wIntroSceneTimer], a
-	xor a
-	call Intro_Scene20_AppearUnown
-	ret
-; unused
-	ld a, c
-	and $1c
-	srl a
-	srl a
-	ld [wIntroSceneTimer], a
-	ld a, 1
-	call Intro_Scene20_AppearUnown
-	ret
-
-.finished
-	call NextIntroScene
-	ret
-
-IntroScene21:
-; Suicune gets more distant and turns black.
-	call Intro_ColoredSuicuneFrameSwap
-	ld c, 3
-	call DelayFrames
-	xor a
-	ldh [hBGMapMode], a
-	ld [wIntroSceneFrameCounter], a
-	ld [wIntroSceneTimer], a
-	call NextIntroScene
-	ret
-
-IntroScene22:
-	ld hl, wIntroSceneFrameCounter
-	ld a, [hl]
-	inc [hl]
-	cp $8
-	jr nc, .done
-	ret
-.done
-	farcall DeinitializeAllSprites
 	call NextIntroScene
 	ret
 
 IntroScene23:
+	xor a
+	ldh [hBGMapMode], a
+	ldh [hLCDCPointer], a
+
 	xor a
 	ld [wIntroSceneFrameCounter], a
 	call NextIntroScene
