@@ -22,7 +22,6 @@ MeetMomLeftScript:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 
 MeetMomRightScript:
-	credits
 	playmusic MUSIC_MOM
 	showemote EMOTE_SHOCK, PLAYERSHOUSE1F_MOM1, 15
 	turnobject PLAYER, LEFT
@@ -154,6 +153,7 @@ NeighborScript:
 	end
 
 TVScript:
+	credits
 	jumptext TVText
 
 StoveScript:

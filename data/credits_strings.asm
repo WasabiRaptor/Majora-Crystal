@@ -214,10 +214,10 @@ CreditsStrings:
 .UsCoordination:      db "  US COORDINATION@"
 .TextTranslation:     db "  TEXT TRANSLATION@"
 .PaadTesting:         db "    PAAD TESTING@"
-.HackCreators         db "    HACK CREATORS@"
-.Wasabi_Raptor        db "    WASABI RAPTOR@"
-.Thalins              db "       THALINS@"
-.NotnatTlikehis       db "   NOTNAT TLIKEHIS@"
+.HackCreators         db "   HACK CREATORS@"
+.Wasabi_Raptor        db "   WASABI RAPTOR@"
+.Thalins              db "      THALINS@"
+.NotnatTlikehis       db "  NOTNAT TLIKEHIS@"
 
 .Copyright:
 	;    (C) 1  9  9  5 - 2  0  0  1     N  i  n  t  e  n  d  o

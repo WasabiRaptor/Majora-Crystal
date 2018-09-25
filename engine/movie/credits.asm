@@ -499,7 +499,7 @@ GetCreditsPalette:
 .GetPalAddress:
 ; Each set of palette data is 24 bytes long.
 	ld a, [wCreditsBorderMon] ; scene
-	and %11
+	and %111
 	add a
 	add a ; * 8
 	add a
@@ -549,7 +549,7 @@ Credits_LoadBorderGFX:
 	and %11
 	ld [hl], a
 	ld a, [wCreditsBorderMon]
-	and %11
+	and %111
 	add a
 	add a
 	add e
@@ -584,10 +584,10 @@ Credits_LoadBorderGFX:
 	dw CreditsIgglybuffGFX + 16 tiles
 	dw CreditsIgglybuffGFX + 32 tiles
 	dw CreditsIgglybuffGFX + 48 tiles
-	dw CreditsIgglybuffGFX
-	dw CreditsIgglybuffGFX + 16 tiles
-	dw CreditsIgglybuffGFX + 32 tiles
-	dw CreditsIgglybuffGFX + 48 tiles
+	dw CreditsCelebiGFX
+	dw CreditsCelebiGFX + 16 tiles
+	dw CreditsCelebiGFX + 32 tiles
+	dw CreditsCelebiGFX + 48 tiles
 
 Credits_TheEnd:
 	ld a, $40
@@ -610,6 +610,7 @@ CreditsPichuGFX:     INCBIN "gfx/credits/pichu.2bpp"
 CreditsSmoochumGFX:  INCBIN "gfx/credits/smoochum.2bpp"
 CreditsDittoGFX:     INCBIN "gfx/credits/ditto.2bpp"
 CreditsIgglybuffGFX: INCBIN "gfx/credits/igglybuff.2bpp"
+CreditsCelebiGFX:    INCBIN "gfx/credits/celebi.2bpp"
 
 INCLUDE "data/credits_script.asm"
 INCLUDE "data/credits_strings.asm"
