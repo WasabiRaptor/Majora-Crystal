@@ -416,6 +416,8 @@ IntroScenes:
 	dw IntroScene12
 	dw IntroScene13
 	dw IntroScene14
+	dw IntroScene15
+	dw IntroScene16
 	dw IntroScene23
 	dw IntroScene24
 	dw IntroScene25
@@ -1030,12 +1032,61 @@ IntroScene14:
 .finish
 	ld de, SFX_INTRO_SUICUNE_2
 	call PlaySFX
-
+	
 	farcall DeinitializeAllSprites
 
 	call NextIntroScene
 	ret
 
+IntroScene15:
+; Set up the next scene (same bg).
+	xor a
+	ldh [hLCDCPointer], a
+	call ClearSprites
+	hlcoord 0, 0, wAttrMap
+	; first 12 rows have palette 1
+	ld bc, 12 * SCREEN_WIDTH
+	ld a, $1
+	call ByteFill
+	; middle 3 rows have palette 2
+	ld bc, 3 * SCREEN_WIDTH
+	ld a, $2
+	call ByteFill
+	; last three rows have palette 3
+	ld bc, 3 * SCREEN_WIDTH
+	ld a, $3
+	call ByteFill
+	ld a, $2
+	ldh [hBGMapMode], a
+	call DelayFrame
+	call DelayFrame
+	call DelayFrame
+	ld a, LOW(vBGMap0 + $c) ; $c
+	ldh [hBGMapAddress], a
+	call DelayFrame
+	call DelayFrame
+	call DelayFrame
+	xor a
+	ldh [hBGMapMode], a
+	ldh [hBGMapAddress], a
+	ld [wGlobalAnimXOffset], a
+	xor a
+	ld [wIntroSceneFrameCounter], a
+	call NextIntroScene
+	ret
+
+IntroScene16:
+	call Intro_RustleGrass
+	ld hl, wIntroSceneFrameCounter
+	ld a, [hl]
+	inc [hl]
+	cp $c0
+	jr z, .done
+	ret
+.done
+	call NextIntroScene
+	ret
+	
 IntroScene23:
 	xor a
 	ldh [hBGMapMode], a
