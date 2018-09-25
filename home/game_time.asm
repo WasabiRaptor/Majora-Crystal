@@ -101,20 +101,20 @@ UpdateGameTimer::
 	ld a, [hl]
 
 	cp SATURDAY 
-	jr nc, .FinalDay
+	jr z, .FinalDay
 	ret
 
 .FinalDay
 	ld hl, hHours
 	ld a, [hl]
 	cp 18
-	jr nc, .ItsGettingCloser 
+	jr z, .ItsGettingCloser 
 
 	cp 12
-	jr nc, .SomethingIsApproaching
+	jr z, .SomethingIsApproaching
 
 	cp 0
-	jr nc, .SomethingIsStirring
+	jr z, .SomethingIsStirring
 	ret
 
 .ingameDay

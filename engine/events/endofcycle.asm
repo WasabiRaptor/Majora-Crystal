@@ -1,19 +1,23 @@
 EndOfCycleStep::
 	ld hl, wCycleProgress
 	ld a, [hl]
+
 	cp 0 
-	jr nc, .nope
+	jr z, .nope
 ;I think this might be where the issues are?
 	cp 4
-	jr nc, .ItsRightNearScript
+	jr z, .ItsRightNearScript
 	cp 3
-	jr nc, .ItsGettingCloserScript
+	jr z, .ItsGettingCloserScript
 	cp 2
-	jr nc, .SomethingIsApproachingScript
+	jr z, .SomethingIsApproachingScript
 	cp 1
-	jr nc, .SomethingIsStirringScript
+	jr z, .SomethingIsStirringScript
 
 ;this is how you need to call a script from a footstep and I know these are correct as when forced to be jumped to they call their script correctly and the game continues but the part above I just don't know why it isn't working and I don't know if its because I've done all the cp's and jumps incorrectly or if its because in home/game_time.asm its never actually writing to wCycleProgress for some reason? I just don't know what I've done wrong here
+
+;ey it works now just had to do jr z because I was dumb
+
 .ItsRightNearScript
 	ld a, BANK(ItsRightNearScript)
 	ld hl, ItsRightNearScript
