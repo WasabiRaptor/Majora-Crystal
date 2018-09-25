@@ -584,6 +584,10 @@ Credits_LoadBorderGFX:
 	dw CreditsIgglybuffGFX + 16 tiles
 	dw CreditsIgglybuffGFX + 32 tiles
 	dw CreditsIgglybuffGFX + 48 tiles
+	dw CreditsIgglybuffGFX
+	dw CreditsIgglybuffGFX + 16 tiles
+	dw CreditsIgglybuffGFX + 32 tiles
+	dw CreditsIgglybuffGFX + 48 tiles
 
 Credits_TheEnd:
 	ld a, $40

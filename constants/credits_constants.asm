@@ -103,6 +103,10 @@
 	const US_COORDINATION
 	const TEXT_TRANSLATION
 	const PAAD_TESTING
+	const HACK_CREATORS
+	const WASABI_RAPTOR
+	const THALINS
+	const NOTNAT_TLIKEHIS
 
 ; CreditsScript indexes (see data/credits_script.asm)
 	const_def -7

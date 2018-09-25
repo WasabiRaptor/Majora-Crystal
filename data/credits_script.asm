@@ -273,6 +273,25 @@ CreditsScript:
 	db     HIROSHI_YAMAUCHI, 2
 
 	db CREDITS_WAIT, 12
+	
+; Clear the banner.
+	db CREDITS_CLEAR
+
+	db CREDITS_WAIT, 1
+
+; Update the banner.
+	db CREDITS_SCENE, 4 ; Celebi
+
+	db        HACK_CREATORS, 2
+
+	db CREDITS_WAIT, 9
+	
+	db        HACK_CREATORS, 0
+	db        WASABI_RAPTOR, 1
+	db              THALINS, 2
+	db      NOTNAT_TLIKEHIS, 3
+
+	db CREDITS_WAIT, 12
 
 	db            COPYRIGHT, 1
 
