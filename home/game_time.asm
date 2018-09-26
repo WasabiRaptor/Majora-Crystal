@@ -101,9 +101,7 @@ UpdateGameTimer::
 	ld a, [hl]
 
 	cp SATURDAY 
-	jr z, .FinalDay
-	cp FRIDAY
-	
+	jr z, .FinalDay	
 	ret
 
 .FinalDay
