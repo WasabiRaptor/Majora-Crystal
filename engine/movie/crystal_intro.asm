@@ -762,7 +762,7 @@ IntroScene9:
 	hlcoord 0, 0, wAttrMap
 	; first 12 rows have palette 1
 	ld bc, 12 * SCREEN_WIDTH
-	ld a, $1
+	ld a, $5
 	call ByteFill
 	; middle 3 rows have palette 2
 	ld bc, 3 * SCREEN_WIDTH
@@ -1020,14 +1020,13 @@ IntroScene14:
 	ld a, [hl]
 	inc [hl]
 	cp $C0
-	jr z, .finish
+	jr nc, .wait
 	call Intro_PerspectiveScrollBG
 	ret
 
-.finish
-	ld de, SFX_INTRO_SUICUNE_2
-	call PlaySFX
-	
+.wait
+	cp $FF
+	ret c
 	farcall DeinitializeAllSprites
 
 	call NextIntroScene
@@ -1041,15 +1040,15 @@ IntroScene15:
 	hlcoord 0, 0, wAttrMap
 	; first 12 rows have palette 1
 	ld bc, 12 * SCREEN_WIDTH
-	ld a, $1
+	ld a, $0
 	call ByteFill
 	; middle 3 rows have palette 2
 	ld bc, 3 * SCREEN_WIDTH
-	ld a, $2
+	ld a, $6
 	call ByteFill
 	; last three rows have palette 3
 	ld bc, 3 * SCREEN_WIDTH
-	ld a, $3
+	ld a, $7
 	call ByteFill
 	hlcoord 8, 11, wAttrMap
 	ld bc, 4
@@ -1079,11 +1078,13 @@ IntroScene15:
 	ld [wGlobalAnimXOffset], a
 	xor a
 	ld [wIntroSceneFrameCounter], a
+	call Intro_RustleGrass
+	xor a
+	ld [wIntroSceneFrameCounter], a
 	call NextIntroScene
 	ret
 
 IntroScene16:
-	call Intro_RustleGrass
 	ld hl, wIntroSceneFrameCounter
 	ld a, [hl]
 	inc [hl]
@@ -1091,20 +1092,30 @@ IntroScene16:
 	jr z, .woosh
 	cp $FF
 	jr z, .done
+	call Intro_RustleGrass
 	ret
 .woosh
 	call Intro_RustleGrass
 	ld de, SFX_INTRO_WHOOSH
 	call PlaySFX
 	ret
+
 .done
+	xor a
+	ld [wIntroSceneFrameCounter], a
 	call NextIntroScene
 	ret
 
 IntroScene23:
-	xor a
-	ld [wIntroSceneFrameCounter], a
+	ld hl, wIntroSceneFrameCounter
+	ld a, [hl]
+	inc [hl]
+	cp $FF
+	jr z, .SaveSound
 	call Intro_RustleGrass
+	ret
+
+.SaveSound
 	ld de, SFX_SAVE
 	call PlaySFX
 	call NextIntroScene
