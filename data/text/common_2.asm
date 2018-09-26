@@ -1538,6 +1538,11 @@ _OakText5::
 	para "That's why I study"
 	line "#MON every day."
 	prompt
+	
+FirstDayText::
+	text "Dawn of the First Day"
+	line "168 Hours Remain..."
+	done
 
 SomethingIsStirringText::
 	text "...Something is"

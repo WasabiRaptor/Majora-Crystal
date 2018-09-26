@@ -102,6 +102,8 @@ UpdateGameTimer::
 
 	cp SATURDAY 
 	jr z, .FinalDay
+	cp FRIDAY
+	
 	ret
 
 .FinalDay
@@ -131,24 +133,45 @@ UpdateGameTimer::
 	ret
 
 ;these should correspond to things in endofcycle.asm that get checked upon a footstep
+.FirstDay
+	ld hl, wCycleProgress
+	ld [hl], 10
+	ret
+.SecondDay
+	ld hl, wCycleProgress
+	ld [hl], 9
+	ret
+.ThirdDay
+	ld hl, wCycleProgress
+	ld [hl], 8
+	ret
+.FourthDay
+	ld hl, wCycleProgress
+	ld [hl], 7
+	ret
+.FifthDay
+	ld hl, wCycleProgress
+	ld [hl], 6
+	ret
+.SixthDay
+	ld hl, wCycleProgress
+	ld [hl], 5
+	ret
 .SomethingIsStirring
 	ld hl, wCycleProgress
-	ld [hl], 1
+	ld [hl], 4
 	ret
-
 .SomethingIsApproaching
-	ld hl, wCycleProgress
-	ld [hl], 2
-	ret
-
-.ItsGettingCloser
 	ld hl, wCycleProgress
 	ld [hl], 3
 	ret
-
+.ItsGettingCloser
+	ld hl, wCycleProgress
+	ld [hl], 2
+	ret
 .ItsRightNear
 	ld hl, wCycleProgress
-	ld [hl], 4
+	ld [hl], 1
 	ret
 
 .second
