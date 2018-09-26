@@ -958,7 +958,7 @@ IntroScene13:
 
 	ld a, $1
 	ldh [rVBK], a
-	ld hl, IntroTilemap003
+	ld hl, IntroShrinePalsTilemap
 	debgcoord 0, 0
 	call Intro_DecompressRequest2bpp_64Tiles
 
@@ -1007,11 +1007,6 @@ IntroScene13:
 	ldh [hWY], a
 	call Intro_ResetLYOverrides
 	farcall ClearSpriteAnims
-	depixel 13, 27, 4, 0
-	ld a, SPRITE_ANIM_INDEX_INTRO_SUICUNE
-	call _InitSpriteAnimStruct
-	ld a, $f0
-	ld [wGlobalAnimXOffset], a
 	call Intro_SetCGBPalUpdate
 	xor a
 	ld [wIntroSceneFrameCounter], a
@@ -1055,6 +1050,18 @@ IntroScene15:
 	; last three rows have palette 3
 	ld bc, 3 * SCREEN_WIDTH
 	ld a, $3
+	call ByteFill
+	hlcoord 8, 11, wAttrMap
+	ld bc, 4
+	ld a, $4
+	call ByteFill
+	hlcoord 8, 10, wAttrMap
+	ld bc, 4
+	ld a, $4
+	call ByteFill
+	hlcoord 9, 9, wAttrMap
+	ld bc, 2
+	ld a, $4
 	call ByteFill
 	ld a, $2
 	ldh [hBGMapMode], a
@@ -1797,6 +1804,9 @@ INCBIN "gfx/intro/shrine.tilemap.lz"
 IntroTilemap003:
 INCBIN "gfx/intro/003.tilemap.lz"
 
+IntroShrinePalsTilemap:
+INCBIN "gfx/intro/shrinepals.tilemap.lz"
+
 IntroPalette1:
 INCLUDE "gfx/intro/intro_1.pal"
 
@@ -1838,42 +1848,6 @@ INCBIN "gfx/intro/015.tilemap.lz"
 
 IntroPalette3:
 INCLUDE "gfx/intro/intro_3.pal"
-
-IntroSuicuneCloseGFX:
-INCBIN "gfx/intro/suicune_close.2bpp.lz"
-
-IntroTilemap012:
-INCBIN "gfx/intro/012.tilemap.lz"
-
-IntroTilemap011:
-INCBIN "gfx/intro/011.tilemap.lz"
-
-IntroPalette4:
-INCLUDE "gfx/intro/intro_4.pal"
-
-IntroSuicuneJumpGFX:
-INCBIN "gfx/intro/suicune_jump.2bpp.lz"
-
-IntroSuicuneBackGFX:
-INCBIN "gfx/intro/suicune_back.2bpp.lz"
-
-IntroTilemap010:
-INCBIN "gfx/intro/010.tilemap.lz"
-
-IntroTilemap009:
-INCBIN "gfx/intro/009.tilemap.lz"
-
-IntroTilemap014:
-INCBIN "gfx/intro/014.tilemap.lz"
-
-IntroTilemap013:
-INCBIN "gfx/intro/013.tilemap.lz"
-
-IntroPalette5:
-INCLUDE "gfx/intro/intro_5.pal"
-
-IntroUnownBackGFX:
-INCBIN "gfx/intro/unown_back.2bpp.lz"
 
 IntroGrass1GFX:
 INCBIN "gfx/intro/grass1.2bpp"
