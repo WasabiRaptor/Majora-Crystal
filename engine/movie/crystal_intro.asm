@@ -976,7 +976,7 @@ IntroScene13:
 	ld de, vTiles2 tile $00
 	call Intro_DecompressRequest2bpp_128Tiles
 
-	ld hl, IntroTilemap004
+	ld hl, IntroShrineTilemap
 	debgcoord 0, 0
 	call Intro_DecompressRequest2bpp_64Tiles
 
@@ -1080,25 +1080,33 @@ IntroScene16:
 	ld hl, wIntroSceneFrameCounter
 	ld a, [hl]
 	inc [hl]
-	cp $c0
+	cp $d0
+	jr z, .woosh
+	cp $FF
 	jr z, .done
+	ret
+.woosh
+	call Intro_RustleGrass
+	ld de, SFX_INTRO_WHOOSH
+	call PlaySFX
 	ret
 .done
 	call NextIntroScene
 	ret
-	
+
 IntroScene23:
 	xor a
-	ldh [hBGMapMode], a
-	ldh [hLCDCPointer], a
-
-	xor a
 	ld [wIntroSceneFrameCounter], a
+	call Intro_RustleGrass
+	ld de, SFX_SAVE
+	call PlaySFX
 	call NextIntroScene
 	ret
 
 IntroScene24:
 ; Fade to white.
+	call Intro_RustleGrass
+
 	ld hl, wIntroSceneFrameCounter
 	ld a, [hl]
 	inc [hl]
@@ -1122,6 +1130,10 @@ IntroScene24:
 	ret
 
 IntroScene25:
+	xor a
+	ldh [hBGMapMode], a
+	ldh [hLCDCPointer], a
+
 ; Wait around a bit.
 	ld a, [wIntroSceneFrameCounter]
 	dec a
@@ -1778,6 +1790,9 @@ INCBIN "gfx/intro/background.2bpp.lz"
 
 IntroTilemap004:
 INCBIN "gfx/intro/004.tilemap.lz"
+
+IntroShrineTilemap:
+INCBIN "gfx/intro/shrine.tilemap.lz"
 
 IntroTilemap003:
 INCBIN "gfx/intro/003.tilemap.lz"
