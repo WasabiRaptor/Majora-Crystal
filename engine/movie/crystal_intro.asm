@@ -1606,41 +1606,7 @@ Intro_LoadTilemap:
 	ldh [rSVBK], a
 	ret
 
-Intro_Scene16_AnimateSuicune:
-	ld a, [wIntroSceneFrameCounter]
-	and $3
-	jr z, Intro_ColoredSuicuneFrameSwap
-	cp $3
-	jr z, .PrepareForSuicuneSwap
-	ret
-
-.PrepareForSuicuneSwap:
-	xor a
-	ldh [hBGMapMode], a
-	ret
-
-Intro_ColoredSuicuneFrameSwap:
-	hlcoord 0, 0
-	ld bc, SCREEN_HEIGHT * SCREEN_WIDTH
-.loop
-	ld a, [hl]
-	and a
-	jr z, .skip
-	cp $80
-	jr nc, .skip
-	xor $8
-	ld [hl], a
-.skip
-	inc hl
-	dec bc
-	ld a, c
-	or b
-	jr nz, .loop
-	ld a, $1
-	ldh [hBGMapMode], a
-	ret
-
-Intro_RustleGrass:
+Intro_RustleGrass::
 	ld a, [wIntroSceneFrameCounter]
 	cp 36
 	ret nc

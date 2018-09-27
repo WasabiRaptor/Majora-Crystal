@@ -1028,7 +1028,6 @@ RunTitleScreen:
 	bit 7, a
 	jr nz, .done_title
 	call TitleScreenScene
-	farcall SuicuneFrameIterator
 	call DelayFrame
 	and a
 	ret
@@ -1071,39 +1070,6 @@ TitleScreenScene:
 	ret
 
 TitleScreenEntrance:
-; Animate the logo:
-; Move each line by 4 pixels until our count hits 0.
-	ldh a, [hSCX]
-	and a
-	jr z, .done
-	sub 4
-	ldh [hSCX], a
-
-; Lay out a base (all lines scrolling together).
-	ld e, a
-	ld hl, wLYOverrides
-	ld bc, 8 * 10 ; logo height
-	call ByteFill
-
-; Reversed signage for every other line's position.
-; This is responsible for the interlaced effect.
-	ld a, e
-	xor $ff
-	inc a
-
-	ld b, 8 * 10 / 2 ; logo height / 2
-	ld hl, wLYOverrides + 1
-.loop
-	ld [hli], a
-	inc hl
-	dec b
-	jr nz, .loop
-
-	farcall AnimateTitleCrystal
-	ret
-
-.done
-; Next scene
 	ld hl, wJumptableIndex
 	inc [hl]
 	xor a
@@ -1113,8 +1079,6 @@ TitleScreenEntrance:
 	ld de, MUSIC_TITLE
 	call PlayMusic
 
-	ld a, $88
-	ldh [hWY], a
 	ret
 
 TitleScreenTimer:
@@ -1131,6 +1095,7 @@ TitleScreenTimer:
 	ret
 
 TitleScreenMain:
+
 ; Run the timer down.
 	ld hl, wTitleScreenTimer
 	ld e, [hl]
@@ -1139,7 +1104,6 @@ TitleScreenMain:
 	ld a, e
 	or d
 	jr z, .end
-
 	dec de
 	ld [hl], d
 	dec hl
@@ -1188,6 +1152,8 @@ TitleScreenMain:
 	ld a, [hl]
 	and START | A_BUTTON
 	jr nz, .incave
+
+
 	ret
 
 .incave
