@@ -374,10 +374,14 @@ Continue:
 	ld [hl], 0
 	ld a, [wSpawnAfterChampion]
 	cp 0
-	jr nz, .ResetStuff
+	jr z, .ResetStuff
+	ld hl, wCycleProgress
+	ld [hl], 11 ;FirstDay
+	ret
 	jp FinishContinueFunction
 
 .ResetStuff
+
 	ret
 
 .FailToLoad:
@@ -462,6 +466,7 @@ Continue_CheckRTC_RestartClock:
 
 FinishContinueFunction:
 .loop
+	
 	xor a
 	ld [wDontPlayMapMusicOnReload], a
 	ld [wLinkMode], a
