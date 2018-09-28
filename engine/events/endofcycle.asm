@@ -3,7 +3,7 @@ EndOfCycleStep::
 	ld a, [hl]
 
 	cp 0 
-	jr z, .nope
+	ret z
 	cp 1
 	jr z, .ItsRightNearScript
 	cp 2
@@ -13,16 +13,18 @@ EndOfCycleStep::
 	cp 4
 	jr z, .SomethingIsStirringScript
 	cp 5
-	jr z, .SixthDayScript
+	jr z, .SeventhDayScript
 	cp 6
-	jr z, .FifthDayScript
+	jr z, .SixthDayScript
 	cp 7
-	jr z, .FourthDayScript
+	jr z, .FifthDayScript
 	cp 8
-	jr z, .ThirdDayScript
+	jr z, .FourthDayScript
 	cp 9
-	jr z, .SecondDayScript
+	jr z, .ThirdDayScript
 	cp 10
+	jr z, .SecondDayScript
+	cp 11
 	jr z, .FirstDayScript
 
 ;this is how you need to call a script from a footstep and I know these are correct as when forced to be jumped to they call their script correctly and the game continues but the part above I just don't know why it isn't working and I don't know if its because I've done all the cp's and jumps incorrectly or if its because in home/game_time.asm its never actually writing to wCycleProgress for some reason? I just don't know what I've done wrong here
@@ -44,6 +46,10 @@ EndOfCycleStep::
 .SomethingIsStirringScript
 	ld a, BANK(SomethingIsStirringScript)
 	ld hl, SomethingIsStirringScript
+	jp .callscript
+.SeventhDayScript
+	ld a, BANK(SeventhDayScript)
+	ld hl, SeventhDayScript
 	jp .callscript
 .SixthDayScript
 	ld a, BANK(SixthDayScript)
@@ -74,7 +80,6 @@ EndOfCycleStep::
 	scf
 	ld hl, wCycleProgress ;set it to 0 so that the messages aren't triggered multiple times
 	ld [hl], 0
-.nope
 	ret
 	
 FirstDayScript:
@@ -137,6 +142,15 @@ SixthDayScript:
 	;text_jump SixthDayText
 	db "@"
 
+SeventhDayScript:
+	opentext
+	writetext .SeventhDaytext
+	waitbutton
+	closetext
+	end
+.SeventhDaytext
+	;text_jump SeventhDayText
+	db "@"
 SomethingIsStirringScript:
 	opentext
 	writetext .SomethingIsStirringtext
