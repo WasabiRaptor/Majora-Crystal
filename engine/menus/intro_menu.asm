@@ -1028,7 +1028,7 @@ RunTitleScreen:
 	bit 7, a
 	jr nz, .done_title
 	call TitleScreenScene
-	farcall TwinkleTitleStars
+	;farcall TwinkleTitleStars
 	call DelayFrame
 	and a
 	ret
