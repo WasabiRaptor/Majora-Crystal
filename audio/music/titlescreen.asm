@@ -5,7 +5,7 @@ Music_TitleScreen:
 	musicheader 1, 4, Music_TitleScreen_Ch4
 
 Music_TitleScreen_Ch1:
-	tempo 134
+	tempo 234
 	volume $77
 	dutycycle $3
 	tone $0002
@@ -158,7 +158,7 @@ Music_TitleScreen_Ch1:
 	octave 3
 	note D_, 3
 	note G_, 3
-	tempo 136
+	tempo 236
 	notetype $8, $b4
 	note F_, 3
 	note A_, 3
@@ -166,7 +166,7 @@ Music_TitleScreen_Ch1:
 	octave 4
 	note C_, 3
 	note F_, 3
-	tempo 138
+	tempo 238
 	notetype $8, $b4
 	note D_, 9
 	note C_, 9
@@ -191,9 +191,9 @@ Music_TitleScreen_Ch1:
 	note G_, 12
 	octave 4
 	note C_, 6
-	tempo 136
+	tempo 236
 	note C#, 6
-	tempo 134
+	tempo 234
 	callchannel Music_TitleScreen_branch_eb96d
 	octave 4
 	note C_, 4

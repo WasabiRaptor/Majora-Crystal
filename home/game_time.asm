@@ -210,9 +210,6 @@ DayCheck:
 	cp 7 ;use weekdays in allcaps or 0-6 here to test for actual days, if its 7 that means time is up
 	jr nc, .ItsRightNear
 
-	cp SUNDAY
-	jr z, .FirstDay
-
 	cp MONDAY
 	jr z, .SecondDay
 
@@ -232,10 +229,6 @@ DayCheck:
 	jr z, .SeventhDay
 	ret
 ;these should correspond to things in endofcycle.asm that get checked upon a footstep
-.FirstDay
-	ld hl, wCycleProgress
-	ld [hl], 11
-	ret
 .SecondDay
 	ld hl, wCycleProgress
 	ld [hl], 10
