@@ -377,7 +377,7 @@ Continue:
 	jr z, .ResetStuff
 	ld hl, wCycleProgress
 	ld [hl], 11 ;FirstDay
-	ret
+
 	jp FinishContinueFunction
 
 .ResetStuff
