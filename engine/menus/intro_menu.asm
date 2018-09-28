@@ -359,6 +359,8 @@ Continue:
 	ld [wMusicFadeID], a
 	ld a, HIGH(MUSIC_NONE)
 	ld [wMusicFadeID + 1], a
+	ld hl, FirstDaytext
+	call PrintText
 	call ClearBGPalettes
 	call Continue_MobileAdapterMenu
 	call CloseWindow
@@ -375,13 +377,10 @@ Continue:
 	ldh [hMapEntryMethod], a
 	ld hl, wCurDay
 	ld [hl], 0
-	ld hl, wCycleProgress
-	ld [hl], 11
 	ld a, [wSpawnAfterChampion]
 	cp 0
 	jr z, ResetStuff
 	jp FinishContinueFunction
-
 
 .FailToLoad:
 	ret
@@ -480,9 +479,6 @@ endc
 
 	ld hl, wCurDay
 	ld [hl], 0
-	ld hl, wCycleProgress
-	ld [hl], 11
-
 	ret
 
 .InitList:
@@ -564,9 +560,13 @@ Continue_CheckRTC_RestartClock:
 	xor a
 	ret
 
+FirstDaytext:
+	text_jump FirstDayText
+	db "@"
+
 FinishContinueFunction:
+
 .loop
-	
 	xor a
 	ld [wDontPlayMapMusicOnReload], a
 	ld [wLinkMode], a
