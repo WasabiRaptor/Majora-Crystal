@@ -786,7 +786,6 @@ IntroScene9:
 	ldh [hBGMapMode], a
 	ldh [hBGMapAddress], a
 	ld [wGlobalAnimXOffset], a
-	xor a
 	ld [wIntroSceneFrameCounter], a
 	call NextIntroScene
 	ret
@@ -1612,7 +1611,7 @@ Intro_RustleGrass:
 	ret nc
 	and $c
 	srl a
-	ld e, a
+	ld e, 1
 	ld d, $0
 	ld hl, .RustlingGrassPointers
 	add hl, de

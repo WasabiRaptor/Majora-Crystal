@@ -130,19 +130,9 @@ Title_ResetLYOverrides:
 	ldh [hLCDCPointer], a
 	ret
 
-TitleRustleGrass::
-	ld hl, wIntroSceneFrameCounter
-	inc [hl]
-	ld a, [hl]
-	cp $FF
-	jr nz, .noresetrustle
-	xor a
-	ld [hl], a
-.noresetrustle
-	call Title_RustleGrass
-	ret
 
 Title_RustleGrass:
+	ld hl, wIntroSceneFrameCounter
 	ld a, [wIntroSceneFrameCounter]
 	cp 36
 	ret nc
@@ -176,6 +166,7 @@ Title_SetCGBPalUpdate:
 	ret
 
 TwinkleTitleStars::
+	;call Title_RustleGrass
 	ld hl, wIntroSceneFrameCounter
 	ld a, [hl]
 	inc [hl]
@@ -202,14 +193,8 @@ TwinkleTitleStars::
 	ldh [hCGBPalUpdate], a
 	ret
 
-.reset
-	ld hl, wIntroSceneFrameCounter
-	xor a
-	ld [hl], a
-	ret
-
 choosetwinkle:
-	ld a, 6
+	ld a, 9
 	call RandomRange
 	cp 0
 	jr z, .StarsPalette1
@@ -217,6 +202,12 @@ choosetwinkle:
 	jr z, .StarsPalette2
 	cp 2
 	jr z, .StarsPalette3
+	cp 3
+	jr z, .StarsPalette4
+	cp 4
+	jr z, .StarsPalette5
+	cp 5
+	jr z, .StarsPalette6
 	ret
 .StarsPalette1
 	ld hl, TitleStarsPalette1
