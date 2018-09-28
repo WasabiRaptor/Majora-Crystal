@@ -380,6 +380,9 @@ Continue:
 	jp FinishContinueFunction
 
 .ResetStuff
+	ld hl, wCycleProgress
+	ld [hl], 11 ;FirstDay
+	
 	jp FinishContinueFunction
 	ret
 
