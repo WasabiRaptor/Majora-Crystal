@@ -1544,6 +1544,36 @@ FirstDayText::
 	line "168 Hours Remain..."
 	done
 
+SecondDayText::
+	text "Dawn of the Second Day"
+	line "144 Hours Remain..."
+	done
+
+ThirdDayText::
+	text "Dawn of the Third Day"
+	line "120 Hours Remain..."
+	done
+
+FourthDayText::
+	text "Dawn of the Fourth Day"
+	line "96 Hours Remain..."
+	done
+
+FifthDayText::
+	text "Dawn of the Fifth Day"
+	line "72 Hours Remain..."
+	done
+
+SixthDayText::
+	text "Dawn of the Sixth Day"
+	line "48 Hours Remain..."
+	done
+	
+SeventhDayText::
+	text "Dawn of the Final Day"
+	line "24 Hours Remain..."
+	done
+
 SomethingIsStirringText::
 	text "...Something is"
 	line "stirring."
