@@ -215,7 +215,7 @@ endc
 	farcall DeleteMobileEventIndex
 
 	call ResetGameTime
-	
+
 	ld hl, wCycleProgress
 	ld [hl], 11
 	ret
@@ -379,14 +379,9 @@ Continue:
 	ld [hl], 11
 	ld a, [wSpawnAfterChampion]
 	cp 0
-	jr z, .ResetStuff
-
+	jr z, ResetStuff
 	jp FinishContinueFunction
 
-.ResetStuff
-
-	jp FinishContinueFunction
-	ret
 
 .FailToLoad:
 	ret
@@ -396,6 +391,109 @@ Continue:
 	ld [wDefaultSpawnpoint], a
 	call PostCreditsSpawn
 	jp FinishContinueFunction
+
+ResetStuff:
+	xor a
+	ldh [hBGMapMode], a
+	call _ResetStuff
+	
+	ld a, 1
+	ld [wPrevLandmark], a
+
+	ld a, SPAWN_HOME
+	ld [wDefaultSpawnpoint], a
+
+	ld a, MAPSETUP_WARP
+	ldh [hMapEntryMethod], a
+	jp FinishContinueFunction
+	ret
+
+_ResetStuff:
+	ld hl, wMooMooBerries
+	ld bc, wCurBox - wMooMooBerries
+	xor a
+	call ByteFill
+
+	ld hl, wBikeFlags
+	ld bc, wCurMapCallbacksPointer - wBikeFlags
+	xor a
+	call ByteFill
+
+	ld hl, wWhichMomItem
+	ld bc, wBikeStep - wWhichMomItem
+	xor a
+	call ByteFill
+
+	ld hl, wPartyCount
+	call .InitList
+
+	xor a
+	
+	ld hl, wNumItems
+	call .InitList
+
+	ld hl, wNumBalls
+	call .InitList
+
+	xor a
+	ld [wRoamMon1Species], a
+	ld [wRoamMon2Species], a
+	ld [wRoamMon3Species], a
+	ld a, -1
+	ld [wRoamMon1MapGroup], a
+	ld [wRoamMon2MapGroup], a
+	ld [wRoamMon3MapGroup], a
+	ld [wRoamMon1MapNumber], a
+	ld [wRoamMon2MapNumber], a
+	ld [wRoamMon3MapNumber], a
+
+	call CloseSRAM
+
+	call LoadOrRegenerateLuckyIDNumber
+	call InitializeMagikarpHouse
+
+	xor a
+
+	ld [wCoins], a
+	ld [wCoins + 1], a
+
+if START_MONEY >= $10000
+	ld a, HIGH(START_MONEY >> 8)
+endc
+	ld [wMoney], a
+	ld a, HIGH(START_MONEY) ; mid
+	ld [wMoney + 1], a
+	ld a, LOW(START_MONEY)
+	ld [wMoney + 2], a
+
+	xor a
+	ld [wWhichMomItem], a
+
+	ld hl, wMomItemTriggerBalance
+	ld [hl], HIGH(MOM_MONEY >> 8)
+	inc hl
+	ld [hl], HIGH(MOM_MONEY) ; mid
+	inc hl
+	ld [hl], LOW(MOM_MONEY)
+
+	farcall DeletePartyMonMail
+
+	farcall DeleteMobileEventIndex
+
+	ld hl, wCurDay
+	ld [hl], 0
+	ld hl, wCycleProgress
+	ld [hl], 11
+
+	ret
+
+.InitList:
+; Loads 0 in the count and -1 in the first item or mon slot.
+	xor a
+	ld [hli], a
+	dec a
+	ld [hl], a
+	ret
 
 SpawnAfterRed:
 	ld a, SPAWN_MT_SILVER
