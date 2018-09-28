@@ -372,17 +372,16 @@ Continue:
 	ldh [hMapEntryMethod], a
 	ld hl, wCurDay
 	ld [hl], 0
+	ld hl, wCycleProgress
+	ld [hl], 11
 	ld a, [wSpawnAfterChampion]
 	cp 0
 	jr z, .ResetStuff
-	ld hl, wCycleProgress
-	ld [hl], 11 ;FirstDay
+
 	jp FinishContinueFunction
 
 .ResetStuff
-	ld hl, wCycleProgress
-	ld [hl], 11 ;FirstDay
-	
+
 	jp FinishContinueFunction
 	ret
 
