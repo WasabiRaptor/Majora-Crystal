@@ -1606,7 +1606,7 @@ Intro_LoadTilemap:
 	ldh [rSVBK], a
 	ret
 
-Intro_RustleGrass::
+Intro_RustleGrass:
 	ld a, [wIntroSceneFrameCounter]
 	cp 36
 	ret nc
