@@ -113,7 +113,7 @@ UpdateGameTimer::
 	cp 12
 	jr z, .SomethingIsApproaching
 
-	cp 0
+	cp 6
 	jr z, .SomethingIsStirring
 	ret
 
@@ -125,51 +125,7 @@ UpdateGameTimer::
 	ld a, [hl]
 	inc a
 	ld [hl], a
-
-	cp 7 ;use weekdays in allcaps or 0-6 here to test for actual days, if its 7 that means time is up
-	jr nc, .ItsRightNear
-	ret
-
-;these should correspond to things in endofcycle.asm that get checked upon a footstep
-.FirstDay
-	ld hl, wCycleProgress
-	ld [hl], 10
-	ret
-.SecondDay
-	ld hl, wCycleProgress
-	ld [hl], 9
-	ret
-.ThirdDay
-	ld hl, wCycleProgress
-	ld [hl], 8
-	ret
-.FourthDay
-	ld hl, wCycleProgress
-	ld [hl], 7
-	ret
-.FifthDay
-	ld hl, wCycleProgress
-	ld [hl], 6
-	ret
-.SixthDay
-	ld hl, wCycleProgress
-	ld [hl], 5
-	ret
-.SomethingIsStirring
-	ld hl, wCycleProgress
-	ld [hl], 4
-	ret
-.SomethingIsApproaching
-	ld hl, wCycleProgress
-	ld [hl], 3
-	ret
-.ItsGettingCloser
-	ld hl, wCycleProgress
-	ld [hl], 2
-	ret
-.ItsRightNear
-	ld hl, wCycleProgress
-	ld [hl], 1
+	call DayCheck
 	ret
 
 .second
@@ -235,4 +191,77 @@ UpdateGameTimer::
 	ld [wGameTimeHours], a
 	ld a, l
 	ld [wGameTimeHours + 1], a
+	ret
+
+.SomethingIsStirring
+	ld hl, wCycleProgress
+	ld [hl], 4
+	ret
+.SomethingIsApproaching
+	ld hl, wCycleProgress
+	ld [hl], 3
+	ret
+.ItsGettingCloser
+	ld hl, wCycleProgress
+	ld [hl], 2
+	ret
+
+DayCheck:
+	cp 7 ;use weekdays in allcaps or 0-6 here to test for actual days, if its 7 that means time is up
+	jr nc, .ItsRightNear
+
+	cp SUNDAY
+	jr z, .FirstDay
+
+	cp MONDAY
+	jr z, .SecondDay
+
+	cp TUESDAY
+	jr z, .ThirdDay
+
+	cp WEDNESDAY
+	jr z, .FourthDay
+
+	cp THURSDAY
+	jr z, .FifthDay
+
+	cp FRIDAY
+	jr z, .SixthDay
+
+	cp SATURDAY
+	jr z, .SeventhDay
+	ret
+;these should correspond to things in endofcycle.asm that get checked upon a footstep
+.FirstDay
+	ld hl, wCycleProgress
+	ld [hl], 11
+	ret
+.SecondDay
+	ld hl, wCycleProgress
+	ld [hl], 10
+	ret
+.ThirdDay
+	ld hl, wCycleProgress
+	ld [hl], 9
+	ret
+.FourthDay
+	ld hl, wCycleProgress
+	ld [hl], 8
+	ret
+.FifthDay
+	ld hl, wCycleProgress
+	ld [hl], 7
+	ret
+.SixthDay
+	ld hl, wCycleProgress
+	ld [hl], 6
+	ret
+.SeventhDay
+	ld hl, wCycleProgress
+	ld [hl], 5
+	ret
+
+.ItsRightNear
+	ld hl, wCycleProgress
+	ld [hl], 1
 	ret
