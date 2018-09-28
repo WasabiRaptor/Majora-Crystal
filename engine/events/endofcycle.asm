@@ -99,7 +99,7 @@ SecondDayScript:
 	closetext
 	end
 .SecondDaytext
-	;text_jump SecondDayText
+	text_jump SecondDayText
 	db "@"
 	
 ThirdDayScript:
@@ -109,7 +109,7 @@ ThirdDayScript:
 	closetext
 	end
 .ThirdDaytext
-	;text_jump ThirdDayText
+	text_jump ThirdDayText
 	db "@"
 	
 FourthDayScript:
@@ -119,7 +119,7 @@ FourthDayScript:
 	closetext
 	end
 .FourthDaytext
-	;text_jump FourthDayText
+	text_jump FourthDayText
 	db "@"
 	
 FifthDayScript:
@@ -129,7 +129,7 @@ FifthDayScript:
 	closetext
 	end
 .FifthDaytext
-	;text_jump FifthDayText
+	text_jump FifthDayText
 	db "@"
 	
 SixthDayScript:
@@ -139,7 +139,7 @@ SixthDayScript:
 	closetext
 	end
 .SixthDaytext
-	;text_jump SixthDayText
+	text_jump SixthDayText
 	db "@"
 
 SeventhDayScript:
@@ -149,7 +149,7 @@ SeventhDayScript:
 	closetext
 	end
 .SeventhDaytext
-	;text_jump SeventhDayText
+	text_jump SeventhDayText
 	db "@"
 SomethingIsStirringScript:
 	opentext
