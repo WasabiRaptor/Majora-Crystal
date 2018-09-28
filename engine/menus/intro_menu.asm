@@ -1030,11 +1030,11 @@ StartTitleScreen:
 	ret
 
 RunTitleScreen:
+
 	ld a, [wJumptableIndex]
 	bit 7, a
 	jr nz, .done_title
 	call TitleScreenScene
-	;farcall TwinkleTitleStars
 	call DelayFrame
 	and a
 	ret
@@ -1160,6 +1160,7 @@ TitleScreenMain:
 	and START | A_BUTTON
 	jr nz, .incave
 
+	farcall TwinkleTitleStars
 
 	ret
 
