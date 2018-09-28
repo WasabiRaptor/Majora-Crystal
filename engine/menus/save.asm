@@ -60,6 +60,39 @@ ChangeBoxSaveGame:
 	pop de
 	ret
 
+DepositLastPokemonSaveGame:
+	ld hl, Text_DepositLastPokemonSave
+	call MenuTextBox
+	call YesNoBox
+	call ExitMenu
+	jr c, .refused
+
+	ld a, [wBillsPC_CursorPosition]
+	ld hl, wBillsPC_ScrollPosition
+	add [hl]
+	ld [wCurPartyMon], a
+	ld hl, wPartyMonNicknames
+	ld a, [wCurPartyMon]
+	call GetNick
+	ld a, PC_DEPOSIT
+	ld [wPokemonWithdrawDepositParameter], a
+	predef SendGetMonIntoFromBox
+	jr c, .refused
+	xor a ; REMOVE_PARTY
+	ld [wPokemonWithdrawDepositParameter], a
+	farcall RemoveMonFromPartyOrBox
+	ld a, [wCurPartySpecies]
+	call PlayMonCry
+
+	call PauseGameLogic
+	call SavingDontTurnOffThePower
+	call SavedTheGame
+	call ResumeGameLogic
+	jp Reset
+	ret
+.refused
+	ret
+
 Link_SaveGame:
 	call AskOverwriteSaveFile
 	jr c, .refused
@@ -335,9 +368,6 @@ SavingDontTurnOffThePower:
 	; Restore the text speed setting
 	pop af
 	ld [wOptions], a
-	; Wait for 16 frames
-	ld c, 16
-	call DelayFrames
 	ret
 
 ErasePreviousSave:
@@ -1127,4 +1157,9 @@ Text_SaveOnBoxSwitch:
 Text_SaveOnMoveMonWOMail:
 	; Each time you move a #MON, data will be saved. OK?
 	text_jump UnknownText_0x1c465f
+	db "@"
+
+Text_DepositLastPokemonSave:
+	; When you deposite your last pokemon the game will save and reset
+	text_jump DepositLastPokemonSave_Text
 	db "@"

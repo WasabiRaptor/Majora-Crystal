@@ -1620,6 +1620,8 @@ BillsPC_CheckMail_PreventBlackout:
 	jr .NotOkay
 
 .ItsYourLastPokemon:
+	farcall DepositLastPokemonSaveGame
+
 	ld de, PCString_ItsYourLastPKMN
 .NotOkay:
 	call BillsPC_PlaceString

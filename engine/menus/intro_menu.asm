@@ -396,7 +396,7 @@ ResetStuff:
 	xor a
 	ldh [hBGMapMode], a
 	call _ResetStuff
-	
+
 	ld a, 1
 	ld [wPrevLandmark], a
 
@@ -426,8 +426,6 @@ _ResetStuff:
 
 	ld hl, wPartyCount
 	call .InitList
-
-	xor a
 	
 	ld hl, wNumItems
 	call .InitList

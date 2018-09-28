@@ -228,6 +228,14 @@ UnknownText_0x1c465f::
 	cont "will be saved. OK?"
 	done
 
+DepositLastPokemonSave_Text::
+	text "When you deposit"
+	line "your last #MON"
+
+	para "data will be saved"
+	line "and restarted. OK?"
+	done
+
 UnknownText_0x1c4693::
 	text "The window save"
 	line "area was exceeded."
