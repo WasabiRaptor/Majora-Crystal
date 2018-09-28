@@ -377,11 +377,10 @@ Continue:
 	jr z, .ResetStuff
 	ld hl, wCycleProgress
 	ld [hl], 11 ;FirstDay
-
 	jp FinishContinueFunction
 
 .ResetStuff
-
+	jp FinishContinueFunction
 	ret
 
 .FailToLoad:
