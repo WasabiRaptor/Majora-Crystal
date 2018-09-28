@@ -39,9 +39,9 @@ pokecrystal.txt
 *.2bpp
 *.1bpp
 *.lz
-*.pal
 *.animated.tilemap
 gfx/pokemon/*/bitmask.asm
 gfx/pokemon/*/frames.asm
 !gfx/pokemon/*/shiny.pal
 !gfx/trainer_card/badges.pal
+*.DS_Store
