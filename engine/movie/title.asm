@@ -70,7 +70,7 @@ _TitleScreen:
 
 
 ; Play starting sound effect
-	ld de, SFX_TITLE_SCREEN_ENTRANCE
+	ld de, SFX_INTRO_SUICUNE_2
 	call PlaySFX
 
 	ret

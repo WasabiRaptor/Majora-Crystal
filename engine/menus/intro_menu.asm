@@ -215,6 +215,9 @@ endc
 	farcall DeleteMobileEventIndex
 
 	call ResetGameTime
+	
+	ld hl, wCycleProgress
+	ld [hl], 11
 	ret
 
 .InitList:
@@ -1083,7 +1086,7 @@ TitleScreenEntrance:
 	ldh [hLCDCPointer], a
 
 ; Play the title screen music.
-	ld de, MUSIC_TITLE
+	ld de, MUSIC_NONE
 	call PlayMusic
 
 	ret
