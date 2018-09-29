@@ -270,7 +270,7 @@
 	const EVENT_DANA_GAVE_THUNDERSTONE
 	const EVENT_TULLY_GAVE_WATER_STONE
 	const EVENT_TIFFANY_GAVE_PINK_BOW
-; MajoraCrystal Events
+; MajoraCrystal Events that have since gone unused and replaced
 	const EVENT_END_OF_CYCLE
 	const EVENT_SOMETHING_IS_STIRRING
 	const EVENT_SOMETHING_IS_APPROACHING

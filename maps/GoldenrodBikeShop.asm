@@ -78,7 +78,12 @@ GoldenrodBikeShopClerkFirstRateBikesText:
 	line "first-rate! You"
 
 	para "can ride them"
-	line "anywhere."
+	line "anywhere!*"
+
+	para "Disclaimer:"
+	line "can't be used"
+	cont "anywhere"
+
 	done
 
 GoldenrodBikeShopClerkRefusedText:
