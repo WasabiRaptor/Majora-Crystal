@@ -1605,7 +1605,7 @@ Intro_RustleGrass:
 	ret nc
 	and $c
 	srl a
-	ld e, 1
+	ld e, a
 	ld d, $0
 	ld hl, .RustlingGrassPointers
 	add hl, de
