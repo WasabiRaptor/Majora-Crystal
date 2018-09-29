@@ -48,17 +48,9 @@ Route32CooltrainerMContinueScene:
 	opentext
 	checkevent EVENT_GOT_MIRACLE_SEED_IN_ROUTE_32
 	iftrue .GotMiracleSeed
-	checkflag ENGINE_ZEPHYRBADGE
-	iffalse .DontHaveZephyrBadge
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iftrue .GiveMiracleSeed
 	writetext Route32CooltrainerMText_AideIsWaiting
-	waitbutton
-	closetext
-	end
-
-.Unreferenced:
-	writetext Route32CooltrainerMText_UnusedSproutTower
 	waitbutton
 	closetext
 	end
@@ -71,11 +63,6 @@ Route32CooltrainerMContinueScene:
 	setevent EVENT_GOT_MIRACLE_SEED_IN_ROUTE_32
 	jump .GotMiracleSeed
 
-.DontHaveZephyrBadge:
-	writetext Route32CooltrainerMText_VioletGym
-	waitbutton
-	closetext
-	end
 
 .GotMiracleSeed:
 	writetext Route32CooltrainerMText_ExperiencesShouldBeUseful
@@ -84,21 +71,7 @@ Route32CooltrainerMContinueScene:
 	closetext
 	end
 
-Route32CooltrainerMStopsYouScene:
-	turnobject ROUTE32_COOLTRAINER_M, LEFT
-	turnobject PLAYER, RIGHT
-	opentext
-	writetext Route32CooltrainerMText_WhatsTheHurry
-	waitbutton
-	closetext
-	follow PLAYER, ROUTE32_COOLTRAINER_M
-	applymovement PLAYER, Movement_Route32CooltrainerMPushesYouBackToViolet
-	stopfollow
-	turnobject PLAYER, DOWN
-	scall Route32CooltrainerMContinueScene
-	applymovement ROUTE32_COOLTRAINER_M, Movement_Route32CooltrainerMReset1
-	applymovement ROUTE32_COOLTRAINER_M, Movement_Route32CooltrainerMReset2
-	end
+
 
 Route32RoarTMGuyScript:
 	faceplayer
@@ -580,10 +553,10 @@ Route32CooltrainerMText_HaveThisSeed:
 	para "gave them around"
 	line "VIOLET CITY."
 
-	para "The training at"
-	line "the GYM must have"
+	para "Training at the"
+	line "#MON GYM should"
 
-	para "been especially"
+	para "be especially"
 	line "helpful."
 
 	para "As a souvenir of"
@@ -818,10 +791,11 @@ PicnickerLiz1AfterText:
 	done
 
 BirdKeeperPeterSeenText:
-	text "That BADGE! It's"
-	line "from VIOLET CITY!"
+	text "did you just come"
+	line "from VIOLET CITY"
 
-	para "You beat FALKNER?"
+	para "have you fought"
+	line "FALKNER?"
 	done
 
 BirdKeeperPeterBeatenText:
@@ -935,8 +909,7 @@ Route32_MapEvents:
 	warp_event  4,  3, ROUTE_32_RUINS_OF_ALPH_GATE, 4
 	warp_event  6, 79, UNION_CAVE_1F, 4
 
-	db 2 ; coord events
-	coord_event 18,  8, SCENE_DEFAULT, Route32CooltrainerMStopsYouScene
+	db 1 ; coord events
 	coord_event  7, 71, SCENE_ROUTE32_OFFER_SLOWPOKETAIL, Route32WannaBuyASlowpokeTailScript
 
 	db 6 ; bg events
