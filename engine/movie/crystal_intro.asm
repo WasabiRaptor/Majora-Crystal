@@ -422,7 +422,6 @@ IntroScenes:
 	dw IntroScene24
 	dw IntroScene25
 	dw IntroScene26
-	dw IntroScene27
 	dw IntroScene28
 
 NextIntroScene:
@@ -1075,15 +1074,12 @@ IntroScene15:
 	ldh [hBGMapMode], a
 	ldh [hBGMapAddress], a
 	ld [wGlobalAnimXOffset], a
-	xor a
-	ld [wIntroSceneFrameCounter], a
-	call Intro_RustleGrass
-	xor a
 	ld [wIntroSceneFrameCounter], a
 	call NextIntroScene
 	ret
 
 IntroScene16:
+	call Intro_RustleGrass
 	ld hl, wIntroSceneFrameCounter
 	ld a, [hl]
 	inc [hl]
@@ -1091,27 +1087,27 @@ IntroScene16:
 	jr z, .woosh
 	cp $FF
 	jr z, .done
-	call Intro_RustleGrass
 	ret
 .woosh
-	call Intro_RustleGrass
-	ld de, SFX_INTRO_WHOOSH
+	ld de, SFX_INTRO_SUICUNE_2
 	call PlaySFX
 	ret
 
 .done
 	xor a
 	ld [wIntroSceneFrameCounter], a
+	ld de, SFX_INTRO_SUICUNE_2
+	call PlaySFX
 	call NextIntroScene
 	ret
 
 IntroScene23:
+	call Intro_RustleGrass
 	ld hl, wIntroSceneFrameCounter
 	ld a, [hl]
 	inc [hl]
 	cp $FF
 	jr z, .SaveSound
-	call Intro_RustleGrass
 	ret
 
 .SaveSound
@@ -1248,8 +1244,6 @@ IntroScene28:
 	cp $8
 	ret nz
 
-	ld de, SFX_INTRO_WHOOSH
-	call PlaySFX
 	ret
 
 .clear
