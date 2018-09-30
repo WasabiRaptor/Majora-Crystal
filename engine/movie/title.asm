@@ -132,7 +132,6 @@ Title_ResetLYOverrides:
 
 
 Title_RustleGrass:
-	ld hl, wIntroSceneFrameCounter
 	ld a, [wIntroSceneFrameCounter]
 	cp 36
 	ret nc
@@ -140,7 +139,7 @@ Title_RustleGrass:
 	srl a
 	ld e, a
 	ld d, $0
-	ld hl, .RustlingGrassPointers
+	ld hl, .TitleRustlingGrassPointers
 	add hl, de
 	ld a, [hli]
 	ld [wRequested2bppSource], a
@@ -154,7 +153,7 @@ Title_RustleGrass:
 	ld [wRequested2bppSize], a
 	ret
 
-.RustlingGrassPointers:
+.TitleRustlingGrassPointers:
 	dw TitleGrass1GFX
 	dw TitleGrass2GFX
 	dw TitleGrass3GFX
@@ -175,6 +174,8 @@ TwinkleTitleStars::
 	cp 40
 	jr z, .next
 	cp 60
+	jr z, .next
+	cp 80
 	ret nz
 	ld hl, wIntroSceneFrameCounter
 	xor a
