@@ -135,7 +135,7 @@ Title_RustleGrass:
 	ld a, [wIntroSceneFrameCounter]
 	cp 36
 	ret nc
-	and $c
+	and $c     ;$c is 12
 	srl a
 	ld e, a
 	ld d, $0

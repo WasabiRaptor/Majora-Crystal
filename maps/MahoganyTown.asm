@@ -24,13 +24,8 @@ MahoganyTown_MapScripts:
 
 MahoganyTownTryARageCandyBarScript:
 	showemote EMOTE_SHOCK, MAHOGANYTOWN_POKEFAN_M, 15
-	applymovement MAHOGANYTOWN_POKEFAN_M, MovementData_0x1900a9
-	follow PLAYER, MAHOGANYTOWN_POKEFAN_M
-	applymovement PLAYER, MovementData_0x1900a7
-	stopfollow
-	turnobject PLAYER, RIGHT
+	turnobject PLAYER, UP
 	scall RageCandyBarMerchantScript
-	applymovement MAHOGANYTOWN_POKEFAN_M, MovementData_0x1900ad
 	end
 
 MahoganyTownPokefanMScript:
@@ -262,8 +257,7 @@ MahoganyTown_MapEvents:
 	bg_event  3, 13, BGEVENT_READ, MahoganyGymSign
 	bg_event 16, 13, BGEVENT_READ, MahoganyTownPokecenterSign
 
-	db 4 ; object events
+	db 3 ; object events
 	object_event 19,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyTownPokefanMScript, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_EAST
 	object_event  6,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyTownGrampsScript, -1
-	object_event  6, 14, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MahoganyTownFisherScript, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
 	object_event 12,  8, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyTownLassScript, EVENT_MAHOGANY_MART_OWNERS
