@@ -561,7 +561,7 @@ TryObjectEvent:
 	jp hl
 
 .nope_bugged
-	; pop bc
+	pop bc
 	xor a
 	ret
 

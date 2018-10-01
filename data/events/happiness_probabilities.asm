@@ -10,3 +10,5 @@ HappinessData_OlderHaircutBrother:
 
 HappinessData_DaisysGrooming:
 	db $ff, 2, HAPPINESS_GROOMING ; 99.6% chance
+	db $80, 2, HAPPINESS_GROOMING ; 50% chance
+	db $ff, 2, HAPPINESS_GROOMING ; 50% chance
