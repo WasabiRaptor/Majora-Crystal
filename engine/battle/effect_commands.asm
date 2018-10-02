@@ -2115,6 +2115,8 @@ BattleCommand_FailureText:
 	jr z, .multihit
 	cp EFFECT_POISON_MULTI_HIT
 	jr z, .multihit
+	cp EFFECT_BEAT_UP
+	jr z, .multihit
 	jp EndMoveEffect
 
 .multihit
@@ -2559,7 +2561,17 @@ DittoMetalPowder:
 .done
 	scf
 	rr c
-	ret
+	
+	ld a, HIGH(MAX_STAT_VALUE)
+	cp b
+	jr c, .cap
+	ld a, LOW(MAX_STAT_VALUE)
+	cp c
+	ret nc
+
+.cap
+	ld b, HIGH(MAX_STAT_VALUE)
+	ld c, LOW(MAX_STAT_VALUE)
 
 BattleCommand_DamageStats:
 ; damagestats
@@ -2683,9 +2695,6 @@ TruncateHL_BC:
 	inc l
 
 .finish
-	ld a, [wLinkMode]
-	cp LINK_COLOSSEUM
-	jr z, .done
 ; If we go back to the loop point,
 ; it's the same as doing this exact
 ; same check twice.
@@ -2693,7 +2702,6 @@ TruncateHL_BC:
 	or b
 	jr nz, .loop
 
-.done
 	ld b, l
 	ret
 
@@ -2811,7 +2819,18 @@ SpeciesItemBoost:
 ; Double the stat
 	sla l
 	rl h
-	ret
+	
+	ld a, HIGH(MAX_STAT_VALUE)
+	cp h
+	jr c, .cap
+	ld a, LOW(MAX_STAT_VALUE)
+	cp l
+	ret nc
+
+.cap
+	ld h, HIGH(MAX_STAT_VALUE)
+	ld l, LOW(MAX_STAT_VALUE)
+ 	ret
 
 EnemyAttackDamage:
 	call ResetDamage
@@ -5348,8 +5367,7 @@ BattleCommand_EndLoop:
 	ld a, BATTLE_VARS_SUBSTATUS3
 	call GetBattleVarAddr
 	res SUBSTATUS_IN_LOOP, [hl]
-	call BattleCommand_BeatUpFailText
-	jp EndMoveEffect
+	ret
 
 .not_triple_kick
 	call BattleRandom
@@ -6689,10 +6707,7 @@ INCLUDE "engine/battle/move_effects/future_sight.asm"
 INCLUDE "engine/battle/move_effects/thunder.asm"
 
 CheckHiddenOpponent:
-; BUG: This routine is completely redundant and introduces a bug, since BattleCommand_CheckHit does these checks properly.
-	ld a, BATTLE_VARS_SUBSTATUS3_OPP
-	call GetBattleVar
-	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
+	xor a
 	ret
 
 GetUserItem:
