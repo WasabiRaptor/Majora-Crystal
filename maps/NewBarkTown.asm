@@ -23,6 +23,11 @@ NewBarkTown_MapScripts:
 	return
 
 NewBarkTown_TeacherStopsYouScene1:
+	checkcode VAR_PARTYCOUNT
+	ifequal 0, .stop
+	setmapscene NEW_BARK_TOWN, SCENE_FINISHED
+	end
+.stop
 	playmusic MUSIC_MOM
 	turnobject NEWBARKTOWN_TEACHER, LEFT
 	opentext
@@ -46,6 +51,11 @@ NewBarkTown_TeacherStopsYouScene1:
 	end
 
 NewBarkTown_TeacherStopsYouScene2:
+	checkcode VAR_PARTYCOUNT
+	ifequal 0, .stop
+	setmapscene NEW_BARK_TOWN, SCENE_FINISHED
+	end
+.stop
 	playmusic MUSIC_MOM
 	turnobject NEWBARKTOWN_TEACHER, LEFT
 	opentext
