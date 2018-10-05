@@ -6269,12 +6269,12 @@ LoadEnemyMon:
 	ld c, a
 	
 	ld a, [wCurPartyLevel]
-	cp 255
+	cp 201
 	jr z, .MatchPlayerLevel
 	ld a, b
 	call SimpleDivide
 	
-	cp 255
+	cp 201
 	jr z, .MatchPlayerLevel
 	
 	ld a, [wCurPartyLevel]
