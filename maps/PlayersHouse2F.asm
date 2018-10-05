@@ -85,7 +85,7 @@ PlayersHouseBookshelfScript:
 
 PlayersHousePCScript:
 	opentext
-	special PlayersHousePC
+	special PokemonCenterPC
 	iftrue .Warp
 	closetext
 	end

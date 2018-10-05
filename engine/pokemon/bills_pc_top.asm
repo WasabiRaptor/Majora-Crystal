@@ -1,5 +1,5 @@
 _BillsPC:
-	call .CheckCanUsePC
+	;call .CheckCanUsePC
 	ret c
 	call .LogIn
 	call .UseBillsPC

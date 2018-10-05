@@ -1,5 +1,5 @@
 PokemonCenterPC:
-	call PC_CheckPartyForPokemon
+	;call PC_CheckPartyForPokemon
 	ret c
 	call PC_PlayBootSound
 	ld hl, PokecenterPCText_BootedUpPC
