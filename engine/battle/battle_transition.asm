@@ -240,6 +240,15 @@ StartTrainerBattle_DetermineWhichAnimation:
 	ld hl, wCurPartyLevel
 	cp [hl]
 	jr nc, .not_stronger
+	ld c, a
+	ld a, [hl]
+	cp 101
+	jr c, .actually_stronger
+	ld a, c
+	ld hl, wCurPartyLevel - 100
+	cp [hl]
+	jr nc, .not_stronger
+.actually_stronger
 	set TRANS_STRONGER_F, e
 .not_stronger
 	ld a, [wEnvironment]
