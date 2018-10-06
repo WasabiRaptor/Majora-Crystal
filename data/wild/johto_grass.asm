@@ -2,60 +2,6 @@
 
 JohtoGrassWildMons:
 
-	map_id SPROUT_TOWER_2F
-	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
-	; morn
-	db 3, RATTATA
-	db 4, RATTATA
-	db 5, RATTATA
-	db 3, RATTATA
-	db 6, RATTATA
-	db 5, RATTATA
-	db 5, RATTATA
-	; day
-	db 3, RATTATA
-	db 4, RATTATA
-	db 5, RATTATA
-	db 3, RATTATA
-	db 6, RATTATA
-	db 5, RATTATA
-	db 5, RATTATA
-	; nite
-	db 3, GASTLY
-	db 4, GASTLY
-	db 5, GASTLY
-	db 3, RATTATA
-	db 6, GASTLY
-	db 5, RATTATA
-	db 5, RATTATA
-
-	map_id SPROUT_TOWER_3F
-	db 0 percent, 0 percent, 0 percent ; encounter rates: morn/day/nite
-	; morn
-	db 3, RATTATA
-	db 4, RATTATA
-	db 5, RATTATA
-	db 3, RATTATA
-	db 6, RATTATA
-	db 5, RATTATA
-	db 5, RATTATA
-	; day
-	db 3, RATTATA
-	db 4, RATTATA
-	db 5, RATTATA
-	db 3, RATTATA
-	db 6, RATTATA
-	db 5, RATTATA
-	db 5, RATTATA
-	; nite
-	db 3, GASTLY
-	db 4, GASTLY
-	db 5, GASTLY
-	db 3, RATTATA
-	db 6, GASTLY
-	db 5, RATTATA
-	db 5, RATTATA
-
 	map_id TIN_TOWER_2F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1463,110 +1409,110 @@ JohtoGrassWildMons:
 	map_id ROUTE_42
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 13, EKANS
-	db 14, SPEAROW
-	db 15, RATTATA
-	db 16, RATICATE
-	db 15, ARBOK
-	db 16, FEAROW
-	db 16, FEAROW
+	db 130, EKANS
+	db 130, SPEAROW
+	db 130, SENTRET
+	db 130, FURRET
+	db 130, ARBOK
+	db 130, MANKEY
+	db 201, MANKEY
 	; day
-	db 13, EKANS
-	db 14, SPEAROW
-	db 15, RATTATA
-	db 16, RATICATE
-	db 15, ARBOK
-	db 16, FEAROW
-	db 16, FEAROW
+	db 130, EKANS
+	db 130, SPEAROW
+	db 130, SENTRET
+	db 130, FURRET
+	db 130, ARBOK
+	db 130, FEAROW
+	db 201, FEAROW
 	; nite
-	db 13, RATTATA
-	db 14, ZUBAT
-	db 15, RATICATE
-	db 16, GOLBAT
-	db 15, MARILL
-	db 16, GOLBAT
-	db 16, GOLBAT
+	db 130, SENTRET
+	db 130, ZUBAT
+	db 130, FURRET
+	db 130, GOLBAT
+	db 130, MARILL
+	db 130, KOFFING
+	db 201, KOFFING
 
 	map_id ROUTE_43
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 15, SENTRET
-	db 16, PIDGEOTTO
-	db 16, FARFETCH_D
-	db 15, FURRET
-	db 17, RATICATE
-	db 17, FURRET
-	db 17, FURRET
+	db 138, SENTRET
+	db 138, PIDGEOTTO
+	db 138, FARFETCH_D
+	db 138, FURRET
+	db 138, MAREEP
+	db 138, GIRAFARIG
+	db 201, GIRAFARIG
 	; day
-	db 15, SENTRET
-	db 16, PIDGEOTTO
-	db 16, FARFETCH_D
-	db 15, FURRET
-	db 17, RATICATE
-	db 17, FURRET
-	db 17, FURRET
+	db 138, RATTATA
+	db 138, PIDGEOTTO
+	db 138, FARFETCH_D
+	db 138, FURRET
+	db 138, MAREEP
+	db 138, FLAAFFY
+	db 201, FLAAFFY
 	; nite
-	db 15, VENONAT
-	db 16, NOCTOWL
-	db 16, RATICATE
-	db 17, VENONAT
-	db 17, RATICATE
-	db 17, VENOMOTH
-	db 17, VENOMOTH
+	db 138, VENONAT
+	db 138, NOCTOWL
+	db 138, VENONAT
+	db 138, RATICATE
+	db 138, MAREEP
+	db 138, VENOMOTH
+	db 201, VENOMOTH
 
 	map_id ROUTE_44
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 23, TANGELA
-	db 22, LICKITUNG
-	db 22, BELLSPROUT
-	db 24, WEEPINBELL
-	db 24, LICKITUNG
-	db 26, LICKITUNG
-	db 26, LICKITUNG
+	db 140, TANGELA
+	db 140, LICKITUNG
+	db 140, BELLSPROUT
+	db 140, WEEPINBELL
+	db 140, LICKITUNG
+	db 140, GLIGAR
+	db 201, SKARMORY
 	; day
-	db 23, TANGELA
-	db 22, LICKITUNG
-	db 22, BELLSPROUT
-	db 24, WEEPINBELL
-	db 24, LICKITUNG
-	db 26, LICKITUNG
-	db 26, LICKITUNG
+	db 140, TANGELA
+	db 140, MANKEY
+	db 140, BELLSPROUT
+	db 140, WEEPINBELL
+	db 140, MANKEY
+	db 140, SKARMORY
+	db 201, SKARMORY
 	; nite
-	db 23, TANGELA
-	db 22, POLIWAG
-	db 22, BELLSPROUT
-	db 24, WEEPINBELL
-	db 24, POLIWHIRL
-	db 26, POLIWHIRL
-	db 26, POLIWHIRL
+	db 140, TANGELA
+	db 140, POLIWAG
+	db 140, BELLSPROUT
+	db 140, WEEPINBELL
+	db 140, POLIWHIRL
+	db 140, GLIGAR
+	db 201, GLIGAR
 
 	map_id ROUTE_45
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 23, GEODUDE
-	db 23, GRAVELER
-	db 24, GLIGAR
-	db 25, DONPHAN
-	db 20, PHANPY
-	db 27, SKARMORY
-	db 27, SKARMORY
+	db 149, TEDDIURSA
+	db 149, GRAVELER
+	db 149, GLIGAR
+	db 149, DONPHAN
+	db 149, STANTLER
+	db 149, SKARMORY
+	db 201, SKARMORY
 	; day
-	db 23, GEODUDE
-	db 23, GRAVELER
-	db 24, GLIGAR
-	db 25, DONPHAN
-	db 30, DONPHAN
-	db 27, SKARMORY
-	db 27, SKARMORY
+	db 149, GEODUDE
+	db 149, GRAVELER
+	db 149, GLIGAR
+	db 149, DONPHAN
+	db 149, DONPHAN
+	db 149, SKARMORY
+	db 201, SKARMORY
 	; nite
-	db 23, GEODUDE
-	db 23, GRAVELER
-	db 24, GLIGAR
-	db 25, GRAVELER
-	db 27, GRAVELER
-	db 27, GRAVELER
-	db 27, GRAVELER
+	db 149, TEDDIURSA
+	db 149, GRAVELER
+	db 149, GLIGAR
+	db 149, GRAVELER
+	db 149, URSARING
+	db 149, STANTLER
+	db 201, URSARING
 
 	map_id ROUTE_46
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
