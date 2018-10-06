@@ -7,22 +7,24 @@ _OakText7::
 	text "<PLAYER>, are you"
 	line "ready?"
 
-	para "Your very own"
-	line "#MON story is"
-	cont "about to unfold."
+	para "I hope you take my"
+	line "challenge well."
 
-	para "You'll face fun"
-	line "times and tough"
-	cont "challenges."
+	para "You might loose"
+	line "some friends to"
+	cont "battle or time,"
 
-	para "A world of dreams"
-	line "and adventures"
+	para "but you can keep"
+	line "them safe, even"
+	cont "if you have to"
+	cont "box your very"
+	cont "last #MON..."
 
-	para "with #MON"
-	line "awaits! Let's go!"
+	para "..."
 
-	para "I'll be seeing you"
-	line "later!"
+	para "Play it safe"
+	line "<PLAYER>."
+
 	done
 
 UnknownText_0x1c40e6::

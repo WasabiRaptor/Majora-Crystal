@@ -1515,28 +1515,19 @@ _OakText3::
 	db "@@"
 
 _OakText4::
-	text "People and #MON"
-	line "live together by"
+	text "You probably know"
+	line "all about #MON."
 
-	para "supporting each"
-	line "other."
-
-	para "Some people play"
-	line "with #MON, some"
-	cont "battle with them."
+	para "You've done this"
+	line "many times before,"
+	cont "and you'll do it"
+	cont "again, and again,"
+	cont "and again."
 	prompt
 
 _OakText5::
-	text "But we don't know"
-	line "everything about"
-	cont "#MON yet."
-
-	para "There are still"
-	line "many mysteries to"
-	cont "solve."
-
-	para "That's why I study"
-	line "#MON every day."
+	text "You'll do it"
+	line "until you win."
 	prompt
 	
 FirstDayText::
