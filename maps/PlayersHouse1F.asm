@@ -153,7 +153,6 @@ NeighborScript:
 	end
 
 TVScript:
-	credits
 	jumptext TVText
 
 StoveScript:
