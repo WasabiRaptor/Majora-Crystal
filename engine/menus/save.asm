@@ -14,6 +14,7 @@ SaveMenu:
 	call ResumeGameLogic
 	call ExitMenu
 	and a
+	jp Reset
 	ret
 
 .refused
