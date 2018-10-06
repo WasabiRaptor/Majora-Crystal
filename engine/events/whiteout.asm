@@ -17,8 +17,8 @@ Script_Whiteout:
 	callasm HalveMoney
 	callasm GetWhiteoutSpawn
 	farscall Script_AbortBugContest
-	special WarpToSpawnPoint
-	newloadmap MAPSETUP_WARP
+	farcall _SaveGameData
+	farcall Reset
 	endall
 
 .bug_contest

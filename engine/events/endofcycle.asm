@@ -197,9 +197,10 @@ ItsGettingCloserScript:
 ItsRightNearScript:
 	opentext
 	writetext .ItsRightNeartext
-	;farcall _SaveGameData
+	farcall _SaveGameData
 	waitbutton
 	closetext
+	farcall Reset
 	end
 .ItsRightNeartext
 	text_jump ItsRightNearText
