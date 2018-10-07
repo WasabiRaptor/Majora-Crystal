@@ -195,10 +195,6 @@ ChucksWifeEasierToFlyText:
 	done
 
 ChucksWifeBeatChuckText:
-	text "But you can't use"
-	line "FLY without this"
-	cont "city's GYM BADGE."
-
 	para "If you beat the"
 	line "GYM LEADER here,"
 	cont "come see me."

@@ -801,12 +801,6 @@ Text_CharcoalMasterOutro:
 
 	para "#MON to clear"
 	line "small trees."
-
-	para "Of course, you"
-	line "have to have the"
-
-	para "GYM BADGE from"
-	line "AZALEA to use it."
 	done
 
 Text_CharcoalMasterTalkAfter:

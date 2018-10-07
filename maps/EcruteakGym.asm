@@ -238,12 +238,6 @@ MortyText_FogBadgeSpeech:
 	para "to L50 will obey"
 	line "you."
 
-	para "Also, #MON that"
-	line "know SURF will be"
-
-	para "able to use that"
-	line "move anytime."
-
 	para "I want you to have"
 	line "this too."
 	done

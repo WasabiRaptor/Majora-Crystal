@@ -234,13 +234,7 @@ PlayerReceivedPlainBadgeText:
 	done
 
 WhitneyPlainBadgeText:
-	text "PLAINBADGE lets"
-	line "your #MON use"
-
-	para "STRENGTH outside"
-	line "of battle."
-
-	para "It also boosts"
+	text "PLAINBADGE boosts"
 	line "your #MON's"
 	cont "SPEED."
 
