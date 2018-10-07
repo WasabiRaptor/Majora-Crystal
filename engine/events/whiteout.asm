@@ -12,17 +12,8 @@ Script_Whiteout:
 	special FadeOutPalettes
 	pause 40
 	special HealParty
-	checkflag ENGINE_BUG_CONTEST_TIMER
-	iftrue .bug_contest
-	callasm HalveMoney
-	callasm GetWhiteoutSpawn
-	farscall Script_AbortBugContest
-	farcall _SaveGameData
-	farcall Reset
+	callasm SaveAndReset
 	endall
-
-.bug_contest
-	jumpstd bugcontestresultswarp
 
 .WhitedOutText:
 	; is out of useable #MON!  whited out!
@@ -59,16 +50,7 @@ HalveMoney:
 	ld [hl], a
 	ret
 
-GetWhiteoutSpawn:
-	ld a, [wLastSpawnMapGroup]
-	ld d, a
-	ld a, [wLastSpawnMapNumber]
-	ld e, a
-	farcall IsSpawnPoint
-	ld a, c
-	jr c, .yes
-	xor a ; SPAWN_HOME
+SaveAndReset:
+	farcall _SaveGameData
+	farcall Reset
 
-.yes
-	ld [wDefaultSpawnpoint], a
-	ret
