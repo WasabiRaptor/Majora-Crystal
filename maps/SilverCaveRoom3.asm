@@ -22,6 +22,10 @@ Red:
 	opentext
 	writetext .Text3
 	waitbutton
+	verbosegiveitem GS_BALL
+	setevent EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
+	setevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
+	writetext .Text2
 	closetext
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
