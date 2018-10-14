@@ -649,23 +649,23 @@ ENDM
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
 
-	map_attributes MysteryDungeonNSEW, MYSTERY_DUNGEON_NSEW, $05, 0
+	map_attributes MysteryDungeonNorthSouthEastWest, MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, $05, 0
 
-	map_attributes MysteryDungeonNSE, MYSTERY_DUNGEON_NSE, $05, 0
-	map_attributes MysteryDungeonNSW, MYSTERY_DUNGEON_NSW, $05, 0
-	map_attributes MysteryDungeonNEW, MYSTERY_DUNGEON_NEW, $05, 0
-	map_attributes MysteryDungeonSEW, MYSTERY_DUNGEON_SEW, $05, 0
+	map_attributes MysteryDungeonNorthSouthEast, MYSTERY_DUNGEON_NORTH_SOUTH_EAST, $05, 0
+	map_attributes MysteryDungeonNorthSouthWest, MYSTERY_DUNGEON_NORTH_SOUTH_WEST, $05, 0
+	map_attributes MysteryDungeonNorthEastWest, MYSTERY_DUNGEON_NORTH_EAST_WEST, $05, 0
+	map_attributes MysteryDungeonSouthEastWest, MYSTERY_DUNGEON_SOUTH_EAST_WEST, $05, 0
 
-	map_attributes MysteryDungeonNS, MYSTERY_DUNGEON_NS, $05, 0
-	map_attributes MysteryDungeonEW, MYSTERY_DUNGEON_EW, $05, 0
+	map_attributes MysteryDungeonNorthSouth, MYSTERY_DUNGEON_NORTH_SOUTH, $05, 0
+	map_attributes MysteryDungeonEastWest, MYSTERY_DUNGEON_EAST_WEST, $05, 0
 
-	map_attributes MysteryDungeonNE, MYSTERY_DUNGEON_NE, $05, 0
-	map_attributes MysteryDungeonNW, MYSTERY_DUNGEON_NW, $05, 0
-	map_attributes MysteryDungeonSE, MYSTERY_DUNGEON_SE, $05, 0
-	map_attributes MysteryDungeonSW, MYSTERY_DUNGEON_SW, $05, 0
+	map_attributes MysteryDungeonNorthEast, MYSTERY_DUNGEON_NORTH_EAST, $05, 0
+	map_attributes MysteryDungeonNorthWest, MYSTERY_DUNGEON_NORTH_WEST, $05, 0
+	map_attributes MysteryDungeonSouthEast, MYSTERY_DUNGEON_SOUTH_EAST, $05, 0
+	map_attributes MysteryDungeonSouthWest, MYSTERY_DUNGEON_SOUTH_WEST, $05, 0
 
-	map_attributes MysteryDungeonN, MYSTERY_DUNGEON_N, $05, 0
-	map_attributes MysteryDungeonS, MYSTERY_DUNGEON_S, $05, 0
-	map_attributes MysteryDungeonE, MYSTERY_DUNGEON_E, $05, 0
-	map_attributes MysteryDungeonW, MYSTERY_DUNGEON_W, $05, 0
+	map_attributes MysteryDungeonNorth, MYSTERY_DUNGEON_NORTH, $05, 0
+	map_attributes MysteryDungeonSouth, MYSTERY_DUNGEON_SOUTH, $05, 0
+	map_attributes MysteryDungeonEast, MYSTERY_DUNGEON_EAST, $05, 0
+	map_attributes MysteryDungeonWest, MYSTERY_DUNGEON_WEST, $05, 0
 

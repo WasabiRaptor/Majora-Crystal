@@ -475,24 +475,24 @@ INCLUDE "maps/Route10North.asm"
 
 SECTION "Mystery Dungeon Map Scripts", ROMX
 
-INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonNSEW.asm"
+INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonNorthSouthEastWest.asm"
 
-INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonNSW.asm"
-INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonNSE.asm"
-INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonNEW.asm"
-INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonSEW.asm"
+INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonNorthSouthWest.asm"
+INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonNorthSouthEast.asm"
+INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonNorthEastWest.asm"
+INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonSouthEastWest.asm"
 
-INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonNS.asm"
-INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonEW.asm"
+INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonNorthSouth.asm"
+INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonEastWest.asm"
 
-INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonNE.asm"
-INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonNW.asm"
-INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonSE.asm"
-INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonSW.asm"
+INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonNorthEast.asm"
+INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonNorthWest.asm"
+INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonSouthEast.asm"
+INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonSouthWest.asm"
 
-INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonN.asm"
-INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonS.asm"
-INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonE.asm"
-INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonW.asm"
+INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonNorth.asm"
+INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonSouth.asm"
+INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonEast.asm"
+INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonWest.asm"
 
 

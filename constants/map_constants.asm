@@ -479,30 +479,30 @@ ENDM
 	map_const MR_POKEMONS_HOUSE,                            4,  4 ; 10
 	map_const ROUTE_31_VIOLET_GATE,                         5,  4 ; 11
 
-	newgroup
+	newgroup                                                      ; 27
 
 ;every way crossroads
-	map_const MYSTERY_DUNGEON_NSEW,						    5,  5 
+	map_const MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST,						    5,  5 
 
 ;T shape crossroads
-	map_const MYSTERY_DUNGEON_NSE,						    5,  5
-	map_const MYSTERY_DUNGEON_NSW,						    5,  5
-	map_const MYSTERY_DUNGEON_NEW,						    5,  5
-	map_const MYSTERY_DUNGEON_SEW,						    5,  5
+	map_const MYSTERY_DUNGEON_NORTH_SOUTH_EAST,						    5,  5
+	map_const MYSTERY_DUNGEON_NORTH_SOUTH_WEST,						    5,  5
+	map_const MYSTERY_DUNGEON_NORTH_EAST_WEST,						    5,  5
+	map_const MYSTERY_DUNGEON_SOUTH_EAST_WEST,						    5,  5
 
 ;straight paths
-	map_const MYSTERY_DUNGEON_NS,						    5,  5
-	map_const MYSTERY_DUNGEON_EW,						    5,  5
+	map_const MYSTERY_DUNGEON_NORTH_SOUTH,						    5,  5
+	map_const MYSTERY_DUNGEON_EAST_WEST,						    5,  5
 
 ;the four corners
-	map_const MYSTERY_DUNGEON_NE,						    5,  5
-	map_const MYSTERY_DUNGEON_NW,						    5,  5
-	map_const MYSTERY_DUNGEON_SE,						    5,  5
-	map_const MYSTERY_DUNGEON_SW,						    5,  5
+	map_const MYSTERY_DUNGEON_NORTH_EAST,						    5,  5
+	map_const MYSTERY_DUNGEON_NORTH_WEST,						    5,  5
+	map_const MYSTERY_DUNGEON_SOUTH_EAST,						    5,  5
+	map_const MYSTERY_DUNGEON_SOUTH_WEST,						    5,  5
 
 ;dead ends
-	map_const MYSTERY_DUNGEON_N,						    5,  5
-	map_const MYSTERY_DUNGEON_S,						    5,  5
-	map_const MYSTERY_DUNGEON_E,						    5,  5
-	map_const MYSTERY_DUNGEON_W,						    5,  5
+	map_const MYSTERY_DUNGEON_NORTH,						    5,  5
+	map_const MYSTERY_DUNGEON_SOUTH,						    5,  5
+	map_const MYSTERY_DUNGEON_WEST,						    5,  5
+	map_const MYSTERY_DUNGEON_EAST,						    5,  5
 

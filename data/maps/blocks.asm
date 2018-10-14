@@ -889,37 +889,37 @@ GoldenrodDeptStoreRoof_Blocks:
 
 ;MysteryDungeon map blocks
 
-MysteryDungeonNSEW_Blocks:
-	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNSEW.blk"
+MysteryDungeonNorthSouthEastWest_Blocks:
+	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNorthSouthEastWest.blk"
 
-MysteryDungeonNSE_Blocks:
-	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNSE.blk"
-MysteryDungeonNSW_Blocks:
-	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNSW.blk"
-MysteryDungeonNEW_Blocks:
-	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNEW.blk"
-MysteryDungeonSEW_Blocks:
-	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonSEW.blk"
+MysteryDungeonNorthSouthEast_Blocks:
+	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNorthSouthEast.blk"
+MysteryDungeonNorthSouthWest_Blocks:
+	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNorthSouthWest.blk"
+MysteryDungeonNorthEastWest_Blocks:
+	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNorthEastWest.blk"
+MysteryDungeonSouthEastWest_Blocks:
+	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonSouthEastWest.blk"
 
-MysteryDungeonNS_Blocks:
-	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNS.blk"
-MysteryDungeonEW_Blocks:
-	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonEW.blk"
+MysteryDungeonNorthSouth_Blocks:
+	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNorthSouth.blk"
+MysteryDungeonEastWest_Blocks:
+	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonEastWest.blk"
 
-MysteryDungeonNE_Blocks:
-	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNE.blk"
-MysteryDungeonNW_Blocks:
-	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNW.blk"
-MysteryDungeonSE_Blocks:
-	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonSE.blk"
-MysteryDungeonSW_Blocks:
-	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonSW.blk"
+MysteryDungeonNorthEast_Blocks:
+	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNorthEast.blk"
+MysteryDungeonNorthWest_Blocks:
+	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNorthWest.blk"
+MysteryDungeonSouthEast_Blocks:
+	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonSouthEast.blk"
+MysteryDungeonSouthWest_Blocks:
+	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonSouthWest.blk"
 
-MysteryDungeonN_Blocks:
-	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonN.blk"
-MysteryDungeonS_Blocks:
-	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonS.blk"
-MysteryDungeonE_Blocks:
-	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonE.blk"
-MysteryDungeonW_Blocks:
-	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonW.blk"
+MysteryDungeonNorth_Blocks:
+	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNorth.blk"
+MysteryDungeonSouth_Blocks:
+	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonSouth.blk"
+MysteryDungeonEast_Blocks:
+	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonEast.blk"
+MysteryDungeonWest_Blocks:
+	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonWest.blk"

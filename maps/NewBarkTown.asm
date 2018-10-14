@@ -22,7 +22,7 @@ NewBarkTown_MapScripts:
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	return
 	
-MysteryDungeonEnterScript:
+MysteryDungeonEastnterScript:
 	end
 
 NewBarkTown_TeacherStopsYouScene1:
@@ -316,5 +316,5 @@ NewBarkTown_MapEvents:
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  3,  2, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownSilverScript, EVENT_RIVAL_NEW_BARK_TOWN
 
-	object_event 14,  11, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MysteryDungeonEnterScript, -1
+	object_event 14,  11, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MysteryDungeonEastnterScript, -1
 
