@@ -21,7 +21,7 @@ NewBarkTown_MapScripts:
 	setflag ENGINE_FLYPOINT_NEW_BARK
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	return
-	
+
 MysteryDungeonEastnterScript:
 	end
 
@@ -295,11 +295,13 @@ NewBarkTownElmsHouseSignText:
 NewBarkTown_MapEvents:
 	db 0, 0 ; filler
 
-	db 4 ; warp events
+	db 5 ; warp events
 	warp_event  6,  3, ELMS_LAB, 1
 	warp_event 13,  5, PLAYERS_HOUSE_1F, 1
 	warp_event  3, 11, PLAYERS_NEIGHBORS_HOUSE, 1
 	warp_event 11, 13, ELMS_HOUSE, 1
+	warp_event 17, 5, MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, 1
+
 
 	db 2 ; coord events
 	coord_event  1,  8, SCENE_DEFAULT, NewBarkTown_TeacherStopsYouScene1

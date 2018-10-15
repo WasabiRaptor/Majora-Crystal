@@ -1060,3 +1060,9 @@ ENDM
 checksave: MACRO
 	db checksave_command
 ENDM
+
+	enum mysterydungeonwarp_command ; $aa
+mysterydungeonwarp: MACRO
+	db mysterydungeonwarp_command
+	dw \1 ; floor_list_pointer
+ENDM

@@ -235,6 +235,7 @@ endc
 	dw Script_name                       ; a7
 	dw Script_wait                       ; a8
 	dw Script_checksave                  ; a9
+	dw Script_mysterydungeonwarp
 
 StartScript:
 	ld hl, wScriptFlags
@@ -2829,3 +2830,20 @@ Script_checksave:
 
 .byte
 	db 0
+
+Script_mysterydungeonwarp:
+	xor a
+	ld [wScriptVar], a
+	call GetScriptByte
+	ld e, a
+	call GetScriptByte
+	ld d, a
+	ld a, [wScriptBank]
+	ld b, a
+	farcall MysteryDungeonWarp
+	ret c
+	ld a, TRUE
+	ld [wScriptVar], a
+	ret
+
+

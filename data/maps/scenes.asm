@@ -84,4 +84,5 @@ MapScenes::
 	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
 	scene_var MOBILE_TRADE_ROOM,                           wMobileTradeRoomSceneID
 	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
+	scene_var MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST,	   wMysteryDungeonSceneID
 	db -1
