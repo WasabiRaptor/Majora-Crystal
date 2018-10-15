@@ -97,6 +97,8 @@ const_value = -1
 	const SPAWN_BLACKTHORN
 	const SPAWN_MT_SILVER
 	const SPAWN_FAST_SHIP
+; dungeon
+	const SPAWN_MYSTERY_DUNGEON
 NUM_SPAWNS EQU const_value
 
 ; outdoor sprite limits (see engine/overworld/overworld.asm)

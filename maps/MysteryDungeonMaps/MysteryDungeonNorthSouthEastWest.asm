@@ -123,14 +123,14 @@ MysteryDungeonNorthSouthEastWest_MapEvents:
 		coord_event  4,  2, SCENE_DEFAULT, DungeonWarpNorth
 		coord_event  5,  1, SCENE_DEFAULT, DungeonWarpNorth
 
-		coord_event  4,  8, SCENE_DEFAULT, DungeonWarpSouth
-		coord_event  5,  8, SCENE_DEFAULT, DungeonWarpSouth
+		coord_event  4,  9, SCENE_DEFAULT, DungeonWarpSouth
+		coord_event  5,  9, SCENE_DEFAULT, DungeonWarpSouth
 
-		coord_event  8,  4, SCENE_DEFAULT, DungeonWarpEast
-		coord_event  8,  5, SCENE_DEFAULT, DungeonWarpEast
+		coord_event  9,  4, SCENE_DEFAULT, DungeonWarpEast
+		coord_event  9,  5, SCENE_DEFAULT, DungeonWarpEast
 
-		coord_event  1,  4, SCENE_DEFAULT, DungeonWarpWest
-		coord_event  1,  5, SCENE_DEFAULT, DungeonWarpWest
+		coord_event  0,  4, SCENE_DEFAULT, DungeonWarpWest
+		coord_event  0,  5, SCENE_DEFAULT, DungeonWarpWest
 
 	db 0 ; bg events
 

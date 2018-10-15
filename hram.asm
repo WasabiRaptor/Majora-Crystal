@@ -9,7 +9,7 @@ hFF8C:: db ; ff8c
 hMysteryDungeonX::   db ; ff8d
 hMysteryDungeonY::   db ; ff8e
 hMysteryDungeonSeed::   db ; ff8f
-hCurrentlyUnused:: db ; ff90
+hMysteryDungeonDifficulty:: db ; ff90
 hAlsoUnused:: db ; ff91
 
 	ds 2

@@ -1,11 +1,24 @@
 MysteryDungeonWarp::
 	call .LoadPointer
 
-	;temp just random for testing
-	ld a, 8
-	call RandomRange
+	;choose which dungeon room to enter 
+	ld a, [hMysteryDungeonX]
+	ld c, a
+	ld a, [hMysteryDungeonY]
+	call SimpleMultiply
+	ld c, 2
+	call SimpleMultiply
+	ld b, a
+	ld a, [hMysteryDungeonSeed]
+	ld c, a
 
-	call Elevator_GoToFloor
+.divideloop ;loop until you get something below 8 to have a valid floor pointer for the dungeon
+	ld a, b
+	call SimpleDivide ;a is the remainder 
+	cp 8
+	jr nc, .divideloop
+
+	call Elevator_GoToFloor ;just needs to get the remainder between 0-7
 	and a
 	ret
 

@@ -22,8 +22,25 @@ NewBarkTown_MapScripts:
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	return
 
-MysteryDungeonEastnterScript:
+MysteryDungeonEnterScript:
+	callasm MysteryDungeonSetup
+	special WarpToSpawnPoint
+	newloadmap MAPSETUP_TELEPORT
+	writecode VAR_MOVEMENT, PLAYER_NORMAL
+	newloadmap MAPSETUP_TELEPORT
 	end
+
+MysteryDungeonSetup:
+	ld a, 5
+	ld [hMysteryDungeonX], a
+	ld [hMysteryDungeonY], a
+	ld a, 8
+	call RandomRange
+	add 8
+	ld [hMysteryDungeonSeed], a
+	ld a, SPAWN_MYSTERY_DUNGEON
+	ld [wDefaultSpawnpoint], a
+	ret
 
 NewBarkTown_TeacherStopsYouScene1:
 	checkcode VAR_PARTYCOUNT
@@ -318,5 +335,5 @@ NewBarkTown_MapEvents:
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  3,  2, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownSilverScript, EVENT_RIVAL_NEW_BARK_TOWN
 
-	object_event 14,  11, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MysteryDungeonEastnterScript, -1
+	object_event 14,  11, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MysteryDungeonEnterScript, -1
 
