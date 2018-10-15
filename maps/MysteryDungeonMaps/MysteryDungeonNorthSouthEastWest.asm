@@ -14,21 +14,93 @@ MysteryDungeonNorthSouthEastWest_MapScripts:
 .DummyScene1:
 	end
 
+;only the north one works properly
+DungeonStepFromNorth:
+	applymovement PLAYER, MovementFromNorth_NBT
+	setmapscene MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, SCENE_DEFAULT
+	end
+
+;because the script seems to not be triggering
+DungeonStepFromSouth:
+	applymovement PLAYER, MovementFromSouth_NBT
+	setmapscene MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, SCENE_DEFAULT
+	end
+
+DungeonStepFromEast:
+	applymovement PLAYER, MovementFromEast_NBT
+	setmapscene MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, SCENE_DEFAULT
+	end
+
+DungeonStepFromWest:
+	applymovement PLAYER, MovementFromWest_NBT
+	setmapscene MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, SCENE_DEFAULT
+	end
+
+
+MovementFromNorth_NBT:
+	step DOWN
+	step_end
+
+MovementFromSouth_NBT:
+	step UP
+	step_end
+
+MovementFromEast_NBT:
+	step LEFT
+	step_end
+
+MovementFromWest_NBT:
+	step RIGHT
+	step_end
+
+
 DungeonWarpNorth:
+	setmapscene MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, SCENE_FINISHED
+	callasm GoingNorth
 	mysterydungeonwarp NorthToSouthConnections
 	end
 
+GoingNorth:
+	ld a, [hMysteryDungeonY]
+	inc a
+	ld [hMysteryDungeonY], a
+	ret
+
 DungeonWarpSouth:
+	setmapscene MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, SCENE_FINISHED
+	callasm GoingSouth
 	mysterydungeonwarp SouthToNorthConnections
 	end
 
+GoingSouth:
+	ld a, [hMysteryDungeonY]
+	dec a
+	ld [hMysteryDungeonY], a
+	ret
+
 DungeonWarpEast:
+	setmapscene MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, SCENE_FINISHED
+	callasm GoingEast
 	mysterydungeonwarp EastToWestConnections
 	end
 
+GoingEast:
+	ld a, [hMysteryDungeonX]
+	inc a
+	ld [hMysteryDungeonX], a
+	ret
+
 DungeonWarpWest:
+	setmapscene MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, SCENE_FINISHED
+	callasm GoingWest
 	mysterydungeonwarp WestToEastConnections
 	end
+
+GoingWest:
+	ld a, [hMysteryDungeonX]
+	dec a
+	ld [hMysteryDungeonX], a
+	ret
 
 
 
@@ -118,7 +190,7 @@ MysteryDungeonNorthSouthEastWest_MapEvents:
 	warp_event  0, 4, MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, -1
 	warp_event  0, 5, MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, -1
 
-	db 8 ; coord events
+	db 16 ; coord events
 	
 		coord_event  4,  2, SCENE_DEFAULT, DungeonWarpNorth
 		coord_event  5,  1, SCENE_DEFAULT, DungeonWarpNorth
@@ -131,6 +203,23 @@ MysteryDungeonNorthSouthEastWest_MapEvents:
 
 		coord_event  0,  4, SCENE_DEFAULT, DungeonWarpWest
 		coord_event  0,  5, SCENE_DEFAULT, DungeonWarpWest
+
+		;upon entry from other room
+
+		coord_event  4,  2, SCENE_FINISHED, DungeonStepFromNorth 
+
+		;it seems only the north one is working, since you walk out of the cave onto the tile, but the other warps don't trigger the script, but that also means that they don't trigger the inc or dec script, which may lead to some inconsistency if someone went back into the door they came out of without stepping further into the room
+
+		coord_event  5,  1, SCENE_FINISHED, DungeonStepFromNorth
+
+		coord_event  4,  9, SCENE_FINISHED, DungeonStepFromSouth
+		coord_event  5,  9, SCENE_FINISHED, DungeonStepFromSouth
+
+		coord_event  9,  4, SCENE_FINISHED, DungeonStepFromEast
+		coord_event  9,  5, SCENE_FINISHED, DungeonStepFromEast
+
+		coord_event  0,  4, SCENE_FINISHED, DungeonStepFromWest
+		coord_event  0,  5, SCENE_FINISHED, DungeonStepFromWest
 
 	db 0 ; bg events
 
