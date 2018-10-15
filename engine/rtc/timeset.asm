@@ -280,8 +280,6 @@ DebugDisplayTime:
 	ld [hl], " "
 	inc hl
 
-	ld de, hRTCDayLo
-	call .PrintTime
 
 	hlcoord 1, 16
 	ld [hl], "D"

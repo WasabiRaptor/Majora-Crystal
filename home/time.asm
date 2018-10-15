@@ -50,17 +50,7 @@ InitTime::
 	ret
 
 PanicResetClock::
-	call .ClearhRTC
 	call SetClock
-	ret
-
-.ClearhRTC:
-	xor a
-	ldh [hRTCSeconds], a
-	ldh [hRTCMinutes], a
-	ldh [hRTCHours], a
-	ldh [hRTCDayLo], a
-	ldh [hRTCDayHi], a
 	ret
 
 SetClock::
@@ -98,11 +88,9 @@ SetClock::
 	ld [de], a
 ; day lo
 	ld [hl], RTC_DL
-	ldh a, [hRTCDayLo]
 	ld [de], a
 ; day hi
 	ld [hl], RTC_DH
-	ldh a, [hRTCDayHi]
 	res 6, a ; make sure timer is active
 	ld [de], a
 

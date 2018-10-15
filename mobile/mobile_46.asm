@@ -7029,15 +7029,6 @@ Function11b570:
 	push de
 	pop hl
 
-	ldh a, [hRTCMinutes]
-	ld [hli], a
-	ldh a, [hRTCHours]
-	ld [hli], a
-	ldh a, [hRTCDayLo]
-	ld [hli], a
-	ldh a, [hRTCDayHi]
-	ld [hl], a
-
 	call CloseSRAM
 	ret
 
@@ -7371,34 +7362,9 @@ Function11b879:
 	ld a, [wScriptVar]
 	and a
 	ret z
-	ld hl, wcd4c
-	ldh a, [hRTCDayHi]
-	cp [hl]
-	ret nz
-	dec hl
-	ldh a, [hRTCDayLo]
-	cp [hl]
-	ret nz
-	ld hl, wcd4a
-	ldh a, [hRTCHours]
-	cp [hl]
-	jr nc, .asm_11b8d8
-	ld a, $18
-	sub [hl]
-	ld hl, hRTCHours
-	add [hl]
-	ld [wcd4c], a
-	ldh a, [hRTCMinutes]
-	ld [wcd4b], a
-	xor a
-	ld [wcd4a], a
 	jr .asm_11b8e2
 
 .asm_11b8d8
-	ldh a, [hRTCMinutes]
-	ld [wcd4b], a
-	ldh a, [hRTCHours]
-	ld [wcd4c], a
 
 .asm_11b8e2
 	xor a

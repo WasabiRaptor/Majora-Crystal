@@ -6,11 +6,11 @@ hROMBankBackup:: db ; ff8a
 hBuffer:: db ; ff8b
 hFF8C:: db ; ff8c
 
-hRTCDayHi::   db ; ff8d
-hRTCDayLo::   db ; ff8e
-hRTCHours::   db ; ff8f
-hRTCMinutes:: db ; ff90
-hRTCSeconds:: db ; ff91
+hMysteryDungeonX::   db ; ff8d
+hMysteryDungeonY::   db ; ff8e
+hMysteryDungeonSeed::   db ; ff8f
+hCurrentlyUnused:: db ; ff90
+hAlsoUnused:: db ; ff91
 
 	ds 2
 

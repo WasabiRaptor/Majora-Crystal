@@ -70,7 +70,6 @@ SaveRTC:
 	ret
 
 StartClock::
-	call Function1409b
 	;call FixDays
 	jr nc, .skip_set
 	; bit 5: Day count exceeds 139
@@ -79,15 +78,6 @@ StartClock::
 
 .skip_set
 	call StartRTC
-	ret
-
-Function1409b:
-	ld hl, hRTCDayHi
-	bit 7, [hl]
-	jr nz, .set_bit_7
-	bit 6, [hl]
-	jr nz, .set_bit_7
-	xor a
 	ret
 
 .set_bit_7
@@ -134,7 +124,6 @@ Function140ae:
 
 _InitTime::
 	;call FixDays
-	ld hl, hRTCSeconds
 	ld de, wStartSecond
 
 	ld a, [wStringBuffer2 + 3]
