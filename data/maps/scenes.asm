@@ -84,5 +84,25 @@ MapScenes::
 	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
 	scene_var MOBILE_TRADE_ROOM,                           wMobileTradeRoomSceneID
 	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
-	scene_var MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST,	   wMysteryDungeonSceneID
+
+	scene_var MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST,	   wMysteryDungeonNorthSouthEastWestSceneID
+
+	scene_var MYSTERY_DUNGEON_NORTH_SOUTH_EAST,	   		   wMysteryDungeonNorthSouthEastWestSceneID
+	scene_var MYSTERY_DUNGEON_NORTH_SOUTH_WEST,	  		   wMysteryDungeonNorthSouthEastWestSceneID
+	scene_var MYSTERY_DUNGEON_NORTH_EAST_WEST,	  		   wMysteryDungeonNorthSouthEastWestSceneID
+	scene_var MYSTERY_DUNGEON_SOUTH_EAST_WEST,	   		   wMysteryDungeonNorthSouthEastWestSceneID
+
+	scene_var MYSTERY_DUNGEON_NORTH_SOUTH,	   			   wMysteryDungeonNorthSouthEastWestSceneID
+	scene_var MYSTERY_DUNGEON_EAST_WEST,	   			   wMysteryDungeonNorthSouthEastWestSceneID
+
+	scene_var MYSTERY_DUNGEON_NORTH_EAST,	   			   wMysteryDungeonNorthSouthEastWestSceneID
+	scene_var MYSTERY_DUNGEON_NORTH_WEST,	   			   wMysteryDungeonNorthSouthEastWestSceneID
+	scene_var MYSTERY_DUNGEON_SOUTH_EAST,	   			   wMysteryDungeonNorthSouthEastWestSceneID
+	scene_var MYSTERY_DUNGEON_SOUTH_WEST,	  			   wMysteryDungeonNorthSouthEastWestSceneID
+
+	scene_var MYSTERY_DUNGEON_NORTH,	   				   wMysteryDungeonNorthSouthEastWestSceneID
+	scene_var MYSTERY_DUNGEON_SOUTH,	   				   wMysteryDungeonNorthSouthEastWestSceneID
+	scene_var MYSTERY_DUNGEON_EAST,	   					   wMysteryDungeonNorthSouthEastWestSceneID
+	scene_var MYSTERY_DUNGEON_WEST,	   					   wMysteryDungeonNorthSouthEastWestSceneID
+
 	db -1

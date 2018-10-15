@@ -203,8 +203,12 @@ DoPlayerMovement::
 	ld a, c
 	cp COLL_DOOR
 	jr z, .down
-	cp COLL_DOOR_79
-	jr z, .down
+	cp COLL_DOOR_RIGHT
+	jr z, .left
+	cp COLL_DOOR_LEFT
+	jr z, .right
+	cp COLL_DOOR_DOWN
+	jr z, .up
 	cp COLL_STAIRCASE
 	jr z, .down
 	cp COLL_CAVE
@@ -225,6 +229,22 @@ DoPlayerMovement::
 	ld a, 5
 	scf
 	ret
+	
+.up
+	ld a, UP
+	ld [wWalkingDirection], a
+	jr .continue_walk
+
+.left
+	ld a, LEFT
+	ld [wWalkingDirection], a
+	jr .continue_walk
+
+.right
+	ld a, RIGHT
+	ld [wWalkingDirection], a
+	jr .continue_walk
+
 
 .CheckTurning:
 ; If the player is turning, change direction first. This also lets

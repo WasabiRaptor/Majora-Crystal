@@ -2617,8 +2617,28 @@ wFastShipB1FSceneID::                             db ; d9bd
 wMountMoonSquareSceneID::                         db ; d9be
 wMobileTradeRoomSceneID::                         db ; d9bf
 wMobileBattleRoomSceneID::                        db ; d9c0
-wMysteryDungeonSceneID::						  db
-	ds 48
+
+;mysterydungeon scenes
+wMysteryDungeonNorthSouthEastWestSceneID::		  db
+
+wMysteryDungeonNorthSouthEastSceneID::		  	  db
+wMysteryDungeonNorthSouthWestSceneID::		 	  db
+wMysteryDungeonNorthEastWestSceneID::			  db
+wMysteryDungeonSouthEastWestSceneID::			  db
+
+wMysteryDungeonNorthSouthSceneID::				  db
+wMysteryDungeonEastWestSceneID::				  db
+
+wMysteryDungeonNorthEastSceneID::				  db
+wMysteryDungeonNorthWestSceneID::				  db
+wMysteryDungeonSouthEastSceneID::				  db
+wMysteryDungeonSouthWestSceneID::				  db
+
+wMysteryDungeonNorthSceneID::					  db
+wMysteryDungeonSouthSceneID::					  db
+wMysteryDungeonEastSceneID::					  db
+wMysteryDungeonWestSceneID::					  db
+	ds 41
 
 ; fight counts
 wJackFightCount::    db ; d9f2

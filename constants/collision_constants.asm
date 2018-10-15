@@ -66,9 +66,9 @@ COLL_PIT_68            EQU $68 ; unused
 COLL_WARP_CARPET_DOWN  EQU $70
 COLL_DOOR              EQU $71
 COLL_LADDER            EQU $72
-COLL_STAIRCASE_73      EQU $73 ; unused
-COLL_CAVE_74           EQU $74 ; unused
-COLL_DOOR_75           EQU $75 ; unused
+COLL_DOOR_LEFT     	   EQU $73 
+COLL_DOOR_RIGHT        EQU $74 
+COLL_DOOR_DOWN         EQU $75 
 COLL_WARP_CARPET_LEFT  EQU $76
 COLL_WARP_77           EQU $77 ; unused
 COLL_WARP_CARPET_UP    EQU $78
