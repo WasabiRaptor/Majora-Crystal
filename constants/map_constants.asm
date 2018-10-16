@@ -503,6 +503,6 @@ ENDM
 ;dead ends
 	map_const MYSTERY_DUNGEON_NORTH,					    5,  5
 	map_const MYSTERY_DUNGEON_SOUTH,					    5,  5
+	map_const MYSTERY_DUNGEON_EAST,						    5,  5	
 	map_const MYSTERY_DUNGEON_WEST,						    5,  5
-	map_const MYSTERY_DUNGEON_EAST,						    5,  5
 

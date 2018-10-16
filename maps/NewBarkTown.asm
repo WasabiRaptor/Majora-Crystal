@@ -35,7 +35,7 @@ MysteryDungeonSetup:
 	ld [hMysteryDungeonY], a
 	ld a, 11
 	call RandomRange
-	add 8
+	add 11
 	ld [hMysteryDungeonSeed], a
 	ld a, SPAWN_MYSTERY_DUNGEON
 	ld [wDefaultSpawnpoint], a

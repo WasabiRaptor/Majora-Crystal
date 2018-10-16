@@ -9,6 +9,7 @@ MysteryDungeonWarp::
 	ld c, a	
 	ld a, [hMysteryDungeonSeed]
 	call SimpleMultiply
+	call SimpleMultiply
 	ld c, 3
 	call SimpleMultiply
 	ld b, a
