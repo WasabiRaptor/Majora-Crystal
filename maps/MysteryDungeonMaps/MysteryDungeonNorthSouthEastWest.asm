@@ -63,8 +63,6 @@ DungeonWarpNorth::
 
 	setmapscene MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, SCENE_FINISHED
 
-
-
 	warpcheck
 	end
 
@@ -81,8 +79,6 @@ DungeonWarpSouth::
 
 	setmapscene MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, SCENE_FINISHED
 
-
-
 	warpcheck
 	end
 
@@ -98,8 +94,6 @@ DungeonWarpEast::
 	applymovement PLAYER, MovementFromWest_NBT
 
 	setmapscene MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, SCENE_FINISHED
-
-
 
 	warpcheck
 	end
@@ -128,68 +122,80 @@ GoingWest::
 	ret
 
 SouthToNorthConnections::
-	db 8 ; floors
+	db 11 ; floors
 	elevfloor 0, 1, MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST
 
 	elevfloor 1, 1, MYSTERY_DUNGEON_NORTH_SOUTH_EAST
 	elevfloor 2, 1, MYSTERY_DUNGEON_NORTH_SOUTH_WEST
 	elevfloor 3, 1, MYSTERY_DUNGEON_NORTH_EAST_WEST
+	elevfloor 4, 1, MYSTERY_DUNGEON_NORTH
 
-	elevfloor 4, 1, MYSTERY_DUNGEON_NORTH_SOUTH
+	elevfloor 5, 1, MYSTERY_DUNGEON_NORTH_SOUTH
 
-	elevfloor 5, 1, MYSTERY_DUNGEON_NORTH_EAST
-	elevfloor 6, 1, MYSTERY_DUNGEON_NORTH_WEST
+	elevfloor 6, 1, MYSTERY_DUNGEON_NORTH_EAST
+	elevfloor 7, 1, MYSTERY_DUNGEON_NORTH_WEST
+	elevfloor 8, 1, MYSTERY_DUNGEON_NORTH
+	elevfloor 9, 1, MYSTERY_DUNGEON_NORTH
 
-	elevfloor 7, 1, MYSTERY_DUNGEON_NORTH
+	elevfloor 10, 1, MYSTERY_DUNGEON_NORTH
 	db -1 ; end
 
 
 NorthToSouthConnections::
-	db 8 ; floors
+	db 11 ; floors
 	elevfloor 0, 3, MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST
 
 	elevfloor 1, 3, MYSTERY_DUNGEON_NORTH_SOUTH_EAST
 	elevfloor 2, 3, MYSTERY_DUNGEON_NORTH_SOUTH_WEST
-	elevfloor 2, 3, MYSTERY_DUNGEON_SOUTH_EAST_WEST
+	elevfloor 3, 3, MYSTERY_DUNGEON_SOUTH
+	elevfloor 4, 3, MYSTERY_DUNGEON_SOUTH_EAST_WEST
 
-	elevfloor 4, 3, MYSTERY_DUNGEON_NORTH_SOUTH
+	elevfloor 5, 3, MYSTERY_DUNGEON_NORTH_SOUTH
 
-	elevfloor 5, 3, MYSTERY_DUNGEON_SOUTH_EAST
-	elevfloor 6, 3, MYSTERY_DUNGEON_SOUTH_WEST
-
+	elevfloor 6, 3, MYSTERY_DUNGEON_SOUTH
 	elevfloor 7, 3, MYSTERY_DUNGEON_SOUTH
+	elevfloor 8, 3, MYSTERY_DUNGEON_SOUTH_EAST
+	elevfloor 9, 3, MYSTERY_DUNGEON_SOUTH_WEST
+
+	elevfloor 10, 3, MYSTERY_DUNGEON_SOUTH
 	db -1 ; end
 
 WestToEastConnections::
-	db 8 ; floors
+	db 11 ; floors
 	elevfloor 0, 5, MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST
 
 	elevfloor 1, 5, MYSTERY_DUNGEON_NORTH_SOUTH_EAST
-	elevfloor 2, 5, MYSTERY_DUNGEON_NORTH_EAST_WEST
-	elevfloor 3, 5, MYSTERY_DUNGEON_SOUTH_EAST_WEST
+	elevfloor 2, 5, MYSTERY_DUNGEON_EAST
+	elevfloor 3, 5, MYSTERY_DUNGEON_NORTH_EAST_WEST
+	elevfloor 4, 5, MYSTERY_DUNGEON_SOUTH_EAST_WEST
 
-	elevfloor 4, 5, MYSTERY_DUNGEON_EAST_WEST
+	elevfloor 5, 5, MYSTERY_DUNGEON_EAST_WEST
 
-	elevfloor 5, 5, MYSTERY_DUNGEON_NORTH_EAST
-	elevfloor 6, 5, MYSTERY_DUNGEON_SOUTH_EAST
-
+	elevfloor 6, 5, MYSTERY_DUNGEON_NORTH_EAST
 	elevfloor 7, 5, MYSTERY_DUNGEON_EAST
+	elevfloor 8, 5, MYSTERY_DUNGEON_SOUTH_EAST
+	elevfloor 9, 5, MYSTERY_DUNGEON_EAST
+
+	elevfloor 10, 5, MYSTERY_DUNGEON_EAST
 	db -1 ; end
 
 EastToWestConnections::
-	db 8 ; floors
+	db 11 ; floors
 	elevfloor 0, 7, MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST
 
-	elevfloor 1, 7, MYSTERY_DUNGEON_NORTH_SOUTH_WEST
-	elevfloor 2, 7, MYSTERY_DUNGEON_NORTH_EAST_WEST
-	elevfloor 3, 7, MYSTERY_DUNGEON_SOUTH_EAST_WEST
+	elevfloor 1, 7, MYSTERY_DUNGEON_WEST
+	elevfloor 2, 7, MYSTERY_DUNGEON_NORTH_SOUTH_WEST
+	elevfloor 3, 7, MYSTERY_DUNGEON_NORTH_EAST_WEST
+	elevfloor 4, 7, MYSTERY_DUNGEON_SOUTH_EAST_WEST
 
-	elevfloor 4, 7, MYSTERY_DUNGEON_EAST_WEST
+	elevfloor 5, 7, MYSTERY_DUNGEON_EAST_WEST
+	
+	elevfloor 6, 7, MYSTERY_DUNGEON_WEST
+	elevfloor 7, 7, MYSTERY_DUNGEON_NORTH_WEST
+	elevfloor 8, 7, MYSTERY_DUNGEON_WEST
+	elevfloor 9, 7, MYSTERY_DUNGEON_SOUTH_WEST
 
-	elevfloor 5, 7, MYSTERY_DUNGEON_NORTH_WEST
-	elevfloor 6, 7, MYSTERY_DUNGEON_SOUTH_WEST
-
-	elevfloor 7, 7, MYSTERY_DUNGEON_WEST
+	elevfloor 10, 7, MYSTERY_DUNGEON_WEST
 	db -1 ; end
 
 MysteryDungeonNorthSouthEastWest_MapEvents:

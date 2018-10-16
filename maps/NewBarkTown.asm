@@ -27,14 +27,13 @@ MysteryDungeonEnterScript:
 	special WarpToSpawnPoint
 	newloadmap MAPSETUP_TELEPORT
 	writecode VAR_MOVEMENT, PLAYER_NORMAL
-	newloadmap MAPSETUP_TELEPORT
 	end
 
 MysteryDungeonSetup:
 	ld a, 5
 	ld [hMysteryDungeonX], a
 	ld [hMysteryDungeonY], a
-	ld a, 8
+	ld a, 11
 	call RandomRange
 	add 8
 	ld [hMysteryDungeonSeed], a
@@ -312,12 +311,11 @@ NewBarkTownElmsHouseSignText:
 NewBarkTown_MapEvents:
 	db 0, 0 ; filler
 
-	db 5 ; warp events
+	db 4 ; warp events
 	warp_event  6,  3, ELMS_LAB, 1
 	warp_event 13,  5, PLAYERS_HOUSE_1F, 1
 	warp_event  3, 11, PLAYERS_NEIGHBORS_HOUSE, 1
 	warp_event 11, 13, ELMS_HOUSE, 1
-	warp_event 17, 5, MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, 1
 
 
 	db 2 ; coord events
