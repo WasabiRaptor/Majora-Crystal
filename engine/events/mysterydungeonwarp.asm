@@ -2,11 +2,12 @@ MysteryDungeonWarp::
 	call .LoadPointer
 
 	;choose which dungeon room to enter 
-	ld a, [hMysteryDungeonX] 
-	add [hMysteryDungeonSeed]
-	ld c, a
+	ld a, [hMysteryDungeonX]
+	ld b, a
 	ld a, [hMysteryDungeonY]
-	add [hMysteryDungeonSeed]
+	add a, b
+	ld c, a	
+	ld a, [hMysteryDungeonSeed]
 	call SimpleMultiply
 	ld c, 3
 	call SimpleMultiply
