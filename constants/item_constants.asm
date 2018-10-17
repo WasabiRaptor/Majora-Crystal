@@ -196,6 +196,8 @@
 	const MUSIC_MAIL   ; bc
 	const MIRAGE_MAIL  ; bd
 	const ITEM_BE      ; be
+	const ITEM_C3      ; c3
+	const ITEM_DC      ; dc
 
 add_tm: MACRO
 if !DEF(TM01)
@@ -212,7 +214,6 @@ ENDM
 	add_tm HEADBUTT     ; c0
 	add_tm CURSE        ; c1
 	add_tm ROLLOUT      ; c2
-	const ITEM_C3       ; c3
 	add_tm ROAR         ; c4
 	add_tm TOXIC        ; c5
 	add_tm ZAP_CANNON   ; c6
@@ -237,7 +238,6 @@ ENDM
 	add_tm EARTHQUAKE   ; d9
 	add_tm RETURN       ; da
 	add_tm DIG          ; db
-	const ITEM_DC       ; dc
 	add_tm PSYCHIC_M    ; dd
 	add_tm SHADOW_BALL  ; de
 	add_tm MUD_SLAP     ; df
@@ -260,7 +260,7 @@ ENDM
 	add_tm FIRE_PUNCH   ; f0
 	add_tm FURY_CUTTER  ; f1
 	add_tm NIGHTMARE    ; f2
-NUM_TMS = const_value - TM01 - 2 ; discount ITEM_C3 and ITEM_DC
+NUM_TMS = const_value - TM01
 
 add_hm: MACRO
 if !DEF(HM01)

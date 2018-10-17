@@ -124,6 +124,8 @@ NeighborScript:
 	faceplayer
 	opentext
 	givepoke GLAZEON, 5, BERRY
+
+	givepoke SUBSTITUTEMON, 5, BERRY
 	checktime MORN
 	iftrue .MornScript
 	checktime DAY

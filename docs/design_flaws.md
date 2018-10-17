@@ -16,10 +16,10 @@ These are parts of the code that do not work *incorrectly*, like [bugs and glitc
 
 ## Pic banks are offset by `PICS_FIX`
 
-[data/pokemon/pic_pointers.asm](/data/pokemon/pic_pointers.asm), [data/pokemon/unown_pic_pointers.asm](/data/pokemon/unown_pic_pointers.asm), and [data/trainers/pic_pointers.asm](/data/trainers/pic_pointers.asm) all have to use `dba_pic` instead of `dba`. This is a macro in [macros/data.asm](/macros/data.asm) that offsets banks by `PICS_FIX`:
+[data/pokemon/pic_pointers.asm](/data/pokemon/pic_pointers.asm), [data/pokemon/unown_pic_pointers.asm](/data/pokemon/unown_pic_pointers.asm), and [data/trainers/pic_pointers.asm](/data/trainers/pic_pointers.asm) all have to use `dba` instead of `dba`. This is a macro in [macros/data.asm](/macros/data.asm) that offsets banks by `PICS_FIX`:
 
 ```asm
-dba_pic: MACRO ; dbw bank, address
+dba: MACRO ; dbw bank, address
 	db BANK(\1) - PICS_FIX
 	dw \1
 ENDM
@@ -73,7 +73,7 @@ GLOBAL PICS_FIX
 	db BANK("Pics 24") ; BANK("Pics 1") + 23
 ```
 
-**Fix:** Use `dba` instead of `dba_pic`, delete `FixPicBank`, and remove all four calls to `FixPicBank`.
+**Fix:** Use `dba` instead of `dba`, delete `FixPicBank`, and remove all four calls to `FixPicBank`.
 
 
 ## `PokemonPicPointers` and `UnownPicPointers` are assumed to start at the same address
