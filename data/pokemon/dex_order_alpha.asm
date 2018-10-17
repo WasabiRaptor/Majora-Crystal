@@ -69,6 +69,7 @@ AlphabeticalPokedexOrder:
 	db GENGAR
 	db GEODUDE
 	db GIRAFARIG
+	db GLAZEON
 	db GLIGAR
 	db GLOOM
 	db GOLBAT
@@ -214,6 +215,7 @@ AlphabeticalPokedexOrder:
 	db STARMIE
 	db STARYU
 	db STEELIX
+	db SUBSTITUTEMON
 	db SUDOWOODO
 	db SUICUNE
 	db SUNFLORA

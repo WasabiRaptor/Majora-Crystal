@@ -3404,3 +3404,25 @@ CelebiEvosAttacks:
 	db 40, BATON_PASS
 	db 50, PERISH_SONG
 	db 0 ; no more level-up moves
+
+GlazeonEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, TACKLE
+	db 1, TAIL_WHIP
+	db 8, SAND_ATTACK
+	db 16, EMBER
+	db 23, QUICK_ATTACK
+	db 30, BITE
+	db 36, FIRE_SPIN
+	db 42, SMOG
+	db 47, LEER
+	db 52, FLAMETHROWER
+	db 0 ; no more level-up moves
+
+SubstituteMonEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, COUNTER
+	db 1, MIRROR_COAT
+	db 1, SAFEGUARD
+	db 1, DESTINY_BOND
+	db 0 ; no more level-up moves

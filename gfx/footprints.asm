@@ -571,8 +571,8 @@ INCBIN "gfx/footprints/tyranitar.1bpp",  footprint_bottom
 INCBIN "gfx/footprints/lugia.1bpp",      footprint_top
 INCBIN "gfx/footprints/ho_oh.1bpp",      footprint_top
 INCBIN "gfx/footprints/celebi.1bpp",     footprint_top
-INCBIN "gfx/footprints/252.1bpp",        footprint_top
-INCBIN "gfx/footprints/253.1bpp",        footprint_top
+INCBIN "gfx/footprints/glazeon.1bpp",    footprint_top
+INCBIN "gfx/footprints/substitutemon.1bpp",        footprint_top
 INCBIN "gfx/footprints/254.1bpp",        footprint_top
 INCBIN "gfx/footprints/255.1bpp",        footprint_top
 INCBIN "gfx/footprints/256.1bpp",        footprint_top
@@ -580,8 +580,8 @@ INCBIN "gfx/footprints/256.1bpp",        footprint_top
 INCBIN "gfx/footprints/lugia.1bpp",      footprint_bottom
 INCBIN "gfx/footprints/ho_oh.1bpp",      footprint_bottom
 INCBIN "gfx/footprints/celebi.1bpp",     footprint_bottom
-INCBIN "gfx/footprints/252.1bpp",        footprint_bottom
-INCBIN "gfx/footprints/253.1bpp",        footprint_bottom
+INCBIN "gfx/footprints/glazeon.1bpp",    footprint_bottom
+INCBIN "gfx/footprints/substitutemon.1bpp",        footprint_bottom
 INCBIN "gfx/footprints/254.1bpp",        footprint_bottom
 INCBIN "gfx/footprints/255.1bpp",        footprint_bottom
 INCBIN "gfx/footprints/256.1bpp",        footprint_bottom

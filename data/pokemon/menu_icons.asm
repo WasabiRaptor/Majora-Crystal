@@ -252,3 +252,7 @@ MonMenuIcons:
 	db ICON_LUGIA       ; LUGIA
 	db ICON_HO_OH       ; HO_OH
 	db ICON_HUMANSHAPE  ; CELEBI
+	db ICON_FOX         ; GLAZEON
+	db ICON_MONSTER     ; SUBSTITUTEMON
+
+

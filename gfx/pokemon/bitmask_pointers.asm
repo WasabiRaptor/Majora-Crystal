@@ -250,3 +250,6 @@ BitmasksPointers:
 	dw LugiaBitmasks
 	dw HoOhBitmasks
 	dw CelebiBitmasks
+	dw GlazeonBitmasks
+	dw SubstituteMonBitmasks
+

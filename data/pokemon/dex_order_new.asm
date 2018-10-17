@@ -252,3 +252,6 @@ NewPokedexOrder:
 	db MEWTWO
 	db MEW
 	db CELEBI
+	db GLAZEON
+	db SUBSTITUTEMON
+	
