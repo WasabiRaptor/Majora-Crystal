@@ -273,7 +273,7 @@ ElmDirectionsScript:
 	setevent EVENT_GOT_A_POKEMON_FROM_ELM
 	setevent EVENT_RIVAL_CHERRYGROVE_CITY
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POTION
-	;setmapscene NEW_BARK_TOWN, SCENE_FINISHED
+	;setmapscene STARTING_TOWN, SCENE_FINISHED
 	end
 
 ElmDescribesMrPokemonScript:
@@ -1370,8 +1370,8 @@ ElmsLab_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4, 11, NEW_BARK_TOWN, 1
-	warp_event  5, 11, NEW_BARK_TOWN, 1
+	warp_event  4, 11, STARTING_TOWN, 1
+	warp_event  5, 11, STARTING_TOWN, 1
 
 	db 8 ; coord events
 	coord_event  4,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript

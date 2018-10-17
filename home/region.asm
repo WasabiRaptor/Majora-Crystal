@@ -7,7 +7,7 @@ IsInJohto::
 	ld c, a
 	call GetWorldMapLocation
 
-	cp FAST_SHIP
+	;cp FAST_SHIP
 	jr z, .Johto
 
 	cp SPECIAL_MAP

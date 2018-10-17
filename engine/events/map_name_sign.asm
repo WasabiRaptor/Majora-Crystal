@@ -14,16 +14,10 @@ ReturnFromMapSetupScript::
 	ld c, a
 	call GetWorldMapLocation
 	ld [wCurLandmark], a
-	call .CheckNationalParkGate
-	jr z, .nationalparkgate
 
 	call GetMapEnvironment
 	cp GATE
 	jr nz, .not_gate
-
-.nationalparkgate
-	ld a, -1
-	ld [wCurLandmark], a
 
 .not_gate
 	ld hl, wEnteredMapFromContinue
@@ -72,29 +66,11 @@ ReturnFromMapSetupScript::
 	ret z
 	cp SPECIAL_MAP
 	ret z
-	cp RADIO_TOWER
-	ret z
-	cp LAV_RADIO_TOWER
-	ret z
-	cp UNDERGROUND_PATH
-	ret z
-	cp INDIGO_PLATEAU
-	ret z
-	cp POWER_PLANT
-	ret z
+	
 	ld a, 1
 	and a
 	ret
 
-.CheckNationalParkGate:
-	ld a, [wMapGroup]
-	cp GROUP_ROUTE_35_NATIONAL_PARK_GATE
-	ret nz
-	ld a, [wMapNumber]
-	cp MAP_ROUTE_35_NATIONAL_PARK_GATE
-	ret z
-	cp MAP_ROUTE_36_NATIONAL_PARK_GATE
-	ret
 
 PlaceMapNameSign::
 	ld hl, wLandmarkSignTimer

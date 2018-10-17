@@ -63,7 +63,7 @@ PlayersHouseRadioScript:
 	pause 45
 	writetext PlayersRadioText3
 	pause 45
-	musicfadeout MUSIC_NEW_BARK_TOWN, 16
+	musicfadeout MUSIC_STARTING_TOWN, 16
 	writetext PlayersRadioText4
 	pause 45
 	closetext
@@ -117,7 +117,7 @@ PlayersHouse2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  7,  0, PLAYERS_HOUSE_1F, 3
+	warp_event  7,  0, PLAYERS_HOUSE_1F, 1
 
 	db 0 ; coord events
 

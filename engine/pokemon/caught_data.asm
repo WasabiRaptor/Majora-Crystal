@@ -76,7 +76,7 @@ CheckPartyFullAfterContest:
 	call GetPartyLocation
 	ld a, [hl]
 	and CAUGHT_GENDER_MASK
-	ld b, NATIONAL_PARK
+	ld b, 13 ; was NATIONAL_PARK seemed important for math and the constant maybe shouldn't be there? idk
 	or b
 	ld [hl], a
 	xor a
@@ -136,7 +136,7 @@ CheckPartyFullAfterContest:
 	ld hl, sBoxMon1CaughtLocation
 	ld a, [hl]
 	and CAUGHT_GENDER_MASK
-	ld b, NATIONAL_PARK
+	ld b, 13 ; was NATIONAL_PARK
 	or b
 	ld [hl], a
 	call CloseSRAM

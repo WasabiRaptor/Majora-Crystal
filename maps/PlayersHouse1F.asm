@@ -333,10 +333,11 @@ TVText:
 PlayersHouse1F_MapEvents:
 	db 0, 0 ; filler
 
-	db 3 ; warp events
-	warp_event  6,  7, NEW_BARK_TOWN, 2
-	warp_event  7,  7, NEW_BARK_TOWN, 2
+	db 1 ; warp events
 	warp_event  9,  0, PLAYERS_HOUSE_2F, 1
+	
+	;warp_event  6,  7, STARTING_TOWN, 2
+	;warp_event  7,  7, STARTING_TOWN, 2
 
 	db 2 ; coord events
 	coord_event  8,  4, SCENE_DEFAULT, MeetMomLeftScript

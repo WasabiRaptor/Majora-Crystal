@@ -44,7 +44,7 @@ MysteryDungeonSetup:
 NewBarkTown_TeacherStopsYouScene1:
 	checkcode VAR_PARTYCOUNT
 	ifequal 0, .stop
-	setmapscene NEW_BARK_TOWN, SCENE_FINISHED
+	setmapscene STARTING_TOWN, SCENE_FINISHED
 	end
 .stop
 	playmusic MUSIC_MOM
@@ -72,7 +72,7 @@ NewBarkTown_TeacherStopsYouScene1:
 NewBarkTown_TeacherStopsYouScene2:
 	checkcode VAR_PARTYCOUNT
 	ifequal 0, .stop
-	setmapscene NEW_BARK_TOWN, SCENE_FINISHED
+	setmapscene STARTING_TOWN, SCENE_FINISHED
 	end
 .stop
 	playmusic MUSIC_MOM
@@ -331,7 +331,7 @@ NewBarkTown_MapEvents:
 	db 4 ; object events
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
-	object_event  3,  2, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownSilverScript, EVENT_RIVAL_NEW_BARK_TOWN
+	object_event  3,  2, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownSilverScript, EVENT_RIVAL_STARTING_TOWN
 
 	object_event 14,  11, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MysteryDungeonEnterScript, -1
 
