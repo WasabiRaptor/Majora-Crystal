@@ -512,4 +512,3 @@ PokemonPicPointers::
 	dba SubstituteMonFrontpic	
 	dba SubstituteMonBackpic	
 	dba EggPic
-	dbw -1, -1 ; unused

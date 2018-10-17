@@ -518,7 +518,6 @@ INCBIN "gfx/pokemon/glazeon/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/glazeon/shiny.pal"
 INCBIN "gfx/pokemon/substitutemon/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/substitutemon/shiny.pal"
-
 INCBIN "gfx/pokemon/egg/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/egg/shiny.pal"
 
