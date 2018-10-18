@@ -123,9 +123,7 @@ MomScript:
 NeighborScript:
 	faceplayer
 	opentext
-	givepoke GLAZEON, 5, BERRY
-	givepoke SUBSTITUTEMON, 5, BERRY
-
+	givepoke NINETALES, 5, BERRY
 	end
 	checktime MORN
 	iftrue .MornScript
