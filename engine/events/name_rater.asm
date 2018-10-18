@@ -67,14 +67,14 @@ _NameRater:
 	pop hl
 	jr .done
 
-.traded
-	ld hl, NameRaterTradedText
-	jr .done
-
 .cancel
 	ld hl, NameRaterCancelText
 	jr .done
 
+.traded
+	ld hl, NameRaterTradedText
+	jr .done
+	
 .egg
 	ld hl, NameRaterEggText
 

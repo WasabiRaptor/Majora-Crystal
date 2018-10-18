@@ -3551,7 +3551,7 @@ Function_SetEnemyMonAndSendOutAnimation:
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
 	push hl
-	ld hl, OTPartyMon1DVs
+	ld hl, wOTPartyMon1DVs
 	ld a, [wCurPartyMon]
 	call GetPartyLocation
 	call GetBaseData
@@ -6075,7 +6075,18 @@ LoadEnemyMon:
 ; These are the DVs we'll use if we're actually in a trainer battle
 	ld a, [wBattleMode]
 	dec a
-	jr nz, .UpdateDVs
+	jr z, .WildDVs
+
+; Trainer DVs
+	ld a, [wCurPartyMon]
+	ld hl, wOTPartyMon1DVs
+	call GetPartyLocation
+	ld b, [hl]
+	inc hl
+	ld c, [hl]
+	jr .UpdateDVs
+
+.WildDVs:
 
 ; Wild DVs
 ; Here's where the fun starts
@@ -6481,7 +6492,6 @@ LoadEnemyMon:
 	ld a, [wTempEnemyMonSpecies]
 	ld [wNamedObjectIndexBuffer], a
 
-	call GetPokemonName
 
 ; Did we catch it?
 	ld a, [wBattleMode]
@@ -6489,6 +6499,20 @@ LoadEnemyMon:
 	ret z
 
 ; Update enemy nick
+	ld a, [wBattleMode]
+	dec a ; WILD_BATTLE?
+	jr z, .no_nickname
+	ld a, [wOtherTrainerType]
+	bit TRAINERTYPE_NICKNAME_F, a
+	jr z, .no_nickname
+	ld a, [wCurPartyMon]
+	ld hl, wOTPartyMonNicknames
+	ld bc, MON_NAME_LENGTH
+	call AddNTimes
+	jr .got_nickname
+.no_nickname
+	call GetPokemonName
+.got_nickname
 	ld hl, wStringBuffer1
 	ld de, wEnemyMonNick
 	ld bc, MON_NAME_LENGTH

@@ -559,7 +559,7 @@ FindEnemyMonsThatResistPlayer:
 	push hl
 	ld [wCurSpecies], a
 	push hl
-	ld hl, wOTPartyMonDVs
+	ld hl, wOTPartyMon1DVs
 	call GetBaseData
 	ld a, [wLastPlayerCounterMove]
 	and a
