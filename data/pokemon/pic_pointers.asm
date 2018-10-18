@@ -74,10 +74,14 @@ PokemonPicPointers::
 	dba ClefairyBackpic
 	dba ClefableFrontpic
 	dba ClefableBackpic
-	dba VulpixFrontpic
-	dba VulpixBackpic
-	dba NinetalesFrontpic
-	dba NinetalesBackpic
+
+	;Vulpix and Nineteales now have their own table, like Unown so that they may have alternate forms
+	dbw -1, -1
+	dbw -1, -1
+
+	dbw -1, -1
+	dbw -1, -1
+
 	dba JigglypuffFrontpic
 	dba JigglypuffBackpic
 	dba WigglytuffFrontpic

@@ -25,3 +25,11 @@ UnownAnimationPointers:
 	dw UnownXAnimation
 	dw UnownYAnimation
 	dw UnownZAnimation
+
+VulpixAnimationPointers:
+	dw KantoVulpixAnimation
+	dw AlolanVulpixAnimation
+
+NinetalesAnimationPointers:
+	dw KantoNinetalesAnimation
+	dw AlolanNinetalesAnimation

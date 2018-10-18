@@ -454,6 +454,16 @@ PokeAnim_StopWaitAnim:
 	ld [wPokeAnimJumptableIndex], a
 	ret
 
+PokeAnim_IsVulpix:
+	ld a, [wPokeAnimSpecies]
+	cp VULPIX
+	ret
+
+PokeAnim_IsNinetales:
+	ld a, [wPokeAnimSpecies]
+	cp NINETALES
+	ret
+
 PokeAnim_IsUnown:
 	ld a, [wPokeAnimSpecies]
 	cp UNOWN
@@ -895,15 +905,33 @@ GetMonAnimPointer:
 	call PokeAnim_IsEgg
 	jr z, .egg
 
-	ld c, BANK(UnownAnimations)
-	ld hl, UnownAnimationPointers
-	ld de, UnownAnimationIdlePointers
+	call PokeAnim_IsVulpix
+	jr z, .vulpix
+	call PokeAnim_IsNinetales
+	jr z, .ninetales
 	call PokeAnim_IsUnown
 	jr z, .unown
 	ld c, BANK(PicAnimations)
 	ld hl, AnimationPointers
 	ld de, AnimationIdlePointers
+	jp .loadedpointers
+.vulpix
+	ld c, BANK(VulpixAnimations)
+	ld hl, VulpixAnimationPointers
+	ld de, VulpixAnimationIdlePointers
+	jp .loadedpointers
+
+.ninetales
+	ld c, BANK(NinetalesAnimations)
+	ld hl, NinetalesAnimationPointers
+	ld de, NinetalesAnimationIdlePointers
+	jp .loadedpointers
+
 .unown
+	ld c, BANK(UnownAnimations)
+	ld hl, UnownAnimationPointers
+	ld de, UnownAnimationIdlePointers
+.loadedpointers
 
 	ld a, [wPokeAnimIdleFlag]
 	and a
@@ -964,11 +992,13 @@ GetMonFramesPointer:
 	call PokeAnim_IsEgg
 	jr z, .egg
 
+	call PokeAnim_IsVulpix
+	jr z, .vulpix
+	call PokeAnim_IsNinetales
+	jr z, .ninetales
 	call PokeAnim_IsUnown
-	ld b, BANK(UnownFramesPointers)
-	ld c, BANK(UnownsFrames)
-	ld hl, UnownFramesPointers
-	jr z, .got_frames
+	jr z, .unown
+
 	ld a, [wPokeAnimSpecies]
 	cp JOHTO_POKEMON
 	ld b, BANK(FramesPointers)
@@ -976,6 +1006,21 @@ GetMonFramesPointer:
 	ld hl, FramesPointers
 	jr c, .got_frames
 	ld c, BANK(JohtoFrames)
+	jp .got_frames
+.vulpix
+	ld b, BANK(VulpixFramesPointers)
+	ld c, BANK(VulpixFrames)
+	ld hl, VulpixFramesPointers
+	jp .got_frames
+.ninetales
+	ld b, BANK(NinetalesFramesPointers)
+	ld c, BANK(NinetalesFrames)
+	ld hl, NinetalesFramesPointers
+	jp .got_frames
+.unown
+	ld b, BANK(UnownFramesPointers)
+	ld c, BANK(UnownsFrames)
+	ld hl, UnownFramesPointers
 .got_frames
 	ld a, c
 	ld [wPokeAnimFramesBank], a
@@ -1009,13 +1054,28 @@ GetMonBitmaskPointer:
 	call PokeAnim_IsEgg
 	jr z, .egg
 
+	call PokeAnim_IsVulpix
+	jr z, .vulpix
+	call PokeAnim_IsNinetales
+	jr z, .ninetales
 	call PokeAnim_IsUnown
-	ld a, BANK(UnownBitmasksPointers)
-	ld hl, UnownBitmasksPointers
 	jr z, .unown
+
 	ld a, BANK(BitmasksPointers)
 	ld hl, BitmasksPointers
+	jp .LoadedBitmasks
+.vulpix
+	ld a, BANK(VulpixBitmasksPointers)
+	ld hl, VulpixBitmasksPointers
+	jp .LoadedBitmasks
+.ninetales
+	ld a, BANK(NinetalesBitmasksPointers)
+	ld hl, NinetalesBitmasksPointers
+	jp .LoadedBitmasks
 .unown
+	ld a, BANK(UnownBitmasksPointers)
+	ld hl, UnownBitmasksPointers
+.LoadedBitmasks
 	ld [wPokeAnimBitmaskBank], a
 
 	ld a, [wPokeAnimSpeciesOrUnown]
@@ -1044,11 +1104,21 @@ GetMonBitmaskPointer:
 	ret
 
 PokeAnim_GetSpeciesOrUnown:
+	call PokeAnim_IsVulpix
+	jr z, .vulpix
+	call PokeAnim_IsNinetales
+	jr z, .ninetales
 	call PokeAnim_IsUnown
 	jr z, .unown
+
 	ld a, [wPokeAnimSpecies]
 	ret
-
+.vulpix
+	ld a, [wPokeAnimUnownLetter]
+	ret
+.ninetales
+	ld a, [wPokeAnimUnownLetter]
+	ret
 .unown
 	ld a, [wPokeAnimUnownLetter]
 	ret

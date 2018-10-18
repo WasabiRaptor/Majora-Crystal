@@ -25,3 +25,12 @@ UnownBitmasksPointers:
 	dw UnownXBitmasks
 	dw UnownYBitmasks
 	dw UnownZBitmasks
+
+VulpixBitmasksPointers:
+	dw KantoVulpixBitmasks
+	dw AlolanVulpixBitmasks
+
+NinetalesBitmasksPointers:
+	dw KantoNinetalesBitmasks
+	dw AlolanNinetalesBitmasks
+	

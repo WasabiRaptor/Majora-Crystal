@@ -26,3 +26,11 @@ UnownWAnimation: INCLUDE "gfx/pokemon/unown_w/anim.asm"
 UnownXAnimation: INCLUDE "gfx/pokemon/unown_x/anim.asm"
 UnownYAnimation: INCLUDE "gfx/pokemon/unown_y/anim.asm"
 UnownZAnimation: INCLUDE "gfx/pokemon/unown_z/anim.asm"
+
+VulpixAnimations:
+KantoVulpixAnimation: INCLUDE "gfx/pokemon/vulpix/anim.asm"
+AlolanVulpixAnimation: INCLUDE "gfx/pokemon/vulpix/anim.asm"
+
+NinetalesAnimations:
+KantoNinetalesAnimation: INCLUDE "gfx/pokemon/ninetales/anim.asm"
+AlolanNinetalesAnimation: INCLUDE "gfx/pokemon/alolanninetales/anim.asm"

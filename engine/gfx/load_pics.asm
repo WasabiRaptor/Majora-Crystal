@@ -119,11 +119,24 @@ GetFrontpicPointer:
 	ld a, [wCurPartySpecies]
 	cp UNOWN
 	jr z, .unown
+	cp VULPIX
+	jr z, .vulpix
+	cp NINETALES
+	jr z, .ninetales
 	ld a, [wCurPartySpecies]
 	ld hl, PokemonPicPointers
 	ld d, BANK(PokemonPicPointers)
 	jr .ok
-
+.vulpix
+	ld a, [wUnownLetter]
+	ld hl, VulpixPicPointers
+	ld d, BANK(VulpixPicPointers)
+	jr .ok
+.ninetales
+	ld a, [wUnownLetter]
+	ld hl, NinetalesPicPointers
+	ld d, BANK(NinetalesPicPointers)
+	jr .ok
 .unown
 	ld a, [wUnownLetter]
 	ld hl, UnownPicPointers

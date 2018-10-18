@@ -52,3 +52,16 @@ UnownPicPointers::
 	dba UnownYBackpic
 	dba UnownZFrontpic
 	dba UnownZBackpic
+
+VulpixPicPointers::
+	dba KantoVulpixFrontpic
+	dba KantoVulpixBackpic
+	dba AlolanVulpixFrontpic
+	dba AlolanVulpixBackpic
+
+NinetalesPicPointers::
+	dba KantoNinetalesFrontpic
+	dba KantoNinetalesBackpic
+	dba AlolanNinetalesFrontpic
+	dba AlolanNinetalesBackpic
+
