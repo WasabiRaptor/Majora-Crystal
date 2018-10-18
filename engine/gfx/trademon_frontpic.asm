@@ -4,10 +4,12 @@ GetTrademonFrontpic:
 	ld de, vTiles2
 	push de
 	push af
-	predef GetUnownLetter
+	predef GetFormData
 	pop af
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
+	push hl
+	ld hl, wOTTrademonDVs
 	call GetBaseData
 	pop de
 	predef GetAnimatedFrontpic

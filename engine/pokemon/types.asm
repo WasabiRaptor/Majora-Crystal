@@ -3,6 +3,7 @@ PrintMonTypes:
 ; on the stats screen at hl.
 
 	push hl
+	push hl
 	call GetBaseData
 	pop hl
 

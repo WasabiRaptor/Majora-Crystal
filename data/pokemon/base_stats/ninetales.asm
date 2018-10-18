@@ -11,7 +11,7 @@
 	db GENDER_F75 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/ninetales/front.dimensions"
-	db 0, 0 ;form differences
+	db 2, 1 ;total form differences, which form this is
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups

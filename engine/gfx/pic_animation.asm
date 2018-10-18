@@ -317,8 +317,8 @@ PokeAnim_InitPicAttributes:
 	call GetFarWRAMByte
 	ld [wPokeAnimSpecies], a
 
-	ld a, BANK(wUnownLetter)
-	ld hl, wUnownLetter
+	ld a, BANK(wFormVariable)
+	ld hl, wFormVariable
 	call GetFarWRAMByte
 	ld [wPokeAnimUnownLetter], a
 
@@ -978,9 +978,20 @@ PokeAnim_GetFrontpicDims:
 	push af
 	ld a, BANK(wCurPartySpecies)
 	ldh [rSVBK], a
+	push hl
+	ld a, e
+	cp ANIM_MON_MENU
+	jr z, .menu
+	farcall GetEnemyMonDVs
+	jr .got_anim
+.menu
+	farcall GetPartyMonDVs
+.got_anim
 	ld a, [wCurPartySpecies]
 	ld [wCurSpecies], a
+
 	call GetBaseData
+
 	ld a, [wBasePicSize]
 	and $f
 	ld c, a

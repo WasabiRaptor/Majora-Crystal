@@ -310,6 +310,7 @@ Unreferenced_Functione5d9:
 	ld [de], a
 	inc de
 	ld [wCurSpecies], a
+	push hl
 	call GetBaseData
 	pop bc
 	pop hl

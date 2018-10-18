@@ -4,6 +4,7 @@ CheckPartyFullAfterContest:
 	jp z, .DidntCatchAnything
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
+	push hl
 	call GetBaseData
 	ld hl, wPartyCount
 	ld a, [hl]

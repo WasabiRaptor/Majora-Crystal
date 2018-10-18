@@ -89,6 +89,7 @@ GeneratePartyMonStats:
 	; Initialize the species
 	ld a, [wCurPartySpecies]
 	ld [wCurSpecies], a
+	push hl
 	call GetBaseData
 	ld a, [wBaseDexNo]
 	ld [de], a
@@ -354,7 +355,7 @@ endr
 	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
-	predef GetUnownLetter
+	predef GetFormData
 	callfar UpdateUnownDex
 
 .done
@@ -463,12 +464,12 @@ AddTempmonToParty:
 	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
-	predef GetUnownLetter
+	predef GetFormData
 	callfar UpdateUnownDex
 	ld a, [wFirstUnownSeen]
 	and a
 	jr nz, .done
-	ld a, [wUnownLetter]
+	ld a, [wFormVariable]
 	ld [wFirstUnownSeen], a
 .done
 
@@ -850,6 +851,7 @@ RetrieveBreedmon:
 	pop hl
 	ld bc, BOXMON_STRUCT_LENGTH
 	call CopyBytes
+	push hl
 	call GetBaseData
 	call GetLastPartyMon
 	ld b, d
@@ -961,6 +963,7 @@ SendMonIntoBox:
 	inc a
 	jr nz, .loop
 
+	push hl
 	call GetBaseData
 	call ShiftBoxMon
 
@@ -1042,7 +1045,7 @@ SendMonIntoBox:
 	cp UNOWN
 	jr nz, .not_unown
 	ld hl, sBoxMon1DVs
-	predef GetUnownLetter
+	predef GetFormData
 	callfar UpdateUnownDex
 
 .not_unown
@@ -1376,6 +1379,7 @@ ComputeNPCTrademonStats:
 	call GetPartyParamLocation
 	ld a, [hl]
 	ld [wCurSpecies], a
+	push hl
 	call GetBaseData
 	ld a, MON_MAXHP
 	call GetPartyParamLocation

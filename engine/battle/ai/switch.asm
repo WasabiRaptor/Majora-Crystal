@@ -368,6 +368,8 @@ FindEnemyMonsImmuneToLastCounterMove:
 
 	ld a, [hl]
 	ld [wCurSpecies], a
+	push hl
+	farcall GetEnemyMonDVs
 	call GetBaseData
 
 	; the player's last move is damaging...
@@ -556,6 +558,8 @@ FindEnemyMonsThatResistPlayer:
 
 	push hl
 	ld [wCurSpecies], a
+	push hl
+	farcall GetEnemyMonDVs
 	call GetBaseData
 	ld a, [wLastPlayerCounterMove]
 	and a

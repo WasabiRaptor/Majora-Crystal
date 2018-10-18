@@ -1047,6 +1047,7 @@ Function2868a:
 	ld bc, 8
 	call CopyBytes
 	pop bc
+	push hl
 	call GetBaseData
 	push de
 	push bc

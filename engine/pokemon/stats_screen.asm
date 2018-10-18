@@ -225,6 +225,8 @@ StatsScreen_CopyToTempMon:
 	jr nz, .breedmon
 	ld a, [wBufferMonSpecies]
 	ld [wCurSpecies], a
+
+	push hl
 	call GetBaseData
 	ld hl, wBufferMon
 	ld de, wTempMon
@@ -783,7 +785,7 @@ OTString:
 
 StatsScreen_PlaceFrontpic:
 	ld hl, wTempMonDVs
-	predef GetUnownLetter
+	predef GetFormData
 	call StatsScreen_GetAnimationParam
 	jr c, .egg
 	and a

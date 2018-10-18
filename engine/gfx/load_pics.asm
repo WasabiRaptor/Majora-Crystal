@@ -1,5 +1,20 @@
-GetUnownLetter:
-; Return Unown letter in wUnownLetter based on DVs at hl
+GetFormData::
+	ld a, [wCurPartySpecies]
+	cp VULPIX
+	jr z, .regional
+	cp NINETALES
+	jr z, .regional
+	cp UNOWN
+	jr z, .unown
+	ret
+
+.regional
+	ld a, ALOLAN
+	ld [wFormVariable], a
+	ret
+
+.unown
+; Return Unown letter in wFormVariable based on DVs at hl
 
 ; Take the middle 2 bits of each DV and place them in order:
 ;	atk  def  spd  spc
@@ -45,13 +60,10 @@ GetUnownLetter:
 ; Increment to get 1-26
 	ldh a, [hQuotient + 3]
 	inc a
-	ld [wUnownLetter], a
+	ld [wFormVariable], a
 	ld a, [wCurPartySpecies]
-	cp UNOWN
-	ret z
-	ld a, ALOLAN
-	ld [wUnownLetter], a
 	ret
+
 
 GetMonFrontpic:
 	ld a, [wCurPartySpecies]
@@ -88,6 +100,8 @@ _GetFrontpic:
 	ld a, BANK(sEnemyFrontpicTileCount)
 	call GetSRAMBank
 	push de
+	push hl
+	farcall GetEnemyMonDVs
 	call GetBaseData
 	ld a, [wBasePicSize]
 	and $f
@@ -133,17 +147,17 @@ GetFrontpicPointer:
 	ld d, BANK(PokemonPicPointers)
 	jr .ok
 .vulpix
-	ld a, [wUnownLetter]
+	ld a, [wFormVariable]
 	ld hl, VulpixPicPointers
 	ld d, BANK(VulpixPicPointers)
 	jr .ok
 .ninetales
-	ld a, [wUnownLetter]
+	ld a, [wFormVariable]
 	ld hl, NinetalesPicPointers
 	ld d, BANK(NinetalesPicPointers)
 	jr .ok
 .unown
-	ld a, [wUnownLetter]
+	ld a, [wFormVariable]
 	ld hl, UnownPicPointers
 	ld d, BANK(UnownPicPointers)
 
@@ -253,7 +267,7 @@ GetMonBackpic:
 
 	ld a, [wCurPartySpecies]
 	ld b, a
-	ld a, [wUnownLetter]
+	ld a, [wFormVariable]
 	ld c, a
 	ldh a, [rSVBK]
 	push af

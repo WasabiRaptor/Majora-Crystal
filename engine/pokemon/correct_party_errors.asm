@@ -67,6 +67,7 @@ Unreferenced_CorrectPartyErrors:
 
 .check_level
 	ld [wCurSpecies], a
+	push hl
 	call GetBaseData
 	ld hl, MON_LEVEL
 	add hl, bc

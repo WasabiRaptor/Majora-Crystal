@@ -764,6 +764,7 @@ OakSpeech:
 	ld a, WOOPER
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
+	push hl
 	call GetBaseData
 
 	hlcoord 6, 4

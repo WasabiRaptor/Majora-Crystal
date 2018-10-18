@@ -255,6 +255,7 @@ EvolveAfterBattle_MasterLoop:
 
 	call ClearTileMap
 	call UpdateSpeciesNameIfNotNicknamed
+	push hl
 	call GetBaseData
 
 	ld hl, wTempMonExp + 2
@@ -306,7 +307,7 @@ EvolveAfterBattle_MasterLoop:
 	jr nz, .skip_unown
 
 	ld hl, wTempMonDVs
-	predef GetUnownLetter
+	predef GetFormData
 	callfar UpdateUnownDex
 
 .skip_unown

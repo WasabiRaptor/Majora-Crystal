@@ -320,7 +320,7 @@ Function81adb:
 	and a
 	jr nz, .asm_81b7a
 	ld a, $1
-	ld [wUnownLetter], a
+	ld [wFormVariable], a
 	call GetPokemonName
 	hlcoord 4, 1
 	call PlaceString

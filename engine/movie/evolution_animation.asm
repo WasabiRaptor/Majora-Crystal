@@ -155,11 +155,15 @@ EvolutionAnimation:
 	jp GetSGBLayout
 
 .PlaceFrontpic:
+	push hl
+	farcall GetPartyMonDVs
 	call GetBaseData
 	hlcoord 7, 2
 	jp PrepMonFrontpic
 
 .LoadFrontpic:
+	push hl
+	farcall GetPartyMonDVs
 	call GetBaseData
 	ld a, $1
 	ld [wBoxAlignment], a
