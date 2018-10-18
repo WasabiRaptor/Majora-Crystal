@@ -11,7 +11,8 @@
 	db GENDER_F50 ; gender ratio
 	db 15 ; step cycles to hatch
 	INCBIN "gfx/pokemon/golem/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db 0, 0 ;form differences
+	db 0, 0	;abilities
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_MINERAL, EGG_MINERAL ; egg groups
 

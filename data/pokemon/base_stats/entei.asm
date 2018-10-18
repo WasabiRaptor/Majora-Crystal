@@ -11,7 +11,8 @@
 	db GENDER_UNKNOWN ; gender ratio
 	db 80 ; step cycles to hatch
 	INCBIN "gfx/pokemon/entei/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db 0, 0 ;form differences
+	db 0, 0	;abilities
 	db GROWTH_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

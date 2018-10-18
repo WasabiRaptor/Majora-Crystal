@@ -11,7 +11,8 @@
 	db GENDER_F12_5 ; gender ratio
 	db 10 ; step cycles to hatch
 	INCBIN "gfx/pokemon/togepi/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db 0, 0 ;form differences
+	db 0, 0	;abilities
 	db GROWTH_FAST ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

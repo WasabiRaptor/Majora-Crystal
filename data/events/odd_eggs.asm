@@ -36,7 +36,8 @@ OddEgg1:
 	dw 02048 ; OT ID
 	dt 125 ; Exp
 	db 0, 0, 0, 0, 0, 0 ; EVs
-	db 0, 0, 0, 0 ; padding
+	db 0, 0 ;form differences
+	db 0, 0	;abilities
 	dn 0, 0, 0, 0 ; DVs
 	db 30, 20, 10, 0 ; PP
 	db 20 ; Happiness

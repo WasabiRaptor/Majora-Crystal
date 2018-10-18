@@ -2173,7 +2173,8 @@ wBaseItem2:: db ; d242
 wBaseGender:: db ; d243
 wBaseEggSteps:: db ; d245
 wBasePicSize:: db ; d247
-wBasePadding:: ds 4 ; d248
+wBaseForms:: ds 2 ; d248
+wBaseAbilities:: ds 2 ; d24a
 wBaseGrowthRate:: db ; d24c
 wBaseEggGroups:: db ; d24d
 wBaseTMHM:: flag_array NUM_TM_HM_TUTOR ; d24e

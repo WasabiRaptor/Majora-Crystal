@@ -37,18 +37,6 @@ GetBaseData::
 ; Sprite dimensions
 	ld b, $55 ; 5x5
 	ld hl, wBasePicSize
-	ld [hl], b
-
-; ????
-	ld hl, wBasePadding
-	ld [hl], e
-	inc hl
-	ld [hl], d
-	inc hl
-	ld [hl], e
-	inc hl
-	ld [hl], d
-	jr .end
 
 .end
 ; Replace Pokedex # with species

@@ -312,3 +312,8 @@ NUM_POKEMON EQU const_value + -1
 	const UNOWN_Y ; 25
 	const UNOWN_Z ; 26
 NUM_UNOWN EQU const_value + -1 ; 26
+
+	const_def 1
+	const KANTONIAN
+	const ALOLAN
+NUM_REGIONAL EQU const_value + -1 ;2

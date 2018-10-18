@@ -11,7 +11,8 @@
 	db GENDER_F25 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/machamp/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	db 0, 0 ;form differences
+	db 0, 0	;abilities
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
 
