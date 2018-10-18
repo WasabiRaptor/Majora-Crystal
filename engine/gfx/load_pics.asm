@@ -49,8 +49,8 @@ GetUnownLetter:
 	ld a, [wCurPartySpecies]
 	cp UNOWN
 	ret z
-	
-
+	ld a, ALOLAN
+	ld [wUnownLetter], a
 	ret
 
 GetMonFrontpic:
