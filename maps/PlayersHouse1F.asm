@@ -124,6 +124,7 @@ NeighborScript:
 	faceplayer
 	opentext
 	givepoke NINETALES, 5, BERRY
+	closetext
 	end
 	checktime MORN
 	iftrue .MornScript

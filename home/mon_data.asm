@@ -54,6 +54,7 @@ GetBaseData::
 	ld hl, NinetalesBaseData
 .regional
 	ld a, [wFormVariable]
+	ld [wCurSpecies], a
 	jr .got_base_data
 
 .egg
