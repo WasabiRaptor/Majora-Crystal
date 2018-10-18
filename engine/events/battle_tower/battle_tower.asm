@@ -407,7 +407,7 @@ endr
 .valid
 	ld [wCurSpecies], a
 	push hl
-	farcall GetPartyMonDVs
+	ld hl, wBattleMonDVs
 	call GetBaseData
 	ld a, $5
 	call GetSRAMBank

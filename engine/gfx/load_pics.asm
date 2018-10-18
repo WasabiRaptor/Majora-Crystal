@@ -101,7 +101,7 @@ _GetFrontpic:
 	call GetSRAMBank
 	push de
 	push hl
-	farcall GetEnemyMonDVs
+	ld hl, wEnemyMonDVs
 	call GetBaseData
 	ld a, [wBasePicSize]
 	and $f

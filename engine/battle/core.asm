@@ -3551,7 +3551,9 @@ Function_SetEnemyMonAndSendOutAnimation:
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
 	push hl
-	farcall GetEnemyMonDVs 
+	ld hl, OTPartyMon1DVs
+	ld a, [wCurPartyMon]
+	call GetPartyLocation
 	call GetBaseData
 	ld a, OTPARTYMON
 	ld [wMonType], a
@@ -3919,7 +3921,7 @@ BattleCheckShininess:
 	callfar CheckShininess
 	ret
 
-GetPartyMonDVs::
+GetPartyMonDVs:
 	ld hl, wBattleMonDVs
 	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_TRANSFORMED, a
@@ -3928,7 +3930,7 @@ GetPartyMonDVs::
 	ld a, [wCurBattleMon]
 	jp GetPartyLocation
 
-GetEnemyMonDVs::
+GetEnemyMonDVs:
 	ld hl, wEnemyMonDVs
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_TRANSFORMED, a
@@ -3972,7 +3974,7 @@ InitEnemyMon:
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
 	push hl
-	farcall GetEnemyMonDVs
+	ld hl, wEnemyMonDVs
 	call GetBaseData
 	ld hl, wOTPartyMonNicknames
 	ld a, [wCurPartyMon]
@@ -4681,7 +4683,9 @@ PrintPlayerHUD:
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
 	push hl
-	farcall GetPartyMonDVs
+	ld hl, wPartyMon1DVs
+	ld a, [wCurBattleMon]
+	call GetPartyLocation
 	call GetBaseData
 
 	pop hl
@@ -4742,7 +4746,7 @@ DrawEnemyHUD:
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
 	push hl
-	farcall GetEnemyMonDVs
+	ld hl, wEnemyMonDVs
 	call GetBaseData
 	ld de, wEnemyMonNick
 	hlcoord 1, 0
@@ -5992,7 +5996,7 @@ LoadEnemyMon:
 
 ; Grab the BaseData for this species
 	push hl
-	farcall GetEnemyMonDVs
+	ld hl, wEnemyMonDVs
 	call GetBaseData
 
 ; Let's get the item:
@@ -7117,7 +7121,7 @@ GiveExperiencePoints:
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
 	push hl
-	farcall GetEnemyMonDVs
+	ld hl, wEnemyMonDVs
 	call GetBaseData
 ; EV yield format: %hhaaddss %ttff0000
 ; h = hp, a = atk, d = def, s = spd
@@ -7248,7 +7252,9 @@ GiveExperiencePoints:
 	ld a, [hl]
 	ld [wCurSpecies], a
 	push hl
-	farcall GetPartyMonDVs ;I think this should be getting the player data but I'm not 100% sure but its there anyway
+	ld hl, wPartyMon1DVs
+	ld a, [wCurPartyMon]
+	call GetPartyLocation
 	call GetBaseData
 	push bc
 	ld d, MAX_LEVEL
@@ -7303,7 +7309,9 @@ GiveExperiencePoints:
 	ld [wCurSpecies], a
 	ld [wTempSpecies], a ; unused?
 	push hl
-	farcall GetPartyMonDVs
+	ld hl, wPartyMon1DVs
+	ld a, [wCurPartyMon]
+	call GetPartyLocation
 	call GetBaseData
 	ld hl, MON_MAXHP + 1
 	add hl, bc
@@ -7917,7 +7925,7 @@ Unreferenced_HandleSafariAngerEatingStatus:
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
 	push hl
-	farcall GetEnemyMonDVs
+	ld hl, wEnemyMonDVs
 	call GetBaseData
 	ld a, [wBaseCatchRate]
 	ld [wEnemyMonCatchRate], a
@@ -8119,7 +8127,7 @@ DropEnemySub:
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
 	push hl
-	farcall GetEnemyMonDVs
+	ld hl, wEnemyMonDVs
 	call GetBaseData
 	ld hl, wEnemyMonDVs
 	predef GetFormData

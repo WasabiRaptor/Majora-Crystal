@@ -36,7 +36,7 @@ GetBaseData::
 	jr .end	
 
 .vulpix
-	predef GetFormData
+	farcall GetFormData
 	ldh a, [hROMBank]
 	push af
 	ld a, BANK(VulpixBaseData)
@@ -45,7 +45,7 @@ GetBaseData::
 	ld hl, VulpixBaseData
 	jr .regional 
 .ninetales
-	predef GetFormData
+	farcall GetFormData
 	ldh a, [hROMBank]
 	push af
 	ld a, BANK(NinetalesBaseData)

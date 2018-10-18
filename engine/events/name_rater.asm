@@ -32,7 +32,9 @@ _NameRater:
 	ld [wNamedObjectIndexBuffer], a
 	ld [wCurSpecies], a
 	push hl
-	farcall GetPartyMonDVs
+	ld hl, wPartyMon1DVs
+	ld a, [wCurPartyMon]
+	call GetPartyLocation
 	call GetBaseData
 	ld b, 0
 	ld de, wStringBuffer2

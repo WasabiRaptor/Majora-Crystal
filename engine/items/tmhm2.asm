@@ -2,7 +2,9 @@ CanLearnTMHMMove:
 	ld a, [wCurPartySpecies]
 	ld [wCurSpecies], a
 	push hl
-	farcall GetPartyMonDVs
+	ld hl, wPartyMon1DVs
+	ld a, [wCurPartyMon]
+	call GetPartyLocation
 	call GetBaseData
 	ld hl, wBaseTMHM
 	push hl

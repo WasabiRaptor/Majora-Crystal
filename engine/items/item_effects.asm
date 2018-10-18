@@ -1262,7 +1262,7 @@ RareCandy_StatBooster_GetParameters:
 	ld a, [hl]
 	ld [wCurPartyLevel], a
 	push hl
-	farcall GetPartyMonDVs
+	ld hl, wTempMonDVs
 	call GetBaseData
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMonNicknames

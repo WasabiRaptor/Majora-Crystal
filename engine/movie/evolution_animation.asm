@@ -156,14 +156,18 @@ EvolutionAnimation:
 
 .PlaceFrontpic:
 	push hl
-	farcall GetPartyMonDVs
+	ld hl, wPartyMon1DVs
+	ld a, [wCurPartyMon]
+	call GetPartyLocation
 	call GetBaseData
 	hlcoord 7, 2
 	jp PrepMonFrontpic
 
 .LoadFrontpic:
 	push hl
-	farcall GetPartyMonDVs
+	ld hl, wPartyMon1DVs
+	ld a, [wCurPartyMon]
+	call GetPartyLocation
 	call GetBaseData
 	ld a, $1
 	ld [wBoxAlignment], a

@@ -81,6 +81,7 @@ PlayersHouse1FReceiveItemStd:
 	end
 
 MomScript:
+	givepoke EEVEE, 5, BERRY
 	faceplayer
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	checkscene

@@ -23,7 +23,6 @@ BugContest_SetCaughtContestMon:
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
 	push hl
-	farcall GetPartyMonDVs
 	call GetBaseData
 	xor a
 	ld bc, PARTYMON_STRUCT_LENGTH
