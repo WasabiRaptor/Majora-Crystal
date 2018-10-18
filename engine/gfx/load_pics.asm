@@ -46,6 +46,11 @@ GetUnownLetter:
 	ldh a, [hQuotient + 3]
 	inc a
 	ld [wUnownLetter], a
+	ld a, [wCurPartySpecies]
+	cp UNOWN
+	ret z
+	
+
 	ret
 
 GetMonFrontpic:
