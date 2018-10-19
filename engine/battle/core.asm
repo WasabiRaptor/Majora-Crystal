@@ -3550,7 +3550,6 @@ Function_SetEnemyMonAndSendOutAnimation:
 	ld a, [wTempEnemyMonSpecies]
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
-	push hl
 	ld hl, wOTPartyMon1DVs
 	ld a, [wCurPartyMon]
 	call GetPartyLocation
@@ -3887,7 +3886,6 @@ InitBattleMon:
 	ld [wTempBattleMonSpecies], a
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
-	push hl
 	ld hl, wBattleMonDVs
 	call GetBaseData
 	ld a, [wBaseType1]
@@ -3973,7 +3971,6 @@ InitEnemyMon:
 	call CopyBytes
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
-	push hl
 	ld hl, wEnemyMonDVs
 	call GetBaseData
 	ld hl, wOTPartyMonNicknames
@@ -4682,13 +4679,15 @@ PrintPlayerHUD:
 	ld a, [hl]
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
-	push hl
 	ld hl, wPartyMon1DVs
 	ld a, [wCurBattleMon]
 	call GetPartyLocation
 	call GetBaseData
 
 	pop hl
+	ld a, [wCurBattleMon]
+	ld hl, wPartyMon1Species
+	call GetPartyLocation	
 	dec hl
 
 	ld a, TEMPMON
@@ -4745,10 +4744,10 @@ DrawEnemyHUD:
 	ld a, [wTempEnemyMonSpecies]
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
-	push hl
 	ld hl, wEnemyMonDVs
 	call GetBaseData
 	ld de, wEnemyMonNick
+	lb bc, 4, 11
 	hlcoord 1, 0
 	call ret_3e138
 	call PlaceString
@@ -5995,7 +5994,6 @@ LoadEnemyMon:
 	ld [wCurPartySpecies], a
 
 ; Grab the BaseData for this species
-	push hl
 	ld hl, wEnemyMonDVs
 	call GetBaseData
 
@@ -7144,9 +7142,9 @@ GiveExperiencePoints:
 	push bc
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
-	push hl
 	ld hl, wEnemyMonDVs
 	call GetBaseData
+	ld hl, MON_EVS
 ; EV yield format: %hhaaddss %ttff0000
 ; h = hp, a = atk, d = def, s = spd
 ; t = sat, f = sdf, 0 = unused bits
@@ -7275,11 +7273,11 @@ GiveExperiencePoints:
 	add hl, de
 	ld a, [hl]
 	ld [wCurSpecies], a
-	push hl
 	ld hl, wPartyMon1DVs
 	ld a, [wCurPartyMon]
 	call GetPartyLocation
 	call GetBaseData
+	ld hl, wPartySpecies
 	push bc
 	ld d, MAX_LEVEL
 	callfar CalcExpAtLevel
@@ -7332,7 +7330,6 @@ GiveExperiencePoints:
 	ld a, [hl]
 	ld [wCurSpecies], a
 	ld [wTempSpecies], a ; unused?
-	push hl
 	ld hl, wPartyMon1DVs
 	ld a, [wCurPartyMon]
 	call GetPartyLocation
@@ -7948,7 +7945,6 @@ Unreferenced_HandleSafariAngerEatingStatus:
 	push hl
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
-	push hl
 	ld hl, wEnemyMonDVs
 	call GetBaseData
 	ld a, [wBaseCatchRate]
@@ -8150,7 +8146,6 @@ DropEnemySub:
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
-	push hl
 	ld hl, wEnemyMonDVs
 	call GetBaseData
 	ld hl, wEnemyMonDVs

@@ -8,7 +8,6 @@ GetTrademonFrontpic:
 	pop af
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
-	push hl
 	ld hl, wOTTrademonDVs
 	call GetBaseData
 	pop de

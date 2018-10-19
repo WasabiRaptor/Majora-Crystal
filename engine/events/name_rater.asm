@@ -31,7 +31,6 @@ _NameRater:
 	ld a, [wCurPartySpecies]
 	ld [wNamedObjectIndexBuffer], a
 	ld [wCurSpecies], a
-	push hl
 	ld hl, wPartyMon1DVs
 	ld a, [wCurPartyMon]
 	call GetPartyLocation
@@ -74,7 +73,7 @@ _NameRater:
 .traded
 	ld hl, NameRaterTradedText
 	jr .done
-	
+
 .egg
 	ld hl, NameRaterEggText
 

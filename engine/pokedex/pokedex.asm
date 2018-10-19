@@ -1900,7 +1900,6 @@ Pokedex_SearchForMons:
 	jr z, .next_mon
 	push hl
 	push de
-	push hl
 	call GetBaseData
 	pop de
 	pop hl
@@ -2353,7 +2352,7 @@ Pokedex_LoadSelectedMonTiles:
 	ld [wFormVariable], a
 	ld a, [wTempSpecies]
 	ld [wCurPartySpecies], a
-	push hl
+	ld hl, wTempMonDVs
 	call GetBaseData
 	ld de, vTiles2
 	predef GetMonFrontpic
@@ -2491,7 +2490,6 @@ Pokedex_LoadUnownFrontpicTiles:
 	ld [wFormVariable], a
 	ld a, UNOWN
 	ld [wCurPartySpecies], a
-	push hl
 	call GetBaseData
 	ld de, vTiles2 tile $00
 	predef GetMonFrontpic
@@ -2522,7 +2520,7 @@ _NewPokedexEntry:
 	farcall DisplayDexEntry
 	call EnableLCD
 	call WaitBGMap
-	push hl
+	ld hl, wTempMonDVs
 	call GetBaseData
 	ld de, vTiles2
 	predef GetMonFrontpic

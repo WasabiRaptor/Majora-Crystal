@@ -155,7 +155,6 @@ EvolutionAnimation:
 	jp GetSGBLayout
 
 .PlaceFrontpic:
-	push hl
 	ld hl, wPartyMon1DVs
 	ld a, [wCurPartyMon]
 	call GetPartyLocation
@@ -164,7 +163,6 @@ EvolutionAnimation:
 	jp PrepMonFrontpic
 
 .LoadFrontpic:
-	push hl
 	ld hl, wPartyMon1DVs
 	ld a, [wCurPartyMon]
 	call GetPartyLocation

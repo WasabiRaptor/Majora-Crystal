@@ -89,7 +89,6 @@ GeneratePartyMonStats:
 	; Initialize the species
 	ld a, [wCurPartySpecies]
 	ld [wCurSpecies], a
-	push hl
 	call GetBaseData
 	ld a, [wBaseDexNo]
 	ld [de], a
@@ -851,7 +850,6 @@ RetrieveBreedmon:
 	pop hl
 	ld bc, BOXMON_STRUCT_LENGTH
 	call CopyBytes
-	push hl
 	call GetBaseData
 	call GetLastPartyMon
 	ld b, d
@@ -963,7 +961,6 @@ SendMonIntoBox:
 	inc a
 	jr nz, .loop
 
-	push hl
 	call GetBaseData
 	call ShiftBoxMon
 
@@ -1379,7 +1376,6 @@ ComputeNPCTrademonStats:
 	call GetPartyParamLocation
 	ld a, [hl]
 	ld [wCurSpecies], a
-	push hl
 	call GetBaseData
 	ld a, MON_MAXHP
 	call GetPartyParamLocation

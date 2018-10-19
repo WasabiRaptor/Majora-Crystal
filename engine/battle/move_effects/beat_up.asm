@@ -54,7 +54,6 @@ BattleCommand_BeatUp:
 
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
-	push hl
 	ld hl, wEnemyMonDVs
 	call GetBaseData
 	ld a, [wBaseDefense]
@@ -65,7 +64,6 @@ BattleCommand_BeatUp:
 	call GetBeatupMonLocation
 	ld a, [hl]
 	ld [wCurSpecies], a
-	push hl
 	ld hl, wPartyMon1DVs
 	call GetBaseData
 	ld a, [wBaseAttack]
@@ -170,7 +168,6 @@ BattleCommand_BeatUp:
 
 	ld a, [wBattleMonSpecies]
 	ld [wCurSpecies], a
-	push hl
 	ld hl, wBattleMonDVs
 	call GetBaseData
 	ld a, [wBaseDefense]
@@ -181,7 +178,6 @@ BattleCommand_BeatUp:
 	call GetBeatupMonLocation
 	ld a, [hl]
 	ld [wCurSpecies], a
-	push hl
 	ld hl, wOTPartyMon1DVs
 	call GetBaseData
 	ld a, [wBaseAttack]

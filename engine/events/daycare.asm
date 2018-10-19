@@ -510,8 +510,7 @@ DayCare_GiveEgg:
 	ld bc, wEggMonEnd - wEggMon
 	call CopyBytes
 
-	push hl
-;not sure how to get the DVs of the eggmon
+	ld hl, wEggMonDVs
 	call GetBaseData
 	ld a, [wPartyCount]
 	dec a
@@ -634,7 +633,7 @@ DayCare_InitBreeding:
 	ld [wCurSpecies], a
 	ld [wEggMonSpecies], a
 
-	push hl
+	ld hl, wEggMonDVs
 	call GetBaseData
 	ld hl, wEggNick
 	ld de, .String_EGG

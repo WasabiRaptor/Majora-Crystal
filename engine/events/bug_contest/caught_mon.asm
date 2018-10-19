@@ -22,7 +22,6 @@ BugContest_SetCaughtContestMon:
 	ld a, [wTempEnemyMonSpecies]
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
-	push hl
 	call GetBaseData
 	xor a
 	ld bc, PARTYMON_STRUCT_LENGTH

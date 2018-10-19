@@ -3,7 +3,9 @@ PrintMonTypes:
 ; on the stats screen at hl.
 
 	push hl
-	push hl
+	ld hl, wPartyMon1DVs
+	ld a, [wCurPartyMon]
+	call GetPartyLocation
 	call GetBaseData
 	pop hl
 

@@ -368,8 +368,9 @@ FindEnemyMonsImmuneToLastCounterMove:
 
 	ld a, [hl]
 	ld [wCurSpecies], a
-	push hl
-	ld hl, wEnemyMonDVs
+	ld hl, wOTPartyMon1DVs
+	ld a, [wCurOTMon]
+	call GetPartyLocation
 	call GetBaseData
 
 	; the player's last move is damaging...
@@ -558,8 +559,9 @@ FindEnemyMonsThatResistPlayer:
 
 	push hl
 	ld [wCurSpecies], a
-	push hl
 	ld hl, wOTPartyMon1DVs
+	ld a, [wCurOTMon]
+	call GetPartyLocation	
 	call GetBaseData
 	ld a, [wLastPlayerCounterMove]
 	and a

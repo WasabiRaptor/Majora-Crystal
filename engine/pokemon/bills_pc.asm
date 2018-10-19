@@ -1061,9 +1061,6 @@ PCMonInfo:
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
 	ld hl, wTempMonDVs
-	predef GetFormData
-	push hl
-	ld hl, wTempMonDVs
 	call GetBaseData
 	ld de, vTiles2 tile $00
 	predef GetMonFrontpic
@@ -1685,9 +1682,6 @@ StatsScreenDPad:
 	ld a, [wTempSpecies]
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
-	ld hl, wTempMonDVs
-	predef GetFormData
-	push hl
 	ld hl, wTempMonDVs
 	call GetBaseData
 	call BillsPC_CopyMon

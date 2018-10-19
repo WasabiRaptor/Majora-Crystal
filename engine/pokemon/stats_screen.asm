@@ -226,7 +226,6 @@ StatsScreen_CopyToTempMon:
 	ld a, [wBufferMonSpecies]
 	ld [wCurSpecies], a
 
-	push hl
 	call GetBaseData
 	ld hl, wBufferMon
 	ld de, wTempMon

@@ -255,7 +255,6 @@ EvolveAfterBattle_MasterLoop:
 
 	call ClearTileMap
 	call UpdateSpeciesNameIfNotNicknamed
-	push hl
 	call GetBaseData
 
 	ld hl, wTempMonExp + 2

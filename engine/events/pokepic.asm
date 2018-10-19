@@ -10,7 +10,6 @@ Pokepic::
 	ldh [hBGMapMode], a
 	ld a, [wCurPartySpecies]
 	ld [wCurSpecies], a
-	push hl
 	call GetBaseData
 	ld de, vTiles1
 	predef GetMonFrontpic

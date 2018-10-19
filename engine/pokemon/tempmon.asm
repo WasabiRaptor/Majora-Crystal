@@ -7,7 +7,6 @@ CopyMonToTempMon:
 	call GetMonSpecies
 	ld a, [wCurPartySpecies]
 	ld [wCurSpecies], a
-	push hl
 	call GetBaseData
 
 	ld a, [wMonType]

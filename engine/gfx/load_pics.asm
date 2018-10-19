@@ -100,7 +100,6 @@ _GetFrontpic:
 	ld a, BANK(sEnemyFrontpicTileCount)
 	call GetSRAMBank
 	push de
-	push hl
 	ld hl, wEnemyMonDVs
 	call GetBaseData
 	ld a, [wBasePicSize]

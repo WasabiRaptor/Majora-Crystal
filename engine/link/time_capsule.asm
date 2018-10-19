@@ -44,7 +44,6 @@ ValidateOTTrademon:
 	jr z, .normal
 
 	ld [wCurSpecies], a
-	push hl
 	call GetBaseData
 	ld hl, wLinkOTPartyMonTypes
 	add hl, bc

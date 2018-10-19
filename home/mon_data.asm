@@ -7,26 +7,30 @@ Unreferenced_GetNthMove::
 	ret
 
 GetBaseData::
+	predef GetFormData
 	push bc
 	push de
+	push hl
+	ldh a, [hROMBank]
+	push af
 
 ; Egg doesn't have BaseData
 	ld a, [wCurSpecies]
 	cp EGG
 	jr z, .egg
 
+	ld bc, BASE_DATA_SIZE
+
 	cp VULPIX
 	jr z, .vulpix
 	cp NINETALES
 	jr z, .ninetales
 
-	ldh a, [hROMBank]
-	push af
+
 	ld a, BANK(BaseData)
 	rst Bankswitch
 ; Get BaseData
 	dec a
-	ld bc, BASE_DATA_SIZE
 	ld hl, BaseData
 .got_base_data
 	call AddNTimes
@@ -36,25 +40,18 @@ GetBaseData::
 	jr .end	
 
 .vulpix
-	farcall GetFormData
-	ldh a, [hROMBank]
-	push af
 	ld a, BANK(VulpixBaseData)
 	rst Bankswitch
-	ld bc, BASE_DATA_SIZE
+	ld a, [wFormVariable]
+	dec a
 	ld hl, VulpixBaseData
-	jr .regional 
+	jr .got_base_data
 .ninetales
-	farcall GetFormData
-	ldh a, [hROMBank]
-	push af
 	ld a, BANK(NinetalesBaseData)
 	rst Bankswitch
-	ld bc, BASE_DATA_SIZE
-	ld hl, NinetalesBaseData
-.regional
 	ld a, [wFormVariable]
-	ld [wCurSpecies], a
+	dec a
+	ld hl, NinetalesBaseData
 	jr .got_base_data
 
 .egg

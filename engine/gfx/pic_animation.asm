@@ -978,17 +978,20 @@ PokeAnim_GetFrontpicDims:
 	push af
 	ld a, BANK(wCurPartySpecies)
 	ldh [rSVBK], a
-	push hl
+	ld a, [wCurPartySpecies]
+	ld [wCurSpecies], a
 	ld a, e
 	cp ANIM_MON_MENU
 	jr z, .menu
-	farcall GetEnemyMonDVs
+	ld hl, wOTPartyMon1DVs
+	ld a, [wCurOTMon]
+	call GetPartyLocation
 	jr .got_anim
 .menu
-	farcall GetPartyMonDVs
+	ld hl, wPartyMon1DVs
+	ld a, [wCurPartyMon]
+	farcall GetPartyLocation
 .got_anim
-	ld a, [wCurPartySpecies]
-	ld [wCurSpecies], a
 
 	call GetBaseData
 
