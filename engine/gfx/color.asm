@@ -782,16 +782,37 @@ Unreferenced_Function97cc:
 	ret
 
 _GetMonPalettePointer:
+	cp VULPIX
+	jr z, .vulpix
+	cp NINETALES
+	jr z, .ninetales
+
+	ld bc, PokemonPalettes
+.GotPalette
 	ld l, a
 	ld h, $0
 	add hl, hl
 	add hl, hl
 	add hl, hl
-	ld bc, PokemonPalettes
 	add hl, bc
 	ret
 
+.vulpix
+	ld a, [wFormVariable]
+	dec a
+	ld bc, VulpixPalettes
+	jr .GotPalette
+
+
+.ninetales
+	ld a, [wFormVariable]
+	dec a
+	ld bc, VulpixPalettes
+	jr .GotPalette
+
+
 GetMonNormalOrShinyPalettePointer:
+	predef GetFormData
 	push bc
 	call _GetMonPalettePointer
 	pop bc
@@ -1207,6 +1228,8 @@ ExpBarPalette:
 INCLUDE "gfx/battle/exp_bar.pal"
 
 INCLUDE "data/pokemon/palettes.asm"
+
+INCLUDE "data/pokemon/alt_form_palettes.asm"
 
 INCLUDE "data/trainers/palettes.asm"
 
