@@ -9,6 +9,7 @@ GetTrademonFrontpic:
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
 	ld hl, wOTTrademonDVs
+	predef GetFormData
 	call GetBaseData
 	pop de
 	predef GetAnimatedFrontpic

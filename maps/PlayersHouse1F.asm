@@ -88,6 +88,7 @@ MakePartyMon1Alolan:
 MomScript:
 	opentext
 	callasm MakePartyMon1Alolan
+	givepoke EEVEE, 5
 	closetext
 	end
 

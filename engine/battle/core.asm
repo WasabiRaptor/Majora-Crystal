@@ -3553,6 +3553,7 @@ Function_SetEnemyMonAndSendOutAnimation:
 	ld hl, wOTPartyMon1DVs
 	ld a, [wCurPartyMon]
 	call GetPartyLocation
+	predef GetFormData
 	call GetBaseData
 	ld a, OTPARTYMON
 	ld [wMonType], a
@@ -3887,6 +3888,7 @@ InitBattleMon:
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
 	ld hl, wBattleMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld a, [wBaseType1]
 	ld [wBattleMonType1], a
@@ -3908,12 +3910,10 @@ InitBattleMon:
 
 BattleCheckPlayerShininess:
 	farcall GetPartyMonDVs
-	predef GetFormData
 	jr BattleCheckShininess
 
 BattleCheckEnemyShininess:
 	farcall GetEnemyMonDVs
-	predef GetFormData
 
 BattleCheckShininess:
 	ld b, h
@@ -3974,6 +3974,7 @@ InitEnemyMon:
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
 	ld hl, wEnemyMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld hl, wOTPartyMonNicknames
 	ld a, [wCurPartyMon]
@@ -4684,6 +4685,7 @@ PrintPlayerHUD:
 	ld hl, wPartyMon1DVs
 	ld a, [wCurBattleMon]
 	call GetPartyLocation
+	predef GetFormData
 	call GetBaseData
 
 	pop hl
@@ -4747,6 +4749,7 @@ DrawEnemyHUD:
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
 	ld hl, wEnemyMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld de, wEnemyMonNick
 	lb bc, 4, 11
@@ -5997,6 +6000,7 @@ LoadEnemyMon:
 
 ; Grab the BaseData for this species
 	ld hl, wEnemyMonDVs
+	predef GetFormData
 	call GetBaseData
 
 ; Let's get the item:
@@ -7145,6 +7149,7 @@ GiveExperiencePoints:
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
 	ld hl, wEnemyMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld hl, MON_EVS
 ; EV yield format: %hhaaddss %ttff0000
@@ -7278,6 +7283,7 @@ GiveExperiencePoints:
 	ld hl, wPartyMon1DVs
 	ld a, [wCurPartyMon]
 	call GetPartyLocation
+	predef GetFormData
 	call GetBaseData
 	ld hl, wPartySpecies
 	push bc
@@ -7335,6 +7341,7 @@ GiveExperiencePoints:
 	ld hl, wPartyMon1DVs
 	ld a, [wCurPartyMon]
 	call GetPartyLocation
+	predef GetFormData
 	call GetBaseData
 	ld hl, MON_MAXHP + 1
 	add hl, bc
@@ -7948,6 +7955,7 @@ Unreferenced_HandleSafariAngerEatingStatus:
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
 	ld hl, wEnemyMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld a, [wBaseCatchRate]
 	ld [wEnemyMonCatchRate], a
@@ -8149,6 +8157,7 @@ DropEnemySub:
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
 	ld hl, wEnemyMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld hl, wEnemyMonDVs
 	predef GetFormData

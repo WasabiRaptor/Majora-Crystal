@@ -55,6 +55,7 @@ BattleCommand_BeatUp:
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
 	ld hl, wEnemyMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld a, [wBaseDefense]
 	ld c, a
@@ -65,6 +66,7 @@ BattleCommand_BeatUp:
 	ld a, [hl]
 	ld [wCurSpecies], a
 	ld hl, wPartyMon1DVs
+	predef GetFormData
 	call GetBaseData
 	ld a, [wBaseAttack]
 	pop bc
@@ -169,6 +171,7 @@ BattleCommand_BeatUp:
 	ld a, [wBattleMonSpecies]
 	ld [wCurSpecies], a
 	ld hl, wBattleMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld a, [wBaseDefense]
 	ld c, a
@@ -179,6 +182,7 @@ BattleCommand_BeatUp:
 	ld a, [hl]
 	ld [wCurSpecies], a
 	ld hl, wOTPartyMon1DVs
+	predef GetFormData
 	call GetBaseData
 	ld a, [wBaseAttack]
 	pop bc

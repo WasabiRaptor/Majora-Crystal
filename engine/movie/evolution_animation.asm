@@ -158,6 +158,7 @@ EvolutionAnimation:
 	ld hl, wPartyMon1DVs
 	ld a, [wCurPartyMon]
 	call GetPartyLocation
+	predef GetFormData
 	call GetBaseData
 	hlcoord 7, 2
 	jp PrepMonFrontpic
@@ -166,6 +167,7 @@ EvolutionAnimation:
 	ld hl, wPartyMon1DVs
 	ld a, [wCurPartyMon]
 	call GetPartyLocation
+	predef GetFormData
 	call GetBaseData
 	ld a, $1
 	ld [wBoxAlignment], a

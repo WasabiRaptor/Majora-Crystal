@@ -371,6 +371,7 @@ FindEnemyMonsImmuneToLastCounterMove:
 	ld hl, wOTPartyMon1DVs
 	ld a, [wCurOTMon]
 	call GetPartyLocation
+	predef GetFormData
 	call GetBaseData
 
 	; the player's last move is damaging...
@@ -561,7 +562,8 @@ FindEnemyMonsThatResistPlayer:
 	ld [wCurSpecies], a
 	ld hl, wOTPartyMon1DVs
 	ld a, [wCurOTMon]
-	call GetPartyLocation	
+	call GetPartyLocation
+	predef GetFormData	
 	call GetBaseData
 	ld a, [wLastPlayerCounterMove]
 	and a

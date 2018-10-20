@@ -34,6 +34,7 @@ _NameRater:
 	ld hl, wPartyMon1DVs
 	ld a, [wCurPartyMon]
 	call GetPartyLocation
+	predef GetFormData
 	call GetBaseData
 	ld b, 0
 	ld de, wStringBuffer2
@@ -46,6 +47,24 @@ _NameRater:
 	call CompareNewToOld
 	ld hl, NameRaterSameAsBeforeText
 	jr c, .samename
+	jr .next
+;apparently I have to do this so that Name Rater's jumps aren't too far
+.egg
+	ld hl, NameRaterEggText
+
+.done
+	call PrintText
+	ret
+
+.cancel
+	ld hl, NameRaterCancelText
+	jr .done
+
+.traded
+	ld hl, NameRaterTradedText
+	jr .done
+
+.next	
 ; Copy the new name from wStringBuffer2
 	ld hl, wPartyMonNicknames
 	ld bc, MON_NAME_LENGTH
@@ -66,20 +85,7 @@ _NameRater:
 	pop hl
 	jr .done
 
-.cancel
-	ld hl, NameRaterCancelText
-	jr .done
 
-.traded
-	ld hl, NameRaterTradedText
-	jr .done
-
-.egg
-	ld hl, NameRaterEggText
-
-.done
-	call PrintText
-	ret
 
 CheckIfMonIsYourOT:
 ; Checks to see if the partymon loaded in [wCurPartyMon] has the different OT as you.  Returns carry if not.

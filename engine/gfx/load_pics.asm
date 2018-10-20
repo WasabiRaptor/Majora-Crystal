@@ -65,12 +65,16 @@ GetFormData::
 	ld bc, -2
 	add hl, bc
 	ld a, [hl]
-
 	cp ALOLAN
+	ld bc, 2
+	add hl, bc
+	pop bc
+
 	jr z, .alolan
 
 	ld a, KANTONIAN
 	jr .done
+
 .alolan
 	ld a, ALOLAN
 .done
@@ -116,6 +120,7 @@ _GetFrontpic:
 	call GetSRAMBank
 	push de
 	ld hl, wEnemyMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld a, [wBasePicSize]
 	and $f

@@ -2353,6 +2353,7 @@ Pokedex_LoadSelectedMonTiles:
 	ld a, [wTempSpecies]
 	ld [wCurPartySpecies], a
 	ld hl, wTempMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld de, vTiles2
 	predef GetMonFrontpic
@@ -2521,6 +2522,7 @@ _NewPokedexEntry:
 	call EnableLCD
 	call WaitBGMap
 	ld hl, wTempMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld de, vTiles2
 	predef GetMonFrontpic

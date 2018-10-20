@@ -7,7 +7,6 @@ Unreferenced_GetNthMove::
 	ret
 
 GetBaseData::
-	predef GetFormData
 	push bc
 	push de
 	push hl
@@ -47,6 +46,7 @@ GetBaseData::
 	dec a
 	ld hl, VulpixBaseData
 	jr .got_base_data
+	
 .ninetales
 	ld a, BANK(NinetalesBaseData)
 	rst Bankswitch

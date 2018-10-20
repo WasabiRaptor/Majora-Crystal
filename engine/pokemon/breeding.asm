@@ -107,7 +107,8 @@ CheckBreedmonCompatibility:
 ; they are not compatible.
 	ld a, [wBreedMon2Species]
 	ld [wCurSpecies], a
-    ld hl, wBreedMon2DVs              ;since forms shouldn't change the egg group I don't think I need this 
+    ld hl, wBreedMon2DVs
+	predef GetFormData              ;since forms shouldn't change the egg group I don't think I need this 
 	call GetBaseData
 	ld a, [wBaseEggGroups]
 	cp EGG_NONE * $11
@@ -115,7 +116,8 @@ CheckBreedmonCompatibility:
 
 	ld a, [wBreedMon1Species]
 	ld [wCurSpecies], a
-    ld hl, wBreedMon1DVs              ;since forms shouldn't change the egg group I don't think I need this 
+    ld hl, wBreedMon1DVs
+	predef GetFormData              ;since forms shouldn't change the egg group I don't think I need this 
 	call GetBaseData
 	ld a, [wBaseEggGroups]
 	cp EGG_NONE * $11
@@ -128,6 +130,7 @@ CheckBreedmonCompatibility:
 	jr z, .Compatible
 	ld [wCurSpecies], a
 	ld hl, wBreedMon2DVs
+	predef GetFormData              ;since forms shouldn't change the egg group I don't think I need this 
 	call GetBaseData
 	ld a, [wBaseEggGroups]
 	push af
@@ -144,6 +147,7 @@ CheckBreedmonCompatibility:
 	ld [wCurSpecies], a
 	push bc
 	ld hl, wBreedMon1DVs
+	predef GetFormData              ;since forms shouldn't change the egg group I don't think I need this 
 	call GetBaseData
 	pop bc
 	ld a, [wBaseEggGroups]
@@ -263,6 +267,7 @@ HatchEggs:
 	ld hl, wPartyMon1DVs
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
+	predef GetFormData              ;since forms shouldn't change the egg group I don't think I need this 
 	call GetBaseData
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMon1
@@ -655,6 +660,7 @@ GetEggFrontpic:
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
 	ld hl, wBattleMonDVs
+	predef GetFormData
 	call GetBaseData
 	pop de
 	predef_jump GetMonFrontpic
@@ -664,6 +670,7 @@ GetHatchlingFrontpic:
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
 	ld hl, wBattleMonDVs
+	predef GetFormData
 	call GetBaseData
 	pop de
 	predef_jump GetAnimatedFrontpic
