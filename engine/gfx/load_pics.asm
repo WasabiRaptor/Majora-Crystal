@@ -59,15 +59,23 @@ GetFormData::
 	ret
 
 .regional
-;I need something here to decide from DVs if a pokemon is Kantonian or Alolan, then have a mirror of it in the wild pokemon generation to force those DVs on certain routes or in certain battle types
+;I need something here to decide if a pokemon is Kantonian or Alolan, then have a mirror of it in the wild pokemon generation to force that on certain routes or in certain battle types
 
-	;jr z, .alolan
+	push bc
+	ld bc, -2
+	add hl, bc
+	ld a, [hl]
+
+	cp ALOLAN
+	jr z, .alolan
+
 	ld a, KANTONIAN
 	jr .done
 .alolan
 	ld a, ALOLAN
 .done
 	ld [wFormVariable], a
+	pop bc
 	ret
 
 
