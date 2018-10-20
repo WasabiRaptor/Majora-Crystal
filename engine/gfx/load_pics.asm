@@ -79,7 +79,6 @@ GetFormData::
 	ld a, ALOLAN
 .done
 	ld [wFormVariable], a
-	pop bc
 	ret
 
 
