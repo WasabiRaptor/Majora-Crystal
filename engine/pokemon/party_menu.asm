@@ -365,7 +365,6 @@ PlacePartyMonEvoStoneCompatibility:
 	ld hl, wPartyMon1Species
 	call AddNTimes
 	ld a, [hl]
-	ld d, a
 	cp VULPIX
 	jr z, .vulpix
 	cp NINETALES
@@ -373,7 +372,6 @@ PlacePartyMonEvoStoneCompatibility:
 
 	ld hl, EvosAttacksPointers
 .got_evosattacks_pointers
-	ld b, d
 	dec a
 	ld e, a
 	ld d, 0

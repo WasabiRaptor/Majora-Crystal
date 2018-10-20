@@ -685,7 +685,6 @@ InitPartyMenuOBPals:
 GetBattlemonBackpicPalettePointer:
 	push de
 	farcall GetPartyMonDVs
-	predef GetFormData
 	ld c, l
 	ld b, h
 	ld a, [wTempBattleMonSpecies]
@@ -696,7 +695,6 @@ GetBattlemonBackpicPalettePointer:
 GetEnemyFrontpicPalettePointer:
 	push de
 	farcall GetEnemyMonDVs
-	predef GetFormData
 	ld c, l
 	ld b, h
 	ld a, [wTempEnemyMonSpecies]

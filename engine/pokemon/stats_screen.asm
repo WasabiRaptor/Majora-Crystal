@@ -812,12 +812,18 @@ StatsScreen_PlaceFrontpic:
 	ld hl, wcf64
 	set 5, [hl]
 	ld a, [wCurPartySpecies]
+	cp VULPIX
+	jr z, .vulpix
+	cp NINETALES
+	jr z, .ninetales
 	cp UNOWN
 	jr z, .unown
 	hlcoord 0, 0
 	call PrepMonFrontpic
-	ret
+	ret	
 
+.vulpix	
+.ninetales
 .unown
 	xor a
 	ld [wBoxAlignment], a

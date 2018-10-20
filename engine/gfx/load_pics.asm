@@ -118,8 +118,6 @@ _GetFrontpic:
 	ld a, BANK(sEnemyFrontpicTileCount)
 	call GetSRAMBank
 	push de
-	ld hl, wEnemyMonDVs
-	predef GetFormData
 	call GetBaseData
 	ld a, [wBasePicSize]
 	and $f
@@ -160,24 +158,9 @@ GetFrontpicPointer:
 	jr z, .vulpix
 	cp NINETALES
 	jr z, .ninetales
-	ld a, [wCurPartySpecies]
+
 	ld hl, PokemonPicPointers
 	ld d, BANK(PokemonPicPointers)
-	jr .ok
-.vulpix
-	ld a, [wFormVariable]
-	ld hl, VulpixPicPointers
-	ld d, BANK(VulpixPicPointers)
-	jr .ok
-.ninetales
-	ld a, [wFormVariable]
-	ld hl, NinetalesPicPointers
-	ld d, BANK(NinetalesPicPointers)
-	jr .ok
-.unown
-	ld a, [wFormVariable]
-	ld hl, UnownPicPointers
-	ld d, BANK(UnownPicPointers)
 
 .ok
 	dec a
@@ -192,6 +175,22 @@ GetFrontpicPointer:
 	pop bc
 	ret
 
+.vulpix
+	ld a, [wFormVariable]
+	ld hl, VulpixPicPointers
+	ld d, BANK(VulpixPicPointers)
+	jr .ok
+.ninetales
+	ld a, [wFormVariable]
+	ld hl, NinetalesPicPointers
+	ld d, BANK(NinetalesPicPointers)
+	jr .ok
+.unown
+	ld a, [wFormVariable]
+	ld hl, UnownPicPointers
+	ld d, BANK(UnownPicPointers)
+	jr .ok
+	
 GetAnimatedEnemyFrontpic:
 	push hl
 	ld de, sPaddedEnemyFrontpic
@@ -294,13 +293,15 @@ GetMonBackpic:
 	push de
 
 	ld a, b
-	ld hl, PokemonPicPointers
-	ld d, BANK(PokemonPicPointers)
+	cp VULPIX
+	jr z, .vulpix
+	cp NINETALES
+	jr z, .ninetales
 	cp UNOWN
-	jr nz, .ok
-	ld a, c
-	ld hl, UnownPicPointers
-	ld d, BANK(UnownPicPointers)
+	jr z, .unown
+	
+	ld hl, PokemonPicPointers
+	ld d, BANK(PokemonPicPointers)	
 .ok
 	dec a
 	ld bc, 6
@@ -327,6 +328,24 @@ GetMonBackpic:
 	pop af
 	ldh [rSVBK], a
 	ret
+
+.unown
+	ld a, c
+	ld hl, UnownPicPointers
+	ld d, BANK(UnownPicPointers)
+	jr .ok
+
+.vulpix
+	ld a, c
+	ld hl, VulpixPicPointers
+	ld d, BANK(VulpixPicPointers)
+	jr .ok
+
+.ninetales
+	ld a, c
+	ld hl, NinetalesPicPointers
+	ld d, BANK(NinetalesPicPointers)
+	jr .ok
 
 Function511ec:
 	ld a, c
