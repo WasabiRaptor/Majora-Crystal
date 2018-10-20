@@ -431,11 +431,16 @@ InitEggMoves:
 
 GetEggMove:
 	push bc
+	ld hl, wEggMonDVs
 	ld a, [wEggMonSpecies]
+	cp VULPIX
+	jr z, .vulpix_eggmoves
+
+	ld hl, EggMovePointers
+.got_eggmove_pointers
 	dec a
 	ld c, a
 	ld b, 0
-	ld hl, EggMovePointers
 	add hl, bc
 	add hl, bc
 	ld a, BANK(EggMovePointers)
@@ -451,6 +456,16 @@ GetEggMove:
 	jr z, .done_carry
 	inc hl
 	jr .loop
+	
+.vulpix_eggmoves
+	predef GetFormData
+	ld hl, VulpixEggMovePointers
+	jr .got_eggmove_pointers
+
+.vulpix_evosattacks
+	predef GetFormData
+	ld hl, VulpixEvosAttacksPointers
+	jr .got_evosattacks_pointers
 
 .reached_end
 	call GetBreedmonMovePointer
@@ -465,11 +480,16 @@ GetEggMove:
 	jr .loop2
 
 .found_eggmove
+	ld hl, wEggMonDVs
 	ld a, [wEggMonSpecies]
+	cp VULPIX
+	jr z, .vulpix_evosattacks
+
+	ld hl, EvosAttacksPointers
+.got_evosattacks_pointers
 	dec a
 	ld c, a
 	ld b, 0
-	ld hl, EvosAttacksPointers
 	add hl, bc
 	add hl, bc
 	ld a, BANK(EvosAttacksPointers)

@@ -3908,10 +3908,12 @@ InitBattleMon:
 
 BattleCheckPlayerShininess:
 	farcall GetPartyMonDVs
+	predef GetFormData
 	jr BattleCheckShininess
 
 BattleCheckEnemyShininess:
 	farcall GetEnemyMonDVs
+	predef GetFormData
 
 BattleCheckShininess:
 	ld b, h

@@ -29,6 +29,7 @@ GetBaseData::
 
 	ld a, BANK(BaseData)
 	rst Bankswitch
+	ld a, [wCurSpecies]
 ; Get BaseData
 	dec a
 	ld hl, BaseData

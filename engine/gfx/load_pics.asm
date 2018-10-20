@@ -8,11 +8,6 @@ GetFormData::
 	jr z, .unown
 	ret
 
-.regional
-	ld a, ALOLAN
-	ld [wFormVariable], a
-	ret
-
 .unown
 ; Return Unown letter in wFormVariable based on DVs at hl
 
@@ -61,8 +56,20 @@ GetFormData::
 	ldh a, [hQuotient + 3]
 	inc a
 	ld [wFormVariable], a
-	ld a, [wCurPartySpecies]
 	ret
+
+.regional
+;I need something here to decide from DVs if a pokemon is Kantonian or Alolan, then have a mirror of it in the wild pokemon generation to force those DVs on certain routes or in certain battle types
+
+	;jr z, .alolan
+	ld a, KANTONIAN
+	jr .done
+.alolan
+	ld a, ALOLAN
+.done
+	ld [wFormVariable], a
+	ret
+
 
 
 GetMonFrontpic:

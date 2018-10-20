@@ -685,6 +685,7 @@ InitPartyMenuOBPals:
 GetBattlemonBackpicPalettePointer:
 	push de
 	farcall GetPartyMonDVs
+	predef GetFormData
 	ld c, l
 	ld b, h
 	ld a, [wTempBattleMonSpecies]
@@ -695,6 +696,7 @@ GetBattlemonBackpicPalettePointer:
 GetEnemyFrontpicPalettePointer:
 	push de
 	farcall GetEnemyMonDVs
+	predef GetFormData
 	ld c, l
 	ld b, h
 	ld a, [wTempEnemyMonSpecies]
@@ -807,12 +809,11 @@ _GetMonPalettePointer:
 .ninetales
 	ld a, [wFormVariable]
 	dec a
-	ld bc, VulpixPalettes
+	ld bc, NinetalesPalettes
 	jr .GotPalette
 
 
 GetMonNormalOrShinyPalettePointer:
-	predef GetFormData
 	push bc
 	call _GetMonPalettePointer
 	pop bc
