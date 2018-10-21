@@ -205,6 +205,9 @@ _CGB_StatsScreenHPPals:
 	call LoadPalette_White_Col1_Col2_Black ; hp palette
 	ld a, [wCurPartySpecies]
 	ld bc, wTempMonDVs
+	ld hl, wTempMonDVs
+	predef GetFormData
+	ld a, [wCurPartySpecies]
 	call GetPlayerOrMonPalettePointer
 	call LoadPalette_White_Col1_Col2_Black ; mon palette
 	ld hl, ExpBarPalette
@@ -305,7 +308,11 @@ _CGB_BillsPC:
 	jr .Resume
 
 .GetMonPalette:
+	ld a, [wCurPartySpecies]
 	ld bc, wTempMonDVs
+	ld hl, wTempMonDVs
+	predef GetFormData
+	ld a, [wCurPartySpecies]
 	call GetPlayerOrMonPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 .Resume:
@@ -558,6 +565,8 @@ _CGB_Evolution:
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld a, [wCurPartyMon]
 	call AddNTimes
+	predef GetFormData
+	ld a, [wCurPartySpecies]
 	ld c, l
 	ld b, h
 	ld a, [wPlayerHPPal]
@@ -908,6 +917,9 @@ _CGB_PlayerOrMonFrontpicPals:
 	ld de, wBGPals1
 	ld a, [wCurPartySpecies]
 	ld bc, wTempMonDVs
+	ld hl, wTempMonDVs
+	predef GetFormData
+	ld a, [wCurPartySpecies]
 	call GetPlayerOrMonPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 	call WipeAttrMap
