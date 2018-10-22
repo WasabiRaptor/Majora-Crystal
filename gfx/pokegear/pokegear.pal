@@ -3,28 +3,38 @@
 	RGB 21, 21, 21
 	RGB 13, 13, 13
 	RGB 00, 00, 00
-; earth
-	RGB 28, 31, 20
-	RGB 00, 31, 00
-	RGB 00, 00, 31
-	RGB 00, 00, 00
-; mountain
-	RGB 28, 31, 20
-	RGB 00, 31, 00
-	RGB 15, 07, 00
-	RGB 00, 00, 00
+; lake/earth ash border
+	RGB 17,24,10
+	RGB 8,23,29
+	RGB 0,20,26
+	RGB 17,14,12
+; mountain/crevasse
+	RGB 17,24,10
+	RGB 15,15,15
+	RGB 12,12,12
+	RGB 9,9,9
 ; city (boy)
 	RGB 28, 31, 20
 	RGB 31, 15, 00
 	RGB 15, 07, 00
 	RGB 00, 00, 00
-; point of interest
-	RGB 28, 31, 20
-	RGB 00, 31, 00
-	RGB 00, 00, 31
-	RGB 31, 00, 00
-; mountain point of interest
-	RGB 28, 31, 20
-	RGB 00, 31, 00
-	RGB 15, 07, 00
-	RGB 31, 00, 00
+; forest
+	RGB 17,24,10
+	RGB 12,22,0
+	RGB 10,18,2
+	RGB 7,14,0
+; swamp
+	RGB 17,24,10
+	RGB 18,21,11
+	RGB 0,21,6
+	RGB 7,17,2
+; volcano edge
+	RGB 31,15,0
+	RGB 27,10,0
+	RGB 17,14,12
+	RGB 15,10,7
+; volcano
+	RGB 31,15,0
+	RGB 15,15,15
+	RGB 15,10,7
+	RGB 12,7,3

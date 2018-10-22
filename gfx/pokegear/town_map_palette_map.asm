@@ -1,10 +1,13 @@
 	const_def
-	const PAL_TOWNMAP_BORDER   ; 0
-	const PAL_TOWNMAP_EARTH    ; 1
-	const PAL_TOWNMAP_MOUNTAIN ; 2
-	const PAL_TOWNMAP_CITY     ; 3
-	const PAL_TOWNMAP_POI      ; 4
-	const PAL_TOWNMAP_POI_MTN  ; 5
+	const PAL_TOWNMAP_BORDER   		; 0
+	const PAL_TOWNMAP_LAKE_ASH 		; 1
+	const PAL_TOWNMAP_MOUNTAIN 		; 2
+	const PAL_TOWNMAP_CITY     		; 3
+	const PAL_TOWNMAP_FOREST   		; 4
+	const PAL_TOWNMAP_SWAMP    		; 5
+	const PAL_TOWNMAP_VOLCANO_EDGE	; 6
+	const PAL_TOWNMAP_VOLCANO  		; 7
+
 
 townmappals: MACRO
 rept _NARG / 2
@@ -15,12 +18,12 @@ endr
 ENDM
 
 ; gfx/pokegear/town_map.png
-	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, MOUNTAIN, MOUNTAIN, BORDER,   BORDER
-	townmappals EARTH,    EARTH,    CITY,     EARTH,    POI,      POI_MTN,  POI,      POI_MTN
-	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, MOUNTAIN, MOUNTAIN, BORDER,   BORDER
-	townmappals EARTH,    EARTH,    BORDER,   EARTH,    EARTH,    BORDER,   BORDER,   BORDER
-	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, MOUNTAIN, MOUNTAIN, BORDER,   BORDER
-	townmappals BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER
+	townmappals MOUNTAIN,    MOUNTAIN,    VOLCANO,     VOLCANO,  VOLCANO,  VOLCANO_EDGE,BORDER,	  BORDER
+	townmappals VOLCANO_EDGE,VOLCANO_EDGE,CITY,        LAKE_ASH, MOUNTAIN, MOUNTAIN, 	MOUNTAIN, FOREST
+	townmappals VOLCANO_EDGE,VOLCANO,     VOLCANO,     VOLCANO,  VOLCANO,  VOLCANO,  	BORDER,   BORDER
+	townmappals VOLCANO_EDGE,VOLCANO_EDGE,VOLCANO_EDGE,LAKE_ASH, FOREST,   FOREST,   	FOREST,   FOREST
+	townmappals VOLCANO_EDGE,VOLCANO,     VOLCANO,	   VOLCANO,  VOLCANO,  VOLCANO,  	BORDER,   BORDER
+	townmappals VOLCANO_EDGE,VOLCANO_EDGE,VOLCANO_EDGE,LAKE_ASH, FOREST,   FOREST,   	FOREST,   FOREST
 ; gfx/pokegear/pokegear.png
 	townmappals BORDER,   BORDER,   BORDER,   BORDER,   POI,      POI,      POI,      BORDER
 	townmappals BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER
@@ -29,9 +32,9 @@ ENDM
 	townmappals CITY,     CITY,     CITY,     CITY,     CITY,     CITY,     CITY,     CITY
 	townmappals BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER
 ; gfx/pokegear/town_map2.png
-	townmappals EARTH,    EARTH,    EARTH,    EARTH,    EARTH,    EARTH,    EARTH,    EARTH
-	townmappals EARTH,    EARTH,    EARTH,    EARTH,    EARTH,    EARTH,    EARTH,    EARTH
-	townmappals EARTH,    EARTH,    EARTH,    EARTH,    EARTH,    EARTH,    EARTH,    EARTH
-	townmappals EARTH,    EARTH,    EARTH,    EARTH,    EARTH,    EARTH,    EARTH,    EARTH
+	townmappals SWAMP,    SWAMP,    SWAMP,    SWAMP,    LAKE_ASH, LAKE_ASH, LAKE_ASH, FOREST
+	townmappals FOREST,   FOREST,   MOUNTAIN, MOUNTAIN, FOREST,   FOREST,   FOREST,   FOREST
+	townmappals SWAMP,    SWAMP,    SWAMP,    LAKE_ASH, LAKE_ASH, LAKE_ASH, LAKE_ASH, MOUNTAIN
+	townmappals FOREST,   MOUNTAIN, MOUNTAIN, MOUNTAIN, FOREST,   FOREST,   FOREST,   MOUNTAIN
 
 
