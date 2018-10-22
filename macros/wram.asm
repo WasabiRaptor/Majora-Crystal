@@ -17,7 +17,9 @@ box_struct: MACRO
 \1SpdEV::          db
 \1SpclAtkEV::      db
 \1SpclDefEV::      db
-\1Padding::        ds 4
+\1Padding::		   ds 2
+\1Form::           db
+\1Ability::		   db
 \1DVs::            dw
 \1PP::             ds NUM_MOVES
 \1Happiness::      db

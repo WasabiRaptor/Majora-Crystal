@@ -1,6 +1,8 @@
 CalcLevel:
 	ld a, [wTempMonSpecies]
 	ld [wCurSpecies], a
+	ld hl, wTempMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld d, 1
 .next_level

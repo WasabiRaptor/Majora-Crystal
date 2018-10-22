@@ -25,3 +25,11 @@ UnownFramesPointers:
 	dw UnownXFrames
 	dw UnownYFrames
 	dw UnownZFrames
+
+VulpixFramesPointers:
+	dw KantoVulpixFrames
+	dw AlolanVulpixFrames
+
+NinetalesFramesPointers:
+	dw KantoNinetalesFrames
+	dw AlolanNinetalesFrames

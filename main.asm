@@ -264,6 +264,7 @@ INCLUDE "engine/pokemon/switchpartymons.asm"
 INCLUDE "engine/gfx/load_pics.asm"
 INCLUDE "engine/pokemon/move_mon_wo_mail.asm"
 INCLUDE "data/pokemon/base_stats.asm"
+INCLUDE "data/pokemon/alt_form_base_stats.asm"
 INCLUDE "data/pokemon/names.asm"
 INCLUDE "data/pokemon/unused_pic_banks.asm"
 
@@ -401,14 +402,14 @@ INCLUDE "gfx/pokemon/anim_pointers.asm"
 INCLUDE "gfx/pokemon/anims.asm"
 INCLUDE "gfx/pokemon/idle_pointers.asm"
 INCLUDE "gfx/pokemon/idles.asm"
-INCLUDE "gfx/pokemon/unown_anim_pointers.asm"
-INCLUDE "gfx/pokemon/unown_anims.asm"
-INCLUDE "gfx/pokemon/unown_idle_pointers.asm"
-INCLUDE "gfx/pokemon/unown_idles.asm"
+INCLUDE "gfx/pokemon/alt_form_anim_pointers.asm"
+INCLUDE "gfx/pokemon/alt_form_anims.asm"
+INCLUDE "gfx/pokemon/alt_form_idle_pointers.asm"
+INCLUDE "gfx/pokemon/alt_form_idles.asm"
 INCLUDE "gfx/pokemon/bitmask_pointers.asm"
 INCLUDE "gfx/pokemon/bitmasks.asm"
-INCLUDE "gfx/pokemon/unown_bitmask_pointers.asm"
-INCLUDE "gfx/pokemon/unown_bitmasks.asm"
+INCLUDE "gfx/pokemon/alt_form_bitmask_pointers.asm"
+INCLUDE "gfx/pokemon/alt_form_bitmasks.asm"
 
 
 SECTION "Pic Animations 2", ROMX
@@ -426,8 +427,8 @@ INCBIN "gfx/font/font_inversed.1bpp"
 SECTION "Pic Animations 3", ROMX
 
 INCLUDE "gfx/pokemon/johto_frames.asm"
-INCLUDE "gfx/pokemon/unown_frame_pointers.asm"
-INCLUDE "gfx/pokemon/unown_frames.asm"
+INCLUDE "gfx/pokemon/alt_form_frame_pointers.asm"
+INCLUDE "gfx/pokemon/alt_form_frames.asm"
 
 
 SECTION "bank38", ROMX

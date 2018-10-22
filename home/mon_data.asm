@@ -12,23 +12,48 @@ GetBaseData::
 	push hl
 	ldh a, [hROMBank]
 	push af
-	ld a, BANK(BaseData)
-	rst Bankswitch
 
 ; Egg doesn't have BaseData
 	ld a, [wCurSpecies]
 	cp EGG
 	jr z, .egg
 
+	ld bc, BASE_DATA_SIZE
+
+	cp VULPIX
+	jr z, .vulpix
+	cp NINETALES
+	jr z, .ninetales
+
+
+	ld a, BANK(BaseData)
+	rst Bankswitch
+	ld a, [wCurSpecies]
 ; Get BaseData
 	dec a
-	ld bc, BASE_DATA_SIZE
 	ld hl, BaseData
+.got_base_data
 	call AddNTimes
 	ld de, wCurBaseData
 	ld bc, BASE_DATA_SIZE
 	call CopyBytes
-	jr .end
+	jr .end	
+
+.vulpix
+	ld a, BANK(VulpixBaseData)
+	rst Bankswitch
+	ld a, [wFormVariable]
+	dec a
+	ld hl, VulpixBaseData
+	jr .got_base_data
+	
+.ninetales
+	ld a, BANK(NinetalesBaseData)
+	rst Bankswitch
+	ld a, [wFormVariable]
+	dec a
+	ld hl, NinetalesBaseData
+	jr .got_base_data
 
 .egg
 ; ????

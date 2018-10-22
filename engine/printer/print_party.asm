@@ -211,7 +211,7 @@ PrintPartyMonPage1:
 	call Function1dc51a
 	call Function1dc52c
 	ld hl, wTempMonDVs
-	predef GetUnownLetter
+	predef GetFormData
 	ld hl, wBoxAlignment
 	xor a
 	ld [hl], a

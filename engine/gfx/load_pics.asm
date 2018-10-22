@@ -1,5 +1,15 @@
-GetUnownLetter:
-; Return Unown letter in wUnownLetter based on DVs at hl
+GetFormData::
+	ld a, [wCurPartySpecies]
+	cp VULPIX
+	jr z, .regional
+	cp NINETALES
+	jr z, .regional
+	cp UNOWN
+	jr z, .unown
+	ret
+
+.unown
+; Return Unown letter in wFormVariable based on DVs at hl
 
 ; Take the middle 2 bits of each DV and place them in order:
 ;	atk  def  spd  spc
@@ -45,8 +55,33 @@ GetUnownLetter:
 ; Increment to get 1-26
 	ldh a, [hQuotient + 3]
 	inc a
-	ld [wUnownLetter], a
+	ld [wFormVariable], a
 	ret
+
+.regional
+;I need something here to decide if a pokemon is Kantonian or Alolan, then have a mirror of it in the wild pokemon generation to force that on certain routes or in certain battle types
+
+	push bc
+	ld bc, -2
+	add hl, bc
+	ld a, [hl]
+	cp ALOLAN
+	ld bc, 2
+	add hl, bc
+	pop bc
+
+	jr z, .alolan
+
+	ld a, KANTONIAN
+	jr .done
+
+.alolan
+	ld a, ALOLAN
+.done
+	ld [wFormVariable], a
+	ret
+
+
 
 GetMonFrontpic:
 	ld a, [wCurPartySpecies]
@@ -119,15 +154,13 @@ GetFrontpicPointer:
 	ld a, [wCurPartySpecies]
 	cp UNOWN
 	jr z, .unown
-	ld a, [wCurPartySpecies]
+	cp VULPIX
+	jr z, .vulpix
+	cp NINETALES
+	jr z, .ninetales
+
 	ld hl, PokemonPicPointers
 	ld d, BANK(PokemonPicPointers)
-	jr .ok
-
-.unown
-	ld a, [wUnownLetter]
-	ld hl, UnownPicPointers
-	ld d, BANK(UnownPicPointers)
 
 .ok
 	dec a
@@ -142,6 +175,22 @@ GetFrontpicPointer:
 	pop bc
 	ret
 
+.vulpix
+	ld a, [wFormVariable]
+	ld hl, VulpixPicPointers
+	ld d, BANK(VulpixPicPointers)
+	jr .ok
+.ninetales
+	ld a, [wFormVariable]
+	ld hl, NinetalesPicPointers
+	ld d, BANK(NinetalesPicPointers)
+	jr .ok
+.unown
+	ld a, [wFormVariable]
+	ld hl, UnownPicPointers
+	ld d, BANK(UnownPicPointers)
+	jr .ok
+	
 GetAnimatedEnemyFrontpic:
 	push hl
 	ld de, sPaddedEnemyFrontpic
@@ -235,7 +284,7 @@ GetMonBackpic:
 
 	ld a, [wCurPartySpecies]
 	ld b, a
-	ld a, [wUnownLetter]
+	ld a, [wFormVariable]
 	ld c, a
 	ldh a, [rSVBK]
 	push af
@@ -244,13 +293,15 @@ GetMonBackpic:
 	push de
 
 	ld a, b
-	ld hl, PokemonPicPointers
-	ld d, BANK(PokemonPicPointers)
+	cp VULPIX
+	jr z, .vulpix
+	cp NINETALES
+	jr z, .ninetales
 	cp UNOWN
-	jr nz, .ok
-	ld a, c
-	ld hl, UnownPicPointers
-	ld d, BANK(UnownPicPointers)
+	jr z, .unown
+	
+	ld hl, PokemonPicPointers
+	ld d, BANK(PokemonPicPointers)	
 .ok
 	dec a
 	ld bc, 6
@@ -277,6 +328,24 @@ GetMonBackpic:
 	pop af
 	ldh [rSVBK], a
 	ret
+
+.unown
+	ld a, c
+	ld hl, UnownPicPointers
+	ld d, BANK(UnownPicPointers)
+	jr .ok
+
+.vulpix
+	ld a, c
+	ld hl, VulpixPicPointers
+	ld d, BANK(VulpixPicPointers)
+	jr .ok
+
+.ninetales
+	ld a, c
+	ld hl, NinetalesPicPointers
+	ld d, BANK(NinetalesPicPointers)
+	jr .ok
 
 Function511ec:
 	ld a, c

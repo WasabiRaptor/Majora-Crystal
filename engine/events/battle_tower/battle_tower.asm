@@ -406,6 +406,7 @@ endr
 
 .valid
 	ld [wCurSpecies], a
+
 	call GetBaseData
 	ld a, $5
 	call GetSRAMBank

@@ -2107,7 +2107,9 @@ wOtherDecoration::    db
 wCurEnemyItem:: db
 ENDU ; d1f7
 
-	ds 3
+wOtherTrainerType:: db
+
+	ds 2
 
 wLinkBattleRNs:: ds 10 ; d1fa
 
@@ -2145,7 +2147,7 @@ wForcedSwitch:: db
 
 wTrainerClass:: db ; d233
 
-wUnownLetter:: db ; d234
+wFormVariable:: db ; d234
 
 wMoveSelectionMenuType:: db
 

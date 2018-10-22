@@ -354,7 +354,7 @@ endr
 	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
-	predef GetUnownLetter
+	predef GetFormData
 	callfar UpdateUnownDex
 
 .done
@@ -463,12 +463,12 @@ AddTempmonToParty:
 	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
-	predef GetUnownLetter
+	predef GetFormData
 	callfar UpdateUnownDex
 	ld a, [wFirstUnownSeen]
 	and a
 	jr nz, .done
-	ld a, [wUnownLetter]
+	ld a, [wFormVariable]
 	ld [wFirstUnownSeen], a
 .done
 
@@ -1042,7 +1042,7 @@ SendMonIntoBox:
 	cp UNOWN
 	jr nz, .not_unown
 	ld hl, sBoxMon1DVs
-	predef GetUnownLetter
+	predef GetFormData
 	callfar UpdateUnownDex
 
 .not_unown

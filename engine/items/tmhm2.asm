@@ -1,6 +1,10 @@
 CanLearnTMHMMove:
 	ld a, [wCurPartySpecies]
 	ld [wCurSpecies], a
+	ld hl, wPartyMon1DVs
+	ld a, [wCurPartyMon]
+	call GetPartyLocation
+	predef GetFormData
 	call GetBaseData
 	ld hl, wBaseTMHM
 	push hl

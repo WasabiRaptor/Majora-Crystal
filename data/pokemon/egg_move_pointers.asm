@@ -35,7 +35,7 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw VulpixEggMoves
+	dw KantoVulpixEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

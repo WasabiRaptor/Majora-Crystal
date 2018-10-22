@@ -685,6 +685,7 @@ InitPartyMenuOBPals:
 GetBattlemonBackpicPalettePointer:
 	push de
 	farcall GetPartyMonDVs
+	predef GetFormData
 	ld c, l
 	ld b, h
 	ld a, [wTempBattleMonSpecies]
@@ -695,6 +696,7 @@ GetBattlemonBackpicPalettePointer:
 GetEnemyFrontpicPalettePointer:
 	push de
 	farcall GetEnemyMonDVs
+	predef GetFormData
 	ld c, l
 	ld b, h
 	ld a, [wTempEnemyMonSpecies]
@@ -782,14 +784,34 @@ Unreferenced_Function97cc:
 	ret
 
 _GetMonPalettePointer:
+	cp VULPIX
+	jr z, .vulpix
+	cp NINETALES
+	jr z, .ninetales
+
+	ld bc, PokemonPalettes
+.GotPalette
 	ld l, a
 	ld h, $0
 	add hl, hl
 	add hl, hl
 	add hl, hl
-	ld bc, PokemonPalettes
 	add hl, bc
 	ret
+
+.vulpix
+	ld a, [wFormVariable]
+	dec a
+	ld bc, VulpixPalettes
+	jr .GotPalette
+
+
+.ninetales
+	ld a, [wFormVariable]
+	dec a
+	ld bc, NinetalesPalettes
+	jr .GotPalette
+
 
 GetMonNormalOrShinyPalettePointer:
 	push bc
@@ -1207,6 +1229,8 @@ ExpBarPalette:
 INCLUDE "gfx/battle/exp_bar.pal"
 
 INCLUDE "data/pokemon/palettes.asm"
+
+INCLUDE "data/pokemon/alt_form_palettes.asm"
 
 INCLUDE "data/trainers/palettes.asm"
 

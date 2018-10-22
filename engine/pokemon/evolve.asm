@@ -255,6 +255,8 @@ EvolveAfterBattle_MasterLoop:
 
 	call ClearTileMap
 	call UpdateSpeciesNameIfNotNicknamed
+	ld hl, wTempMonDVs
+	predef GetFormData
 	call GetBaseData
 
 	ld hl, wTempMonExp + 2
@@ -306,7 +308,7 @@ EvolveAfterBattle_MasterLoop:
 	jr nz, .skip_unown
 
 	ld hl, wTempMonDVs
-	predef GetUnownLetter
+	predef GetFormData
 	callfar UpdateUnownDex
 
 .skip_unown
@@ -415,12 +417,19 @@ Text_WhatEvolving:
 	db "@"
 
 LearnLevelMoves:
+	ld hl, wTempMonDVs
 	ld a, [wTempSpecies]
 	ld [wCurPartySpecies], a
+	cp VULPIX
+	jr z, .vulpix
+	cp NINETALES
+	jr z, .ninetales
+
+	ld hl, EvosAttacksPointers
+.got_pointers
 	dec a
 	ld b, 0
 	ld c, a
-	ld hl, EvosAttacksPointers
 	add hl, bc
 	add hl, bc
 	ld a, [hli]
@@ -478,15 +487,32 @@ LearnLevelMoves:
 	ld [wTempSpecies], a
 	ret
 
+.vulpix
+	predef GetFormData
+	ld hl, VulpixEvosAttacksPointers
+	jr .got_pointers
+
+.ninetales
+	predef GetFormData
+	ld hl, NinetalesEvosAttacksPointers
+	jr .got_pointers
+
 FillMoves:
 ; Fill in moves at de for wCurPartySpecies at wCurPartyLevel
 
 	push hl
 	push de
 	push bc
-	ld hl, EvosAttacksPointers
 	ld b, 0
+
 	ld a, [wCurPartySpecies]
+	cp VULPIX
+	jr z, .vulpix
+	cp NINETALES
+	jr z, .ninetales
+
+	ld hl, EvosAttacksPointers
+.got_pointers
 	dec a
 	add a
 	rl b
@@ -500,6 +526,17 @@ FillMoves:
 	and a
 	jr nz, .GoToAttacks
 	jr .GetLevel
+
+.vulpix
+	ld a, [wFormVariable]
+	ld hl, VulpixEvosAttacksPointers
+	jr .got_pointers
+
+.ninetales
+	ld a, [wFormVariable]
+	ld hl, NinetalesEvosAttacksPointers
+	jr .got_pointers
+
 
 .NextMove:
 	pop de

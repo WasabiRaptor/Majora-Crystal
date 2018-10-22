@@ -119,7 +119,7 @@ Two routines in [engine/gfx/load_pics.asm](/engine/gfx/load_pics.asm) make this 
 	jr .ok
 
 .unown
-	ld a, [wUnownLetter]
+	ld a, [wFormVariable]
 	ld d, BANK(UnownPicPointers)
 
 .ok
@@ -162,7 +162,7 @@ Modify `GetFrontpicPointer`:
  	jr .ok
 
  .unown
- 	ld a, [wUnownLetter]
+ 	ld a, [wFormVariable]
 +	ld hl, UnownPicPointers
  	ld d, BANK(UnownPicPointers)
 

@@ -107,6 +107,8 @@ CheckBreedmonCompatibility:
 ; they are not compatible.
 	ld a, [wBreedMon2Species]
 	ld [wCurSpecies], a
+    ld hl, wBreedMon2DVs
+	predef GetFormData              ;since forms shouldn't change the egg group I don't think I need this 
 	call GetBaseData
 	ld a, [wBaseEggGroups]
 	cp EGG_NONE * $11
@@ -114,6 +116,8 @@ CheckBreedmonCompatibility:
 
 	ld a, [wBreedMon1Species]
 	ld [wCurSpecies], a
+    ld hl, wBreedMon1DVs
+	predef GetFormData              ;since forms shouldn't change the egg group I don't think I need this 
 	call GetBaseData
 	ld a, [wBaseEggGroups]
 	cp EGG_NONE * $11
@@ -125,6 +129,8 @@ CheckBreedmonCompatibility:
 	cp DITTO
 	jr z, .Compatible
 	ld [wCurSpecies], a
+	ld hl, wBreedMon2DVs
+	predef GetFormData              ;since forms shouldn't change the egg group I don't think I need this 
 	call GetBaseData
 	ld a, [wBaseEggGroups]
 	push af
@@ -140,6 +146,8 @@ CheckBreedmonCompatibility:
 	jr z, .Compatible
 	ld [wCurSpecies], a
 	push bc
+	ld hl, wBreedMon1DVs
+	predef GetFormData              ;since forms shouldn't change the egg group I don't think I need this 
 	call GetBaseData
 	pop bc
 	ld a, [wBaseEggGroups]
@@ -255,6 +263,11 @@ HatchEggs:
 	call GetPokemonName
 	xor a
 	ld [wd26b], a
+	ld a, [wCurPartyMon]
+	ld hl, wPartyMon1DVs
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+	predef GetFormData              ;since forms shouldn't change the egg group I don't think I need this 
 	call GetBaseData
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMon1
@@ -423,11 +436,16 @@ InitEggMoves:
 
 GetEggMove:
 	push bc
+	ld hl, wEggMonDVs
 	ld a, [wEggMonSpecies]
+	cp VULPIX
+	jr z, .vulpix_eggmoves
+
+	ld hl, EggMovePointers
+.got_eggmove_pointers
 	dec a
 	ld c, a
 	ld b, 0
-	ld hl, EggMovePointers
 	add hl, bc
 	add hl, bc
 	ld a, BANK(EggMovePointers)
@@ -443,6 +461,16 @@ GetEggMove:
 	jr z, .done_carry
 	inc hl
 	jr .loop
+	
+.vulpix_eggmoves
+	predef GetFormData
+	ld hl, VulpixEggMovePointers
+	jr .got_eggmove_pointers
+
+.vulpix_evosattacks
+	predef GetFormData
+	ld hl, VulpixEvosAttacksPointers
+	jr .got_evosattacks_pointers
 
 .reached_end
 	call GetBreedmonMovePointer
@@ -457,11 +485,16 @@ GetEggMove:
 	jr .loop2
 
 .found_eggmove
+	ld hl, wEggMonDVs
 	ld a, [wEggMonSpecies]
+	cp VULPIX
+	jr z, .vulpix_evosattacks
+
+	ld hl, EvosAttacksPointers
+.got_evosattacks_pointers
 	dec a
 	ld c, a
 	ld b, 0
-	ld hl, EvosAttacksPointers
 	add hl, bc
 	add hl, bc
 	ld a, BANK(EvosAttacksPointers)
@@ -626,9 +659,9 @@ GetEggFrontpic:
 	push de
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
-	call GetBaseData
 	ld hl, wBattleMonDVs
-	predef GetUnownLetter
+	predef GetFormData
+	call GetBaseData
 	pop de
 	predef_jump GetMonFrontpic
 
@@ -636,9 +669,9 @@ GetHatchlingFrontpic:
 	push de
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
-	call GetBaseData
 	ld hl, wBattleMonDVs
-	predef GetUnownLetter
+	predef GetFormData
+	call GetBaseData
 	pop de
 	predef_jump GetAnimatedFrontpic
 

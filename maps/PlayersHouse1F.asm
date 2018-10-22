@@ -80,7 +80,18 @@ PlayersHouse1FReceiveItemStd:
 	jumpstd receiveitem
 	end
 
+MakePartyMon1Alolan:
+	ld a, ALOLAN
+	ld [wPartyMon1Form], a
+	ret
+
 MomScript:
+	opentext
+	callasm MakePartyMon1Alolan
+	givepoke EEVEE, 5
+	closetext
+	end
+
 	faceplayer
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	checkscene
@@ -123,9 +134,8 @@ MomScript:
 NeighborScript:
 	faceplayer
 	opentext
-	givepoke GLAZEON, 5, BERRY
-	givepoke SUBSTITUTEMON, 5, BERRY
-
+	givepoke NINETALES, 5, BERRY
+	closetext
 	end
 	checktime MORN
 	iftrue .MornScript

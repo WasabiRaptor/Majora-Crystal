@@ -360,14 +360,21 @@ PlacePartyMonEvoStoneCompatibility:
 	jr z, .next
 	push hl
 	ld a, b
+	ld d, b
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld hl, wPartyMon1Species
 	call AddNTimes
 	ld a, [hl]
+	cp VULPIX
+	jr z, .vulpix
+	cp NINETALES
+	jr z, .ninetales
+
+	ld hl, EvosAttacksPointers
+.got_evosattacks_pointers
 	dec a
 	ld e, a
 	ld d, 0
-	ld hl, EvosAttacksPointers
 	add hl, de
 	add hl, de
 	call .DetermineCompatibility
@@ -384,9 +391,46 @@ PlacePartyMonEvoStoneCompatibility:
 	jr nz, .loop
 	ret
 
+.vulpix
+	ld a, d
+	ld bc, PARTYMON_STRUCT_LENGTH
+	ld hl, wPartyMon1DVs
+	call AddNTimes
+
+	predef GetFormData
+	ld hl, VulpixEvosAttacksPointers
+	jr .got_evosattacks_pointers
+
+.ninetales
+	ld a, d
+	ld bc, PARTYMON_STRUCT_LENGTH
+	ld hl, wPartyMon1DVs
+	call AddNTimes
+
+	predef GetFormData
+	ld hl, NinetalesEvosAttacksPointers
+	jr .got_evosattacks_pointers
+
+.vulpix_bank
+
+	ld a, BANK(VulpixEvosAttacksPointers)
+	jr .got_bank
+
+.ninetales_bank
+	
+	ld a, BANK(NinetalesEvosAttacksPointers)
+	jr .got_bank
+
 .DetermineCompatibility:
-	ld de, wStringBuffer1
+	ld a, b
+	cp VULPIX
+	jr z, .vulpix_bank
+	cp NINETALES
+	jr z, .ninetales_bank
+
 	ld a, BANK(EvosAttacksPointers)
+.got_bank
+	ld de, wStringBuffer1
 	ld bc, 2
 	call FarCopyBytes
 	ld hl, wStringBuffer1

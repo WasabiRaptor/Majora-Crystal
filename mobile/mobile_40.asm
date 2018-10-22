@@ -6404,12 +6404,12 @@ Function102d48:
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld hl, wPartyMon1DVs
 	call AddNTimes
-	predef GetUnownLetter
+	predef GetFormData
 	farcall UpdateUnownDex
 	ld a, [wFirstUnownSeen]
 	and a
 	jr nz, .asm_102d98
-	ld a, [wUnownLetter]
+	ld a, [wFormVariable]
 	ld [wFirstUnownSeen], a
 
 .asm_102d98

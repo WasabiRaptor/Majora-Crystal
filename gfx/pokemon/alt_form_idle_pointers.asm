@@ -25,3 +25,11 @@ UnownAnimationIdlePointers:
 	dw UnownXAnimationIdle
 	dw UnownYAnimationIdle
 	dw UnownZAnimationIdle
+
+VulpixAnimationIdlePointers:
+	dw KantoVulpixAnimationIdle
+	dw AlolanVulpixAnimationIdle
+
+NinetalesAnimationIdlePointers:
+	dw KantoNinetalesAnimationIdle
+	dw AlolanNinetalesAnimationIdle

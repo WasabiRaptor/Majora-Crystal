@@ -16,6 +16,7 @@ SECTION "Evolutions and Attacks", ROMX
 ; - db 0 ; no more level-up moves
 
 INCLUDE "data/pokemon/evos_attacks_pointers.asm"
+INCLUDE "data/pokemon/alt_form_evos_attacks_pointers.asm"
 
 BulbasaurEvosAttacks:
 	db EVOLVE_LEVEL, 16, IVYSAUR
@@ -488,7 +489,7 @@ ClefableEvosAttacks:
 	db 1, MOONLIGHT
 	db 0 ; no more level-up moves
 
-VulpixEvosAttacks:
+KantoVulpixEvosAttacks:
 	db EVOLVE_ITEM, FIRE_STONE, NINETALES
 	db 0 ; no more evolutions
 	db 1, EMBER
@@ -501,13 +502,35 @@ VulpixEvosAttacks:
 	db 37, FIRE_SPIN
 	db 0 ; no more level-up moves
 
-NinetalesEvosAttacks:
+AlolanVulpixEvosAttacks:
+	db EVOLVE_ITEM, FIRE_STONE, NINETALES
+	db 0 ; no more evolutions
+	db 1, POWDER_SNOW
+	db 1, TAIL_WHIP
+	db 7, QUICK_ATTACK
+	db 13, ROAR
+	db 19, CONFUSE_RAY
+	db 25, SAFEGUARD
+	db 31, ICE_BEAM
+	db 37, BLIZZARD
+	db 0 ; no more level-up moves
+
+KantoNinetalesEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, EMBER
 	db 1, QUICK_ATTACK
 	db 1, CONFUSE_RAY
 	db 1, SAFEGUARD
 	db 43, FIRE_SPIN
+	db 0 ; no more level-up moves
+
+AlolanNinetalesEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, POWDER_SNOW
+	db 1, QUICK_ATTACK
+	db 1, CONFUSE_RAY
+	db 1, SAFEGUARD
+	db 43, BLIZZARD
 	db 0 ; no more level-up moves
 
 JigglypuffEvosAttacks:

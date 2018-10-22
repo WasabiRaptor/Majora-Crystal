@@ -3444,8 +3444,8 @@ LoadEnemyMonToSwitchTo:
 	and a
 	jr nz, .skip_unown
 	ld hl, wEnemyMonDVs
-	predef GetUnownLetter
-	ld a, [wUnownLetter]
+	predef GetFormData
+	ld a, [wFormVariable]
 	ld [wFirstUnownSeen], a
 .skip_unown
 
@@ -3550,6 +3550,10 @@ Function_SetEnemyMonAndSendOutAnimation:
 	ld a, [wTempEnemyMonSpecies]
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
+	ld hl, wOTPartyMon1DVs
+	ld a, [wCurPartyMon]
+	call GetPartyLocation
+	predef GetFormData
 	call GetBaseData
 	ld a, OTPARTYMON
 	ld [wMonType], a
@@ -3883,6 +3887,8 @@ InitBattleMon:
 	ld [wTempBattleMonSpecies], a
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
+	ld hl, wBattleMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld a, [wBaseType1]
 	ld [wBattleMonType1], a
@@ -3903,11 +3909,11 @@ InitBattleMon:
 	ret
 
 BattleCheckPlayerShininess:
-	call GetPartyMonDVs
+	farcall GetPartyMonDVs
 	jr BattleCheckShininess
 
 BattleCheckEnemyShininess:
-	call GetEnemyMonDVs
+	farcall GetEnemyMonDVs
 
 BattleCheckShininess:
 	ld b, h
@@ -3967,6 +3973,8 @@ InitEnemyMon:
 	call CopyBytes
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
+	ld hl, wEnemyMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld hl, wOTPartyMonNicknames
 	ld a, [wCurPartyMon]
@@ -4020,7 +4028,7 @@ SwitchPlayerMon:
 
 SendOutPlayerMon:
 	ld hl, wBattleMonDVs
-	predef GetUnownLetter
+	predef GetFormData
 	hlcoord 1, 5
 	ld b, 7
 	ld c, 8
@@ -4674,9 +4682,16 @@ PrintPlayerHUD:
 	ld a, [hl]
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
+	ld hl, wPartyMon1DVs
+	ld a, [wCurBattleMon]
+	call GetPartyLocation
+	predef GetFormData
 	call GetBaseData
 
 	pop hl
+	ld a, [wCurBattleMon]
+	ld hl, wPartyMon1Species
+	call GetPartyLocation	
 	dec hl
 
 	ld a, TEMPMON
@@ -4733,8 +4748,11 @@ DrawEnemyHUD:
 	ld a, [wTempEnemyMonSpecies]
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
+	ld hl, wEnemyMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld de, wEnemyMonNick
+	lb bc, 4, 11
 	hlcoord 1, 0
 	call ret_3e138
 	call PlaceString
@@ -5981,6 +5999,8 @@ LoadEnemyMon:
 	ld [wCurPartySpecies], a
 
 ; Grab the BaseData for this species
+	ld hl, wEnemyMonDVs
+	predef GetFormData
 	call GetBaseData
 
 ; Let's get the item:
@@ -6059,7 +6079,18 @@ LoadEnemyMon:
 ; These are the DVs we'll use if we're actually in a trainer battle
 	ld a, [wBattleMode]
 	dec a
-	jr nz, .UpdateDVs
+	jr z, .WildDVs
+
+; Trainer DVs
+	ld a, [wCurPartyMon]
+	ld hl, wOTPartyMon1DVs
+	call GetPartyLocation
+	ld b, [hl]
+	inc hl
+	ld c, [hl]
+	jr .UpdateDVs
+
+.WildDVs:
 
 ; Wild DVs
 ; Here's where the fun starts
@@ -6143,7 +6174,7 @@ LoadEnemyMon:
 
 ; Get letter based on DVs
 	ld hl, wEnemyMonDVs
-	predef GetUnownLetter
+	predef GetFormData
 ; Can't use any letters that haven't been unlocked
 ; If combined with forced shiny battletype, causes an infinite loop
 	call CheckUnownLetter
@@ -6465,7 +6496,6 @@ LoadEnemyMon:
 	ld a, [wTempEnemyMonSpecies]
 	ld [wNamedObjectIndexBuffer], a
 
-	call GetPokemonName
 
 ; Did we catch it?
 	ld a, [wBattleMode]
@@ -6473,6 +6503,20 @@ LoadEnemyMon:
 	ret z
 
 ; Update enemy nick
+	ld a, [wBattleMode]
+	dec a ; WILD_BATTLE?
+	jr z, .no_nickname
+	ld a, [wOtherTrainerType]
+	bit TRAINERTYPE_NICKNAME_F, a
+	jr z, .no_nickname
+	ld a, [wCurPartyMon]
+	ld hl, wOTPartyMonNicknames
+	ld bc, MON_NAME_LENGTH
+	call AddNTimes
+	jr .got_nickname
+.no_nickname
+	call GetPokemonName
+.got_nickname
 	ld hl, wStringBuffer1
 	ld de, wEnemyMonNick
 	ld bc, MON_NAME_LENGTH
@@ -6547,7 +6591,7 @@ CheckUnownLetter:
 	ld l, a
 
 	push de
-	ld a, [wUnownLetter]
+	ld a, [wFormVariable]
 	ld de, 1
 	push bc
 	call IsInArray
@@ -7104,7 +7148,10 @@ GiveExperiencePoints:
 	push bc
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
+	ld hl, wEnemyMonDVs
+	predef GetFormData
 	call GetBaseData
+	ld hl, MON_EVS
 ; EV yield format: %hhaaddss %ttff0000
 ; h = hp, a = atk, d = def, s = spd
 ; t = sat, f = sdf, 0 = unused bits
@@ -7233,7 +7280,12 @@ GiveExperiencePoints:
 	add hl, de
 	ld a, [hl]
 	ld [wCurSpecies], a
+	ld hl, wPartyMon1DVs
+	ld a, [wCurPartyMon]
+	call GetPartyLocation
+	predef GetFormData
 	call GetBaseData
+	ld hl, wPartySpecies
 	push bc
 	ld d, MAX_LEVEL
 	callfar CalcExpAtLevel
@@ -7286,6 +7338,10 @@ GiveExperiencePoints:
 	ld a, [hl]
 	ld [wCurSpecies], a
 	ld [wTempSpecies], a ; unused?
+	ld hl, wPartyMon1DVs
+	ld a, [wCurPartyMon]
+	call GetPartyLocation
+	predef GetFormData
 	call GetBaseData
 	ld hl, MON_MAXHP + 1
 	add hl, bc
@@ -7898,6 +7954,8 @@ Unreferenced_HandleSafariAngerEatingStatus:
 	push hl
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
+	ld hl, wEnemyMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld a, [wBaseCatchRate]
 	ld [wEnemyMonCatchRate], a
@@ -8063,7 +8121,7 @@ DropPlayerSub:
 	ld a, [wBattleMonSpecies]
 	ld [wCurPartySpecies], a
 	ld hl, wBattleMonDVs
-	predef GetUnownLetter
+	predef GetFormData
 	ld de, vTiles2 tile $31
 	predef GetMonBackpic
 	pop af
@@ -8098,9 +8156,11 @@ DropEnemySub:
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
+	ld hl, wEnemyMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld hl, wEnemyMonDVs
-	predef GetUnownLetter
+	predef GetFormData
 	ld de, vTiles2
 	predef GetAnimatedFrontpic
 	pop af
@@ -8288,14 +8348,14 @@ InitEnemyWildmon:
 	ld bc, NUM_MOVES
 	call CopyBytes
 	ld hl, wEnemyMonDVs
-	predef GetUnownLetter
+	predef GetFormData
 	ld a, [wCurPartySpecies]
 	cp UNOWN
 	jr nz, .skip_unown
 	ld a, [wFirstUnownSeen]
 	and a
 	jr nz, .skip_unown
-	ld a, [wUnownLetter]
+	ld a, [wFormVariable]
 	ld [wFirstUnownSeen], a
 .skip_unown
 	ld de, vTiles2

@@ -12,6 +12,7 @@ SECTION "Egg Moves", ROMX
 ; and can only breed with Ditto.
 
 INCLUDE "data/pokemon/egg_move_pointers.asm"
+INCLUDE "data/pokemon/alt_form_egg_move_pointers.asm"
 
 BulbasaurEggMoves:
 	db LIGHT_SCREEN
@@ -108,7 +109,15 @@ NidoranMEggMoves:
 	db BEAT_UP
 	db -1 ; end
 
-VulpixEggMoves:
+KantoVulpixEggMoves:
+	db FAINT_ATTACK
+	db HYPNOSIS
+	db FLAIL
+	db SPITE
+	db DISABLE
+	db -1 ; end
+
+AlolanVulpixEggMoves:
 	db FAINT_ATTACK
 	db HYPNOSIS
 	db FLAIL

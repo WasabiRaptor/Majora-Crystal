@@ -24,3 +24,9 @@ UnownWAnimationIdle: INCLUDE "gfx/pokemon/unown_w/anim_idle.asm"
 UnownXAnimationIdle: INCLUDE "gfx/pokemon/unown_x/anim_idle.asm"
 UnownYAnimationIdle: INCLUDE "gfx/pokemon/unown_y/anim_idle.asm"
 UnownZAnimationIdle: INCLUDE "gfx/pokemon/unown_z/anim_idle.asm"
+
+AlolanVulpixAnimationIdle: INCLUDE "gfx/pokemon/vulpix/anim_idle.asm"
+AlolanNinetalesAnimationIdle: INCLUDE "gfx/pokemon/alolanninetales/anim_idle.asm"
+
+KantoVulpixAnimationIdle: INCLUDE "gfx/pokemon/vulpix/anim_idle.asm"
+KantoNinetalesAnimationIdle: INCLUDE "gfx/pokemon/ninetales/anim_idle.asm"

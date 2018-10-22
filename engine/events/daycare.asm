@@ -510,6 +510,8 @@ DayCare_GiveEgg:
 	ld bc, wEggMonEnd - wEggMon
 	call CopyBytes
 
+	ld hl, wEggMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld a, [wPartyCount]
 	dec a
@@ -632,6 +634,8 @@ DayCare_InitBreeding:
 	ld [wCurSpecies], a
 	ld [wEggMonSpecies], a
 
+	ld hl, wEggMonDVs
+	predef GetFormData
 	call GetBaseData
 	ld hl, wEggNick
 	ld de, .String_EGG
