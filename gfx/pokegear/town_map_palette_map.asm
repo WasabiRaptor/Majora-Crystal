@@ -25,7 +25,7 @@ ENDM
 	townmappals VOLCANO_EDGE,VOLCANO,     VOLCANO,	   VOLCANO,  VOLCANO,  VOLCANO,  	BORDER,   BORDER
 	townmappals VOLCANO_EDGE,VOLCANO_EDGE,VOLCANO_EDGE,LAKE_ASH, FOREST,   FOREST,   	FOREST,   FOREST
 ; gfx/pokegear/pokegear.png
-	townmappals BORDER,   BORDER,   BORDER,   BORDER,   POI,      POI,      POI,      BORDER
+	townmappals BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER
 	townmappals BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER
 	townmappals CITY,     CITY,     CITY,     CITY,     CITY,     CITY,     CITY,     CITY
 	townmappals CITY,     CITY,     CITY,     CITY,     CITY,     CITY,     CITY,     BORDER
