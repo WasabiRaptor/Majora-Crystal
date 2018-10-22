@@ -33,6 +33,9 @@ INCBIN "gfx/battle/expbar.2bpp"
 TownMapGFX:
 INCBIN "gfx/pokegear/town_map.2bpp.lz"
 
+TownMap2GFX:
+INCBIN "gfx/pokegear/town_map2.2bpp.lz"
+
 UnusedWeekdayKanjiGFX: ; unused kanji
 INCBIN "gfx/font/unused_weekday_kanji.2bpp"
 
