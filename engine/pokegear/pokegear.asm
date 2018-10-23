@@ -1920,14 +1920,8 @@ _TownMap:
 	ld e, KANTO_REGION
 .okay_tilemap
 	farcall PokegearMap
-	ld a, $07
-	ld bc, 6
-	hlcoord 1, 0
-	call ByteFill
-	hlcoord 0, 0
-	ld [hl], $06
 	hlcoord 7, 0
-	ld [hl], $17
+	ld [hl], $16
 	hlcoord 7, 1
 	ld [hl], $16
 	hlcoord 7, 2
@@ -1937,7 +1931,7 @@ _TownMap:
 	hlcoord 8, 2
 	call ByteFill
 	hlcoord 19, 2
-	ld [hl], $17
+	ld [hl], $07
 	ld a, [wTownMapCursorLandmark]
 	call PokegearMap_UpdateLandmarkName
 	farcall TownMapPals
