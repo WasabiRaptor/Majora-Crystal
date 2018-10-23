@@ -204,8 +204,7 @@ INCLUDE "engine/events/buena_menu.asm"
 
 SECTION "Tileset Palettes", ROMX
 
-INCLUDE "engine/tilesets/map_palettes.asm"
-INCLUDE "gfx/tileset_palette_maps.asm"
+
 
 SECTION "bank13", ROMX
 

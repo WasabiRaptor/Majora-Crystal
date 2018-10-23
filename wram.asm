@@ -2049,9 +2049,9 @@ wTilesetBlocksBank:: db ; d1dc
 wTilesetBlocksAddress:: dw ; d1dd
 wTilesetCollisionBank:: db ; d1df
 wTilesetCollisionAddress:: dw ; d1e0
+wTilesetAttributesBank:: db
+wTilesetAttributesAddress:: dw
 wTilesetAnim:: dw ; bank 3f ; d1e2
-	ds 2 ; unused ; d1e4
-wTilesetPalettes:: dw ; bank 3f ; d1e6
 wTilesetEnd::
 
 wEvolvableFlags:: flag_array PARTY_LENGTH ; d1e8
@@ -3018,6 +3018,9 @@ w3_dd68:: ds SCREEN_WIDTH * SCREEN_HEIGHT
 w3_dfec:: ds $10
 w3_dffc:: ds 4
 
+SECTION "Surrounding Attributes", WRAMX
+
+wSurroundingAttributes:: ds SURROUNDING_WIDTH * SURROUNDING_HEIGHT
 
 SECTION "GBC Video", WRAMX
 
