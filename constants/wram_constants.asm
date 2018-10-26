@@ -47,6 +47,8 @@ TEXT_DELAY_SLOW EQU %101 ; 5
 	const FRAME_6 ; 5
 	const FRAME_7 ; 6
 	const FRAME_8 ; 7
+	const FRAME_9 ; 8
+	const FRAME_10 ; 9
 NUM_FRAMES EQU const_value
 
 ; wTextBoxFlags:: ; cfcf

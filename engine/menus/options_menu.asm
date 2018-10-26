@@ -472,7 +472,7 @@ Options_Frame:
 UpdateFrame:
 	ld a, [wTextBoxFrame]
 	hlcoord 16, 15 ; where on the screen the number is drawn
-	add "1"
+	add "0"
 	ld [hl], a
 	call LoadFontsExtra
 	and a
