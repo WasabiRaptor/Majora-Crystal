@@ -84,10 +84,11 @@
 
 	charmap "(",         $9a
 	charmap ")",         $9b
+	charmap "[",         $9a
+	charmap "]",         $9b
 	charmap ":",         $9c
 	charmap ";",         $9d
-	charmap "[",         $9e
-	charmap "]",         $9f
+
 
 	charmap "a",         $a0
 	charmap "b",         $a1
@@ -122,6 +123,11 @@
 	charmap "│",         $bd
 	charmap "└",         $be
 	charmap "┘",         $bf
+	charmap "┬",         $9e
+	charmap "┴",         $9f
+	charmap "├", $da 
+	charmap "┤",  		 $db 
+
 
 	charmap "′",         $ce
 	charmap "″",         $cf
@@ -137,8 +143,6 @@
 	charmap "■",         $d7
 	charmap "▲",         $d8
 	charmap "☎",         $d9
-	charmap "<BOLD_V>",  $da
-	charmap "<BOLD_S>",  $db
 	charmap "<COLON>",   $dc ; colon with tinier dots than ":"
 	charmap "“",         $dd ; opening quote
 	charmap "”",         $de ; closing quote

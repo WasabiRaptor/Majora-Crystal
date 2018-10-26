@@ -68,11 +68,6 @@ Portrait::
 	call WaitBGMap
 	ret
 
-.Fill:
-	ld [hli], a
-	dec c
-	jr nz, .Fill
-	ret
 
 ClosePortrait::
 	ld hl, PortraitMenuHeader

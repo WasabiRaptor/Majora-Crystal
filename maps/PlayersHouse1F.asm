@@ -136,10 +136,10 @@ MomScript:
 NeighborScript:
 	faceplayer
 	opentext
-	portrait BEAUTY_PORTRAIT
 	waitbutton
-	closeportrait
 	portrait ZYGARDE_NEUTRAL
+	waitbutton
+	portrait ZYGARDE_ANGRY
 	writetext LookAtMeText
 	waitbutton
 	closetext
@@ -287,8 +287,8 @@ ImBehindYouText:
 	done
 
 LookAtMeText
-	text ":indigo:"
-	line ":fire:"
+	text "need to figure"
+	line "out the border"
 	done
 
 NeighborMornIntroText:
