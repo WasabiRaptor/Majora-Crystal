@@ -136,9 +136,6 @@ MomScript:
 NeighborScript:
 	faceplayer
 	opentext
-	waitbutton
-	portrait ZYGARDE_NEUTRAL
-	waitbutton
 	portrait ZYGARDE_ANGRY
 	writetext LookAtMeText
 	waitbutton

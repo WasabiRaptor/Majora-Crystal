@@ -172,6 +172,7 @@ TextBoxBorder::
 	jr .placebottomrightcorner
 .bottomrightcornerbranch2
 	ld a, "┴"
+	jr .placebottomrightcorner
 .bottomleftcornerbranch1
 	ld a, "├"
 	jr .placebottomleftcorner
