@@ -105,7 +105,7 @@ Function140ae:
 
 .time_overflow
 	farcall ClearDailyTimers
-	farcall Function170923
+	;farcall Function170923
 ; mobile
 	ld a, 5 ; MBC30 bank used by JP Crystal; inaccessible by MBC3
 	call GetSRAMBank

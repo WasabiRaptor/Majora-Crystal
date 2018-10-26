@@ -86,7 +86,7 @@ _GiveOddEgg:
 	ld [wMobileMonNicknamePointerBuffer], a
 	ld a, HIGH(wOddEggName)
 	ld [wMobileMonNicknamePointerBuffer + 1], a
-	farcall AddMobileMonToParty
+	;farcall AddMobileMonToParty
 	ret
 
 .Odd:
