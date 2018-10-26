@@ -138,6 +138,8 @@ NeighborScript:
 	opentext
 	portrait BEAUTY_PORTRAIT
 	waitbutton
+	closeportrait
+	portrait ZYGARDE_NEUTRAL
 	writetext LookAtMeText
 	waitbutton
 	closetext
@@ -285,8 +287,8 @@ ImBehindYouText:
 	done
 
 LookAtMeText
-	text "Look at my glorious"
-	line "testing graphics."
+	text ":indigo:"
+	line ":fire:"
 	done
 
 NeighborMornIntroText:

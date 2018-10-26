@@ -739,12 +739,16 @@ GetMonPalettePointer:
 	ret
 
 GetPortraitPalettePointer:
+	ld a, [wCurSpecies]
+	dec a
 	ld l, a
 	ld h, 0
-	add hl, hl
-	add hl, hl
-	add hl, hl
+
 	ld bc, PortraitPalettes ;changed this of course
+
+	add hl, hl
+	add hl, hl
+	add hl, hl
 	add hl, bc
 	ret 
 
