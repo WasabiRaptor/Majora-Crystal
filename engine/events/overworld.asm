@@ -394,7 +394,7 @@ UsedSurfScript:
 	waitbutton
 	closetext
 
-	callasm .empty_fn ; empty function
+	;callasm .empty_fn ; empty function
 
 	copybytetovar wBuffer2
 	writevarcode VAR_MOVEMENT
@@ -406,9 +406,9 @@ UsedSurfScript:
 	applymovement PLAYER, wMovementBuffer
 	end
 
-.empty_fn
-	farcall StubbedTrainerRankings_Surf
-	ret
+;.empty_fn
+	;farcall StubbedTrainerRankings_Surf
+	;ret
 
 UsedSurfText:
 	text_jump _UsedSurfText
@@ -667,7 +667,7 @@ Script_UsedWaterfall:
 	ld a, [wPlayerStandingTile]
 	call CheckWaterfallTile
 	ret z
-	farcall StubbedTrainerRankings_Waterfall
+	;farcall StubbedTrainerRankings_Waterfall
 	ld a, $1
 	ld [wScriptVar], a
 	ret

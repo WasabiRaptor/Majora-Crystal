@@ -5,7 +5,7 @@ AskTimer::
 	ldh a, [hMobile]
 	and a
 	jr z, .not_mobile
-	call Timer
+	;call Timer
 
 .not_mobile
 	pop af

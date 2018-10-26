@@ -77,14 +77,14 @@ NewGame:
 	jp FinishContinueFunction
 
 AreYouABoyOrAreYouAGirl:
-	farcall Mobile_AlwaysReturnNotCarry ; some mobile stuff
+	;farcall Mobile_AlwaysReturnNotCarry ; some mobile stuff
 	jr c, .ok
 	farcall InitGender
 	ret
 
 .ok
 	ld c, 0
-	farcall InitMobileProfile ; mobile
+	;farcall InitMobileProfile ; mobile
 	ret
 
 ResetWRAM:
@@ -212,7 +212,7 @@ endc
 
 	farcall DeletePartyMonMail
 
-	farcall DeleteMobileEventIndex
+	;farcall DeleteMobileEventIndex
 
 	call ResetGameTime
 
@@ -475,7 +475,7 @@ endc
 
 	farcall DeletePartyMonMail
 
-	farcall DeleteMobileEventIndex
+	;farcall DeleteMobileEventIndex
 
 	ld hl, wCurDay
 	ld [hl], 0
@@ -501,7 +501,7 @@ PostCreditsSpawn:
 	ret
 
 Continue_MobileAdapterMenu:
-	farcall Mobile_AlwaysReturnNotCarry ; mobile check
+	;farcall Mobile_AlwaysReturnNotCarry ; mobile check
 	ret nc
 
 ; the rest of this stuff is never reached because
@@ -518,7 +518,7 @@ Continue_MobileAdapterMenu:
 	ld c, 20
 	call DelayFrames
 	ld c, $1
-	farcall InitMobileProfile ; mobile
+	;farcall InitMobileProfile ; mobile
 	farcall _SaveData
 	ld a, 8
 	ld [wMusicFade], a

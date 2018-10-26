@@ -302,4 +302,4 @@ sTrainerRankingsBackup:: ds sTrainerRankingsEnd - sTrainerRankings
 	ds $945
 ; aa4b
 
-sMobileLoginPassword:: ds MOBILE_LOGIN_PASSWORD_LENGTH
+;sMobileLoginPassword:: ds MOBILE_LOGIN_PASSWORD_LENGTH

@@ -177,9 +177,9 @@ BattleTurn:
 
 	call IsMobileBattle
 	jr nz, .not_disconnected
-	farcall Function100da5
-	farcall StartMobileInactivityTimer
-	farcall Function100dd8
+	;farcall Function100da5
+	;farcall StartMobileInactivityTimer
+	;farcall Function100dd8
 	jp c, .quit
 .not_disconnected
 
@@ -2298,7 +2298,7 @@ HandleEnemySwitch:
 	and a
 	jr z, .not_linked
 
-	call LinkBattleSendReceiveAction
+	;call LinkBattleSendReceiveAction
 	ld a, [wBattleAction]
 	cp BATTLEACTION_FORFEIT
 	ret z
@@ -2357,8 +2357,8 @@ WinTrainerBattle:
 .got_defeat_phrase:
 	call StdBattleTextBox
 
-	call IsMobileBattle
-	jr z, .mobile
+	;call IsMobileBattle
+	;jr z, .mobile
 	ld a, [wLinkMode]
 	and a
 	ret nz
@@ -2383,13 +2383,13 @@ WinTrainerBattle:
 .skip_win_loss_text
 	jp .GiveMoney
 
-.mobile
-	call BattleWinSlideInEnemyTrainerFrontpic
-	ld c, 40
-	call DelayFrames
-	ld c, $4 ; win
-	farcall Mobile_PrintOpponentBattleMessage
-	ret
+;.mobile
+	;call BattleWinSlideInEnemyTrainerFrontpic
+	;ld c, 40
+	;call DelayFrames
+	;ld c, $4 ; win
+	;farcall Mobile_PrintOpponentBattleMessage
+	;ret
 
 .battle_tower
 	call BattleWinSlideInEnemyTrainerFrontpic
@@ -2520,7 +2520,7 @@ AddBattleMoneyToAccount:
 	push bc
 	ld b, h
 	ld c, l
-	farcall StubbedTrainerRankings_AddToBattlePayouts
+	;farcall StubbedTrainerRankings_AddToBattlePayouts
 	pop bc
 	pop hl
 .loop
@@ -2728,7 +2728,7 @@ ForcePlayerMonChoice:
 	jr z, .skip_link
 	ld a, BATTLEPLAYERACTION_USEITEM
 	ld [wBattlePlayerAction], a
-	call LinkBattleSendReceiveAction
+	;call LinkBattleSendReceiveAction
 
 .skip_link
 	xor a ; BATTLEPLAYERACTION_USEMOVE
@@ -2838,14 +2838,14 @@ JumpToPartyMenuAndPrintText:
 	ret
 
 SelectBattleMon:
-	call IsMobileBattle
-	jr z, .mobile
+	;call IsMobileBattle
+	;jr z, .mobile
 	farcall PartyMenuSelect
 	ret
 
-.mobile
-	farcall Mobile_PartyMenuSelect
-	ret
+;.mobile
+	;farcall Mobile_PartyMenuSelect
+	;ret
 
 PickPartyMonInBattle:
 .loop
@@ -2980,8 +2980,8 @@ LostBattle:
 
 .not_tied
 	ld hl, LostAgainstText
-	call IsMobileBattle
-	jr z, .mobile
+	;call IsMobileBattle
+	;jr z, .mobile
 
 .text
 	call StdBattleTextBox
@@ -2990,20 +2990,20 @@ LostBattle:
 	scf
 	ret
 
-.mobile
+;.mobile
 ; Remove the enemy from the screen.
-	hlcoord 0, 0
-	lb bc, 8, 21
-	call ClearBox
-	call BattleWinSlideInEnemyTrainerFrontpic
+	;hlcoord 0, 0
+	;lb bc, 8, 21
+	;call ClearBox
+	;call BattleWinSlideInEnemyTrainerFrontpic
 
-	ld c, 40
-	call DelayFrames
+	;ld c, 40
+	;call DelayFrames
 
-	ld c, $3 ; lost
-	farcall Mobile_PrintOpponentBattleMessage
-	scf
-	ret
+	;ld c, $3 ; lost
+	;farcall Mobile_PrintOpponentBattleMessage
+	;scf
+	;ret
 
 EnemyMonFaintedAnimation:
 	hlcoord 12, 5
@@ -3822,10 +3822,10 @@ TryToRunAwayFromBattle:
 	ld [wCurMoveNum], a
 	xor a
 	ld [wCurPlayerMove], a
-	call LinkBattleSendReceiveAction
+	;call LinkBattleSendReceiveAction
 	call Call_LoadTempTileMapToTileMap
-	call CheckMobileBattleError
-	jr c, .mobile
+	;call CheckMobileBattleError
+	;jr c, .mobile
 
 	; Got away safely
 	ld a, [wBattleAction]
@@ -3852,19 +3852,19 @@ TryToRunAwayFromBattle:
 	scf
 	ret
 
-.mobile
-	call StopDangerSound
-	ld hl, wcd2a
-	bit 4, [hl]
-	jr nz, .skip_link_error
-	ld hl, BattleText_LinkErrorBattleCanceled
-	call StdBattleTextBox
+;.mobile
+	;call StopDangerSound
+	;ld hl, wcd2a
+	;bit 4, [hl]
+	;jr nz, .skip_link_error
+	;ld hl, BattleText_LinkErrorBattleCanceled
+	;call StdBattleTextBox
 
-.skip_link_error
-	call WaitSFX
-	call LoadTileMapToTempTileMap
-	scf
-	ret
+;.skip_link_error
+	;call WaitSFX
+	;call LoadTileMapToTempTileMap
+	;scf
+	;ret
 
 InitBattleMon:
 	ld a, MON_SPECIES
@@ -4941,18 +4941,18 @@ BattleMenu_Fight:
 	ret
 
 LoadBattleMenu2:
-	call IsMobileBattle
-	jr z, .mobile
+	;call IsMobileBattle
+	;jr z, .mobile
 
 	farcall LoadBattleMenu
 	and a
 	ret
 
-.mobile
-	farcall Function100b12
-	ld a, [wcd2b]
-	and a
-	ret z
+;.mobile
+	;farcall Function100b12
+	;ld a, [wcd2b]
+	;and a
+	;ret z
 
 	ld hl, wcd2a
 	bit 4, [hl]
@@ -5115,14 +5115,14 @@ BattleMenuPKMN_Loop:
 	jp BattleMenu
 
 .GetMenu:
-	call IsMobileBattle
-	jr z, .mobile
+	;call IsMobileBattle
+	;jr z, .mobile
 	farcall BattleMonMenu
 	ret
 
-.mobile
-	farcall MobileBattleMonMenu
-	ret
+;.mobile
+	;farcall MobileBattleMonMenu
+	;ret
 
 Battle_StatsScreen:
 	call DisableLCD
@@ -5207,7 +5207,7 @@ PlayerSwitch:
 	and a
 	jr z, .not_linked
 	call LoadStandardMenuHeader
-	call LinkBattleSendReceiveAction
+	;call LinkBattleSendReceiveAction
 	call CloseWindow
 
 .not_linked
@@ -5338,9 +5338,10 @@ CheckAmuletCoin:
 	ret
 
 MoveSelectionScreen:
-	call IsMobileBattle
-	jr nz, .not_mobile
-	farcall MobileMoveSelectionScreen
+	;call IsMobileBattle
+	;jr nz, .not_mobile
+	jr .not_mobile
+	;farcall MobileMoveSelectionScreen
 	ret
 
 .not_mobile
@@ -5804,7 +5805,7 @@ ParseEnemyAction:
 	call LoadTileMapToTempTileMap
 	ld a, [wBattlePlayerAction]
 	and a ; BATTLEPLAYERACTION_USEMOVE?
-	call z, LinkBattleSendReceiveAction
+	;call z, LinkBattleSendReceiveAction
 	call Call_LoadTempTileMapToTileMap
 	ld a, [wBattleAction]
 	cp BATTLEACTION_E
@@ -5965,9 +5966,9 @@ CheckEnemyLockedIn:
 	bit SUBSTATUS_ROLLOUT, [hl]
 	ret
 
-LinkBattleSendReceiveAction:
-	farcall _LinkBattleSendReceiveAction
-	ret
+;LinkBattleSendReceiveAction:
+	;farcall _LinkBattleSendReceiveAction
+	;ret
 
 LoadEnemyMon:
 ; Initialize enemy monster parameters
@@ -8200,7 +8201,7 @@ Unreferenced_DoBattle:
 	ret
 
 BattleIntro:
-	farcall StubbedTrainerRankings_Battles ; mobile
+	;farcall StubbedTrainerRankings_Battles ; mobile
 	call LoadTrainerOrWildMonPic
 	xor a
 	ld [wTempBattleMonSpecies], a
@@ -8281,7 +8282,7 @@ BackUpBGMap2:
 
 InitEnemyTrainer:
 	ld [wTrainerClass], a
-	farcall StubbedTrainerRankings_TrainerBattles
+	;farcall StubbedTrainerRankings_TrainerBattles
 	xor a
 	ld [wTempEnemyMonSpecies], a
 	callfar GetTrainerAttributes
@@ -8337,7 +8338,7 @@ InitEnemyTrainer:
 InitEnemyWildmon:
 	ld a, WILD_BATTLE
 	ld [wBattleMode], a
-	farcall StubbedTrainerRankings_WildBattles
+	;farcall StubbedTrainerRankings_WildBattles
 	call LoadEnemyMon
 	ld hl, wEnemyMonMoves
 	ld de, wWildMonMoves
@@ -8513,8 +8514,8 @@ CheckPayDay:
 	ret
 
 ShowLinkBattleParticipantsAfterEnd:
-	farcall StubbedTrainerRankings_LinkBattles
-	farcall BackupMobileEventIndex
+	;farcall StubbedTrainerRankings_LinkBattles
+	;farcall BackupMobileEventIndex
 	ld a, [wCurOTMon]
 	ld hl, wOTPartyMon1Status
 	call GetPartyLocation
@@ -8543,24 +8544,24 @@ DisplayLinkBattleResult:
 	jr c, .victory ; WIN
 	jr z, .loss ; LOSE
 	; DRAW
-	farcall StubbedTrainerRankings_ColosseumDraws
+	;farcall StubbedTrainerRankings_ColosseumDraws
 	ld de, .Draw
 	jr .store_result
 
 .victory
-	farcall StubbedTrainerRankings_ColosseumWins
+	;farcall StubbedTrainerRankings_ColosseumWins
 	ld de, .Win
 	jr .store_result
 
 .loss
-	farcall StubbedTrainerRankings_ColosseumLosses
+	;farcall StubbedTrainerRankings_ColosseumLosses
 	ld de, .Lose
 	jr .store_result
 
 .store_result
 	hlcoord 6, 8
 	call PlaceString
-	farcall BackupMobileEventIndex
+	;farcall BackupMobileEventIndex
 	ld c, 200
 	call DelayFrames
 
@@ -8572,17 +8573,17 @@ DisplayLinkBattleResult:
 
 	call CloseSRAM
 
-	call IsMobileBattle2
-	jr z, .mobile
+	;call IsMobileBattle2
+	;jr z, .mobile
 	call WaitPressAorB_BlinkCursor
 	call ClearTileMap
 	ret
 
-.mobile
-	ld c, 200
-	call DelayFrames
-	call ClearTileMap
-	ret
+;.mobile
+	;ld c, 200
+	;call DelayFrames
+	;call ClearTileMap
+	;ret
 
 .Win:
 	db "YOU WIN@"
@@ -9279,7 +9280,7 @@ BattleStartMessage:
 	cp BATTLETYPE_FISH
 	jr nz, .NotFishing
 
-	farcall StubbedTrainerRankings_HookedEncounters
+	;farcall StubbedTrainerRankings_HookedEncounters
 
 	ld hl, HookedPokemonAttackedText
 	jr .PlaceBattleStartText
@@ -9303,6 +9304,6 @@ BattleStartMessage:
 	ret nz
 
 	ld c, $2 ; start
-	farcall Mobile_PrintOpponentBattleMessage
+	;farcall Mobile_PrintOpponentBattleMessage
 
 	ret

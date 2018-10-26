@@ -35,7 +35,7 @@ _InterpretMobileMenu::
 	set 7, [hl]
 .loop
 	call DelayFrame
-	farcall Function10032e
+	;farcall Function10032e
 	ld a, [wcd2b]
 	and a
 	jr nz, .quit
@@ -299,10 +299,10 @@ Unreferenced_Function241d5:
 	ret c
 	ld c, 1
 	ld b, 3
-	call AdvanceMobileInactivityTimerAndCheckExpired ; BUG: This function is in another bank.
+	;call AdvanceMobileInactivityTimerAndCheckExpired ; BUG: This function is in another bank.
 	                    ; Pointer in current bank (9) is bogus.
 	ret c
-	farcall Function100337
+	;farcall Function100337
 	ret c
 	ld a, [w2DMenuFlags1]
 	bit 7, a

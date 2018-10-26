@@ -230,7 +230,7 @@ RunBattleTowerTrainer:
 
 	xor a
 	ld [wLinkMode], a
-	farcall StubbedTrainerRankings_Healings
+	;farcall StubbedTrainerRankings_Healings
 	farcall HealParty
 	call ReadBTTrainerParty
 	call Clears5_a89a
@@ -272,7 +272,7 @@ ReadBTTrainerParty:
 ; with their species names.
 	ld de, wBT_OTTempMon1Name
 	ld c, MON_NAME_LENGTH
-	farcall CheckStringForErrors
+	;farcall CheckStringForErrors
 	jr nc, .skip_mon_1
 
 	ld a, [wBT_OTTempMon1]
@@ -287,7 +287,7 @@ ReadBTTrainerParty:
 .skip_mon_1
 	ld de, wBT_OTTempMon2Name
 	ld c, MON_NAME_LENGTH
-	farcall CheckStringForErrors
+	;farcall CheckStringForErrors
 	jr nc, .skip_mon_2
 	ld a, [wBT_OTTempMon2]
 	ld [wNamedObjectIndexBuffer], a
@@ -301,7 +301,7 @@ ReadBTTrainerParty:
 .skip_mon_2
 	ld de, wBT_OTTempMon3Name
 	ld c, MON_NAME_LENGTH
-	farcall CheckStringForErrors
+	;farcall CheckStringForErrors
 	jr nc, .skip_mon_3
 	ld a, [wBT_OTTempMon3]
 	ld [wNamedObjectIndexBuffer], a
@@ -323,7 +323,7 @@ ReadBTTrainerParty:
 ; Repair the trainer name if needed, then copy it to wOTPlayerName
 	ld de, wBT_OTTempName
 	ld c, NAME_LENGTH - 1
-	farcall CheckStringForErrors
+	;farcall CheckStringForErrors
 	jr nc, .trainer_name_okay
 	ld hl, BT_ChrisName
 	jr .done_trainer_name
@@ -1242,8 +1242,8 @@ Function1708f0: ; BattleTowerAction $0d
 	ret z
 	ld hl, wCurDay
 	ld a, c
-	cp [hl]
-	jr nz, Function170923
+	;cp [hl]
+	;jr nz, Function170923
 	ld a, $5
 	call GetSRAMBank
 	ld a, [$aa5d]
@@ -1254,17 +1254,17 @@ Function1708f0: ; BattleTowerAction $0d
 	ld [wScriptVar], a
 	ret
 
-Function170923:
-	ld a, $5
-	call GetSRAMBank
-	xor a
-	ld [$aa48], a
-	ld [$aa47], a
-	ld hl, $aa5d
-	ld bc, $0011
-	call ByteFill
-	call CloseSRAM
-	ret
+;Function170923:
+	;ld a, $5
+	;call GetSRAMBank
+	;xor a
+	;ld [$aa48], a
+	;ld [$aa47], a
+	;ld hl, $aa5d
+	;ld bc, $0011
+	;call ByteFill
+	;call CloseSRAM
+	;ret
 
 BattleTowerAction_EggTicket: ; BattleTowerAction $0e
 	xor a

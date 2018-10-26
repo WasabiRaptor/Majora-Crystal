@@ -18,4 +18,4 @@
 
 NUM_KANA EQU 45 ; length of SortedPokemon table (see mobile/fixed_words.asm)
 
-MOBILE_LOGIN_PASSWORD_LENGTH EQU 17
+;MOBILE_LOGIN_PASSWORD_LENGTH EQU 17

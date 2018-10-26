@@ -7,7 +7,7 @@ SECTION "lcd", ROM0
 	jp LCD
 
 SECTION "timer", ROM0
-	jp Timer
+	;jp Timer
 
 SECTION "serial", ROM0
 	jp Serial

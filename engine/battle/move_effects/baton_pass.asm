@@ -87,7 +87,7 @@ BatonPass_LinkPlayerSwitch:
 	ld [wBattlePlayerAction], a
 
 	call LoadStandardMenuHeader
-	ld hl, LinkBattleSendReceiveAction
+	;ld hl, LinkBattleSendReceiveAction
 	call CallBattleCore
 	call CloseWindow
 
@@ -101,7 +101,7 @@ BatonPass_LinkEnemySwitch:
 	ret z
 
 	call LoadStandardMenuHeader
-	ld hl, LinkBattleSendReceiveAction
+	;ld hl, LinkBattleSendReceiveAction
 	call CallBattleCore
 
 	ld a, [wOTPartyCount]
