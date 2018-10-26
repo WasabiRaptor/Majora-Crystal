@@ -45,4 +45,4 @@ gfx/pokemon/*/frames.asm
 !gfx/pokemon/*/shiny.pal
 !gfx/trainer_card/badges.pal
 *.DS_Store
-*.vs\
+.vs\
