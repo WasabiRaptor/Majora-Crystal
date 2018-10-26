@@ -88,6 +88,8 @@ MakePartyMon1Alolan:
 MomScript:
 	opentext
 	callasm MakePartyMon1Alolan
+	pokepic EEVEE
+	waitbutton
 	givepoke EEVEE, 5
 	closetext
 	end
@@ -134,7 +136,10 @@ MomScript:
 NeighborScript:
 	faceplayer
 	opentext
-	givepoke NINETALES, 5, BERRY
+	portrait
+	waitbutton
+	writetext LookAtMeText
+	waitbutton
 	closetext
 	end
 	checktime MORN
@@ -277,6 +282,11 @@ ImBehindYouText:
 
 	para "I'm behind you all"
 	line "the way!"
+	done
+
+LookAtMeText
+	text "Look at my glorious"
+	line "testing graphics."
 	done
 
 NeighborMornIntroText:

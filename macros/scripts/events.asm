@@ -1066,3 +1066,13 @@ mysterydungeonwarp: MACRO
 	db mysterydungeonwarp_command
 	dw \1 ; floor_list_pointer
 ENDM
+
+	enum portrait_command ; $ab
+portrait: MACRO
+	db portrait_command
+ENDM
+
+	enum closeportrait_command ; $ac
+closeportrait: MACRO
+	db closeportrait_command
+ENDM

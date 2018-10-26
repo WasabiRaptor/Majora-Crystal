@@ -236,6 +236,8 @@ endc
 	dw Script_wait                       ; a8
 	dw Script_checksave                  ; a9
 	dw Script_mysterydungeonwarp
+	dw Script_portrait
+	dw Script_closeportrait
 
 StartScript:
 	ld hl, wScriptFlags
@@ -2846,4 +2848,11 @@ Script_mysterydungeonwarp:
 	ld [wScriptVar], a
 	ret
 
+Script_portrait:
+	farcall Portrait
+	ret
+
+Script_closeportrait:
+	farcall ClosePortrait
+	ret
 

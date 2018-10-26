@@ -65,3 +65,4 @@ NinetalesPicPointers::
 	dba AlolanNinetalesFrontpic
 	dba AlolanNinetalesBackpic
 
+

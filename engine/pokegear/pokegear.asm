@@ -133,7 +133,7 @@ Pokegear_LoadGFX:
 	ld c, a
 	call GetWorldMapLocation
 	;cp FAST_SHIP
-	jr z, .ssaqua
+	;jr z, .ssaqua
 	farcall GetPlayerIcon
 	push de
 	ld h, d

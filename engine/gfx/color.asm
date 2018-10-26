@@ -1234,6 +1234,8 @@ INCLUDE "data/pokemon/alt_form_palettes.asm"
 
 INCLUDE "data/trainers/palettes.asm"
 
+INCLUDE "data/portraits/portrait_palettes.asm"
+
 LoadMapPals:
 	farcall LoadSpecialMapPalette
 	jr c, .got_pals

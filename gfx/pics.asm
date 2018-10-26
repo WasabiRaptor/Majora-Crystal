@@ -19,6 +19,10 @@ SECTION "Trainer Pic Pointers", ROMX
 
 INCLUDE "data/trainers/pic_pointers.asm"
 
+SECTION "Portrait Pic Pointers", ROMX
+
+INCLUDE "data/portraits/portrait_pointers.asm"
+
 
 SECTION "Pics 1", ROMX
 
@@ -710,26 +714,30 @@ UnownRBackpic:       INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
 
 SECTION "Pics 19", ROMX
 
-GlazeonFrontpic: 	 INCBIN "gfx/pokemon/glazeon/front.animated.2bpp.lz"
-GlazeonBackpic: 	 INCBIN "gfx/pokemon/glazeon/back.2bpp.lz"
-SubstituteMonFrontpic: 	 INCBIN "gfx/pokemon/substitutemon/front.animated.2bpp.lz"
-SubstituteMonBackpic: 	 INCBIN "gfx/pokemon/substitutemon/back.2bpp.lz"
+GlazeonFrontpic: 	 		INCBIN "gfx/pokemon/glazeon/front.animated.2bpp.lz"
+GlazeonBackpic: 	 		INCBIN "gfx/pokemon/glazeon/back.2bpp.lz"
+SubstituteMonFrontpic: 	 	INCBIN "gfx/pokemon/substitutemon/front.animated.2bpp.lz"
+SubstituteMonBackpic: 	 	INCBIN "gfx/pokemon/substitutemon/back.2bpp.lz"
 
-KantoVulpixFrontpic:      INCBIN "gfx/pokemon/vulpix/front.animated.2bpp.lz"
-KantoVulpixBackpic:       INCBIN "gfx/pokemon/vulpix/back.2bpp.lz"
-AlolanVulpixFrontpic:      INCBIN "gfx/pokemon/vulpix/front.animated.2bpp.lz"
-AlolanVulpixBackpic:       INCBIN "gfx/pokemon/vulpix/back.2bpp.lz"
+KantoVulpixFrontpic:      	INCBIN "gfx/pokemon/vulpix/front.animated.2bpp.lz"
+KantoVulpixBackpic:       	INCBIN "gfx/pokemon/vulpix/back.2bpp.lz"
+AlolanVulpixFrontpic:      	INCBIN "gfx/pokemon/vulpix/front.animated.2bpp.lz"
+AlolanVulpixBackpic:       	INCBIN "gfx/pokemon/vulpix/back.2bpp.lz"
 
-KantoNinetalesFrontpic:   INCBIN "gfx/pokemon/ninetales/front.animated.2bpp.lz"
-KantoNinetalesBackpic:    INCBIN "gfx/pokemon/ninetales/back.2bpp.lz"
-AlolanNinetalesFrontpic:   INCBIN "gfx/pokemon/alolanninetales/front.animated.2bpp.lz"
-AlolanNinetalesBackpic:    INCBIN "gfx/pokemon/alolanninetales/back.2bpp.lz"
-
+KantoNinetalesFrontpic:   	INCBIN "gfx/pokemon/ninetales/front.animated.2bpp.lz"
+KantoNinetalesBackpic:    	INCBIN "gfx/pokemon/ninetales/back.2bpp.lz"
+AlolanNinetalesFrontpic:   	INCBIN "gfx/pokemon/alolanninetales/front.animated.2bpp.lz"
+AlolanNinetalesBackpic:    	INCBIN "gfx/pokemon/alolanninetales/back.2bpp.lz"
 
 ; Sections "Pics 20" to "Pics 24" are not used for any graphics,
 ; but entries for their banks exist in FixPicBank (see engine/gfx/load_pics.asm).
 
 SECTION "Pics 20", ROMX
+
+TestPortrait: 			INCBIN "gfx/portraits/test.2bpp.lz"
+TestSmileyPortrait: 	INCBIN "gfx/portraits/TestSmiley.2bpp.lz"
+BeautyPortrait: 		INCBIN "gfx/portraits/beauty.2bpp.lz"
+
 
 SECTION "Pics 21", ROMX
 
