@@ -6,28 +6,11 @@ Portrait::
 	call ApplyTilemap
 	
 	;this will be a scriptbyte once I know it works
-	ld a, 3 
-	
+
 	;this gets overwritten with the pokemon thats needed every time it is pulled, so I'm just using it here to hold the thing for later
-	ld [wCurSpecies], a 
-
-	;stole this from the part that loads trainer frontpic palettes, its the same between polished crystal and normal crystal
-	ld l, a
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	ld bc, PortraitPalettes ;changed this of course
-	add hl, bc
-
-	;this block I stole from how polished crystal loads trainer pics in its pokepic command, since that one actually has color unlike the one in base crystal
-
-	ld a, $5
-	ld de, wBGPals1 palette PAL_BG_TEXT + 2
-	ld bc, 4
-	call FarCopyWRAM 
+	ld a, [wCurSpecies]
+	farcall LoadPortraitPalette 
 	call UpdateTimePals
-
-
 
 	;everything below here loads the pic in a similar way to how pokemon pics are loaded, but doesn't force the grayscale pal and is working as intended
 	xor a

@@ -738,25 +738,23 @@ GetMonPalettePointer:
 	call _GetMonPalettePointer
 	ret
 
-Unreferenced_Function9779:
-	ret
-	call CheckCGB
-	ret z
-	ld hl, BattleObjectPals
-	ld a, $90
-	ldh [rOBPI], a
-	ld c, 6 palettes
-.loop
-	ld a, [hli]
-	ldh [rOBPD], a
-	dec c
-	jr nz, .loop
-	ld hl, BattleObjectPals
-	ld de, wOBPals1 palette 2
-	ld bc, 2 palettes
-	ld a, BANK(wOBPals1)
-	call FarCopyWRAM
-	ret
+GetPortraitPalettePointer:
+	ld l, a
+	ld h, 0
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	ld bc, PortraitPalettes ;changed this of course
+	add hl, bc
+	ret 
+
+LoadPortraitPalette:
+	call GetPortraitPalettePointer
+	ld de, wBGPals1 palette PAL_BG_TEXT
+	ld bc, 1 palettes
+	ld a, BANK(wBGPals1)
+	jp FarCopyWRAM
+
 
 BattleObjectPals:
 INCLUDE "gfx/battle_anims/battle_anims.pal"

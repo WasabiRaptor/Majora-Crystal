@@ -109,8 +109,7 @@ _TimeOfDayPals::
 _UpdateTimePals::
 	ld c, $9 ; normal
 	call GetTimePalFade
-	call DmgToCgbTimePals
-	ret
+	jp DmgToCgbTimePals
 
 FadeInPalettes::
 	ld c, $12
@@ -304,88 +303,17 @@ ConvertTimePalsDecHL:
 	jr nz, .loop
 	ret
 
-GetTimePalFade:
-; check cgb
-	ldh a, [hCGB]
-	and a
-	jr nz, .cgb
-
-; else: dmg
-
-; index
-	ld a, [wTimeOfDayPal]
-	and %11
-
-; get fade table
-	push bc
-	ld c, a
-	ld b, $0
-	ld hl, .dmgfades
-	add hl, bc
-	add hl, bc
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	pop bc
-
-; get place in fade table
-	ld b, $0
-	add hl, bc
-	ret
-
-.cgb
+GetTimePalFade: ; lifted from polished crystal
 	ld hl, .cgbfade
 	ld b, $0
 	add hl, bc
 	ret
 
-.dmgfades
-	dw .morn
-	dw .day
-	dw .nite
-	dw .darkness
-
-.morn
-	dc 3,3,3,3, 3,3,3,3, 3,3,3,3
-	dc 3,3,3,2, 3,3,3,2, 3,3,3,2
-	dc 3,3,2,1, 3,2,1,0, 3,2,1,0
-	dc 3,2,1,0, 3,1,0,0, 3,1,0,0
-	dc 2,1,0,0, 2,0,0,0, 2,0,0,0
-	dc 1,0,0,0, 1,0,0,0, 1,0,0,0
-	dc 0,0,0,0, 0,0,0,0, 0,0,0,0
-
-.day
-	dc 3,3,3,3, 3,3,3,3, 3,3,3,3
-	dc 3,3,3,2, 3,3,3,2, 3,3,3,2
-	dc 3,3,2,1, 3,2,1,0, 3,2,1,0
-	dc 3,2,1,0, 3,1,0,0, 3,1,0,0
-	dc 2,1,0,0, 2,0,0,0, 2,0,0,0
-	dc 1,0,0,0, 1,0,0,0, 1,0,0,0
-	dc 0,0,0,0, 0,0,0,0, 0,0,0,0
-
-.nite
-	dc 3,3,3,3, 3,3,3,3, 3,3,3,3
-	dc 3,3,3,2, 3,3,3,2, 3,3,3,2
-	dc 3,3,2,1, 3,2,1,0, 3,2,1,0
-	dc 3,2,2,1, 3,1,0,0, 3,1,0,0
-	dc 2,1,0,0, 2,0,0,0, 2,0,0,0
-	dc 1,0,0,0, 1,0,0,0, 1,0,0,0
-	dc 0,0,0,0, 0,0,0,0, 0,0,0,0
-
-.darkness
-	dc 3,3,3,3, 3,3,3,3, 3,3,3,3
-	dc 3,3,3,2, 3,3,3,2, 3,3,3,3
-	dc 3,3,3,2, 3,2,1,0, 3,3,3,3
-	dc 3,3,3,1, 3,1,0,0, 3,3,3,3
-	dc 3,3,3,1, 2,0,0,0, 3,3,3,3
-	dc 0,0,0,0, 1,0,0,0, 0,0,0,0
-	dc 0,0,0,0, 0,0,0,0, 0,0,0,0
-
 .cgbfade
-	dc 3,3,3,3, 3,3,3,3, 3,3,3,3
-	dc 3,3,3,2, 3,3,3,2, 3,3,3,2
-	dc 3,3,2,1, 3,3,2,1, 3,3,2,1
-	dc 3,2,1,0, 3,2,1,0, 3,2,1,0
-	dc 2,1,0,0, 2,1,0,0, 2,1,0,0
-	dc 1,0,0,0, 1,0,0,0, 1,0,0,0
-	dc 0,0,0,0, 0,0,0,0, 0,0,0,0
+	db %11111111, %11111111, %11111111
+	db %11111110, %11111110, %11111110
+	db %11111001, %11111001, %11111001
+	db %11100100, %11100100, %11100100
+	db %10010000, %10010000, %10010000
+	db %01000000, %01000000, %01000000
+	db %00000000, %00000000, %00000000

@@ -1070,6 +1070,7 @@ ENDM
 	enum portrait_command ; $ab
 portrait: MACRO
 	db portrait_command
+	db \1 ;portrait
 ENDM
 
 	enum closeportrait_command ; $ac

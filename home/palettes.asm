@@ -73,11 +73,6 @@ DmgToCgbBGPals::
 	ldh [rBGP], a
 	push af
 
-; Don't need to be here if DMG
-	ldh a, [hCGB]
-	and a
-	jr z, .end
-
 	push hl
 	push de
 	push bc

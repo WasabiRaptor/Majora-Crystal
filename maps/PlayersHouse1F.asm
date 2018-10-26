@@ -136,7 +136,7 @@ MomScript:
 NeighborScript:
 	faceplayer
 	opentext
-	portrait
+	portrait BEAUTY_PORTRAIT
 	waitbutton
 	writetext LookAtMeText
 	waitbutton

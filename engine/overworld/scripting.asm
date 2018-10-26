@@ -2849,6 +2849,8 @@ Script_mysterydungeonwarp:
 	ret
 
 Script_portrait:
+	call GetScriptByte
+	ld [wCurSpecies], a
 	farcall Portrait
 	ret
 
