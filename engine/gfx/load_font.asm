@@ -21,7 +21,7 @@ Unreferenced_Functionfb43f:
 _LoadStandardFont::
 	ld de, Font
 	ld hl, vTiles1
-	lb bc, BANK(Font), 32 ; "A" to "]"
+	lb bc, BANK(Font), 30 ; "A" to ";"
 	call Get1bpp_2
 	ld de, Font + 32 * LEN_1BPP_TILE
 	ld hl, vTiles1 tile $20
@@ -29,7 +29,11 @@ _LoadStandardFont::
 	call Get1bpp_2
 	ld de, Font + 64 * LEN_1BPP_TILE
 	ld hl, vTiles1 tile $40
-	lb bc, BANK(Font), 32 ; $c0 to "←"
+	lb bc, BANK(Font), 20 ; $c0 to $d9
+	call Get1bpp_2
+	ld de, Font + 92 * LEN_1BPP_TILE
+	ld hl, vTiles1 tile $5C
+	lb bc, BANK(Font), 32 ; "'" to "9"
 	call Get1bpp_2
 	ld de, Font + 96 * LEN_1BPP_TILE
 	ld hl, vTiles1 tile $60
@@ -53,7 +57,7 @@ _LoadFontsBattleExtra::
 LoadFrame:
 	ld a, [wTextBoxFrame]
 	maskbits NUM_FRAMES
-	ld bc, 6 * LEN_1BPP_TILE
+	ld bc, 10 * LEN_1BPP_TILE
 	ld hl, Frames
 	call AddNTimes
 	ld d, h
@@ -61,6 +65,31 @@ LoadFrame:
 	ld hl, vTiles0 tile "┌" ; $ba
 	lb bc, BANK(Frames), 6 ; "┌" to "┘"
 	call Get1bpp_2
+	ld a, [wTextBoxFrame]
+	maskbits NUM_FRAMES
+	ld bc, 10 * LEN_1BPP_TILE
+	ld hl, Frames
+	call AddNTimes
+	ld bc, 6 * LEN_1BPP_TILE
+	add hl, bc
+	ld d, h
+	ld e, l
+	ld hl, vTiles0 tile "┬" 
+	lb bc, BANK(Frames), 2 ; "┬" to "┴"
+	call Get1bpp_2
+	ld a, [wTextBoxFrame]
+	maskbits NUM_FRAMES
+	ld bc, 10 * LEN_1BPP_TILE
+	ld hl, Frames
+	call AddNTimes
+	ld bc, 8 * LEN_1BPP_TILE
+	add hl, bc
+	ld d, h
+	ld e, l
+	ld hl, vTiles0 tile "├" 
+	lb bc, BANK(Frames), 2 ; "├" to "┤"
+	call Get1bpp_2
+
 	ld hl, vTiles2 tile " " ; $7f
 	ld de, TextBoxSpaceGFX
 	lb bc, BANK(TextBoxSpaceGFX), 1

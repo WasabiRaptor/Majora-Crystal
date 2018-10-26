@@ -133,10 +133,14 @@ MomScript:
 	closetext
 	end
 
+LookAtMeText
+	text "reverse card"
+	done
+
 NeighborScript:
 	faceplayer
 	opentext
-	portrait ZYGARDE_ANGRY
+	portrait ZYGARDE_NEUTRAL
 	writetext LookAtMeText
 	waitbutton
 	closetext
@@ -283,10 +287,6 @@ ImBehindYouText:
 	line "the way!"
 	done
 
-LookAtMeText
-	text "need to figure"
-	line "out the border"
-	done
 
 NeighborMornIntroText:
 	text "Good morning,"
