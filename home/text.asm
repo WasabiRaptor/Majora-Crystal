@@ -115,11 +115,34 @@ TextBoxBorder::
 	add hl, de
 .row
 	push hl
+	ld a, [hl]
+	cp "┐"
+	jr z, .leftwallbranch
+	cp "┘"
+	jr z, .leftwallbranch
+	cp "─"
+	jr z, .leftwallbranch
+	cp "┤"
+	jr z, .leftwallbranch
+
 	ld a, "│"
+.placeleftwall
 	ld [hli], a
 	ld a, " "
 	call .PlaceChars
-	ld [hl], "│"
+	ld a, [hl]
+	cp "┌"
+	jr z, .rightwallbranch
+	cp "└"
+	jr z, .rightwallbranch
+	cp "─"
+	jr z, .rightwallbranch
+	cp "├"
+	jr z, .rightwallbranch
+
+	ld a, "│"
+.placerightwall
+	ld [hl], a
 	pop hl
 
 	ld de, SCREEN_WIDTH
@@ -166,6 +189,13 @@ TextBoxBorder::
 .placebottomrightcorner
 	ld [hl], a
 	ret
+.leftwallbranch
+	ld a, "┤"
+	jr .placeleftwall
+
+.rightwallbranch
+	ld a, "├"
+	jr .placerightwall
 
 .bottomrightcornerbranch1
 	ld a, "┤"

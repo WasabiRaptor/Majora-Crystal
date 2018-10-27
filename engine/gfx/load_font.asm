@@ -29,7 +29,7 @@ _LoadStandardFont::
 	call Get1bpp_2
 	ld de, Font + 64 * LEN_1BPP_TILE
 	ld hl, vTiles1 tile $40
-	lb bc, BANK(Font), 20 ; $c0 to $d9
+	lb bc, BANK(Font), 26 ; $c0 to $d9
 	call Get1bpp_2
 	ld de, Font + 92 * LEN_1BPP_TILE
 	ld hl, vTiles1 tile $5C

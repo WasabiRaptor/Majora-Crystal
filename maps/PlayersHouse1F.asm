@@ -134,13 +134,14 @@ MomScript:
 	end
 
 LookAtMeText
-	text "reverse card"
+	text "fuknfurries ruining"
+	line "eveything fuck"
 	done
 
 NeighborScript:
 	faceplayer
 	opentext
-	portrait ZYGARDE_NEUTRAL
+	portrait ZYGARDE_ANGRY
 	writetext LookAtMeText
 	waitbutton
 	closetext
