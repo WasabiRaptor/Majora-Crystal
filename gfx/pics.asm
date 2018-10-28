@@ -734,11 +734,11 @@ AlolanNinetalesBackpic:    	INCBIN "gfx/pokemon/alolanninetales/back.2bpp.lz"
 
 SECTION "Pics 20", ROMX
 
-TestPortrait: 			INCBIN "gfx/portraits/test.2bpp.lz"
-TestSmileyPortrait: 	INCBIN "gfx/portraits/TestSmiley.2bpp.lz"
 BeautyPortrait: 		INCBIN "gfx/portraits/beauty.2bpp.lz"
 ZygardeNeutralPortrait: INCBIN "gfx/portraits/Zygarde_neutral.2bpp.lz"
 ZygardeAngryPortrait: 	INCBIN "gfx/portraits/Zygarde_angry.2bpp.lz"
+CelebiNeutralPortrait:  INCBIN "gfx/portraits/Celebi_neutral.2bpp.lz"
+
 
 SECTION "Pics 21", ROMX
 

@@ -133,16 +133,23 @@ MomScript:
 	closetext
 	end
 
-LookAtMeText
-	text "fuknfurries ruining"
-	line "eveything fuck"
+LookAtMeText:
+	text "oh boy"
+	line "look at the time"
+	done
+UrDeadText:
+	text "its you're dead"
+	line "o'clock"
 	done
 
 NeighborScript:
 	faceplayer
 	opentext
-	portrait ZYGARDE_ANGRY
+	portrait CELEBI_NEUTRAL
 	writetext LookAtMeText
+	waitbutton
+	portrait ZYGARDE_ANGRY
+	writetext UrDeadText
 	waitbutton
 	closetext
 	end

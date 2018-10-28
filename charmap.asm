@@ -125,7 +125,7 @@
 	charmap "┘",         $bf
 	charmap "┬",         $9e
 	charmap "┴",         $9f
-	charmap "├", $da 
+	charmap "├",   		 $da 
 	charmap "┤",  		 $db 
 
 
