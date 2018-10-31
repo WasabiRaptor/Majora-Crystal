@@ -41,6 +41,45 @@ ENDM
 
 	newgroup ;3
 
+	map_const TOWN_1,                             	20,  18 ;  1
+	map_const BRIDGE,                             	15,  9  ;  2
+	map_const TOWN_2,                             	10,  18 ;  3
+
+	map_const ROUTE_NE_1,                         	20,  9  ;  4
+	map_const CREVASSE,                           	30,  27 ;  5
+	map_const ROUTE_NE_2,                         	10,  9  ;  6
+
+	map_const TOWN_3,                             	20,  9  ;  7
+
+	map_const ROUTE_W_1,                           	25,  9  ;  8
+	map_const ROUTE_W_2,                           	30,  18 ;  9
+
+	map_const ASH_PLAINS_1,                         50,  13 ;  10
+	map_const ASH_PLAINS_2,                         50,  14 ;  11
+
+	map_const TOWN_4,                             	20,  18 ;  12
+
+	map_const ROUTE_S,                            	10,  18 ;  13
+	map_const SWAMP,                            	30,  27 ;  14
+	map_const ROUTE_SW,                         	60,  9  ;  15
+
+	map_const TOWN_5,                             	20,  9  ;  16
+
+	map_const ROUTE_SE,                         	80,  9  ;  17
+
+	map_const TOWN_6,                             	30,  9  ;  18
+
+	map_const LAKE_1,                             	30,  27 ;  19
+	map_const LAKE_2,                             	30,  27 ;  20
+	map_const LAKE_3,                             	10,  45 ;  21
+
+	map_const ROUTE_FAKE_EXIT,                    	10,  18 ;  22
+	map_const ROUTE_FAKE_EXIT_LOOP,               	10,  9  ;  23
+
+
+
+	newgroup ;4
+
 ;every way crossroads
 	map_const MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST,	    5,  5 ;  1
 

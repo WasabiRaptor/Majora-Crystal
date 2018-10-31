@@ -62,7 +62,112 @@ elif "\1" == "east"
 	dw wOverworldMapBlocks + \3_WIDTH + 7
 endc
 ENDM
+	map_attributes Town1, TOWN_1, $05, SOUTH | WEST | EAST
+	connection south, RouteS, ROUTE_S, 5, 0, 10
+	connection west, RouteW1, ROUTE_W1, 9, 0, 9
+	connection east, Bridge, BRIDGE, 9, 0, 9
+
+	map_attributes Bridge, BRIDGE, $05, WEST | EAST
+	connection west, Town1, TOWN_1, -9, 0, 16
+	connection east, Town2, TOWN_2, 0, 0, 16
+
+	map_attributes Town2, TOWN_2, $05, NORTH | WEST | EAST
+	connection north, RouteNE1, ROUTE_NE_1, 0, 0, 16
+	connection west, Bridge, BRIDGE, 0, 0, 9
+	connection east, Lake2, LAKE_2, 9, 0, 15
+
+	map_attributes RouteNE1, ROUTE_NE_1, $05, SOUTH | EAST
+	connection South, Town2, TOWN_2, 0, 0, 10
+	connection east, Crevasse, CREVASSE, -18, 0, 15
+
+	map_attributes Crevasse, CREVASSE, $05, NORTH | SOUTH | WEST
+	connection north, RouteNE2, ROUTE_NE_2, 10, 0, 15
+	connection south, Lake3, LAKE_3, 0, 0, 30
+	connection west, RouteNE1, ROUTE_NE_1, 20, 0, 16
+
+	map_attributes RouteNE2, ROUTE_NE_2, $05, NORTH | SOUTH
+	connection north, Town3, TOWN_3, 5, 0, 16
+	connection south, Crevasse, CREVASSE, -10, 0, 16
+
+	map_attributes Town3, TOWN_3, $05, SOUTH
+	connection south, RouteNE2, ROUTE_NE_2, -5, 0, 16
+
+	map_attributes RouteW1, ROUTE_W_1, $05, WEST | EAST
+	connection west, RouteW2, ROUTE_W_2, -9, 0, 15
+	connection east, Town1, TOWN_1, -9, 0, 15
+
+	map_attributes RouteW2, ROUTE_W_2, $05, NORTH | EAST
+	connection north, AshPlains1, ASH_PLAINS_1, -10, 0, 36
+	connection east, RouteW1, ROUTE_W_1, 9, 0, 15
 	
+	map_attributes AshPlains1, ASH_PLAINS_1, $05, NORTH | SOUTH
+	connection north, AshPlains2, ASH_PLAINS_2, 0, 0, 50
+	connection south, RouteW2, ROUTE_W_2, 10, 0, 30
+
+	map_attributes AshPlains2, ASH_PLAINS_2, $05, SOUTH | WEST
+	connection south, AshPlains1, ASH_PLAINS_1, 0, 0, 50
+	connection west, Town4, TOWN_4, -9, 0, 15
+
+	map_attributes Town4, TOWN_4, $05, EAST
+	connection east, AshPlains2, ASH_PLAINS_2, 9, 0, 15
+
+	map_attributes RouteS, ROUTE_S, $05, NORTH | SOUTH
+	connection north, Town1, TOWN_1, -5, 0, 16
+	connection south, Swamp, SWAMP, -10, 0, 16
+
+	map_attributes Swamp, SWAMP, $05, NORTH | SOUTH | WEST
+	connection north, RouteS, ROUTE_S, 10, 0, 10
+	connection south, RouteSE1, ROUTE_SE_1, 20, 0, 16
+	connection west, RouteSW, ROUTE_SW, 20, 0, 9
+
+	map_attributes RouteSW, ROUTE_SW, $05, SOUTH | EAST
+	connection south, Town5, TOWN_5, -10, 0, 16
+	connection east, Swamp, SWAMP, -20, 0, 16
+
+	map_attributes Town5, TOWN_5, $05, NORTH
+	connection north, RouteSW, ROUTE_SW, 10, 0, 16
+
+	map_attributes RouteSE1, ROUTE_SE_1, $05, NORTH | EAST | SOUTH
+	connection north, Swamp, SWAMP, -20, 0, 16
+	connection south, RouteFakeExit, ROUTE_FAKE_EXIT, 10, 0, 10
+	connection east, RouteSE2, ROUTE_SE_2, 0, 0, 9
+
+	map_attributes RouteSE2, ROUTE_SE_2, $05, NORTH | WEST | EAST
+	connection north, Lake1, LAKE_1, 10, 0, 30
+	connection west, RouteSE1, ROUTE_SE_1, 0, 0, 9
+	connection east, RouteSE3, ROUTE_SE_3, 0, 0, 9
+
+	map_attributes RouteSE3, ROUTE_SE_3, $05, NORTH | WEST
+	connection north, Town6, TOWN_6, 10, 0, 30
+	connection west, RouteSE2, ROUTE_SE_2, 0, 0, 9
+
+	map_attributes Town6, TOWN_6, $05, SOUTH | WEST
+	connection south, RouteSE3, ROUTE_SE_3, -10, 0, 30
+	connection west, Lake1, LAKE_1, -18, 0, 9
+
+	map_attributes Lake1, LAKE_1, $05, NORTH | SOUTH | EAST
+	connection north, Lake2, LAKE_2, 0, 0, 36
+	connection south, RouteSE2, ROUTE_SE_2, -10, 0, 30
+	connection east, Town6, TOWN_6, 18, 0, 9
+
+	map_attributes Lake2, LAKE_2, $05, NORTH | SOUTH | WEST
+	connection north, Lake3, LAKE_3, 10, 0, 30
+	connection south, Lake1, LAKE_1, 0, 0, 30
+	connection west, Town2, TOWN_2, -9, 0, 15
+
+	map_attributes Lake3, LAKE_3, $05, NORTH | SOUTH 
+	connection north, Crevasse, CREVASSE, 0, 0, 30
+	connection south, Lake2, LAKE_2, -10, 0, 36
+
+	map_attributes RouteFakeExit, ROUTE_FAKE_EXIT, $05, NORTH | SOUTH 
+	connection north, RouteSE1, ROUTE_SE_1, -10, 0, 10
+	connection south, RouteFakeExitLoop, ROUTE_FAKE_EXIT_LOOP, 0, 0, 10
+
+	map_attributes RouteFakeExitLoop, ROUTE_FAKE_EXIT_LOOP, $05, NORTH | SOUTH 
+	connection north, RouteFakeExitLoop, ROUTE_FAKE_EXIT_LOOP, 0, 0, 10
+	connection south, RouteFakeExitLoop, ROUTE_FAKE_EXIT_LOOP, 0, 0, 10
+
+
 	map_attributes DayCare, DAY_CARE, $00, 0
 
 	map_attributes Pokecenter2F, POKECENTER_2F, $00, 0
