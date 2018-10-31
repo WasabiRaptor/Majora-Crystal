@@ -1,7 +1,7 @@
 SECTION "Map Blocks 1", ROMX
 
 Pokecenter1F_Blocks:
-INCBIN "maps/Pokecenter1F.blk"
+	INCBIN "maps/Pokecenter1F.blk"
 
 Pokecenter2F_Blocks:
 	INCBIN "maps/Pokecenter2F.blk"
@@ -21,6 +21,84 @@ PlayersHouse2F_Blocks:
 
 DayCare_Blocks:
 	INCBIN "maps/DayCare.blk"
+
+SECTION "Overworld Map Blocks", ROMX
+
+Town1_Blocks:
+	INCBIN "maps/Town1.blk"
+Bridge_Blocks:
+	INCBIN "maps/Bridge.blk"
+Town2_Blocks:
+	INCBIN "maps/Town2.blk"
+
+
+RouteNE1_Blocks:
+	INCBIN "maps/RouteNE1.blk"
+Crevasse_Blocks:
+	INCBIN "maps/Crevasse.blk"
+RouteNE2_Blocks:
+	INCBIN "maps/RouteNE2.blk"
+
+
+Town3_Blocks:
+	INCBIN "maps/Town3.blk"
+
+
+RouteW1_Blocks:
+	INCBIN "maps/RouteW1.blk"
+RouteW2_Blocks:
+	INCBIN "maps/RouteW2.blk"
+
+
+AshPlains1_Blocks:
+	INCBIN "maps/AshPlains1.blk"
+AshPlains2_Blocks:
+	INCBIN "maps/AshPlains2.blk"
+
+
+Town4_Blocks:
+	INCBIN "maps/Town4.blk"
+
+
+RouteS_Blocks:
+	INCBIN "maps/RouteS.blk"
+Swamp_Blocks:
+	INCBIN "maps/Swamp.blk"
+RouteSW_Blocks:
+	INCBIN "maps/RouteSW.blk"
+
+
+Town5_Blocks:
+	INCBIN "maps/Town5.blk"
+
+
+RouteSE1_Blocks:
+	INCBIN "maps/RouteSE1.blk"
+RouteSE2_Blocks:
+	INCBIN "maps/RouteSE2.blk"
+RouteSE3_Blocks:
+	INCBIN "maps/RouteSE3.blk"
+
+
+Town6_Blocks:
+	INCBIN "maps/Town6.blk"
+
+
+Lake1_Blocks:
+	INCBIN "maps/Lake1.blk"
+Lake2_Blocks:
+	INCBIN "maps/Lake2.blk"
+Lake3_Blocks:
+	INCBIN "maps/Lake3.blk"
+
+
+RouteFakeExit_Blocks:
+	INCBIN "maps/RouteFakeExit.blk"
+RouteFakeExitLoop_Blocks:
+	INCBIN "maps/RouteFakeExitLoop.blk"
+
+
+
 
 SECTION "Mystery Dungeon Map Blocks", ROMX
 

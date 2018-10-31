@@ -65,18 +65,18 @@ ENDM
 
 	map_const TOWN_5,                             	20,  9  ;  16
 
-	map_const ROUTE_SE,                         	80,  9  ;  17
+	map_const ROUTE_SE_1,                         	20,  9  ;  17
+	map_const ROUTE_SE_2,                         	30,  9  ;  18
+	map_const ROUTE_SE_3,                         	30,  9  ;  18
 
-	map_const TOWN_6,                             	30,  9  ;  18
+	map_const TOWN_6,                             	30,  9  ;  19
 
-	map_const LAKE_1,                             	30,  27 ;  19
-	map_const LAKE_2,                             	30,  27 ;  20
-	map_const LAKE_3,                             	10,  45 ;  21
+	map_const LAKE_1,                             	30,  27 ;  20
+	map_const LAKE_2,                             	40,  18 ;  21
+	map_const LAKE_3,                             	30,  9  ;  22
 
-	map_const ROUTE_FAKE_EXIT,                    	10,  18 ;  22
-	map_const ROUTE_FAKE_EXIT_LOOP,               	10,  9  ;  23
-
-
+	map_const ROUTE_FAKE_EXIT,                    	10,  18 ;  24
+	map_const ROUTE_FAKE_EXIT_LOOP,               	10,  9  ;  25
 
 	newgroup ;4
 

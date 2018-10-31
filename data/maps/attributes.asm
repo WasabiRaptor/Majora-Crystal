@@ -64,7 +64,7 @@ endc
 ENDM
 	map_attributes Town1, TOWN_1, $05, SOUTH | WEST | EAST
 	connection south, RouteS, ROUTE_S, 5, 0, 10
-	connection west, RouteW1, ROUTE_W1, 9, 0, 9
+	connection west, RouteW1, ROUTE_W_1, 9, 0, 9
 	connection east, Bridge, BRIDGE, 9, 0, 9
 
 	map_attributes Bridge, BRIDGE, $05, WEST | EAST
@@ -164,7 +164,7 @@ ENDM
 	connection south, RouteFakeExitLoop, ROUTE_FAKE_EXIT_LOOP, 0, 0, 10
 
 	map_attributes RouteFakeExitLoop, ROUTE_FAKE_EXIT_LOOP, $05, NORTH | SOUTH 
-	connection north, RouteFakeExitLoop, ROUTE_FAKE_EXIT_LOOP, 0, 0, 10
+	connection north, RouteFakeExit, ROUTE_FAKE_EXIT, 0, 0, 10
 	connection south, RouteFakeExitLoop, ROUTE_FAKE_EXIT_LOOP, 0, 0, 10
 
 

@@ -1,15 +1,14 @@
 	const_def 2 ; object constants
 
-Town1_MapScripts:
+RouteSE3_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-Town1_MapEvents:
+RouteSE3_MapEvents:
 	db 0, 0 ; filler
 
-	db 1 ; warp events
-	warp_event  3,  3, PLAYERS_HOUSE_1F, 2
+	db 0 ; warp events
 
 	db 0 ; coord events
 

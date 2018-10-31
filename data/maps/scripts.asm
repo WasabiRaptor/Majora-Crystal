@@ -13,6 +13,47 @@ INCLUDE "maps/Colosseum.asm"
 INCLUDE "maps/TimeCapsule.asm"
 
 
+SECTION "Overworld Map Scripts", ROMX
+
+INCLUDE "maps/Town1.asm"
+INCLUDE "maps/Bridge.asm"
+INCLUDE "maps/Town2.asm"
+
+INCLUDE "maps/RouteNE1.asm"
+INCLUDE "maps/Crevasse.asm"
+INCLUDE "maps/RouteNE2.asm"
+
+INCLUDE "maps/Town3.asm"
+
+INCLUDE "maps/RouteW1.asm"
+INCLUDE "maps/RouteW2.asm"
+
+INCLUDE "maps/AshPlains1.asm"
+INCLUDE "maps/AshPlains2.asm"
+
+INCLUDE "maps/Town4.asm"
+
+INCLUDE "maps/RouteS.asm"
+INCLUDE "maps/Swamp.asm"
+INCLUDE "maps/RouteSW.asm"
+
+INCLUDE "maps/Town5.asm"
+
+INCLUDE "maps/RouteSE1.asm"
+INCLUDE "maps/RouteSE2.asm"
+INCLUDE "maps/RouteSE3.asm"
+
+INCLUDE "maps/Town6.asm"
+
+INCLUDE "maps/Lake1.asm"
+INCLUDE "maps/Lake2.asm"
+INCLUDE "maps/Lake3.asm"
+
+INCLUDE "maps/RouteFakeExit.asm"
+INCLUDE "maps/RouteFakeExitLoop.asm"
+
+
+
 SECTION "Mystery Dungeon Map Scripts", ROMX
 
 INCLUDE "maps/MysteryDungeonMaps/MysteryDungeonNorthSouthEastWest.asm"

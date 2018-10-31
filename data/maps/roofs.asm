@@ -12,16 +12,16 @@ MapGroupRoofs:
 	db -1             ;  0
 	db ROOF_OLIVINE   ;  1 (Olivine)
 	db ROOF_AZALEA    ;  2 (Mahogany)
-	db -1             ;  3
+	db ROOF_NEW_BARK  ;  3
 	db ROOF_VIOLET    ;  4 (Ecruteak)
 	db ROOF_AZALEA    ;  5 (Blackthorn)
-	db -1             ;  6
-	db -1             ;  7
+	db ROOF_NEW_BARK  ;  6
+	db ROOF_NEW_BARK  ;  7
 	db ROOF_AZALEA    ;  8 (Azalea)
 	db ROOF_AZALEA    ;  9 (Lake of Rage)
 	db ROOF_VIOLET    ; 10 (Violet)
 	db ROOF_GOLDENROD ; 11 (Goldenrod)
-	db -1             ; 12
+	db ROOF_NEW_BARK  ; 12
 	db -1             ; 13
 	db -1             ; 14
 	db -1             ; 15
