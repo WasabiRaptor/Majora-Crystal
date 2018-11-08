@@ -134,8 +134,8 @@ MomScript:
 	end
 
 LookAtMeText:
-	text "oh boy"
-	line "look at the time"
+	text "z80 Assembly"
+	line "haha yes"
 	done
 UrDeadText:
 	text "its you're dead"
@@ -145,7 +145,7 @@ UrDeadText:
 NeighborScript:
 	faceplayer
 	opentext
-	portrait CELEBI_NEUTRAL
+	portrait ZYGARDE_NEUTRAL
 	writetext LookAtMeText
 	waitbutton
 	portrait ZYGARDE_ANGRY
