@@ -10,7 +10,7 @@ SaveMenu:
 	call AskOverwriteSaveFile
 	jr c, .refused
 	call PauseGameLogic
-	call _SavingDontTurnOffThePower
+	call SavedTheGame
 	call ResumeGameLogic
 	call ExitMenu
 	and a
@@ -47,7 +47,6 @@ ChangeBoxSaveGame:
 	call AskOverwriteSaveFile
 	jr c, .refused
 	call PauseGameLogic
-	call SavingDontTurnOffThePower
 	call SaveBox
 	pop de
 	ld a, e
@@ -86,7 +85,6 @@ DepositLastPokemonSaveGame:
 	call PlayMonCry
 
 	call PauseGameLogic
-	call SavingDontTurnOffThePower
 	call SavedTheGame
 	call ResumeGameLogic
 	jp Reset
@@ -98,7 +96,7 @@ Link_SaveGame:
 	call AskOverwriteSaveFile
 	jr c, .refused
 	call PauseGameLogic
-	call _SavingDontTurnOffThePower
+	call SavedTheGame
 	call ResumeGameLogic
 	and a
 
@@ -143,10 +141,7 @@ MoveMonWOMail_InsertMon_SaveGame:
 	call LoadBox
 	call ResumeGameLogic
 	ld de, SFX_SAVE
-	call PlaySFX
-	ld c, 24
-	call DelayFrames
-	ret
+	jp PlaySFX
 
 StartMoveMonWOMail_SaveGame:
 	ld hl, Text_SaveOnMoveMonWOMail
@@ -157,7 +152,7 @@ StartMoveMonWOMail_SaveGame:
 	call AskOverwriteSaveFile
 	jr c, .refused
 	call PauseGameLogic
-	call _SavingDontTurnOffThePower
+	call SavedTheGame
 	call ResumeGameLogic
 	and a
 	ret
@@ -197,31 +192,18 @@ AddHallOfFameEntry:
 	call CloseSRAM
 	ret
 
-SaveGameData:
-	call _SaveGameData
-	ret
-
 AskOverwriteSaveFile:
 	ld a, [wSaveFileExists]
 	and a
 	jr z, .erase
 	call CompareLoadedAndSavedPlayerID
-	jr z, .yoursavefile
+	ret z ; pretend the player answered "Yes", but without asking
 	ld hl, Text_AnotherSaveFile
 	call SaveTheGame_yesorno
 	jr nz, .refused
-	jr .erase
-
-.yoursavefile
-	ld hl, Text_AlreadyASaveFile
-	call SaveTheGame_yesorno
-	jr nz, .refused
-	jr .ok
 
 .erase
 	call ErasePreviousSave
-
-.ok
 	and a
 	ret
 
@@ -259,28 +241,27 @@ CompareLoadedAndSavedPlayerID:
 	cp c
 	ret
 
-_SavingDontTurnOffThePower:
-	call SavingDontTurnOffThePower
 SavedTheGame:
-	call _SaveGameData
-	; copy the original text speed setting to the stack
-	ld a, [wOptions]
-	push af
-	; set text speed to medium
-	ld a, TEXT_DELAY_MED
-	ld [wOptions], a
+	ld hl, wOptions
+	set NO_TEXT_SCROLL, [hl]
+	push hl
+	ld hl, .saving_text
+	call PrintText
+	pop hl
+	res NO_TEXT_SCROLL, [hl]
+	call SaveGameData
 	; <PLAYER> saved the game!
 	ld hl, Text_PlayerSavedTheGame
 	call PrintText
-	; restore the original text speed setting
-	pop af
-	ld [wOptions], a
 	ld de, SFX_SAVE
 	call WaitPlaySFX
-	call WaitSFX
-	ret
+	jp WaitSFX
+	
+.saving_text
+	text "Saving…"
+	done
 
-_SaveGameData::
+SaveGameData::
 	ld a, TRUE
 	ld [wSaveFileExists], a
 	farcall StageRTCTimeForSave
@@ -350,26 +331,6 @@ FindStackTop:
 	inc hl
 	jr .loop
 
-SavingDontTurnOffThePower:
-	; Prevent joypad interrupts
-	xor a
-	ldh [hJoypadReleased], a
-	ldh [hJoypadPressed], a
-	ldh [hJoypadSum], a
-	ldh [hJoypadDown], a
-	; Save the text speed setting to the stack
-	ld a, [wOptions]
-	push af
-	; Set the text speed to medium
-	ld a, TEXT_DELAY_MED
-	ld [wOptions], a
-	; SAVING... DON'T TURN OFF THE POWER.
-	ld hl, Text_SavingDontTurnOffThePower
-	call PrintText
-	; Restore the text speed setting
-	pop af
-	ld [wOptions], a
-	ret
 
 ErasePreviousSave:
 	call EraseBoxes
@@ -1125,19 +1086,9 @@ Text_WouldYouLikeToSaveTheGame:
 	text_jump UnknownText_0x1c454b
 	db "@"
 
-Text_SavingDontTurnOffThePower:
-	; SAVING… DON'T TURN OFF THE POWER.
-	text_jump UnknownText_0x1c456d
-	db "@"
-
 Text_PlayerSavedTheGame:
 	; saved the game.
 	text_jump UnknownText_0x1c4590
-	db "@"
-
-Text_AlreadyASaveFile:
-	; There is already a save file. Is it OK to overwrite?
-	text_jump UnknownText_0x1c45a3
 	db "@"
 
 Text_AnotherSaveFile:

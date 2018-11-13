@@ -51,6 +51,6 @@ HalveMoney:
 	ret
 
 SaveAndReset:
-	farcall _SaveGameData
+	farcall SaveGameData
 	farcall Reset
 
