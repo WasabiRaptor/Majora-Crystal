@@ -531,7 +531,7 @@ jumptextfaceplayer: MACRO
 	dw \1 ; text_pointer
 ENDM
 
-; if _CRYSTAL
+; if _BRASS
 	enum farjumptext_command ; $52
 farjumptext: MACRO
 	db farjumptext_command

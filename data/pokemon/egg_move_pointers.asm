@@ -118,7 +118,7 @@ EggMovePointers::
 	dw NoEggMoves
 	dw GoldeenEggMoves
 	dw NoEggMoves
-if _CRYSTAL
+if _BRASS
 	dw NoEggMoves
 else
 	dw StaryuEggMoves

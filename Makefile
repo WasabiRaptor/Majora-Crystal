@@ -52,8 +52,8 @@ tools:
 	$(MAKE) -C tools/
 
 
-$(brass_obj):   RGBASMFLAGS = -D _CRYSTAL
-$(brass11_obj): RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11
+$(brass_obj):   RGBASMFLAGS = -D _BRASS
+$(brass11_obj): RGBASMFLAGS = -D _BRASS -D _CRYSTAL11
 
 # The dep rules have to be explicit or else missing files won't be reported.
 # As a side effect, they're evaluated immediately instead of when the rule is invoked.
