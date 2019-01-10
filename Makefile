@@ -9,7 +9,7 @@ RGBFIX := rgbfix
 RGBGFX := rgbgfx
 RGBLINK := rgblink
 
-roms := pokebrass.gbc pokebrass11.gbc
+roms := pokebrass.gbc
 
 brass_obj := \
 audio.o \
@@ -26,8 +26,6 @@ engine/overworld/events.o \
 gfx/pics.o \
 gfx/sprites.o \
 
-brass11_obj := $(brass_obj:.o=11.o)
-
 
 ### Build targets
 
@@ -39,10 +37,9 @@ brass11_obj := $(brass_obj:.o=11.o)
 
 all: brass
 brass: pokebrass.gbc
-brass11: pokebrass11.gbc
 
 clean:
-	rm -f $(roms) $(brass_obj) $(brass11_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
+	rm -f $(roms) $(brass_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
 	$(MAKE) clean -C tools/
 
 compare: $(roms)
@@ -53,7 +50,6 @@ tools:
 
 
 $(brass_obj):   RGBASMFLAGS = -D _BRASS
-$(brass11_obj): RGBASMFLAGS = -D _BRASS -D _CRYSTAL11
 
 # The dep rules have to be explicit or else missing files won't be reported.
 # As a side effect, they're evaluated immediately instead of when the rule is invoked.
@@ -77,13 +73,8 @@ endif
 
 pokebrass.gbc: $(brass_obj) pokebrass.link
 	$(RGBLINK) -n pokebrass.sym -m pokebrass.map -l pokebrass.link -o $@ $(brass_obj)
-	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
+	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x1B -p 0 -r 3 -t PM_BRASS $@
 	tools/sort_symfile.sh pokebrass.sym
-
-pokebrass11.gbc: $(brass11_obj) pokebrass.link
-	$(RGBLINK) -n pokebrass11.sym -m pokebrass11.map -l pokebrass.link -o $@ $(brass11_obj)
-	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -n 1 -p 0 -r 3 -t PM_CRYSTAL $@
-	tools/sort_symfile.sh pokebrass11.sym
 
 
 # For files that the compressor can't match, there will be a .lz file suffixed with the md5 hash of the correct uncompressed file.
