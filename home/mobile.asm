@@ -22,11 +22,11 @@ Function3e32::
 	set 6, [hl]
 	ldh a, [hROMBank]
 	push af
-	ld a, BANK(Function110030)
+	;ld a, BANK(Function110030)
 	ld [$c981], a
 	rst Bankswitch
 
-	jp Function110030
+	;jp Function110030
 
 Function3e60::
 ; Return from Function110030
@@ -53,11 +53,11 @@ Function3e60::
 MobileReceive::
 	ldh a, [hROMBank]
 	push af
-	ld a, BANK(_MobileReceive)
+	;ld a, BANK(_MobileReceive)
 	ld [$c981], a
 	rst Bankswitch
 
-	call _MobileReceive
+	;call _MobileReceive
 	pop bc
 	ld a, b
 	ld [$c981], a
@@ -97,11 +97,11 @@ Timer::
 
 	ldh a, [hROMBank]
 	push af
-	ld a, BANK(_Timer)
+	;ld a, BANK(_Timer)
 	ld [$c981], a
 	rst Bankswitch
 
-	call _Timer
+	;call _Timer
 
 	pop bc
 	ld a, b
