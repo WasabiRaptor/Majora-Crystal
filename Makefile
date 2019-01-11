@@ -11,11 +11,13 @@ RGBLINK := rgblink
 
 roms := pokebrass.gbc
 
+BUILD_DIR := build/
+
 brass_obj := \
-audio.o \
-home.o \
-main.o \
-wram.o \
+$(BUILD_DIR)audio.o \
+$(BUILD_DIR)home.o \
+$(BUILD_DIR)main.o \
+$(BUILD_DIR)wram.o \
 data/text/common.o \
 data/maps/map_data.o \
 data/pokemon/dex_entries.o \
@@ -30,16 +32,17 @@ gfx/sprites.o \
 ### Build targets
 
 .SUFFIXES:
-.PHONY: all brass brass11 clean compare tools
+.PHONY: all brass clean compare tools
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
 
 all: brass
-brass: pokebrass.gbc
+brass: $(roms)
 
 clean:
-	rm -f $(roms) $(brass_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
+	rm -f $(BUILD_DIR)$(roms) $(brass_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
+	rm -r $(BUILD_DIR)
 	$(MAKE) clean -C tools/
 
 compare: $(roms)
@@ -65,16 +68,19 @@ ifeq (,$(filter clean tools,$(MAKECMDGOALS)))
 
 $(info $(shell $(MAKE) -C tools))
 
-$(foreach obj, $(brass11_obj), $(eval $(call DEP,$(obj),$(obj:11.o=.asm))))
-$(foreach obj, $(brass_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
+$(foreach obj, $(brass_obj), $(eval $(call DEP,$(obj),$(subst $(BUILD_DIR),,$(obj:.o=.asm)))))
 
 endif
 
 
-pokebrass.gbc: $(brass_obj) pokebrass.link
-	$(RGBLINK) -n pokebrass.sym -m pokebrass.map -l pokebrass.link -o $@ $(brass_obj)
-	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x1B -p 0 -r 3 -t PM_BRASS $@
-	tools/sort_symfile.sh pokebrass.sym
+pokebrass.gbc: $(BUILD_DIR) $(brass_obj) pokebrass.link
+	$(RGBLINK) -n $(BUILD_DIR)pokebrass.sym -m $(BUILD_DIR)pokebrass.map -l pokebrass.link -o $(BUILD_DIR)$@ $(brass_obj)
+	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x1B -p 0 -r 3 -t PM_BRASS $(BUILD_DIR)$@
+	tools/sort_symfile.sh $(BUILD_DIR)pokebrass.sym
+
+
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
 
 
 # For files that the compressor can't match, there will be a .lz file suffixed with the md5 hash of the correct uncompressed file.
