@@ -1,7 +1,7 @@
 CutTreeBlockPointers:
 ; tileset, block list pointer
-	dbw TILESET_JOHTO,        .johto
-	dbw TILESET_JOHTO_MODERN, .johto_modern
+	dbw TILESET_INVAR,        .johto
+	dbw TILESET_INVAR_MODERN, .johto_modern
 	dbw TILESET_KANTO,        .kanto
 	dbw TILESET_PARK,         .park
 	dbw TILESET_FOREST,       .forest
@@ -43,7 +43,7 @@ CutTreeBlockPointers:
 	db -1 ; end
 
 WhirlpoolBlockPointers:
-	dbw TILESET_JOHTO, .johto
+	dbw TILESET_INVAR, .johto
 	db -1 ; end
 
 .johto:

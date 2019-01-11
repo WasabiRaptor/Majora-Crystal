@@ -11,8 +11,8 @@ ENDM
 Tilesets::
 ; entries correspond to TILESET_* constants
 	tileset Tileset0
-	tileset TilesetJohto
-	tileset TilesetJohtoModern
+	tileset TilesetInvar
+	tileset TilesetInvarModern
 	tileset TilesetKanto
 	tileset TilesetBattleTowerOutside
 	tileset TilesetHouse
