@@ -9,11 +9,11 @@ RGBFIX := rgbfix
 RGBGFX := rgbgfx
 RGBLINK := rgblink
 
-roms := pokebrass.gbc
+roms := pokemajora.gbc
 
 BUILD_DIR := build/
 
-brass_obj := \
+majora_obj := \
 $(BUILD_DIR)audio.o \
 $(BUILD_DIR)home.o \
 $(BUILD_DIR)main.o \
@@ -32,16 +32,16 @@ gfx/sprites.o \
 ### Build targets
 
 .SUFFIXES:
-.PHONY: all brass clean compare tools
+.PHONY: all majora clean compare tools
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
 
-all: brass
-brass: $(roms)
+all: majora
+majora: $(roms)
 
 clean:
-	rm -f $(BUILD_DIR)$(roms) $(brass_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
+	rm -f $(BUILD_DIR)$(roms) $(majora_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
 	rm -r $(BUILD_DIR)
 	$(MAKE) clean -C tools/
 
@@ -52,7 +52,7 @@ tools:
 	$(MAKE) -C tools/
 
 
-$(brass_obj):   RGBASMFLAGS = -D _BRASS
+$(majora_obj):   RGBASMFLAGS = -D _MAJORA
 
 # The dep rules have to be explicit or else missing files won't be reported.
 # As a side effect, they're evaluated immediately instead of when the rule is invoked.
@@ -68,15 +68,15 @@ ifeq (,$(filter clean tools,$(MAKECMDGOALS)))
 
 $(info $(shell $(MAKE) -C tools))
 
-$(foreach obj, $(brass_obj), $(eval $(call DEP,$(obj),$(subst $(BUILD_DIR),,$(obj:.o=.asm)))))
+$(foreach obj, $(majora_obj), $(eval $(call DEP,$(obj),$(subst $(BUILD_DIR),,$(obj:.o=.asm)))))
 
 endif
 
 
-pokebrass.gbc: $(BUILD_DIR) $(brass_obj) pokebrass.link
-	$(RGBLINK) -n $(BUILD_DIR)pokebrass.sym -m $(BUILD_DIR)pokebrass.map -l pokebrass.link -o $(BUILD_DIR)$@ $(brass_obj)
-	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x1B -p 0 -r 3 -t PM_BRASS $(BUILD_DIR)$@
-	tools/sort_symfile.sh $(BUILD_DIR)pokebrass.sym
+pokemajora.gbc: $(BUILD_DIR) $(majora_obj) pokemajora.link
+	$(RGBLINK) -n $(BUILD_DIR)pokemajora.sym -m $(BUILD_DIR)pokemajora.map -l pokemajora.link -o $(BUILD_DIR)$@ $(majora_obj)
+	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x1B -p 0 -r 3 -t PM_MAJORA $(BUILD_DIR)$@
+	tools/sort_symfile.sh $(BUILD_DIR)pokemajora.sym
 
 
 $(BUILD_DIR):
