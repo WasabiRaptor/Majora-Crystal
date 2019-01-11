@@ -11,7 +11,7 @@ RGBLINK := rgblink
 
 roms := pokemajora.gbc
 
-BUILD_DIR := build/majora/
+BUILD_DIR := build/
 
 majora_obj := \
 $(BUILD_DIR)audio.o \
