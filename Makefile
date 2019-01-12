@@ -9,15 +9,15 @@ RGBFIX := rgbfix
 RGBGFX := rgbgfx
 RGBLINK := rgblink
 
-roms := pokemajora.gbc
+roms := pokemajora.gbc pokecrystal11.gbc
 
-BUILD_DIR := build/
+BUILD_DIR := build/majora/
 
-majora_obj := \
-$(BUILD_DIR)audio.o \
-$(BUILD_DIR)home.o \
-$(BUILD_DIR)main.o \
-$(BUILD_DIR)wram.o \
+crystal_obj := \
+audio.o \
+home.o \
+main.o \
+wram.o \
 data/text/common.o \
 data/maps/map_data.o \
 data/pokemon/dex_entries.o \
@@ -27,22 +27,25 @@ engine/movie/credits.o \
 engine/overworld/events.o \
 gfx/pics.o \
 gfx/sprites.o \
+lib/mobile/main.o
+
+crystal11_obj := $(crystal_obj:.o=11.o)
 
 
 ### Build targets
 
 .SUFFIXES:
-.PHONY: all majora clean compare tools
+.PHONY: all crystal crystal11 clean compare tools
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
 
-all: majora
-majora: $(roms)
+all: crystal
+crystal: pokemajora.gbc
+crystal11: pokecrystal11.gbc
 
 clean:
-	rm -f $(BUILD_DIR)$(roms) $(majora_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
-	rm -r $(BUILD_DIR)
+	rm -f $(BUILD_DIR)$(roms) $(crystal_obj) $(crystal11_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
 	$(MAKE) clean -C tools/
 
 compare: $(roms)
@@ -52,7 +55,8 @@ tools:
 	$(MAKE) -C tools/
 
 
-$(majora_obj):   RGBASMFLAGS = -D _MAJORA
+$(crystal_obj):   RGBASMFLAGS = -D _CRYSTAL
+$(crystal11_obj): RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11
 
 # The dep rules have to be explicit or else missing files won't be reported.
 # As a side effect, they're evaluated immediately instead of when the rule is invoked.
@@ -68,20 +72,24 @@ ifeq (,$(filter clean tools,$(MAKECMDGOALS)))
 
 $(info $(shell $(MAKE) -C tools))
 
-$(foreach obj, $(majora_obj), $(eval $(call DEP,$(obj),$(subst $(BUILD_DIR),,$(obj:.o=.asm)))))
+$(foreach obj, $(crystal11_obj), $(eval $(call DEP,$(obj),$(obj:11.o=.asm))))
+$(foreach obj, $(crystal_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
 
 endif
 
 
-pokemajora.gbc: $(BUILD_DIR) $(majora_obj) pokemajora.link
-	$(RGBLINK) -n $(BUILD_DIR)pokemajora.sym -m $(BUILD_DIR)pokemajora.map -l pokemajora.link -o $(BUILD_DIR)$@ $(majora_obj)
-	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x1B -p 0 -r 3 -t PM_MAJORA $(BUILD_DIR)$@
-	tools/sort_symfile.sh $(BUILD_DIR)pokemajora.sym
+pokemajora.gbc: $(BUILD_DIR) $(crystal_obj) pokecrystal.link
+	$(RGBLINK) -n pokemajora.sym -m pokemajora.map -l pokecrystal.link -o $(BUILD_DIR)$@ $(crystal_obj)
+	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $(BUILD_DIR)$@
+	tools/sort_symfile.sh pokemajora.sym
 
+pokecrystal11.gbc: $(crystal11_obj) pokecrystal.link
+	$(RGBLINK) -n pokecrystal11.sym -m pokecrystal11.map -l pokecrystal.link -o $@ $(crystal11_obj)
+	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -n 1 -p 0 -r 3 -t PM_CRYSTAL $@
+	tools/sort_symfile.sh pokecrystal11.sym
 
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
-
 
 # For files that the compressor can't match, there will be a .lz file suffixed with the md5 hash of the correct uncompressed file.
 # If the hash of the uncompressed file matches, use this .lz instead.
@@ -107,14 +115,31 @@ gfx/pokemon/%/frames.asm: gfx/pokemon/%/front.animated.tilemap gfx/pokemon/%/fro
 	tools/pokemon_animation -f $^ > $@
 
 
+### Terrible hacks to match animations. Delete these rules if you don't care about matching.
+
+# Dewgong has an unused tile id in its last frame. The tile itself is missing.
+gfx/pokemon/dewgong/frames.asm: gfx/pokemon/dewgong/front.animated.tilemap gfx/pokemon/dewgong/front.dimensions
+	tools/pokemon_animation -f $^ > $@
+	echo "	db \$$4d" >> $@
+
+# Lugia has two unused tile ids in its last frame. The tiles themselves are missing.
+gfx/pokemon/lugia/frames.asm: gfx/pokemon/lugia/front.animated.tilemap gfx/pokemon/lugia/front.dimensions
+	tools/pokemon_animation -f $^ > $@
+	echo "	db \$$5e, \$$59" >> $@
+
+# Girafarig has a redundant tile after the end. It is used in two frames, so it must be injected into the generated graphics.
+# This is more involved, so it's hacked into pokemon_animation_graphics.
+gfx/pokemon/girafarig/front.animated.2bpp: gfx/pokemon/girafarig/front.2bpp gfx/pokemon/girafarig/front.dimensions
+	tools/pokemon_animation_graphics --girafarig -o $@ $^
+gfx/pokemon/girafarig/front.animated.tilemap: gfx/pokemon/girafarig/front.2bpp gfx/pokemon/girafarig/front.dimensions
+	tools/pokemon_animation_graphics --girafarig -t $@ $^
+
 
 ### Misc file-specific graphics rules
 
 gfx/pokemon/%/back.2bpp: rgbgfx += -h
 
 gfx/trainers/%.2bpp: rgbgfx += -h
-
-gfx/portraits/%.2bpp: rgbgfx += -h
 
 gfx/new_game/shrink1.2bpp: rgbgfx += -h
 gfx/new_game/shrink2.2bpp: rgbgfx += -h
@@ -181,6 +206,13 @@ gfx/battle/dude.2bpp: rgbgfx += -h
 gfx/font/unused_bold_font.1bpp: tools/gfx += --trim-whitespace
 
 gfx/sgb/sgb_border.2bpp: tools/gfx += --trim-whitespace
+
+gfx/mobile/ascii_font.2bpp: tools/gfx += --trim-whitespace
+gfx/mobile/electro_ball.2bpp: tools/gfx += --trim-whitespace
+gfx/mobile/electro_ball_nonmatching.2bpp: tools/gfx += --remove-duplicates --remove-xflip
+gfx/mobile/mobile_adapter.2bpp: tools/gfx += --trim-whitespace
+gfx/mobile/mobile_splash.2bpp: tools/gfx += --remove-duplicates --remove-xflip
+gfx/mobile/pichu_animated.2bpp: tools/gfx += --trim-whitespace
 
 gfx/unknown/unknown_egg.2bpp: rgbgfx += -h
 
