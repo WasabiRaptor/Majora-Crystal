@@ -199,6 +199,7 @@ ItsRightNearScript:
 	writetext .ItsRightNeartext
 	waitbutton
 	closetext
+	playmusic MUSIC_NONE
 	refreshscreen
 	callasm OverworldBGMap
 	writetext .BoxUrPokemonRetardtext
