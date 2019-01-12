@@ -200,6 +200,7 @@ ItsRightNearScript:
 	waitbutton
 	closetext
 	playmusic MUSIC_NONE
+	applymovement PLAYER, .TeleportFrom
 	refreshscreen
 	callasm OverworldBGMap
 	writetext .BoxUrPokemonRetardtext
@@ -213,6 +214,9 @@ ItsRightNearScript:
 .BoxUrPokemonRetardtext
 	text_jump EndOfCycleText
 	db "@"
+.TeleportFrom:
+	teleport_from
+	step_end
 ResetTheGame:
 	farcall Reset
 	ret
