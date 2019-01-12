@@ -197,18 +197,25 @@ ItsGettingCloserScript:
 ItsRightNearScript:
 	opentext
 	writetext .ItsRightNeartext
-	farcall _SaveGameData
 	waitbutton
 	closetext
 	refreshscreen
 	callasm OverworldBGMap
-	writetext .EndOfCycletext
+	writetext .BoxUrPokemonRetardtext
 	waitbutton
-	farcall Reset
-	end
+	special FadeOutPalettes
+	callasm SaveAndReset
+	endall
 .ItsRightNeartext
 	text_jump ItsRightNearText
 	db "@"
-.EndOfCycletext
+.BoxUrPokemonRetardtext
 	text_jump EndOfCycleText
 	db "@"
+ResetTheGame:
+	farcall Reset
+	ret
+Delay5s:
+	ld a, 255
+	call DelayFrames
+	ret

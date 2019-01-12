@@ -1594,9 +1594,9 @@ ItsRightNearText::
 
 EndOfCycleText::
 	text "You can keep"
-	line "them safe. Even"
-	cont "if you have to"
-	cont "box your very"
+	line "them safe..."
+	para "Even if you have"
+	line "to box your very"
 	cont "last #MON..."
 	para "Play it safe,"
 	line "<PLAYER>..."
