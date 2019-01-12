@@ -1591,3 +1591,13 @@ ItsRightNearText::
 	text "It's right near!"
 	line "It's gusting hard!"
 	done
+
+EndOfCycleText::
+	text "You can keep"
+	line "them safe. Even"
+	cont "if you have to"
+	cont "box your very"
+	cont "last #MON..."
+	para "Play it safe,"
+	line "<PLAYER>..."
+	done

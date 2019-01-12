@@ -200,8 +200,15 @@ ItsRightNearScript:
 	farcall _SaveGameData
 	waitbutton
 	closetext
+	refreshscreen
+	callasm OverworldBGMap
+	writetext .EndOfCycletext
+	waitbutton
 	farcall Reset
 	end
 .ItsRightNeartext
 	text_jump ItsRightNearText
+	db "@"
+.EndOfCycletext
+	text_jump EndOfCycleText
 	db "@"
