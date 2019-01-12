@@ -72,6 +72,9 @@ NewGame:
 	ld a, SPAWN_HOME
 	ld [wDefaultSpawnpoint], a
 
+	ld a, 6
+	ld [wCurDay], a
+
 	ld a, MAPSETUP_WARP
 	ldh [hMapEntryMethod], a
 	jp FinishContinueFunction
