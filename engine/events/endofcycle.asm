@@ -200,8 +200,23 @@ ItsRightNearScript:
 	farcall _SaveGameData
 	waitbutton
 	closetext
-	farcall Reset
-	end
+	refreshscreen
+	callasm Delay5s
+	opentext
+	writetext .BoxUrPokemonRetardText
+	waitbutton
+	callasm ResetTheGame
+	
 .ItsRightNeartext
 	text_jump ItsRightNearText
 	db "@"
+.BoxUrPokemonRetardText
+	text_jump _BoxUrPokemonRetardText
+	db "@"
+ResetTheGame:
+	farcall Reset
+	ret
+Delay5s:
+	ld a, 255
+	call DelayFrames
+	ret

@@ -10,6 +10,7 @@ _OakText7::
 	para "I hope you take my"
 	line "challenge well."
 
+_BoxUrPokemonRetardText::
 	para "You might loose"
 	line "some friends to"
 	cont "battle or time,"
