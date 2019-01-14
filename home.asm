@@ -216,3 +216,5 @@ INCLUDE "home/battle.asm"
 INCLUDE "home/sprite_anims.asm"
 INCLUDE "home/audio.asm"
 INCLUDE "home/mobile.asm"
+INCLUDE "home/imported_sounds.asm"
+	
