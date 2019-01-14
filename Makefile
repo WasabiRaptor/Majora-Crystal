@@ -75,7 +75,7 @@ endif
 
 pokebrass.gbc: $(BUILD_DIR) $(brass_obj) pokebrass.link
 	$(RGBLINK) -n $(BUILD_DIR)pokebrass.sym -m $(BUILD_DIR)pokebrass.map -l pokebrass.link -o $(BUILD_DIR)$@ $(brass_obj)
-	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x1B -p 0 -r 3 -t PM_BRASS $(BUILD_DIR)$@
+	$(RGBFIX) -Cjv -k 01 -l 0x33 -m 0x1B -p 0 -r 3 -t "POKEMON BRASS" $(BUILD_DIR)$@
 	tools/sort_symfile.sh $(BUILD_DIR)pokebrass.sym
 
 
