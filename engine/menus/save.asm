@@ -284,8 +284,8 @@ SaveGameData::
 	ld a, BANK(sBattleTowerChallengeState)
 	call GetSRAMBank
 	ld a, [sBattleTowerChallengeState]
-	cp BATTLETOWER_RECEIVED_REWARD
-	jr nz, .ok
+	;cp BATTLETOWER_RECEIVED_REWARD
+	;jr nz, .ok
 	xor a
 	ld [sBattleTowerChallengeState], a
 .ok
@@ -718,9 +718,9 @@ LoadPlayerData:
 	ld a, BANK(sBattleTowerChallengeState)
 	call GetSRAMBank
 	ld a, [sBattleTowerChallengeState]
-	cp BATTLETOWER_RECEIVED_REWARD
-	jr nz, .not_4
-	ld a, BATTLETOWER_WON_CHALLENGE
+	;cp BATTLETOWER_RECEIVED_REWARD
+	;jr nz, .not_4
+	;ld a, BATTLETOWER_WON_CHALLENGE
 	ld [sBattleTowerChallengeState], a
 .not_4
 	call CloseSRAM

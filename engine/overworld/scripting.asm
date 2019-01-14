@@ -229,7 +229,7 @@ endc
 	dw Script_halloffame                 ; a1
 	dw Script_credits                    ; a2
 	dw Script_warpfacing                 ; a3
-	dw Script_battletowertext            ; a4
+	dw Script_battletowertext            ; a4 unused
 	dw Script_landmarktotext             ; a5
 	dw Script_trainerclassname           ; a6
 	dw Script_name                       ; a7
@@ -504,7 +504,7 @@ Script_battletowertext:
 	call SetUpTextBox
 	call GetScriptByte
 	ld c, a
-	farcall BattleTowerText
+	;farcall BattleTowerText
 	ret
 
 Script_verbosegiveitem:

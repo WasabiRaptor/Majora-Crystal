@@ -238,7 +238,7 @@ UnusedTilesetAnim_fc2bf:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  DoneTileAnimation
 
-TilesetBattleTowerOutsideAnim:
+;TilesetBattleTowerOutsideAnim:
 TilesetHouseAnim:
 TilesetPlayersHouseAnim:
 TilesetPokecenterAnim:
@@ -254,7 +254,7 @@ TilesetChampionsRoomAnim:
 TilesetLighthouseAnim:
 TilesetPlayersRoomAnim:
 TilesetPokeComCenterAnim:
-TilesetBattleTowerAnim:
+;TilesetBattleTowerAnim:
 TilesetRuinsOfAlphAnim:
 TilesetRadioTowerAnim:
 TilesetUndergroundAnim:

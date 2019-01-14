@@ -653,10 +653,6 @@ BattleCommand_CheckObedience:
 	and a
 	ret nz
 
-	ld a, [wInBattleTowerBattle]
-	and a
-	ret nz
-
 	; If the monster's id doesn't match the player's,
 	; some conditions need to be met.
 	ld a, MON_ID
@@ -3694,10 +3690,6 @@ BattleCommand_SleepTarget:
 	and a
 	jr nz, .dont_fail
 
-	ld a, [wInBattleTowerBattle]
-	and a
-	jr nz, .dont_fail
-
 	; Not locked-on by the enemy
 	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_LOCK_ON, a
@@ -3786,10 +3778,6 @@ BattleCommand_Poison:
 	jr z, .dont_sample_failure
 
 	ld a, [wLinkMode]
-	and a
-	jr nz, .dont_sample_failure
-
-	ld a, [wInBattleTowerBattle]
 	and a
 	jr nz, .dont_sample_failure
 
@@ -4444,10 +4432,6 @@ BattleCommand_StatDown:
 	jr z, .DidntMiss
 
 	ld a, [wLinkMode]
-	and a
-	jr nz, .DidntMiss
-
-	ld a, [wInBattleTowerBattle]
 	and a
 	jr nz, .DidntMiss
 
@@ -5976,10 +5960,6 @@ BattleCommand_Paralyze:
 	jr z, .dont_sample_failure
 
 	ld a, [wLinkMode]
-	and a
-	jr nz, .dont_sample_failure
-
-	ld a, [wInBattleTowerBattle]
 	and a
 	jr nz, .dont_sample_failure
 

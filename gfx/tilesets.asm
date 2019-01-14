@@ -208,15 +208,6 @@ INCBIN "data/tilesets/pokecom_center_metatiles.bin"
 TilesetPokeComCenterColl:
 INCLUDE "data/tilesets/pokecom_center_collision.asm"
 
-TilesetBattleTowerGFX:
-INCBIN "gfx/tilesets/battle_tower.2bpp.lz"
-
-TilesetBattleTowerMeta:
-INCBIN "data/tilesets/battle_tower_metatiles.bin"
-
-TilesetBattleTowerColl:
-INCLUDE "data/tilesets/battle_tower_collision.asm"
-
 TilesetGateGFX:
 INCBIN "gfx/tilesets/gate.2bpp.lz"
 
@@ -227,7 +218,6 @@ TilesetGateColl:
 INCLUDE "data/tilesets/gate_collision.asm"
 
 TilesetInvarModernGFX:
-TilesetBattleTowerOutsideGFX:
 INCBIN "gfx/tilesets/johto_modern.2bpp.lz"
 
 TilesetInvarModernMeta:
@@ -290,12 +280,6 @@ INCBIN "data/tilesets/facility_metatiles.bin"
 TilesetFacilityColl:
 INCLUDE "data/tilesets/facility_collision.asm"
 
-TilesetBattleTowerOutsideMeta:
-INCBIN "data/tilesets/battle_tower_outside_metatiles.bin"
-
-TilesetBattleTowerOutsideColl:
-INCLUDE "data/tilesets/battle_tower_outside_collision.asm"
-
 TilesetBetaWordRoomMeta:
 INCBIN "data/tilesets/beta_word_room_metatiles.bin"
 
@@ -351,9 +335,6 @@ INCBIN "data/tilesets/johto_modern_attributes.bin"
 TilesetKantoAttr:
 INCBIN "data/tilesets/kanto_attributes.bin"
 
-TilesetBattleTowerOutsideAttr:
-INCBIN "data/tilesets/battle_tower_outside_attributes.bin"
-
 TilesetHouseAttr:
 INCBIN "data/tilesets/house_attributes.bin"
 
@@ -407,9 +388,6 @@ INCBIN "data/tilesets/players_room_attributes.bin"
 
 TilesetPokeComCenterAttr:
 INCBIN "data/tilesets/pokecom_center_attributes.bin"
-
-TilesetBattleTowerAttr:
-INCBIN "data/tilesets/battle_tower_attributes.bin"
 
 TilesetTowerAttr:
 INCBIN "data/tilesets/tower_attributes.bin"

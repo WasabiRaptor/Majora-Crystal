@@ -3,7 +3,7 @@
 	const TILESET_INVAR                ; 01
 	const TILESET_INVAR_MODERN         ; 02
 	const TILESET_KANTO                ; 03
-	const TILESET_BATTLE_TOWER_OUTSIDE ; 04
+	;const TILESET_BATTLE_TOWER_OUTSIDE ; 04
 	const TILESET_HOUSE                ; 05
 	const TILESET_PLAYERS_HOUSE        ; 06
 	const TILESET_POKECENTER           ; 07
@@ -21,7 +21,7 @@
 	const TILESET_LIGHTHOUSE           ; 13
 	const TILESET_PLAYERS_ROOM         ; 14
 	const TILESET_POKECOM_CENTER       ; 15
-	const TILESET_BATTLE_TOWER         ; 16
+	;const TILESET_BATTLE_TOWER         ; 16
 	const TILESET_TOWER                ; 17
 	const TILESET_CAVE                 ; 18
 	const TILESET_PARK                 ; 19

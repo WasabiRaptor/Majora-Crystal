@@ -58,7 +58,7 @@ SpecialsPointers::
 	add_special DummyNonfunctionalGameCornerGame
 	add_special ClearBGPalettesBufferScreen
 	add_special FadeOutPalettes
-	add_special BattleTowerFade
+	;add_special BattleTowerFade
 	add_special FadeBlackQuickly ; $30
 	add_special FadeInPalettes
 	add_special FadeInQuickly

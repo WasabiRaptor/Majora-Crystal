@@ -152,9 +152,9 @@ CheckSubstatusCantRun:
 
 AI_TryItem:
 	; items are not allowed in the BattleTower
-	ld a, [wInBattleTowerBattle]
-	and a
-	ret nz
+	;ld a, [wInBattleTowerBattle]
+	;and a
+	;ret nz
 
 	ld a, [wEnemyTrainerItem1]
 	ld b, a
