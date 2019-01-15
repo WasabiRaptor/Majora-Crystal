@@ -4,22 +4,8 @@
 	const BLUE_PAGE  ; 3
 NUM_STAT_PAGES EQU const_value + -1
 
-BattleStatsScreenInit:
-	ld a, [wLinkMode]
-	cp LINK_MOBILE
-	jr nz, StatsScreenInit
-
-	ld a, [wBattleMode]
-	and a
-	jr z, StatsScreenInit
-	jr _MobileStatsScreenInit
-
 StatsScreenInit:
 	ld hl, StatsScreenMain
-	jr StatsScreenInit_gotaddress
-
-_MobileStatsScreenInit:
-	ld hl, StatsScreenMobile
 	jr StatsScreenInit_gotaddress
 
 StatsScreenInit_gotaddress:
@@ -75,31 +61,6 @@ StatsScreenMain:
 	ld a, [wJumptableIndex]
 	bit 7, a
 	jr z, .loop
-	ret
-
-StatsScreenMobile:
-	xor a
-	ld [wJumptableIndex], a
-	; stupid interns
-	ld [wcf64], a
-	ld a, [wcf64]
-	and %11111100
-	or 1
-	ld [wcf64], a
-.loop
-	;farcall Mobile_SetOverworldDelay
-	ld a, [wJumptableIndex]
-	and $ff ^ (1 << 7)
-	ld hl, StatsScreenPointerTable
-	rst JumpTable
-	call StatsScreen_WaitAnim
-	;farcall MobileComms_CheckInactivityTimer
-	jr c, .exit
-	ld a, [wJumptableIndex]
-	bit 7, a
-	jr z, .loop
-
-.exit
 	ret
 
 StatsScreenPointerTable:

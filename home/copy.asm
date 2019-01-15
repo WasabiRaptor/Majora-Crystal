@@ -200,17 +200,6 @@ Request2bpp::
 	push af
 	ld a, $8
 	ldh [hTilesPerCycle], a
-
-	ld a, [wLinkMode]
-	cp LINK_MOBILE
-	jr nz, .NotMobile
-	ldh a, [hMobile]
-	and a
-	jr nz, .NotMobile
-	ld a, $6
-	ldh [hTilesPerCycle], a
-
-.NotMobile:
 	ld a, e
 	ld [wRequested2bppSource], a
 	ld a, d
@@ -275,16 +264,6 @@ Request1bpp::
 
 	ld a, $8
 	ldh [hTilesPerCycle], a
-	ld a, [wLinkMode]
-	cp LINK_MOBILE
-	jr nz, .NotMobile
-	ldh a, [hMobile]
-	and a
-	jr nz, .NotMobile
-	ld a, $6
-	ldh [hTilesPerCycle], a
-
-.NotMobile:
 	ld a, e
 	ld [wRequested1bppSource], a
 	ld a, d
