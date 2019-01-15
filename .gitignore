@@ -47,3 +47,4 @@ gfx/pokemon/*/frames.asm
 *.DS_Store
 .vs/
 .vscode/
+build/

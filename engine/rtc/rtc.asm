@@ -1,8 +1,3 @@
-
-
-StartRTC:
-	ret
-
 GetTimeOfDay::
 ; get time of day based on the current hour
 	ldh a, [hHours] ; hour
@@ -64,15 +59,9 @@ SaveRTC:
 	ret
 
 StartClock::
-	;call FixDays
-	jr nc, .skip_set
 	; bit 5: Day count exceeds 139
 	; bit 6: Day count exceeds 255
 	call RecordRTCStatus ; set flag on sRTCStatusFlags
-
-.skip_set
-	call StartRTC
-	ret
 
 .set_bit_7
 	; Day count exceeds 16383
