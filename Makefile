@@ -9,7 +9,7 @@ RGBFIX := rgbfix
 RGBGFX := rgbgfx
 RGBLINK := rgblink
 
-roms := pokebrass.gbc
+rom := pokebrass.gbc
 
 BUILD_DIR := build/
 
@@ -38,15 +38,15 @@ $(BUILD_DIR)gfx/sprites.o \
 .SECONDARY:
 
 all: brass
-brass: $(roms)
+brass: $(rom)
 
 clean:
-	rm -f $(BUILD_DIR)$(roms) $(brass_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
+	rm -f $(BUILD_DIR)$(rom) $(brass_obj) $(rom:.gbc=.map) $(rom:.gbc=.sym)
 	rm -r $(BUILD_DIR)
 	$(MAKE) clean -C tools/
 
-compare: $(roms)
-	@$(SHA1) -c roms.sha1
+compare: $(rom)
+	@$(SHA1) -c rom.sha1
 
 tools:
 	$(MAKE) -C tools/
@@ -73,7 +73,7 @@ $(foreach obj, $(brass_obj), $(eval $(call DEP,$(obj),$(subst $(BUILD_DIR),,$(ob
 endif
 
 
-pokebrass.gbc: $(BUILD_DIR) $(brass_obj) pokebrass.link
+$(rom): $(BUILD_DIR) $(brass_obj) pokebrass.link
 	$(RGBLINK) -n $(BUILD_DIR)pokebrass.sym -m $(BUILD_DIR)pokebrass.map -l pokebrass.link -o $(BUILD_DIR)$@ $(brass_obj)
 	$(RGBFIX) -Cjv -k 01 -l 0x33 -m 0x1B -p 0 -r 3 -t "POKEMON BRASS" $(BUILD_DIR)$@
 	tools/sort_symfile.sh $(BUILD_DIR)pokebrass.sym
