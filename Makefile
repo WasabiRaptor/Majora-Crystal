@@ -18,15 +18,15 @@ $(BUILD_DIR)audio.o \
 $(BUILD_DIR)home.o \
 $(BUILD_DIR)main.o \
 $(BUILD_DIR)wram.o \
-data/text/common.o \
-data/maps/map_data.o \
-data/pokemon/dex_entries.o \
-data/pokemon/egg_moves.o \
-data/pokemon/evos_attacks.o \
-engine/movie/credits.o \
-engine/overworld/events.o \
-gfx/pics.o \
-gfx/sprites.o \
+$(BUILD_DIR)data/text/common.o \
+$(BUILD_DIR)data/maps/map_data.o \
+$(BUILD_DIR)data/pokemon/dex_entries.o \
+$(BUILD_DIR)data/pokemon/egg_moves.o \
+$(BUILD_DIR)data/pokemon/evos_attacks.o \
+$(BUILD_DIR)engine/movie/credits.o \
+$(BUILD_DIR)engine/overworld/events.o \
+$(BUILD_DIR)gfx/pics.o \
+$(BUILD_DIR)gfx/sprites.o \
 
 
 ### Build targets
@@ -73,14 +73,20 @@ $(foreach obj, $(brass_obj), $(eval $(call DEP,$(obj),$(subst $(BUILD_DIR),,$(ob
 endif
 
 
-pokebrass.gbc: $(BUILD_DIR) $(brass_obj) pokebrass.link
+$(roms): $(BUILD_DIR) $(brass_obj) pokebrass.link
 	$(RGBLINK) -n $(BUILD_DIR)pokebrass.sym -m $(BUILD_DIR)pokebrass.map -l pokebrass.link -o $(BUILD_DIR)$@ $(brass_obj)
-	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x1B -p 0 -r 3 -t PM_BRASS $(BUILD_DIR)$@
+	$(RGBFIX) -Cjv -k 01 -l 0x33 -m 0x1B -p 0 -r 3 -t "POKEMON BRASS" $(BUILD_DIR)$@
 	tools/sort_symfile.sh $(BUILD_DIR)pokebrass.sym
 
 
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
+	mkdir -p $(BUILD_DIR)data/text
+	mkdir -p $(BUILD_DIR)data/maps
+	mkdir -p $(BUILD_DIR)data/pokemon
+	mkdir -p $(BUILD_DIR)engine/movie
+	mkdir -p $(BUILD_DIR)engine/overworld
+	mkdir -p $(BUILD_DIR)gfx
 
 
 # For files that the compressor can't match, there will be a .lz file suffixed with the md5 hash of the correct uncompressed file.
