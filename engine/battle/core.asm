@@ -158,7 +158,6 @@ WildFled_EnemyFled_LinkBattleCanceled:
 
 BattleTurn:
 .loop
-	call Stubbed_Function3c1bf
 	call CheckContestBattleOver
 	jp c, .quit
 
@@ -226,24 +225,6 @@ BattleTurn:
 	jp .loop
 
 .quit
-	ret
-
-Stubbed_Function3c1bf:
-	ret
-	ld a, 5 ; MBC30 bank used by JP Crystal; inaccessible by MBC3
-	call GetSRAMBank
-	ld hl, $a89b ; address of MBC30 bank
-	inc [hl]
-	jr nz, .finish
-	dec hl
-	inc [hl]
-	jr nz, .finish
-	dec [hl]
-	inc hl
-	dec [hl]
-
-.finish
-	call CloseSRAM
 	ret
 
 HandleBetweenTurnEffects:
@@ -1899,25 +1880,6 @@ GetMaxHP:
 	ld c, a
 	ret
 
-Unreferenced_GetHalfHP:
-	ld hl, wBattleMonHP
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .ok
-	ld hl, wEnemyMonHP
-.ok
-	ld a, [hli]
-	ld b, a
-	ld a, [hli]
-	ld c, a
-	srl b
-	rr c
-	ld a, [hli]
-	ld [wBuffer2], a
-	ld a, [hl]
-	ld [wBuffer1], a
-	ret
-
 CheckUserHasEnoughHP:
 	ld hl, wBattleMonHP + 1
 	ldh a, [hBattleTurn]
@@ -2520,7 +2482,6 @@ AddBattleMoneyToAccount:
 	push bc
 	ld b, h
 	ld c, l
-	;farcall StubbedTrainerRankings_AddToBattlePayouts
 	pop bc
 	pop hl
 .loop
@@ -6626,17 +6587,6 @@ CheckUnownLetter:
 
 INCLUDE "data/wild/unlocked_unowns.asm"
 
-Unreferenced_SwapBattlerLevels:
-	push bc
-	ld a, [wBattleMonLevel]
-	ld b, a
-	ld a, [wEnemyMonLevel]
-	ld [wBattleMonLevel], a
-	ld a, b
-	ld [wEnemyMonLevel], a
-	pop bc
-	ret
-
 BattleWinSlideInEnemyTrainerFrontpic:
 	xor a
 	ld [wTempEnemyMonSpecies], a
@@ -6987,20 +6937,6 @@ _LoadBattleFontsHPBar:
 _LoadHPBar:
 	callfar LoadHPBar
 	ret
-
-Unreferenced_LoadHPExpBarGFX:
-	ld de, EnemyHPBarBorderGFX
-	ld hl, vTiles2 tile $6c
-	lb bc, BANK(EnemyHPBarBorderGFX), 4
-	call Get1bpp
-	ld de, HPExpBarBorderGFX
-	ld hl, vTiles2 tile $73
-	lb bc, BANK(HPExpBarBorderGFX), 6
-	call Get1bpp
-	ld de, ExpBarGFX
-	ld hl, vTiles2 tile $55
-	lb bc, BANK(ExpBarGFX), 8
-	jp Get2bpp
 
 EmptyBattleTextBox:
 	ld hl, .empty
@@ -7932,47 +7868,9 @@ TextJump_GoodComeBack:
 	text_jump Text_GoodComeBack
 	db "@"
 
-Unreferenced_TextJump_ComeBack:
-; this function doesn't seem to be used
-	ld hl, TextJump_ComeBack
-	ret
-
 TextJump_ComeBack:
 	text_jump Text_ComeBack
 	db "@"
-
-Unreferenced_HandleSafariAngerEatingStatus:
-	ld hl, wSafariMonEating
-	ld a, [hl]
-	and a
-	jr z, .angry
-	dec [hl]
-	ld hl, BattleText_WildMonIsEating
-	jr .finish
-
-.angry
-	dec hl ; wSafariMonAngerCount
-	ld a, [hl]
-	and a
-	ret z
-	dec [hl]
-	ld hl, BattleText_WildMonIsAngry
-	jr nz, .finish
-	push hl
-	ld a, [wEnemyMonSpecies]
-	ld [wCurSpecies], a
-	ld hl, wEnemyMonDVs
-	predef GetFormData
-	call GetBaseData
-	ld a, [wBaseCatchRate]
-	ld [wEnemyMonCatchRate], a
-	pop hl
-
-.finish
-	push hl
-	call Call_LoadTempTileMapToTileMap
-	pop hl
-	jp StdBattleTextBox
 
 FillInExpBar:
 	push hl
@@ -8202,12 +8100,7 @@ StartBattle:
 	scf
 	ret
 
-Unreferenced_DoBattle:
-	call DoBattle
-	ret
-
 BattleIntro:
-	;farcall StubbedTrainerRankings_Battles ; mobile
 	call LoadTrainerOrWildMonPic
 	xor a
 	ld [wTempBattleMonSpecies], a
@@ -8288,7 +8181,6 @@ BackUpBGMap2:
 
 InitEnemyTrainer:
 	ld [wTrainerClass], a
-	;farcall StubbedTrainerRankings_TrainerBattles
 	xor a
 	ld [wTempEnemyMonSpecies], a
 	callfar GetTrainerAttributes
@@ -8344,7 +8236,6 @@ InitEnemyTrainer:
 InitEnemyWildmon:
 	ld a, WILD_BATTLE
 	ld [wBattleMode], a
-	;farcall StubbedTrainerRankings_WildBattles
 	call LoadEnemyMon
 	ld hl, wEnemyMonMoves
 	ld de, wWildMonMoves
@@ -8373,57 +8264,6 @@ InitEnemyWildmon:
 	hlcoord 12, 0
 	lb bc, 7, 7
 	predef PlaceGraphic
-	ret
-
-Unreferenced_Function3f662:
-	ld hl, wEnemyMonMoves
-	ld de, wListMoves_MoveIndicesBuffer
-	ld b, NUM_MOVES
-.loop
-	ld a, [de]
-	inc de
-	ld [hli], a
-	and a
-	jr z, .clearpp
-
-	push bc
-	push hl
-
-	push hl
-	dec a
-	ld hl, Moves + MOVE_PP
-	ld bc, MOVE_LENGTH
-	call AddNTimes
-	ld a, BANK(Moves)
-	call GetFarByte
-	pop hl
-
-	ld bc, wEnemyMonPP - (wEnemyMonMoves + 1)
-	add hl, bc
-	ld [hl], a
-
-	pop hl
-	pop bc
-
-	dec b
-	jr nz, .loop
-	ret
-
-.clear
-	xor a
-	ld [hli], a
-
-.clearpp
-	push bc
-	push hl
-	ld bc, wEnemyMonPP - (wEnemyMonMoves + 1)
-	add hl, bc
-	xor a
-	ld [hl], a
-	pop hl
-	pop bc
-	dec b
-	jr nz, .clear
 	ret
 
 ExitBattle:
@@ -8520,8 +8360,6 @@ CheckPayDay:
 	ret
 
 ShowLinkBattleParticipantsAfterEnd:
-	;farcall StubbedTrainerRankings_LinkBattles
-	;farcall BackupMobileEventIndex
 	ld a, [wCurOTMon]
 	ld hl, wOTPartyMon1Status
 	call GetPartyLocation
@@ -8549,18 +8387,14 @@ DisplayLinkBattleResult:
 	cp LOSE
 	jr c, .victory ; WIN
 	jr z, .loss ; LOSE
-	; DRAW
-	;farcall StubbedTrainerRankings_ColosseumDraws
-	ld de, .Draw
+	ld de, .Draw ; DRAW
 	jr .store_result
 
 .victory
-	;farcall StubbedTrainerRankings_ColosseumWins
 	ld de, .Win
 	jr .store_result
 
 .loss
-	;farcall StubbedTrainerRankings_ColosseumLosses
 	ld de, .Lose
 	jr .store_result
 
@@ -9285,8 +9119,6 @@ BattleStartMessage:
 	ld a, [wBattleType]
 	cp BATTLETYPE_FISH
 	jr nz, .NotFishing
-
-	;farcall StubbedTrainerRankings_HookedEncounters
 
 	ld hl, HookedPokemonAttackedText
 	jr .PlaceBattleStartText

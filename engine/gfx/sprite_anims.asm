@@ -40,8 +40,6 @@ DoAnimFrame:
 	dw .FlyTo
 	dw .GSIntroHoOh
 	dw .EZChatCursor
-	;dw .MobileTradeSentPulse
-	;dw .MobileTradeOTPulse
 	dw .IntroSuicune
 	dw .IntroPichuWooper
 	dw .Celebi
@@ -737,14 +735,6 @@ DoAnimFrame:
 	add hl, bc
 	ld [hl], a
 	ret
-
-;.MobileTradeSentPulse
-	;farcall Function108bc7
-	;ret
-
-;.MobileTradeOTPulse
-	;farcall Function108be0
-	;ret
 
 .IntroSuicune
 	ld a, [wcf65]
