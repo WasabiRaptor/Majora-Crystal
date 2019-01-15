@@ -23,6 +23,13 @@ MysteryDungeonSetup:
 	ld [wDefaultSpawnpoint], a
 	ret
 
+; TEMP
+TempBugsyScript:
+	loadtrainer BUGSY, BUGSY1
+	startbattle
+	reloadmapafterbattle
+	end
+
 Town1_MapEvents:
 	db 0, 0 ; filler
 
@@ -33,6 +40,6 @@ Town1_MapEvents:
 
 	db 0 ; bg events
 
-	db 1 ; object events
-	object_event  7,  4, SPRITE_KRIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MysteryDungeonEnterScript, -1
-
+	db 2 ; object events
+	object_event 7, 4, SPRITE_KRIS,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MysteryDungeonEnterScript, -1
+	object_event 7, 5, SPRITE_BUGSY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TempBugsyScript, -1
