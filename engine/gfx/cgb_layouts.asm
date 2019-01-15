@@ -150,12 +150,7 @@ _CGB_FinishBattleScreenLayout:
 	ret
 
 InitPartyMenuBGPal7:
-	;farcall Function100dc0
-Mobile_InitPartyMenuBGPal7:
 	ld hl, PartyMenuBGPalette
-	jr nc, .not_mobile
-	ld hl, PartyMenuBGMobilePalette
-.not_mobile
 	ld de, wBGPals1 palette 7
 	ld bc, 1 palettes
 	ld a, BANK(wBGPals1)
@@ -165,9 +160,6 @@ Mobile_InitPartyMenuBGPal7:
 InitPartyMenuBGPal0:
 	;farcall Function100dc0
 	ld hl, PartyMenuBGPalette
-	jr nc, .not_mobile
-	ld hl, PartyMenuBGMobilePalette
-.not_mobile
 	ld de, wBGPals1 palette 0
 	ld bc, 1 palettes
 	ld a, BANK(wBGPals1)

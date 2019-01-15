@@ -406,10 +406,6 @@ UsedSurfScript:
 	applymovement PLAYER, wMovementBuffer
 	end
 
-;.empty_fn
-	;farcall StubbedTrainerRankings_Surf
-	;ret
-
 UsedSurfText:
 	text_jump _UsedSurfText
 	db "@"
@@ -667,7 +663,6 @@ Script_UsedWaterfall:
 	ld a, [wPlayerStandingTile]
 	call CheckWaterfallTile
 	ret z
-	;farcall StubbedTrainerRankings_Waterfall
 	ld a, $1
 	ld [wScriptVar], a
 	ret

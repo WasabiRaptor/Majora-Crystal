@@ -721,8 +721,6 @@ NamingScreen_AdvanceCursor_CheckEndOfString:
 	ld a, [hl]
 	jr NamingScreen_LoadNextCharacter
 
-INCLUDE "data/text/unused_dakutens.asm"
-
 NamingScreen_DeleteCharacter:
 	ld hl, wNamingScreenCurNameLength
 	ld a, [hl]

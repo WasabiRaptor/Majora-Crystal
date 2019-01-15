@@ -306,7 +306,6 @@ ElmsLabHealingMachine:
 	end
 
 ElmsLabHealingMachine_HealParty:
-	;special StubbedTrainerRankings_Healings
 	special HealParty
 	playmusic MUSIC_NONE
 	writebyte HEALMACHINE_ELMS_LAB
