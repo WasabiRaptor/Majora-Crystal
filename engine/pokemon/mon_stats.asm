@@ -323,17 +323,6 @@ ListMovePP:
 	jr nz, .load_loop
 	ret
 
-Unreferenced_Function50cd0:
-.loop
-	ld [hl], $32
-	inc hl
-	ld [hl], $3e
-	dec hl
-	add hl, de
-	dec c
-	jr nz, .loop
-	ret
-
 Unused_PlaceEnemyHPLevel:
 	push hl
 	push hl
