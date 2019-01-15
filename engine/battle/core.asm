@@ -2319,15 +2319,9 @@ WinTrainerBattle:
 .got_defeat_phrase:
 	call StdBattleTextBox
 
-	;call IsMobileBattle
-	;jr z, .mobile
 	ld a, [wLinkMode]
 	and a
 	ret nz
-
-	ld a, [wInBattleTowerBattle]
-	bit 0, a
-	jr nz, .battle_tower
 
 	call BattleWinSlideInEnemyTrainerFrontpic
 	ld c, 40
@@ -2344,32 +2338,6 @@ WinTrainerBattle:
 
 .skip_win_loss_text
 	jp .GiveMoney
-
-;.mobile
-	;call BattleWinSlideInEnemyTrainerFrontpic
-	;ld c, 40
-	;call DelayFrames
-	;ld c, $4 ; win
-	;farcall Mobile_PrintOpponentBattleMessage
-	;ret
-
-.battle_tower
-	call BattleWinSlideInEnemyTrainerFrontpic
-	ld c, 40
-	call DelayFrames
-	call EmptyBattleTextBox
-	ld c, BATTLETOWERTEXT_LOSS_TEXT
-	farcall BattleTowerText
-	call WaitPressAorB_BlinkCursor
-	ld hl, wPayDayMoney
-	ld a, [hli]
-	or [hl]
-	inc hl
-	or [hl]
-	ret nz
-	call ClearTileMap
-	call ClearBGPalettes
-	ret
 
 .GiveMoney:
 	ld a, [wAmuletCoin]
@@ -2875,10 +2843,6 @@ LostBattle:
 	ld a, 1
 	ld [wBattleEnded], a
 
-	ld a, [wInBattleTowerBattle]
-	bit 0, a
-	jr nz, .battle_tower
-
 	ld a, [wBattleMode]
 	dec a ; wild?
 	jr z, .no_loss_text
@@ -2903,24 +2867,6 @@ LostBattle:
 	jr nz, .skip_win_loss_text
 	call PrintWinLossText
 .skip_win_loss_text
-	ret
-
-.battle_tower
-; Remove the enemy from the screen.
-	hlcoord 0, 0
-	lb bc, 8, 21
-	call ClearBox
-	call BattleWinSlideInEnemyTrainerFrontpic
-
-	ld c, 40
-	call DelayFrames
-
-	call EmptyBattleTextBox
-	ld c, BATTLETOWERTEXT_WIN_TEXT
-	farcall BattleTowerText
-	call WaitPressAorB_BlinkCursor
-	call ClearTileMap
-	call ClearBGPalettes
 	ret
 
 .no_loss_text
@@ -4937,10 +4883,6 @@ BattleMenu_Pack:
 	and a
 	jp nz, .ItemsCantBeUsed
 
-	ld a, [wInBattleTowerBattle]
-	and a
-	jp nz, .ItemsCantBeUsed
-
 	call LoadStandardMenuHeader
 
 	ld a, [wBattleType]
@@ -5955,11 +5897,6 @@ LoadEnemyMon:
 	and a
 	jp nz, InitEnemyMon
 
-; and also not in a BattleTower-Battle
-	ld a, [wInBattleTowerBattle] ; ????
-	bit 0, a
-	jp nz, InitEnemyMon
-
 ; Make sure everything knows what species we're working with
 	ld a, [wTempEnemyMonSpecies]
 	ld [wEnemyMonSpecies], a
@@ -6859,10 +6796,6 @@ BadgeStatBoosts:
 	and a
 	ret nz
 
-	ld a, [wInBattleTowerBattle]
-	and a
-	ret nz
-
 	ld a, [wJohtoBadges]
 
 ; Swap badges 3 (PlainBadge) and 5 (MineralBadge).
@@ -7046,10 +6979,6 @@ GiveExperiencePoints:
 ; Don't give experience if linked or in the Battle Tower.
 	ld a, [wLinkMode]
 	and a
-	ret nz
-
-	ld a, [wInBattleTowerBattle]
-	bit 0, a
 	ret nz
 
 	call .EvenlyDivideExpAmongParticipants
@@ -8352,9 +8281,6 @@ CheckPayDay:
 	call AddBattleMoneyToAccount
 	ld hl, BattleText_PlayerPickedUpPayDayMoney
 	call StdBattleTextBox
-	ld a, [wInBattleTowerBattle]
-	bit 0, a
-	ret z
 	call ClearTileMap
 	call ClearBGPalettes
 	ret

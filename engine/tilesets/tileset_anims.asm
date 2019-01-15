@@ -33,8 +33,8 @@ _AnimateTileset::
 
 	jp hl
 
-Tileset0Anim:
-TilesetJohtoModernAnim:
+
+TilesetInvarModernAnim:
 TilesetKantoAnim:
 	dw WaterFrames1, AnimateWaterTile
 	dw WaterFrames2, AnimateWaterTile
@@ -74,8 +74,9 @@ TilesetForestAnim:
 	dw WaterFrames2, AnimateWaterTile
 	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
-
-TilesetJohtoAnim:
+	
+Tileset0Anim:
+TilesetInvarAnim:
 	dw WaterFrames1, AnimateWaterTile
 	dw WaterFrames2, AnimateWaterTile
 	dw NULL,  WaitTileAnimation
@@ -237,7 +238,7 @@ UnusedTilesetAnim_fc2bf:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  DoneTileAnimation
 
-TilesetBattleTowerOutsideAnim:
+;TilesetBattleTowerOutsideAnim:
 TilesetHouseAnim:
 TilesetPlayersHouseAnim:
 TilesetPokecenterAnim:
@@ -253,7 +254,7 @@ TilesetChampionsRoomAnim:
 TilesetLighthouseAnim:
 TilesetPlayersRoomAnim:
 TilesetPokeComCenterAnim:
-TilesetBattleTowerAnim:
+;TilesetBattleTowerAnim:
 TilesetRuinsOfAlphAnim:
 TilesetRadioTowerAnim:
 TilesetUndergroundAnim:

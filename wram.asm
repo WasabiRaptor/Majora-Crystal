@@ -383,7 +383,7 @@ wOddEggOTName:: ds MON_NAME_LENGTH
 
 NEXTU ; c608
 ; battle tower temp struct
-wBT_OTTemp:: battle_tower_struct wBT_OTTemp
+;wBT_OTTemp:: battle_tower_struct wBT_OTTemp
 
 NEXTU ; c608
 ; hall of fame temp struct
@@ -2972,19 +2972,19 @@ w3_d081:: ds $f
 w3_d090:: ds $70
 
 w3_d100::
-wBT_OTTrainer:: battle_tower_struct wBT_OT
+;wBT_OTTrainer:: battle_tower_struct wBT_OT
 	ds $20
 wBT_TrainerTextIndex:: db ; d200
 	ds 1
-w3_d202:: battle_tower_struct w3_d202
-w3_d2e2:: battle_tower_struct w3_d2e2
-w3_d3c2:: battle_tower_struct w3_d3c2
-w3_d4a2:: battle_tower_struct w3_d4a2
-w3_d582:: battle_tower_struct w3_d582
-w3_d662:: battle_tower_struct w3_d662
+;w3_d202:: battle_tower_struct w3_d202
+;w3_d2e2:: battle_tower_struct w3_d2e2
+;w3_d3c2:: battle_tower_struct w3_d3c2
+;w3_d4a2:: battle_tower_struct w3_d4a2
+;w3_d582:: battle_tower_struct w3_d582
+;w3_d662:: battle_tower_struct w3_d662
 
 UNION ; d742
-w3_d742:: battle_tower_struct w3_d742
+;w3_d742:: battle_tower_struct w3_d742
 ; d822
 
 NEXTU ; d742

@@ -11,10 +11,10 @@ ENDM
 Tilesets::
 ; entries correspond to TILESET_* constants
 	tileset Tileset0
-	tileset TilesetJohto
-	tileset TilesetJohtoModern
+	tileset TilesetInvar
+	tileset TilesetInvarModern
 	tileset TilesetKanto
-	tileset TilesetBattleTowerOutside
+	;tileset TilesetBattleTowerOutside
 	tileset TilesetHouse
 	tileset TilesetPlayersHouse
 	tileset TilesetPokecenter
@@ -32,7 +32,7 @@ Tilesets::
 	tileset TilesetLighthouse
 	tileset TilesetPlayersRoom
 	tileset TilesetPokeComCenter
-	tileset TilesetBattleTower
+	;tileset TilesetBattleTower
 	tileset TilesetTower
 	tileset TilesetCave
 	tileset TilesetPark

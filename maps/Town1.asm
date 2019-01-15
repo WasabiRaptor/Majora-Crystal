@@ -1,4 +1,6 @@
 	const_def 2 ; object constants
+	const TEMP_MYSTERY_DUNGEON_NPC
+	const TEMP_BUGSY
 
 Town1_MapScripts:
 	db 0 ; scene scripts
