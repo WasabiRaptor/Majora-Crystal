@@ -45,4 +45,3 @@ Town1_MapEvents:
 	db 2 ; object events
 	object_event 7, 4, SPRITE_KRIS,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MysteryDungeonEnterScript, -1
 	object_event 7, 5, SPRITE_BUGSY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TempBugsyScript, -1
-
