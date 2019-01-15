@@ -242,7 +242,7 @@ GetIconGFX:
 	add hl, de
 	ld de, HeldItemIcons
 	lb bc, BANK(HeldItemIcons), 2
-	jp Request2bpp
+	call Request2bpp
 	ld a, [wCurIconTile]
 	add 10
 	ld [wCurIconTile], a
@@ -290,7 +290,7 @@ endr
 	pop hl
 
 	lb bc, BANK(Icons), 8
-	jp Request2bpp
+	call Request2bpp
 
 	pop hl
 	ret
