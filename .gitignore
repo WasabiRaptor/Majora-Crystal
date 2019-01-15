@@ -46,4 +46,4 @@ gfx/pokemon/*/frames.asm
 !gfx/trainer_card/badges.pal
 *.DS_Store
 .vs/
-.vscode
+.vscode/
