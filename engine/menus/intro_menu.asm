@@ -218,9 +218,10 @@ endc
 	farcall DeleteMobileEventIndex
 
 	call ResetGameTime
-
 	ld hl, wCycleProgress
-	ld [hl], 11
+	ld [hl], 5
+	ld hl, wCycleCount
+	ld [hl], 0
 	ret
 
 .InitList:
@@ -422,7 +423,12 @@ _ResetStuff:
 	call ByteFill
 
 	ld hl, wWhichMomItem
-	ld bc, wBikeStep - wWhichMomItem
+	ld bc, wdc60 - wWhichMomItem
+	xor a
+	call ByteFill
+
+	ld hl, wCycleProgress
+	ld bc, wBikeStep - wCycleProgress
 	xor a
 	call ByteFill
 
@@ -646,7 +652,7 @@ Continue_LoadMenuHeader:
 	db 0 ; flags
 	db 4 ; items
 	db "PLAYER@"
-	db "BADGES@"
+	db "CYCLES@"
 	db "#DEX@"
 	db "TIME@"
 
@@ -660,7 +666,7 @@ Continue_LoadMenuHeader:
 	db 0 ; flags
 	db 4 ; items
 	db "PLAYER <PLAYER>@"
-	db "BADGES@"
+	db "CYCLES@"
 	db " @"
 	db "TIME@"
 
@@ -705,7 +711,7 @@ Continue_UnknownGameTime:
 
 Continue_DisplayBadgeCount:
 	push hl
-	ld hl, wJohtoBadges
+	ld hl, wCycleCount
 	ld b, 2
 	call CountSetBits
 	pop hl
