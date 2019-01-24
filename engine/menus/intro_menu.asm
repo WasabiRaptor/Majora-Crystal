@@ -710,12 +710,7 @@ Continue_UnknownGameTime:
 	db " ???@"
 
 Continue_DisplayBadgeCount:
-	push hl
-	ld hl, wCycleCount
-	ld b, 2
-	call CountSetBits
-	pop hl
-	ld de, wNumSetBits
+	ld de, wCycleCount
 	lb bc, 1, 2
 	jp PrintNum
 
