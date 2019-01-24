@@ -364,14 +364,6 @@ CheckIndoorMap::
 	cp GATE
 	ret
 
-; unused
-	cp INDOOR
-	ret z
-	cp GATE
-	ret z
-	cp ENVIRONMENT_5
-	ret
-
 LoadMapAttributes::
 	call CopyMapPartialAndAttributes
 	call SwitchToMapScriptsBank
@@ -2138,8 +2130,6 @@ GetMapEnvironment::
 	pop de
 	pop hl
 	ret
-
-	ret ; unused
 
 GetAnyMapEnvironment::
 	push hl

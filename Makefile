@@ -9,6 +9,9 @@ RGBFIX := rgbfix
 RGBGFX := rgbgfx
 RGBLINK := rgblink
 
+PYTHON := py -2
+pcm := $(PYTHON) extras/pokemontools/pcm.py pcm
+
 roms := pokemajora.gbc pokecrystal11.gbc
 
 BUILD_DIR := build/majora/
@@ -234,3 +237,6 @@ gfx/unknown/unknown_egg.2bpp: rgbgfx += -h
 
 %.dimensions: %.png
 	tools/png_dimensions $< $@
+
+%.wav: ;
+%.pcm: %.wav   ; @$(pcm)  $<

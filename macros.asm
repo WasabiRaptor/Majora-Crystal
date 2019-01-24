@@ -17,3 +17,12 @@ INCLUDE "macros/scripts/trade_anims.asm"
 INCLUDE "macros/scripts/gfx_anims.asm"
 
 INCLUDE "macros/legacy.asm"
+
+CH0		EQU 0
+CH1		EQU 1
+CH2		EQU 2
+CH3		EQU 3
+CH4		EQU 4
+CH5		EQU 5
+CH6		EQU 6
+CH7		EQU 7
