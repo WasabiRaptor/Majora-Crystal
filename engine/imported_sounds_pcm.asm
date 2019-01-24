@@ -1,3 +1,8 @@
+PlayHMSLaugh::
+    ldimportsound e, HMSLaugh
+    call PlayImportedSoundClip
+    ret
+
 PlayImportedSoundClip::
     ld a, e
     ld a, a
