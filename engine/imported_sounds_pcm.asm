@@ -3,7 +3,20 @@ PlayHMSLaugh::
     call PlayImportedSoundClip
     ret
 
+PlayWind1::
+    ldimportsound e, Wind1
+    call PlayImportedSoundClip
+    ret
+
+PlayWind2::
+    ldimportsound e, Wind2
+    call PlayImportedSoundClip
+    ret
+
 PlayImportedSoundClip::
+	;xor a
+	;ld [wMusicPlaying], a
+
     ld a, e
     ld a, a
     ld d, $0
@@ -88,6 +101,9 @@ PlayImportedSoundClip::
 	ld [wChannels+CH7], a
 	ld a, [hROMBank]
 	ei
+    
+	;ld a, 1
+	;ld [wMusicPlaying], a
 	ret
 
 ImportedSoundsPointerTable:
@@ -97,4 +113,6 @@ ImportedSoundsPointerTable:
 
 ; bank ??
     importsound_def HMSLaugh
+    importsound_def Wind1
+    importsound_def Wind2
     
