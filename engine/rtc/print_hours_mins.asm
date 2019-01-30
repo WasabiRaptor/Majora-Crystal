@@ -6,19 +6,19 @@ PrintHoursMins:
 	jr c, .AM
 	jr z, .PM
 	ld a, [wOptions2]
-	bit MILITARY_TIME, a
+	bit CLOCK_FORMAT, a
 	ld a, b
-	jr z, .PM
+	jr nz, .PM
 	sub 12
 	jr .PM
 .AM:
 	or a
 	jr nz, .PM
-	ld a, 12
 	ld a, [wOptions2]
-	bit MILITARY_TIME, a
-	jr nz, .PM
-	ld a, 24
+	bit CLOCK_FORMAT, a
+	ld a, 12
+	jr z, .PM
+	ld a, 0
 .PM:
 	ld b, a
 ; Crazy stuff happening with the stack
@@ -49,8 +49,8 @@ PrintHoursMins:
 	ld de, String_PM
 .place_am_pm
 	ld a, [wOptions2]
-	bit MILITARY_TIME, a
-	jr nz, .not_24_hours
+	bit CLOCK_FORMAT, a
+	jr z, .not_24_hours
 	ld de, String_24_Hours
 .not_24_hours
 	inc hl
