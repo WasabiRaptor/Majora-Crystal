@@ -6,7 +6,7 @@ PrintHoursMins:
 	jr c, .AM
 	jr z, .PM
 	ld a, [wOptions]
-	bit 24_HOUR_TIME, a
+	bit MILITARY_TIME, a
 	ld a, b
 	jr z, .PM
 	sub 12
@@ -16,7 +16,7 @@ PrintHoursMins:
 	jr nz, .PM
 	ld a, 12
 	ld a, [wOptions]
-	bit 24_HOUR_TIME, a
+	bit MILITARY_TIME, a
 	jr nz, .PM
 	ld a, 24
 .PM:
@@ -49,7 +49,7 @@ PrintHoursMins:
 	ld de, String_PM
 .place_am_pm
 	ld a, [wOptions]
-	bit 24_HOUR_TIME, a
+	bit MILITARY_TIME, a
 	jr nz, .not_24_hours
 	ld de, String_24_Hours
 .not_24_hours

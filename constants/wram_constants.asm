@@ -32,7 +32,7 @@ TEXT_DELAY_MASK EQU %111
 	const STEREO         ; 5
 	const BATTLE_SHIFT   ; 6
 	const BATTLE_SCENE   ; 7
-	const 24_HOUR_TIME   ; 8
+	const MILITARY_TIME  ; 8
 
 TEXT_DELAY_FAST EQU %001 ; 1
 TEXT_DELAY_MED  EQU %011 ; 3
