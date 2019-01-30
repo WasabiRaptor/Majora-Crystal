@@ -1579,6 +1579,7 @@ wGBPrinter:: ; cfd0
 	db
 wOptions2:: ; cfd1
 ; bit 1: menu account off/on
+; bit 2: clock format
 	db
 	ds 2
 wOptionsEnd::

@@ -49,29 +49,93 @@ TextBox::
 	call TextBoxBorder
 	pop hl
 	pop bc
-	jr TextBoxPalette
+	call TextBoxPalette
+	ret
 
 TextBoxBorder::
 	; Top
 	push hl
+	ld a, [hl]
+	cp "└"
+	jr z, .topleftcornerbranch1
+	cp "│"
+	jr z, .topleftcornerbranch1
+	cp "─"
+	jr z, .topleftcornerbranch2
+	cp "┐"
+	jr z, .topleftcornerbranch2
+	cp "├"
+	jr z, .topleftcornerbranch1
+	cp "┬"
+	jr z, .topleftcornerbranch2
+
 	ld a, "┌"
+.placetopleftcorner
 	ld [hli], a
-	inc a ; "─"
-	call .PlaceChars
-	inc a ; "┐"
+	call .PlaceLineTop
+	ld a, [hl]
+	ld a, [hl]
+	cp "│"
+	jr z, .toprightcornerbranch1
+	cp "─"
+	jr z, .toprightcornerbranch2
+	cp "┘"
+	jr z, .toprightcornerbranch1
+	cp "┌"
+	jr z, .toprightcornerbranch2
+	cp "┤"
+	jr z, .toprightcornerbranch1
+	cp "┬"
+	jr z, .toprightcornerbranch2
+	ld a, "┐"
+.placetoprightcorner
 	ld [hl], a
 	pop hl
-
+	jr .middle
+.toprightcornerbranch1
+	ld a, "┤"
+	jr .placetoprightcorner
+.toprightcornerbranch2
+	ld a, "┬"
+	jr .placetoprightcorner
+.topleftcornerbranch1
+	ld a, "├"
+	jr .placetopleftcorner
+.topleftcornerbranch2
+	ld a, "┬"
+	jr .placetopleftcorner
+.middle
 	; Middle
 	ld de, SCREEN_WIDTH
 	add hl, de
 .row
 	push hl
+	ld a, [hl]
+	cp "┐"
+	jr z, .leftwallbranch
+	cp "┘"
+	jr z, .leftwallbranch
+	cp "─"
+	jr z, .leftwallbranch
+	cp "┤"
+	jr z, .leftwallbranch
 	ld a, "│"
+.placeleftwall
 	ld [hli], a
 	ld a, " "
 	call .PlaceChars
-	ld [hl], "│"
+	ld a, [hl]
+	cp "┌"
+	jr z, .rightwallbranch
+	cp "└"
+	jr z, .rightwallbranch
+	cp "─"
+	jr z, .rightwallbranch
+	cp "├"
+	jr z, .rightwallbranch
+	ld a, "│"
+.placerightwall
+	ld [hl], a
 	pop hl
 
 	ld de, SCREEN_WIDTH
@@ -80,13 +144,58 @@ TextBoxBorder::
 	jr nz, .row
 
 	; Bottom
+	cp "│"
+	jr z, .bottomleftcornerbranch1
+	cp "─"
+	jr z, .bottomleftcornerbranch2
+	cp "┌"
+	jr z, .bottomleftcornerbranch1
+	cp "┘"
+	jr z, .bottomleftcornerbranch2
+	cp "├"
+	jr z, .bottomleftcornerbranch1
+	cp "┴"
+	jr z, .bottomleftcornerbranch2
 	ld a, "└"
+.placebottomleftcorner
 	ld [hli], a
-	ld a, "─"
-	call .PlaceChars
-	ld [hl], "┘"
-
+	call .PlaceLineBottom
+	ld a, [hl]
+	cp "│"
+	jr z, .bottomrightcornerbranch1
+	cp "─"
+	jr z, .bottomrightcornerbranch2
+	cp "└"
+	jr z, .bottomrightcornerbranch2
+	cp "┐"
+	jr z, .bottomrightcornerbranch1
+	cp "┤"
+	jr z, .bottomrightcornerbranch1
+	cp "┴"
+	jr z, .bottomrightcornerbranch2
+	ld a, "┘"
+.placebottomrightcorner
+	ld [hl], a
 	ret
+
+.leftwallbranch
+	ld a, "┤"
+	jr .placeleftwall
+.rightwallbranch
+	ld a, "├"
+	jr .placerightwall
+.bottomrightcornerbranch1
+	ld a, "┤"
+	jr .placebottomrightcorner
+.bottomrightcornerbranch2
+	ld a, "┴"
+	jr .placebottomrightcorner
+.bottomleftcornerbranch1
+	ld a, "├"
+	jr .placebottomleftcorner
+.bottomleftcornerbranch2
+	ld a, "┴"
+	jr .placebottomleftcorner
 
 .PlaceChars:
 ; Place char a c times.
@@ -96,6 +205,52 @@ TextBoxBorder::
 	dec d
 	jr nz, .loop
 	ret
+	
+.PlaceLineTop:
+; Place char a c times.
+	ld d, c
+.linelooptop
+	ld a, [hl]
+	cp "│"
+	jr z, .linebranchtop
+	cp "└"
+	jr z, .linebranchtop
+	cp "┘"
+	jr z, .linebranchtop
+	cp "┴"
+	jr z, .linebranchtop
+	ld a, "─"
+.linegottiletop
+	ld [hli], a
+	dec d
+	jr nz, .linelooptop
+	ret
+.linebranchtop
+	ld a, "┴"
+	jr .linegottiletop
+
+.PlaceLineBottom:
+; Place char a c times.
+	ld d, c
+.lineloopbottom
+	ld a, [hl]
+	cp "│"
+	jr z, .linebranchbottom
+	cp "┌"
+	jr z, .linebranchbottom
+	cp "┐"
+	jr z, .linebranchbottom
+	cp "┬"
+	jr z, .linebranchbottom
+	ld a, "─"
+.linegottilebottom
+	ld [hli], a
+	dec d
+	jr nz, .lineloopbottom
+	ret
+.linebranchbottom
+	ld a, "┬"
+	jr .linegottilebottom
 
 TextBoxPalette::
 ; Fill text box width c height b at hl with pal 7

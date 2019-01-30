@@ -197,32 +197,32 @@ StartMenu::
 .QuitString:     db "QUIT@"
 
 .PokedexDesc:
-	db   "#MON"
-	next "database@"
+	db   ""
+	next "#MON database@"
 
 .PartyDesc:
-	db   "Party <PKMN>"
-	next "status@"
+	db   ""
+	next "Party <PKMN> status@"
 
 .PackDesc:
-	db   "Contains"
-	next "items@"
+	db   ""
+	next "Contains items@"
 
 .PokegearDesc:
-	db   "Trainer's"
-	next "key device@"
+	db   ""
+	next "Trainer's device@"
 
 .StatusDesc:
-	db   "Your own"
-	next "status@"
+	db   ""
+	next "Your own status@"
 
 .SaveDesc:
-	db   "Save your"
-	next "progress@"
+	db   ""
+	next "Save and reset@"
 
 .OptionDesc:
-	db   "Change"
-	next "settings@"
+	db   ""
+	next "Change settings@"
 
 .ExitDesc:
 	db   "Close this"
@@ -337,8 +337,8 @@ endr
 
 	ld a, STARTMENUITEM_OPTION
 	call .AppendMenuList
-	ld a, STARTMENUITEM_EXIT
-	call .AppendMenuList
+	;ld a, STARTMENUITEM_EXIT
+	;call .AppendMenuList
 	ld a, c
 	ld [wMenuItemsList], a
 	ret
@@ -367,18 +367,18 @@ endr
 	call .IsMenuAccountOn
 	ret z
 	call ._DrawMenuAccount
-	decoord 0, 14
+	decoord 1, 14
 	jp .MenuDesc
 
 ._DrawMenuAccount:
 	call .IsMenuAccountOn
 	ret z
-	hlcoord 0, 13
-	lb bc, 5, 10
-	call ClearBox
-	hlcoord 0, 13
-	ld b, 3
-	ld c, 8
+	hlcoord 0, 15
+	lb bc, 1, 18
+	call TextBox
+	hlcoord 0, 15
+	lb bc, 3, 20
+	;ld c, 8
 	jp TextBoxPalette
 
 .IsMenuAccountOn:

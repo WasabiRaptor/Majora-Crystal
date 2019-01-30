@@ -69,7 +69,7 @@ StringOptions:
 	db "        :<LF>"
 	db "SOUND<LF>"
 	db "        :<LF>"
-	db "PRINT<LF>"
+	db "TIME<LF>"
 	db "        :<LF>"
 	db "MENU ACCOUNT<LF>"
 	db "        :<LF>"
@@ -94,7 +94,7 @@ GetOptionPointer:
 	dw Options_BattleScene
 	dw Options_BattleStyle
 	dw Options_Sound
-	dw Options_Print
+	dw Options_Time
 	dw Options_MenuAccount
 	dw Options_Frame
 	dw Options_Cancel
@@ -408,6 +408,44 @@ GetPrinterSetting:
 	ld c, OPT_PRINT_DARKEST
 	lb de, GBPRINTER_DARKER, GBPRINTER_LIGHTEST
 	ret
+
+Options_Time:
+	ld hl, wOptions2
+	ldh a, [hJoyPressed]
+	bit D_LEFT_F, a
+	jr nz, .LeftPressed
+	bit D_RIGHT_F, a
+	jr z, .NonePressed
+	bit CLOCK_FORMAT, [hl]
+	jr nz, .Toggle12h
+	jr .Toggle24h
+	
+.LeftPressed:
+	bit CLOCK_FORMAT, [hl]
+	jr z, .Toggle24h
+	jr .Toggle12h
+	
+.NonePressed:
+	bit CLOCK_FORMAT, [hl]
+	jr nz, .Toggle24h
+
+.Toggle12h:
+	res CLOCK_FORMAT, [hl]
+	ld de, .TwelveH
+	jr .Display
+
+.Toggle24h:
+	set CLOCK_FORMAT, [hl]
+	ld de, .TwentyFourH
+
+.Display:
+	hlcoord 11, 11
+	call PlaceString
+	and a
+	ret
+	
+.TwelveH: db "12 Hr@"
+.TwentyFourH: db "24 Hr@"
 
 Options_MenuAccount:
 	ld hl, wOptions2
