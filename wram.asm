@@ -1556,6 +1556,7 @@ wOptions:: ; cfcc
 ; bit 5: stereo off/on
 ; bit 6: battle style shift/set
 ; bit 7: battle scene off/on
+; bit 8: 12 hour or 24 hour
 	db
 wSaveFileExists:: db
 wTextBoxFrame:: ; cfce

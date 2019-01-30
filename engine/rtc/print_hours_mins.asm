@@ -5,12 +5,20 @@ PrintHoursMins:
 	push af
 	jr c, .AM
 	jr z, .PM
+	ld a, [wOptions]
+	bit 24_HOUR_TIME, a
+	ld a, b
+	jr z, .PM
 	sub 12
 	jr .PM
 .AM:
 	or a
 	jr nz, .PM
 	ld a, 12
+	ld a, [wOptions]
+	bit 24_HOUR_TIME, a
+	jr nz, .PM
+	ld a, 24
 .PM:
 	ld b, a
 ; Crazy stuff happening with the stack
@@ -40,9 +48,15 @@ PrintHoursMins:
 	jr c, .place_am_pm
 	ld de, String_PM
 .place_am_pm
+	ld a, [wOptions]
+	bit 24_HOUR_TIME, a
+	jr nz, .not_24_hours
+	ld de, String_24_Hours
+.not_24_hours
 	inc hl
 	call PlaceString
 	ret
 
 String_AM: db "AM@"
 String_PM: db "PM@"
+String_24_Hours: db "@"
