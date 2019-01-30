@@ -5,7 +5,7 @@ PrintHoursMins:
 	push af
 	jr c, .AM
 	jr z, .PM
-	ld a, [wOptions]
+	ld a, [wOptions2]
 	bit MILITARY_TIME, a
 	ld a, b
 	jr z, .PM
@@ -15,7 +15,7 @@ PrintHoursMins:
 	or a
 	jr nz, .PM
 	ld a, 12
-	ld a, [wOptions]
+	ld a, [wOptions2]
 	bit MILITARY_TIME, a
 	jr nz, .PM
 	ld a, 24
@@ -48,7 +48,7 @@ PrintHoursMins:
 	jr c, .place_am_pm
 	ld de, String_PM
 .place_am_pm
-	ld a, [wOptions]
+	ld a, [wOptions2]
 	bit MILITARY_TIME, a
 	jr nz, .not_24_hours
 	ld de, String_24_Hours

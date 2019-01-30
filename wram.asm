@@ -1556,7 +1556,6 @@ wOptions:: ; cfcc
 ; bit 5: stereo off/on
 ; bit 6: battle style shift/set
 ; bit 7: battle scene off/on
-; bit 8: 12 hour or 24 hour
 	db
 wSaveFileExists:: db
 wTextBoxFrame:: ; cfce
@@ -1575,7 +1574,8 @@ wGBPrinter:: ; cfd0
 ;   darkest:  $7F
 	db
 wOptions2:: ; cfd1
-; bit 1: menu account off/on
+; bit 0: menu account off/on
+; bit 1: Military time
 	db
 	ds 2
 wOptionsEnd::

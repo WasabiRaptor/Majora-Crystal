@@ -376,7 +376,7 @@ GetTimeOfDayString:
 
 AdjustHourForAMorPM:
 ; Convert the hour stored in c (0-23) to a 1-12 value
-	ld a, [wOptions]
+	ld a, [wOptions2]
 	bit MILITARY_TIME, a
 	ld a, c
 	ret z
