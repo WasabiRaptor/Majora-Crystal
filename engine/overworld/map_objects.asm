@@ -1187,7 +1187,6 @@ PlayerJump:
 	set 7, [hl]
 	call IncrementObjectStructField1c
 .thirdstep
-	call UpdateJumpPosition
 	call UpdatePlayerStep
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
@@ -1200,6 +1199,7 @@ PlayerJump:
 	add hl, bc
 	ld [hl], STEP_TYPE_SLEEP
 	ret
+	
 TeleportFrom:
 	call Field1cAnonymousJumptable
 ; anonymous dw
