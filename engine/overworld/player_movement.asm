@@ -420,8 +420,8 @@ DoPlayerMovement::
 	ld a, [wPlayerStandingTile]
 	ld e, a
 	and $f0
-	;cp HI_NYBBLE_DIAGONAL_STAIRS_DOWN
-	;jr z, .GoingDownDiagonal
+	cp HI_NYBBLE_DIAGONAL_STAIRS_DOWN
+	jr z, .GoingDownDiagonal
 	cp HI_NYBBLE_DIAGONAL_STAIRS_UP
 	jr nz, .DontDiagonalStairs
 
@@ -445,8 +445,6 @@ DoPlayerMovement::
 .FacingStairsTable
 	db FACE_RIGHT
 	db FACE_LEFT
-	db FACE_UP
-	db FACE_DOWN
 
 .DontDiagonalStairs:
 	xor a

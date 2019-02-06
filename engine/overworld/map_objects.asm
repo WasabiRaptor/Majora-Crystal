@@ -1192,7 +1192,7 @@ PlayerDiagonalStairs:
 	dw .initdiagonalvertical
 	dw .stepdiagonalvertical
 
-.initdiagonalhorizontal2; GetNextTile is only needed on the second time but it does exactly the same thing
+.initdiagonalhorizontal2; GetNextTile is only needed on the second time but it does exactly the same thing so this should save space
 	call GetNextTile
 .initdiagonalhorizontal1 
 	ld hl, wPlayerStepFlags
