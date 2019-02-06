@@ -1135,6 +1135,8 @@ PlayerJump:
 	dw .stepjump
 	dw .initland
 	dw .stepland
+	dw .thirdstepinit
+	dw .thirdstep
 
 .initjump
 	ld hl, wPlayerStepFlags
@@ -1169,6 +1171,28 @@ PlayerJump:
 	add hl, bc
 	dec [hl]
 	ret nz
+	call CopyNextCoordsTileToStandingCoordsTile
+	ld hl, OBJECT_FLAGS2
+	add hl, bc
+	res 3, [hl]
+	ld hl, wPlayerStepFlags
+	set 6, [hl]
+	set 4, [hl]
+	call IncrementObjectStructField1c
+	ret
+
+.thirdstepinit
+	call GetNextTile
+	ld hl, wPlayerStepFlags
+	set 7, [hl]
+	call IncrementObjectStructField1c
+.thirdstep
+	call UpdateJumpPosition
+	call UpdatePlayerStep
+	ld hl, OBJECT_STEP_DURATION
+	add hl, bc
+	dec [hl]
+	ret nz
 	ld hl, wPlayerStepFlags
 	set 6, [hl]
 	call CopyNextCoordsTileToStandingCoordsTile
@@ -1176,7 +1200,6 @@ PlayerJump:
 	add hl, bc
 	ld [hl], STEP_TYPE_SLEEP
 	ret
-
 TeleportFrom:
 	call Field1cAnonymousJumptable
 ; anonymous dw
