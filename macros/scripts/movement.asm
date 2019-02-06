@@ -244,3 +244,11 @@ ENDM
 skyfall_top: MACRO
 	db movement_skyfall_top
 ENDM
+
+;diagonal stairs
+	enum movement_diagonal_stairs_step ; $60
+diagonal_stairs_step: MACRO
+	db movement_diagonal_stairs_step | \1
+ENDM
+
+__enum__ = __enum__ + 3

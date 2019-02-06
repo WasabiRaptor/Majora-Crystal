@@ -104,8 +104,8 @@
 	tilecoll HEADBUTT_TREE, HEADBUTT_TREE, HEADBUTT_TREE, FLOOR ; 67
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 68
 	tilecoll FLOOR, WALL, FLOOR, WALL ; 69
-	tilecoll FLOOR, FLOOR, WALL, UP_WALL ; 6a
-	tilecoll FLOOR, FLOOR, UP_WALL, WALL ; 6b
+	tilecoll WALL, WALL, WALL, FLOOR ; 6a
+	tilecoll WALL, WALL, FLOOR, WALL ; 6b
 	tilecoll WALL, FLOOR, WALL, WALL ; 6c
 	tilecoll FLOOR, WALL, WALL, WALL ; 6d
 	tilecoll FLOOR, FLOOR, WALL, FLOOR ; 6e
@@ -115,14 +115,18 @@
 	tilecoll FLOOR, FLOOR, WALL, WALL ; 72
 	tilecoll FLOOR, FLOOR, CAVE, WALL ; 73
 	tilecoll FLOOR, FLOOR, FLOOR, WALL ; 74
-	tilecoll WALL, WALL, FLOOR, FLOOR ; 75
+	tilecoll WATER, WATER, WALL, WALL ; 75
 	tilecoll WATER, WATER, WATER, WATER ; 76
-	tilecoll WALL, FLOOR, WALL, FLOOR ; 77
+	tilecoll WATER, WATER, WALL, WALL ; 77
 	tilecoll FLOOR, FLOOR, FLOOR, WALL ; 78
 	tilecoll WATER, WATER, WATER, WATER ; 79
 	tilecoll WATER, WATER, WATER, WATER ; 7a
-	tilecoll FLOOR, WALL, FLOOR, WALL ; 7b
-	tilecoll WALL, WALL, WALL, WALL ; 7c
-	tilecoll WALL, WALL, WALL, WALL ; 7d
-	tilecoll WALL, WALL, WALL, WALL ; 7e
-	tilecoll WALL, WALL, WALL, WALL ; 7f
+	tilecoll WATER, WATER, WALL, WALL ; 7b
+	tilecoll FLOOR, FLOOR, FLOOR, DIAGONAL_STAIRS_UP_RIGHT ; 7c
+	tilecoll WALL, DIAGONAL_STAIRS_DOWN_LEFT, WALL, FLOOR ; 7d
+	tilecoll DIAGONAL_STAIRS_DOWN_RIGHT, WALL, FLOOR, WALL ; 7e
+	tilecoll FLOOR, FLOOR, DIAGONAL_STAIRS_UP_LEFT, FLOOR ; 7f
+	tilecoll FLOOR, FLOOR, WALL, WALL ; 80
+	tilecoll FLOOR, FLOOR, WALL, WALL ; 81
+	tilecoll FLOOR, FLOOR, WALL, WALL ; 82
+	tilecoll FLOOR, FLOOR, WALL, WALL ; 83

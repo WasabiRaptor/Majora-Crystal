@@ -55,6 +55,8 @@ DoPlayerMovement::
 	ret c
 	call .TryJump
 	ret c
+	call .TryDiagonalStairs
+	ret c
 	call .CheckWarp
 	ret c
 	jr .NotMoving
@@ -80,6 +82,8 @@ DoPlayerMovement::
 	call .TryStep
 	ret c
 	call .TryJump
+	ret c
+	call .TryDiagonalStairs
 	ret c
 	call .CheckWarp
 	ret c
@@ -412,6 +416,40 @@ DoPlayerMovement::
 	db FACE_UP | FACE_RIGHT   ; COLL_HOP_UP_RIGHT
 	db FACE_UP | FACE_LEFT    ; COLL_HOP_UP_LEFT
 
+.TryDiagonalStairs
+	ld a, [wPlayerStandingTile]
+	ld e, a
+	and $f0
+	cp HI_NYBBLE_DIAGONAL_STAIRS_DOWN
+	jr z, .GoingDownDiagonal
+	cp HI_NYBBLE_DIAGONAL_STAIRS_UP
+	jr nz, .DontDiagonalStairs
+
+.GoingDownDiagonal
+	ld a, e
+	and 7
+	ld e, a
+	ld d, 0
+	ld hl, .FacingStairsTable
+	add hl, de
+	ld a, [wFacingDirection]
+	and [hl]
+	jr z, .DontDiagonalStairs
+
+	ld a, STEP_DIAGONAL_STAIRS
+	call .DoStep
+	ld a, 7
+	scf
+	ret
+
+.FacingStairsTable
+	db FACE_RIGHT
+	db FACE_LEFT
+
+.DontDiagonalStairs:
+	xor a
+	ret
+
 .CheckWarp:
 	ld a, [wWalkingDirection]
 	cp STANDING
@@ -488,6 +526,7 @@ DoPlayerMovement::
 	dw .SlideStep
 	dw .TurningStep
 	dw .BackJumpStep
+	dw .DiagonalStairsStep
 	dw .FinishFacing
 
 .SlowStep:
@@ -525,6 +564,11 @@ DoPlayerMovement::
 	turn_step UP
 	turn_step LEFT
 	turn_step RIGHT
+.DiagonalStairsStep
+	diagonal_stairs_step DOWN
+	diagonal_stairs_step UP
+	diagonal_stairs_step LEFT
+	diagonal_stairs_step RIGHT
 .FinishFacing:
 	db $80 + DOWN
 	db $80 + UP

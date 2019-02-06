@@ -1083,6 +1083,8 @@ StepTypesJumptable:
 	dw StepType17 ; 17
 	dw StepType18 ; 18
 	dw SkyfallTop ; 19
+	dw NPCDiagonalStairs ;20
+	dw PlayerDiagonalStairs ;21
 
 WaitStep_InPlace:
 	ld hl, OBJECT_STEP_DURATION
@@ -1135,8 +1137,6 @@ PlayerJump:
 	dw .stepjump
 	dw .initland
 	dw .stepland
-	dw .thirdstepinit
-	dw .thirdstep
 
 .initjump
 	ld hl, wPlayerStepFlags
@@ -1171,6 +1171,39 @@ PlayerJump:
 	add hl, bc
 	dec [hl]
 	ret nz
+	ld hl, wPlayerStepFlags
+	set 6, [hl]
+	call CopyNextCoordsTileToStandingCoordsTile
+	ld hl, OBJECT_STEP_TYPE
+	add hl, bc
+	ld [hl], STEP_TYPE_SLEEP
+	ret
+
+NPCDiagonalStairs:
+	ret
+
+;diagonal stairs
+PlayerDiagonalStairs:
+	call Field1cAnonymousJumptable ;jumptable that determines what the player sprite is doing at the moment I think
+	dw .initdiagonalhorizontal1
+	dw .stepdiagonalhorizontal
+	dw .initdiagonalhorizontal2
+	dw .stepdiagonalhorizontal
+	dw .initdiagonalvertical
+	dw .stepdiagonalvertical
+
+.initdiagonalhorizontal2; GetNextTile is only needed on the second time but it does exactly the same thing
+	call GetNextTile
+.initdiagonalhorizontal1 
+	ld hl, wPlayerStepFlags
+	set 7, [hl]
+	call IncrementObjectStructField1c
+.stepdiagonalhorizontal
+	call UpdatePlayerStep
+	ld hl, OBJECT_STEP_DURATION
+	add hl, bc
+	dec [hl]
+	ret nz
 	call CopyNextCoordsTileToStandingCoordsTile
 	ld hl, OBJECT_FLAGS2
 	add hl, bc
@@ -1181,12 +1214,12 @@ PlayerJump:
 	call IncrementObjectStructField1c
 	ret
 
-.thirdstepinit
+.initdiagonalvertical
 	call GetNextTile
 	ld hl, wPlayerStepFlags
 	set 7, [hl]
 	call IncrementObjectStructField1c
-.thirdstep
+.stepdiagonalvertical
 	call UpdatePlayerStep
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
@@ -1199,7 +1232,8 @@ PlayerJump:
 	add hl, bc
 	ld [hl], STEP_TYPE_SLEEP
 	ret
-	
+
+
 TeleportFrom:
 	call Field1cAnonymousJumptable
 ; anonymous dw

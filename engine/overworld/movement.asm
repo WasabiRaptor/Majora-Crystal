@@ -90,6 +90,10 @@ MovementPointers:
 	dw Movement_rock_smash            ; 57
 	dw Movement_return_dig            ; 58
 	dw Movement_skyfall_top           ; 59
+	dw Movement_diagonal_stairs_step_down
+	dw Movement_diagonal_stairs_step_up
+	dw Movement_diagonal_stairs_step_right
+	dw Movement_diagonal_stairs_step_left
 
 Movement_teleport_from:
 	ld hl, OBJECT_STEP_TYPE
@@ -629,6 +633,23 @@ Movement_fast_jump_step_right:
 	ld a, STEP_BIKE << 2 | RIGHT
 	jp JumpStep
 
+;diagonal stairs
+Movement_diagonal_stairs_step_down:
+	ld a, STEP_WALK << 2 | DOWN
+	jp DiagonalStairsStep
+
+Movement_diagonal_stairs_step_up:
+	ld a, STEP_WALK << 2 | UP
+	jp DiagonalStairsStep
+
+Movement_diagonal_stairs_step_left:
+	ld a, STEP_WALK << 2 | LEFT
+	jp DiagonalStairsStep
+
+Movement_diagonal_stairs_step_right:
+	ld a, STEP_WALK << 2 | RIGHT
+	jp DiagonalStairsStep
+
 Movement_turn_step_down:
 	ld a, OW_DOWN
 	jr TurnStep
@@ -773,4 +794,31 @@ JumpStep:
 	ld hl, OBJECT_STEP_TYPE
 	add hl, bc
 	ld [hl], STEP_TYPE_PLAYER_JUMP
+	ret
+
+;diagonal stairs 
+DiagonalStairsStep:
+	call InitStep
+	ld hl, OBJECT_1F
+	add hl, bc
+	ld [hl], $0
+
+	ld hl, OBJECT_ACTION
+	add hl, bc
+	ld [hl], OBJECT_ACTION_STEP
+
+	ld hl, wCenteredObject
+	ldh a, [hMapObjectIndexBuffer]
+	cp [hl]
+	jr z, .player
+
+	ld hl, OBJECT_STEP_TYPE
+	add hl, bc
+	ld [hl], STEP_TYPE_NPC_DIAGONAL_STAIRS
+	ret
+
+.player
+	ld hl, OBJECT_STEP_TYPE
+	add hl, bc
+	ld [hl], STEP_TYPE_PLAYER_DIAGONAL_STAIRS
 	ret
