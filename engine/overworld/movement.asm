@@ -92,8 +92,8 @@ MovementPointers:
 	dw Movement_skyfall_top           ; 59
 	dw Movement_diagonal_stairs_step_down
 	dw Movement_diagonal_stairs_step_up
-	dw Movement_diagonal_stairs_step_right
 	dw Movement_diagonal_stairs_step_left
+	dw Movement_diagonal_stairs_step_right
 
 Movement_teleport_from:
 	ld hl, OBJECT_STEP_TYPE

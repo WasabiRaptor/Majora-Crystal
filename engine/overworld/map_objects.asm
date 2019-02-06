@@ -1199,6 +1199,7 @@ PlayerDiagonalStairs:
 	set 7, [hl]
 	call IncrementObjectStructField1c
 .stepdiagonalhorizontal
+	call UpdateDiagonalStairsPosition
 	call UpdatePlayerStep
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
@@ -1220,6 +1221,7 @@ PlayerDiagonalStairs:
 	set 7, [hl]
 	call IncrementObjectStructField1c
 .stepdiagonalvertical
+	call UpdateDiagonalStairsPosition
 	call UpdatePlayerStep
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
@@ -1843,6 +1845,31 @@ UpdateJumpPosition:
 .y
 	db  -4,  -6,  -8, -10, -11, -12, -12, -12
 	db -11, -10,  -9,  -8,  -6,  -4,   0,   0
+
+UpdateDiagonalStairsPosition:
+	call GetStepVector
+	ld a, h
+	ld hl, OBJECT_1F
+	add hl, bc
+	ld e, [hl]
+	add e
+	ld [hl], a
+	nop
+	srl e
+	ld d, 0
+	ld hl, .y
+	add hl, de
+	ld a, [hl]
+	ld hl, OBJECT_SPRITE_Y_OFFSET
+	add hl, bc
+	ld [hl], a
+	ret
+
+.y
+	db  -1,  -2,  -3, -4, -5, -6, -7, -8
+	db -9, -10,  -11,  -12,  -13,  -14,  -15,   -16
+	db -14, -12,  -10,  -8,  -6,  -4,   -2,   0
+
 Function5000: ; unscripted?
 ; copy [wPlayerNextMovement] to [wPlayerMovement]
 	ld a, [wPlayerNextMovement]
