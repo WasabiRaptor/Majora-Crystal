@@ -421,12 +421,11 @@ DoPlayerMovement::
 	ld e, a
 	and $f0
 	cp HI_NYBBLE_DIAGONAL_STAIRS_DOWN
-	;set some unused bit to decide going down here
 	jr z, .GoingDownDiagonal ;if we are going down then go down right away
 	cp HI_NYBBLE_DIAGONAL_STAIRS_UP;if not check if we're going up
 	jr nz, .DontDiagonalStairs;if not going up we're not doing stairs at all
 	;set some unused bit to decide we're goign up
-
+	
 	;fallthrough
 .GoingDownDiagonal
 	ld a, e

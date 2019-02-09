@@ -56,6 +56,10 @@ MovementPointers:
 	dw Movement_fast_jump_step_up     ; 35
 	dw Movement_fast_jump_step_left   ; 36
 	dw Movement_fast_jump_step_right  ; 37
+	dw Movement_diagonal_stairs_step_down
+	dw Movement_diagonal_stairs_step_up
+	dw Movement_diagonal_stairs_step_left
+	dw Movement_diagonal_stairs_step_right
 	dw Movement_remove_sliding        ; 38
 	dw Movement_set_sliding           ; 39
 	dw Movement_remove_fixed_facing   ; 3a
@@ -90,10 +94,7 @@ MovementPointers:
 	dw Movement_rock_smash            ; 57
 	dw Movement_return_dig            ; 58
 	dw Movement_skyfall_top           ; 59
-	dw Movement_diagonal_stairs_step_down
-	dw Movement_diagonal_stairs_step_up
-	dw Movement_diagonal_stairs_step_left
-	dw Movement_diagonal_stairs_step_right
+	
 
 Movement_teleport_from:
 	ld hl, OBJECT_STEP_TYPE
@@ -797,7 +798,7 @@ JumpStep:
 	ret
 
 ;diagonal stairs 
-DiagonalStairsStep:
+DiagonalStairsStep: ;the issue on turning is not here
 	call InitStep
 	ld hl, OBJECT_1F
 	add hl, bc

@@ -1183,7 +1183,7 @@ NPCDiagonalStairs:
 	ret
 
 ;diagonal stairs
-PlayerDiagonalStairs:
+PlayerDiagonalStairs: ;I know for a fact that the rotating issue is not here
 	call Field1cAnonymousJumptable ;jumptable that determines what the player sprite is doing at the moment I think
 	dw .initdiagonalhorizontal1
 	dw .stepdiagonalhorizontal
@@ -1216,6 +1216,21 @@ PlayerDiagonalStairs:
 	ret
 
 .initdiagonalvertical
+	ld a, [wMetatileStandingY]
+	and a
+
+	ld hl, OBJECT_ACTION
+	add hl, bc
+	ld [hl], OBJECT_ACTION_STAND
+
+	ld hl, OBJECT_DIRECTION_WALKING
+	add hl, bc
+	ld [hl], DOWN
+
+	jr z, .goingdown ;go up if we're not going down
+
+	ld [hl], UP 
+.goingdown
 	call GetNextTile
 	ld hl, wPlayerStepFlags
 	set 7, [hl]
@@ -1857,7 +1872,14 @@ UpdateDiagonalStairsPosition:
 	nop
 	srl e
 	ld d, 0
-	ld hl, .y
+
+	ld a, [wMetatileStandingY]
+	and a
+
+	ld hl, .yDown
+	jr z, .goingdown
+	ld hl, .yUp
+.goingdown
 	add hl, de
 	ld a, [hl]
 	ld hl, OBJECT_SPRITE_Y_OFFSET
@@ -1865,10 +1887,15 @@ UpdateDiagonalStairsPosition:
 	ld [hl], a
 	ret
 
-.y
-	db  -1,  -2,  -3, -4, -5, -6, -7, -8
-	db -9, -10,  -11,  -12,  -13,  -14,  -15,   -16
-	db -14, -12,  -10,  -8,  -6,  -4,   -2,   0
+.yUp
+	db  -2,  -3,  -4,  -5,  -6,  -7,  -8,  -9
+	db -10, -11, -12, -13, -14, -15, -16, -17
+	db  14,  12,  10,   8,   6,   4,   2,   0
+.yDown
+	db  0,  1,  6,  3,  4,  5,  6,  7
+	db  8,  9, 10, 11, 12, 13, 14, 15
+	db  -14,  -12,  -10,  -8,   -6,   -4,   -2,   0
+
 
 Function5000: ; unscripted?
 ; copy [wPlayerNextMovement] to [wPlayerMovement]

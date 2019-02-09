@@ -101,6 +101,14 @@ ENDM
 
 __enum__ = __enum__ + 3
 
+;diagonal stairs
+	enum movement_diagonal_stairs_step
+diagonal_stairs_step: MACRO
+	db movement_diagonal_stairs_step | \1
+ENDM
+
+__enum__ = __enum__ + 3
+
 ; Control
 	enum movement_remove_sliding ; $38
 remove_sliding: MACRO
@@ -245,10 +253,3 @@ skyfall_top: MACRO
 	db movement_skyfall_top
 ENDM
 
-;diagonal stairs
-	enum movement_diagonal_stairs_step ; $60
-diagonal_stairs_step: MACRO
-	db movement_diagonal_stairs_step | \1
-ENDM
-
-__enum__ = __enum__ + 3
