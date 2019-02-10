@@ -420,14 +420,9 @@ DoPlayerMovement::
 	ld a, [wPlayerStandingTile]
 	ld e, a
 	and $f0
-	cp HI_NYBBLE_DIAGONAL_STAIRS_DOWN
-	jr z, .GoingDownDiagonal ;if we are going down then go down right away
-	cp HI_NYBBLE_DIAGONAL_STAIRS_UP;if not check if we're going up
-	jr nz, .DontDiagonalStairs;if not going up we're not doing stairs at all
-	;set some unused bit to decide we're goign up
-	
-	;fallthrough
-.GoingDownDiagonal
+	cp HI_NYBBLE_DIAGONAL_STAIRS
+	jr nz, .DontDiagonalStairs;if not going up or down we're not doing stairs at all
+
 	ld a, e
 	and 7
 	ld e, a
@@ -447,7 +442,7 @@ DoPlayerMovement::
 .FacingStairsTable
 	db FACE_RIGHT
 	db FACE_LEFT
-
+	
 .DontDiagonalStairs:
 	xor a
 	ret
