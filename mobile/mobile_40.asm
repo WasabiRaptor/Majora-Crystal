@@ -325,7 +325,7 @@ Function10020b:
 Function100232:
 	push de
 	farcall Function106464
-	call Function3f20
+	;call Function3f20
 	call UpdateSprites
 	hlcoord 1, 2
 	pop de
@@ -484,7 +484,7 @@ Function10034d:
 
 .asm_10036a
 	ld a, 0
-	call Function3e32
+	;;call Function3e32
 	ld [wcd2c], a
 	ld a, h
 	ld [wcd2d], a
@@ -508,13 +508,13 @@ Function100382:
 Function10038a:
 	ld hl, wccb4
 	ld a, $2e
-	call Function3e32
+	;;call Function3e32
 	ret
 
 Function100393:
 	ld hl, wcc60
 	ld a, $3a
-	call Function3e32
+	;;call Function3e32
 	ret
 
 Function10039c:
@@ -760,7 +760,7 @@ Function1004f4:
 
 Function100504:
 	push de
-	call Function3f20
+	;call Function3f20
 	call UpdateSprites
 	pop de
 	hlcoord 4, 2
@@ -768,7 +768,7 @@ Function100504:
 	ret
 
 Function100513:
-	call Function3f7c
+	;call Function3f7c
 	call PlaceVerticalMenuItems
 	call InitVerticalMenuCursor
 	ld hl, w2DMenuFlags1
@@ -929,7 +929,7 @@ Mobile_CommunicationStandby:
 	hlcoord 3, 10
 	ld b, 1
 	ld c, 11
-	call Function3eea
+	;call Function3eea
 	ld de, .String
 	hlcoord 4, 11
 	call PlaceString
@@ -3133,7 +3133,7 @@ Function101507:
 	ld hl, $40
 	ld bc, $40
 	ld a, $02
-	call Function3e32
+	;;call Function3e32
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
 	ld [wMobileCommsJumptableIndex], a
@@ -3141,7 +3141,7 @@ Function101507:
 
 Unreferenced_Function10151d:
 	ld a, $34
-	call Function3e32
+	;;call Function3e32
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
 	ld [wMobileCommsJumptableIndex], a
@@ -3149,7 +3149,7 @@ Unreferenced_Function10151d:
 
 Function10152a:
 	ld a, $36
-	call Function3e32
+	;;call Function3e32
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
 	ld [wMobileCommsJumptableIndex], a
@@ -3157,7 +3157,7 @@ Function10152a:
 
 Function101537:
 	ld a, $0a
-	call Function3e32
+	;;call Function3e32
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
 	ld [wMobileCommsJumptableIndex], a
@@ -3166,7 +3166,7 @@ Function101537:
 Function101544:
 	farcall StartMobileInactivityTimer
 	ld a, $12
-	call Function3e32
+	;;call Function3e32
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
 	ld [wMobileCommsJumptableIndex], a
@@ -3176,7 +3176,7 @@ Function101557:
 	farcall StartMobileInactivityTimer
 	ld hl, wcd53
 	ld a, $08
-	call Function3e32
+	;;call Function3e32
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
 	ld [wMobileCommsJumptableIndex], a
@@ -6956,7 +6956,7 @@ Function103309:
 	ld [wd1ed], a
 	ld h, d
 	ld l, e
-	call Function3eea
+	;call Function3eea
 	ld hl, wd1ec
 	ld a, [hli]
 	ld h, [hl]

@@ -381,14 +381,14 @@ Function171a5d:
 
 .asm_171a6a
 	ld a, $0
-	call Function3e32
+	;call Function3e32
 	ld [wc300], a
 	ld a, l
 	ld [wc301], a
 	ld a, h
 	ld [wc302], a
 	ld a, $a
-	call Function3e32
+	;call Function3e32
 	ldh a, [rSVBK]
 	push af
 	ld a, $1
@@ -417,7 +417,7 @@ Function171ac9:
 	ld de, wcd81
 	ld hl, $5c
 	ld a, $2
-	call Function3e32
+	;call Function3e32
 	jp Function171c66
 
 Function171ad7:
@@ -427,7 +427,7 @@ Function171ad7:
 	call ByteFill
 	ld de, $c608
 	ld a, $c
-	call Function3e32
+	;call Function3e32
 	jp Function171c66
 
 Function171aec:

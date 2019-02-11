@@ -913,14 +913,14 @@ Function11878d:
 	ret
 .asm_1187af
 	ld a, $0
-	call Function3e32
+	;call Function3e32
 	ld [wc300], a
 	ld a, l
 	ld [wc301], a
 	ld a, h
 	ld [wc302], a
 	ld a, $a
-	call Function3e32
+	;call Function3e32
 	ld a, [wc3f0]
 	ld [$c319], a
 	ld a, [wcd34]
@@ -953,7 +953,7 @@ Function11878d:
 .asm_1187fd
 	ld a, $2c
 .asm_1187ff
-	call Function3e32
+	;call Function3e32
 	ret
 .asm_118803
 	ld a, $d3
@@ -964,7 +964,7 @@ Function118805:
 	ld [wc301], a
 	ld [wc302], a
 	ld a, $a
-	call Function3e32
+	;call Function3e32
 	ld a, [wc3f0]
 	ld [$c319], a
 	ld a, [wcd34]
@@ -981,7 +981,7 @@ Function118821:
 	cp $5
 	jr nz, .asm_11884a
 	ld a, $a
-	call Function3e32
+	;call Function3e32
 	ld a, $a
 	ld [wc300], a
 	ld a, [wc3f0]
@@ -999,7 +999,7 @@ Function11884c:
 	cp $5
 	jr nz, .asm_118864
 	ld a, $a
-	call Function3e32
+	;call Function3e32
 	ld a, $a
 	ld [wc300], a
 	ld a, [wcd34]
@@ -3981,7 +3981,7 @@ BattleTower_UbersCheck:
 	ret
 
 Function119e2b:
-	call Function3e32
+	;call Function3e32
 
 BattleTowerRoomMenu_IncrementJumptable:
 	ld hl, wcf66
@@ -5003,7 +5003,7 @@ Function11a5b9:
 	hlcoord 0, 0
 	ld b, $4
 	ld c, $12
-	call Function3eea
+	;call Function3eea
 	farcall ReloadMapPart
 	call UpdateSprites
 	ld c, $0
@@ -5028,7 +5028,7 @@ Function11a5f5:
 	hlcoord 14, 6
 	ld b, $3
 	ld c, $4
-	call Function3eea
+	;call Function3eea
 	hlcoord 16, 7
 	ld de, String_11a2cf
 	call PlaceString
