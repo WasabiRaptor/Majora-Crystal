@@ -29,6 +29,7 @@ StartMenu::
 	call .SetUpMenuItems
 	ld a, [wBattleMenuCursorBuffer]
 	ld [wMenuCursorBuffer], a
+	call .DrawMenuClock
 	call .DrawMenuAccount
 	call DrawVariableLengthMenuBox
 	call .DrawBugContestStatusBox
@@ -96,11 +97,13 @@ StartMenu::
 ; Return carry on exit, and no-carry on selection.
 	xor a
 	ldh [hBGMapMode], a
+	call ._DrawMenuClock
 	call ._DrawMenuAccount
 	call SetUpMenu
 	ld a, $ff
 	ld [wMenuSelection], a
 .loop
+	call .PrintMenuClock
 	call .PrintMenuAccount
 	call GetScrollingMenuJoypad
 	ld a, [wMenuJoypad]
@@ -147,6 +150,7 @@ StartMenu::
 	call ClearBGPalettes
 	call Call_ExitMenu
 	call ReloadTilesetAndPalettes
+	call .DrawMenuClock
 	call .DrawMenuAccount
 	call DrawVariableLengthMenuBox
 	call .DrawBugContestStatus
@@ -253,6 +257,25 @@ StartMenu::
 	call PlaceString
 	ret
 
+.MenuClock:
+	hlcoord 1, 1
+	lb bc, 2, 9
+	call ClearBox
+	ldh a, [hHours]
+	ld b, a
+	ldh a, [hMinutes]
+	ld c, a
+	decoord 1, 2
+	farcall PrintHoursMins
+	ld hl, .DayText
+	bccoord 1, 1
+	call PlaceHLTextAtBC
+	ret
+
+.DayText:
+	text_jump UnknownText_0x1c5821
+	db "@"
+
 .MenuDesc:
 	push de
 	ld a, [wMenuSelection]
@@ -283,6 +306,7 @@ rept 6
 	add hl, de
 endr
 	ret
+	
 
 .SetUpMenuItems:
 	xor a
@@ -360,6 +384,23 @@ endr
 	inc c
 	ret
 
+.DrawMenuClock:
+	jp ._DrawMenuClock
+
+.PrintMenuClock:
+	call ._DrawMenuClock
+	decoord 1, 1
+	jp .MenuClock
+
+._DrawMenuClock:
+	hlcoord 0, 0
+	lb bc, 2, 9
+	call TextBox
+	hlcoord 0, 0
+	lb bc, 2, 9
+	jp TextBoxPalette
+	ret
+
 .DrawMenuAccount:
 	jp ._DrawMenuAccount
 
@@ -377,7 +418,7 @@ endr
 	lb bc, 1, 18
 	call TextBox
 	hlcoord 0, 15
-	lb bc, 3, 20
+	lb bc, 1, 18
 	;ld c, 8
 	jp TextBoxPalette
 
