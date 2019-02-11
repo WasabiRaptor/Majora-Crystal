@@ -2208,7 +2208,7 @@ Function100ec5:
 	ret
 
 Function100eca:
-	farcall Mobile_InitPartyMenuBGPal7
+	;farcall Mobile_InitPartyMenuBGPal7
 	call Function100ed4
 	ret
 
