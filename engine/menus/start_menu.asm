@@ -258,6 +258,8 @@ StartMenu::
 	ret
 
 .MenuClock:
+	ld hl, wOptions
+	set NO_TEXT_SCROLL, [hl]
 	hlcoord 1, 1
 	lb bc, 2, 9
 	call ClearBox
