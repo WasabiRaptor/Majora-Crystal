@@ -304,7 +304,7 @@ MenuJoypadLoop:
 
 Do2DMenuRTCJoypad:
 .loopRTC
-	call RTC
+	farcall GetTimeOfDay
 	call Menu_WasButtonPressed
 	ret c
 	ld a, [w2DMenuFlags1]

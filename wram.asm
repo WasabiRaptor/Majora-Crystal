@@ -2381,8 +2381,8 @@ wStartHour:: db ; d4b7
 wStartMinute:: db ; d4b8
 wStartSecond:: db ; d4b9
 
-wRTC:: ds 8 ; d4ba
-wDST:: ; d4c2
+wUnusedRTC:: ds 8 ; d4ba
+wUnusedDST:: ; d4c2
 ; bit 7: dst
 	db
 

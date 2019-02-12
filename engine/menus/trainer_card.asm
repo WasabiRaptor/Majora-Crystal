@@ -19,7 +19,7 @@ TrainerCard:
 	set NO_TEXT_SCROLL, [hl]
 	call .InitRAM
 .loop
-	call UpdateTime
+	farcall GetTimeOfDay
 	call JoyTextDelay
 	ld a, [wJumptableIndex]
 	bit 7, a

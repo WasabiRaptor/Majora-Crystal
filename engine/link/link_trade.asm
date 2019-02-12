@@ -240,7 +240,7 @@ LinkTradeMenu:
 	ret
 
 .loop2
-	call RTC
+	farcall GetTimeOfDay
 	call .TryAnims
 	ret c
 	ld a, [w2DMenuFlags1]

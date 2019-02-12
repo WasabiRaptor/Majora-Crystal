@@ -48,7 +48,6 @@ SpecialsPointers::
 	add_special BankOfMom
 	add_special MagnetTrain
 	add_special NameRival
-	add_special SetDayOfWeek
 	add_special OverworldTownMap
 	add_special UnownPrinter
 	add_special MapRadio ; $28
@@ -169,6 +168,4 @@ SpecialsPointers::
 	add_special RefreshSprites
 	add_special AskRememberPassword
 	add_special LoadMapPalettes
-	add_special InitialSetDSTFlag
-	add_special InitialClearDSTFlag
 	add_special DummySpecial_c224 ; $a8

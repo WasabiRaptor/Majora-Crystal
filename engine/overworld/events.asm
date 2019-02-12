@@ -189,7 +189,7 @@ HandleMapTimeAndJoypad:
 	cp 1 ; no events
 	ret z
 
-	call UpdateTime
+	farcall GetTimeOfDay
 	call GetJoypad
 	call TimeOfDayPals
 	ret

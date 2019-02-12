@@ -38,7 +38,7 @@ PokeGear:
 	call .InitTilemap
 	call DelayFrame
 .loop
-	call UpdateTime
+	farcall GetTimeOfDay
 	call JoyTextDelay
 	ld a, [wJumptableIndex]
 	bit 7, a
@@ -2011,7 +2011,7 @@ PlayRadio:
 	call IsInJohto
 	and a
 	jr nz, .kanto
-	call UpdateTime
+	farcall GetTimeOfDay
 	ld a, [wTimeOfDay]
 	and a
 	jp z, LoadStation_PokedexShow
