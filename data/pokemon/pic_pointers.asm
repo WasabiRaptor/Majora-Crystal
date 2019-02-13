@@ -2,32 +2,32 @@
 
 PokemonPicPointers::
 ; entries correspond to Pokémon species, two apiece
-	dba BulbasaurFrontpic
-	dba BulbasaurBackpic
-	dba IvysaurFrontpic
-	dba IvysaurBackpic
-	dba VenusaurFrontpic
-	dba VenusaurBackpic
-	dba CharmanderFrontpic
-	dba CharmanderBackpic
-	dba CharmeleonFrontpic
-	dba CharmeleonBackpic
-	dba CharizardFrontpic
-	dba CharizardBackpic
-	dba SquirtleFrontpic
-	dba SquirtleBackpic
-	dba WartortleFrontpic
-	dba WartortleBackpic
-	dba BlastoiseFrontpic
-	dba BlastoiseBackpic
-	dba CaterpieFrontpic
-	dba CaterpieBackpic
-	dba MetapodFrontpic
-	dba MetapodBackpic
-	dba ButterfreeFrontpic
-	dba ButterfreeBackpic
-	dba WeedleFrontpic
-	dba WeedleBackpic
+	dba EeveeFrontpic
+	dba EeveeBackpic
+	dba VaporeonFrontpic
+	dba VaporeonBackpic
+	dba JolteonFrontpic
+	dba JolteonBackpic
+	dba FlareonFrontpic
+	dba FlareonBackpic
+	dba EspeonFrontpic
+	dba EspeonBackpic
+	dba UmbreonFrontpic
+	dba UmbreonBackpic
+	dba LeafeonFrontpic
+	dba LeafeonBackpic
+	dba GlaceonFrontpic
+	dba GlaceonBackpic
+	dba SylveonFrontpic
+	dba SylveonBackpic
+	dba ZoruaFrontpic
+	dba ZoruaBackpic
+	dba ZoroarkFrontpic
+	dba ZoroarkBackpic
+	dba RockruffFrontpic
+	dba RockruffBackpic
+	dba LycanrocFrontpic
+	dba LycanrocBackpic
 	dba KakunaFrontpic
 	dba KakunaBackpic
 	dba BeedrillFrontpic

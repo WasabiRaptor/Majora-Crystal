@@ -21,9 +21,9 @@ IconPointers:
 	dw BlobIcon
 	dw SerpentIcon
 	dw VoltorbIcon
-	dw SquirtleIcon
-	dw BulbasaurIcon
-	dw CharmanderIcon
+	dw LeafeonIcon
+	dw EeveeIcon
+	dw FlareonIcon
 	dw CaterpillarIcon
 	dw UnownIcon
 	dw GeodudeIcon

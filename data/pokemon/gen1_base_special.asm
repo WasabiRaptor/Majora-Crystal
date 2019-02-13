@@ -1,19 +1,19 @@
 ; The original base Special stat for each Pokémon from Red/Blue
 
 KantoMonSpecials:
-	db  65 ; BULBASAUR
-	db  80 ; IVYSAUR
-	db 100 ; VENUSAUR
-	db  50 ; CHARMANDER
-	db  65 ; CHARMELEON
-	db  85 ; CHARIZARD
-	db  50 ; SQUIRTLE
-	db  65 ; WARTORTLE
-	db  85 ; BLASTOISE
-	db  20 ; CATERPIE
-	db  25 ; METAPOD
-	db  80 ; BUTTERFREE
-	db  20 ; WEEDLE
+	db  65 ; EEVEE
+	db  80 ; VAPOREON
+	db 100 ; JOLTEON
+	db  50 ; FLAREON
+	db  65 ; ESPEON
+	db  85 ; UMBREON
+	db  50 ; LEAFEON
+	db  65 ; GLACEON
+	db  85 ; SYLVEON
+	db  20 ; ZORUA
+	db  25 ; ZOROARK
+	db  80 ; ROCKRUFF
+	db  20 ; LYCANROC
 	db  25 ; KAKUNA
 	db  45 ; BEEDRILL
 	db  35 ; PIDGEY
@@ -133,10 +133,10 @@ KantoMonSpecials:
 	db 100 ; GYARADOS
 	db  95 ; LAPRAS
 	db  48 ; DITTO
-	db  65 ; EEVEE
-	db 110 ; VAPOREON
-	db 110 ; JOLTEON
-	db 110 ; FLAREON
+	db  65 ; EEVEEX
+	db 110 ; VAPOREONX
+	db 110 ; JOLTEONX
+	db 110 ; FLAREONX
 	db  75 ; PORYGON
 	db  90 ; OMANYTE
 	db 115 ; OMASTAR

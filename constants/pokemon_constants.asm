@@ -19,19 +19,20 @@
 ; - FramesPointers (see gfx/pokemon/frame_pointers.asm)
 ; - Footprints (see gfx/footprints.asm)
 	const_def 1
-	const BULBASAUR  ; 01
-	const IVYSAUR    ; 02
-	const VENUSAUR   ; 03
-	const CHARMANDER ; 04
-	const CHARMELEON ; 05
-	const CHARIZARD  ; 06
-	const SQUIRTLE   ; 07
-	const WARTORTLE  ; 08
-	const BLASTOISE  ; 09
-	const CATERPIE   ; 0a
-	const METAPOD    ; 0b
-	const BUTTERFREE ; 0c
-	const WEEDLE     ; 0d
+	const EEVEE			; 01
+	const VAPOREON		; 02
+	const JOLTEON		; 03
+	const FLAREON		; 04
+	const ESPEON		; 05
+	const UMBREON		; 06
+	const LEAFEON		; 07
+	const GLACEON		; 08
+	const SYLVEON		; 09
+	const ZORUA			; 0a
+	const ZOROARK		; 0b
+	const ROCKRUFF		; 0c
+	const LYCANROC		; 0d
+
 	const KAKUNA     ; 0e
 	const BEEDRILL   ; 0f
 	const PIDGEY     ; 10
@@ -151,10 +152,10 @@
 	const GYARADOS   ; 82
 	const LAPRAS     ; 83
 	const DITTO      ; 84
-	const EEVEE      ; 85
-	const VAPOREON   ; 86
-	const JOLTEON    ; 87
-	const FLAREON    ; 88
+	const EEVEEX      ; 85
+	const VAPOREONX   ; 86
+	const JOLTEONX    ; 87
+	const FLAREONX    ; 88
 	const PORYGON    ; 89
 	const OMANYTE    ; 8a
 	const OMASTAR    ; 8b
@@ -215,8 +216,8 @@ JOHTO_POKEMON EQU const_value
 	const YANMA      ; c1
 	const WOOPER     ; c2
 	const QUAGSIRE   ; c3
-	const ESPEON     ; c4
-	const UMBREON    ; c5
+	const ESPEONX     ; c4
+	const UMBREONX    ; c5
 	const MURKROW    ; c6
 	const SLOWKING   ; c7
 	const MISDREAVUS ; c8
@@ -316,4 +317,10 @@ NUM_UNOWN EQU const_value + -1 ; 26
 	const_def 1
 	const KANTONIAN
 	const ALOLAN
-NUM_REGIONAL EQU const_value + -1 ;2
+NUM_REGIONAL EQU const_value + -1 ; 2
+
+	const_def 1
+	const MIDDAY
+	const MIDNIGHT
+	const DUSK
+NUM_LYCANROC EQU const_value + -1 ; 3

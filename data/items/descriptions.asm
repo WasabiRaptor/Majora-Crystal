@@ -964,7 +964,7 @@ LovelyMailDesc:
 	next "(HOLD)@"
 
 EonMailDesc:
-	db   "EEVEE-print MAIL."
+	db   "EEVEEX-print MAIL."
 	next "(HOLD)@"
 
 MorphMailDesc:

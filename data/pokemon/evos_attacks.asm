@@ -18,8 +18,8 @@ SECTION "Evolutions and Attacks", ROMX
 INCLUDE "data/pokemon/evos_attacks_pointers.asm"
 INCLUDE "data/pokemon/alt_form_evos_attacks_pointers.asm"
 
-BulbasaurEvosAttacks:
-	db EVOLVE_LEVEL, 16, IVYSAUR
+EeveeEvosAttacks:
+	db EVOLVE_LEVEL, 16, VAPOREON
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 4, GROWL
@@ -34,8 +34,8 @@ BulbasaurEvosAttacks:
 	db 46, SOLARBEAM
 	db 0 ; no more level-up moves
 
-IvysaurEvosAttacks:
-	db EVOLVE_LEVEL, 32, VENUSAUR
+VaporeonEvosAttacks:
+	db EVOLVE_LEVEL, 32, JOLTEON
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
@@ -52,7 +52,7 @@ IvysaurEvosAttacks:
 	db 56, SOLARBEAM
 	db 0 ; no more level-up moves
 
-VenusaurEvosAttacks:
+JolteonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
@@ -70,8 +70,8 @@ VenusaurEvosAttacks:
 	db 65, SOLARBEAM
 	db 0 ; no more level-up moves
 
-CharmanderEvosAttacks:
-	db EVOLVE_LEVEL, 16, CHARMELEON
+FlareonEvosAttacks:
+	db EVOLVE_LEVEL, 16, ESPEON
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, GROWL
@@ -85,8 +85,8 @@ CharmanderEvosAttacks:
 	db 49, FIRE_SPIN
 	db 0 ; no more level-up moves
 
-CharmeleonEvosAttacks:
-	db EVOLVE_LEVEL, 36, CHARIZARD
+EspeonEvosAttacks:
+	db EVOLVE_LEVEL, 36, UMBREON
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, GROWL
@@ -101,7 +101,7 @@ CharmeleonEvosAttacks:
 	db 55, FIRE_SPIN
 	db 0 ; no more level-up moves
 
-CharizardEvosAttacks:
+UmbreonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, GROWL
@@ -118,8 +118,8 @@ CharizardEvosAttacks:
 	db 64, FIRE_SPIN
 	db 0 ; no more level-up moves
 
-SquirtleEvosAttacks:
-	db EVOLVE_LEVEL, 16, WARTORTLE
+LeafeonEvosAttacks:
+	db EVOLVE_LEVEL, 16, GLACEON
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 4, TAIL_WHIP
@@ -134,8 +134,8 @@ SquirtleEvosAttacks:
 	db 47, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-WartortleEvosAttacks:
-	db EVOLVE_LEVEL, 36, BLASTOISE
+GlaceonEvosAttacks:
+	db EVOLVE_LEVEL, 36, SYLVEON
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
@@ -152,7 +152,7 @@ WartortleEvosAttacks:
 	db 53, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-BlastoiseEvosAttacks:
+SylveonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
@@ -170,21 +170,21 @@ BlastoiseEvosAttacks:
 	db 68, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-CaterpieEvosAttacks:
-	db EVOLVE_LEVEL, 7, METAPOD
+ZoruaEvosAttacks:
+	db EVOLVE_LEVEL, 7, ZOROARK
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, STRING_SHOT
 	db 0 ; no more level-up moves
 
-MetapodEvosAttacks:
-	db EVOLVE_LEVEL, 10, BUTTERFREE
+ZoroarkEvosAttacks:
+	db EVOLVE_LEVEL, 10, ROCKRUFF
 	db 0 ; no more evolutions
 	db 1, HARDEN
 	db 7, HARDEN
 	db 0 ; no more level-up moves
 
-ButterfreeEvosAttacks:
+RockruffEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CONFUSION
 	db 10, CONFUSION
@@ -198,7 +198,7 @@ ButterfreeEvosAttacks:
 	db 40, SAFEGUARD
 	db 0 ; no more level-up moves
 
-WeedleEvosAttacks:
+LycanrocEvosAttacks:
 	db EVOLVE_LEVEL, 7, KAKUNA
 	db 0 ; no more evolutions
 	db 1, POISON_STING
@@ -1825,11 +1825,11 @@ DittoEvosAttacks:
 	db 0 ; no more level-up moves
 
 EeveeEvosAttacks:
-	db EVOLVE_ITEM, THUNDERSTONE, JOLTEON
-	db EVOLVE_ITEM, WATER_STONE, VAPOREON
-	db EVOLVE_ITEM, FIRE_STONE, FLAREON
-	db EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON
-	db EVOLVE_HAPPINESS, TR_NITE, UMBREON
+	db EVOLVE_ITEM, THUNDERSTONE, JOLTEONX
+	db EVOLVE_ITEM, WATER_STONE, VAPOREONX
+	db EVOLVE_ITEM, FIRE_STONE, FLAREONX
+	db EVOLVE_HAPPINESS, TR_MORNDAY, ESPEONX
+	db EVOLVE_HAPPINESS, TR_NITE, UMBREONX
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP

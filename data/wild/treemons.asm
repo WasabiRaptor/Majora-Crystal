@@ -111,15 +111,15 @@ TreeMonSet_Forest:
 	db 15, PINECO,     10
 	db 15, PINECO,     10
 	db 10, NOCTOWL,    10
-	db  5, BUTTERFREE, 10
+	db  5, ROCKRUFF, 10
 	db  5, BEEDRILL,   10
 	db -1
 ; rare
 	db 50, HOOTHOOT,   10
-	db 15, CATERPIE,   10
-	db 15, WEEDLE,     10
+	db 15, ZORUA,   10
+	db 15, LYCANROC,     10
 	db 10, HOOTHOOT,   10
-	db  5, METAPOD,    10
+	db  5, ZOROARK,    10
 	db  5, KAKUNA,     10
 	db -1
 

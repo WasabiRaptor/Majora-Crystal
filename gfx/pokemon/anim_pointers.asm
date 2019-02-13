@@ -1,17 +1,17 @@
 AnimationPointers:
-	dw BulbasaurAnimation
-	dw IvysaurAnimation
-	dw VenusaurAnimation
-	dw CharmanderAnimation
-	dw CharmeleonAnimation
-	dw CharizardAnimation
-	dw SquirtleAnimation
-	dw WartortleAnimation
-	dw BlastoiseAnimation
-	dw CaterpieAnimation
-	dw MetapodAnimation
-	dw ButterfreeAnimation
-	dw WeedleAnimation
+	dw EeveeAnimation
+	dw VaporeonAnimation
+	dw JolteonAnimation
+	dw FlareonAnimation
+	dw EspeonAnimation
+	dw UmbreonAnimation
+	dw LeafeonAnimation
+	dw GlaceonAnimation
+	dw SylveonAnimation
+	dw ZoruaAnimation
+	dw ZoroarkAnimation
+	dw RockruffAnimation
+	dw LycanrocAnimation
 	dw KakunaAnimation
 	dw BeedrillAnimation
 	dw PidgeyAnimation

@@ -14,7 +14,7 @@ SECTION "Egg Moves", ROMX
 INCLUDE "data/pokemon/egg_move_pointers.asm"
 INCLUDE "data/pokemon/alt_form_egg_move_pointers.asm"
 
-BulbasaurEggMoves:
+EeveeEggMoves:
 	db LIGHT_SCREEN
 	db SKULL_BASH
 	db SAFEGUARD
@@ -25,7 +25,7 @@ endc
 	db PETAL_DANCE
 	db -1 ; end
 
-CharmanderEggMoves:
+FlareonEggMoves:
 	db BELLY_DRUM
 	db ANCIENTPOWER
 	db ROCK_SLIDE
@@ -34,7 +34,7 @@ CharmanderEggMoves:
 	db BEAT_UP
 	db -1 ; end
 
-SquirtleEggMoves:
+LeafeonEggMoves:
 	db MIRROR_COAT
 	db HAZE
 	db MIST

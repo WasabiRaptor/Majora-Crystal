@@ -89,9 +89,9 @@ MakePartyMon1Alolan:
 MomScript:
 	opentext
 	callasm MakePartyMon1Alolan
-	pokepic EEVEE
+	pokepic EEVEEX
 	waitbutton
-	givepoke EEVEE, 5
+	givepoke EEVEEX, 5
 	closetext
 	end
 

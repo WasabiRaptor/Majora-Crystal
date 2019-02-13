@@ -1,10 +1,10 @@
 ; Used by CheckSleepingTreeMon
 
 AsleepTreeMonsNite:
-	db CATERPIE
-	db METAPOD
-	db BUTTERFREE
-	db WEEDLE
+	db ZORUA
+	db ZOROARK
+	db ROCKRUFF
+	db LYCANROC
 	db KAKUNA
 	db BEEDRILL
 	db SPEAROW

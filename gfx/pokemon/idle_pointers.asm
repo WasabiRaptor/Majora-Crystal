@@ -1,17 +1,17 @@
 AnimationIdlePointers:
-	dw BulbasaurAnimationIdle
-	dw IvysaurAnimationIdle
-	dw VenusaurAnimationIdle
-	dw CharmanderAnimationIdle
-	dw CharmeleonAnimationIdle
-	dw CharizardAnimationIdle
-	dw SquirtleAnimationIdle
-	dw WartortleAnimationIdle
-	dw BlastoiseAnimationIdle
-	dw CaterpieAnimationIdle
-	dw MetapodAnimationIdle
-	dw ButterfreeAnimationIdle
-	dw WeedleAnimationIdle
+	dw EeveeAnimationIdle
+	dw VaporeonAnimationIdle
+	dw JolteonAnimationIdle
+	dw FlareonAnimationIdle
+	dw EspeonAnimationIdle
+	dw UmbreonAnimationIdle
+	dw LeafeonAnimationIdle
+	dw GlaceonAnimationIdle
+	dw SylveonAnimationIdle
+	dw ZoruaAnimationIdle
+	dw ZoroarkAnimationIdle
+	dw RockruffAnimationIdle
+	dw LycanrocAnimationIdle
 	dw KakunaAnimationIdle
 	dw BeedrillAnimationIdle
 	dw PidgeyAnimationIdle

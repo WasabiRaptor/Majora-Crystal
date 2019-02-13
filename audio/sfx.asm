@@ -2785,10 +2785,10 @@ Sfx_EggHatch_Ch5:
 	note B_, 7
 	endchannel
 
-Sfx_GsIntroCharizardFireball:
-	musicheader 1, 8, Sfx_GsIntroCharizardFireball_Ch8
+Sfx_GsIntroUmbreonFireball:
+	musicheader 1, 8, Sfx_GsIntroUmbreonFireball_Ch8
 
-Sfx_GsIntroCharizardFireball_Ch8:
+Sfx_GsIntroUmbreonFireball_Ch8:
 	noise __,  9, $cf, $4d
 	noise __,  9, $f1, $37
 .loop

@@ -5,19 +5,19 @@ ENDM
 
 PokemonCries::
 ; entries correspond to constants/pokemon_constants.asm
-	mon_cry CRY_BULBASAUR,   $080,  $081 ; BULBASAUR
-	mon_cry CRY_BULBASAUR,   $020,  $100 ; IVYSAUR
-	mon_cry CRY_BULBASAUR,   $000,  $140 ; VENUSAUR
-	mon_cry CRY_CHARMANDER,  $060,  $0c0 ; CHARMANDER
-	mon_cry CRY_CHARMANDER,  $020,  $0c0 ; CHARMELEON
-	mon_cry CRY_CHARMANDER,  $000,  $100 ; CHARIZARD
-	mon_cry CRY_SQUIRTLE,    $060,  $0c0 ; SQUIRTLE
-	mon_cry CRY_SQUIRTLE,    $020,  $0c0 ; WARTORTLE
-	mon_cry CRY_BLASTOISE,   $000,  $100 ; BLASTOISE
-	mon_cry CRY_CATERPIE,    $080,  $0a0 ; CATERPIE
-	mon_cry CRY_METAPOD,     $0cc,  $081 ; METAPOD
-	mon_cry CRY_CATERPIE,    $077,  $0c0 ; BUTTERFREE
-	mon_cry CRY_WEEDLE,      $0ee,  $081 ; WEEDLE
+	mon_cry CRY_BULBASAUR,   $080,  $081 ; EEVEE
+	mon_cry CRY_BULBASAUR,   $020,  $100 ; VAPOREON
+	mon_cry CRY_BULBASAUR,   $000,  $140 ; JOLTEON
+	mon_cry CRY_CHARMANDER,  $060,  $0c0 ; FLAREON
+	mon_cry CRY_CHARMANDER,  $020,  $0c0 ; ESPEON
+	mon_cry CRY_CHARMANDER,  $000,  $100 ; UMBREON
+	mon_cry CRY_SQUIRTLE,    $060,  $0c0 ; LEAFEON
+	mon_cry CRY_SQUIRTLE,    $020,  $0c0 ; GLACEON
+	mon_cry CRY_BLASTOISE,   $000,  $100 ; SYLVEON
+	mon_cry CRY_CATERPIE,    $080,  $0a0 ; ZORUA
+	mon_cry CRY_METAPOD,     $0cc,  $081 ; ZOROARK
+	mon_cry CRY_CATERPIE,    $077,  $0c0 ; ROCKRUFF
+	mon_cry CRY_WEEDLE,      $0ee,  $081 ; LYCANROC
 	mon_cry CRY_BLASTOISE,   $0ff,  $081 ; KAKUNA
 	mon_cry CRY_BLASTOISE,   $060,  $100 ; BEEDRILL
 	mon_cry CRY_PIDGEY,      $0df,  $084 ; PIDGEY
@@ -137,10 +137,10 @@ PokemonCries::
 	mon_cry CRY_EKANS,       $000,  $100 ; GYARADOS
 	mon_cry CRY_LAPRAS,      $000,  $100 ; LAPRAS
 	mon_cry CRY_PIDGEY,      $0ff,  $17f ; DITTO
-	mon_cry CRY_VENONAT,     $088,  $0e0 ; EEVEE
-	mon_cry CRY_VENONAT,     $0aa,  $17f ; VAPOREON
-	mon_cry CRY_VENONAT,     $03d,  $100 ; JOLTEON
-	mon_cry CRY_VENONAT,     $010,  $0a0 ; FLAREON
+	mon_cry CRY_VENONAT,     $088,  $0e0 ; EEVEEX
+	mon_cry CRY_VENONAT,     $0aa,  $17f ; VAPOREONX
+	mon_cry CRY_VENONAT,     $03d,  $100 ; JOLTEONX
+	mon_cry CRY_VENONAT,     $010,  $0a0 ; FLAREONX
 	mon_cry CRY_WEEPINBELL,  $0aa,  $17f ; PORYGON
 	mon_cry CRY_GROWLITHE,   $0f0,  $081 ; OMANYTE
 	mon_cry CRY_GROWLITHE,   $0ff,  $0c0 ; OMASTAR
@@ -200,8 +200,8 @@ PokemonCries::
 	mon_cry CRY_TOTODILE,    $031,  $0c8 ; YANMA
 	mon_cry CRY_WOOPER,      $093,  $0af ; WOOPER
 	mon_cry CRY_WOOPER,     -$0c6,  $140 ; QUAGSIRE
-	mon_cry CRY_AIPOM,       $0a2,  $140 ; ESPEON
-	mon_cry CRY_VENONAT,    -$0e9,  $0f0 ; UMBREON
+	mon_cry CRY_AIPOM,       $0a2,  $140 ; ESPEONX
+	mon_cry CRY_VENONAT,    -$0e9,  $0f0 ; UMBREONX
 	mon_cry CRY_MARILL,     -$01f,  $180 ; MURKROW
 	mon_cry CRY_SLOWKING,    $104,  $200 ; SLOWKING
 	mon_cry CRY_HOOTHOOT,    $130,  $0e8 ; MISDREAVUS

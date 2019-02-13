@@ -21,32 +21,32 @@ BugContestantPointers:
 BugContestant_BugCatcherDon:
 	db BUG_CATCHER, DON
 	dbw KAKUNA,     300
-	dbw METAPOD,    285
-	dbw CATERPIE,   226
+	dbw ZOROARK,    285
+	dbw ZORUA,   226
 
 BugContestant_BugCatcherEd:
 	db BUG_CATCHER, ED
-	dbw BUTTERFREE, 286
-	dbw BUTTERFREE, 251
-	dbw CATERPIE,   237
+	dbw ROCKRUFF, 286
+	dbw ROCKRUFF, 251
+	dbw ZORUA,   237
 
 BugContestant_CooltrainerMNick:
 	db COOLTRAINERM, NICK
 	dbw SCYTHER,    357
-	dbw BUTTERFREE, 349
+	dbw ROCKRUFF, 349
 	dbw PINSIR,     368
 
 BugContestant_PokefanMWilliam:
 	db POKEFANM, WILLIAM
 	dbw PINSIR,     332
-	dbw BUTTERFREE, 324
+	dbw ROCKRUFF, 324
 	dbw VENONAT,    321
 
 BugContestant_BugCatcherBenny:
 	db BUG_CATCHER, BUG_CATCHER_BENNY
-	dbw BUTTERFREE, 318
-	dbw WEEDLE,     295
-	dbw CATERPIE,   285
+	dbw ROCKRUFF, 318
+	dbw LYCANROC,     295
+	dbw ZORUA,   285
 
 BugContestant_CamperBarry:
 	db CAMPER, BARRY
@@ -56,21 +56,21 @@ BugContestant_CamperBarry:
 
 BugContestant_PicnickerCindy:
 	db PICNICKER, CINDY
-	dbw BUTTERFREE, 341
-	dbw METAPOD,    301
-	dbw CATERPIE,   264
+	dbw ROCKRUFF, 341
+	dbw ZOROARK,    301
+	dbw ZORUA,   264
 
 BugContestant_BugCatcherJosh:
 	db BUG_CATCHER, JOSH
 	dbw SCYTHER,    326
-	dbw BUTTERFREE, 292
-	dbw METAPOD,    282
+	dbw ROCKRUFF, 292
+	dbw ZOROARK,    282
 
 BugContestant_YoungsterSamuel:
 	db YOUNGSTER, SAMUEL
-	dbw WEEDLE,     270
+	dbw LYCANROC,     270
 	dbw PINSIR,     282
-	dbw CATERPIE,   251
+	dbw ZORUA,   251
 
 BugContestant_SchoolboyKipp:
 	db SCHOOLBOY, KIPP

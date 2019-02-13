@@ -40,7 +40,7 @@ PalPacket_GSIntroJigglypuffPikachu:
 PalPacket_GSIntroStartersTransition:
 	sgb_pal_set GS_INTRO_STARTERS_TRANSITION, 00, 00, 00
 
-PalPacket_BetaIntroVenusaur:
+PalPacket_BetaIntroJolteon:
 	sgb_pal_set BETA_INTRO_VENUSAUR, 00, 00, 00
 
 PalPacket_Pack:

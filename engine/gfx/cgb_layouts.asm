@@ -449,7 +449,7 @@ _CGB_GSIntro:
 .Jumptable:
 	dw .ShellderLaprasScene
 	dw .JigglypuffPikachuScene
-	dw .StartersCharizardScene
+	dw .StartersUmbreonScene
 
 .ShellderLaprasScene:
 	ld hl, .ShellderLaprasBGPalette
@@ -493,7 +493,7 @@ _CGB_GSIntro:
 	call WipeAttrMap
 	ret
 
-.StartersCharizardScene:
+.StartersUmbreonScene:
 	ld hl, PalPacket_Pack + 1
 	call CopyFourPalettes
 	ld de, wOBPals1

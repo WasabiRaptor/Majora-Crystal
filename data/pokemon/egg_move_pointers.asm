@@ -1,11 +1,11 @@
 EggMovePointers::
-	dw BulbasaurEggMoves
+	dw EeveeEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw CharmanderEggMoves
+	dw FlareonEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw SquirtleEggMoves
+	dw LeafeonEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
