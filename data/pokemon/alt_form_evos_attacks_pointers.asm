@@ -1,7 +1,7 @@
 VulpixEvosAttacksPointers::
 	dw KantoVulpixEvosAttacks
-	dw AlolanVulpixEvosAttacks
+	dw Vulpix_AlolaEvosAttacks
 
 NinetalesEvosAttacksPointers::
 	dw KantoNinetalesEvosAttacks
-	dw AlolanNinetalesEvosAttacks
+	dw Ninetales_AlolaEvosAttacks

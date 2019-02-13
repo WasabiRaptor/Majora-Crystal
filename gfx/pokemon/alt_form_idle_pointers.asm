@@ -28,8 +28,8 @@ UnownAnimationIdlePointers:
 
 VulpixAnimationIdlePointers:
 	dw KantoVulpixAnimationIdle
-	dw AlolanVulpixAnimationIdle
+	dw Vulpix_AlolaAnimationIdle
 
 NinetalesAnimationIdlePointers:
 	dw KantoNinetalesAnimationIdle
-	dw AlolanNinetalesAnimationIdle
+	dw Ninetales_AlolaAnimationIdle

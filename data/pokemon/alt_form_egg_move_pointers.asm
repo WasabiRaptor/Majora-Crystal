@@ -1,3 +1,3 @@
 VulpixEggMovePointers:: 
 	dw KantoVulpixEggMoves
-	dw AlolanVulpixEggMoves
+	dw Vulpix_AlolaEggMoves

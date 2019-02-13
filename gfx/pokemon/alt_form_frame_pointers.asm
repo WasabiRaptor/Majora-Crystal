@@ -28,8 +28,8 @@ UnownFramesPointers:
 
 VulpixFramesPointers:
 	dw KantoVulpixFrames
-	dw AlolanVulpixFrames
+	dw Vulpix_AlolaFrames
 
 NinetalesFramesPointers:
 	dw KantoNinetalesFrames
-	dw AlolanNinetalesFrames
+	dw Ninetales_AlolaFrames

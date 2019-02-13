@@ -502,7 +502,7 @@ KantoVulpixEvosAttacks:
 	db 37, FIRE_SPIN
 	db 0 ; no more level-up moves
 
-AlolanVulpixEvosAttacks:
+Vulpix_AlolaEvosAttacks:
 	db EVOLVE_ITEM, FIRE_STONE, NINETALES
 	db 0 ; no more evolutions
 	db 1, POWDER_SNOW
@@ -524,7 +524,7 @@ KantoNinetalesEvosAttacks:
 	db 43, FIRE_SPIN
 	db 0 ; no more level-up moves
 
-AlolanNinetalesEvosAttacks:
+Ninetales_AlolaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POWDER_SNOW
 	db 1, QUICK_ATTACK

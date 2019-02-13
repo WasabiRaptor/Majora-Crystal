@@ -117,7 +117,7 @@ KantoVulpixEggMoves:
 	db DISABLE
 	db -1 ; end
 
-AlolanVulpixEggMoves:
+Vulpix_AlolaEggMoves:
 	db FAINT_ATTACK
 	db HYPNOSIS
 	db FLAIL

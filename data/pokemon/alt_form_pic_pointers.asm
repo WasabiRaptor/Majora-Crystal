@@ -56,13 +56,13 @@ UnownPicPointers::
 VulpixPicPointers::
 	dba KantoVulpixFrontpic
 	dba KantoVulpixBackpic
-	dba AlolanVulpixFrontpic
-	dba AlolanVulpixBackpic
+	dba Vulpix_AlolaFrontpic
+	dba Vulpix_AlolaBackpic
 
 NinetalesPicPointers::
 	dba KantoNinetalesFrontpic
 	dba KantoNinetalesBackpic
-	dba AlolanNinetalesFrontpic
-	dba AlolanNinetalesBackpic
+	dba Ninetales_AlolaFrontpic
+	dba Ninetales_AlolaBackpic
 
 

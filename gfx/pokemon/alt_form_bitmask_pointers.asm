@@ -28,9 +28,9 @@ UnownBitmasksPointers:
 
 VulpixBitmasksPointers:
 	dw KantoVulpixBitmasks
-	dw AlolanVulpixBitmasks
+	dw Vulpix_AlolaBitmasks
 
 NinetalesBitmasksPointers:
 	dw KantoNinetalesBitmasks
-	dw AlolanNinetalesBitmasks
+	dw Ninetales_AlolaBitmasks
 	

@@ -8,8 +8,8 @@ INCLUDE "gfx/pokemon/vulpix/shiny.pal"
 NinetalesPalettes:
 INCBIN "gfx/pokemon/ninetales/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/ninetales/shiny.pal"
-INCBIN "gfx/pokemon/alolanninetales/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/alolanninetales/shiny.pal"
+INCBIN "gfx/pokemon/ninetales_alola/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/ninetales_alola/shiny.pal"
 
 LycanrocPalettes:
 ;INCBIN "gfx/pokemon/lycanroc_midday/front.gbcpal", middle_colors
