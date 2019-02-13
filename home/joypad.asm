@@ -294,7 +294,7 @@ JoyWaitAorB::
 	ldh a, [hJoyPressed]
 	and A_BUTTON | B_BUTTON
 	ret nz
-	call RTC
+	farcall GetTimeOfDay
 	jr .loop
 
 WaitButton::
@@ -403,7 +403,7 @@ ButtonSound::
 	ldh a, [hJoyPressed]
 	and A_BUTTON | B_BUTTON
 	jr nz, .received_input
-	call RTC
+	farcall GetTimeOfDay
 	ld a, $1
 	ldh [hBGMapMode], a
 	call DelayFrame

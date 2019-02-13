@@ -49,7 +49,7 @@ NewGame_ClearTileMapEtc:
 	ret
 
 MysteryGift:
-	call UpdateTime
+	farcall GetTimeOfDay
 	farcall DoMysteryGiftIfDayHasPassed
 	farcall DoMysteryGift
 	ret
@@ -347,12 +347,6 @@ Continue:
 	jr .FailToLoad
 
 .Check1Pass:
-	call Continue_CheckRTC_RestartClock
-	jr nc, .Check2Pass
-	call CloseWindow
-	jr .FailToLoad
-
-.Check2Pass:
 	ld a, $8
 	ld [wMusicFade], a
 	ld a, LOW(MUSIC_NONE)
@@ -369,7 +363,6 @@ Continue:
 	call DelayFrames
 	farcall JumpRoamMons
 	farcall MysteryGift_CopyReceivedDecosToPC ; Mystery Gift
-	farcall Function140ae ; time-related
 	ld a, [wSpawnAfterChampion]
 	cp SPAWN_LANCE
 	jr z, .SpawnAfterE4
@@ -545,21 +538,6 @@ ConfirmContinue:
 .PressA:
 	ret
 
-Continue_CheckRTC_RestartClock:
-	call CheckRTCStatus
-	and %10000000 ; Day count exceeded 16383
-	jr z, .pass
-	farcall RestartClock
-	ld a, c
-	and a
-	jr z, .pass
-	scf
-	ret
-
-.pass
-	xor a
-	ret
-
 FirstDaytext:
 	text_jump FirstDayContinueText
 	db "@"
@@ -586,14 +564,6 @@ FinishContinueFunction:
 	jr .loop
 
 DisplaySaveInfoOnContinue:
-	call CheckRTCStatus
-	and %10000000
-	jr z, .clock_ok
-	lb de, 4, 8
-	call DisplayContinueDataWithRTCError
-	ret
-
-.clock_ok
 	lb de, 4, 8
 	call DisplayNormalContinueData
 	ret
@@ -606,14 +576,6 @@ DisplayNormalContinueData:
 	call Continue_LoadMenuHeader
 	call Continue_DisplayBadgesDexPlayerName
 	call Continue_PrintGameTime
-	call LoadFontsExtra
-	call UpdateSprites
-	ret
-
-DisplayContinueDataWithRTCError:
-	call Continue_LoadMenuHeader
-	call Continue_DisplayBadgesDexPlayerName
-	call Continue_UnknownGameTime
 	call LoadFontsExtra
 	call UpdateSprites
 	ret
@@ -892,15 +854,6 @@ NamePlayer:
 .Kris:
 	db "KRIS@@@@@@@"
 
-Unreferenced_Function60e9:
-	call LoadMenuHeader
-	call VerticalMenu
-	ld a, [wMenuCursorY]
-	dec a
-	call CopyNameFromMenu
-	call CloseWindow
-	ret
-
 StorePlayerName:
 	ld a, "@"
 	ld bc, NAME_LENGTH
@@ -1122,7 +1075,6 @@ StartTitleScreen:
 	dw DeleteSaveData
 	dw CrystalIntroSequence
 	dw CrystalIntroSequence
-	dw ResetClock
 
 .TitleScreen:
 	farcall _TitleScreen
@@ -1142,17 +1094,6 @@ RunTitleScreen:
 	scf
 	ret
 
-Unreferenced_Function6292:
-	ldh a, [hVBlankCounter]
-	and $7
-	ret nz
-	ld hl, wLYOverrides + $5f
-	ld a, [hl]
-	dec a
-	ld bc, 2 * SCREEN_WIDTH
-	call ByteFill
-	ret
-
 TitleScreenScene:
 	ld e, a
 	ld d, 0
@@ -1169,11 +1110,6 @@ TitleScreenScene:
 	dw TitleScreenTimer
 	dw TitleScreenMain
 	dw TitleScreenEnd
-
-.Unreferenced_NextScene:
-	ld hl, wJumptableIndex
-	inc [hl]
-	ret
 
 TitleScreenEntrance:
 	ld hl, wJumptableIndex
@@ -1223,36 +1159,6 @@ TitleScreenMain:
 	cp  D_UP + B_BUTTON + SELECT
 	jr z, .delete_save_data
 
-; To bring up the clock reset dialog:
-
-; Hold Down + B + Select to initiate the sequence.
-	ldh a, [hClockResetTrigger]
-	cp $34
-	jr z, .check_clock_reset
-
-	ld a, [hl]
-	and D_DOWN + B_BUTTON + SELECT
-	cp  D_DOWN + B_BUTTON + SELECT
-	jr nz, .check_start
-
-	ld a, $34
-	ldh [hClockResetTrigger], a
-	jr .check_start
-
-; Keep Select pressed, and hold Left + Up.
-; Then let go of Select.
-.check_clock_reset
-	bit SELECT_F, [hl]
-	jr nz, .check_start
-
-	xor a
-	ldh [hClockResetTrigger], a
-
-	ld a, [hl]
-	and D_LEFT + D_UP
-	cp  D_LEFT + D_UP
-	jr z, .clock_reset
-
 ; Press Start or A to start the game.
 .check_start
 	ld a, [hl]
@@ -1294,15 +1200,6 @@ TitleScreenMain:
 	inc [hl]
 	ret
 
-.clock_reset
-	ld a, 4
-	ld [wIntroSceneFrameCounter], a
-
-; Return to the intro sequence.
-	ld hl, wJumptableIndex
-	set 7, [hl]
-	ret
-
 TitleScreenEnd:
 ; Wait until the music is done fading.
 
@@ -1324,42 +1221,6 @@ TitleScreenEnd:
 DeleteSaveData:
 	farcall _DeleteSaveData
 	jp Init
-
-ResetClock:
-	farcall _ResetClock
-	jp Init
-
-Unreferenced_Function639b:
-	; If bit 0 or 1 of [wTitleScreenTimer] is set, we don't need to be here.
-	ld a, [wTitleScreenTimer]
-	and %00000011
-	ret nz
-	ld bc, wSpriteAnim10
-	ld hl, SPRITEANIMSTRUCT_FRAME
-	add hl, bc ; over-the-top compicated way to load wc3ae into hl
-	ld l, [hl]
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	ld de, .Data63ca
-	add hl, de
-	; If bit 2 of [wTitleScreenTimer] is set, get the second dw; else, get the first dw
-	ld a, [wTitleScreenTimer]
-	and %00000100
-	srl a
-	srl a
-	ld e, a
-	ld d, 0
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	and a
-	ret z
-	ld e, a
-	ld d, [hl]
-	ld a, SPRITE_ANIM_INDEX_GS_TITLE_TRAIL
-	call _InitSpriteAnimStruct
-	ret
 
 .Data63ca:
 ; frame 0 y, x; frame 1 y, x

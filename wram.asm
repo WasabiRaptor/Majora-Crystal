@@ -1574,7 +1574,8 @@ wGBPrinter:: ; cfd0
 ;   darkest:  $7F
 	db
 wOptions2:: ; cfd1
-; bit 1: menu account off/on
+; bit 0: menu account off/on
+; bit 1: Military time
 	db
 	ds 2
 wOptionsEnd::
@@ -2380,7 +2381,7 @@ wStartHour:: db ; d4b7
 wStartMinute:: db ; d4b8
 wStartSecond:: db ; d4b9
 
-wRTC:: ds 8 ; d4ba
+wUnusedRTC:: ds 8 ; d4ba
 wDST:: ; d4c2
 ; bit 7: dst
 	db

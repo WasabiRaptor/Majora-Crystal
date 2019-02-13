@@ -50,7 +50,7 @@ InitOneDayCountdown:
 InitNDaysCountdown:
 	ld [hl], a
 	push hl
-	call UpdateTime
+	farcall GetTimeOfDay
 	pop hl
 	inc hl
 	call CopyDayToHL
@@ -69,7 +69,7 @@ CheckDayDependentEventHL:
 RestartReceiveCallDelay:
 	ld hl, wReceiveCallDelay_MinsRemaining
 	ld [hl], a
-	call UpdateTime
+	farcall GetTimeOfDay
 	ld hl, wReceiveCallDelay_StartTime
 	call CopyDayHourMinToHL
 	ret
@@ -132,7 +132,7 @@ StartBugContestTimer:
 	ld [wBugContestMinsRemaining], a
 	ld a, BUG_CONTEST_SECONDS
 	ld [wBugContestSecsRemaining], a
-	call UpdateTime
+	farcall GetTimeOfDay
 	ld hl, wBugContestStartTime
 	call CopyDayHourMinSecToHL
 	ret
@@ -172,7 +172,7 @@ CheckBugContestTimer::
 	ret
 
 InitializeStartDay:
-	call UpdateTime
+	farcall GetTimeOfDay
 	ld hl, wTimerEventStartDay
 	call CopyDayToHL
 	ret
@@ -193,7 +193,7 @@ SetUnusedTwoDayTimer:
 	ld a, 2
 	ld hl, wUnusedTwoDayTimer
 	ld [hl], a
-	call UpdateTime
+	farcall GetTimeOfDay
 	ld hl, wUnusedTwoDayTimerStartDate
 	call CopyDayToHL
 	ret

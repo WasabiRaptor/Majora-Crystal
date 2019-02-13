@@ -984,10 +984,3 @@ DayCareMonCompatibilityText:
 	; It shows interest in @ .
 	text_jump UnknownText_0x1c0ec6
 	db "@"
-
-Unreferenced_DayCareMonPrintEmptyString:
-	ld hl, .string
-	ret
-
-.string
-	db "@"

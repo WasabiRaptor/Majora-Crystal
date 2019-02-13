@@ -231,59 +231,28 @@ MainMenu_PrintCurrentTimeAndDay:
 	ret
 
 .PlaceBox:
-	call CheckRTCStatus
-	and $80
-	jr nz, .TimeFail
 	hlcoord 0, 14
 	ld b, 2
 	ld c, 18
 	call TextBox
 	ret
 
-.TimeFail:
-	call SpeechTextBox
-	ret
-
 .PlaceTime:
 	ld a, [wSaveFileExists]
 	and a
 	ret z
-	call CheckRTCStatus
-	and $80
-	jp nz, .PrintTimeNotSet
-	call UpdateTime
+	farcall GetTimeOfDay
 	call GetWeekday
 	ld b, a
 	decoord 1, 15
 	call .PlaceCurrentDay
 	decoord 4, 16
 	ldh a, [hHours]
+	ld b, a
+	ldh a, [hMinutes]
 	ld c, a
-	farcall PrintHour
-	ld [hl], ":"
-	inc hl
-	ld de, hMinutes
-	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
-	call PrintNum
+	farcall PrintHoursMins
 	ret
-
-.min
-; unused
-	db "min.@"
-
-.PrintTimeNotSet:
-	hlcoord 1, 14
-	ld de, .TimeNotSet
-	call PlaceString
-	ret
-
-.TimeNotSet:
-	db "TIME NOT SET@"
-
-.UnusedText:
-	; Clock time unknown
-	text_jump UnknownText_0x1c5182
-	db "@"
 
 .PlaceCurrentDay:
 	push de

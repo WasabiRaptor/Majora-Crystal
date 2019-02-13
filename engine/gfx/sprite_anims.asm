@@ -42,6 +42,8 @@ DoAnimFrame:
 	dw .EZChatCursor
 	dw .IntroSuicune
 	dw .IntroPichuWooper
+	dw .IntroSuicune
+	dw .IntroPichuWooper
 	dw .Celebi
 	dw .IntroUnown
 	dw .IntroUnownF

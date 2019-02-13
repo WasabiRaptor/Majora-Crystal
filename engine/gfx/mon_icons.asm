@@ -234,15 +234,6 @@ FlyFunction_GetMonIcon:
 	call GetIcon_a
 	ret
 
-Unreferenced_GetMonIcon2:
-	push de
-	ld a, [wTempIconSpecies]
-	call ReadMonMenuIcon
-	ld [wCurIcon], a
-	pop de
-	call GetIcon_de
-	ret
-
 GetMemIconGFX:
 	ld a, [wCurIconTile]
 GetIconGFX:
@@ -251,7 +242,7 @@ GetIconGFX:
 	add hl, de
 	ld de, HeldItemIcons
 	lb bc, BANK(HeldItemIcons), 2
-	jp Request2bpp
+	call Request2bpp
 	ld a, [wCurIconTile]
 	add 10
 	ld [wCurIconTile], a
@@ -299,7 +290,7 @@ endr
 	pop hl
 
 	lb bc, BANK(Icons), 8
-	jp Request2bpp
+	call Request2bpp
 
 	pop hl
 	ret

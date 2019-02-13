@@ -66,6 +66,8 @@ GBPRINTER_DARKEST  EQU $7f
 ; wOptions2:: ; cfd1
 	const_def
 	const MENU_ACCOUNT ; 0
+	const CLOCK_FORMAT ; 1
+
 
 ; wWalkingDirection:: ; d043
 	const_def -1

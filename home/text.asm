@@ -927,7 +927,7 @@ TextCommand_FAR::
 	ld a, [hli]
 
 	ldh [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 
 	push hl
 	ld h, d
@@ -937,7 +937,7 @@ TextCommand_FAR::
 
 	pop af
 	ldh [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 	ret
 
 TextCommand_BCD::
