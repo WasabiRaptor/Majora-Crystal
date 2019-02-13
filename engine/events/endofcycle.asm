@@ -83,16 +83,19 @@ EndOfCycleStep::
 	ret
 	
 FirstDayScript:
+	playmusic MUSIC_NONE
 	opentext
 	writetext .FirstDaytext
 	waitbutton
 	closetext
+	special RestartMapMusic
 	end
 .FirstDaytext
 	text_jump FirstDayText
 	db "@"
 	
 SecondDayScript:
+	playmusic MUSIC_NONE
 	clearevent EVENT_RETURNED_MACHINE_PART
 	setevent EVENT_SAFFRON_TRAIN_STATION_POPULATION
 	clearevent EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
@@ -110,85 +113,105 @@ SecondDayScript:
 	writetext .SecondDaytext
 	waitbutton
 	closetext
+	special RestartMapMusic
 	end
 .SecondDaytext
 	text_jump SecondDayText
 	db "@"
 	
 ThirdDayScript:
+	playmusic MUSIC_NONE
 	opentext
 	writetext .ThirdDaytext
 	waitbutton
 	closetext
+	special RestartMapMusic
 	end
 .ThirdDaytext
 	text_jump ThirdDayText
 	db "@"
 	
 FourthDayScript:
+	playmusic MUSIC_NONE
 	opentext
 	writetext .FourthDaytext
 	waitbutton
 	closetext
+	special RestartMapMusic
 	end
 .FourthDaytext
 	text_jump FourthDayText
 	db "@"
 	
 FifthDayScript:
+	playmusic MUSIC_NONE
 	opentext
 	writetext .FifthDaytext
 	waitbutton
 	closetext
+	special RestartMapMusic
 	end
 .FifthDaytext
 	text_jump FifthDayText
 	db "@"
 	
 SixthDayScript:
+	playmusic MUSIC_NONE
 	opentext
 	writetext .SixthDaytext
 	waitbutton
 	closetext
+	special RestartMapMusic
 	end
 .SixthDaytext
 	text_jump SixthDayText
 	db "@"
 
 SeventhDayScript:
+	playmusic MUSIC_NONE
 	opentext
 	writetext .SeventhDaytext
 	waitbutton
 	closetext
+	special RestartMapMusic
 	end
 .SeventhDaytext
 	text_jump SeventhDayText
 	db "@"
 SomethingIsStirringScript:
+	playmusic MUSIC_NONE
+	;callasm PlayWind1
 	opentext
 	writetext .SomethingIsStirringtext
 	waitbutton
 	closetext
+	special RestartMapMusic
 	end
 .SomethingIsStirringtext
 	text_jump SomethingIsStirringText
 	db "@"
 	
 SomethingIsApproachingScript:
+	playmusic MUSIC_NONE
+	;callasm PlayWind1
 	opentext
 	writetext .SomethingIsApproachingtext
 	waitbutton
 	closetext
+	special RestartMapMusic
 	end
 .SomethingIsApproachingtext
 	text_jump SomethingIsApproachingText
 	db "@"
 
 ItsGettingCloserScript:
+	playmusic MUSIC_NONE
+	;callasm PlayWind2
 	opentext
 	writetext .ItsGettingClosertext
 	waitbutton
 	closetext
+	special RestartMapMusic
 	end
 .ItsGettingClosertext
 	text_jump ItsGettingCloserText

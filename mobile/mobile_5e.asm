@@ -820,7 +820,7 @@ Function17ac46:
 	ret
 
 .bit_4_set
-	call Function3eea
+	;call Function3eea
 	ret
 
 Palette_17ac55:

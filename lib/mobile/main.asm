@@ -98,7 +98,7 @@ Function110030::
 	ld a, [hl]
 	; restore de
 	pop de
-	ld hl, Function3e60 ; return here
+	;ld hl, Function3e60 ; return here
 	push hl
 	; If the destination function is not Function110236,
 	; call Function1100b4.

@@ -378,7 +378,10 @@ GetTimeOfDayString:
 
 AdjustHourForAMorPM:
 ; Convert the hour stored in c (0-23) to a 1-12 value
+	ld a, [wOptions2]
+	bit CLOCK_FORMAT, a
 	ld a, c
+	ret z
 	or a
 	jr z, .midnight
 	cp NOON_HOUR

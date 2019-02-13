@@ -868,7 +868,7 @@ Function10635c:
 	ld hl, $41
 	ld bc, $41
 	ld a, $40
-	call Function3e32
+	;;call Function3e32
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
 	ld [wMobileCommsJumptableIndex], a
@@ -938,7 +938,7 @@ Function1063e5:
 Function1063f3:
 	ld de, wcd31
 	ld a, $32
-	call Function3e32
+	;call Function3e32
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
 	ld [wMobileCommsJumptableIndex], a
@@ -986,7 +986,7 @@ Function106403:
 
 Function106442:
 	ld a, $36
-	call Function3e32
+	;call Function3e32
 	xor a
 	ldh [hMobile], a
 	ldh [hMobileReceive], a
@@ -1046,7 +1046,7 @@ Function1064c3:
 	ldh [rSVBK], a
 	push bc
 	push hl
-	ld hl, Function3f88
+	;ld hl, Function3f88
 	ld a, b
 	rst FarCall
 	pop hl
@@ -1062,7 +1062,7 @@ Function1064d8:
 	ldh [rSVBK], a
 	push bc
 	push hl
-	ld hl, Function3f9f
+	;ld hl, Function3f9f
 	ld a, b
 	rst FarCall
 	pop hl

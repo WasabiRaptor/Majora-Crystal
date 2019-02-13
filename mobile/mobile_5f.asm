@@ -4570,11 +4570,11 @@ Function17f5e4:
 	hlcoord 2, 1
 	ld b, $1
 	ld c, $e
-	call Function3eea
+	;call Function3eea
 	hlcoord 1, 4
 	ld b, $c
 	ld c, $10
-	call Function3eea
+	;call Function3eea
 	hlcoord 3, 2
 	ld de, String_17f6dc
 	call PlaceString

@@ -281,6 +281,9 @@ SavedTheGame:
 	ret
 
 _SaveGameData::
+	ld a, [wCycleCount]
+	inc a
+	ld [wCycleCount], a
 	ld a, TRUE
 	ld [wSaveFileExists], a
 	farcall StageRTCTimeForSave

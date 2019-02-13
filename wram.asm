@@ -1579,6 +1579,7 @@ wGBPrinter:: ; cfd0
 	db
 wOptions2:: ; cfd1
 ; bit 1: menu account off/on
+; bit 2: clock format
 	db
 	ds 2
 wOptionsEnd::
@@ -2749,7 +2750,8 @@ wYanmaMapGroup:: db ; dc5a
 wYanmaMapNumber:: db
 wPlayerMonSelection:: ds 3
 wdc5f:: ds 1
-wdc60:: ds 18
+wdc60:: ds 17
+wCycleCount:: db
 wCycleProgress:: db
 ;0 nothing
 ;1 Something is stirring
