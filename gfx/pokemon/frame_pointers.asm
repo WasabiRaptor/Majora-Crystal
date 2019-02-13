@@ -131,10 +131,10 @@ FramesPointers:
 	dw GyaradosFrames
 	dw LaprasFrames
 	dw DittoFrames
-	dw EeveeFrames
-	dw VaporeonFrames
-	dw JolteonFrames
-	dw FlareonFrames
+	dw EeveexFrames
+	dw VaporeonxFrames
+	dw JolteonxFrames
+	dw FlareonxFrames
 	dw PorygonFrames
 	dw OmanyteFrames
 	dw OmastarFrames
@@ -194,7 +194,7 @@ FramesPointers:
 	dw YanmaFrames
 	dw WooperFrames
 	dw QuagsireFrames
-	dw EspeonFrames
+	dw EspeonxFrames
 	dw UmbreonFrames
 	dw MurkrowFrames
 	dw SlowkingFrames

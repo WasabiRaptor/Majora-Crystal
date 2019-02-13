@@ -135,7 +135,7 @@ endc
 	dw NoEggMoves
 	dw LaprasEggMoves
 	dw NoEggMoves
-	dw EeveeEggMoves
+	dw EeveexEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

@@ -238,6 +238,7 @@ endc
 	dw Script_mysterydungeonwarp
 	dw Script_portrait
 	dw Script_closeportrait
+	dw Script_giveshinypoke
 
 StartScript:
 	ld hl, wScriptFlags
@@ -2856,3 +2857,31 @@ Script_closeportrait:
 	farcall ClosePortrait
 	ret
 
+Script_giveshinypoke:
+; script command 0x??
+; parameters: pokemon, level, item, trainer, trainer_name_pointer, pkmn_nickname
+
+	call GetScriptByte
+	ld [wCurPartySpecies], a
+	call GetScriptByte
+	ld [wCurPartyLevel], a
+	call GetScriptByte
+	ld [wCurItem], a
+	call GetScriptByte
+	and a
+	ld b, a
+	jr z, .ok
+	ld hl, wScriptPos
+	ld e, [hl]
+	inc hl
+	ld d, [hl]
+	call GetScriptByte
+	call GetScriptByte
+	call GetScriptByte
+	call GetScriptByte
+.ok
+	
+	farcall GivePoke
+	ld a, b
+	ld [wScriptVar], a
+	ret

@@ -29,4 +29,4 @@ KantoVulpixBitmasks: INCLUDE "gfx/pokemon/vulpix/bitmask.asm"
 Vulpix_AlolaBitmasks: INCLUDE "gfx/pokemon/vulpix/bitmask.asm"
 
 KantoNinetalesBitmasks: INCLUDE "gfx/pokemon/ninetales/bitmask.asm"
-Ninetales_AlolaBitmasks: INCLUDE "gfx/pokemon/alolanninetales/bitmask.asm"
+Ninetales_AlolaBitmasks: INCLUDE "gfx/pokemon/ninetales_alola/bitmask.asm"

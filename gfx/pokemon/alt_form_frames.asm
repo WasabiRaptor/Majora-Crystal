@@ -34,4 +34,4 @@ Vulpix_AlolaFrames:     INCLUDE "gfx/pokemon/vulpix/frames.asm"
 
 NinetalesFrames:
 KantoNinetalesFrames: INCLUDE "gfx/pokemon/ninetales/frames.asm"
-Ninetales_AlolaFrames: INCLUDE "gfx/pokemon/alolanninetales/frames.asm"
+Ninetales_AlolaFrames: INCLUDE "gfx/pokemon/ninetales_alola/frames.asm"

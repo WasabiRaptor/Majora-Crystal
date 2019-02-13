@@ -33,4 +33,4 @@ Vulpix_AlolaAnimation: INCLUDE "gfx/pokemon/vulpix/anim.asm"
 
 NinetalesAnimations:
 KantoNinetalesAnimation: INCLUDE "gfx/pokemon/ninetales/anim.asm"
-Ninetales_AlolaAnimation: INCLUDE "gfx/pokemon/alolanninetales/anim.asm"
+Ninetales_AlolaAnimation: INCLUDE "gfx/pokemon/ninetales_alola/anim.asm"

@@ -27,7 +27,7 @@ MysteryDungeonSetup:
 
 ; TEMP
 TempBugsyScript:
-	loadtrainer BUGSY, BUGSY1
+	loadtrainer YOUNGSTER, JOEY1
 	startbattle
 	reloadmapafterbattle
 	end

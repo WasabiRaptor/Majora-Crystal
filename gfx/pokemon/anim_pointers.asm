@@ -131,10 +131,10 @@ AnimationPointers:
 	dw GyaradosAnimation
 	dw LaprasAnimation
 	dw DittoAnimation
-	dw EeveeAnimation
-	dw VaporeonAnimation
-	dw JolteonAnimation
-	dw FlareonAnimation
+	dw EeveexAnimation
+	dw VaporeonxAnimation
+	dw JolteonxAnimation
+	dw FlareonxAnimation
 	dw PorygonAnimation
 	dw OmanyteAnimation
 	dw OmastarAnimation
@@ -194,8 +194,8 @@ AnimationPointers:
 	dw YanmaAnimation
 	dw WooperAnimation
 	dw QuagsireAnimation
-	dw EspeonAnimation
-	dw UmbreonAnimation
+	dw EspeonxAnimation
+	dw UmbreonxAnimation
 	dw MurkrowAnimation
 	dw SlowkingAnimation
 	dw MisdreavusAnimation

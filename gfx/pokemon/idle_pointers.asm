@@ -131,10 +131,10 @@ AnimationIdlePointers:
 	dw GyaradosAnimationIdle
 	dw LaprasAnimationIdle
 	dw DittoAnimationIdle
-	dw EeveeAnimationIdle
-	dw VaporeonAnimationIdle
-	dw JolteonAnimationIdle
-	dw FlareonAnimationIdle
+	dw EeveexAnimationIdle
+	dw VaporeonxAnimationIdle
+	dw JolteonxAnimationIdle
+	dw FlareonxAnimationIdle
 	dw PorygonAnimationIdle
 	dw OmanyteAnimationIdle
 	dw OmastarAnimationIdle
@@ -194,8 +194,8 @@ AnimationIdlePointers:
 	dw YanmaAnimationIdle
 	dw WooperAnimationIdle
 	dw QuagsireAnimationIdle
-	dw EspeonAnimationIdle
-	dw UmbreonAnimationIdle
+	dw EspeonxAnimationIdle
+	dw UmbreonxAnimationIdle
 	dw MurkrowAnimationIdle
 	dw SlowkingAnimationIdle
 	dw MisdreavusAnimationIdle

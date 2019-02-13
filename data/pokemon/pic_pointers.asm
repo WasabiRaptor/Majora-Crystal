@@ -270,14 +270,14 @@ PokemonPicPointers::
 	dba LaprasBackpic
 	dba DittoFrontpic
 	dba DittoBackpic
-	dba EeveeFrontpic
+	dba EeveexFrontpic
 	dba EeveeBackpic
-	dba VaporeonFrontpic
-	dba VaporeonBackpic
-	dba JolteonFrontpic
-	dba JolteonBackpic
-	dba FlareonFrontpic
-	dba FlareonBackpic
+	dba VaporeonxFrontpic
+	dba VaporeonxBackpic
+	dba JolteonxFrontpic
+	dba JolteonxBackpic
+	dba FlareonxFrontpic
+	dba FlareonxBackpic
 	dba PorygonFrontpic
 	dba PorygonBackpic
 	dba OmanyteFrontpic

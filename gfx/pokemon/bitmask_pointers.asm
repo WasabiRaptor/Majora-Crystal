@@ -131,10 +131,10 @@ BitmasksPointers:
 	dw GyaradosBitmasks
 	dw LaprasBitmasks
 	dw DittoBitmasks
-	dw EeveeBitmasks
-	dw VaporeonBitmasks
-	dw JolteonBitmasks
-	dw FlareonBitmasks
+	dw EeveexBitmasks
+	dw VaporeonxBitmasks
+	dw JolteonxBitmasks
+	dw FlareonxBitmasks
 	dw PorygonBitmasks
 	dw OmanyteBitmasks
 	dw OmastarBitmasks
@@ -194,8 +194,8 @@ BitmasksPointers:
 	dw YanmaBitmasks
 	dw WooperBitmasks
 	dw QuagsireBitmasks
-	dw EspeonBitmasks
-	dw UmbreonBitmasks
+	dw EspeonxBitmasks
+	dw UmbreonxBitmasks
 	dw MurkrowBitmasks
 	dw SlowkingBitmasks
 	dw MisdreavusBitmasks
