@@ -1530,6 +1530,12 @@ _OakText5::
 	line "until you win."
 	prompt
 	
+FirstDayContinueText::
+	text "Dawn of the"
+	line "First Day…"
+	para "168 hours remain…"
+	prompt
+
 FirstDayText::
 	text "Dawn of the"
 	line "First Day…"

@@ -570,7 +570,7 @@ Continue_CheckRTC_RestartClock:
 	ret
 
 FirstDaytext:
-	text_jump FirstDayText
+	text_jump FirstDayContinueText
 	db "@"
 
 FinishContinueFunction:

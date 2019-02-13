@@ -367,8 +367,8 @@ SavingDontTurnOffThePower:
 	ld a, TEXT_DELAY_MED
 	ld [wOptions], a
 	; SAVING... DON'T TURN OFF THE POWER.
-	ld hl, Text_SavingDontTurnOffThePower
-	call PrintText
+	;ld hl, Text_SavingDontTurnOffThePower
+	;call PrintText
 	; Restore the text speed setting
 	pop af
 	ld [wOptions], a
