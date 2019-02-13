@@ -66,7 +66,6 @@ INCLUDE "engine/events/std_collision.asm"
 INCLUDE "engine/events/bug_contest/judging.asm"
 INCLUDE "engine/events/pokerus/apply_pokerus_tick.asm"
 INCLUDE "engine/events/bug_contest/contest_2.asm"
-INCLUDE "engine/pokemon/correct_party_errors.asm"
 
 INCLUDE "engine/events/endofcycle.asm"
 INCLUDE "engine/events/mysterydungeonwarp.asm"
@@ -74,7 +73,6 @@ INCLUDE "engine/events/mysterydungeonwarp.asm"
 
 SECTION "bank5", ROMX
 
-INCLUDE "engine/rtc/rtc.asm"
 INCLUDE "engine/overworld/overworld.asm"
 INCLUDE "engine/overworld/tile_events.asm"
 INCLUDE "engine/menus/save.asm"
@@ -95,11 +93,6 @@ INCLUDE "gfx/tilesets.asm"
 SECTION "Roofs", ROMX
 
 INCLUDE "engine/tilesets/mapgroup_roofs.asm"
-
-
-SECTION "Clock Reset", ROMX
-
-INCLUDE "engine/rtc/restart_clock.asm"
 
 
 SECTION "bank9", ROMX
@@ -224,7 +217,6 @@ Shrink2Pic:
 INCBIN "gfx/new_game/shrink2.2bpp.lz"
 
 INCLUDE "engine/link/link_2.asm"
-INCLUDE "engine/rtc/reset_password.asm"
 INCLUDE "engine/menus/delete_save.asm"
 INCLUDE "data/tilesets.asm"
 INCLUDE "engine/smallflag.asm"
@@ -319,7 +311,6 @@ INCLUDE "engine/gfx/mon_icons.asm"
 SECTION "bank24", ROMX
 
 INCLUDE "engine/phone/phone.asm"
-INCLUDE "engine/rtc/timeset.asm"
 INCLUDE "engine/pokegear/pokegear.asm"
 INCLUDE "engine/events/fish.asm"
 INCLUDE "engine/games/slot_machine.asm"
@@ -582,7 +573,7 @@ INCLUDE "engine/printer/print_party.asm"
 
 SECTION "bank77_2", ROMX
 
-INCLUDE "engine/rtc/print_hours_mins.asm"
+INCLUDE "engine/print_hours_mins.asm"
 INCLUDE "engine/events/diploma.asm"
 INCLUDE "engine/pokedex/pokedex_3.asm"
 INCLUDE "engine/events/catch_tutorial_input.asm"

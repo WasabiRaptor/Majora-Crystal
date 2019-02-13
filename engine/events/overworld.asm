@@ -943,12 +943,6 @@ StrengthFunction:
 	jr c, .Failed
 	jr .UseStrength
 
-.Unreferenced_AlreadyUsing:
-	ld hl, .JumpText
-	call MenuTextBoxBackup
-	ld a, $80
-	ret
-
 .JumpText:
 	text_jump UnknownText_0x1c0751
 	db "@"

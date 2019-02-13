@@ -11,6 +11,8 @@ DefaultOptions:
 	db GBPRINTER_NORMAL
 ; wOptions2: menu account on
 	db 1 << MENU_ACCOUNT
+; Clock format: 12 hours
+	db 0 << CLOCK_FORMAT
 
 	db $00
 	db $00

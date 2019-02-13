@@ -26,14 +26,12 @@ SaveMenu:
 
 SaveAfterLinkTrade:
 	call PauseGameLogic
-	farcall StageRTCTimeForSave
 	farcall BackupMysteryGift
 	call SavePokemonData
 	call SaveChecksum
 	call SaveBackupPokemonData
 	call SaveBackupChecksum
 	farcall BackupPartyMonMail
-	farcall SaveRTC
 	call ResumeGameLogic
 	ret
 
@@ -123,7 +121,6 @@ MoveMonWOMail_InsertMon_SaveGame:
 	ld [wCurBox], a
 	ld a, TRUE
 	ld [wSaveFileExists], a
-	farcall StageRTCTimeForSave
 	farcall BackupMysteryGift
 	call ValidateSave
 	call SaveOptions
@@ -137,7 +134,6 @@ MoveMonWOMail_InsertMon_SaveGame:
 	call SaveBackupChecksum
 	farcall BackupPartyMonMail
 	;farcall BackupMobileEventIndex
-	farcall SaveRTC
 	call LoadBox
 	call ResumeGameLogic
 	ld de, SFX_SAVE
@@ -264,7 +260,6 @@ SavedTheGame:
 SaveGameData::
 	ld a, TRUE
 	ld [wSaveFileExists], a
-	farcall StageRTCTimeForSave
 	farcall BackupMysteryGift
 	call ValidateSave
 	call SaveOptions
@@ -280,7 +275,6 @@ SaveGameData::
 	call UpdateStackTop
 	farcall BackupPartyMonMail
 	;farcall BackupMobileEventIndex
-	farcall SaveRTC
 	ld a, BANK(sBattleTowerChallengeState)
 	call GetSRAMBank
 	ld a, [sBattleTowerChallengeState]
@@ -376,27 +370,6 @@ EraseHallOfFame:
 	call ByteFill
 	jp CloseSRAM
 
-Unreferenced_Function14d18:
-; copy .Data to SRA4:a007
-	ld a, 4 ; MBC30 bank used by JP Crystal; inaccessible by MBC3
-	call GetSRAMBank
-	ld hl, .Data
-	ld de, $a007 ; address of MBC30 bank
-	ld bc, .DataEnd - .Data
-	call CopyBytes
-	jp CloseSRAM
-
-.Data:
-	db $0d, $02, $00, $05, $00, $00
-	db $22, $02, $01, $05, $00, $00
-	db $03, $04, $05, $08, $03, $05
-	db $0e, $06, $03, $02, $00, $00
-	db $39, $07, $07, $04, $00, $05
-	db $04, $07, $01, $05, $00, $00
-	db $0f, $05, $14, $07, $05, $05
-	db $11, $0c, $0c, $06, $06, $04
-.DataEnd
-
 EraseBattleTowerStatus:
 	ld a, BANK(sBattleTowerChallengeState)
 	call GetSRAMBank
@@ -406,38 +379,6 @@ EraseBattleTowerStatus:
 
 SaveData:
 	call _SaveData
-	ret
-
-Unreferenced_Function14d6c:
-	ld a, 4 ; MBC30 bank used by JP Crystal; inaccessible by MBC3
-	call GetSRAMBank
-	ld a, [$a60b] ; address of MBC30 bank
-	ld b, $0
-	and a
-	jr z, .ok
-	ld b, $2
-
-.ok
-	ld a, b
-	ld [$a60b], a ; address of MBC30 bank
-	call CloseSRAM
-	ret
-
-Unreferenced_Function14d83:
-	ld a, 4 ; MBC30 bank used by JP Crystal; inaccessible by MBC3
-	call GetSRAMBank
-	xor a
-	ld [$a60c], a ; address of MBC30 bank
-	ld [$a60d], a ; address of MBC30 bank
-	call CloseSRAM
-	ret
-
-Unreferenced_Function14d93:
-	ld a, 7 ; MBC30 bank used by JP Crystal; inaccessible by MBC3
-	call GetSRAMBank
-	xor a
-	ld [$a000], a ; address of MBC30 bank
-	call CloseSRAM
 	ret
 
 HallOfFame_InitSaveIfNeeded:
@@ -657,7 +598,6 @@ TryLoadSaveData:
 	ld de, wOptions
 	ld bc, wOptionsEnd - wOptions
 	call CopyBytes
-	call PanicResetClock
 	ret
 
 INCLUDE "data/default_options.asm"

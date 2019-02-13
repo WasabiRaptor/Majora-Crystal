@@ -402,19 +402,6 @@ UpdatePlayerStep:
 	set 5, [hl]
 	ret
 
-Unreferenced_Function4759:
-	push bc
-	ld e, a
-	ld d, 0
-	ld hl, OBJECT_MAP_OBJECT_INDEX
-	add hl, bc
-	ld a, [hl]
-	call GetMapObject
-	add hl, de
-	ld a, [hl]
-	pop bc
-	ret
-
 RestoreDefaultMovement:
 	ld hl, OBJECT_MAP_OBJECT_INDEX
 	add hl, bc
@@ -1096,6 +1083,8 @@ StepTypesJumptable:
 	dw StepType17 ; 17
 	dw StepType18 ; 18
 	dw SkyfallTop ; 19
+	dw NPCDiagonalStairs ;20
+	dw PlayerDiagonalStairs ;21
 
 WaitStep_InPlace:
 	ld hl, OBJECT_STEP_DURATION
@@ -1189,6 +1178,78 @@ PlayerJump:
 	add hl, bc
 	ld [hl], STEP_TYPE_SLEEP
 	ret
+
+NPCDiagonalStairs:
+	ret
+
+;diagonal stairs
+PlayerDiagonalStairs: ;I know for a fact that the rotating issue is not here
+	call Field1cAnonymousJumptable ;jumptable that determines what the player sprite is doing at the moment I think
+	dw .initdiagonalhorizontal1
+	dw .stepdiagonalhorizontal
+	dw .initdiagonalhorizontal2
+	dw .stepdiagonalhorizontal
+	dw .initdiagonalvertical
+	dw .stepdiagonalvertical
+
+.initdiagonalhorizontal2; GetNextTile is only needed on the second time but it does exactly the same thing so this should save space
+	call GetNextTile
+.initdiagonalhorizontal1 
+	ld hl, wPlayerStepFlags
+	set 7, [hl]
+	call IncrementObjectStructField1c
+.stepdiagonalhorizontal
+	call UpdateDiagonalStairsPosition
+	call UpdatePlayerStep
+	ld hl, OBJECT_STEP_DURATION
+	add hl, bc
+	dec [hl]
+	ret nz
+	call CopyNextCoordsTileToStandingCoordsTile
+	ld hl, OBJECT_FLAGS2
+	add hl, bc
+	res 3, [hl]
+	ld hl, wPlayerStepFlags
+	set 6, [hl]
+	set 4, [hl]
+	call IncrementObjectStructField1c
+	ret
+
+.initdiagonalvertical
+	ld a, [wMetatileStandingY]
+	and a
+
+	ld hl, OBJECT_ACTION
+	add hl, bc
+	ld [hl], OBJECT_ACTION_STAND
+
+	ld hl, OBJECT_DIRECTION_WALKING
+	add hl, bc
+	ld [hl], DOWN
+
+	jr z, .goingdown ;go up if we're not going down
+
+	ld [hl], UP 
+.goingdown
+	call GetNextTile
+	ld hl, wPlayerStepFlags
+	set 7, [hl]
+	call IncrementObjectStructField1c
+.stepdiagonalvertical
+	call UpdateDiagonalStairsPosition
+	call UpdatePlayerStep
+	ld hl, OBJECT_STEP_DURATION
+	add hl, bc
+	dec [hl]
+	ret nz
+	ld hl, wPlayerStepFlags
+	set 6, [hl]
+	call CopyNextCoordsTileToStandingCoordsTile
+	ld hl, OBJECT_STEP_TYPE
+	add hl, bc
+	ld [hl], STEP_TYPE_SLEEP
+	ret
+
 
 TeleportFrom:
 	call Field1cAnonymousJumptable
@@ -1799,6 +1860,25 @@ UpdateJumpPosition:
 .y
 	db  -4,  -6,  -8, -10, -11, -12, -12, -12
 	db -11, -10,  -9,  -8,  -6,  -4,   0,   0
+
+UpdateDiagonalStairsPosition:	
+	ld a, [wMetatileStandingY]
+	and a
+
+	jr z, .goingdown
+	ld e, -1
+	jr .goingup
+.goingdown
+	ld e, 1
+.goingup
+	ld hl, OBJECT_SPRITE_Y_OFFSET
+	add hl, bc
+	ld a, [hl]
+	add e
+	ld [hl], a
+	ret
+
+
 Function5000: ; unscripted?
 ; copy [wPlayerNextMovement] to [wPlayerMovement]
 	ld a, [wPlayerNextMovement]

@@ -189,7 +189,7 @@ HandleMapTimeAndJoypad:
 	cp 1 ; no events
 	ret z
 
-	call UpdateTime
+	farcall GetTimeOfDay
 	call GetJoypad
 	call TimeOfDayPals
 	ret
@@ -1353,14 +1353,6 @@ HandleCmdQueue::
 	inc a
 	cp CMDQUEUE_CAPACITY
 	jr nz, .loop
-	ret
-
-Unreferenced_GetNthCmdQueueEntry:
-	ld hl, wCmdQueue
-	ld bc, CMDQUEUE_ENTRY_SIZE
-	call AddNTimes
-	ld b, h
-	ld c, l
 	ret
 
 WriteCmdQueue::
