@@ -66,6 +66,8 @@ NewGame:
 	call AreYouABoyOrAreYouAGirl
 	call OakSpeech
 	call InitializeWorld
+	;fallthrough
+BasicallyNewGame:
 	ld a, 1
 	ld [wPrevLandmark], a
 
@@ -218,6 +220,14 @@ endc
 
 	ld hl, wCycleProgress
 	ld [hl], 11
+
+;set the pokegear to be obtained
+	ld hl, wPokegearFlags
+	set POKEGEAR_OBTAINED_F, [hl]
+	set POKEGEAR_MAP_CARD_F, [hl] 
+	set POKEGEAR_RADIO_CARD_F, [hl]
+	set POKEGEAR_PHONE_CARD_F, [hl]
+	set POKEGEAR_EXPN_CARD_F, [hl]
 	ret
 
 .InitList:
@@ -370,9 +380,10 @@ Continue:
 	ldh [hMapEntryMethod], a
 	ld hl, wCurDay
 	ld [hl], 0
-	ld a, [wSpawnAfterChampion]
-	cp 0
-	jr z, ResetStuff
+	;check if we're spaning after beating the champion or Red, if so then just finish continue as normal without resetting more of the save for the time loop
+	;ld a, [wSpawnAfterChampion]
+	;cp 0
+	;jr z, ResetStuff
 	jp FinishContinueFunction
 
 .FailToLoad:
@@ -388,17 +399,7 @@ ResetStuff:
 	xor a
 	ldh [hBGMapMode], a
 	call _ResetStuff
-
-	ld a, 1
-	ld [wPrevLandmark], a
-
-	;ld a, SPAWN_HOME
-	;ld [wDefaultSpawnpoint], a
-
-	ld a, MAPSETUP_WARP
-	ldh [hMapEntryMethod], a
-	jp FinishContinueFunction
-	ret
+	jp BasicallyNewGame
 
 _ResetStuff:
 	ld hl, wMooMooBerries

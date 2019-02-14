@@ -49,3 +49,4 @@ gfx/pokemon/*/frames.asm
 .vscode/
 build/
 *.pcm
+extras
