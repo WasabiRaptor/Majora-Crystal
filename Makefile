@@ -9,7 +9,7 @@ RGBFIX := rgbfix
 RGBGFX := rgbgfx
 RGBLINK := rgblink
 
-PYTHON := py -2
+PYTHON := python 
 pcm := $(PYTHON) extras/pokemontools/pcm.py pcm
 
 roms := pokebrass.gbc
