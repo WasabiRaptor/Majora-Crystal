@@ -35,8 +35,8 @@ MeetMomRightScript:
 MeetMomScript:
 	opentext
 	givepoke CELEBI, 100, BERRY ; TEMP
-	writetext ElmsLookingForYouText
-	buttonsound
+	;writetext ElmsLookingForYouText
+	;buttonsound
 	stringtotext GearName, MEM_BUFFER_1
 	scall PlayersHouse1FReceiveItemStd
 	setflag ENGINE_POKEGEAR
@@ -45,8 +45,8 @@ MeetMomScript:
 	setscene SCENE_FINISHED
 	setevent EVENT_PLAYERS_HOUSE_MOM_1
 	clearevent EVENT_PLAYERS_HOUSE_MOM_2
-	writetext MomGivesPokegearText
-	buttonsound
+	;writetext MomGivesPokegearText
+	;buttonsound
 	jump .FinishPhone
 
 .FinishPhone:
