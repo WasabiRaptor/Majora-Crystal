@@ -9,6 +9,9 @@ RGBFIX := rgbfix
 RGBGFX := rgbgfx
 RGBLINK := rgblink
 
+PYTHON := py -2
+pcm := $(PYTHON) extras/pokemontools/pcm.py pcm
+
 roms := pokebrass.gbc
 
 BUILD_DIR := build/
@@ -208,3 +211,7 @@ gfx/unknown/unknown_egg.2bpp: rgbgfx += -h
 
 %.dimensions: %.png
 	tools/png_dimensions $< $@
+
+%.wav:;
+%.pcm: %.wav
+	@$(pcm) $<

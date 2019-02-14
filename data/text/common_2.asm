@@ -1530,6 +1530,12 @@ _OakText5::
 	line "until you win."
 	prompt
 	
+FirstDayContinueText::
+	text "Dawn of the"
+	line "First Day…"
+	para "168 hours remain…"
+	prompt
+
 FirstDayText::
 	text "Dawn of the"
 	line "First Day…"
@@ -1590,4 +1596,14 @@ ItsGettingCloserText::
 ItsRightNearText::
 	text "It's right near!"
 	line "It's gusting hard!"
+	done
+	
+EndOfCycleText::
+	text "You can keep"
+	line "them safe..."
+	para "Even if you have"
+	line "to box your very"
+	cont "last #MON..."
+	para "Play it safe,"
+	line "<PLAYER>..."
 	done

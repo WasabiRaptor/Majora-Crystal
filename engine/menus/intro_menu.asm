@@ -539,7 +539,7 @@ ConfirmContinue:
 	ret
 
 FirstDaytext:
-	text_jump FirstDayText
+	text_jump FirstDayContinueText
 	db "@"
 
 FinishContinueFunction:

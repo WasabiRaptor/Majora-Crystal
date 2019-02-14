@@ -34,7 +34,7 @@ MeetMomRightScript:
 	applymovement PLAYERSHOUSE1F_MOM1, MomWalksToPlayerMovement
 MeetMomScript:
 	opentext
-	givepoke CELEBI, 100, BERRY ; TEMP
+	givepoke ZORUA, 5, BERRY ; TEMP
 	;writetext ElmsLookingForYouText
 	;buttonsound
 	stringtotext GearName, MEM_BUFFER_1

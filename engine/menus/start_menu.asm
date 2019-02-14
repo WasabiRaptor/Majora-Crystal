@@ -29,6 +29,7 @@ StartMenu::
 	call .SetUpMenuItems
 	ld a, [wBattleMenuCursorBuffer]
 	ld [wMenuCursorBuffer], a
+	call .DrawMenuClock
 	call .DrawMenuAccount
 	call DrawVariableLengthMenuBox
 	call .DrawBugContestStatusBox
@@ -96,11 +97,13 @@ StartMenu::
 ; Return carry on exit, and no-carry on selection.
 	xor a
 	ldh [hBGMapMode], a
+	call ._DrawMenuClock
 	call ._DrawMenuAccount
 	call SetUpMenu
 	ld a, $ff
 	ld [wMenuSelection], a
 .loop
+	call .PrintMenuClock
 	call .PrintMenuAccount
 	call GetScrollingMenuJoypad
 	ld a, [wMenuJoypad]
@@ -147,6 +150,7 @@ StartMenu::
 	call ClearBGPalettes
 	call Call_ExitMenu
 	call ReloadTilesetAndPalettes
+	call .DrawMenuClock
 	call .DrawMenuAccount
 	call DrawVariableLengthMenuBox
 	call .DrawBugContestStatus
@@ -197,32 +201,32 @@ StartMenu::
 .QuitString:     db "QUIT@"
 
 .PokedexDesc:
-	db   "#MON"
-	next "database@"
+	db   ""
+	next "#MON database@"
 
 .PartyDesc:
-	db   "Party <PKMN>"
-	next "status@"
+	db   ""
+	next "Party <PKMN> status@"
 
 .PackDesc:
-	db   "Contains"
-	next "items@"
+	db   ""
+	next "Contains items@"
 
 .PokegearDesc:
-	db   "Trainer's"
-	next "key device@"
+	db   ""
+	next "Trainer's device@"
 
 .StatusDesc:
-	db   "Your own"
-	next "status@"
+	db   ""
+	next "Your own status@"
 
 .SaveDesc:
-	db   "Save your"
-	next "progress@"
+	db   ""
+	next "Save and reset@"
 
 .OptionDesc:
-	db   "Change"
-	next "settings@"
+	db   ""
+	next "Change settings@"
 
 .ExitDesc:
 	db   "Close this"
@@ -252,6 +256,27 @@ StartMenu::
 	pop hl
 	call PlaceString
 	ret
+
+.MenuClock:
+	ld hl, wOptions
+	set NO_TEXT_SCROLL, [hl]
+	hlcoord 1, 1
+	lb bc, 2, 9
+	call ClearBox
+	ldh a, [hHours]
+	ld b, a
+	ldh a, [hMinutes]
+	ld c, a
+	decoord 1, 2
+	farcall PrintHoursMins
+	ld hl, .DayText
+	bccoord 1, 1
+	call PlaceHLTextAtBC
+	ret
+
+.DayText:
+	text_jump UnknownText_0x1c5821
+	db "@"
 
 .MenuDesc:
 	push de
@@ -283,6 +308,7 @@ rept 6
 	add hl, de
 endr
 	ret
+	
 
 .SetUpMenuItems:
 	xor a
@@ -337,8 +363,8 @@ endr
 
 	ld a, STARTMENUITEM_OPTION
 	call .AppendMenuList
-	ld a, STARTMENUITEM_EXIT
-	call .AppendMenuList
+	;ld a, STARTMENUITEM_EXIT
+	;call .AppendMenuList
 	ld a, c
 	ld [wMenuItemsList], a
 	ret
@@ -360,6 +386,23 @@ endr
 	inc c
 	ret
 
+.DrawMenuClock:
+	jp ._DrawMenuClock
+
+.PrintMenuClock:
+	call ._DrawMenuClock
+	decoord 1, 1
+	jp .MenuClock
+
+._DrawMenuClock:
+	hlcoord 0, 0
+	lb bc, 2, 9
+	call TextBox
+	hlcoord 0, 0
+	lb bc, 2, 9
+	jp TextBoxPalette
+	ret
+
 .DrawMenuAccount:
 	jp ._DrawMenuAccount
 
@@ -367,18 +410,18 @@ endr
 	call .IsMenuAccountOn
 	ret z
 	call ._DrawMenuAccount
-	decoord 0, 14
+	decoord 1, 14
 	jp .MenuDesc
 
 ._DrawMenuAccount:
 	call .IsMenuAccountOn
 	ret z
-	hlcoord 0, 13
-	lb bc, 5, 10
-	call ClearBox
-	hlcoord 0, 13
-	ld b, 3
-	ld c, 8
+	hlcoord 0, 15
+	lb bc, 1, 18
+	call TextBox
+	hlcoord 0, 15
+	lb bc, 1, 18
+	;ld c, 8
 	jp TextBoxPalette
 
 .IsMenuAccountOn:

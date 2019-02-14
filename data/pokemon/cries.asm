@@ -5,12 +5,12 @@ ENDM
 
 PokemonCries::
 ; entries correspond to constants/pokemon_constants.asm
-	mon_cry CRY_BULBASAUR,   $080,  $081 ; EEVEE
-	mon_cry CRY_BULBASAUR,   $020,  $100 ; VAPOREON
-	mon_cry CRY_BULBASAUR,   $000,  $140 ; JOLTEON
-	mon_cry CRY_CHARMANDER,  $060,  $0c0 ; FLAREON
-	mon_cry CRY_CHARMANDER,  $020,  $0c0 ; ESPEON
-	mon_cry CRY_CHARMANDER,  $000,  $100 ; UMBREON
+	mon_cry CRY_VENONAT,     $088,  $0e0 ; EEVEE
+	mon_cry CRY_VENONAT,     $0aa,  $17f ; VAPOREON
+	mon_cry CRY_VENONAT,     $03d,  $100 ; JOLTEON
+	mon_cry CRY_VENONAT,     $010,  $0a0 ; FLAREON
+	mon_cry CRY_AIPOM,       $0a2,  $140 ; ESPEON
+	mon_cry CRY_VENONAT,    -$0e9,  $0f0 ; UMBREON
 	mon_cry CRY_SQUIRTLE,    $060,  $0c0 ; LEAFEON
 	mon_cry CRY_SQUIRTLE,    $020,  $0c0 ; GLACEON
 	mon_cry CRY_BLASTOISE,   $000,  $100 ; SYLVEON

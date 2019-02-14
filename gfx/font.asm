@@ -18,6 +18,7 @@ INCBIN "gfx/frames/9.1bpp"
 INCBIN "gfx/frames/10.1bpp"
 INCBIN "gfx/frames/11.1bpp"
 INCBIN "gfx/frames/12.1bpp"
+INCBIN "gfx/frames/13.1bpp"
 
 ; Various misc graphics here.
 
