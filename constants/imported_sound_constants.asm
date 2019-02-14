@@ -1,5 +1,5 @@
 importsound_def: MACRO
-    \1_id:: dba \1
+\1_id:: dba \1
 endm
 
 dimportsound: MACRO

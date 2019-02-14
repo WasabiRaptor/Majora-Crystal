@@ -605,8 +605,8 @@ wPlayerTurnsTaken:: db ; c6dd
 wPlayerSubstituteHP:: db ; c6df
 wEnemySubstituteHP:: db ; c6e0
 
-wUnusedPlayerLockedMove:: db ; c6e1
-	ds 1
+wc0f3:: ds 1
+wc0f4:: ds 1
 
 wCurPlayerMove:: db ; c6e3
 wCurEnemyMove:: db ; c6e4
@@ -947,6 +947,10 @@ wcbfa:: ds 1
 wGBPrinterSettings:: db
 	ds 16
 wGameboyPrinterRAMEnd::
+
+wRedrawRowOrColumnSrcTiles:: ; cbfc
+; the tiles of the row or column to be redrawn by RedrawRowOrColumn
+	ds SCREEN_WIDTH * 2
 
 NEXTU ; c800
 ; bill's pc data
