@@ -44,7 +44,7 @@ MailSandslashGFX:
 INCBIN "gfx/mail/sandslash.1bpp"
 
 MailLaprasGFX:
-INCBIN "gfx/mail/lapras.1bpp"
+INCBIN "gfx/mail/armaldo.1bpp"
 
 MailEeveeGFX:
 INCBIN "gfx/mail/eevee.1bpp"

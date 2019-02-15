@@ -10,7 +10,7 @@ AsleepTreeMonsNite:
 	db MEOWTH
 	db TOGEPI
 	db EXEGGCUTE
-	db LEDYBA
+	db NOIVERN
 	db AIPOM
 	db -1 ; end
 

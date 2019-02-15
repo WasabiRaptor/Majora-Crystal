@@ -294,7 +294,7 @@ ActivateFishingSwarm:
 StoreSwarmMapIndices::
 	ld a, c
 	and a
-	jr nz, .yanma
+	jr nz, .talonflame
 ; swarm dark cave violet entrance
 	ld a, d
 	ld [wCryogonalMapGroup], a
@@ -302,11 +302,11 @@ StoreSwarmMapIndices::
 	ld [wCryogonalMapNumber], a
 	ret
 
-.yanma
+.talonflame
 	ld a, d
-	ld [wYanmaMapGroup], a
+	ld [wTalonflameMapGroup], a
 	ld a, e
-	ld [wYanmaMapNumber], a
+	ld [wTalonflameMapNumber], a
 	ret
 
 CheckPokerus:

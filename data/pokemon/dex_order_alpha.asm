@@ -30,14 +30,14 @@ AlphabeticalPokedexOrder:
 	db LIEPARD
 	db PURRLOIN
 	db CLEFFA
-	db CLOYSTER
+	db PINECO
 	db GOLURK
 	db CROBAT
 	db CROCONAW
 	db CUBONE
 	db ABOMASNOW
 	db HONEDGE
-	db DEWGONG
+	db LEDYBA
 	db MIENFOO
 	db DEWPIDER
 	db GIRAFARIG
@@ -49,13 +49,13 @@ AlphabeticalPokedexOrder:
 	db DROWZEE
 	db MIENSHAO
 	db CRYOGONAL
-	db EEVEEX
+	db ARAQUANID
 	db TOGEPI
 	db ELECTABUZZ
 	db ELECTRODE
 	db ARTICUNO
 	db ENTEI
-	db ESPEONX
+	db ARCHEN
 	db EXEGGCUTE
 	db EXEGGUTOR
 	db STUFFUL
@@ -65,7 +65,7 @@ AlphabeticalPokedexOrder:
 	db FLAREONX
 	db WEAVILE
 	db PUPITAR
-	db GASTLY
+	db FORRETRESS
 	db GENGAR
 	db COTTONEE
 	db AURORUS
@@ -80,7 +80,7 @@ AlphabeticalPokedexOrder:
 	db WHIMSICOTT
 	db GRIMER
 	db LUXRAY
-	db GYARADOS
+	db ANORITH
 	db HAUNTER
 	db NATU
 	db HITMONCHAN
@@ -109,10 +109,10 @@ AlphabeticalPokedexOrder:
 	db KOFFING
 	db KRABBY
 	db LANTURN
-	db LAPRAS
+	db ARMALDO
 	db LATIOS
-	db LEDIAN
-	db LEDYBA
+	db DRUDDIGON
+	db NOIVERN
 	db LICKITUNG
 	db SHAYMIN
 	db WIGGLYTUFF
@@ -120,7 +120,7 @@ AlphabeticalPokedexOrder:
 	db IGGLYBUFF
 	db ZAPDOS
 	db BALTOY
-	db MAGIKARP
+	db LAPRAS
 	db MAGMAR
 	db SUDOWOODO
 	db PASSIMIAN
@@ -135,11 +135,11 @@ AlphabeticalPokedexOrder:
 	db LUCARIO
 	db RIOLU
 	db MOLTRES
-	db MISDREAVUS
+	db GIGALITH
 	db TYROGUE
 	db MR__MIME
 	db MUK
-	db MURKROW
+	db ROGGENROLA
 	db QUILAVA
 	db DITTO
 	db TIMBURR
@@ -147,7 +147,7 @@ AlphabeticalPokedexOrder:
 	db GURDURR
 	db MEOWSTIC_M
 	db CONKELDURR
-	db MUK
+	db JOLTIK
 	db NOCTOWL
 	db BRONZONG
 	db NIDOQUEEN
@@ -176,7 +176,7 @@ AlphabeticalPokedexOrder:
 	db LAMPENT
 	db FLAAFFY
 	db SILVALLY
-	db QUAGSIRE
+	db DURANT
 	db FERROSEED
 	db PILOSWINE
 	db ROTOM
@@ -195,12 +195,12 @@ AlphabeticalPokedexOrder:
 	db SEAKING
 	db HERACROSS
 	db LARVITAR
-	db SHELLDER
+	db GALVANTULA
 	db UNOWN
 	db AEGISLASH
 	db SKIPLOOM
 	db BONSLY
-	db SLOWKING
+	db BOLDORE
 	db TREVANANT
 	db EXCADRILL
 	db SPIRITOMB
@@ -218,11 +218,11 @@ AlphabeticalPokedexOrder:
 	db MEWTWO
 	db VULPIX
 	db LATIAS
-	db SUNFLORA
-	db SUNKERN
+	db FLETCHINDER
+	db FLETCHLING
 	db CLAYDOL
 	db TANGELA
-	db TAUROS
+	db AZUMARILL
 	db SIGILYPH
 	db DEERLING
 	db SAWSBUCK
@@ -232,7 +232,7 @@ AlphabeticalPokedexOrder:
 	db FERROTHORN
 	db MAGEARNA
 	db DUSKULL
-	db UMBREONX
+	db ARCHEOPS
 	db CARBINK
 	db DRILLBUR
 	db VAPOREONX
@@ -242,15 +242,15 @@ AlphabeticalPokedexOrder:
 	db CHESNAUGHT
 	db ZANGOOSE
 	db VOLTORB
-	db GRIMER
+	db LEDIAN
 	db GLACEON
 	db LYCANROC
 	db QUILLADIN
 	db WEEZING
 	db NIDORINO
 	db AMAURA
-	db WOOPER
+	db HEATMOR
 	db TYPHLOSION
-	db YANMA
+	db TALONFLAME
 	db CRUSTLE
 	db NIDORINA

@@ -86,12 +86,12 @@ PokedexDataPointerTable:
 	dw BewearPokedexEntry
 	dw GirafarigPokedexEntry
 	dw HeracrossPokedexEntry
-	dw DewgongPokedexEntry
-	dw GrimerPokedexEntry
-	dw MukPokedexEntry
-	dw ShellderPokedexEntry
-	dw CloysterPokedexEntry
-	dw GastlyPokedexEntry
+	dw LedybaPokedexEntry
+	dw LedianPokedexEntry
+	dw JoltikPokedexEntry
+	dw GalvantulaPokedexEntry
+	dw PinecoPokedexEntry
+	dw ForretressPokedexEntry
 	dw HaunterPokedexEntry
 	dw GengarPokedexEntry
 	dw OnixPokedexEntry
@@ -127,12 +127,12 @@ PokedexDataPointerTable:
 	dw ElectabuzzPokedexEntry
 	dw MagmarPokedexEntry
 	dw PinsirPokedexEntry
-	dw TaurosPokedexEntry
+	dw AzumarillPokedexEntry
 	dw MagikarpPokedexEntry
-	dw GyaradosPokedexEntry
-	dw LaprasPokedexEntry
+	dw AnorithPokedexEntry
+	dw ArmaldoPokedexEntry
 	dw DewpiderPokedexEntry
-	dw EeveexPokedexEntry
+	dw AraquanidPokedexEntry
 	dw VaporeonxPokedexEntry
 	dw JolteonxPokedexEntry
 	dw FlareonxPokedexEntry
@@ -164,8 +164,8 @@ PokedexDataPointerTable:
 	dw PupitarPokedexEntry
 	dw TyranitarPokedexEntry
 	dw NoctowlPokedexEntry
-	dw LedybaPokedexEntry
-	dw LedianPokedexEntry
+	dw NoivernPokedexEntry
+	dw DruddigonPokedexEntry
 	dw SpinarakPokedexEntry
 	dw AriadosPokedexEntry
 	dw CrobatPokedexEntry
@@ -190,16 +190,16 @@ PokedexDataPointerTable:
 	dw SkiploomPokedexEntry
 	dw JumpluffPokedexEntry
 	dw AipomPokedexEntry
-	dw SunkernPokedexEntry
-	dw SunfloraPokedexEntry
-	dw YanmaPokedexEntry
-	dw WooperPokedexEntry
-	dw QuagsirePokedexEntry
-	dw EspeonxPokedexEntry
-	dw UmbreonxPokedexEntry
-	dw MurkrowPokedexEntry
-	dw SlowkingPokedexEntry
-	dw MisdreavusPokedexEntry
+	dw FletchlingPokedexEntry
+	dw FletchinderPokedexEntry
+	dw TalonflamePokedexEntry
+	dw HeatmorPokedexEntry
+	dw DurantPokedexEntry
+	dw ArchenPokedexEntry
+	dw ArcheopsPokedexEntry
+	dw RoggenrolaPokedexEntry
+	dw BoldorePokedexEntry
+	dw GigalithPokedexEntry
 	dw CarbinkPokedexEntry
 	dw AmauraPokedexEntry
 	dw AurorusPokedexEntry

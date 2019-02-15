@@ -85,12 +85,12 @@ AnimationPointers:
 	dw BewearAnimation
 	dw GirafarigAnimation
 	dw HeracrossAnimation
-	dw DewgongAnimation
-	dw GrimerAnimation
-	dw MukAnimation
-	dw ShellderAnimation
-	dw CloysterAnimation
-	dw GastlyAnimation
+	dw LedybaAnimation
+	dw LedianAnimation
+	dw JoltikAnimation
+	dw GalvantulaAnimation
+	dw PinecoAnimation
+	dw ForretressAnimation
 	dw HaunterAnimation
 	dw GengarAnimation
 	dw OnixAnimation
@@ -126,12 +126,12 @@ AnimationPointers:
 	dw ElectabuzzAnimation
 	dw MagmarAnimation
 	dw PinsirAnimation
-	dw TaurosAnimation
+	dw AzumarillAnimation
 	dw MagikarpAnimation
-	dw GyaradosAnimation
-	dw LaprasAnimation
+	dw AnorithAnimation
+	dw ArmaldoAnimation
 	dw DewpiderAnimation
-	dw EeveexAnimation
+	dw AraquanidAnimation
 	dw VaporeonxAnimation
 	dw JolteonxAnimation
 	dw FlareonxAnimation
@@ -163,8 +163,8 @@ AnimationPointers:
 	dw PupitarAnimation
 	dw TyranitarAnimation
 	dw NoctowlAnimation
-	dw LedybaAnimation
-	dw LedianAnimation
+	dw NoivernAnimation
+	dw DruddigonAnimation
 	dw SpinarakAnimation
 	dw AriadosAnimation
 	dw CrobatAnimation
@@ -189,16 +189,16 @@ AnimationPointers:
 	dw SkiploomAnimation
 	dw JumpluffAnimation
 	dw AipomAnimation
-	dw SunkernAnimation
-	dw SunfloraAnimation
-	dw YanmaAnimation
-	dw WooperAnimation
-	dw QuagsireAnimation
-	dw EspeonxAnimation
-	dw UmbreonxAnimation
-	dw MurkrowAnimation
-	dw SlowkingAnimation
-	dw MisdreavusAnimation
+	dw FletchlingAnimation
+	dw FletchinderAnimation
+	dw TalonflameAnimation
+	dw HeatmorAnimation
+	dw DurantAnimation
+	dw ArchenAnimation
+	dw ArcheopsAnimation
+	dw RoggenrolaAnimation
+	dw BoldoreAnimation
+	dw GigalithAnimation
 	dw CarbinkAnimation
 	dw AmauraAnimation
 	dw AurorusAnimation

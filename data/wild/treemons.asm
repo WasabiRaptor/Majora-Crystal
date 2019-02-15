@@ -55,7 +55,7 @@ TreeMonSet_Route:
 ; common
 	db 50, TYRANITAR,   10
 	db 15, SPINARAK,   10
-	db 15, LEDYBA,     10
+	db 15, NOIVERN,     10
 	db 10, EXEGGCUTE,  10
 	db  5, EXEGGCUTE,  10
 	db  5, EXEGGCUTE,  10

@@ -213,7 +213,7 @@ NUM_FRUIT_TREES EQU const_value + -1
 ; StoreSwarmMapIndices arguments
 	const_def
 	const SWARM_CRYOGONAL ; 0
-	const SWARM_YANMA     ; 1
+	const SWARM_TALONFLAME     ; 1
 
 ; ActivateFishingSwarm writebyte arguments
 	const_def

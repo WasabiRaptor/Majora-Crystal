@@ -87,13 +87,13 @@ MonMenuIcons:
 	db ICON_BIRD        ; STUFFUL
 	db ICON_BIRD        ; BEWEAR
 	db ICON_BIRD        ; GIRAFARIG
-	db ICON_LAPRAS      ; HERACROSS
-	db ICON_LAPRAS      ; DEWGONG
-	db ICON_BLOB        ; GRIMER
-	db ICON_BLOB        ; MUK
-	db ICON_SHELL       ; SHELLDER
-	db ICON_SHELL       ; CLOYSTER
-	db ICON_GHOST       ; GASTLY
+	db ICON_ARMALDO      ; HERACROSS
+	db ICON_ARMALDO      ; LEDYBA
+	db ICON_BLOB        ; LEDIAN
+	db ICON_BLOB        ; JOLTIK
+	db ICON_SHELL       ; GALVANTULA
+	db ICON_SHELL       ; PINECO
+	db ICON_GHOST       ; FORRETRESS
 	db ICON_GHOST       ; HAUNTER
 	db ICON_GHOST       ; GENGAR
 	db ICON_SERPENT     ; ONIX
@@ -129,12 +129,12 @@ MonMenuIcons:
 	db ICON_HUMANSHAPE  ; ELECTABUZZ
 	db ICON_HUMANSHAPE  ; MAGMAR
 	db ICON_BUG         ; PINSIR
-	db ICON_EQUINE      ; TAUROS
-	db ICON_FISH        ; MAGIKARP
-	db ICON_GYARADOS    ; GYARADOS
-	db ICON_LAPRAS      ; LAPRAS
+	db ICON_EQUINE      ; AZUMARILL
+	db ICON_FISH        ; LAPRAS
+	db ICON_ANORITH    ; ANORITH
+	db ICON_ARMALDO      ; ARMALDO
 	db ICON_BLOB        ; DEWPIDER
-	db ICON_FOX         ; EEVEEX
+	db ICON_FOX         ; ARAQUANID
 	db ICON_FOX         ; VAPOREONX
 	db ICON_FOX         ; JOLTEONX
 	db ICON_FOX         ; FLAREONX
@@ -166,8 +166,8 @@ MonMenuIcons:
 	db ICON_FOX         ; PUPITAR
 	db ICON_BIRD        ; TYRANITAR
 	db ICON_BIRD        ; NOCTOWL
-	db ICON_BUG         ; LEDYBA
-	db ICON_BUG         ; LEDIAN
+	db ICON_BUG         ; NOIVERN
+	db ICON_BUG         ; DRUDDIGON
 	db ICON_BUG         ; SPINARAK
 	db ICON_BUG         ; ARIADOS
 	db ICON_BAT         ; CROBAT
@@ -192,16 +192,16 @@ MonMenuIcons:
 	db ICON_NIDOQUEEN      ; SKIPLOOM
 	db ICON_NIDOQUEEN      ; JUMPLUFF
 	db ICON_MONSTER     ; AIPOM
-	db ICON_NIDOQUEEN      ; SUNKERN
-	db ICON_NIDOQUEEN      ; SUNFLORA
-	db ICON_BUG         ; YANMA
-	db ICON_MONSTER     ; WOOPER
-	db ICON_MONSTER     ; QUAGSIRE
-	db ICON_FOX         ; ESPEONX
-	db ICON_FOX         ; UMBREONX
-	db ICON_BIRD        ; MURKROW
-	db ICON_TREVANANT    ; SLOWKING
-	db ICON_GHOST       ; MISDREAVUS
+	db ICON_NIDOQUEEN      ; FLETCHLING
+	db ICON_NIDOQUEEN      ; FLETCHINDER
+	db ICON_BUG         ; TALONFLAME
+	db ICON_MONSTER     ; HEATMOR
+	db ICON_MONSTER     ; DURANT
+	db ICON_FOX         ; ARCHEN
+	db ICON_FOX         ; ARCHEOPS
+	db ICON_BIRD        ; ROGGENROLA
+	db ICON_TREVANANT    ; BOLDORE
+	db ICON_GHOST       ; GIGALITH
 	db ICON_CARBINK       ; CARBINK
 	db ICON_GHOST       ; AMAURA
 	db ICON_EQUINE      ; AURORUS

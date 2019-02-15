@@ -85,12 +85,12 @@ FramesPointers:
 	dw BewearFrames
 	dw GirafarigFrames
 	dw HeracrossFrames
-	dw DewgongFrames
-	dw GrimerFrames
-	dw MukFrames
-	dw ShellderFrames
-	dw CloysterFrames
-	dw GastlyFrames
+	dw LedybaFrames
+	dw LedianFrames
+	dw JoltikFrames
+	dw GalvantulaFrames
+	dw PinecoFrames
+	dw ForretressFrames
 	dw HaunterFrames
 	dw GengarFrames
 	dw OnixFrames
@@ -126,12 +126,12 @@ FramesPointers:
 	dw ElectabuzzFrames
 	dw MagmarFrames
 	dw PinsirFrames
-	dw TaurosFrames
+	dw AzumarillFrames
 	dw MagikarpFrames
-	dw GyaradosFrames
-	dw LaprasFrames
+	dw AnorithFrames
+	dw ArmaldoFrames
 	dw DewpiderFrames
-	dw EeveexFrames
+	dw AraquanidFrames
 	dw VaporeonxFrames
 	dw JolteonxFrames
 	dw FlareonxFrames
@@ -163,8 +163,8 @@ FramesPointers:
 	dw PupitarFrames
 	dw TyranitarFrames
 	dw NoctowlFrames
-	dw LedybaFrames
-	dw LedianFrames
+	dw NoivernFrames
+	dw DruddigonFrames
 	dw SpinarakFrames
 	dw AriadosFrames
 	dw CrobatFrames
@@ -189,16 +189,16 @@ FramesPointers:
 	dw SkiploomFrames
 	dw JumpluffFrames
 	dw AipomFrames
-	dw SunkernFrames
-	dw SunfloraFrames
-	dw YanmaFrames
-	dw WooperFrames
-	dw QuagsireFrames
-	dw EspeonxFrames
+	dw FletchlingFrames
+	dw FletchinderFrames
+	dw TalonflameFrames
+	dw HeatmorFrames
+	dw DurantFrames
+	dw ArchenFrames
 	dw UmbreonFrames
-	dw MurkrowFrames
-	dw SlowkingFrames
-	dw MisdreavusFrames
+	dw RoggenrolaFrames
+	dw BoldoreFrames
+	dw GigalithFrames
 	dw CarbinkFrames
 	dw AmauraFrames
 	dw AurorusFrames

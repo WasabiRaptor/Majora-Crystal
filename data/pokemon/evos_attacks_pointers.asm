@@ -87,12 +87,12 @@ EvosAttacksPointers::
 	dw BewearEvosAttacks
 	dw GirafarigEvosAttacks
 	dw HeracrossEvosAttacks
-	dw DewgongEvosAttacks
-	dw GrimerEvosAttacks
-	dw MukEvosAttacks
-	dw ShellderEvosAttacks
-	dw CloysterEvosAttacks
-	dw GastlyEvosAttacks
+	dw LedybaEvosAttacks
+	dw LedianEvosAttacks
+	dw JoltikEvosAttacks
+	dw GalvantulaEvosAttacks
+	dw PinecoEvosAttacks
+	dw ForretressEvosAttacks
 	dw HaunterEvosAttacks
 	dw GengarEvosAttacks
 	dw OnixEvosAttacks
@@ -128,12 +128,12 @@ EvosAttacksPointers::
 	dw ElectabuzzEvosAttacks
 	dw MagmarEvosAttacks
 	dw PinsirEvosAttacks
-	dw TaurosEvosAttacks
+	dw AzumarillEvosAttacks
 	dw MagikarpEvosAttacks
-	dw GyaradosEvosAttacks
-	dw LaprasEvosAttacks
+	dw AnorithEvosAttacks
+	dw ArmaldoEvosAttacks
 	dw DewpiderEvosAttacks
-	dw EeveexEvosAttacks
+	dw AraquanidEvosAttacks
 	dw VaporeonxEvosAttacks
 	dw JolteonxEvosAttacks
 	dw FlareonxEvosAttacks
@@ -165,8 +165,8 @@ EvosAttacksPointers::
 	dw PupitarEvosAttacks
 	dw TyranitarEvosAttacks
 	dw NoctowlEvosAttacks
-	dw LedybaEvosAttacks
-	dw LedianEvosAttacks
+	dw NoivernEvosAttacks
+	dw DruddigonEvosAttacks
 	dw SpinarakEvosAttacks
 	dw AriadosEvosAttacks
 	dw CrobatEvosAttacks
@@ -191,16 +191,16 @@ EvosAttacksPointers::
 	dw SkiploomEvosAttacks
 	dw JumpluffEvosAttacks
 	dw AipomEvosAttacks
-	dw SunkernEvosAttacks
-	dw SunfloraEvosAttacks
-	dw YanmaEvosAttacks
-	dw WooperEvosAttacks
-	dw QuagsireEvosAttacks
-	dw EspeonxEvosAttacks
-	dw UmbreonxEvosAttacks
-	dw MurkrowEvosAttacks
-	dw SlowkingEvosAttacks
-	dw MisdreavusEvosAttacks
+	dw FletchlingEvosAttacks
+	dw FletchinderEvosAttacks
+	dw TalonflameEvosAttacks
+	dw HeatmorEvosAttacks
+	dw DurantEvosAttacks
+	dw ArchenEvosAttacks
+	dw ArcheopsEvosAttacks
+	dw RoggenrolaEvosAttacks
+	dw BoldoreEvosAttacks
+	dw GigalithEvosAttacks
 	dw CarbinkEvosAttacks
 	dw AmauraEvosAttacks
 	dw AurorusEvosAttacks

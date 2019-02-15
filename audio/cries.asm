@@ -30,10 +30,10 @@ Cry_Larvitar:
 	musicheader 2, 5, Cry_Larvitar_Ch5
 	musicheader 1, 6, Cry_Larvitar_Ch6
 
-Cry_Slowking:
-	musicheader 3, 5, Cry_Slowking_Ch5
-	musicheader 1, 6, Cry_Slowking_Ch6
-	musicheader 1, 8, Cry_Slowking_Ch8
+Cry_Boldore:
+	musicheader 3, 5, Cry_Boldore_Ch5
+	musicheader 1, 6, Cry_Boldore_Ch6
+	musicheader 1, 8, Cry_Boldore_Ch8
 
 Cry_Litten:
 	musicheader 2, 5, Cry_Litten_Ch5
@@ -62,15 +62,15 @@ Cry_Excadrill:
 	musicheader 2, 5, Cry_Excadrill_Ch5
 	musicheader 1, 8, Cry_Excadrill_Ch8
 
-Cry_Ledyba:
-	musicheader 3, 5, Cry_Ledyba_Ch5
-	musicheader 1, 6, Cry_Ledyba_Ch6
-	musicheader 1, 8, Cry_Ledyba_Ch8
+Cry_Noivern:
+	musicheader 3, 5, Cry_Noivern_Ch5
+	musicheader 1, 6, Cry_Noivern_Ch6
+	musicheader 1, 8, Cry_Noivern_Ch8
 
-Cry_Wooper:
-	musicheader 3, 5, Cry_Wooper_Ch5
-	musicheader 1, 6, Cry_Wooper_Ch6
-	musicheader 1, 8, Cry_Wooper_Ch8
+Cry_Heatmor:
+	musicheader 3, 5, Cry_Heatmor_Ch5
+	musicheader 1, 6, Cry_Heatmor_Ch6
+	musicheader 1, 8, Cry_Heatmor_Ch8
 
 Cry_Litwick:
 	musicheader 3, 5, Cry_Litwick_Ch5
@@ -92,10 +92,10 @@ Cry_Sigilyph:
 	musicheader 1, 6, Cry_Sigilyph_Ch6
 	musicheader 1, 8, Cry_Sigilyph_Ch8
 
-Cry_Sunflora:
-	musicheader 3, 5, Cry_Sunflora_Ch5
-	musicheader 1, 6, Cry_Sunflora_Ch6
-	musicheader 1, 8, Cry_Sunflora_Ch8
+Cry_Fletchinder:
+	musicheader 3, 5, Cry_Fletchinder_Ch5
+	musicheader 1, 6, Cry_Fletchinder_Ch6
+	musicheader 1, 8, Cry_Fletchinder_Ch8
 
 Cry_Incineroar:
 	musicheader 3, 5, Cry_Incineroar_Ch5
@@ -223,7 +223,7 @@ Cry_Cryogonal_Ch8:
 	noise C#,  1, $b5, $5f
 	endchannel
 
-Cry_Slowking_Ch5:
+Cry_Boldore_Ch5:
 	sound_duty 3, 0, 3, 0
 	sound __,  3, $f1, $0550
 	sound __,  3, $f1, $0530
@@ -234,7 +234,7 @@ Cry_Slowking_Ch5:
 	sound C_,  1, $f2, $0550
 	endchannel
 
-Cry_Slowking_Ch6:
+Cry_Boldore_Ch6:
 	sound_duty 2, 0, 3, 3
 	sound __,  5, $e1, $0620
 	sound __,  6, $e2, $0500
@@ -243,7 +243,7 @@ Cry_Slowking_Ch6:
 	sound C_,  1, $e2, $0500
 	endchannel
 
-Cry_Slowking_Ch8:
+Cry_Boldore_Ch8:
 	noise __,  3, $8a, $5d
 	noise __,  3, $9a, $4c
 	noise __,  6, $9a, $5d
@@ -535,14 +535,14 @@ Cry_Excadrill_Ch8:
 	noise __,  9, $a1, $5c
 	endchannel
 
-Cry_Ledyba_Ch5:
+Cry_Noivern_Ch5:
 	tone $0002
 	dutycycle $2
-	jumpchannel Cry_Ledyba_branch_f3202
+	jumpchannel Cry_Noivern_branch_f3202
 
-Cry_Ledyba_Ch6:
+Cry_Noivern_Ch6:
 	sound_duty 1, 0, 0, 0
-Cry_Ledyba_branch_f3202:
+Cry_Noivern_branch_f3202:
 	sound __,  4, $f8, $0791
 	sound __,  4, $d8, $078d
 	sound __,  3, $0, 0
@@ -551,7 +551,7 @@ Cry_Ledyba_branch_f3202:
 	sound __,  5, $e1, $0751
 	endchannel
 
-Cry_Ledyba_Ch8:
+Cry_Noivern_Ch8:
 	noise __,  4, $59, $21
 	noise __,  4, $81, $0
 	noise __,  3, $20, $0
@@ -560,7 +560,7 @@ Cry_Ledyba_Ch8:
 	noise __,  5, $87, $0
 	endchannel
 
-Cry_Wooper_Ch5:
+Cry_Heatmor_Ch5:
 Cry_Litwick_Ch5:
 	dutycycle $2
 	sound __,  3, $99, $0718
@@ -571,7 +571,7 @@ Cry_Litwick_Ch5:
 	sound __,  9, $0, 0
 	endchannel
 
-Cry_Wooper_Ch6:
+Cry_Heatmor_Ch6:
 Cry_Litwick_Ch6:
 	sound_duty 3, 1, 0, 0
 	sound __,  3, $b9, $0738
@@ -582,7 +582,7 @@ Cry_Litwick_Ch6:
 	sound __,  9, $0, 0
 	endchannel
 
-Cry_Wooper_Ch8:
+Cry_Heatmor_Ch8:
 	noise __,  3, $5b, $4
 	noise __,  5, $68, $13
 	noise __,  9, $68, $20
@@ -643,7 +643,7 @@ Cry_Ferrothorn_Ch8:
 Cry_Quilava_Ch5:
 	sound_duty 2, 3, 1, 3
 Cry_Doublade_branch_f32e9:
-Cry_Sunflora_branch_f32e9:
+Cry_Fletchinder_branch_f32e9:
 	sound __,  5, $f8, $07b1
 	sound __,  5, $f8, $07b0
 	sound __,  5, $48, $07af
@@ -655,7 +655,7 @@ Cry_Doublade_branch_f32f5:
 
 Cry_Doublade_branch_f3302:
 Cry_Quilava_Ch6:
-Cry_Sunflora_Ch6:
+Cry_Fletchinder_Ch6:
 	sound_duty 2, 0, 3, 3
 	sound __,  5, $f8, $07b2
 	sound __,  5, $f8, $07b1
@@ -668,7 +668,7 @@ Cry_Doublade_branch_f3310:
 
 Cry_Doublade_branch_f331d:
 Cry_Quilava_Ch8:
-Cry_Sunflora_Ch8:
+Cry_Fletchinder_Ch8:
 	noise __,  5, $88, $5
 	noise __,  5, $88, $4
 	noise __,  5, $38, $3
@@ -683,9 +683,9 @@ Cry_Sigilyph_Ch8:
 	noise __,  9, $a1, $5a
 	endchannel
 
-Cry_Sunflora_Ch5:
+Cry_Fletchinder_Ch5:
 	dutycycle $0
-	jumpchannel Cry_Sunflora_branch_f32e9
+	jumpchannel Cry_Fletchinder_branch_f32e9
 
 Cry_Doublade_Ch5:
 	dutycycle $0
@@ -852,20 +852,20 @@ Cry_Flareon:
 	musicheader 1, 6, Cry_Flareon_Ch6
 	musicheader 1, 8, Cry_Flareon_Ch8
 
-Cry_Grimer:
-	musicheader 3, 5, Cry_Grimer_Ch5
-	musicheader 1, 6, Cry_Grimer_Ch6
-	musicheader 1, 8, Cry_Grimer_Ch8
+Cry_Ledian:
+	musicheader 3, 5, Cry_Ledian_Ch5
+	musicheader 1, 6, Cry_Ledian_Ch6
+	musicheader 1, 8, Cry_Ledian_Ch8
 
 Cry_Voltorb:
 	musicheader 3, 5, Cry_Voltorb_Ch5
 	musicheader 1, 6, Cry_Voltorb_Ch6
 	musicheader 1, 8, Cry_Voltorb_Ch8
 
-Cry_Muk:
-	musicheader 3, 5, Cry_Muk_Ch5
-	musicheader 1, 6, Cry_Muk_Ch6
-	musicheader 1, 8, Cry_Muk_Ch8
+Cry_Joltik:
+	musicheader 3, 5, Cry_Joltik_Ch5
+	musicheader 1, 6, Cry_Joltik_Ch6
+	musicheader 1, 8, Cry_Joltik_Ch8
 
 Cry_Nidoqueen:
 	musicheader 3, 5, Cry_Nidoqueen_Ch5
@@ -962,10 +962,10 @@ Cry_Swablu:
 	musicheader 1, 6, Cry_Swablu_Ch6
 	musicheader 1, 8, Cry_Swablu_Ch8
 
-Cry_Lapras:
-	musicheader 3, 5, Cry_Lapras_Ch5
-	musicheader 1, 6, Cry_Lapras_Ch6
-	musicheader 1, 8, Cry_Lapras_Ch8
+Cry_Armaldo:
+	musicheader 3, 5, Cry_Armaldo_Ch5
+	musicheader 1, 6, Cry_Armaldo_Ch6
+	musicheader 1, 8, Cry_Armaldo_Ch8
 
 Cry_Zoroark:
 	musicheader 3, 5, Cry_Zoroark_Ch5
@@ -1344,27 +1344,27 @@ Cry_Voltorb_Ch8:
 	noise __, 16, $f2, $ac
 	endchannel
 
-Cry_Muk_Ch5:
+Cry_Joltik_Ch5:
 	sound_duty 0, 0, 3, 3
 	sound __,  5, $f3, $06e0
 	sound __, 16, $e4, $0640
 	sound __,  9, $c1, $0620
 	endchannel
 
-Cry_Muk_Ch6:
+Cry_Joltik_Ch6:
 	sound_duty 2, 2, 0, 0
 	sound __,  4, $c3, $0683
 	sound __, 15, $b4, $0602
 	sound __,  9, $a1, $0601
 	endchannel
 
-Cry_Muk_Ch8:
+Cry_Joltik_Ch8:
 	noise __,  5, $d3, $5c
 	noise __, 16, $e6, $4c
 	noise __,  9, $b1, $5c
 	endchannel
 
-Cry_Grimer_Ch5:
+Cry_Ledian_Ch5:
 	sound_duty 2, 2, 0, 0
 	sound __,  7, $e2, $0500
 	sound __,  7, $e3, $0580
@@ -1372,13 +1372,13 @@ Cry_Grimer_Ch5:
 	sound __,  9, $a1, $0560
 	endchannel
 
-Cry_Grimer_Ch6:
+Cry_Ledian_Ch6:
 	sound_duty 1, 1, 3, 3
 	sound __,  7, $e2, $0482
 	sound __,  7, $d3, $0501
 	sound __,  7, $b2, $04e2
 	sound __,  9, $81, $04c1
-Cry_Grimer_Ch8:
+Cry_Ledian_Ch8:
 	endchannel
 
 Cry_Mienfoo_Ch5:
@@ -1644,7 +1644,7 @@ Cry_Zorua_Ch8:
 	noise __, 16, $f2, $4c
 	endchannel
 
-Cry_Lapras_Ch5:
+Cry_Armaldo_Ch5:
 	sound_duty 0, 0, 3, 3
 	sound __,  7, $f7, $06c0
 	sound __, 16, $e7, $0700
@@ -1653,7 +1653,7 @@ Cry_Lapras_Ch5:
 	sound __,  9, $d1, $06d0
 	endchannel
 
-Cry_Lapras_Ch6:
+Cry_Armaldo_Ch6:
 	sound_duty 2, 2, 0, 0
 	sound __,  8, $e6, $0681
 	sound __, 15, $d5, $06c1
@@ -1662,7 +1662,7 @@ Cry_Lapras_Ch6:
 	sound __,  9, $c1, $0691
 	endchannel
 
-Cry_Lapras_Ch8:
+Cry_Armaldo_Ch8:
 	noise __, 11, $a6, $3c
 	noise __, 15, $94, $2c
 	noise __,  6, $a3, $3c

@@ -3,15 +3,15 @@ FleeMons:
 
 SometimesFleeMons:
 	db SUDOWOODO
-	db GRIMER
+	db LEDIAN
 	db TANGELA
 	db MR__MIME
-	db EEVEEX
+	db ARAQUANID
 	db PLACE3
 	db DRATINI
 	db DRAGONAIR
 	db CYNDAQUIL
-	db UMBREONX
+	db ARCHEOPS
 	db UNOWN
 	db FROSSLASS
 	db NATU
@@ -22,7 +22,7 @@ OftenFleeMons:
 	db DWEBBLE
 	db CRUSTLE
 	db TYROGUE
-	db QUAGSIRE
+	db DURANT
 	db HONEDGE
 	db COFAGRIGUS
 	db SIGILYPH

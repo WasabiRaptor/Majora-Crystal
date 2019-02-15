@@ -87,12 +87,12 @@ KantoMonSpecials:
 	db  35 ; BEWEAR
 	db  60 ; GIRAFARIG
 	db  70 ; HERACROSS
-	db  95 ; DEWGONG
-	db  40 ; GRIMER
-	db  65 ; MUK
-	db  45 ; SHELLDER
-	db  85 ; CLOYSTER
-	db 100 ; GASTLY
+	db  95 ; LEDYBA
+	db  40 ; LEDIAN
+	db  65 ; JOLTIK
+	db  45 ; GALVANTULA
+	db  85 ; PINECO
+	db 100 ; FORRETRESS
 	db 115 ; HAUNTER
 	db 130 ; GENGAR
 	db  30 ; ONIX
@@ -128,12 +128,12 @@ KantoMonSpecials:
 	db  85 ; ELECTABUZZ
 	db  85 ; MAGMAR
 	db  55 ; PINSIR
-	db  70 ; TAUROS
-	db  20 ; MAGIKARP
-	db 100 ; GYARADOS
-	db  95 ; LAPRAS
+	db  70 ; AZUMARILL
+	db  20 ; LAPRAS
+	db 100 ; ANORITH
+	db  95 ; ARMALDO
 	db  48 ; DEWPIDER
-	db  65 ; EEVEEX
+	db  65 ; ARAQUANID
 	db 110 ; VAPOREONX
 	db 110 ; JOLTEONX
 	db 110 ; FLAREONX

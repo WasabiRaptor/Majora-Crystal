@@ -4,9 +4,9 @@ Cries:
 	dba Cry_Trevanant
 	dba Cry_Kangaskhan
 	dba Cry_Flareon
-	dba Cry_Grimer
+	dba Cry_Ledian
 	dba Cry_Voltorb
-	dba Cry_Muk
+	dba Cry_Joltik
 	dba Cry_Nidoqueen
 	dba Cry_Rotom
 	dba Cry_Timburr
@@ -26,7 +26,7 @@ Cries:
 	dba Cry_Persian
 	dba Cry_Purrloin
 	dba Cry_Swablu
-	dba Cry_Lapras
+	dba Cry_Armaldo
 	dba Cry_Zoroark
 	dba Cry_Leafeon
 	dba Cry_Sentret
@@ -46,21 +46,21 @@ Cries:
 	dba Cry_Cyndaquil
 	dba Cry_Tyranitar
 	dba Cry_Larvitar
-	dba Cry_Slowking
+	dba Cry_Boldore
 	dba Cry_Abomasnow
 	dba Cry_Chikorita
 	dba Cry_Totodile
 	dba Cry_Snowrunt
 	dba Cry_Cleffa
 	dba Cry_Excadrill
-	dba Cry_Ledyba
+	dba Cry_Noivern
 	dba Cry_Entei
-	dba Cry_Wooper
+	dba Cry_Heatmor
 	dba Cry_Doublade
 	dba Cry_Ferrothorn
 	dba Cry_Quilava
 	dba Cry_Sigilyph
-	dba Cry_Sunflora
+	dba Cry_Fletchinder
 	dba Cry_Incineroar
 	dba Cry_Baltoy
 	dba Cry_Pichu

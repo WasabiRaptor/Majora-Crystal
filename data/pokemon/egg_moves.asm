@@ -293,13 +293,13 @@ HeracrossEggMoves:
 	db ENCORE
 	db -1 ; end
 
-GrimerEggMoves:
+LedianEggMoves:
 	db HAZE
 	db MEAN_LOOK
 	db LICK
 	db -1 ; end
 
-ShellderEggMoves:
+GalvantulaEggMoves:
 	db BUBBLEBEAM
 	db TAKE_DOWN
 	db BARRIER
@@ -307,7 +307,7 @@ ShellderEggMoves:
 	db SCREECH
 	db -1 ; end
 
-GastlyEggMoves:
+ForretressEggMoves:
 	db PSYWAVE
 	db PERISH_SONG
 	db HAZE
@@ -440,12 +440,12 @@ PinsirEggMoves:
 	db FLAIL
 	db -1 ; end
 
-LaprasEggMoves:
+ArmaldoEggMoves:
 	db AURORA_BEAM
 	db FORESIGHT
 	db -1 ; end
 
-EeveexEggMoves:
+AraquanidEggMoves:
 	db FLAIL
 	db CHARM
 	db -1 ; end
@@ -537,7 +537,7 @@ if _BRASS
 endc
 	db -1 ; end
 
-LedybaEggMoves:
+NoivernEggMoves:
 	db PSYBEAM
 	db BIDE
 	db LIGHT_SCREEN
@@ -641,19 +641,19 @@ AipomEggMoves:
 	db BEAT_UP
 	db -1 ; end
 
-YanmaEggMoves:
+TalonflameEggMoves:
 	db WHIRLWIND
 	db REVERSAL
 	db LEECH_LIFE
 	db -1 ; end
 
-WooperEggMoves:
+HeatmorEggMoves:
 	db BODY_SLAM
 	db ANCIENTPOWER
 	db SAFEGUARD
 	db -1 ; end
 
-MurkrowEggMoves:
+RoggenrolaEggMoves:
 	db WHIRLWIND
 	db DRILL_PECK
 	db QUICK_ATTACK
@@ -664,7 +664,7 @@ if _BRASS
 endc
 	db -1 ; end
 
-MisdreavusEggMoves:
+GigalithEggMoves:
 	db SCREECH
 	db DESTINY_BOND
 	db -1 ; end

@@ -86,11 +86,11 @@ EggMovePointers::
 	dw NoEggMoves
 	dw HeracrossEggMoves
 	dw NoEggMoves
-	dw GrimerEggMoves
+	dw LedianEggMoves
 	dw NoEggMoves
-	dw ShellderEggMoves
+	dw GalvantulaEggMoves
 	dw NoEggMoves
-	dw GastlyEggMoves
+	dw ForretressEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw OnixEggMoves
@@ -133,9 +133,9 @@ endc
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw LaprasEggMoves
+	dw ArmaldoEggMoves
 	dw NoEggMoves
-	dw EeveexEggMoves
+	dw AraquanidEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
@@ -167,7 +167,7 @@ endc
 	dw NoEggMoves
 	dw TyranitarEggMoves
 	dw NoEggMoves
-	dw LedybaEggMoves
+	dw NoivernEggMoves
 	dw NoEggMoves
 	dw SpinarakEggMoves
 	dw NoEggMoves
@@ -195,14 +195,14 @@ endc
 	dw AipomEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw YanmaEggMoves
-	dw WooperEggMoves
+	dw TalonflameEggMoves
+	dw HeatmorEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw MurkrowEggMoves
+	dw RoggenrolaEggMoves
 	dw NoEggMoves
-	dw MisdreavusEggMoves
+	dw GigalithEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw AurorusEggMoves

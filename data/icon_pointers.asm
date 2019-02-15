@@ -13,7 +13,7 @@ IconPointers:
 	dw NidoqueenIcon
 	dw BugIcon
 	dw GhostIcon
-	dw LaprasIcon
+	dw ArmaldoIcon
 	dw HumanshapeIcon
 	dw FoxIcon
 	dw EquineIcon
@@ -35,7 +35,7 @@ IconPointers:
 	dw SnorlaxIcon
 	dw CelebiIcon
 	dw ShayminIcon
-	dw GyaradosIcon
+	dw AnorithIcon
 	dw TrevanantIcon
 	dw VulpixIcon
 	dw BigmonIcon

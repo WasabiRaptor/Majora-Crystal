@@ -85,12 +85,12 @@ AnimationIdlePointers:
 	dw BewearAnimationIdle
 	dw GirafarigAnimationIdle
 	dw HeracrossAnimationIdle
-	dw DewgongAnimationIdle
-	dw GrimerAnimationIdle
-	dw MukAnimationIdle
-	dw ShellderAnimationIdle
-	dw CloysterAnimationIdle
-	dw GastlyAnimationIdle
+	dw LedybaAnimationIdle
+	dw LedianAnimationIdle
+	dw JoltikAnimationIdle
+	dw GalvantulaAnimationIdle
+	dw PinecoAnimationIdle
+	dw ForretressAnimationIdle
 	dw HaunterAnimationIdle
 	dw GengarAnimationIdle
 	dw OnixAnimationIdle
@@ -126,12 +126,12 @@ AnimationIdlePointers:
 	dw ElectabuzzAnimationIdle
 	dw MagmarAnimationIdle
 	dw PinsirAnimationIdle
-	dw TaurosAnimationIdle
+	dw AzumarillAnimationIdle
 	dw MagikarpAnimationIdle
-	dw GyaradosAnimationIdle
-	dw LaprasAnimationIdle
+	dw AnorithAnimationIdle
+	dw ArmaldoAnimationIdle
 	dw DewpiderAnimationIdle
-	dw EeveexAnimationIdle
+	dw AraquanidAnimationIdle
 	dw VaporeonxAnimationIdle
 	dw JolteonxAnimationIdle
 	dw FlareonxAnimationIdle
@@ -163,8 +163,8 @@ AnimationIdlePointers:
 	dw PupitarAnimationIdle
 	dw TyranitarAnimationIdle
 	dw NoctowlAnimationIdle
-	dw LedybaAnimationIdle
-	dw LedianAnimationIdle
+	dw NoivernAnimationIdle
+	dw DruddigonAnimationIdle
 	dw SpinarakAnimationIdle
 	dw AriadosAnimationIdle
 	dw CrobatAnimationIdle
@@ -189,16 +189,16 @@ AnimationIdlePointers:
 	dw SkiploomAnimationIdle
 	dw JumpluffAnimationIdle
 	dw AipomAnimationIdle
-	dw SunkernAnimationIdle
-	dw SunfloraAnimationIdle
-	dw YanmaAnimationIdle
-	dw WooperAnimationIdle
-	dw QuagsireAnimationIdle
-	dw EspeonxAnimationIdle
-	dw UmbreonxAnimationIdle
-	dw MurkrowAnimationIdle
-	dw SlowkingAnimationIdle
-	dw MisdreavusAnimationIdle
+	dw FletchlingAnimationIdle
+	dw FletchinderAnimationIdle
+	dw TalonflameAnimationIdle
+	dw HeatmorAnimationIdle
+	dw DurantAnimationIdle
+	dw ArchenAnimationIdle
+	dw ArcheopsAnimationIdle
+	dw RoggenrolaAnimationIdle
+	dw BoldoreAnimationIdle
+	dw GigalithAnimationIdle
 	dw CarbinkAnimationIdle
 	dw AmauraAnimationIdle
 	dw AurorusAnimationIdle

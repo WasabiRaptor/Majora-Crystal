@@ -178,18 +178,18 @@ PokemonPicPointers::
 	dba GirafarigBackpic
 	dba HeracrossFrontpic
 	dba HeracrossBackpic
-	dba DewgongFrontpic
-	dba DewgongBackpic
-	dba GrimerFrontpic
-	dba GrimerBackpic
-	dba MukFrontpic
-	dba MukBackpic
-	dba ShellderFrontpic
-	dba ShellderBackpic
-	dba CloysterFrontpic
-	dba CloysterBackpic
-	dba GastlyFrontpic
-	dba GastlyBackpic
+	dba LedybaFrontpic
+	dba LedybaBackpic
+	dba LedianFrontpic
+	dba LedianBackpic
+	dba JoltikFrontpic
+	dba JoltikBackpic
+	dba GalvantulaFrontpic
+	dba GalvantulaBackpic
+	dba PinecoFrontpic
+	dba PinecoBackpic
+	dba ForretressFrontpic
+	dba ForretressBackpic
 	dba HaunterFrontpic
 	dba HaunterBackpic
 	dba GengarFrontpic
@@ -260,17 +260,17 @@ PokemonPicPointers::
 	dba MagmarBackpic
 	dba PinsirFrontpic
 	dba PinsirBackpic
-	dba TaurosFrontpic
-	dba TaurosBackpic
+	dba AzumarillFrontpic
+	dba AzumarillBackpic
 	dba MagikarpFrontpic
 	dba MagikarpBackpic
-	dba GyaradosFrontpic
-	dba GyaradosBackpic
-	dba LaprasFrontpic
-	dba LaprasBackpic
+	dba AnorithFrontpic
+	dba AnorithBackpic
+	dba ArmaldoFrontpic
+	dba ArmaldoBackpic
 	dba DewpiderFrontpic
 	dba DewpiderBackpic
-	dba EeveexFrontpic
+	dba AraquanidFrontpic
 	dba EeveeBackpic
 	dba VaporeonxFrontpic
 	dba VaporeonxBackpic
@@ -334,10 +334,10 @@ PokemonPicPointers::
 	dba TyranitarBackpic
 	dba NoctowlFrontpic
 	dba NoctowlBackpic
-	dba LedybaFrontpic
-	dba LedybaBackpic
-	dba LedianFrontpic
-	dba LedianBackpic
+	dba NoivernFrontpic
+	dba NoivernBackpic
+	dba DruddigonFrontpic
+	dba DruddigonBackpic
 	dba SpinarakFrontpic
 	dba SpinarakBackpic
 	dba AriadosFrontpic
@@ -386,26 +386,26 @@ PokemonPicPointers::
 	dba JumpluffBackpic
 	dba AipomFrontpic
 	dba AipomBackpic
-	dba SunkernFrontpic
-	dba SunkernBackpic
-	dba SunfloraFrontpic
-	dba SunfloraBackpic
-	dba YanmaFrontpic
-	dba YanmaBackpic
-	dba WooperFrontpic
-	dba WooperBackpic
-	dba QuagsireFrontpic
-	dba QuagsireBackpic
+	dba FletchlingFrontpic
+	dba FletchlingBackpic
+	dba FletchinderFrontpic
+	dba FletchinderBackpic
+	dba TalonflameFrontpic
+	dba TalonflameBackpic
+	dba HeatmorFrontpic
+	dba HeatmorBackpic
+	dba DurantFrontpic
+	dba DurantBackpic
 	dba EspeonFrontpic
 	dba EspeonBackpic
 	dba UmbreonFrontpic
 	dba UmbreonBackpic
-	dba MurkrowFrontpic
-	dba MurkrowBackpic
-	dba SlowkingFrontpic
-	dba SlowkingBackpic
-	dba MisdreavusFrontpic
-	dba MisdreavusBackpic
+	dba RoggenrolaFrontpic
+	dba RoggenrolaBackpic
+	dba BoldoreFrontpic
+	dba BoldoreBackpic
+	dba GigalithFrontpic
+	dba GigalithBackpic
 
 	; Unown pics have their own table. See UnownPicPointers
 	dbw -1, -1

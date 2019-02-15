@@ -13,7 +13,7 @@
 	const ICON_NIDOQUEEN
 	const ICON_BUG
 	const ICON_GHOST
-	const ICON_LAPRAS
+	const ICON_ARMALDO
 	const ICON_HUMANSHAPE
 	const ICON_FOX
 	const ICON_EQUINE
@@ -35,7 +35,7 @@
 	const ICON_SNORLAX
 	const ICON_HO_OH
 	const ICON_LUGIA
-	const ICON_GYARADOS
+	const ICON_ANORITH
 	const ICON_TREVANANT
 	const ICON_SUDOWOODO
 	const ICON_BIGMON

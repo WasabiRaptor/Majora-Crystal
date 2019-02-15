@@ -104,13 +104,13 @@
 	const BEWEAR      	; 54
 	const GIRAFARIG     ; 55
 	const HERACROSS     ; 56
+	const LEDYBA    	; 57
+	const LEDIAN     	; 58
+	const JOLTIK        ; 59
+	const GALVANTULA   	; 5a
+	const PINECO   		; 5b
+	const FORRETRESS    ; 5c
 
-	const DEWGONG    ; 57
-	const GRIMER     ; 58
-	const MUK        ; 59
-	const SHELLDER   ; 5a
-	const CLOYSTER   ; 5b
-	const GASTLY     ; 5c
 	const HAUNTER    ; 5d
 	const GENGAR     ; 5e
 	const ONIX       ; 5f
@@ -146,14 +146,14 @@
 	const ELECTABUZZ ; 7d
 	const MAGMAR     ; 7e
 	const PINSIR     ; 7f
-	const TAUROS     ; 80
-	const MAGIKARP   ; 81
-	const GYARADOS   ; 82
-	const LAPRAS     ; 83
 
+	const AZUMARILL     ; 80
+	const LAPRAS   		; 81
+	const ANORITH   	; 82
+	const ARMALDO     	; 83
 	const DEWPIDER      ; 84
+	const ARAQUANID     ; 85
 
-	const EEVEEX      ; 85
 	const VAPOREONX   ; 86
 	const JOLTEONX    ; 87
 	const FLAREONX    ; 88
@@ -194,8 +194,10 @@ JOHTO_POKEMON EQU const_value
 	const TYRANITAR   	; a3
 
 	const NOCTOWL    ; a4
-	const LEDYBA     ; a5
-	const LEDIAN     ; a6
+
+	const NOIVERN     	; a5
+	const DRUDDIGON     ; a6
+
 	const SPINARAK   ; a7
 	const ARIADOS    ; a8
 	const CROBAT     ; a9
@@ -222,17 +224,17 @@ JOHTO_POKEMON EQU const_value
 	const SKIPLOOM   ; bc
 	const JUMPLUFF   ; bd
 	const AIPOM      ; be
-	const SUNKERN    ; bf
-	const SUNFLORA   ; c0
-	const YANMA      ; c1
-	const WOOPER     ; c2
-	const QUAGSIRE   ; c3
-	const ESPEONX     ; c4
-	const UMBREONX    ; c5
-	const MURKROW    ; c6
-	const SLOWKING   ; c7
-	const MISDREAVUS ; c8
-
+	
+	const FLETCHLING    ; bf
+	const FLETCHINDER   ; c0
+	const TALONFLAME      ; c1
+	const HEATMOR       ; c2
+	const DURANT        ; c3
+	const ARCHEN        ; c4
+	const ARCHEOPS      ; c5
+	const ROGGENROLA    ; c6
+	const BOLDORE       ; c7
+	const GIGALITH      ; c8
 	const CARBINK      	; c9
 	const AMAURA        ; ca
 	const AURORUS       ; cb

@@ -85,12 +85,12 @@ BitmasksPointers:
 	dw BewearBitmasks
 	dw GirafarigBitmasks
 	dw HeracrossBitmasks
-	dw DewgongBitmasks
-	dw GrimerBitmasks
-	dw MukBitmasks
-	dw ShellderBitmasks
-	dw CloysterBitmasks
-	dw GastlyBitmasks
+	dw LedybaBitmasks
+	dw LedianBitmasks
+	dw JoltikBitmasks
+	dw GalvantulaBitmasks
+	dw PinecoBitmasks
+	dw ForretressBitmasks
 	dw HaunterBitmasks
 	dw GengarBitmasks
 	dw OnixBitmasks
@@ -126,12 +126,12 @@ BitmasksPointers:
 	dw ElectabuzzBitmasks
 	dw MagmarBitmasks
 	dw PinsirBitmasks
-	dw TaurosBitmasks
+	dw AzumarillBitmasks
 	dw MagikarpBitmasks
-	dw GyaradosBitmasks
-	dw LaprasBitmasks
+	dw AnorithBitmasks
+	dw ArmaldoBitmasks
 	dw DewpiderBitmasks
-	dw EeveexBitmasks
+	dw AraquanidBitmasks
 	dw VaporeonxBitmasks
 	dw JolteonxBitmasks
 	dw FlareonxBitmasks
@@ -163,8 +163,8 @@ BitmasksPointers:
 	dw PupitarBitmasks
 	dw TyranitarBitmasks
 	dw NoctowlBitmasks
-	dw LedybaBitmasks
-	dw LedianBitmasks
+	dw NoivernBitmasks
+	dw DruddigonBitmasks
 	dw SpinarakBitmasks
 	dw AriadosBitmasks
 	dw CrobatBitmasks
@@ -189,16 +189,16 @@ BitmasksPointers:
 	dw SkiploomBitmasks
 	dw JumpluffBitmasks
 	dw AipomBitmasks
-	dw SunkernBitmasks
-	dw SunfloraBitmasks
-	dw YanmaBitmasks
-	dw WooperBitmasks
-	dw QuagsireBitmasks
-	dw EspeonxBitmasks
-	dw UmbreonxBitmasks
-	dw MurkrowBitmasks
-	dw SlowkingBitmasks
-	dw MisdreavusBitmasks
+	dw FletchlingBitmasks
+	dw FletchinderBitmasks
+	dw TalonflameBitmasks
+	dw HeatmorBitmasks
+	dw DurantBitmasks
+	dw ArchenBitmasks
+	dw ArcheopsBitmasks
+	dw RoggenrolaBitmasks
+	dw BoldoreBitmasks
+	dw GigalithBitmasks
 	dw CarbinkBitmasks
 	dw AmauraBitmasks
 	dw AurorusBitmasks
