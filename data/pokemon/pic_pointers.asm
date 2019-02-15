@@ -477,8 +477,8 @@ PokemonPicPointers::
 	dba Place4Backpic
 	dba StantlerFrontpic
 	dba StantlerBackpic
-	dba SmeargleFrontpic
-	dba SmeargleBackpic
+	dba SpiritombFrontpic
+	dba SpiritombBackpic
 	dba DuskullFrontpic
 	dba DuskullBackpic
 	dba DusclopsFrontpic

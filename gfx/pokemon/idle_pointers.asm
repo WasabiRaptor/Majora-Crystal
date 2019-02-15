@@ -233,7 +233,7 @@ AnimationIdlePointers:
 	dw DonphanAnimationIdle
 	dw Place4AnimationIdle
 	dw StantlerAnimationIdle
-	dw SmeargleAnimationIdle
+	dw SpiritombAnimationIdle
 	dw DuskullAnimationIdle
 	dw DusclopsAnimationIdle
 	dw DusknoirAnimationIdle

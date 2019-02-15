@@ -7,4 +7,4 @@
 
 	page "tail is predeter-"
 	next "mined for each"
-	next "SMEARGLE.@"
+	next "SPIRITOMB.@"

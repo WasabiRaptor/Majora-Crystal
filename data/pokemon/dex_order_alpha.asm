@@ -203,7 +203,7 @@ AlphabeticalPokedexOrder:
 	db SLOWKING
 	db SLOWPOKE
 	db SLUGMA
-	db SMEARGLE
+	db SPIRITOMB
 	db DUSKNOIR
 	db SNEASEL
 	db SNORLAX

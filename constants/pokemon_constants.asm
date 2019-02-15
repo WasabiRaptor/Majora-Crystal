@@ -268,7 +268,7 @@ JOHTO_POKEMON EQU const_value
 	const DONPHAN    ; e8
 	const PLACE4   ; e9
 	const STANTLER   ; ea
-	const SMEARGLE   ; eb
+	const SPIRITOMB   ; eb
 	const DUSKULL    	; ec
 	const DUSCLOPS  	; ed
 	const DUSKNOIR   	; ee

@@ -233,7 +233,7 @@ BitmasksPointers:
 	dw DonphanBitmasks
 	dw Place4Bitmasks
 	dw StantlerBitmasks
-	dw SmeargleBitmasks
+	dw SpiritombBitmasks
 	dw DuskullBitmasks
 	dw DusclopsBitmasks
 	dw DusknoirBitmasks

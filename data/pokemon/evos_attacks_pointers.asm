@@ -235,7 +235,7 @@ EvosAttacksPointers::
 	dw DonphanEvosAttacks
 	dw Place4EvosAttacks
 	dw StantlerEvosAttacks
-	dw SmeargleEvosAttacks
+	dw SpiritombEvosAttacks
 	dw DuskullEvosAttacks
 	dw DusclopsEvosAttacks
 	dw DusknoirEvosAttacks

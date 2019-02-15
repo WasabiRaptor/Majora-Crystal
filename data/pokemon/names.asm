@@ -233,7 +233,7 @@ PokemonNames::
 	db "DONPHAN@@@"
 	db "PLACE4@@"
 	db "STANTLER@@"
-	db "SMEARGLE@@"
+	db "SPIRITOMB@@"
 	db "DUSKULL@@@"
 	db "DUSCLOPS@"
 	db "DUSKNOIR@@"

@@ -233,7 +233,7 @@ AnimationPointers:
 	dw DonphanAnimation
 	dw Place4Animation
 	dw StantlerAnimation
-	dw SmeargleAnimation
+	dw SpiritombAnimation
 	dw DuskullAnimation
 	dw DusclopsAnimation
 	dw DusknoirAnimation

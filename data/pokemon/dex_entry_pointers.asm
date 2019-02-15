@@ -234,7 +234,7 @@ PokedexDataPointerTable:
 	dw DonphanPokedexEntry
 	dw Place4PokedexEntry
 	dw StantlerPokedexEntry
-	dw SmearglePokedexEntry
+	dw SpiritombPokedexEntry
 	dw DuskullPokedexEntry
 	dw DusclopsPokedexEntry
 	dw DusknoirPokedexEntry

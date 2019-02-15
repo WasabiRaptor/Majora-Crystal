@@ -233,7 +233,7 @@ FramesPointers:
 	dw DonphanFrames
 	dw Place4Frames
 	dw StantlerFrames
-	dw SmeargleFrames
+	dw SpiritombFrames
 	dw DuskullFrames
 	dw DusclopsFrames
 	dw DusknoirFrames
