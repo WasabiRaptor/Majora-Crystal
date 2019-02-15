@@ -9,18 +9,18 @@ AlphabeticalPokedexOrder:
 	db ARBOK
 	db ARCANINE
 	db ARIADOS
-	db ARTICUNO
+	db ARTICUNOX
 	db AZUMARILL
 	db BAYLEEF
 	db MAGNEMITE
 	db BELLOSSOM
 	db BELLSPROUT
 	db SYLVEON
-	db BLISSEY
+	db SUICUNE
 	db EEVEE
 	db ROCKRUFF
 	db ZORUA
-	db CELEBI
+	db ZYGARDE
 	db CHANSEY
 	db UMBREON
 	db FLAREON
@@ -53,7 +53,7 @@ AlphabeticalPokedexOrder:
 	db EKANS
 	db ELECTABUZZ
 	db ELECTRODE
-	db ELEKID
+	db ARTICUNO
 	db ENTEI
 	db ESPEONX
 	db EXEGGCUTE
@@ -69,7 +69,7 @@ AlphabeticalPokedexOrder:
 	db GENGAR
 	db GEODUDE
 	db GIRAFARIG
-	db GLAZEON
+	db MEW
 	db GLIGAR
 	db GLOOM
 	db GOLBAT
@@ -86,7 +86,7 @@ AlphabeticalPokedexOrder:
 	db HITMONCHAN
 	db HITMONLEE
 	db HITMONTOP
-	db HO_OH
+	db CELEBI
 	db HOOTHOOT
 	db HOPPIP
 	db HORSEA
@@ -110,15 +110,15 @@ AlphabeticalPokedexOrder:
 	db KRABBY
 	db LANTURN
 	db LAPRAS
-	db LARVITAR
+	db LATIOS
 	db LEDIAN
 	db LEDYBA
 	db LICKITUNG
-	db LUGIA
+	db SHAYMIN
 	db MACHAMP
 	db MACHOKE
 	db MACHOP
-	db MAGBY
+	db ZAPDOS
 	db MAGCARGO
 	db MAGIKARP
 	db MAGMAR
@@ -132,11 +132,11 @@ AlphabeticalPokedexOrder:
 	db MEGANIUM
 	db PLACE5
 	db ZOROARK
-	db MEW
-	db MEWTWO
-	db MILTANK
-	db MISDREAVUS
+	db MEWX
+	db MEWTWOX
 	db MOLTRES
+	db MISDREAVUS
+	db MOLTRESX
 	db MR__MIME
 	db MUK
 	db MURKROW
@@ -175,7 +175,7 @@ AlphabeticalPokedexOrder:
 	db PLACE4
 	db PRIMEAPE
 	db PSYDUCK
-	db PUPITAR
+	db SILVALLY
 	db QUAGSIRE
 	db QUILAVA
 	db QWILFISH
@@ -204,7 +204,7 @@ AlphabeticalPokedexOrder:
 	db SLOWPOKE
 	db SLUGMA
 	db SMEARGLE
-	db SMOOCHUM
+	db DUSKNOIR
 	db SNEASEL
 	db SNORLAX
 	db SNUBBULL
@@ -215,9 +215,9 @@ AlphabeticalPokedexOrder:
 	db STARMIE
 	db STARYU
 	db STEELIX
-	db SUBSTITUTEMON
+	db MEWTWO
 	db SUDOWOODO
-	db SUICUNE
+	db LATIAS
 	db SUNFLORA
 	db SUNKERN
 	db SWINUB
@@ -230,7 +230,7 @@ AlphabeticalPokedexOrder:
 	db TOGETIC
 	db TOTODILE
 	db TYPHLOSION
-	db TYRANITAR
+	db MAGEARNA
 	db TYROGUE
 	db UMBREONX
 	db UNOWN
@@ -252,5 +252,5 @@ AlphabeticalPokedexOrder:
 	db WOOPER
 	db XATU
 	db YANMA
-	db ZAPDOS
+	db ZAPDOSX
 	db ZUBAT

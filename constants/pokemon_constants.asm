@@ -163,14 +163,14 @@
 	const KABUTOPS   ; 8d
 	const AERODACTYL ; 8e
 	const SNORLAX    ; 8f
-	const ARTICUNO   ; 90
-	const ZAPDOS     ; 91
-	const MOLTRES    ; 92
+	const ARTICUNOX   ; 90
+	const ZAPDOSX     ; 91
+	const MOLTRESX    ; 92
 	const DRATINI    ; 93
 	const DRAGONAIR  ; 94
 	const DRAGONITE  ; 95
-	const MEWTWO     ; 96
-	const MEW        ; 97
+	const MEWTWOX     ; 96
+	const MEWX        ; 97
 JOHTO_POKEMON EQU const_value
 	const CHIKORITA  ; 98
 	const BAYLEEF    ; 99
@@ -258,22 +258,22 @@ JOHTO_POKEMON EQU const_value
 	const SMEARGLE   ; eb
 	const TYROGUE    ; ec
 	const HITMONTOP  ; ed
-	const SMOOCHUM   ; ee
-	const ELEKID     ; ef
-	const MAGBY      ; f0
-	const MILTANK    ; f1
-	const BLISSEY    ; f2
+	const DUSKNOIR   ; ee
+	const ARTICUNO   ; ef
+	const ZAPDOS     ; f0
+	const MOLTRES    ; f1
+	const SUICUNE    ; f2
 	const RAIKOU     ; f3
 	const ENTEI      ; f4
-	const SUICUNE    ; f5
-	const LARVITAR   ; f6
-	const PUPITAR    ; f7
-	const TYRANITAR  ; f8
-	const LUGIA      ; f9
-	const HO_OH      ; fa
-	const CELEBI     ; fb
-	const GLAZEON    ; fc
-	const SUBSTITUTEMON ; fd
+	const LATIAS     ; f5
+	const LATIOS     ; f6
+	const SILVALLY   ; f7
+	const MAGEARNA   ; f8
+	const SHAYMIN    ; f9
+	const CELEBI     ; fa
+	const ZYGARDE    ; fb
+	const MEW        ; fc
+	const MEWTWO     ; fd
 NUM_POKEMON EQU const_value + -1
 	const EGG        ; fe
 

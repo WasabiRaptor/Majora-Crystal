@@ -1872,17 +1872,17 @@ LinkTrade:
 	ld b, $1
 	pop af
 	ld c, a
-	cp MEW
+	cp MEWX
 	jr z, .loop
 	ld a, [wCurPartySpecies]
-	cp MEW
+	cp MEWX
 	jr z, .loop
 	ld b, $2
 	ld a, c
-	cp CELEBI
+	cp ZYGARDE
 	jr z, .loop
 	ld a, [wCurPartySpecies]
-	cp CELEBI
+	cp ZYGARDE
 	jr z, .loop
 	ld b, $0
 

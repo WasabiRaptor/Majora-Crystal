@@ -184,7 +184,7 @@ OddEgg1End:
 	bigdw 8 ; SDef
 	db "EGG@@@@@@@@"
 
-	db SMOOCHUM
+	db DUSKNOIR
 	db NO_ITEM
 	db TACKLE, LICK, DIZZY_PUNCH, 0
 	dw 03584 ; OT ID
@@ -210,7 +210,7 @@ OddEgg1End:
 	bigdw 11 ; SDef
 	db "EGG@@@@@@@@"
 
-	db SMOOCHUM
+	db DUSKNOIR
 	db NO_ITEM
 	db TACKLE, LICK, DIZZY_PUNCH, 0
 	dw 00512 ; OT ID
@@ -236,7 +236,7 @@ OddEgg1End:
 	bigdw 12 ; SDef
 	db "EGG@@@@@@@@"
 
-	db MAGBY
+	db ZAPDOS
 	db NO_ITEM
 	db EMBER, DIZZY_PUNCH, 0, 0
 	dw 02560 ; OT ID
@@ -262,7 +262,7 @@ OddEgg1End:
 	bigdw 10 ; SDef
 	db "EGG@@@@@@@@"
 
-	db MAGBY
+	db ZAPDOS
 	db NO_ITEM
 	db EMBER, DIZZY_PUNCH, 0, 0
 	dw 00512 ; OT ID
@@ -288,7 +288,7 @@ OddEgg1End:
 	bigdw 11 ; SDef
 	db "EGG@@@@@@@@"
 
-	db ELEKID
+	db ARTICUNO
 	db NO_ITEM
 	db QUICK_ATTACK, LEER, DIZZY_PUNCH, 0
 	dw 03072 ; OT ID
@@ -314,7 +314,7 @@ OddEgg1End:
 	bigdw 10 ; SDef
 	db "EGG@@@@@@@@"
 
-	db ELEKID
+	db ARTICUNO
 	db NO_ITEM
 	db QUICK_ATTACK, LEER, DIZZY_PUNCH, 0
 	dw 00512 ; OT ID

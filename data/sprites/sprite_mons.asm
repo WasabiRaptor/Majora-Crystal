@@ -30,8 +30,8 @@ SpriteMons:
 	db VOLTORB
 	db LAPRAS
 	db RHYDON
-	db MOLTRES
+	db MOLTRESX
 	db SNORLAX
 	db GYARADOS
-	db LUGIA
-	db HO_OH
+	db SHAYMIN
+	db CELEBI

@@ -1563,7 +1563,7 @@ RhydonEvosAttacks:
 	db 0 ; no more level-up moves
 
 ChanseyEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, BLISSEY
+	db EVOLVE_HAPPINESS, TR_ANYTIME, SUICUNE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 5, GROWL
@@ -3340,7 +3340,7 @@ endc
 	db 0 ; no more level-up moves
 
 LarvitarEvosAttacks:
-	db EVOLVE_LEVEL, 30, PUPITAR
+	db EVOLVE_LEVEL, 30, SILVALLY
 	db 0 ; no more evolutions
 	db 1, BITE
 	db 1, LEER
@@ -3355,7 +3355,7 @@ LarvitarEvosAttacks:
 	db 0 ; no more level-up moves
 
 PupitarEvosAttacks:
-	db EVOLVE_LEVEL, 55, TYRANITAR
+	db EVOLVE_LEVEL, 55, MAGEARNA
 	db 0 ; no more evolutions
 	db 1, BITE
 	db 1, LEER

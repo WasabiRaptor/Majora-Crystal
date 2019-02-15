@@ -144,11 +144,11 @@ KantoMonSpecials:
 	db  70 ; KABUTOPS
 	db  60 ; AERODACTYL
 	db  65 ; SNORLAX
-	db 125 ; ARTICUNO
-	db 125 ; ZAPDOS
-	db 125 ; MOLTRES
+	db 125 ; ARTICUNOX
+	db 125 ; ZAPDOSX
+	db 125 ; MOLTRESX
 	db  50 ; DRATINI
 	db  70 ; DRAGONAIR
 	db 100 ; DRAGONITE
-	db 154 ; MEWTWO
-	db 100 ; MEW
+	db 154 ; MEWTWOX
+	db 100 ; MEWX
