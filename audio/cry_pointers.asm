@@ -30,7 +30,7 @@ Cries:
 	dba Cry_Zoroark
 	dba Cry_Leafeon
 	dba Cry_Sentret
-	dba Cry_Growlithe
+	dba Cry_Luxray
 	dba Cry_Krabby
 	dba Cry_Flaaffy
 	dba Cry_Porygon2

@@ -1,7 +1,7 @@
 IconPointers:
 ; entries correspond to ICON_* constants
 	dw NullIcon
-	dw PoliwagIcon
+	dw SandslashIcon
 	dw Nidoran_MIcon
 	dw MienfooIcon
 	dw PikachuIcon

@@ -69,17 +69,17 @@ FishGroups:
 .Pond_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     POLIWAG,    10
+	db 100 percent,     SANDSLASH,    10
 .Pond_Good:
 	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     POLIWAG,    20
-	db  90 percent + 1, POLIWAG,    20
+	db  70 percent,     SANDSLASH,    20
+	db  90 percent + 1, SANDSLASH,    20
 	db 100 percent,     time_group 6
 .Pond_Super:
-	db  40 percent,     POLIWAG,    40
+	db  40 percent,     SANDSLASH,    40
 	db  70 percent,     time_group 7
 	db  90 percent + 1, MAGIKARP,   40
-	db 100 percent,     POLIWAG,    40
+	db 100 percent,     SANDSLASH,    40
 
 .Dratini_Old:
 	db  70 percent + 1, MAGIKARP,   10
@@ -192,14 +192,14 @@ FishGroups:
 .Remoraid_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     POLIWAG,    10
+	db 100 percent,     SANDSLASH,    10
 .Remoraid_Good:
 	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     POLIWAG,    20
-	db  90 percent + 1, POLIWAG,    20
+	db  70 percent,     SANDSLASH,    20
+	db  90 percent + 1, SANDSLASH,    20
 	db 100 percent,     time_group 6
 .Remoraid_Super:
-	db  40 percent,     POLIWAG,    40
+	db  40 percent,     SANDSLASH,    40
 	db  70 percent,     time_group 7
 	db  90 percent + 1, MAGIKARP,   40
 	db 100 percent,     REMORAID,   40
@@ -212,8 +212,8 @@ TimeFishGroups:
 	db SHELLDER,   40,  SHELLDER,   40 ; 3
 	db GOLDEEN,    20,  GOLDEEN,    20 ; 4
 	db GOLDEEN,    40,  GOLDEEN,    40 ; 5
-	db POLIWAG,    20,  POLIWAG,    20 ; 6
-	db POLIWAG,    40,  POLIWAG,    40 ; 7
+	db SANDSLASH,    20,  SANDSLASH,    20 ; 6
+	db SANDSLASH,    40,  SANDSLASH,    40 ; 7
 	db DRATINI,    20,  DRATINI,    20 ; 8
 	db DRATINI,    40,  DRATINI,    40 ; 9
 	db QWILFISH,   20,  QWILFISH,   20 ; 10

@@ -54,11 +54,11 @@ EggMovePointers::
 	dw NoEggMoves
 	dw FlaaffyEggMoves
 	dw NoEggMoves
-	dw MankeyEggMoves
+	dw ShinxEggMoves
 	dw NoEggMoves
-	dw GrowlitheEggMoves
+	dw LuxrayEggMoves
 	dw NoEggMoves
-	dw PoliwagEggMoves
+	dw SandslashEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw AbraEggMoves

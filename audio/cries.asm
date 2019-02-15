@@ -982,10 +982,10 @@ Cry_Sentret:
 	musicheader 1, 6, Cry_Sentret_Ch6
 	musicheader 1, 8, Cry_Sentret_Ch8
 
-Cry_Growlithe:
-	musicheader 3, 5, Cry_Growlithe_Ch5
-	musicheader 1, 6, Cry_Growlithe_Ch6
-	musicheader 1, 8, Cry_Growlithe_Ch8
+Cry_Luxray:
+	musicheader 3, 5, Cry_Luxray_Ch5
+	musicheader 1, 6, Cry_Luxray_Ch6
+	musicheader 1, 8, Cry_Luxray_Ch8
 
 Cry_Krabby:
 	musicheader 3, 5, Cry_Krabby_Ch5
@@ -1950,7 +1950,7 @@ Cry_Persian_Ch8:
 	noise __,  9, $c1, $2c
 	endchannel
 
-Cry_Growlithe_Ch5:
+Cry_Luxray_Ch5:
 	sound_duty 1, 1, 2, 2
 	sound __,  4, $f4, $0641
 	sound __, 14, $d6, $0721
@@ -1958,7 +1958,7 @@ Cry_Growlithe_Ch5:
 	sound __,  9, $c1, $071a
 	endchannel
 
-Cry_Growlithe_Ch6:
+Cry_Luxray_Ch6:
 	sound_duty 0, 3, 0, 3
 	sound __,  5, $f4, $0580
 	sound __, 15, $e6, $06e0
@@ -1966,7 +1966,7 @@ Cry_Growlithe_Ch6:
 	sound __,  9, $d1, $06dc
 	endchannel
 
-Cry_Growlithe_Ch8:
+Cry_Luxray_Ch8:
 	noise __,  6, $c4, $46
 	noise __, 14, $a5, $44
 	noise __,  9, $c4, $45

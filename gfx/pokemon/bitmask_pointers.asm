@@ -54,11 +54,11 @@ BitmasksPointers:
 	dw MareepBitmasks
 	dw FlaaffyBitmasks
 	dw AmpharosBitmasks
-	dw MankeyBitmasks
-	dw PrimeapeBitmasks
-	dw GrowlitheBitmasks
-	dw ArcanineBitmasks
-	dw PoliwagBitmasks
+	dw ShinxBitmasks
+	dw LuxioBitmasks
+	dw LuxrayBitmasks
+	dw SandshrewBitmasks
+	dw SandslashBitmasks
 	dw PoliwhirlBitmasks
 	dw PoliwrathBitmasks
 	dw AbraBitmasks

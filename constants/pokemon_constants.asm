@@ -73,12 +73,12 @@
 	const MAREEP    	; 35
 	const FLAAFFY    	; 36
 	const AMPHAROS    	; 37
+	const SHINX     	; 38
+	const LUXIO   		; 39
+	const LUXRAY  		; 3a
+	const SANDSHREW   	; 3b
+	const SANDSLASH    	; 3c
 
-	const MANKEY     ; 38
-	const PRIMEAPE   ; 39
-	const GROWLITHE  ; 3a
-	const ARCANINE   ; 3b
-	const POLIWAG    ; 3c
 	const POLIWHIRL  ; 3d
 	const POLIWRATH  ; 3e
 	const ABRA       ; 3f

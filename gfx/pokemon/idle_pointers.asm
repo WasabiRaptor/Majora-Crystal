@@ -54,11 +54,11 @@ AnimationIdlePointers:
 	dw MareepAnimationIdle
 	dw FlaaffyAnimationIdle
 	dw AmpharosAnimationIdle
-	dw MankeyAnimationIdle
-	dw PrimeapeAnimationIdle
-	dw GrowlitheAnimationIdle
-	dw ArcanineAnimationIdle
-	dw PoliwagAnimationIdle
+	dw ShinxAnimationIdle
+	dw LuxioAnimationIdle
+	dw LuxrayAnimationIdle
+	dw SandshrewAnimationIdle
+	dw SandslashAnimationIdle
 	dw PoliwhirlAnimationIdle
 	dw PoliwrathAnimationIdle
 	dw AbraAnimationIdle
