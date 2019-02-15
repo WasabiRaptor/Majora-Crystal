@@ -762,8 +762,8 @@ AmpharosEvosAttacks:
 	db 58, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-MankeyEvosAttacks:
-	db EVOLVE_LEVEL, 28, PRIMEAPE
+ShinxEvosAttacks:
+	db EVOLVE_LEVEL, 28, LUXIO
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
@@ -777,7 +777,7 @@ MankeyEvosAttacks:
 	db 51, THRASH
 	db 0 ; no more level-up moves
 
-PrimeapeEvosAttacks:
+LuxioEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
@@ -794,8 +794,8 @@ PrimeapeEvosAttacks:
 	db 63, THRASH
 	db 0 ; no more level-up moves
 
-GrowlitheEvosAttacks:
-	db EVOLVE_ITEM, FIRE_STONE, ARCANINE
+LuxrayEvosAttacks:
+	db EVOLVE_ITEM, FIRE_STONE, SANDSHREW
 	db 0 ; no more evolutions
 	db 1, BITE
 	db 1, ROAR
@@ -807,7 +807,7 @@ GrowlitheEvosAttacks:
 	db 50, FLAMETHROWER
 	db 0 ; no more level-up moves
 
-ArcanineEvosAttacks:
+SandshrewEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ROAR
 	db 1, LEER
@@ -816,7 +816,7 @@ ArcanineEvosAttacks:
 	db 50, EXTREMESPEED
 	db 0 ; no more level-up moves
 
-PoliwagEvosAttacks:
+SandslashEvosAttacks:
 	db EVOLVE_LEVEL, 25, POLIWHIRL
 	db 0 ; no more evolutions
 	db 1, BUBBLE

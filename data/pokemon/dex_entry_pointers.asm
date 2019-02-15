@@ -55,11 +55,11 @@ PokedexDataPointerTable:
 	dw MareepPokedexEntry
 	dw FlaaffyPokedexEntry
 	dw AmpharosPokedexEntry
-	dw MankeyPokedexEntry
-	dw PrimeapePokedexEntry
-	dw GrowlithePokedexEntry
-	dw ArcaninePokedexEntry
-	dw PoliwagPokedexEntry
+	dw ShinxPokedexEntry
+	dw LuxioPokedexEntry
+	dw LuxrayPokedexEntry
+	dw SandshrewPokedexEntry
+	dw SandslashPokedexEntry
 	dw PoliwhirlPokedexEntry
 	dw PoliwrathPokedexEntry
 	dw AbraPokedexEntry

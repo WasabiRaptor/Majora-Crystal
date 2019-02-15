@@ -56,11 +56,11 @@ KantoMonSpecials:
 	db  65 ; MAREEP
 	db  50 ; FLAAFFY
 	db  80 ; AMPHAROS
-	db  35 ; MANKEY
-	db  60 ; PRIMEAPE
-	db  50 ; GROWLITHE
-	db  80 ; ARCANINE
-	db  40 ; POLIWAG
+	db  35 ; SHINX
+	db  60 ; LUXIO
+	db  50 ; LUXRAY
+	db  80 ; SANDSHREW
+	db  40 ; SANDSLASH
 	db  50 ; POLIWHIRL
 	db  70 ; POLIWRATH
 	db 105 ; ABRA

@@ -7,7 +7,7 @@ AlphabeticalPokedexOrder:
 	db ALAKAZAM
 	db INCINEROAR
 	db TOGETIC
-	db ARCANINE
+	db SANDSHREW
 	db ARIADOS
 	db DWEBBLE
 	db DELPHOX
@@ -79,7 +79,7 @@ AlphabeticalPokedexOrder:
 	db GRANBULL
 	db GRAVELER
 	db GRIMER
-	db GROWLITHE
+	db LUXRAY
 	db GYARADOS
 	db HAUNTER
 	db NATU
@@ -124,7 +124,7 @@ AlphabeticalPokedexOrder:
 	db MAGMAR
 	db PLACEHOLDER1
 	db PLACEHOLDER2
-	db MANKEY
+	db SHINX
 	db DOUBLADE
 	db LITTEN
 	db BRAIXEN
@@ -167,13 +167,13 @@ AlphabeticalPokedexOrder:
 	db PINECO
 	db PINSIR
 	db NINETALES
-	db POLIWAG
+	db SANDSLASH
 	db POLIWHIRL
 	db POLIWRATH
 	db PONYTA
 	db PLACE3
+	db LUXIO
 	db LAMPENT
-	db PRIMEAPE
 	db FLAAFFY
 	db SILVALLY
 	db QUAGSIRE

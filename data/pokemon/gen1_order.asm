@@ -18,7 +18,7 @@ Pokered_MonIndices:
 	db CUBONE
 	db RHYHORN
 	db LAPRAS
-	db ARCANINE
+	db SANDSHREW
 	db LUCARIO
 	db GYARADOS
 	db SHELLDER
@@ -31,7 +31,7 @@ Pokered_MonIndices:
 	db TANGELA
 	db SCIZOR ; MISSINGNO.
 	db UNOWN ; MISSINGNO.
-	db GROWLITHE
+	db LUXRAY
 	db ONIX
 	db PERSIAN
 	db MAGNETON
@@ -55,7 +55,7 @@ Pokered_MonIndices:
 	db PLACEHOLDER2
 	db KOFFING
 	db XATU ; MISSINGNO.
-	db MANKEY
+	db SHINX
 	db SEEL
 	db MIENFOO
 	db TAUROS
@@ -69,7 +69,7 @@ Pokered_MonIndices:
 	db CLAYDOL ; MISSINGNO.
 	db GOLETT ; MISSINGNO.
 	db DODUO
-	db POLIWAG
+	db SANDSLASH
 	db JYNX
 	db TYROGUE
 	db DWEBBLE
@@ -115,7 +115,7 @@ Pokered_MonIndices:
 	db MAGNEMITE
 	db BISHARP ; MISSINGNO.
 	db DODRIO
-	db PRIMEAPE
+	db LUXIO
 	db MIENSHAO
 	db ALTARIA
 	db DEWGONG

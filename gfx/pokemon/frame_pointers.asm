@@ -54,11 +54,11 @@ FramesPointers:
 	dw MareepFrames
 	dw FlaaffyFrames
 	dw AmpharosFrames
-	dw MankeyFrames
-	dw PrimeapeFrames
-	dw GrowlitheFrames
-	dw ArcanineFrames
-	dw PoliwagFrames
+	dw ShinxFrames
+	dw LuxioFrames
+	dw LuxrayFrames
+	dw SandshrewFrames
+	dw SandslashFrames
 	dw PoliwhirlFrames
 	dw PoliwrathFrames
 	dw AbraFrames

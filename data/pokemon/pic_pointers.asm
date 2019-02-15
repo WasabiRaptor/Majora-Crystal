@@ -116,16 +116,16 @@ PokemonPicPointers::
 	dba FlaaffyBackpic
 	dba AmpharosFrontpic
 	dba AmpharosBackpic
-	dba MankeyFrontpic
-	dba MankeyBackpic
-	dba PrimeapeFrontpic
-	dba PrimeapeBackpic
-	dba GrowlitheFrontpic
-	dba GrowlitheBackpic
-	dba ArcanineFrontpic
-	dba ArcanineBackpic
-	dba PoliwagFrontpic
-	dba PoliwagBackpic
+	dba ShinxFrontpic
+	dba ShinxBackpic
+	dba LuxioFrontpic
+	dba LuxioBackpic
+	dba LuxrayFrontpic
+	dba LuxrayBackpic
+	dba SandshrewFrontpic
+	dba SandshrewBackpic
+	dba SandslashFrontpic
+	dba SandslashBackpic
 	dba PoliwhirlFrontpic
 	dba PoliwhirlBackpic
 	dba PoliwrathFrontpic

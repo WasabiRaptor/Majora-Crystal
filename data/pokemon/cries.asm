@@ -60,19 +60,19 @@ PokemonCries::
 	mon_cry CRY_PURRLOIN,    $099,  $17f ; MAREEP
 	mon_cry CRY_FLAAFFY,     $020,  $0e0 ; FLAAFFY
 	mon_cry CRY_FLAAFFY,     $0ff,  $0c0 ; AMPHAROS
-	mon_cry CRY_TIMBURR,   $0dd,  $0e0 ; MANKEY
-	mon_cry CRY_TIMBURR,   $0af,  $0c0 ; PRIMEAPE
-	mon_cry CRY_GROWLITHE,   $020,  $0c0 ; GROWLITHE
-	mon_cry CRY_WEEDLE,      $000,  $100 ; ARCANINE
-	mon_cry CRY_MAGNETON,      $0ff,  $17f ; POLIWAG
+	mon_cry CRY_TIMBURR,   $0dd,  $0e0 ; SHINX
+	mon_cry CRY_TIMBURR,   $0af,  $0c0 ; LUXIO
+	mon_cry CRY_LUXRAY,   $020,  $0c0 ; LUXRAY
+	mon_cry CRY_WEEDLE,      $000,  $100 ; SANDSHREW
+	mon_cry CRY_MAGNETON,      $0ff,  $17f ; SANDSLASH
 	mon_cry CRY_MAGNETON,      $077,  $0e0 ; POLIWHIRL
 	mon_cry CRY_MAGNETON,      $000,  $17f ; POLIWRATH
 	mon_cry CRY_METAPOD,     $0c0,  $081 ; ABRA
 	mon_cry CRY_METAPOD,     $0a8,  $140 ; KADABRA
 	mon_cry CRY_METAPOD,     $098,  $17f ; ALAKAZAM
-	mon_cry CRY_GROWLITHE,   $0ee,  $081 ; MACHOP
-	mon_cry CRY_GROWLITHE,   $048,  $0e0 ; MACHOKE
-	mon_cry CRY_GROWLITHE,   $008,  $140 ; MACHAMP
+	mon_cry CRY_LUXRAY,   $0ee,  $081 ; MACHOP
+	mon_cry CRY_LUXRAY,   $048,  $0e0 ; MACHOKE
+	mon_cry CRY_LUXRAY,   $008,  $140 ; MACHAMP
 	mon_cry CRY_FLAAFFY,     $055,  $081 ; BELLSPROUT
 	mon_cry CRY_WEEPINBELL,  $044,  $0a0 ; WEEPINBELL
 	mon_cry CRY_WEEPINBELL,  $066,  $14c ; VICTREEBEL
@@ -84,7 +84,7 @@ PokemonCries::
 	mon_cry CRY_WEEPINBELL,  $000,  $100 ; PONYTA
 	mon_cry CRY_WEEPINBELL,  $020,  $140 ; RAPIDASH
 	mon_cry CRY_SLOWPOKE,    $000,  $100 ; SLOWPOKE
-	mon_cry CRY_GROWLITHE,   $000,  $100 ; SLOWBRO
+	mon_cry CRY_LUXRAY,   $000,  $100 ; SLOWBRO
 	mon_cry CRY_METAPOD,     $080,  $0e0 ; PLACEHOLDER1
 	mon_cry CRY_METAPOD,     $020,  $140 ; PLACEHOLDER2
 	mon_cry CRY_MEOWTH,     $0dd,  $081 ; FARFETCH_D
@@ -142,8 +142,8 @@ PokemonCries::
 	mon_cry CRY_SWABLU,     $03d,  $100 ; JOLTEONX
 	mon_cry CRY_SWABLU,     $010,  $0a0 ; FLAREONX
 	mon_cry CRY_WEEPINBELL,  $0aa,  $17f ; PLACE3
-	mon_cry CRY_GROWLITHE,   $0f0,  $081 ; OMANYTE
-	mon_cry CRY_GROWLITHE,   $0ff,  $0c0 ; OMASTAR
+	mon_cry CRY_LUXRAY,   $0f0,  $081 ; OMANYTE
+	mon_cry CRY_LUXRAY,   $0ff,  $0c0 ; OMASTAR
 	mon_cry CRY_CATERPIE,    $0bb,  $0c0 ; KABUTO
 	mon_cry CRY_PERSIAN,      $0ee,  $081 ; KABUTOPS
 	mon_cry CRY_ZANGOOSE,   $020,  $170 ; AERODACTYL

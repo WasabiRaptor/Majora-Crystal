@@ -809,7 +809,7 @@ CardFlip_CheckWinCondition:
 	dw .Impossible
 	dw .Pikachu
 	dw .Nidoran_M
-	dw .Poliwag
+	dw .Sandslash
 	dw .Nidoqueen
 
 	dw .OneTwo
@@ -912,7 +912,7 @@ CardFlip_CheckWinCondition:
 	jr z, .WinTwelve
 	jp .Lose
 
-.Poliwag:
+.Sandslash:
 	ld a, [wCardFlipFaceUpCard]
 	and $3
 	cp $2

@@ -1,7 +1,7 @@
 Icons: ; used only for BANK(Icons)
 
 NullIcon:
-PoliwagIcon:      INCBIN "gfx/icons/poliwag.2bpp"
+SandslashIcon:      INCBIN "gfx/icons/sandslash.2bpp"
 Nidoran_MIcon:   INCBIN "gfx/icons/nidoran_m.2bpp"
 MienfooIcon:      INCBIN "gfx/icons/mienfoo.2bpp"
 TogekissIcon:      INCBIN "gfx/icons/togekiss.2bpp"

@@ -190,7 +190,7 @@ if _BRASS
 endc
 	db -1 ; end
 
-MankeyEggMoves:
+ShinxEggMoves:
 	db ROCK_SLIDE
 	db FORESIGHT
 	db MEDITATE
@@ -199,7 +199,7 @@ MankeyEggMoves:
 	db BEAT_UP
 	db -1 ; end
 
-GrowlitheEggMoves:
+LuxrayEggMoves:
 	db BODY_SLAM
 	db SAFEGUARD
 	db CRUNCH
@@ -207,7 +207,7 @@ GrowlitheEggMoves:
 	db FIRE_SPIN
 	db -1 ; end
 
-PoliwagEggMoves:
+SandslashEggMoves:
 	db MIST
 	db SPLASH
 	db BUBBLEBEAM

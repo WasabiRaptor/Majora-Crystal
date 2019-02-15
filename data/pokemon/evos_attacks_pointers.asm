@@ -56,11 +56,11 @@ EvosAttacksPointers::
 	dw MareepEvosAttacks
 	dw FlaaffyEvosAttacks
 	dw AmpharosEvosAttacks
-	dw MankeyEvosAttacks
-	dw PrimeapeEvosAttacks
-	dw GrowlitheEvosAttacks
-	dw ArcanineEvosAttacks
-	dw PoliwagEvosAttacks
+	dw ShinxEvosAttacks
+	dw LuxioEvosAttacks
+	dw LuxrayEvosAttacks
+	dw SandshrewEvosAttacks
+	dw SandslashEvosAttacks
 	dw PoliwhirlEvosAttacks
 	dw PoliwrathEvosAttacks
 	dw AbraEvosAttacks

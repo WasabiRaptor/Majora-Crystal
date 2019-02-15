@@ -54,11 +54,11 @@ AnimationPointers:
 	dw MareepAnimation
 	dw FlaaffyAnimation
 	dw AmpharosAnimation
-	dw MankeyAnimation
-	dw PrimeapeAnimation
-	dw GrowlitheAnimation
-	dw ArcanineAnimation
-	dw PoliwagAnimation
+	dw ShinxAnimation
+	dw LuxioAnimation
+	dw LuxrayAnimation
+	dw SandshrewAnimation
+	dw SandslashAnimation
 	dw PoliwhirlAnimation
 	dw PoliwrathAnimation
 	dw AbraAnimation
