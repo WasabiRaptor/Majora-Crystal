@@ -63,13 +63,13 @@
 	const NIDOQUEEN     ; 2b
 	const SEVIPER      	; 2c
 	const ZANGOOSE  	; 2d
+	const SENTRET      	; 2e
+	const FURRET   		; 2f
+	const SWABLU    	; 30
+	const ALTARIA   	; 31
 
-	const PARAS      ; 2e
-	const PARASECT   ; 2f
-	const VENONAT    ; 30
-	const VENOMOTH   ; 31
-	const DIGLETT    ; 32
-	const DUGTRIO    ; 33
+	const MIENFOO    ; 32
+	const MIENSHAO    ; 33
 	const PLACE5     ; 34
 	const PERSIANX    ; 35
 	const PSYDUCK    ; 36
@@ -188,9 +188,11 @@ JOHTO_POKEMON EQU const_value
 	const TOTODILE   ; 9e
 	const CROCONAW   ; 9f
 	const FERALIGATR ; a0
-	const SENTRET    ; a1
-	const FURRET     ; a2
-	const HOOTHOOT   ; a3
+
+	const LARVITAR    	; a1
+	const PUPITAR     	; a2
+	const TYRANITAR   	; a3
+
 	const NOCTOWL    ; a4
 	const LEDYBA     ; a5
 	const LEDIAN     ; a6

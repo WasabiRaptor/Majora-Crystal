@@ -13,7 +13,7 @@
 	const CRY_NIDOQUEEN
 	const CRY_ROTOM
 	const CRY_TIMBURR
-	const CRY_DIGLETT
+	const CRY_MIENFOO
 	const CRY_SEEL
 	const CRY_DROWZEE
 	const CRY_MAGNETON
@@ -28,11 +28,11 @@
 	const CRY_TOGEPI
 	const CRY_PERSIAN
 	const CRY_PURRLOIN
-	const CRY_VENONAT
+	const CRY_SWABLU
 	const CRY_LAPRAS
 	const CRY_METAPOD
 	const CRY_SQUIRTLE
-	const CRY_PARAS
+	const CRY_SENTRET
 	const CRY_GROWLITHE
 	const CRY_KRABBY
 	const CRY_PSYDUCK
@@ -49,8 +49,8 @@
 	const CRY_RAIKOU
 	const CRY_LITTEN
 	const CRY_CYNDAQUIL
-	const CRY_HOOTHOOT
-	const CRY_SENTRET
+	const CRY_TYRANITAR
+	const CRY_LARVITAR
 	const CRY_SLOWKING
 	const CRY_ABOMASNOW
 	const CRY_CHIKORITA

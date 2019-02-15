@@ -12,7 +12,7 @@ SpriteMons:
 	db LEAFEON
 	db HEIDREIGON
 	db ROCKRUFF
-	db DIGLETT
+	db MIENFOO
 	db POLIWAG
 	db TOGEKISS
 	db PURRLOIN
@@ -23,7 +23,7 @@ SpriteMons:
 	db NIDORAN_M
 	db GRIMER
 	db TOGEPI
-	db PARAS
+	db SENTRET
 	db TENTACOOL
 	db TAUROS
 	db MACHOP

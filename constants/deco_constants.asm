@@ -108,7 +108,7 @@ __enum__ = 0
 	deco  CHARMANDER_DOLL
 	deco  SQUIRTLE_DOLL
 	deco  POLIWAG_DOLL
-	deco  DIGLETT_DOLL
+	deco  MIENFOO_DOLL
 	deco  STARMIE_DOLL
 	deco  MAGIKARP_DOLL
 	deco  NIDOQUEEN_DOLL

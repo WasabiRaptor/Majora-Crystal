@@ -3,7 +3,7 @@ IconPointers:
 	dw NullIcon
 	dw PoliwagIcon
 	dw Nidoran_MIcon
-	dw DiglettIcon
+	dw MienfooIcon
 	dw PikachuIcon
 	dw StaryuIcon
 	dw FishIcon

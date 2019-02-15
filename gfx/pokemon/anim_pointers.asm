@@ -44,12 +44,12 @@ AnimationPointers:
 	dw NidoqueenAnimation
 	dw SeviperAnimation
 	dw ZangooseAnimation
-	dw ParasAnimation
-	dw ParasectAnimation
-	dw VenonatAnimation
-	dw VenomothAnimation
-	dw DiglettAnimation
-	dw DugtrioAnimation
+	dw SentretAnimation
+	dw FurretAnimation
+	dw SwabluAnimation
+	dw AltariaAnimation
+	dw MienfooAnimation
+	dw MienshaoAnimation
 	dw Place5Animation
 	dw PersianXAnimation
 	dw PsyduckAnimation
@@ -159,9 +159,9 @@ AnimationPointers:
 	dw TotodileAnimation
 	dw CroconawAnimation
 	dw FeraligatrAnimation
-	dw SentretAnimation
-	dw FurretAnimation
-	dw HoothootAnimation
+	dw LarvitarAnimation
+	dw PupitarAnimation
+	dw TyranitarAnimation
 	dw NoctowlAnimation
 	dw LedybaAnimation
 	dw LedianAnimation

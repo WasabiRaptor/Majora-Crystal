@@ -21,14 +21,14 @@ Cry_Raikou:
 	musicheader 1, 6, Cry_Raikou_Ch6
 	musicheader 1, 8, Cry_Raikou_Ch8
 
-Cry_Hoothoot:
-	musicheader 3, 5, Cry_Hoothoot_Ch5
-	musicheader 1, 6, Cry_Hoothoot_Ch6
-	musicheader 1, 8, Cry_Hoothoot_Ch8
+Cry_Tyranitar:
+	musicheader 3, 5, Cry_Tyranitar_Ch5
+	musicheader 1, 6, Cry_Tyranitar_Ch6
+	musicheader 1, 8, Cry_Tyranitar_Ch8
 
-Cry_Sentret:
-	musicheader 2, 5, Cry_Sentret_Ch5
-	musicheader 1, 6, Cry_Sentret_Ch6
+Cry_Larvitar:
+	musicheader 2, 5, Cry_Larvitar_Ch5
+	musicheader 1, 6, Cry_Larvitar_Ch6
 
 Cry_Slowking:
 	musicheader 3, 5, Cry_Slowking_Ch5
@@ -392,7 +392,7 @@ Cry_Raikou_Ch8:
 	noise C_,  1, $d2, $4f
 	endchannel
 
-Cry_Hoothoot_Ch5:
+Cry_Tyranitar_Ch5:
 	sound_duty 2, 1, 2, 1
 	sound __,  5, $78, $0650
 	sound __,  5, $f8, $0660
@@ -404,7 +404,7 @@ Cry_Hoothoot_Ch5:
 	sound __,  5, $f1, $0674
 	endchannel
 
-Cry_Hoothoot_Ch6:
+Cry_Tyranitar_Ch6:
 	sound_duty 2, 0, 2, 0
 .loop1
 	sound __,  3, $a1, $0600
@@ -416,26 +416,26 @@ Cry_Hoothoot_Ch6:
 	sound __,  5, $91, $0638
 	endchannel
 
-Cry_Hoothoot_Ch8:
+Cry_Tyranitar_Ch8:
 	noise __,  2, $68, $36
 	noise C_,  1, $88, $6a
 	noise __,  2, $98, $5e
 	noise C_,  1, $a7, $6e
 	endchannel
 
-Cry_Sentret_Ch5:
+Cry_Larvitar_Ch5:
 	tone $0020
 	dutycycle $0
-	jumpchannel Cry_Sentret_branch_f312b
+	jumpchannel Cry_Larvitar_branch_f312b
 
-Cry_Sentret_Ch6:
+Cry_Larvitar_Ch6:
 	sound_duty 3, 2, 1, 0
-Cry_Sentret_branch_f312b:
+Cry_Larvitar_branch_f312b:
 	sound __,  9, $39, $072d
 	sound __,  9, $f1, $0720
 	endchannel
 
-Cry_Sentret_Ch8:
+Cry_Larvitar_Ch8:
 	noise __,  9, $3b, $0
 	noise __,  9, $92, $0
 	endchannel
@@ -882,10 +882,10 @@ Cry_Timburr:
 	musicheader 1, 6, Cry_Timburr_Ch6
 	musicheader 1, 8, Cry_Timburr_Ch8
 
-Cry_Diglett:
-	musicheader 3, 5, Cry_Diglett_Ch5
-	musicheader 1, 6, Cry_Diglett_Ch6
-	musicheader 1, 8, Cry_Diglett_Ch8
+Cry_Mienfoo:
+	musicheader 3, 5, Cry_Mienfoo_Ch5
+	musicheader 1, 6, Cry_Mienfoo_Ch6
+	musicheader 1, 8, Cry_Mienfoo_Ch8
 
 Cry_Seel:
 	musicheader 3, 5, Cry_Seel_Ch5
@@ -957,10 +957,10 @@ Cry_Purrloin:
 	musicheader 1, 6, Cry_Purrloin_Ch6
 	musicheader 1, 8, Cry_Purrloin_Ch8
 
-Cry_Venonat:
-	musicheader 3, 5, Cry_Venonat_Ch5
-	musicheader 1, 6, Cry_Venonat_Ch6
-	musicheader 1, 8, Cry_Venonat_Ch8
+Cry_Swablu:
+	musicheader 3, 5, Cry_Swablu_Ch5
+	musicheader 1, 6, Cry_Swablu_Ch6
+	musicheader 1, 8, Cry_Swablu_Ch8
 
 Cry_Lapras:
 	musicheader 3, 5, Cry_Lapras_Ch5
@@ -977,10 +977,10 @@ Cry_Leafeon:
 	musicheader 1, 6, Cry_Leafeon_Ch6
 	musicheader 1, 8, Cry_Leafeon_Ch8
 
-Cry_Paras:
-	musicheader 3, 5, Cry_Paras_Ch5
-	musicheader 1, 6, Cry_Paras_Ch6
-	musicheader 1, 8, Cry_Paras_Ch8
+Cry_Sentret:
+	musicheader 3, 5, Cry_Sentret_Ch5
+	musicheader 1, 6, Cry_Sentret_Ch6
+	musicheader 1, 8, Cry_Sentret_Ch8
 
 Cry_Growlithe:
 	musicheader 3, 5, Cry_Growlithe_Ch5
@@ -1381,7 +1381,7 @@ Cry_Grimer_Ch6:
 Cry_Grimer_Ch8:
 	endchannel
 
-Cry_Diglett_Ch5:
+Cry_Mienfoo_Ch5:
 	sound_duty 0, 3, 0, 3
 	sound __,  5, $f1, $0700
 	sound __,  5, $e1, $0780
@@ -1395,7 +1395,7 @@ Cry_Diglett_Ch5:
 	sound __,  9, $b1, $0741
 	endchannel
 
-Cry_Diglett_Ch6:
+Cry_Mienfoo_Ch6:
 	sound_duty 0, 1, 0, 1
 	sound __, 13, $8, 0
 	sound __,  5, $f1, $0701
@@ -1406,7 +1406,7 @@ Cry_Diglett_Ch6:
 	sound __,  9, $d1, $0701
 	endchannel
 
-Cry_Diglett_Ch8:
+Cry_Mienfoo_Ch8:
 	noise __, 16, $8, $0
 	noise __,  5, $8, $0
 	noise __,  5, $d1, $4c
@@ -1741,7 +1741,7 @@ Cry_Magnezone_Ch8:
 	noise __,  9, $d1, $2c
 	endchannel
 
-Cry_Paras_Ch5:
+Cry_Sentret_Ch5:
 	sound_duty 0, 0, 3, 3
 	sound __,  7, $f2, $0600
 	sound __,  7, $e2, $0640
@@ -1753,7 +1753,7 @@ Cry_Paras_Ch5:
 	sound __,  9, $a1, $07c0
 	endchannel
 
-Cry_Paras_Ch6:
+Cry_Sentret_Ch6:
 	sound_duty 1, 0, 1, 0
 	sound __,  4, $8, $0001
 	sound __,  7, $c2, $05c1
@@ -1766,7 +1766,7 @@ Cry_Paras_Ch6:
 	sound __,  9, $81, $0781
 	endchannel
 
-Cry_Paras_Ch8:
+Cry_Sentret_Ch8:
 	noise __,  7, $8, $1
 	noise __,  6, $e2, $5c
 	noise __,  6, $c2, $4c
@@ -1860,7 +1860,7 @@ Cry_Zoroark_Ch8:
 	noise __, 16, $b3, $5c
 	endchannel
 
-Cry_Venonat_Ch5:
+Cry_Swablu_Ch5:
 	sound_duty 0, 0, 3, 3
 	sound __,  7, $f7, $0740
 	sound __, 13, $e6, $0744
@@ -1870,7 +1870,7 @@ Cry_Venonat_Ch5:
 	sound __,  9, $d1, $07a0
 	endchannel
 
-Cry_Venonat_Ch6:
+Cry_Swablu_Ch6:
 	sound_duty 2, 2, 0, 0
 	sound __,  7, $c7, $0701
 	sound __, 12, $b6, $0702
@@ -1880,7 +1880,7 @@ Cry_Venonat_Ch6:
 	sound __,  9, $91, $0762
 	endchannel
 
-Cry_Venonat_Ch8:
+Cry_Swablu_Ch8:
 	noise __,  4, $e2, $3c
 	noise __,  9, $d6, $4c
 	noise __,  6, $d4, $3c

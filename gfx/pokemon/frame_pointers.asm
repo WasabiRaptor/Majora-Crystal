@@ -44,12 +44,12 @@ FramesPointers:
 	dw NidoqueenFrames
 	dw SeviperFrames
 	dw ZangooseFrames
-	dw ParasFrames
-	dw ParasectFrames
-	dw VenonatFrames
-	dw VenomothFrames
-	dw DiglettFrames
-	dw DugtrioFrames
+	dw SentretFrames
+	dw FurretFrames
+	dw SwabluFrames
+	dw AltariaFrames
+	dw MienfooFrames
+	dw MienshaoFrames
 	dw Place5Frames
 	dw PersianXFrames
 	dw PsyduckFrames
@@ -159,9 +159,9 @@ FramesPointers:
 	dw TotodileFrames
 	dw CroconawFrames
 	dw FeraligatrFrames
-	dw SentretFrames
-	dw FurretFrames
-	dw HoothootFrames
+	dw LarvitarFrames
+	dw PupitarFrames
+	dw TyranitarFrames
 	dw NoctowlFrames
 	dw LedybaFrames
 	dw LedianFrames

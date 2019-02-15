@@ -10,7 +10,7 @@ Cries:
 	dba Cry_Nidoqueen
 	dba Cry_Rotom
 	dba Cry_Timburr
-	dba Cry_Diglett
+	dba Cry_Mienfoo
 	dba Cry_Seel
 	dba Cry_Drowzee
 	dba Cry_Magneton
@@ -25,11 +25,11 @@ Cries:
 	dba Cry_Togepi
 	dba Cry_Persian
 	dba Cry_Purrloin
-	dba Cry_Venonat
+	dba Cry_Swablu
 	dba Cry_Lapras
 	dba Cry_Zoroark
 	dba Cry_Leafeon
-	dba Cry_Paras
+	dba Cry_Sentret
 	dba Cry_Growlithe
 	dba Cry_Krabby
 	dba Cry_Psyduck
@@ -44,8 +44,8 @@ Cries:
 	dba Cry_Raikou
 	dba Cry_Litten
 	dba Cry_Cyndaquil
-	dba Cry_Hoothoot
-	dba Cry_Sentret
+	dba Cry_Tyranitar
+	dba Cry_Larvitar
 	dba Cry_Slowking
 	dba Cry_Abomasnow
 	dba Cry_Chikorita

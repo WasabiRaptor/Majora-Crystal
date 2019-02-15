@@ -3,7 +3,7 @@
 	const ICON_NULL
 	const ICON_POLIWAG
 	const ICON_NIDORAN_M
-	const ICON_DIGLETT
+	const ICON_MIENFOO
 	const ICON_PIKACHU
 	const ICON_STARYU
 	const ICON_FISH

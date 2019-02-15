@@ -45,12 +45,12 @@ PokedexDataPointerTable:
 	dw NidoqueenPokedexEntry
 	dw SeviperPokedexEntry
 	dw ZangoosePokedexEntry
-	dw ParasPokedexEntry
-	dw ParasectPokedexEntry
-	dw VenonatPokedexEntry
-	dw VenomothPokedexEntry
-	dw DiglettPokedexEntry
-	dw DugtrioPokedexEntry
+	dw SentretPokedexEntry
+	dw FurretPokedexEntry
+	dw SwabluPokedexEntry
+	dw AltariaPokedexEntry
+	dw MienfooPokedexEntry
+	dw MienshaoPokedexEntry
 	dw Place5PokedexEntry
 	dw PersianXPokedexEntry
 	dw PsyduckPokedexEntry
@@ -160,9 +160,9 @@ PokedexDataPointerTable:
 	dw TotodilePokedexEntry
 	dw CroconawPokedexEntry
 	dw FeraligatrPokedexEntry
-	dw SentretPokedexEntry
-	dw FurretPokedexEntry
-	dw HoothootPokedexEntry
+	dw LarvitarPokedexEntry
+	dw PupitarPokedexEntry
+	dw TyranitarPokedexEntry
 	dw NoctowlPokedexEntry
 	dw LedybaPokedexEntry
 	dw LedianPokedexEntry

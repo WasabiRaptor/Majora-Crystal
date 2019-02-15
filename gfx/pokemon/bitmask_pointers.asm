@@ -44,12 +44,12 @@ BitmasksPointers:
 	dw NidoqueenBitmasks
 	dw SeviperBitmasks
 	dw ZangooseBitmasks
-	dw ParasBitmasks
-	dw ParasectBitmasks
-	dw VenonatBitmasks
-	dw VenomothBitmasks
-	dw DiglettBitmasks
-	dw DugtrioBitmasks
+	dw SentretBitmasks
+	dw FurretBitmasks
+	dw SwabluBitmasks
+	dw AltariaBitmasks
+	dw MienfooBitmasks
+	dw MienshaoBitmasks
 	dw Place5Bitmasks
 	dw PersianXBitmasks
 	dw PsyduckBitmasks
@@ -159,9 +159,9 @@ BitmasksPointers:
 	dw TotodileBitmasks
 	dw CroconawBitmasks
 	dw FeraligatrBitmasks
-	dw SentretBitmasks
-	dw FurretBitmasks
-	dw HoothootBitmasks
+	dw LarvitarBitmasks
+	dw PupitarBitmasks
+	dw TyranitarBitmasks
 	dw NoctowlBitmasks
 	dw LedybaBitmasks
 	dw LedianBitmasks

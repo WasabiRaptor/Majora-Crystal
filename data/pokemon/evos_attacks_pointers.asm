@@ -46,12 +46,12 @@ EvosAttacksPointers::
 	dw NidoqueenEvosAttacks
 	dw SeviperEvosAttacks
 	dw ZangooseEvosAttacks
-	dw ParasEvosAttacks
-	dw ParasectEvosAttacks
-	dw VenonatEvosAttacks
-	dw VenomothEvosAttacks
-	dw DiglettEvosAttacks
-	dw DugtrioEvosAttacks
+	dw SentretEvosAttacks
+	dw FurretEvosAttacks
+	dw SwabluEvosAttacks
+	dw AltariaEvosAttacks
+	dw MienfooEvosAttacks
+	dw MienshaoEvosAttacks
 	dw Place5EvosAttacks
 	dw PersianXEvosAttacks
 	dw PsyduckEvosAttacks
@@ -161,9 +161,9 @@ EvosAttacksPointers::
 	dw TotodileEvosAttacks
 	dw CroconawEvosAttacks
 	dw FeraligatrEvosAttacks
-	dw SentretEvosAttacks
-	dw FurretEvosAttacks
-	dw HoothootEvosAttacks
+	dw LarvitarEvosAttacks
+	dw PupitarEvosAttacks
+	dw TyranitarEvosAttacks
 	dw NoctowlEvosAttacks
 	dw LedybaEvosAttacks
 	dw LedianEvosAttacks

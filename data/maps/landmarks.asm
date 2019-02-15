@@ -68,7 +68,7 @@ Landmarks:
 	landmark 108,  76, UndergroundName
 	landmark 100,  76, Route6Name
 	landmark 100,  84, VermilionCityName
-	landmark  88,  60, DiglettsCaveName
+	landmark  88,  60, MienfoosCaveName
 	landmark  88,  68, Route7Name
 	landmark 116,  68, Route8Name
 	landmark 116,  52, Route9Name
@@ -200,7 +200,7 @@ IlexForestName:      db "ILEX¯FOREST@"
 BurnedTowerName:     db "BURNED¯TOWER@"
 FastShipName:        db "FAST SHIP@"
 ViridianForestName:  db "VIRIDIAN¯FOREST@"
-DiglettsCaveName:    db "DIGLETT'S¯CAVE@"
+MienfoosCaveName:    db "MIENFOO'S¯CAVE@"
 TohjoFallsName:      db "TOHJO FALLS@"
 UndergroundName:     db "UNDERGROUND@"
 ;BattleTowerName:     db "BATTLE¯TOWER@"

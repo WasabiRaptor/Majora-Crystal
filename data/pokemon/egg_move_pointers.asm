@@ -44,11 +44,11 @@ EggMovePointers::
 	dw NidoqueenEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw ParasEggMoves
+	dw SentretEggMoves
 	dw NoEggMoves
-	dw VenonatEggMoves
+	dw SwabluEggMoves
 	dw NoEggMoves
-	dw DiglettEggMoves
+	dw MienfooEggMoves
 	dw NoEggMoves
 	dw Place5EggMoves
 	dw NoEggMoves
@@ -163,9 +163,9 @@ endc
 	dw TotodileEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw SentretEggMoves
+	dw LarvitarEggMoves
 	dw NoEggMoves
-	dw HoothootEggMoves
+	dw TyranitarEggMoves
 	dw NoEggMoves
 	dw LedybaEggMoves
 	dw NoEggMoves

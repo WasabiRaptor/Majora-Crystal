@@ -143,7 +143,7 @@ if !_BRASS
 endc
 	db -1 ; end
 
-ParasEggMoves:
+SentretEggMoves:
 	db FALSE_SWIPE
 	db SCREECH
 	db COUNTER
@@ -156,13 +156,13 @@ endc
 	db PURSUIT
 	db -1 ; end
 
-VenonatEggMoves:
+SwabluEggMoves:
 	db BATON_PASS
 	db SCREECH
 	db GIGA_DRAIN
 	db -1 ; end
 
-DiglettEggMoves:
+MienfooEggMoves:
 	db FAINT_ATTACK
 	db SCREECH
 	db ANCIENTPOWER
@@ -518,7 +518,7 @@ TotodileEggMoves:
 	db ROCK_SLIDE
 	db -1 ; end
 
-SentretEggMoves:
+LarvitarEggMoves:
 	db DOUBLE_EDGE
 	db PURSUIT
 	db SLASH
@@ -526,7 +526,7 @@ SentretEggMoves:
 	db REVERSAL
 	db -1 ; end
 
-HoothootEggMoves:
+TyranitarEggMoves:
 	db MIRROR_MOVE
 	db SUPERSONIC
 	db FAINT_ATTACK

@@ -618,8 +618,8 @@ ZangooseEvosAttacks:
 	db 1, PETAL_DANCE
 	db 0 ; no more level-up moves
 
-ParasEvosAttacks:
-	db EVOLVE_LEVEL, 24, PARASECT
+SentretEvosAttacks:
+	db EVOLVE_LEVEL, 24, FURRET
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 7, STUN_SPORE
@@ -631,7 +631,7 @@ ParasEvosAttacks:
 	db 43, GIGA_DRAIN
 	db 0 ; no more level-up moves
 
-ParasectEvosAttacks:
+FurretEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, STUN_SPORE
@@ -645,8 +645,8 @@ ParasectEvosAttacks:
 	db 55, GIGA_DRAIN
 	db 0 ; no more level-up moves
 
-VenonatEvosAttacks:
-	db EVOLVE_LEVEL, 31, VENOMOTH
+SwabluEvosAttacks:
+	db EVOLVE_LEVEL, 31, ALTARIA
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, DISABLE
@@ -661,7 +661,7 @@ VenonatEvosAttacks:
 	db 41, PSYCHIC_M
 	db 0 ; no more level-up moves
 
-VenomothEvosAttacks:
+AltariaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, DISABLE
@@ -678,8 +678,8 @@ VenomothEvosAttacks:
 	db 52, PSYCHIC_M
 	db 0 ; no more level-up moves
 
-DiglettEvosAttacks:
-	db EVOLVE_LEVEL, 26, DUGTRIO
+MienfooEvosAttacks:
+	db EVOLVE_LEVEL, 26, MIENSHAO
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 5, GROWL
@@ -691,7 +691,7 @@ DiglettEvosAttacks:
 	db 49, FISSURE
 	db 0 ; no more level-up moves
 
-DugtrioEvosAttacks:
+MienshaoEvosAttacks:
 	db 0 ; no more evolutions
 if _BRASS
 	db 1, TRI_ATTACK
@@ -2225,8 +2225,8 @@ FeraligatrEvosAttacks:
 	db 58, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-SentretEvosAttacks:
-	db EVOLVE_LEVEL, 15, FURRET
+LarvitarEvosAttacks:
+	db EVOLVE_LEVEL, 15, PUPITAR
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 5, DEFENSE_CURL
@@ -2237,7 +2237,7 @@ SentretEvosAttacks:
 	db 41, AMNESIA
 	db 0 ; no more level-up moves
 
-FurretEvosAttacks:
+PupitarEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, DEFENSE_CURL
@@ -2250,7 +2250,7 @@ FurretEvosAttacks:
 	db 48, AMNESIA
 	db 0 ; no more level-up moves
 
-HoothootEvosAttacks:
+TyranitarEvosAttacks:
 	db EVOLVE_LEVEL, 20, NOCTOWL
 	db 0 ; no more evolutions
 	db 1, TACKLE

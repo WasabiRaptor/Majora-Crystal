@@ -96,18 +96,18 @@ PokemonPicPointers::
 	dba SeviperBackpic
 	dba ZangooseFrontpic
 	dba ZangooseBackpic
-	dba ParasFrontpic
-	dba ParasBackpic
-	dba ParasectFrontpic
-	dba ParasectBackpic
-	dba VenonatFrontpic
-	dba VenonatBackpic
-	dba VenomothFrontpic
-	dba VenomothBackpic
-	dba DiglettFrontpic
-	dba DiglettBackpic
-	dba DugtrioFrontpic
-	dba DugtrioBackpic
+	dba SentretFrontpic
+	dba SentretBackpic
+	dba FurretFrontpic
+	dba FurretBackpic
+	dba SwabluFrontpic
+	dba SwabluBackpic
+	dba AltariaFrontpic
+	dba AltariaBackpic
+	dba MienfooFrontpic
+	dba MienfooBackpic
+	dba MienshaoFrontpic
+	dba MienshaoBackpic
 	dba Place5Frontpic
 	dba Place5Backpic
 	dba PersianXFrontpic
@@ -326,12 +326,12 @@ PokemonPicPointers::
 	dba CroconawBackpic
 	dba FeraligatrFrontpic
 	dba FeraligatrBackpic
-	dba SentretFrontpic
-	dba SentretBackpic
-	dba FurretFrontpic
-	dba FurretBackpic
-	dba HoothootFrontpic
-	dba HoothootBackpic
+	dba LarvitarFrontpic
+	dba LarvitarBackpic
+	dba PupitarFrontpic
+	dba PupitarBackpic
+	dba TyranitarFrontpic
+	dba TyranitarBackpic
 	dba NoctowlFrontpic
 	dba NoctowlBackpic
 	dba LedybaFrontpic

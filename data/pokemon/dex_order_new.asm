@@ -15,12 +15,12 @@ NewPokedexOrder:
 	db PORYGON
 	db MEOWTH
 	db PERSIAN
-	db HOOTHOOT
+	db TYRANITAR
 	db NOCTOWL
 	db PORYGON2
 	db PORYGONZ
-	db SENTRET
-	db FURRET
+	db LARVITAR
+	db PUPITAR
 	db PICHU
 	db TOGEKISS
 	db ROTOM
@@ -70,8 +70,8 @@ NewPokedexOrder:
 	db HOPPIP
 	db SKIPLOOM
 	db JUMPLUFF
-	db PARAS
-	db PARASECT
+	db SENTRET
+	db FURRET
 	db POLIWAG
 	db POLIWHIRL
 	db POLIWRATH
@@ -108,8 +108,8 @@ NewPokedexOrder:
 	db EXEGGUTOR
 	db VULPIX
 	db WOBBUFFET
-	db VENONAT
-	db VENOMOTH
+	db SWABLU
+	db ALTARIA
 	db SCYTHER
 	db SCIZOR
 	db PINSIR
@@ -132,8 +132,8 @@ NewPokedexOrder:
 	db STANTLER
 	db BRAIXEN
 	db DELPHOX
-	db DIGLETT
-	db DUGTRIO
+	db MIENFOO
+	db MIENSHAO
 	db MANKEY
 	db PRIMEAPE
 	db PLACE5

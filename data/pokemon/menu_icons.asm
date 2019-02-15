@@ -47,12 +47,12 @@ MonMenuIcons:
 	db ICON_NIDOQUEEN      ; NIDOQUEEN
 	db ICON_NIDOQUEEN      ; SEVIPER
 	db ICON_NIDOQUEEN      ; ZANGOOSE
-	db ICON_BUG         ; PARAS
-	db ICON_BUG         ; PARASECT
-	db ICON_CATERPILLAR ; VENONAT
-	db ICON_MOTH        ; VENOMOTH
-	db ICON_DIGLETT     ; DIGLETT
-	db ICON_DIGLETT     ; DUGTRIO
+	db ICON_BUG         ; SENTRET
+	db ICON_BUG         ; FURRET
+	db ICON_CATERPILLAR ; SWABLU
+	db ICON_MOTH        ; ALTARIA
+	db ICON_MIENFOO     ; MIENFOO
+	db ICON_MIENFOO     ; MIENSHAO
 	db ICON_FOX         ; PLACE5
 	db ICON_FOX         ; PERSIANX
 	db ICON_MONSTER     ; PSYDUCK
@@ -162,9 +162,9 @@ MonMenuIcons:
 	db ICON_MONSTER     ; TOTODILE
 	db ICON_MONSTER     ; CROCONAW
 	db ICON_MONSTER     ; FERALIGATR
-	db ICON_FOX         ; SENTRET
-	db ICON_FOX         ; FURRET
-	db ICON_BIRD        ; HOOTHOOT
+	db ICON_FOX         ; LARVITAR
+	db ICON_FOX         ; PUPITAR
+	db ICON_BIRD        ; TYRANITAR
 	db ICON_BIRD        ; NOCTOWL
 	db ICON_BUG         ; LEDYBA
 	db ICON_BUG         ; LEDIAN

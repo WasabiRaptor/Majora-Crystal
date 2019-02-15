@@ -38,7 +38,7 @@ AlphabeticalPokedexOrder:
 	db ABOMASNOW
 	db DELIBIRD
 	db DEWGONG
-	db DIGLETT
+	db MIENFOO
 	db DEWPIDER
 	db DODRIO
 	db DODUO
@@ -47,7 +47,7 @@ AlphabeticalPokedexOrder:
 	db DRAGONITE
 	db DRATINI
 	db DROWZEE
-	db DUGTRIO
+	db MIENSHAO
 	db DUNSPARCE
 	db EEVEEX
 	db TOGEPI
@@ -64,7 +64,7 @@ AlphabeticalPokedexOrder:
 	db TORRACAT
 	db FLAREONX
 	db FORRETRESS
-	db FURRET
+	db PUPITAR
 	db GASTLY
 	db GENGAR
 	db GEODUDE
@@ -87,7 +87,7 @@ AlphabeticalPokedexOrder:
 	db HITMONLEE
 	db DUSCLOPS
 	db CELEBI
-	db HOOTHOOT
+	db TYRANITAR
 	db HOPPIP
 	db HORSEA
 	db HOUNDOOM
@@ -154,8 +154,8 @@ AlphabeticalPokedexOrder:
 	db OMANYTE
 	db OMASTAR
 	db ONIX
-	db PARAS
-	db PARASECT
+	db SENTRET
+	db FURRET
 	db PERSIANX
 	db PHANPY
 	db PICHU
@@ -194,7 +194,7 @@ AlphabeticalPokedexOrder:
 	db SEADRA
 	db SEAKING
 	db SEEL
-	db SENTRET
+	db LARVITAR
 	db SHELLDER
 	db UNOWN
 	db SKARMORY
@@ -236,8 +236,8 @@ AlphabeticalPokedexOrder:
 	db CARBINK
 	db URSARING
 	db VAPOREONX
-	db VENOMOTH
-	db VENONAT
+	db ALTARIA
+	db SWABLU
 	db JOLTEON
 	db VICTREEBEL
 	db ZANGOOSE

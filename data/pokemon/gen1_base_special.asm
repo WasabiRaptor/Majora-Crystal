@@ -46,12 +46,12 @@ KantoMonSpecials:
 	db  75 ; NIDOQUEEN
 	db  85 ; SEVIPER
 	db 100 ; ZANGOOSE
-	db  55 ; PARAS
-	db  80 ; PARASECT
-	db  40 ; VENONAT
-	db  90 ; VENOMOTH
-	db  45 ; DIGLETT
-	db  70 ; DUGTRIO
+	db  55 ; SENTRET
+	db  80 ; FURRET
+	db  40 ; SWABLU
+	db  90 ; ALTARIA
+	db  45 ; MIENFOO
+	db  70 ; MIENSHAO
 	db  40 ; PLACE5
 	db  65 ; PERSIANX
 	db  50 ; PSYDUCK
