@@ -226,19 +226,19 @@ PokemonCries::
 	mon_cry CRY_MAGCARGO,   -$20d,  $1c0 ; MAGCARGO
 	mon_cry CRY_ABOMASNOW,   $1fe,  $140 ; SWINUB
 	mon_cry CRY_MAGCARGO,   -$109,  $100 ; PILOSWINE
-	mon_cry CRY_MAGCARGO,    $0a1,  $0e8 ; CORSOLA
-	mon_cry CRY_SUNFLORA,    $00d,  $100 ; REMORAID
-	mon_cry CRY_TOTODILE,    $000,  $180 ; OCTILLERY
-	mon_cry CRY_TEDDIURSA,   $002,  $06a ; DELIBIRD
-	mon_cry CRY_MANTINE,    -$0be,  $0f0 ; MANTINE
-	mon_cry CRY_INCINEROAR,    $8a9,  $180 ; SKARMORY
-	mon_cry CRY_ABOMASNOW,   $039,  $140 ; HOUNDOUR
-	mon_cry CRY_TOTODILE,   -$10a,  $100 ; HOUNDOOM
-	mon_cry CRY_SLUGMA,      $2fb,  $100 ; KINGDRA
-	mon_cry CRY_LARVITAR,     $048,  $230 ; PHANPY
-	mon_cry CRY_DONPHAN,     $000,  $1a0 ; DONPHAN
-	mon_cry CRY_GIRAFARIG,   $073,  $240 ; PLACE4
-	mon_cry CRY_AIPOM,      -$160,  $180 ; STANTLER
+	mon_cry CRY_MAGCARGO,    $0a1,  $0e8 ; GOLURK
+	mon_cry CRY_SUNFLORA,    $00d,  $100 ; BRONZOR
+	mon_cry CRY_TOTODILE,    $000,  $180 ; BRONZONG
+	mon_cry CRY_TEDDIURSA,   $002,  $06a ; HONEDGE
+	mon_cry CRY_DOUBLADE,    -$0be,  $0f0 ; DOUBLADE
+	mon_cry CRY_INCINEROAR,    $8a9,  $180 ; AEGISLASH
+	mon_cry CRY_ABOMASNOW,   $039,  $140 ; PAWNIARD
+	mon_cry CRY_TOTODILE,   -$10a,  $100 ; BISHARP
+	mon_cry CRY_SLUGMA,      $2fb,  $100 ; YAMASK
+	mon_cry CRY_LARVITAR,     $048,  $230 ; COFAGRIGUS
+	mon_cry CRY_LITWICK,     $000,  $1a0 ; LITWICK
+	mon_cry CRY_GIRAFARIG,   $073,  $240 ; LAMPENT
+	mon_cry CRY_AIPOM,      -$160,  $180 ; CHANDELURE
 	mon_cry CRY_PICHU,      -$21a,  $1f0 ; SPIRITOMB
 	mon_cry CRY_AIPOM,       $02c,  $108 ; DUSKULL
 	mon_cry CRY_SLUGMA,      $000,  $100 ; DUSCLOPS

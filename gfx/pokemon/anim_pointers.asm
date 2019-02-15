@@ -220,19 +220,19 @@ AnimationPointers:
 	dw MagcargoAnimation
 	dw SwinubAnimation
 	dw PiloswineAnimation
-	dw CorsolaAnimation
-	dw RemoraidAnimation
-	dw OctilleryAnimation
-	dw DelibirdAnimation
-	dw MantineAnimation
-	dw SkarmoryAnimation
-	dw HoundourAnimation
-	dw HoundoomAnimation
-	dw KingdraAnimation
-	dw PhanpyAnimation
-	dw DonphanAnimation
-	dw Place4Animation
-	dw StantlerAnimation
+	dw GolurkAnimation
+	dw BronzorAnimation
+	dw BronzongAnimation
+	dw HonedgeAnimation
+	dw DoubladeAnimation
+	dw AegislashAnimation
+	dw PawniardAnimation
+	dw BisharpAnimation
+	dw YamaskAnimation
+	dw CofagrigusAnimation
+	dw LitwickAnimation
+	dw LampentAnimation
+	dw ChandelureAnimation
 	dw SpiritombAnimation
 	dw DuskullAnimation
 	dw DusclopsAnimation

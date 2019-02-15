@@ -56,7 +56,7 @@ Cries:
 	dba Cry_Ledyba
 	dba Cry_Entei
 	dba Cry_Wooper
-	dba Cry_Mantine
+	dba Cry_Doublade
 	dba Cry_Ferrothorn
 	dba Cry_Quilava
 	dba Cry_Teddiursa
@@ -66,4 +66,4 @@ Cries:
 	dba Cry_Pichu
 	dba Cry_Aipom
 	dba Cry_Dunsparce
-	dba Cry_Donphan
+	dba Cry_Litwick

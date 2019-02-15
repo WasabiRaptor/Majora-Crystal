@@ -221,19 +221,19 @@ PokedexDataPointerTable:
 	dw MagcargoPokedexEntry
 	dw SwinubPokedexEntry
 	dw PiloswinePokedexEntry
-	dw CorsolaPokedexEntry
-	dw RemoraidPokedexEntry
-	dw OctilleryPokedexEntry
-	dw DelibirdPokedexEntry
-	dw MantinePokedexEntry
-	dw SkarmoryPokedexEntry
-	dw HoundourPokedexEntry
-	dw HoundoomPokedexEntry
-	dw KingdraPokedexEntry
-	dw PhanpyPokedexEntry
-	dw DonphanPokedexEntry
-	dw Place4PokedexEntry
-	dw StantlerPokedexEntry
+	dw GolurkPokedexEntry
+	dw BronzorPokedexEntry
+	dw BronzongPokedexEntry
+	dw HonedgePokedexEntry
+	dw DoubladePokedexEntry
+	dw AegislashPokedexEntry
+	dw PawniardPokedexEntry
+	dw BisharpPokedexEntry
+	dw YamaskPokedexEntry
+	dw CofagrigusPokedexEntry
+	dw LitwickPokedexEntry
+	dw LampentPokedexEntry
+	dw ChandelurePokedexEntry
 	dw SpiritombPokedexEntry
 	dw DuskullPokedexEntry
 	dw DusclopsPokedexEntry

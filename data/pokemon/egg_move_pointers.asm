@@ -224,19 +224,19 @@ endc
 	dw NoEggMoves
 	dw SwinubEggMoves
 	dw NoEggMoves
-	dw CorsolaEggMoves
-	dw RemoraidEggMoves
+	dw GolurkEggMoves
+	dw BronzorEggMoves
 	dw NoEggMoves
-	dw DelibirdEggMoves
-	dw MantineEggMoves
-	dw SkarmoryEggMoves
-	dw HoundourEggMoves
-	dw NoEggMoves
-	dw NoEggMoves
-	dw PhanpyEggMoves
+	dw HonedgeEggMoves
+	dw DoubladeEggMoves
+	dw AegislashEggMoves
+	dw PawniardEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw StantlerEggMoves
+	dw CofagrigusEggMoves
+	dw NoEggMoves
+	dw NoEggMoves
+	dw ChandelureEggMoves
 	dw NoEggMoves
 	dw DuskullEggMoves
 	dw NoEggMoves

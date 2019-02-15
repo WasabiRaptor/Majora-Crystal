@@ -72,10 +72,10 @@ Cry_Wooper:
 	musicheader 1, 6, Cry_Wooper_Ch6
 	musicheader 1, 8, Cry_Wooper_Ch8
 
-Cry_Donphan:
-	musicheader 3, 5, Cry_Donphan_Ch5
-	musicheader 1, 6, Cry_Donphan_Ch6
-	musicheader 1, 8, Cry_Donphan_Ch8
+Cry_Litwick:
+	musicheader 3, 5, Cry_Litwick_Ch5
+	musicheader 1, 6, Cry_Litwick_Ch6
+	musicheader 1, 8, Cry_Litwick_Ch8
 
 Cry_Ferrothorn:
 	musicheader 3, 5, Cry_Ferrothorn_Ch5
@@ -137,10 +137,10 @@ Cry_Entei:
 	musicheader 1, 6, Cry_Entei_Ch6
 	musicheader 1, 8, Cry_Entei_Ch8
 
-Cry_Mantine:
-	musicheader 3, 5, Cry_Mantine_Ch5
-	musicheader 1, 6, Cry_Mantine_Ch6
-	musicheader 1, 8, Cry_Mantine_Ch8
+Cry_Doublade:
+	musicheader 3, 5, Cry_Doublade_Ch5
+	musicheader 1, 6, Cry_Doublade_Ch6
+	musicheader 1, 8, Cry_Doublade_Ch8
 
 Cry_Entei_Ch5:
 	soundinput $ff
@@ -561,7 +561,7 @@ Cry_Ledyba_Ch8:
 	endchannel
 
 Cry_Wooper_Ch5:
-Cry_Donphan_Ch5:
+Cry_Litwick_Ch5:
 	dutycycle $2
 	sound __,  3, $99, $0718
 	sound __,  5, $ab, $0722
@@ -572,7 +572,7 @@ Cry_Donphan_Ch5:
 	endchannel
 
 Cry_Wooper_Ch6:
-Cry_Donphan_Ch6:
+Cry_Litwick_Ch6:
 	sound_duty 3, 1, 0, 0
 	sound __,  3, $b9, $0738
 	sound __,  5, $cb, $0742
@@ -590,7 +590,7 @@ Cry_Wooper_Ch8:
 	noise C_,  1, $51, $4
 	endchannel
 
-Cry_Donphan_Ch8:
+Cry_Litwick_Ch8:
 	noise __,  3, $8b, $59
 	noise __,  5, $a8, $6a
 	noise __,  9, $a8, $70
@@ -642,37 +642,37 @@ Cry_Ferrothorn_Ch8:
 
 Cry_Quilava_Ch5:
 	sound_duty 2, 3, 1, 3
-Cry_Mantine_branch_f32e9:
+Cry_Doublade_branch_f32e9:
 Cry_Sunflora_branch_f32e9:
 	sound __,  5, $f8, $07b1
 	sound __,  5, $f8, $07b0
 	sound __,  5, $48, $07af
-Cry_Mantine_branch_f32f5:
+Cry_Doublade_branch_f32f5:
 	sound __,  5, $f8, $07b2
 	sound __,  5, $f8, $07b3
 	sound __,  5, $48, $07b4
 	endchannel
 
-Cry_Mantine_branch_f3302:
+Cry_Doublade_branch_f3302:
 Cry_Quilava_Ch6:
 Cry_Sunflora_Ch6:
 	sound_duty 2, 0, 3, 3
 	sound __,  5, $f8, $07b2
 	sound __,  5, $f8, $07b1
 	sound __,  5, $28, $07b0
-Cry_Mantine_branch_f3310:
+Cry_Doublade_branch_f3310:
 	sound __,  5, $f8, $07b4
 	sound __,  5, $f8, $07b6
 	sound __,  5, $48, $07b8
 	endchannel
 
-Cry_Mantine_branch_f331d:
+Cry_Doublade_branch_f331d:
 Cry_Quilava_Ch8:
 Cry_Sunflora_Ch8:
 	noise __,  5, $88, $5
 	noise __,  5, $88, $4
 	noise __,  5, $38, $3
-Cry_Mantine_branch_f3326:
+Cry_Doublade_branch_f3326:
 	noise __,  5, $88, $5
 	noise __,  5, $88, $4
 	noise __,  5, $87, $4
@@ -687,20 +687,20 @@ Cry_Sunflora_Ch5:
 	dutycycle $0
 	jumpchannel Cry_Sunflora_branch_f32e9
 
-Cry_Mantine_Ch5:
+Cry_Doublade_Ch5:
 	dutycycle $0
-	callchannel Cry_Mantine_branch_f32e9
-	callchannel Cry_Mantine_branch_f32f5
+	callchannel Cry_Doublade_branch_f32e9
+	callchannel Cry_Doublade_branch_f32f5
 	endchannel
 
-Cry_Mantine_Ch6:
-	callchannel Cry_Mantine_branch_f3302
-	callchannel Cry_Mantine_branch_f3310
+Cry_Doublade_Ch6:
+	callchannel Cry_Doublade_branch_f3302
+	callchannel Cry_Doublade_branch_f3310
 	endchannel
 
-Cry_Mantine_Ch8:
-	callchannel Cry_Mantine_branch_f331d
-	callchannel Cry_Mantine_branch_f3326
+Cry_Doublade_Ch8:
+	callchannel Cry_Doublade_branch_f331d
+	callchannel Cry_Doublade_branch_f3326
 	endchannel
 
 Cry_Incineroar_Ch5:

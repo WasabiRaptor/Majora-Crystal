@@ -220,19 +220,19 @@ FramesPointers:
 	dw MagcargoFrames
 	dw SwinubFrames
 	dw PiloswineFrames
-	dw CorsolaFrames
-	dw RemoraidFrames
-	dw OctilleryFrames
-	dw DelibirdFrames
-	dw MantineFrames
-	dw SkarmoryFrames
-	dw HoundourFrames
-	dw HoundoomFrames
-	dw KingdraFrames
-	dw PhanpyFrames
-	dw DonphanFrames
-	dw Place4Frames
-	dw StantlerFrames
+	dw GolurkFrames
+	dw BronzorFrames
+	dw BronzongFrames
+	dw HonedgeFrames
+	dw DoubladeFrames
+	dw AegislashFrames
+	dw PawniardFrames
+	dw BisharpFrames
+	dw YamaskFrames
+	dw CofagrigusFrames
+	dw LitwickFrames
+	dw LampentFrames
+	dw ChandelureFrames
 	dw SpiritombFrames
 	dw DuskullFrames
 	dw DusclopsFrames

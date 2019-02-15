@@ -23,8 +23,8 @@ OftenFleeMons:
 	db CRUSTLE
 	db TYROGUE
 	db QUAGSIRE
-	db DELIBIRD
-	db PHANPY
+	db HONEDGE
+	db COFAGRIGUS
 	db TEDDIURSA
 	db -1
 

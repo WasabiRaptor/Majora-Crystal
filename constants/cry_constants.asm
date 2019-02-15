@@ -61,7 +61,7 @@
 	const CRY_LEDYBA
 	const CRY_ENTEI
 	const CRY_WOOPER
-	const CRY_MANTINE
+	const CRY_DOUBLADE
 	const CRY_FERROTHORN
 	const CRY_QUILAVA
 	const CRY_TEDDIURSA
@@ -71,4 +71,4 @@
 	const CRY_PICHU
 	const CRY_AIPOM
 	const CRY_DUNSPARCE
-	const CRY_DONPHAN
+	const CRY_LITWICK

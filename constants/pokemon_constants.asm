@@ -257,20 +257,20 @@ JOHTO_POKEMON EQU const_value
 	const MAGCARGO   ; db
 	const SWINUB     ; dc
 	const PILOSWINE  ; dd
-	const CORSOLA    ; de
-	const REMORAID   ; df
-	const OCTILLERY  ; e0
-	const DELIBIRD   ; e1
-	const MANTINE    ; e2
-	const SKARMORY   ; e3
-	const HOUNDOUR   ; e4
-	const HOUNDOOM   ; e5
-	const KINGDRA    ; e6
-	const PHANPY     ; e7
-	const DONPHAN    ; e8
-	const PLACE4   ; e9
-	const STANTLER   ; ea
-	const SPIRITOMB   ; eb
+	const GOLURK        ; de
+	const BRONZOR       ; df
+	const BRONZONG      ; e0
+	const HONEDGE       ; e1
+	const DOUBLADE      ; e2
+	const AEGISLASH     ; e3
+	const PAWNIARD      ; e4
+	const BISHARP       ; e5
+	const YAMASK        ; e6
+	const COFAGRIGUS    ; e7
+	const LITWICK       ; e8
+	const LAMPENT       ; e9
+	const CHANDELURE    ; ea
+	const SPIRITOMB     ; eb
 	const DUSKULL    	; ec
 	const DUSCLOPS  	; ed
 	const DUSKNOIR   	; ee

@@ -220,19 +220,19 @@ AnimationIdlePointers:
 	dw MagcargoAnimationIdle
 	dw SwinubAnimationIdle
 	dw PiloswineAnimationIdle
-	dw CorsolaAnimationIdle
-	dw RemoraidAnimationIdle
-	dw OctilleryAnimationIdle
-	dw DelibirdAnimationIdle
-	dw MantineAnimationIdle
-	dw SkarmoryAnimationIdle
-	dw HoundourAnimationIdle
-	dw HoundoomAnimationIdle
-	dw KingdraAnimationIdle
-	dw PhanpyAnimationIdle
-	dw DonphanAnimationIdle
-	dw Place4AnimationIdle
-	dw StantlerAnimationIdle
+	dw GolurkAnimationIdle
+	dw BronzorAnimationIdle
+	dw BronzongAnimationIdle
+	dw HonedgeAnimationIdle
+	dw DoubladeAnimationIdle
+	dw AegislashAnimationIdle
+	dw PawniardAnimationIdle
+	dw BisharpAnimationIdle
+	dw YamaskAnimationIdle
+	dw CofagrigusAnimationIdle
+	dw LitwickAnimationIdle
+	dw LampentAnimationIdle
+	dw ChandelureAnimationIdle
 	dw SpiritombAnimationIdle
 	dw DuskullAnimationIdle
 	dw DusclopsAnimationIdle
