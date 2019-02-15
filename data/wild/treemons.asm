@@ -26,8 +26,8 @@ TreeMonSet_Canyon:
 	db -1
 ; rare
 	db 50, MEOWTH,    10
-	db 15, HERACROSS,  10
-	db 15, HERACROSS,  10
+	db 15, NATU,  10
+	db 15, NATU,  10
 	db 10, AIPOM,      10
 	db  5, AIPOM,      10
 	db  5, AIPOM,      10
@@ -44,8 +44,8 @@ TreeMonSet_Town:
 	db -1
 ; rare
 	db 50, MEOWTH,    10
-	db 15, HERACROSS,  10
-	db 15, HERACROSS,  10
+	db 15, NATU,  10
+	db 15, NATU,  10
 	db 10, AIPOM,      10
 	db  5, AIPOM,      10
 	db  5, AIPOM,      10

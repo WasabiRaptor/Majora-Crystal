@@ -721,13 +721,13 @@ UnownEggMoves:
 	db SWEET_SCENT
 	db -1 ; end
 
-HeracrossEggMoves:
+NatuEggMoves:
 	db HARDEN
 	db BIDE
 	db FLAIL
 	db -1 ; end
 
-SneaselEggMoves:
+XatuEggMoves:
 	db COUNTER
 	db SPITE
 	db FORESIGHT
@@ -735,7 +735,7 @@ SneaselEggMoves:
 	db BITE
 	db -1 ; end
 
-TeddiursaEggMoves:
+SigilyphEggMoves:
 	db CRUNCH
 	db TAKE_DOWN
 	db SEISMIC_TOSS
@@ -746,11 +746,11 @@ if _BRASS
 endc
 	db -1 ; end
 
-SlugmaEggMoves:
+ExcadrillEggMoves:
 	db ACID_ARMOR
 	db -1 ; end
 
-SwinubEggMoves:
+ClaydolEggMoves:
 	db TAKE_DOWN
 	db BITE
 	db BODY_SLAM

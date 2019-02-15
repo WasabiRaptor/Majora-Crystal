@@ -14,7 +14,7 @@ SometimesFleeMons:
 	db UMBREONX
 	db UNOWN
 	db SNUBBULL
-	db HERACROSS
+	db NATU
 	db -1
 
 OftenFleeMons:
@@ -25,7 +25,7 @@ OftenFleeMons:
 	db QUAGSIRE
 	db HONEDGE
 	db COFAGRIGUS
-	db TEDDIURSA
+	db SIGILYPH
 	db -1
 
 AlwaysFleeMons:

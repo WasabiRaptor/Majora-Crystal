@@ -19,7 +19,7 @@ AsleepTreeMonsDay:
 	db TYRANITAR
 	db NOCTOWL
 	db SPINARAK
-	db HERACROSS
+	db NATU
 	db -1 ; end
 
 AsleepTreeMonsMorn:
@@ -27,5 +27,5 @@ AsleepTreeMonsMorn:
 	db TYRANITAR
 	db NOCTOWL
 	db SPINARAK
-	db HERACROSS
+	db NATU
 	db -1 ; end

@@ -212,14 +212,14 @@ AnimationIdlePointers:
 	dw QwilfishAnimationIdle
 	dw ScizorAnimationIdle
 	dw UnownAnimationIdle
-	dw HeracrossAnimationIdle
-	dw SneaselAnimationIdle
-	dw TeddiursaAnimationIdle
-	dw UrsaringAnimationIdle
-	dw SlugmaAnimationIdle
-	dw MagcargoAnimationIdle
-	dw SwinubAnimationIdle
-	dw PiloswineAnimationIdle
+	dw NatuAnimationIdle
+	dw XatuAnimationIdle
+	dw SigilyphAnimationIdle
+	dw DrillburAnimationIdle
+	dw ExcadrillAnimationIdle
+	dw BaltoyAnimationIdle
+	dw ClaydolAnimationIdle
+	dw GolettAnimationIdle
 	dw GolurkAnimationIdle
 	dw BronzorAnimationIdle
 	dw BronzongAnimationIdle

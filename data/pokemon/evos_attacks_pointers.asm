@@ -214,14 +214,14 @@ EvosAttacksPointers::
 	dw QwilfishEvosAttacks
 	dw ScizorEvosAttacks
 	dw UnownEvosAttacks
-	dw HeracrossEvosAttacks
-	dw SneaselEvosAttacks
-	dw TeddiursaEvosAttacks
-	dw UrsaringEvosAttacks
-	dw SlugmaEvosAttacks
-	dw MagcargoEvosAttacks
-	dw SwinubEvosAttacks
-	dw PiloswineEvosAttacks
+	dw NatuEvosAttacks
+	dw XatuEvosAttacks
+	dw SigilyphEvosAttacks
+	dw DrillburEvosAttacks
+	dw ExcadrillEvosAttacks
+	dw BaltoyEvosAttacks
+	dw ClaydolEvosAttacks
+	dw GolettEvosAttacks
 	dw GolurkEvosAttacks
 	dw BronzorEvosAttacks
 	dw BronzongEvosAttacks

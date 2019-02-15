@@ -52,17 +52,17 @@ Cries:
 	dba Cry_Totodile
 	dba Cry_Gligar
 	dba Cry_Cleffa
-	dba Cry_Slugma
+	dba Cry_Excadrill
 	dba Cry_Ledyba
 	dba Cry_Entei
 	dba Cry_Wooper
 	dba Cry_Doublade
 	dba Cry_Ferrothorn
 	dba Cry_Quilava
-	dba Cry_Teddiursa
+	dba Cry_Sigilyph
 	dba Cry_Sunflora
 	dba Cry_Incineroar
-	dba Cry_Magcargo
+	dba Cry_Baltoy
 	dba Cry_Pichu
 	dba Cry_Aipom
 	dba Cry_Dunsparce

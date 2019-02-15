@@ -215,14 +215,14 @@ MonMenuIcons:
 	db ICON_FISH        ; QWILFISH
 	db ICON_BUG         ; SCIZOR
 	db ICON_BUG         ; UNOWN
-	db ICON_BUG         ; HERACROSS
-	db ICON_FOX         ; SNEASEL
-	db ICON_MONSTER     ; TEDDIURSA
-	db ICON_MONSTER     ; URSARING
-	db ICON_BLOB        ; SLUGMA
-	db ICON_BLOB        ; MAGCARGO
-	db ICON_EQUINE      ; SWINUB
-	db ICON_EQUINE      ; PILOSWINE
+	db ICON_BUG         ; NATU
+	db ICON_FOX         ; XATU
+	db ICON_MONSTER     ; SIGILYPH
+	db ICON_MONSTER     ; DRILLBUR
+	db ICON_BLOB        ; EXCADRILL
+	db ICON_BLOB        ; BALTOY
+	db ICON_EQUINE      ; CLAYDOL
+	db ICON_EQUINE      ; GOLETT
 	db ICON_SHELL       ; GOLURK
 	db ICON_FISH        ; BRONZOR
 	db ICON_FISH        ; BRONZONG

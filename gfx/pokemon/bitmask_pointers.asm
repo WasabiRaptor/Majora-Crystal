@@ -212,14 +212,14 @@ BitmasksPointers:
 	dw QwilfishBitmasks
 	dw ScizorBitmasks
 	dw UnownBitmasks
-	dw HeracrossBitmasks
-	dw SneaselBitmasks
-	dw TeddiursaBitmasks
-	dw UrsaringBitmasks
-	dw SlugmaBitmasks
-	dw MagcargoBitmasks
-	dw SwinubBitmasks
-	dw PiloswineBitmasks
+	dw NatuBitmasks
+	dw XatuBitmasks
+	dw SigilyphBitmasks
+	dw DrillburBitmasks
+	dw ExcadrillBitmasks
+	dw BaltoyBitmasks
+	dw ClaydolBitmasks
+	dw GolettBitmasks
 	dw GolurkBitmasks
 	dw BronzorBitmasks
 	dw BronzongBitmasks

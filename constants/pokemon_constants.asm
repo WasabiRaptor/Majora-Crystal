@@ -248,15 +248,14 @@ JOHTO_POKEMON EQU const_value
 	const SCIZOR     ; d4
 
 	const UNOWN    		; d5
-
-	const HERACROSS  ; d6
-	const SNEASEL    ; d7
-	const TEDDIURSA  ; d8
-	const URSARING   ; d9
-	const SLUGMA     ; da
-	const MAGCARGO   ; db
-	const SWINUB     ; dc
-	const PILOSWINE  ; dd
+	const NATU          ; d6
+	const XATU          ; d7
+	const SIGILYPH      ; d8
+	const DRILLBUR      ; d9
+	const EXCADRILL     ; da
+	const BALTOY        ; db
+	const CLAYDOL       ; dc
+	const GOLETT        ; dd
 	const GOLURK        ; de
 	const BRONZOR       ; df
 	const BRONZONG      ; e0

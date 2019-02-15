@@ -113,7 +113,7 @@ NewPokedexOrder:
 	db SCYTHER
 	db SCIZOR
 	db PINSIR
-	db HERACROSS
+	db NATU
 	db KOFFING
 	db WEEZING
 	db GRIMER
@@ -191,10 +191,10 @@ NewPokedexOrder:
 	db YAMASK
 	db GLIGAR
 	db HONEDGE
-	db SWINUB
-	db PILOSWINE
-	db TEDDIURSA
-	db URSARING
+	db CLAYDOL
+	db GOLETT
+	db SIGILYPH
+	db DRILLBUR
 	db COFAGRIGUS
 	db LITWICK
 	db DOUBLADE
@@ -211,9 +211,9 @@ NewPokedexOrder:
 	db MURKROW
 	db PAWNIARD
 	db BISHARP
-	db SLUGMA
-	db MAGCARGO
-	db SNEASEL
+	db EXCADRILL
+	db BALTOY
+	db XATU
 	db MISDREAVUS
 	db PLACE3
 	db LAMPENT

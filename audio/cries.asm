@@ -58,9 +58,9 @@ Cry_Girafarig:
 	musicheader 1, 6, Cry_Girafarig_Ch6
 	musicheader 1, 8, Cry_Girafarig_Ch8
 
-Cry_Slugma:
-	musicheader 2, 5, Cry_Slugma_Ch5
-	musicheader 1, 8, Cry_Slugma_Ch8
+Cry_Excadrill:
+	musicheader 2, 5, Cry_Excadrill_Ch5
+	musicheader 1, 8, Cry_Excadrill_Ch8
 
 Cry_Ledyba:
 	musicheader 3, 5, Cry_Ledyba_Ch5
@@ -87,10 +87,10 @@ Cry_Quilava:
 	musicheader 1, 6, Cry_Quilava_Ch6
 	musicheader 1, 8, Cry_Quilava_Ch8
 
-Cry_Teddiursa:
-	musicheader 3, 5, Cry_Teddiursa_Ch5
-	musicheader 1, 6, Cry_Teddiursa_Ch6
-	musicheader 1, 8, Cry_Teddiursa_Ch8
+Cry_Sigilyph:
+	musicheader 3, 5, Cry_Sigilyph_Ch5
+	musicheader 1, 6, Cry_Sigilyph_Ch6
+	musicheader 1, 8, Cry_Sigilyph_Ch8
 
 Cry_Sunflora:
 	musicheader 3, 5, Cry_Sunflora_Ch5
@@ -127,10 +127,10 @@ Cry_Dunsparce:
 	musicheader 1, 6, Cry_Dunsparce_Ch6
 	musicheader 1, 8, Cry_Dunsparce_Ch8
 
-Cry_Magcargo:
-	musicheader 3, 5, Cry_Magcargo_Ch5
-	musicheader 1, 6, Cry_Magcargo_Ch6
-	musicheader 1, 8, Cry_Magcargo_Ch8
+Cry_Baltoy:
+	musicheader 3, 5, Cry_Baltoy_Ch5
+	musicheader 1, 6, Cry_Baltoy_Ch6
+	musicheader 1, 8, Cry_Baltoy_Ch8
 
 Cry_Entei:
 	musicheader 3, 5, Cry_Entei_Ch5
@@ -167,7 +167,7 @@ Cry_Entei_Ch8:
 	noise C#,  1, $b4, $6c
 	endchannel
 
-Cry_Magcargo_Ch5:
+Cry_Baltoy_Ch5:
 	sound_duty 0, 1, 0, 3
 	sound __,  5, $af, $0720
 	sound __,  3, $f8, $071c
@@ -178,7 +178,7 @@ Cry_Magcargo_Ch5:
 	sound __,  5, $91, $070e
 	endchannel
 
-Cry_Magcargo_Ch6:
+Cry_Baltoy_Ch6:
 	sound_duty 2, 2, 0, 0
 	sound __,  2, $b8, $0710
 	sound __,  4, $d8, $072c
@@ -189,7 +189,7 @@ Cry_Magcargo_Ch6:
 	sound __,  5, $c1, $0750
 	endchannel
 
-Cry_Magcargo_Ch8:
+Cry_Baltoy_Ch8:
 	noise __,  3, $e8, $3b
 .loop
 	noise __,  2, $f1, $4e
@@ -519,7 +519,7 @@ Cry_Girafarig_Ch8:
 	noise __,  8, $41, $0
 	endchannel
 
-Cry_Slugma_Ch5:
+Cry_Excadrill_Ch5:
 	sound_duty 1, 0, 1, 2
 	sound __, 13, $f2, $07a6
 	sound __,  5, $f8, $07b0
@@ -528,7 +528,7 @@ Cry_Slugma_Ch5:
 	sound __,  9, $e1, $0290
 	endchannel
 
-Cry_Slugma_Ch8:
+Cry_Excadrill_Ch8:
 	noise __, 13, $b2, $50
 	noise __,  9, $a8, $60
 	noise __,  7, $a8, $5b
@@ -599,7 +599,7 @@ Cry_Litwick_Ch8:
 	endchannel
 
 Cry_Ferrothorn_Ch5:
-Cry_Teddiursa_Ch5:
+Cry_Sigilyph_Ch5:
 	sound_duty 2, 0, 1, 0
 .loop1
 	sound __,  4, $c1, $0791
@@ -622,7 +622,7 @@ Cry_Teddiursa_Ch5:
 	endchannel
 
 Cry_Ferrothorn_Ch6:
-Cry_Teddiursa_Ch6:
+Cry_Sigilyph_Ch6:
 	sound_duty 0, 2, 3, 1
 	sound __,  9, $99, $0740
 	sound __,  9, $79, $0746
@@ -678,7 +678,7 @@ Cry_Doublade_branch_f3326:
 	noise __,  5, $87, $4
 	endchannel
 
-Cry_Teddiursa_Ch8:
+Cry_Sigilyph_Ch8:
 	noise __,  9, $a6, $3a
 	noise __,  9, $a1, $5a
 	endchannel

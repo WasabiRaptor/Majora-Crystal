@@ -213,14 +213,14 @@ PokedexDataPointerTable:
 	dw QwilfishPokedexEntry
 	dw ScizorPokedexEntry
 	dw UnownPokedexEntry
-	dw HeracrossPokedexEntry
-	dw SneaselPokedexEntry
-	dw TeddiursaPokedexEntry
-	dw UrsaringPokedexEntry
-	dw SlugmaPokedexEntry
-	dw MagcargoPokedexEntry
-	dw SwinubPokedexEntry
-	dw PiloswinePokedexEntry
+	dw NatuPokedexEntry
+	dw XatuPokedexEntry
+	dw SigilyphPokedexEntry
+	dw DrillburPokedexEntry
+	dw ExcadrillPokedexEntry
+	dw BaltoyPokedexEntry
+	dw ClaydolPokedexEntry
+	dw GolettPokedexEntry
 	dw GolurkPokedexEntry
 	dw BronzorPokedexEntry
 	dw BronzongPokedexEntry
