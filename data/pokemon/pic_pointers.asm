@@ -148,10 +148,10 @@ PokemonPicPointers::
 	dba QuilladinBackpic
 	dba ChesnaughtFrontpic
 	dba ChesnaughtBackpic
-	dba TentacoolFrontpic
-	dba TentacoolBackpic
-	dba TentacruelFrontpic
-	dba TentacruelBackpic
+	dba DeerlingFrontpic
+	dba DeerlingBackpic
+	dba SawsbuckFrontpic
+	dba SawsbuckBackpic
 	dba GeodudeFrontpic
 	dba GeodudeBackpic
 	dba GravelerFrontpic

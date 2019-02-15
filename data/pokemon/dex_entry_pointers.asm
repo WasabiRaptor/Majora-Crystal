@@ -71,8 +71,8 @@ PokedexDataPointerTable:
 	dw ChespinPokedexEntry
 	dw QuilladinPokedexEntry
 	dw ChesnaughtPokedexEntry
-	dw TentacoolPokedexEntry
-	dw TentacruelPokedexEntry
+	dw DeerlingPokedexEntry
+	dw SawsbuckPokedexEntry
 	dw GeodudePokedexEntry
 	dw GravelerPokedexEntry
 	dw GolemPokedexEntry

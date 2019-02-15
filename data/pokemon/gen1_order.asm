@@ -22,7 +22,7 @@ Pokered_MonIndices:
 	db LUCARIO
 	db GYARADOS
 	db SHELLDER
-	db TENTACOOL
+	db DEERLING
 	db GASTLY
 	db SCYTHER
 	db STARYU
@@ -153,7 +153,7 @@ Pokered_MonIndices:
 	db STARMIE
 	db EEVEE
 	db JOLTEON
-	db TENTACRUEL
+	db SAWSBUCK
 	db DUSKNOIR ; MISSINGNO.
 	db GOLDEEN
 	db SEAKING

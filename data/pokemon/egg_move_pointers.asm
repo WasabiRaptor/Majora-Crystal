@@ -70,7 +70,7 @@ EggMovePointers::
 	dw ChespinEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw TentacoolEggMoves
+	dw DeerlingEggMoves
 	dw NoEggMoves
 	dw GeodudeEggMoves
 	dw NoEggMoves

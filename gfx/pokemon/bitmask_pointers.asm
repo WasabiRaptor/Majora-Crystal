@@ -70,8 +70,8 @@ BitmasksPointers:
 	dw ChespinBitmasks
 	dw QuilladinBitmasks
 	dw ChesnaughtBitmasks
-	dw TentacoolBitmasks
-	dw TentacruelBitmasks
+	dw DeerlingBitmasks
+	dw SawsbuckBitmasks
 	dw GeodudeBitmasks
 	dw GravelerBitmasks
 	dw GolemBitmasks

@@ -24,7 +24,7 @@ SpriteMons:
 	db GRIMER
 	db TOGEPI
 	db SENTRET
-	db TENTACOOL
+	db DEERLING
 	db TAUROS
 	db IGGLYBUFF
 	db VOLTORB

@@ -72,8 +72,8 @@ KantoMonSpecials:
 	db  70 ; CHESPIN
 	db  85 ; QUILLADIN
 	db 100 ; CHESNAUGHT
-	db 100 ; TENTACOOL
-	db 120 ; TENTACRUEL
+	db 100 ; DEERLING
+	db 120 ; SAWSBUCK
 	db  30 ; GEODUDE
 	db  45 ; GRAVELER
 	db  55 ; GOLEM

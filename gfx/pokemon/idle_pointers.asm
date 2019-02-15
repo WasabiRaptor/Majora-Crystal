@@ -70,8 +70,8 @@ AnimationIdlePointers:
 	dw ChespinAnimationIdle
 	dw QuilladinAnimationIdle
 	dw ChesnaughtAnimationIdle
-	dw TentacoolAnimationIdle
-	dw TentacruelAnimationIdle
+	dw DeerlingAnimationIdle
+	dw SawsbuckAnimationIdle
 	dw GeodudeAnimationIdle
 	dw GravelerAnimationIdle
 	dw GolemAnimationIdle

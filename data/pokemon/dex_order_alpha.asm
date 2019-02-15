@@ -224,8 +224,8 @@ AlphabeticalPokedexOrder:
 	db TANGELA
 	db TAUROS
 	db SIGILYPH
-	db TENTACOOL
-	db TENTACRUEL
+	db DEERLING
+	db SAWSBUCK
 	db HEIDREIGON
 	db CYNDAQUIL
 	db TOTODILE

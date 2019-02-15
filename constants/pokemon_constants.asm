@@ -89,9 +89,9 @@
 	const CHESPIN 		; 45
 	const QUILLADIN 	; 46
 	const CHESNAUGHT 	; 47
+	const DEERLING  	; 48
+	const SAWSBUCK 		; 49
 
-	const TENTACOOL  ; 48
-	const TENTACRUEL ; 49
 	const GEODUDE    ; 4a
 	const GRAVELER   ; 4b
 	const GOLEM      ; 4c

@@ -1632,7 +1632,7 @@ FisherGroup:
 
 	; FISHER (3)
 	db "ARNOLD@", TRAINERTYPE_NORMAL
-	db 34, TENTACRUEL
+	db 34, SAWSBUCK
 	db -1 ; end
 
 	; FISHER (4)
@@ -1706,7 +1706,7 @@ FisherGroup:
 	db 25, MAGIKARP
 	db 25, MAGIKARP
 	db 31, QWILFISH
-	db 31, TENTACRUEL
+	db 31, SAWSBUCK
 	db -1 ; end
 
 	; FISHER (15)
@@ -1788,8 +1788,8 @@ SwimmerMGroup:
 
 	; SWIMMERM (2)
 	db "SIMON@", TRAINERTYPE_NORMAL
-	db 20, TENTACOOL
-	db 20, TENTACOOL
+	db 20, DEERLING
+	db 20, DEERLING
 	db -1 ; end
 
 	; SWIMMERM (3)
@@ -1802,17 +1802,17 @@ SwimmerMGroup:
 	; SWIMMERM (4)
 	db "CHARLIE@", TRAINERTYPE_NORMAL
 	db 21, SHELLDER
-	db 19, TENTACOOL
-	db 19, TENTACRUEL
+	db 19, DEERLING
+	db 19, SAWSBUCK
 	db -1 ; end
 
 	; SWIMMERM (5)
 	db "GEORGE@", TRAINERTYPE_NORMAL
-	db 16, TENTACOOL
-	db 17, TENTACOOL
-	db 16, TENTACOOL
+	db 16, DEERLING
+	db 17, DEERLING
+	db 16, DEERLING
 	db 19, STARYU
-	db 17, TENTACOOL
+	db 17, DEERLING
 	db 19, BRONZOR
 	db -1 ; end
 
@@ -1869,8 +1869,8 @@ SwimmerMGroup:
 	; SWIMMERM (14)
 	db "JEROME@", TRAINERTYPE_NORMAL
 	db 26, SEADRA
-	db 28, TENTACOOL
-	db 30, TENTACRUEL
+	db 28, DEERLING
+	db 30, SAWSBUCK
 	db 28, GOLDEEN
 	db -1 ; end
 

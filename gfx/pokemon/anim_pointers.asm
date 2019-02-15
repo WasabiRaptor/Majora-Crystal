@@ -70,8 +70,8 @@ AnimationPointers:
 	dw ChespinAnimation
 	dw QuilladinAnimation
 	dw ChesnaughtAnimation
-	dw TentacoolAnimation
-	dw TentacruelAnimation
+	dw DeerlingAnimation
+	dw SawsbuckAnimation
 	dw GeodudeAnimation
 	dw GravelerAnimation
 	dw GolemAnimation

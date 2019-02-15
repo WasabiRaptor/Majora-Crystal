@@ -70,8 +70,8 @@ FramesPointers:
 	dw ChespinFrames
 	dw QuilladinFrames
 	dw ChesnaughtFrames
-	dw TentacoolFrames
-	dw TentacruelFrames
+	dw DeerlingFrames
+	dw SawsbuckFrames
 	dw GeodudeFrames
 	dw GravelerFrames
 	dw GolemFrames

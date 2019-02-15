@@ -236,7 +236,7 @@ ChespinEggMoves:
 	db LEECH_LIFE
 	db -1 ; end
 
-TentacoolEggMoves:
+DeerlingEggMoves:
 	db AURORA_BEAM
 	db MIRROR_COAT
 	db RAPID_SPIN

@@ -976,8 +976,8 @@ ChesnaughtEvosAttacks:
 	db 1, RAZOR_LEAF
 	db 0 ; no more level-up moves
 
-TentacoolEvosAttacks:
-	db EVOLVE_LEVEL, 30, TENTACRUEL
+DeerlingEvosAttacks:
+	db EVOLVE_LEVEL, 30, SAWSBUCK
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 6, SUPERSONIC
@@ -990,7 +990,7 @@ TentacoolEvosAttacks:
 	db 49, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-TentacruelEvosAttacks:
+SawsbuckEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 1, SUPERSONIC

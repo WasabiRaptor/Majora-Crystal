@@ -39,16 +39,16 @@ FishGroups:
 .Ocean_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     TENTACOOL,  10
+	db 100 percent,     DEERLING,  10
 .Ocean_Good:
 	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     TENTACOOL,  20
+	db  70 percent,     DEERLING,  20
 	db  90 percent + 1, CHINCHOU,   20
 	db 100 percent,     time_group 2
 .Ocean_Super:
 	db  40 percent,     CHINCHOU,   40
 	db  70 percent,     time_group 3
-	db  90 percent + 1, TENTACRUEL, 40
+	db  90 percent + 1, SAWSBUCK, 40
 	db 100 percent,     LANTURN,    40
 
 .Lake_Old:
@@ -175,16 +175,16 @@ FishGroups:
 .Qwilfish_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     TENTACOOL,  10
+	db 100 percent,     DEERLING,  10
 .Qwilfish_NoSwarm_Good:
 .Qwilfish_Good:
 	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     TENTACOOL,  20
-	db  90 percent + 1, TENTACOOL,  20
+	db  70 percent,     DEERLING,  20
+	db  90 percent + 1, DEERLING,  20
 	db 100 percent,     time_group 20
 .Qwilfish_NoSwarm_Super:
 .Qwilfish_Super:
-	db  40 percent,     TENTACOOL,  40
+	db  40 percent,     DEERLING,  40
 	db  70 percent,     time_group 21
 	db  90 percent + 1, MAGIKARP,   40
 	db 100 percent,     QWILFISH,   40
@@ -226,5 +226,5 @@ TimeFishGroups:
 	db DRATINI,    10,  DRATINI,    10 ; 17
 	db HORSEA,     20,  HORSEA,     20 ; 18
 	db HORSEA,     40,  HORSEA,     40 ; 19
-	db TENTACOOL,  20,  TENTACOOL,  20 ; 20
-	db TENTACOOL,  40,  TENTACOOL,  40 ; 21
+	db DEERLING,  20,  DEERLING,  20 ; 20
+	db DEERLING,  40,  DEERLING,  40 ; 21

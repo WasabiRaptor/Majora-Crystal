@@ -72,8 +72,8 @@ EvosAttacksPointers::
 	dw ChespinEvosAttacks
 	dw QuilladinEvosAttacks
 	dw ChesnaughtEvosAttacks
-	dw TentacoolEvosAttacks
-	dw TentacruelEvosAttacks
+	dw DeerlingEvosAttacks
+	dw SawsbuckEvosAttacks
 	dw GeodudeEvosAttacks
 	dw GravelerEvosAttacks
 	dw GolemEvosAttacks
