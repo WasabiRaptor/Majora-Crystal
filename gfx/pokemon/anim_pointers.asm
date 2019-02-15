@@ -50,10 +50,10 @@ AnimationPointers:
 	dw AltariaAnimation
 	dw MienfooAnimation
 	dw MienshaoAnimation
-	dw Place5Animation
-	dw PersianXAnimation
-	dw PsyduckAnimation
-	dw GolduckAnimation
+	dw HawluchaAnimation
+	dw MareepAnimation
+	dw FlaaffyAnimation
+	dw AmpharosAnimation
 	dw MankeyAnimation
 	dw PrimeapeAnimation
 	dw GrowlitheAnimation

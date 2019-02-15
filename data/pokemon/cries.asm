@@ -56,10 +56,10 @@ PokemonCries::
 	mon_cry CRY_SWABLU,     $029,  $100 ; ALTARIA
 	mon_cry CRY_MIENFOO,     $0aa,  $081 ; MIENFOO
 	mon_cry CRY_MIENFOO,     $02a,  $090 ; MIENSHAO
-	mon_cry CRY_PURRLOIN,    $077,  $090 ; PLACE5
-	mon_cry CRY_PURRLOIN,    $099,  $17f ; PERSIANX
-	mon_cry CRY_PSYDUCK,     $020,  $0e0 ; PSYDUCK
-	mon_cry CRY_PSYDUCK,     $0ff,  $0c0 ; GOLDUCK
+	mon_cry CRY_PURRLOIN,    $077,  $090 ; HAWLUCHA
+	mon_cry CRY_PURRLOIN,    $099,  $17f ; MAREEP
+	mon_cry CRY_FLAAFFY,     $020,  $0e0 ; FLAAFFY
+	mon_cry CRY_FLAAFFY,     $0ff,  $0c0 ; AMPHAROS
 	mon_cry CRY_TIMBURR,   $0dd,  $0e0 ; MANKEY
 	mon_cry CRY_TIMBURR,   $0af,  $0c0 ; PRIMEAPE
 	mon_cry CRY_GROWLITHE,   $020,  $0c0 ; GROWLITHE
@@ -73,7 +73,7 @@ PokemonCries::
 	mon_cry CRY_GROWLITHE,   $0ee,  $081 ; MACHOP
 	mon_cry CRY_GROWLITHE,   $048,  $0e0 ; MACHOKE
 	mon_cry CRY_GROWLITHE,   $008,  $140 ; MACHAMP
-	mon_cry CRY_PSYDUCK,     $055,  $081 ; BELLSPROUT
+	mon_cry CRY_FLAAFFY,     $055,  $081 ; BELLSPROUT
 	mon_cry CRY_WEEPINBELL,  $044,  $0a0 ; WEEPINBELL
 	mon_cry CRY_WEEPINBELL,  $066,  $14c ; VICTREEBEL
 	mon_cry CRY_SWABLU,     $000,  $100 ; TENTACOOL

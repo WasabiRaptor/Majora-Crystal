@@ -74,7 +74,7 @@ AlphabeticalPokedexOrder:
 	db SEVIPER
 	db NIDOKING
 	db GOLDEEN
-	db GOLDUCK
+	db AMPHAROS
 	db GOLEM
 	db GRANBULL
 	db GRAVELER
@@ -130,7 +130,7 @@ AlphabeticalPokedexOrder:
 	db BRAIXEN
 	db MAROWAK
 	db MEGANIUM
-	db PLACE5
+	db HAWLUCHA
 	db ZOROARK
 	db LUCARIO
 	db RIOLU
@@ -156,7 +156,7 @@ AlphabeticalPokedexOrder:
 	db ONIX
 	db SENTRET
 	db FURRET
-	db PERSIANX
+	db MAREEP
 	db PHANPY
 	db PICHU
 	db PORYGON
@@ -174,7 +174,7 @@ AlphabeticalPokedexOrder:
 	db PLACE3
 	db PLACE4
 	db PRIMEAPE
-	db PSYDUCK
+	db FLAAFFY
 	db SILVALLY
 	db QUAGSIRE
 	db FERROSEED

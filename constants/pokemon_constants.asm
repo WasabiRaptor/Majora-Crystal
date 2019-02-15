@@ -67,13 +67,13 @@
 	const FURRET   		; 2f
 	const SWABLU    	; 30
 	const ALTARIA   	; 31
+	const MIENFOO    	; 32
+	const MIENSHAO    	; 33
+	const HAWLUCHA     	; 34
+	const MAREEP    	; 35
+	const FLAAFFY    	; 36
+	const AMPHAROS    	; 37
 
-	const MIENFOO    ; 32
-	const MIENSHAO    ; 33
-	const PLACE5     ; 34
-	const PERSIANX    ; 35
-	const PSYDUCK    ; 36
-	const GOLDUCK    ; 37
 	const MANKEY     ; 38
 	const PRIMEAPE   ; 39
 	const GROWLITHE  ; 3a

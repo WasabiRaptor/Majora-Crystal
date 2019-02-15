@@ -50,10 +50,10 @@ AnimationIdlePointers:
 	dw AltariaAnimationIdle
 	dw MienfooAnimationIdle
 	dw MienshaoAnimationIdle
-	dw Place5AnimationIdle
-	dw PersianXAnimationIdle
-	dw PsyduckAnimationIdle
-	dw GolduckAnimationIdle
+	dw HawluchaAnimationIdle
+	dw MareepAnimationIdle
+	dw FlaaffyAnimationIdle
+	dw AmpharosAnimationIdle
 	dw MankeyAnimationIdle
 	dw PrimeapeAnimationIdle
 	dw GrowlitheAnimationIdle

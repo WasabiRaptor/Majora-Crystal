@@ -52,10 +52,10 @@ EvosAttacksPointers::
 	dw AltariaEvosAttacks
 	dw MienfooEvosAttacks
 	dw MienshaoEvosAttacks
-	dw Place5EvosAttacks
-	dw PersianXEvosAttacks
-	dw PsyduckEvosAttacks
-	dw GolduckEvosAttacks
+	dw HawluchaEvosAttacks
+	dw MareepEvosAttacks
+	dw FlaaffyEvosAttacks
+	dw AmpharosEvosAttacks
 	dw MankeyEvosAttacks
 	dw PrimeapeEvosAttacks
 	dw GrowlitheEvosAttacks

@@ -50,10 +50,10 @@ BitmasksPointers:
 	dw AltariaBitmasks
 	dw MienfooBitmasks
 	dw MienshaoBitmasks
-	dw Place5Bitmasks
-	dw PersianXBitmasks
-	dw PsyduckBitmasks
-	dw GolduckBitmasks
+	dw HawluchaBitmasks
+	dw MareepBitmasks
+	dw FlaaffyBitmasks
+	dw AmpharosBitmasks
 	dw MankeyBitmasks
 	dw PrimeapeBitmasks
 	dw GrowlitheBitmasks

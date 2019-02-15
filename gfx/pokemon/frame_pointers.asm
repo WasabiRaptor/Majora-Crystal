@@ -50,10 +50,10 @@ FramesPointers:
 	dw AltariaFrames
 	dw MienfooFrames
 	dw MienshaoFrames
-	dw Place5Frames
-	dw PersianXFrames
-	dw PsyduckFrames
-	dw GolduckFrames
+	dw HawluchaFrames
+	dw MareepFrames
+	dw FlaaffyFrames
+	dw AmpharosFrames
 	dw MankeyFrames
 	dw PrimeapeFrames
 	dw GrowlitheFrames

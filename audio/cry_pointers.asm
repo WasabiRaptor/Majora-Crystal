@@ -32,7 +32,7 @@ Cries:
 	dba Cry_Sentret
 	dba Cry_Growlithe
 	dba Cry_Krabby
-	dba Cry_Psyduck
+	dba Cry_Flaaffy
 	dba Cry_Porygon2
 	dba Cry_Zangoose
 	dba Cry_Vulpix

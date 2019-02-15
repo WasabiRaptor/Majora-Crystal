@@ -51,10 +51,10 @@ PokedexDataPointerTable:
 	dw AltariaPokedexEntry
 	dw MienfooPokedexEntry
 	dw MienshaoPokedexEntry
-	dw Place5PokedexEntry
-	dw PersianXPokedexEntry
-	dw PsyduckPokedexEntry
-	dw GolduckPokedexEntry
+	dw HawluchaPokedexEntry
+	dw MareepPokedexEntry
+	dw FlaaffyPokedexEntry
+	dw AmpharosPokedexEntry
 	dw MankeyPokedexEntry
 	dw PrimeapePokedexEntry
 	dw GrowlithePokedexEntry

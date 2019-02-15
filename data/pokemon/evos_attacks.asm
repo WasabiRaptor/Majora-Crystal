@@ -708,8 +708,8 @@ endc
 	db 61, FISSURE
 	db 0 ; no more level-up moves
 
-Place5EvosAttacks:
-	db EVOLVE_LEVEL, 28, PERSIANX
+HawluchaEvosAttacks:
+	db EVOLVE_LEVEL, 28, MAREEP
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, GROWL
@@ -721,7 +721,7 @@ Place5EvosAttacks:
 	db 46, SLASH
 	db 0 ; no more level-up moves
 
-PersianXEvosAttacks:
+MareepEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, GROWL
@@ -734,8 +734,8 @@ PersianXEvosAttacks:
 	db 53, SLASH
 	db 0 ; no more level-up moves
 
-PsyduckEvosAttacks:
-	db EVOLVE_LEVEL, 33, GOLDUCK
+FlaaffyEvosAttacks:
+	db EVOLVE_LEVEL, 33, AMPHAROS
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 5, TAIL_WHIP
@@ -747,7 +747,7 @@ PsyduckEvosAttacks:
 	db 50, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-GolduckEvosAttacks:
+AmpharosEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, TAIL_WHIP

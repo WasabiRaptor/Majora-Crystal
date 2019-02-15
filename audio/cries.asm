@@ -992,10 +992,10 @@ Cry_Krabby:
 	musicheader 1, 6, Cry_Krabby_Ch6
 	musicheader 1, 8, Cry_Krabby_Ch8
 
-Cry_Psyduck:
-	musicheader 3, 5, Cry_Psyduck_Ch5
-	musicheader 1, 6, Cry_Psyduck_Ch6
-	musicheader 1, 8, Cry_Psyduck_Ch8
+Cry_Flaaffy:
+	musicheader 3, 5, Cry_Flaaffy_Ch5
+	musicheader 1, 6, Cry_Flaaffy_Ch6
+	musicheader 1, 8, Cry_Flaaffy_Ch8
 
 Cry_Porygon2:
 	musicheader 3, 5, Cry_Porygon2_Ch5
@@ -1996,7 +1996,7 @@ Cry_Krabby_Ch8:
 	noise __,  9, $d1, $66
 	endchannel
 
-Cry_Psyduck_Ch5:
+Cry_Flaaffy_Ch5:
 	sound_duty 3, 2, 1, 0
 	sound __,  4, $f3, $0564
 	sound __,  3, $e2, $0544
@@ -2008,7 +2008,7 @@ Cry_Psyduck_Ch5:
 	sound __,  9, $d1, $0502
 	endchannel
 
-Cry_Psyduck_Ch6:
+Cry_Flaaffy_Ch6:
 	sound_duty 0, 3, 0, 3
 	sound __,  4, $d3, $0560
 	sound __,  3, $c2, $0540
@@ -2018,7 +2018,7 @@ Cry_Psyduck_Ch6:
 	sound __,  4, $d3, $0520
 	sound __,  4, $c4, $04e0
 	sound __,  9, $c1, $0500
-Cry_Psyduck_Ch8:
+Cry_Flaaffy_Ch8:
 	endchannel
 
 Cry_Porygon2_Ch5:

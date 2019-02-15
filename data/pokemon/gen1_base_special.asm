@@ -52,10 +52,10 @@ KantoMonSpecials:
 	db  90 ; ALTARIA
 	db  45 ; MIENFOO
 	db  70 ; MIENSHAO
-	db  40 ; PLACE5
-	db  65 ; PERSIANX
-	db  50 ; PSYDUCK
-	db  80 ; GOLDUCK
+	db  40 ; HAWLUCHA
+	db  65 ; MAREEP
+	db  50 ; FLAAFFY
+	db  80 ; AMPHAROS
 	db  35 ; MANKEY
 	db  60 ; PRIMEAPE
 	db  50 ; GROWLITHE

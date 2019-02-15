@@ -50,9 +50,9 @@ EggMovePointers::
 	dw NoEggMoves
 	dw MienfooEggMoves
 	dw NoEggMoves
-	dw Place5EggMoves
+	dw HawluchaEggMoves
 	dw NoEggMoves
-	dw PsyduckEggMoves
+	dw FlaaffyEggMoves
 	dw NoEggMoves
 	dw MankeyEggMoves
 	dw NoEggMoves

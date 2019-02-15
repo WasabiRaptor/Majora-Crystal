@@ -35,7 +35,7 @@
 	const CRY_SENTRET
 	const CRY_GROWLITHE
 	const CRY_KRABBY
-	const CRY_PSYDUCK
+	const CRY_FLAAFFY
 	const CRY_PORYGON2
 	const CRY_ZANGOOSE
 	const CRY_GRIMER

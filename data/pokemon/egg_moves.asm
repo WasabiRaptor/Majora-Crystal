@@ -170,14 +170,14 @@ MienfooEggMoves:
 	db BEAT_UP
 	db -1 ; end
 
-Place5EggMoves:
+HawluchaEggMoves:
 	db SPITE
 	db CHARM
 	db HYPNOSIS
 	db AMNESIA
 	db -1 ; end
 
-PsyduckEggMoves:
+FlaaffyEggMoves:
 	db ICE_BEAM
 	db HYPNOSIS
 	db PSYBEAM

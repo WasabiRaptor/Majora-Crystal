@@ -45,7 +45,7 @@ Pokered_MonIndices:
 	db HITMONCHAN
 	db TOGETIC
 	db FURRET
-	db PSYDUCK
+	db FLAAFFY
 	db DROWZEE
 	db GOLEM
 	db HERACROSS ; MISSINGNO.
@@ -75,7 +75,7 @@ Pokered_MonIndices:
 	db DWEBBLE
 	db CRUSTLE
 	db DEWPIDER
-	db PLACE5
+	db HAWLUCHA
 	db KRABBY
 	db CORSOLA ; MISSINGNO.
 	db REMORAID ; MISSINGNO.
@@ -126,7 +126,7 @@ Pokered_MonIndices:
 	db ROCKRUFF
 	db MACHAMP
 	db DONPHAN ; MISSINGNO.
-	db GOLDUCK
+	db AMPHAROS
 	db HYPNO
 	db NIDOKING
 	db RIOLU
@@ -142,7 +142,7 @@ Pokered_MonIndices:
 	db ELECTRODE
 	db LIEPARD
 	db WEEZING
-	db PERSIANX
+	db MAREEP
 	db MAROWAK
 	db DUSCLOPS ; MISSINGNO.
 	db HAUNTER

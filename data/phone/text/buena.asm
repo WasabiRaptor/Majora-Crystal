@@ -379,7 +379,7 @@ UnknownText_0xa183d:
 	line "job, so she traded"
 
 	para "with a fan for a"
-	line "PLACE5."
+	line "HAWLUCHA."
 
 	para "Let's chat about"
 	line "#MON again!"

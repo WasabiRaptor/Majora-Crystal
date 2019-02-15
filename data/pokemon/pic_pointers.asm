@@ -108,14 +108,14 @@ PokemonPicPointers::
 	dba MienfooBackpic
 	dba MienshaoFrontpic
 	dba MienshaoBackpic
-	dba Place5Frontpic
-	dba Place5Backpic
-	dba PersianXFrontpic
-	dba PersianXBackpic
-	dba PsyduckFrontpic
-	dba PsyduckBackpic
-	dba GolduckFrontpic
-	dba GolduckBackpic
+	dba HawluchaFrontpic
+	dba HawluchaBackpic
+	dba MareepFrontpic
+	dba MareepBackpic
+	dba FlaaffyFrontpic
+	dba FlaaffyBackpic
+	dba AmpharosFrontpic
+	dba AmpharosBackpic
 	dba MankeyFrontpic
 	dba MankeyBackpic
 	dba PrimeapeFrontpic
