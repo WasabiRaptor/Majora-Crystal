@@ -39,7 +39,7 @@ Pokered_MonIndices:
 	db FLOETTE
 	db GRAVELER
 	db CHANSEY
-	db MACHOKE
+	db JIGGLYPUFF
 	db MR__MIME
 	db HITMONLEE
 	db HITMONCHAN
@@ -104,7 +104,7 @@ Pokered_MonIndices:
 	db FLAREONX
 	db JOLTEONX
 	db VAPOREONX
-	db MACHOP
+	db IGGLYBUFF
 	db NIDORINA
 	db TOGEPI
 	db SENTRET
@@ -124,7 +124,7 @@ Pokered_MonIndices:
 	db ZORUA
 	db ZOROARK
 	db ROCKRUFF
-	db MACHAMP
+	db WIGGLYTUFF
 	db LITWICK ; MISSINGNO.
 	db AMPHAROS
 	db HYPNO
@@ -212,7 +212,7 @@ Pokered_MonIndices:
 	db LANTURN
 	db PICHU
 	db CLEFFA
-	db IGGLYBUFF
+	db ZWEILOUS
 	db HEIDREIGON
 	db CYNDAQUIL
 	db QUILAVA

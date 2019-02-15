@@ -221,7 +221,7 @@ FlabebeEggMoves:
 	db BARRIER
 	db -1 ; end
 
-MachopEggMoves:
+IgglybuffEggMoves:
 	db LIGHT_SCREEN
 	db MEDITATE
 	db ROLLING_KICK
@@ -574,7 +574,7 @@ CleffaEggMoves:
 	db MIMIC
 	db -1 ; end
 
-IgglybuffEggMoves:
+ZweilousEggMoves:
 	db PERISH_SONG
 	db PRESENT
 	db FAINT_ATTACK

@@ -64,9 +64,9 @@ AnimationPointers:
 	dw FlabebeAnimation
 	dw FloetteAnimation
 	dw FlorgesAnimation
-	dw MachopAnimation
-	dw MachokeAnimation
-	dw MachampAnimation
+	dw IgglybuffAnimation
+	dw JigglypuffAnimation
+	dw WigglytuffAnimation
 	dw BellsproutAnimation
 	dw WeepinbellAnimation
 	dw VictreebelAnimation
@@ -172,7 +172,7 @@ AnimationPointers:
 	dw LanturnAnimation
 	dw PichuAnimation
 	dw CleffaAnimation
-	dw IgglybuffAnimation
+	dw ZweilousAnimation
 	dw HeidreigonAnimation
 	dw CyndaquilAnimation
 	dw QuilavaAnimation

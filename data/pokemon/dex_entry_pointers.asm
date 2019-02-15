@@ -65,9 +65,9 @@ PokedexDataPointerTable:
 	dw FlabebePokedexEntry
 	dw FloettePokedexEntry
 	dw FlorgesPokedexEntry
-	dw MachopPokedexEntry
-	dw MachokePokedexEntry
-	dw MachampPokedexEntry
+	dw IgglybuffPokedexEntry
+	dw JigglypuffPokedexEntry
+	dw WigglytuffPokedexEntry
 	dw BellsproutPokedexEntry
 	dw WeepinbellPokedexEntry
 	dw VictreebelPokedexEntry
@@ -173,7 +173,7 @@ PokedexDataPointerTable:
 	dw LanturnPokedexEntry
 	dw PichuPokedexEntry
 	dw CleffaPokedexEntry
-	dw IgglybuffPokedexEntry
+	dw ZweilousPokedexEntry
 	dw HeidreigonPokedexEntry
 	dw CyndaquilPokedexEntry
 	dw QuilavaPokedexEntry

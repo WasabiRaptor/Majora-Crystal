@@ -890,8 +890,8 @@ FlorgesEvosAttacks:
 	db 45, REFLECT
 	db 0 ; no more level-up moves
 
-MachopEvosAttacks:
-	db EVOLVE_LEVEL, 28, MACHOKE
+IgglybuffEvosAttacks:
+	db EVOLVE_LEVEL, 28, JIGGLYPUFF
 	db 0 ; no more evolutions
 	db 1, LOW_KICK
 	db 1, LEER
@@ -905,8 +905,8 @@ MachopEvosAttacks:
 	db 49, SUBMISSION
 	db 0 ; no more level-up moves
 
-MachokeEvosAttacks:
-	db EVOLVE_TRADE, -1, MACHAMP
+JigglypuffEvosAttacks:
+	db EVOLVE_TRADE, -1, WIGGLYTUFF
 	db 0 ; no more evolutions
 	db 1, LOW_KICK
 	db 1, LEER
@@ -921,7 +921,7 @@ MachokeEvosAttacks:
 	db 61, SUBMISSION
 	db 0 ; no more level-up moves
 
-MachampEvosAttacks:
+WigglytuffEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LOW_KICK
 	db 1, LEER
@@ -2409,7 +2409,7 @@ CleffaEvosAttacks:
 	db 13, SWEET_KISS
 	db 0 ; no more level-up moves
 
-IgglybuffEvosAttacks:
+ZweilousEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, NIDORAN_M
 	db 0 ; no more evolutions
 	db 1, SING

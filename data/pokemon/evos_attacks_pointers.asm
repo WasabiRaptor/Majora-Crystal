@@ -66,9 +66,9 @@ EvosAttacksPointers::
 	dw FlabebeEvosAttacks
 	dw FloetteEvosAttacks
 	dw FlorgesEvosAttacks
-	dw MachopEvosAttacks
-	dw MachokeEvosAttacks
-	dw MachampEvosAttacks
+	dw IgglybuffEvosAttacks
+	dw JigglypuffEvosAttacks
+	dw WigglytuffEvosAttacks
 	dw BellsproutEvosAttacks
 	dw WeepinbellEvosAttacks
 	dw VictreebelEvosAttacks
@@ -174,7 +174,7 @@ EvosAttacksPointers::
 	dw LanturnEvosAttacks
 	dw PichuEvosAttacks
 	dw CleffaEvosAttacks
-	dw IgglybuffEvosAttacks
+	dw ZweilousEvosAttacks
 	dw HeidreigonEvosAttacks
 	dw CyndaquilEvosAttacks
 	dw QuilavaEvosAttacks

@@ -26,7 +26,7 @@ SpriteMons:
 	db SENTRET
 	db TENTACOOL
 	db TAUROS
-	db MACHOP
+	db IGGLYBUFF
 	db VOLTORB
 	db LAPRAS
 	db RHYDON

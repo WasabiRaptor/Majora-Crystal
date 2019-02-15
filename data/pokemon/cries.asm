@@ -70,9 +70,9 @@ PokemonCries::
 	mon_cry CRY_METAPOD,     $0c0,  $081 ; FLABEBE
 	mon_cry CRY_METAPOD,     $0a8,  $140 ; FLOETTE
 	mon_cry CRY_METAPOD,     $098,  $17f ; FLORGES
-	mon_cry CRY_LUXRAY,   $0ee,  $081 ; MACHOP
-	mon_cry CRY_LUXRAY,   $048,  $0e0 ; MACHOKE
-	mon_cry CRY_LUXRAY,   $008,  $140 ; MACHAMP
+	mon_cry CRY_LUXRAY,   $0ee,  $081 ; IGGLYBUFF
+	mon_cry CRY_LUXRAY,   $048,  $0e0 ; JIGGLYPUFF
+	mon_cry CRY_LUXRAY,   $008,  $140 ; WIGGLYTUFF
 	mon_cry CRY_FLAAFFY,     $055,  $081 ; BELLSPROUT
 	mon_cry CRY_WEEPINBELL,  $044,  $0a0 ; WEEPINBELL
 	mon_cry CRY_WEEPINBELL,  $066,  $14c ; VICTREEBEL
@@ -178,7 +178,7 @@ PokemonCries::
 	mon_cry CRY_ABOMASNOW,   $2d0,  $110 ; LANTURN
 	mon_cry CRY_PICHU,       $000,  $140 ; PICHU
 	mon_cry CRY_CLEFFA,      $061,  $091 ; CLEFFA
-	mon_cry CRY_CHIKORITA,   $0e8,  $0e8 ; IGGLYBUFF
+	mon_cry CRY_CHIKORITA,   $0e8,  $0e8 ; ZWEILOUS
 	mon_cry CRY_HEIDREIGON,      $010,  $100 ; HEIDREIGON
 	mon_cry CRY_CYNDAQUIL,     $03b,  $038 ; CYNDAQUIL
 	mon_cry CRY_QUILAVA,       -$067,  $100 ; QUILAVA

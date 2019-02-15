@@ -64,9 +64,9 @@ AnimationIdlePointers:
 	dw FlabebeAnimationIdle
 	dw FloetteAnimationIdle
 	dw FlorgesAnimationIdle
-	dw MachopAnimationIdle
-	dw MachokeAnimationIdle
-	dw MachampAnimationIdle
+	dw IgglybuffAnimationIdle
+	dw JigglypuffAnimationIdle
+	dw WigglytuffAnimationIdle
 	dw BellsproutAnimationIdle
 	dw WeepinbellAnimationIdle
 	dw VictreebelAnimationIdle
@@ -172,7 +172,7 @@ AnimationIdlePointers:
 	dw LanturnAnimationIdle
 	dw PichuAnimationIdle
 	dw CleffaAnimationIdle
-	dw IgglybuffAnimationIdle
+	dw ZweilousAnimationIdle
 	dw HeidreigonAnimationIdle
 	dw CyndaquilAnimationIdle
 	dw QuilavaAnimationIdle

@@ -84,9 +84,9 @@
 	const FLOETTE    	; 40
 	const FLORGES   	; 41
 
-	const MACHOP     ; 42
-	const MACHOKE    ; 43
-	const MACHAMP    ; 44
+	const IGGLYBUFF     ; 42
+	const JIGGLYPUFF    ; 43
+	const WIGGLYTUFF    ; 44
 	const BELLSPROUT ; 45
 	const WEEPINBELL ; 46
 	const VICTREEBEL ; 47
@@ -203,8 +203,8 @@ JOHTO_POKEMON EQU const_value
 	const LANTURN    ; ab
 	const PICHU      ; ac
 	const CLEFFA     ; ad
-	const IGGLYBUFF  ; ae
 
+	const ZWEILOUS  	; ae
 	const HEIDREIGON    ; af
 	const CYNDAQUIL    	; b0	
 	const QUILAVA       ; b1

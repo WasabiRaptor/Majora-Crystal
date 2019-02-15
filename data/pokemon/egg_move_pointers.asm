@@ -64,7 +64,7 @@ EggMovePointers::
 	dw FlabebeEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw MachopEggMoves
+	dw IgglybuffEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw BellsproutEggMoves
@@ -176,7 +176,7 @@ endc
 	dw NoEggMoves
 	dw PichuEggMoves
 	dw CleffaEggMoves
-	dw IgglybuffEggMoves
+	dw ZweilousEggMoves
 	dw HeidreigonEggMoves
 	dw NoEggMoves
 	dw QuilavaEggMoves

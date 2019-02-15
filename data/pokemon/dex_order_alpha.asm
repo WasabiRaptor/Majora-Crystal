@@ -93,7 +93,7 @@ AlphabeticalPokedexOrder:
 	db BISHARP
 	db PAWNIARD
 	db HYPNO
-	db IGGLYBUFF
+	db ZWEILOUS
 	db VAPOREON
 	db NIDORAN_M
 	db JOLTEONX
@@ -115,9 +115,9 @@ AlphabeticalPokedexOrder:
 	db LEDYBA
 	db LICKITUNG
 	db SHAYMIN
-	db MACHAMP
-	db MACHOKE
-	db MACHOP
+	db WIGGLYTUFF
+	db JIGGLYPUFF
+	db IGGLYBUFF
 	db ZAPDOS
 	db MAGCARGO
 	db MAGIKARP

@@ -66,9 +66,9 @@ KantoMonSpecials:
 	db 105 ; FLABEBE
 	db 120 ; FLOETTE
 	db 135 ; FLORGES
-	db  35 ; MACHOP
-	db  50 ; MACHOKE
-	db  65 ; MACHAMP
+	db  35 ; IGGLYBUFF
+	db  50 ; JIGGLYPUFF
+	db  65 ; WIGGLYTUFF
 	db  70 ; BELLSPROUT
 	db  85 ; WEEPINBELL
 	db 100 ; VICTREEBEL

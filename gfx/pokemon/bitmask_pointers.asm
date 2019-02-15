@@ -64,9 +64,9 @@ BitmasksPointers:
 	dw FlabebeBitmasks
 	dw FloetteBitmasks
 	dw FlorgesBitmasks
-	dw MachopBitmasks
-	dw MachokeBitmasks
-	dw MachampBitmasks
+	dw IgglybuffBitmasks
+	dw JigglypuffBitmasks
+	dw WigglytuffBitmasks
 	dw BellsproutBitmasks
 	dw WeepinbellBitmasks
 	dw VictreebelBitmasks
@@ -172,7 +172,7 @@ BitmasksPointers:
 	dw LanturnBitmasks
 	dw PichuBitmasks
 	dw CleffaBitmasks
-	dw IgglybuffBitmasks
+	dw ZweilousBitmasks
 	dw HeidreigonBitmasks
 	dw CyndaquilBitmasks
 	dw QuilavaBitmasks

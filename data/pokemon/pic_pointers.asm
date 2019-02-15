@@ -136,12 +136,12 @@ PokemonPicPointers::
 	dba FloetteBackpic
 	dba FlorgesFrontpic
 	dba FlorgesBackpic
-	dba MachopFrontpic
-	dba MachopBackpic
-	dba MachokeFrontpic
-	dba MachokeBackpic
-	dba MachampFrontpic
-	dba MachampBackpic
+	dba IgglybuffFrontpic
+	dba IgglybuffBackpic
+	dba JigglypuffFrontpic
+	dba JigglypuffBackpic
+	dba WigglytuffFrontpic
+	dba WigglytuffBackpic
 	dba BellsproutFrontpic
 	dba BellsproutBackpic
 	dba WeepinbellFrontpic
@@ -352,8 +352,8 @@ PokemonPicPointers::
 	dba PichuBackpic
 	dba CleffaFrontpic
 	dba CleffaBackpic
-	dba IgglybuffFrontpic
-	dba IgglybuffBackpic
+	dba ZweilousFrontpic
+	dba ZweilousBackpic
 	dba HeidreigonFrontpic
 	dba HeidreigonBackpic
 	dba CyndaquilFrontpic

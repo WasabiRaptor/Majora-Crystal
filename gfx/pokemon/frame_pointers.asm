@@ -64,9 +64,9 @@ FramesPointers:
 	dw FlabebeFrames
 	dw FloetteFrames
 	dw FlorgesFrames
-	dw MachopFrames
-	dw MachokeFrames
-	dw MachampFrames
+	dw IgglybuffFrames
+	dw JigglypuffFrames
+	dw WigglytuffFrames
 	dw BellsproutFrames
 	dw WeepinbellFrames
 	dw VictreebelFrames
@@ -172,7 +172,7 @@ FramesPointers:
 	dw LanturnFrames
 	dw PichuFrames
 	dw CleffaFrames
-	dw IgglybuffFrames
+	dw ZweilousFrames
 	dw HeidreigonFrames
 	dw CyndaquilFrames
 	dw QuilavaFrames
