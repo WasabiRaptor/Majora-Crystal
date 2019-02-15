@@ -45,7 +45,7 @@
 	const CRY_BRAIXEN
 	const CRY_SPINARAK
 	const CRY_HEIDREIGON
-	const CRY_GIRAFARIG
+	const CRY_AURORUS
 	const CRY_RAIKOU
 	const CRY_LITTEN
 	const CRY_CYNDAQUIL
@@ -55,7 +55,7 @@
 	const CRY_ABOMASNOW
 	const CRY_CHIKORITA
 	const CRY_TOTODILE
-	const CRY_GLIGAR
+	const CRY_SNOWRUNT
 	const CRY_CLEFFA
 	const CRY_EXCADRILL
 	const CRY_LEDYBA
@@ -70,5 +70,5 @@
 	const CRY_BALTOY
 	const CRY_PICHU
 	const CRY_AIPOM
-	const CRY_DUNSPARCE
+	const CRY_CRYOGONAL
 	const CRY_LITWICK

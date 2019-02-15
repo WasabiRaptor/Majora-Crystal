@@ -200,17 +200,17 @@ AnimationPointers:
 	dw SlowkingAnimation
 	dw MisdreavusAnimation
 	dw CarbinkAnimation
-	dw WobbuffetAnimation
-	dw GirafarigAnimation
-	dw PinecoAnimation
-	dw ForretressAnimation
-	dw DunsparceAnimation
-	dw GligarAnimation
-	dw SteelixAnimation
-	dw SnubbullAnimation
-	dw GranbullAnimation
-	dw QwilfishAnimation
-	dw ScizorAnimation
+	dw AmauraAnimation
+	dw AurorusAnimation
+	dw SneaselAnimation
+	dw WeavileAnimation
+	dw CryogonalAnimation
+	dw SnowruntAnimation
+	dw GlalieAnimation
+	dw FrosslassAnimation
+	dw SwinubAnimation
+	dw PiloswineAnimation
+	dw MamoswineAnimation
 	dw UnownAnimation
 	dw NatuAnimation
 	dw XatuAnimation

@@ -234,19 +234,17 @@ JOHTO_POKEMON EQU const_value
 	const MISDREAVUS ; c8
 
 	const CARBINK      	; c9
-
-	const WOBBUFFET  ; ca
-	const GIRAFARIG  ; cb
-	const PINECO     ; cc
-	const FORRETRESS ; cd
-	const DUNSPARCE  ; ce
-	const GLIGAR     ; cf
-	const STEELIX    ; d0
-	const SNUBBULL   ; d1
-	const GRANBULL   ; d2
-	const QWILFISH   ; d3
-	const SCIZOR     ; d4
-
+	const AMAURA        ; ca
+	const AURORUS       ; cb
+	const SNEASEL       ; cc
+	const WEAVILE       ; cd
+	const CRYOGONAL     ; ce
+	const SNOWRUNT      ; cf
+	const GLALIE        ; d0
+	const FROSSLASS     ; d1
+	const SWINUB        ; d2
+	const PILOSWINE     ; d3
+	const MAMOSWINE     ; d4
 	const UNOWN    		; d5
 	const NATU          ; d6
 	const XATU          ; d7

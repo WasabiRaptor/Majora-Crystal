@@ -48,7 +48,7 @@ AlphabeticalPokedexOrder:
 	db DRATINI
 	db DROWZEE
 	db MIENSHAO
-	db DUNSPARCE
+	db CRYOGONAL
 	db EEVEEX
 	db TOGEPI
 	db ELECTABUZZ
@@ -63,20 +63,20 @@ AlphabeticalPokedexOrder:
 	db FERALIGATR
 	db TORRACAT
 	db FLAREONX
-	db FORRETRESS
+	db WEAVILE
 	db PUPITAR
 	db GASTLY
 	db GENGAR
 	db COTTONEE
-	db GIRAFARIG
+	db AURORUS
 	db MEW
-	db GLIGAR
+	db SNOWRUNT
 	db SEVIPER
 	db NIDOKING
 	db GOLDEEN
 	db AMPHAROS
 	db FOONGUS
-	db GRANBULL
+	db SWINUB
 	db WHIMSICOTT
 	db GRIMER
 	db LUXRAY
@@ -164,7 +164,7 @@ AlphabeticalPokedexOrder:
 	db MAGNETON
 	db TOGEKISS
 	db GOLETT
-	db PINECO
+	db SNEASEL
 	db PINSIR
 	db NINETALES
 	db SANDSLASH
@@ -178,7 +178,7 @@ AlphabeticalPokedexOrder:
 	db SILVALLY
 	db QUAGSIRE
 	db FERROSEED
-	db QWILFISH
+	db PILOSWINE
 	db ROTOM
 	db RAIKOU
 	db PHANTUMP
@@ -189,7 +189,7 @@ AlphabeticalPokedexOrder:
 	db RHYHORN
 	db CHINGLING
 	db CHIMECHO
-	db SCIZOR
+	db MAMOSWINE
 	db SCYTHER
 	db SEADRA
 	db SEAKING
@@ -207,14 +207,14 @@ AlphabeticalPokedexOrder:
 	db DUSKNOIR
 	db XATU
 	db SNORLAX
-	db SNUBBULL
+	db FROSSLASS
 	db MEOWTH
 	db SPINARAK
 	db LEAFEON
 	db CHANDELURE
 	db STARMIE
 	db STARYU
-	db STEELIX
+	db GLALIE
 	db MEWTWO
 	db VULPIX
 	db LATIAS
@@ -248,7 +248,7 @@ AlphabeticalPokedexOrder:
 	db QUILLADIN
 	db WEEZING
 	db NIDORINO
-	db WOBBUFFET
+	db AMAURA
 	db WOOPER
 	db TYPHLOSION
 	db YANMA

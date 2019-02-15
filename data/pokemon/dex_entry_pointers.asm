@@ -201,17 +201,17 @@ PokedexDataPointerTable:
 	dw SlowkingPokedexEntry
 	dw MisdreavusPokedexEntry
 	dw CarbinkPokedexEntry
-	dw WobbuffetPokedexEntry
-	dw GirafarigPokedexEntry
-	dw PinecoPokedexEntry
-	dw ForretressPokedexEntry
-	dw DunsparcePokedexEntry
-	dw GligarPokedexEntry
-	dw SteelixPokedexEntry
-	dw SnubbullPokedexEntry
-	dw GranbullPokedexEntry
-	dw QwilfishPokedexEntry
-	dw ScizorPokedexEntry
+	dw AmauraPokedexEntry
+	dw AurorusPokedexEntry
+	dw SneaselPokedexEntry
+	dw WeavilePokedexEntry
+	dw CryogonalPokedexEntry
+	dw SnowruntPokedexEntry
+	dw GlaliePokedexEntry
+	dw FrosslassPokedexEntry
+	dw SwinubPokedexEntry
+	dw PiloswinePokedexEntry
+	dw MamoswinePokedexEntry
 	dw UnownPokedexEntry
 	dw NatuPokedexEntry
 	dw XatuPokedexEntry

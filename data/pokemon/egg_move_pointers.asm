@@ -205,15 +205,15 @@ endc
 	dw MisdreavusEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw GirafarigEggMoves
-	dw PinecoEggMoves
+	dw AurorusEggMoves
+	dw SneaselEggMoves
 	dw NoEggMoves
-	dw DunsparceEggMoves
-	dw GligarEggMoves
+	dw CryogonalEggMoves
+	dw SnowruntEggMoves
 	dw NoEggMoves
-	dw SnubbullEggMoves
+	dw FrosslassEggMoves
 	dw NoEggMoves
-	dw QwilfishEggMoves
+	dw PiloswineEggMoves
 	dw NoEggMoves
 	dw UnownEggMoves
 	dw NatuEggMoves

@@ -200,17 +200,17 @@ FramesPointers:
 	dw SlowkingFrames
 	dw MisdreavusFrames
 	dw CarbinkFrames
-	dw WobbuffetFrames
-	dw GirafarigFrames
-	dw PinecoFrames
-	dw ForretressFrames
-	dw DunsparceFrames
-	dw GligarFrames
-	dw SteelixFrames
-	dw SnubbullFrames
-	dw GranbullFrames
-	dw QwilfishFrames
-	dw ScizorFrames
+	dw AmauraFrames
+	dw AurorusFrames
+	dw SneaselFrames
+	dw WeavileFrames
+	dw CryogonalFrames
+	dw SnowruntFrames
+	dw GlalieFrames
+	dw FrosslassFrames
+	dw SwinubFrames
+	dw PiloswineFrames
+	dw MamoswineFrames
 	dw UnownFrames
 	dw NatuFrames
 	dw XatuFrames

@@ -52,7 +52,7 @@ NewPokedexOrder:
 	db CHIMECHO
 	db TOGEPI
 	db TOGETIC
-	db DUNSPARCE
+	db CRYOGONAL
 	db LITTEN
 	db TORRACAT
 	db INCINEROAR
@@ -63,7 +63,7 @@ NewPokedexOrder:
 	db GENGAR
 	db CARBINK
 	db ONIX
-	db STEELIX
+	db GLALIE
 	db CHESPIN
 	db QUILLADIN
 	db CHESNAUGHT
@@ -93,8 +93,8 @@ NewPokedexOrder:
 	db FLOETTE
 	db FLORGES
 	db DEWPIDER
-	db PINECO
-	db FORRETRESS
+	db SNEASEL
+	db WEAVILE
 	db ESPURR
 	db MEOWSTIC_M
 	db TIMBURR
@@ -107,11 +107,11 @@ NewPokedexOrder:
 	db EXEGGCUTE
 	db EXEGGUTOR
 	db VULPIX
-	db WOBBUFFET
+	db AMAURA
 	db SWABLU
 	db ALTARIA
 	db SCYTHER
-	db SCIZOR
+	db MAMOSWINE
 	db PINSIR
 	db NATU
 	db KOFFING
@@ -123,8 +123,8 @@ NewPokedexOrder:
 	db VOLTORB
 	db ELECTRODE
 	db AIPOM
-	db SNUBBULL
-	db GRANBULL
+	db FROSSLASS
+	db SWINUB
 	db GRIMER
 	db MUK
 	db LUXRAY
@@ -147,7 +147,7 @@ NewPokedexOrder:
 	db HITMONLEE
 	db HITMONCHAN
 	db DUSCLOPS
-	db GIRAFARIG
+	db AURORUS
 	db TAUROS
 	db MOLTRES
 	db ZAPDOS
@@ -161,7 +161,7 @@ NewPokedexOrder:
 	db FARFETCH_D
 	db QUILAVA
 	db TYPHLOSION
-	db QWILFISH
+	db PILOSWINE
 	db DEERLING
 	db SAWSBUCK
 	db KRABBY
@@ -189,7 +189,7 @@ NewPokedexOrder:
 	db HORSEA
 	db SEADRA
 	db YAMASK
-	db GLIGAR
+	db SNOWRUNT
 	db HONEDGE
 	db CLAYDOL
 	db GOLETT

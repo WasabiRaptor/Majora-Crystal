@@ -13,7 +13,7 @@ SometimesFleeMons:
 	db CYNDAQUIL
 	db UMBREONX
 	db UNOWN
-	db SNUBBULL
+	db FROSSLASS
 	db NATU
 	db -1
 
