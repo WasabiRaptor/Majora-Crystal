@@ -78,11 +78,11 @@ KantoMonSpecials:
 	db  45 ; WHIMSICOTT
 	db  55 ; FOONGUS
 	db  65 ; AMOONGUS
-	db  80 ; RAPIDASH
-	db  40 ; SLOWPOKE
-	db  80 ; SLOWBRO
-	db  95 ; PLACEHOLDER1
-	db 120 ; PLACEHOLDER2
+	db  80 ; PHANTUMP
+	db  40 ; TREVANANT
+	db  80 ; BONSLY
+	db  95 ; SUDOWOODO
+	db 120 ; PASSIMIAN
 	db  58 ; FARFETCH_D
 	db  35 ; DODUO
 	db  60 ; DODRIO

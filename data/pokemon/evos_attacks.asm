@@ -1052,7 +1052,7 @@ FoongusEvosAttacks:
 	db 0 ; no more level-up moves
 
 AmoongusEvosAttacks:
-	db EVOLVE_LEVEL, 40, RAPIDASH
+	db EVOLVE_LEVEL, 40, PHANTUMP
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 4, GROWL
@@ -1065,7 +1065,7 @@ AmoongusEvosAttacks:
 	db 53, FIRE_BLAST
 	db 0 ; no more level-up moves
 
-RapidashEvosAttacks:
+PhantumpEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
@@ -1082,8 +1082,8 @@ RapidashEvosAttacks:
 	db 61, FIRE_BLAST
 	db 0 ; no more level-up moves
 
-SlowpokeEvosAttacks:
-	db EVOLVE_LEVEL, 37, SLOWBRO
+TrevanantEvosAttacks:
+	db EVOLVE_LEVEL, 37, BONSLY
 	db EVOLVE_TRADE, KINGS_ROCK, SLOWKING
 	db 0 ; no more evolutions
 	db 1, CURSE
@@ -1097,7 +1097,7 @@ SlowpokeEvosAttacks:
 	db 48, PSYCHIC_M
 	db 0 ; no more level-up moves
 
-SlowbroEvosAttacks:
+BonslyEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CURSE
 	db 1, TACKLE
@@ -1113,8 +1113,8 @@ SlowbroEvosAttacks:
 	db 54, PSYCHIC_M
 	db 0 ; no more level-up moves
 
-Placeholder1EvosAttacks:
-	db EVOLVE_LEVEL, 30, PLACEHOLDER2
+SudowoodoEvosAttacks:
+	db EVOLVE_LEVEL, 30, PASSIMIAN
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 6, THUNDERSHOCK
@@ -1127,7 +1127,7 @@ Placeholder1EvosAttacks:
 	db 45, ZAP_CANNON
 	db 0 ; no more level-up moves
 
-MagnetonEvosAttacks:
+PassimianEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, THUNDERSHOCK

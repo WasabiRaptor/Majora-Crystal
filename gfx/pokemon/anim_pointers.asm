@@ -76,11 +76,11 @@ AnimationPointers:
 	dw WhimsicottAnimation
 	dw FoongusAnimation
 	dw AmoongusAnimation
-	dw RapidashAnimation
-	dw SlowpokeAnimation
-	dw SlowbroAnimation
-	dw Placeholder1Animation
-	dw MagnetonAnimation
+	dw PhantumpAnimation
+	dw TrevanantAnimation
+	dw BonslyAnimation
+	dw SudowoodoAnimation
+	dw PassimianAnimation
 	dw FarfetchDAnimation
 	dw DoduoAnimation
 	dw DodrioAnimation

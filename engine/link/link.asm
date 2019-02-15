@@ -716,9 +716,9 @@ Link_PrepPartyData_Gen1:
 	ld [de], a
 	inc de
 	ld a, [bc]
-	cp PLACEHOLDER1
+	cp SUDOWOODO
 	jr z, .steel_type
-	cp PLACEHOLDER2
+	cp PASSIMIAN
 	jr nz, .skip_steel
 
 .steel_type

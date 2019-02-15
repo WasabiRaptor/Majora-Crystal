@@ -76,11 +76,11 @@ FramesPointers:
 	dw WhimsicottFrames
 	dw FoongusFrames
 	dw AmoongusFrames
-	dw RapidashFrames
-	dw SlowpokeFrames
-	dw SlowbroFrames
-	dw Placeholder1Frames
-	dw MagnetonFrames
+	dw PhantumpFrames
+	dw TrevanantFrames
+	dw BonslyFrames
+	dw SudowoodoFrames
+	dw PassimianFrames
 	dw FarfetchDFrames
 	dw DoduoFrames
 	dw DodrioFrames

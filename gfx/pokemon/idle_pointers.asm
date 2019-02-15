@@ -76,11 +76,11 @@ AnimationIdlePointers:
 	dw WhimsicottAnimationIdle
 	dw FoongusAnimationIdle
 	dw AmoongusAnimationIdle
-	dw RapidashAnimationIdle
-	dw SlowpokeAnimationIdle
-	dw SlowbroAnimationIdle
-	dw Placeholder1AnimationIdle
-	dw MagnetonAnimationIdle
+	dw PhantumpAnimationIdle
+	dw TrevanantAnimationIdle
+	dw BonslyAnimationIdle
+	dw SudowoodoAnimationIdle
+	dw PassimianAnimationIdle
 	dw FarfetchDAnimationIdle
 	dw DoduoAnimationIdle
 	dw DodrioAnimationIdle

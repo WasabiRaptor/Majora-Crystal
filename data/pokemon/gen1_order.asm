@@ -6,7 +6,7 @@ Pokered_MonIndices:
 	db MEOWTH
 	db VOLTORB
 	db DITTO
-	db SLOWBRO
+	db BONSLY
 	db VAPOREON
 	db EXEGGUTOR
 	db LICKITUNG
@@ -35,7 +35,7 @@ Pokered_MonIndices:
 	db ONIX
 	db PERSIAN
 	db MAGNETON
-	db SLOWPOKE
+	db TREVANANT
 	db FLOETTE
 	db WHIMSICOTT
 	db CHANSEY
@@ -52,7 +52,7 @@ Pokered_MonIndices:
 	db MAGMAR
 	db CELEBI ; MISSINGNO.
 	db ELECTABUZZ
-	db PLACEHOLDER2
+	db PASSIMIAN
 	db KOFFING
 	db XATU ; MISSINGNO.
 	db SHINX
@@ -162,7 +162,7 @@ Pokered_MonIndices:
 	db MOLTRES ; MISSINGNO.
 	db SUICUNE ; MISSINGNO.
 	db AMOONGUS
-	db RAPIDASH
+	db PHANTUMP
 	db PORYGON2
 	db PORYGONZ
 	db CONKELDURR
@@ -171,7 +171,7 @@ Pokered_MonIndices:
 	db PLACE3
 	db AERODACTYL
 	db RAIKOU ; MISSINGNO.
-	db PLACEHOLDER1
+	db SUDOWOODO
 	db ENTEI ; MISSINGNO.
 	db LATIAS ; MISSINGNO.
 	db FLAREON

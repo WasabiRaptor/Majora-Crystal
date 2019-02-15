@@ -77,7 +77,7 @@ EggMovePointers::
 	dw NoEggMoves
 	dw AmoongusEggMoves
 	dw NoEggMoves
-	dw SlowpokeEggMoves
+	dw TrevanantEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

@@ -78,11 +78,11 @@ EvosAttacksPointers::
 	dw WhimsicottEvosAttacks
 	dw FoongusEvosAttacks
 	dw AmoongusEvosAttacks
-	dw RapidashEvosAttacks
-	dw SlowpokeEvosAttacks
-	dw SlowbroEvosAttacks
-	dw Placeholder1EvosAttacks
-	dw MagnetonEvosAttacks
+	dw PhantumpEvosAttacks
+	dw TrevanantEvosAttacks
+	dw BonslyEvosAttacks
+	dw SudowoodoEvosAttacks
+	dw PassimianEvosAttacks
 	dw FarfetchDEvosAttacks
 	dw DoduoEvosAttacks
 	dw DodrioEvosAttacks

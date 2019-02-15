@@ -101,7 +101,7 @@ ItemNames::
 	db "TERU-SAMA@"
 	db "PNK APRICORN@"
 	db "BLACKGLASSES@"
-	db "SLOWPOKETAIL@"
+	db "TREVANANTTAIL@"
 	db "PINK BOW@"
 	db "STICK@"
 	db "SMOKE BALL@"

@@ -82,11 +82,11 @@ PokemonCries::
 	mon_cry CRY_GRIMER,      $000,  $100 ; WHIMSICOTT
 	mon_cry CRY_FOONGUS,       $0e0,  $0c0 ; FOONGUS
 	mon_cry CRY_QUILLADIN,  $000,  $100 ; AMOONGUS
-	mon_cry CRY_QUILLADIN,  $020,  $140 ; RAPIDASH
-	mon_cry CRY_SLOWPOKE,    $000,  $100 ; SLOWPOKE
-	mon_cry CRY_LUXRAY,   $000,  $100 ; SLOWBRO
-	mon_cry CRY_METAPOD,     $080,  $0e0 ; PLACEHOLDER1
-	mon_cry CRY_METAPOD,     $020,  $140 ; PLACEHOLDER2
+	mon_cry CRY_QUILLADIN,  $020,  $140 ; PHANTUMP
+	mon_cry CRY_TREVANANT,    $000,  $100 ; TREVANANT
+	mon_cry CRY_LUXRAY,   $000,  $100 ; BONSLY
+	mon_cry CRY_METAPOD,     $080,  $0e0 ; SUDOWOODO
+	mon_cry CRY_METAPOD,     $020,  $140 ; PASSIMIAN
 	mon_cry CRY_MEOWTH,     $0dd,  $081 ; FARFETCH_D
 	mon_cry CRY_MIENFOO,     $0bb,  $081 ; DODUO
 	mon_cry CRY_MIENFOO,     $099,  $0a0 ; DODRIO

@@ -160,16 +160,16 @@ PokemonPicPointers::
 	dba FoongusBackpic
 	dba AmoongusFrontpic
 	dba AmoongusBackpic
-	dba RapidashFrontpic
-	dba RapidashBackpic
-	dba SlowpokeFrontpic
-	dba SlowpokeBackpic
-	dba SlowbroFrontpic
-	dba SlowbroBackpic
-	dba Placeholder1Frontpic
-	dba Placeholder1Backpic
-	dba MagnetonFrontpic
-	dba MagnetonBackpic
+	dba PhantumpFrontpic
+	dba PhantumpBackpic
+	dba TrevanantFrontpic
+	dba TrevanantBackpic
+	dba BonslyFrontpic
+	dba BonslyBackpic
+	dba SudowoodoFrontpic
+	dba SudowoodoBackpic
+	dba PassimianFrontpic
+	dba PassimianBackpic
 	dba FarfetchDFrontpic
 	dba FarfetchDBackpic
 	dba DoduoFrontpic

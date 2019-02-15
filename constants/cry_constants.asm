@@ -4,7 +4,7 @@
 ; gen 1
 	const CRY_GURDURR
 	const CRY_ESPURR
-	const CRY_SLOWPOKE
+	const CRY_TREVANANT
 	const CRY_KANGASKHAN
 	const CRY_CHARMANDER
 	const CRY_GRIMER

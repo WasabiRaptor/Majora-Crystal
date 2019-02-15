@@ -122,8 +122,8 @@ AlphabeticalPokedexOrder:
 	db BALTOY
 	db MAGIKARP
 	db MAGMAR
-	db PLACEHOLDER1
-	db PLACEHOLDER2
+	db SUDOWOODO
+	db PASSIMIAN
 	db SHINX
 	db DOUBLADE
 	db LITTEN
@@ -181,7 +181,7 @@ AlphabeticalPokedexOrder:
 	db QWILFISH
 	db ROTOM
 	db RAIKOU
-	db RAPIDASH
+	db PHANTUMP
 	db PORYGONZ
 	db PORYGON2
 	db BRONZOR
@@ -199,9 +199,9 @@ AlphabeticalPokedexOrder:
 	db UNOWN
 	db AEGISLASH
 	db SKIPLOOM
-	db SLOWBRO
+	db BONSLY
 	db SLOWKING
-	db SLOWPOKE
+	db TREVANANT
 	db EXCADRILL
 	db SPIRITOMB
 	db DUSKNOIR

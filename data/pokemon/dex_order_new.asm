@@ -80,8 +80,8 @@ NewPokedexOrder:
 	db GYARADOS
 	db GOLDEEN
 	db SEAKING
-	db SLOWPOKE
-	db SLOWBRO
+	db TREVANANT
+	db BONSLY
 	db SLOWKING
 	db NIDOQUEEN
 	db SEVIPER
@@ -118,8 +118,8 @@ NewPokedexOrder:
 	db WEEZING
 	db GRIMER
 	db MUK
-	db PLACEHOLDER1
-	db PLACEHOLDER2
+	db SUDOWOODO
+	db PASSIMIAN
 	db VOLTORB
 	db ELECTRODE
 	db AIPOM
@@ -202,7 +202,7 @@ NewPokedexOrder:
 	db DODUO
 	db DODRIO
 	db AMOONGUS
-	db RAPIDASH
+	db PHANTUMP
 	db CUBONE
 	db MAROWAK
 	db KANGASKHAN

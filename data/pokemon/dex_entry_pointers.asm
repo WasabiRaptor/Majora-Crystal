@@ -77,11 +77,11 @@ PokedexDataPointerTable:
 	dw WhimsicottPokedexEntry
 	dw FoongusPokedexEntry
 	dw AmoongusPokedexEntry
-	dw RapidashPokedexEntry
-	dw SlowpokePokedexEntry
-	dw SlowbroPokedexEntry
-	dw Placeholder1PokedexEntry
-	dw MagnetonPokedexEntry
+	dw PhantumpPokedexEntry
+	dw TrevanantPokedexEntry
+	dw BonslyPokedexEntry
+	dw SudowoodoPokedexEntry
+	dw PassimianPokedexEntry
 	dw FarfetchDPokedexEntry
 	dw DoduoPokedexEntry
 	dw DodrioPokedexEntry

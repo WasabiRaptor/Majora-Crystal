@@ -95,12 +95,12 @@
 	const WHIMSICOTT   	; 4b
 	const FOONGUS      	; 4c
 	const AMOONGUS     	; 4d
+	const PHANTUMP   	; 4e
+	const TREVANANT   	; 4f
+	const BONSLY    	; 50
+	const SUDOWOODO  	; 51
+	const PASSIMIAN   	; 52
 
-	const RAPIDASH   ; 4e
-	const SLOWPOKE   ; 4f
-	const SLOWBRO    ; 50
-	const PLACEHOLDER1  ; 51
-	const PLACEHOLDER2   ; 52
 	const FARFETCH_D ; 53
 	const DODUO      ; 54
 	const DODRIO     ; 55

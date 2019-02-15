@@ -1,7 +1,7 @@
 Cries:
 	dba Cry_Gurdurr
 	dba Cry_Espurr
-	dba Cry_Slowpoke
+	dba Cry_Trevanant
 	dba Cry_Kangaskhan
 	dba Cry_Flareon
 	dba Cry_Grimer
@@ -13,7 +13,7 @@ Cries:
 	dba Cry_Mienfoo
 	dba Cry_Seel
 	dba Cry_Drowzee
-	dba Cry_Magneton
+	dba Cry_Passimian
 	dba Cry_Eevee
 	dba Cry_Meowth
 	dba Cry_Rhydon

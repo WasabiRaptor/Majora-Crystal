@@ -43,7 +43,7 @@ LeafeonEggMoves:
 	db FLAIL
 	db -1 ; end
 
-MagnetonEggMoves:
+PassimianEggMoves:
 	db PURSUIT
 	db FAINT_ATTACK
 	db FORESIGHT
@@ -258,7 +258,7 @@ AmoongusEggMoves:
 	db QUICK_ATTACK
 	db -1 ; end
 
-SlowpokeEggMoves:
+TrevanantEggMoves:
 	db SAFEGUARD
 	db BELLY_DRUM
 	db FUTURE_SIGHT

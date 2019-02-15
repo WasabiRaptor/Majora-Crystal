@@ -36,11 +36,11 @@ ValidateOTTrademon:
 	add hl, bc
 	ld a, [hl]
 
-	; Placeholder1 and Magneton's types changed
+	; Sudowoodo and Passimian's types changed
 	; from Electric to Electric/Steel.
-	cp PLACEHOLDER1
+	cp SUDOWOODO
 	jr z, .normal
-	cp PLACEHOLDER2
+	cp PASSIMIAN
 	jr z, .normal
 
 	ld [wCurSpecies], a

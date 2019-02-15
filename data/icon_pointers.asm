@@ -36,6 +36,6 @@ IconPointers:
 	dw CelebiIcon
 	dw ShayminIcon
 	dw GyaradosIcon
-	dw SlowpokeIcon
+	dw TrevanantIcon
 	dw VulpixIcon
 	dw BigmonIcon

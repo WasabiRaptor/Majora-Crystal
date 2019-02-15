@@ -837,10 +837,10 @@ Cry_Espurr:
 	musicheader 1, 6, Cry_Espurr_Ch6
 	musicheader 1, 8, Cry_Espurr_Ch8
 
-Cry_Slowpoke:
-	musicheader 3, 5, Cry_Slowpoke_Ch5
-	musicheader 1, 6, Cry_Slowpoke_Ch6
-	musicheader 1, 8, Cry_Slowpoke_Ch8
+Cry_Trevanant:
+	musicheader 3, 5, Cry_Trevanant_Ch5
+	musicheader 1, 6, Cry_Trevanant_Ch6
+	musicheader 1, 8, Cry_Trevanant_Ch8
 
 Cry_Kangaskhan:
 	musicheader 3, 5, Cry_Kangaskhan_Ch5
@@ -897,10 +897,10 @@ Cry_Drowzee:
 	musicheader 1, 6, Cry_Drowzee_Ch6
 	musicheader 1, 8, Cry_Drowzee_Ch8
 
-Cry_Magneton:
-	musicheader 3, 5, Cry_Magneton_Ch5
-	musicheader 1, 6, Cry_Magneton_Ch6
-	musicheader 1, 8, Cry_Magneton_Ch8
+Cry_Passimian:
+	musicheader 3, 5, Cry_Passimian_Ch5
+	musicheader 1, 6, Cry_Passimian_Ch6
+	musicheader 1, 8, Cry_Passimian_Ch8
 
 Cry_Eevee:
 	musicheader 3, 5, Cry_Eevee_Ch5
@@ -1302,7 +1302,7 @@ Cry_Gurdurr_Ch8:
 	noise __,  9, $81, $1c
 	endchannel
 
-Cry_Magneton_Ch5:
+Cry_Passimian_Ch5:
 	sound_duty 1, 1, 2, 2
 	sound __,  5, $e1, $0700
 	sound __,  5, $f2, $0780
@@ -1310,7 +1310,7 @@ Cry_Magneton_Ch5:
 	sound __,  9, $e1, $0600
 	endchannel
 
-Cry_Magneton_Ch6:
+Cry_Passimian_Ch6:
 	sound_duty 2, 2, 0, 0
 	sound __,  5, $b1, $06e1
 	sound __,  4, $c2, $06e1
@@ -1318,7 +1318,7 @@ Cry_Magneton_Ch6:
 	sound __,  9, $b1, $05e1
 	endchannel
 
-Cry_Magneton_Ch8:
+Cry_Passimian_Ch8:
 	noise __,  3, $61, $32
 	noise __,  3, $61, $21
 	noise __,  9, $61, $11
@@ -1444,19 +1444,19 @@ Cry_Seel_Ch6:
 Cry_Seel_Ch8:
 	endchannel
 
-Cry_Slowpoke_Ch5:
+Cry_Trevanant_Ch5:
 	sound_duty 0, 0, 0, 0
 	sound __,  9, $f5, $0480
 	sound __,  3, $e1, $05e0
 	sound __,  9, $d1, $05dc
 	endchannel
 
-Cry_Slowpoke_Ch6:
+Cry_Trevanant_Ch6:
 	sound_duty 1, 1, 2, 2
 	sound __,  8, $95, $0441
 	sound __,  3, $81, $0521
 	sound __,  9, $61, $051a
-Cry_Slowpoke_Ch8:
+Cry_Trevanant_Ch8:
 	endchannel
 
 Cry_Drowzee_Ch5:

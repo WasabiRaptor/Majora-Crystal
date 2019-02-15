@@ -76,11 +76,11 @@ BitmasksPointers:
 	dw WhimsicottBitmasks
 	dw FoongusBitmasks
 	dw AmoongusBitmasks
-	dw RapidashBitmasks
-	dw SlowpokeBitmasks
-	dw SlowbroBitmasks
-	dw Placeholder1Bitmasks
-	dw MagnetonBitmasks
+	dw PhantumpBitmasks
+	dw TrevanantBitmasks
+	dw BonslyBitmasks
+	dw SudowoodoBitmasks
+	dw PassimianBitmasks
 	dw FarfetchDBitmasks
 	dw DoduoBitmasks
 	dw DodrioBitmasks
