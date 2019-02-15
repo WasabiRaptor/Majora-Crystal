@@ -758,7 +758,7 @@ SwinubEggMoves:
 	db ANCIENTPOWER
 	db -1 ; end
 
-CorsolaEggMoves:
+GolurkEggMoves:
 	db ROCK_SLIDE
 	db SAFEGUARD
 	db SCREECH
@@ -766,7 +766,7 @@ CorsolaEggMoves:
 	db AMNESIA
 	db -1 ; end
 
-RemoraidEggMoves:
+BronzorEggMoves:
 	db AURORA_BEAM
 	db OCTAZOOKA
 	db SUPERSONIC
@@ -774,7 +774,7 @@ RemoraidEggMoves:
 	db SCREECH
 	db -1 ; end
 
-DelibirdEggMoves:
+HonedgeEggMoves:
 	db AURORA_BEAM
 	db QUICK_ATTACK
 	db FUTURE_SIGHT
@@ -782,14 +782,14 @@ DelibirdEggMoves:
 	db RAPID_SPIN
 	db -1 ; end
 
-MantineEggMoves:
+DoubladeEggMoves:
 	db TWISTER
 	db HYDRO_PUMP
 	db HAZE
 	db SLAM
 	db -1 ; end
 
-SkarmoryEggMoves:
+AegislashEggMoves:
 	db DRILL_PECK
 	db PURSUIT
 	db WHIRLWIND
@@ -798,7 +798,7 @@ if _BRASS
 endc
 	db -1 ; end
 
-HoundourEggMoves:
+PawniardEggMoves:
 	db FIRE_SPIN
 	db RAGE
 	db PURSUIT
@@ -808,7 +808,7 @@ HoundourEggMoves:
 	db BEAT_UP
 	db -1 ; end
 
-PhanpyEggMoves:
+CofagrigusEggMoves:
 	db FOCUS_ENERGY
 	db BODY_SLAM
 	db ANCIENTPOWER
@@ -817,7 +817,7 @@ if _BRASS
 endc
 	db -1 ; end
 
-StantlerEggMoves:
+ChandelureEggMoves:
 	db REFLECT
 	db SPITE
 	db DISABLE

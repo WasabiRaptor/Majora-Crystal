@@ -451,32 +451,32 @@ PokemonPicPointers::
 	dba SwinubBackpic
 	dba PiloswineFrontpic
 	dba PiloswineBackpic
-	dba CorsolaFrontpic
-	dba CorsolaBackpic
-	dba RemoraidFrontpic
-	dba RemoraidBackpic
-	dba OctilleryFrontpic
-	dba OctilleryBackpic
-	dba DelibirdFrontpic
-	dba DelibirdBackpic
-	dba MantineFrontpic
-	dba MantineBackpic
-	dba SkarmoryFrontpic
-	dba SkarmoryBackpic
-	dba HoundourFrontpic
-	dba HoundourBackpic
-	dba HoundoomFrontpic
-	dba HoundoomBackpic
-	dba KingdraFrontpic
-	dba KingdraBackpic
-	dba PhanpyFrontpic
-	dba PhanpyBackpic
-	dba DonphanFrontpic
-	dba DonphanBackpic
-	dba Place4Frontpic
-	dba Place4Backpic
-	dba StantlerFrontpic
-	dba StantlerBackpic
+	dba GolurkFrontpic
+	dba GolurkBackpic
+	dba BronzorFrontpic
+	dba BronzorBackpic
+	dba BronzongFrontpic
+	dba BronzongBackpic
+	dba HonedgeFrontpic
+	dba HonedgeBackpic
+	dba DoubladeFrontpic
+	dba DoubladeBackpic
+	dba AegislashFrontpic
+	dba AegislashBackpic
+	dba PawniardFrontpic
+	dba PawniardBackpic
+	dba BisharpFrontpic
+	dba BisharpBackpic
+	dba YamaskFrontpic
+	dba YamaskBackpic
+	dba CofagrigusFrontpic
+	dba CofagrigusBackpic
+	dba LitwickFrontpic
+	dba LitwickBackpic
+	dba LampentFrontpic
+	dba LampentBackpic
+	dba ChandelureFrontpic
+	dba ChandelureBackpic
 	dba SpiritombFrontpic
 	dba SpiritombBackpic
 	dba DuskullFrontpic

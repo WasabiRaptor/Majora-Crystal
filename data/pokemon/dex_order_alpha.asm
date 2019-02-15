@@ -31,18 +31,18 @@ AlphabeticalPokedexOrder:
 	db PURRLOIN
 	db CLEFFA
 	db CLOYSTER
-	db CORSOLA
+	db GOLURK
 	db CROBAT
 	db CROCONAW
 	db CUBONE
 	db ABOMASNOW
-	db DELIBIRD
+	db HONEDGE
 	db DEWGONG
 	db MIENFOO
 	db DEWPIDER
 	db DODRIO
 	db DODUO
-	db DONPHAN
+	db LITWICK
 	db DRAGONAIR
 	db DRAGONITE
 	db DRATINI
@@ -90,8 +90,8 @@ AlphabeticalPokedexOrder:
 	db TYRANITAR
 	db HOPPIP
 	db HORSEA
-	db HOUNDOOM
-	db HOUNDOUR
+	db BISHARP
+	db PAWNIARD
 	db HYPNO
 	db IGGLYBUFF
 	db VAPOREON
@@ -104,7 +104,7 @@ AlphabeticalPokedexOrder:
 	db KADABRA
 	db MIMIKYU
 	db KANGASKHAN
-	db KINGDRA
+	db YAMASK
 	db KINGLER
 	db KOFFING
 	db KRABBY
@@ -125,7 +125,7 @@ AlphabeticalPokedexOrder:
 	db PLACEHOLDER1
 	db PLACEHOLDER2
 	db SHINX
-	db MANTINE
+	db DOUBLADE
 	db LITTEN
 	db BRAIXEN
 	db MAROWAK
@@ -149,7 +149,7 @@ AlphabeticalPokedexOrder:
 	db CONKELDURR
 	db MUK
 	db NOCTOWL
-	db OCTILLERY
+	db BRONZONG
 	db NIDOQUEEN
 	db OMANYTE
 	db OMASTAR
@@ -157,7 +157,7 @@ AlphabeticalPokedexOrder:
 	db SENTRET
 	db FURRET
 	db MAREEP
-	db PHANPY
+	db COFAGRIGUS
 	db PICHU
 	db PORYGON
 	db MAGNEZONE
@@ -172,8 +172,8 @@ AlphabeticalPokedexOrder:
 	db POLIWRATH
 	db PONYTA
 	db PLACE3
-	db PLACE4
 	db LUXIO
+	db LAMPENT
 	db FLAAFFY
 	db SILVALLY
 	db QUAGSIRE
@@ -184,7 +184,7 @@ AlphabeticalPokedexOrder:
 	db RAPIDASH
 	db PORYGONZ
 	db PORYGON2
-	db REMORAID
+	db BRONZOR
 	db RHYDON
 	db RHYHORN
 	db CHINGLING
@@ -197,7 +197,7 @@ AlphabeticalPokedexOrder:
 	db LARVITAR
 	db SHELLDER
 	db UNOWN
-	db SKARMORY
+	db AEGISLASH
 	db SKIPLOOM
 	db SLOWBRO
 	db SLOWKING
@@ -211,7 +211,7 @@ AlphabeticalPokedexOrder:
 	db MEOWTH
 	db SPINARAK
 	db LEAFEON
-	db STANTLER
+	db CHANDELURE
 	db STARMIE
 	db STARYU
 	db STEELIX

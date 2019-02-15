@@ -220,19 +220,19 @@ BitmasksPointers:
 	dw MagcargoBitmasks
 	dw SwinubBitmasks
 	dw PiloswineBitmasks
-	dw CorsolaBitmasks
-	dw RemoraidBitmasks
-	dw OctilleryBitmasks
-	dw DelibirdBitmasks
-	dw MantineBitmasks
-	dw SkarmoryBitmasks
-	dw HoundourBitmasks
-	dw HoundoomBitmasks
-	dw KingdraBitmasks
-	dw PhanpyBitmasks
-	dw DonphanBitmasks
-	dw Place4Bitmasks
-	dw StantlerBitmasks
+	dw GolurkBitmasks
+	dw BronzorBitmasks
+	dw BronzongBitmasks
+	dw HonedgeBitmasks
+	dw DoubladeBitmasks
+	dw AegislashBitmasks
+	dw PawniardBitmasks
+	dw BisharpBitmasks
+	dw YamaskBitmasks
+	dw CofagrigusBitmasks
+	dw LitwickBitmasks
+	dw LampentBitmasks
+	dw ChandelureBitmasks
 	dw SpiritombBitmasks
 	dw DuskullBitmasks
 	dw DusclopsBitmasks

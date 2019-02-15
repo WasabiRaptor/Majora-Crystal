@@ -1618,7 +1618,7 @@ HorseaEvosAttacks:
 	db 0 ; no more level-up moves
 
 SeadraEvosAttacks:
-	db EVOLVE_TRADE, DRAGON_SCALE, KINGDRA
+	db EVOLVE_TRADE, DRAGON_SCALE, YAMASK
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 1, SMOKESCREEN
@@ -1888,7 +1888,7 @@ FlareonxEvosAttacks:
 	db 0 ; no more level-up moves
 
 Place3EvosAttacks:
-	db EVOLVE_TRADE, UP_GRADE, PLACE4
+	db EVOLVE_TRADE, UP_GRADE, LAMPENT
 	db 0 ; no more evolutions
 	db 1, CONVERSION2
 	db 1, TACKLE
@@ -3033,7 +3033,7 @@ if _BRASS
 endc
 	db 0 ; no more level-up moves
 
-CorsolaEvosAttacks:
+GolurkEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 7, HARDEN
@@ -3045,8 +3045,8 @@ CorsolaEvosAttacks:
 	db 43, ANCIENTPOWER
 	db 0 ; no more level-up moves
 
-RemoraidEvosAttacks:
-	db EVOLVE_LEVEL, 25, OCTILLERY
+BronzorEvosAttacks:
+	db EVOLVE_LEVEL, 25, BRONZONG
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
 	db 11, LOCK_ON
@@ -3058,7 +3058,7 @@ RemoraidEvosAttacks:
 	db 55, HYPER_BEAM
 	db 0 ; no more level-up moves
 
-OctilleryEvosAttacks:
+BronzongEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
 	db 11, CONSTRICT
@@ -3071,12 +3071,12 @@ OctilleryEvosAttacks:
 	db 70, HYPER_BEAM
 	db 0 ; no more level-up moves
 
-DelibirdEvosAttacks:
+HonedgeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PRESENT
 	db 0 ; no more level-up moves
 
-MantineEvosAttacks:
+DoubladeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, BUBBLE
@@ -3088,7 +3088,7 @@ MantineEvosAttacks:
 	db 49, CONFUSE_RAY
 	db 0 ; no more level-up moves
 
-SkarmoryEvosAttacks:
+AegislashEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LEER
 	db 1, PECK
@@ -3099,8 +3099,8 @@ SkarmoryEvosAttacks:
 	db 49, STEEL_WING
 	db 0 ; no more level-up moves
 
-HoundourEvosAttacks:
-	db EVOLVE_LEVEL, 24, HOUNDOOM
+PawniardEvosAttacks:
+	db EVOLVE_LEVEL, 24, BISHARP
 	db 0 ; no more evolutions
 	db 1, LEER
 	db 1, EMBER
@@ -3112,7 +3112,7 @@ HoundourEvosAttacks:
 	db 43, CRUNCH
 	db 0 ; no more level-up moves
 
-HoundoomEvosAttacks:
+BisharpEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LEER
 	db 1, EMBER
@@ -3124,7 +3124,7 @@ HoundoomEvosAttacks:
 	db 52, CRUNCH
 	db 0 ; no more level-up moves
 
-KingdraEvosAttacks:
+YamaskEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 1, SMOKESCREEN
@@ -3138,8 +3138,8 @@ KingdraEvosAttacks:
 	db 51, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-PhanpyEvosAttacks:
-	db EVOLVE_LEVEL, 25, DONPHAN
+CofagrigusEvosAttacks:
+	db EVOLVE_LEVEL, 25, LITWICK
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
@@ -3151,7 +3151,7 @@ PhanpyEvosAttacks:
 	db 49, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
-DonphanEvosAttacks:
+LitwickEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HORN_ATTACK
 	db 1, GROWL
@@ -3163,7 +3163,7 @@ DonphanEvosAttacks:
 	db 49, EARTHQUAKE
 	db 0 ; no more level-up moves
 
-Place4EvosAttacks:
+LampentEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CONVERSION2
 	db 1, TACKLE
@@ -3177,7 +3177,7 @@ Place4EvosAttacks:
 	db 44, ZAP_CANNON
 	db 0 ; no more level-up moves
 
-StantlerEvosAttacks:
+ChandelureEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 8, LEER

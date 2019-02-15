@@ -101,8 +101,8 @@ GetFishGroupIndex:
 	ld a, d
 	cp FISHGROUP_QWILFISH
 	jr z, .qwilfish
-	cp FISHGROUP_REMORAID
-	jr z, .remoraid
+	cp FISHGROUP_BRONZOR
+	jr z, .bronzor
 
 .done
 	dec d
@@ -117,11 +117,11 @@ GetFishGroupIndex:
 	ld d, FISHGROUP_QWILFISH_SWARM
 	jr .done
 
-.remoraid
+.bronzor
 	ld a, [wFishingSwarmFlag]
-	cp FISHSWARM_REMORAID
+	cp FISHSWARM_BRONZOR
 	jr nz, .done
-	ld d, FISHGROUP_REMORAID_SWARM
+	ld d, FISHGROUP_BRONZOR_SWARM
 	jr .done
 
 INCLUDE "data/wild/fish.asm"

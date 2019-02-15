@@ -222,19 +222,19 @@ EvosAttacksPointers::
 	dw MagcargoEvosAttacks
 	dw SwinubEvosAttacks
 	dw PiloswineEvosAttacks
-	dw CorsolaEvosAttacks
-	dw RemoraidEvosAttacks
-	dw OctilleryEvosAttacks
-	dw DelibirdEvosAttacks
-	dw MantineEvosAttacks
-	dw SkarmoryEvosAttacks
-	dw HoundourEvosAttacks
-	dw HoundoomEvosAttacks
-	dw KingdraEvosAttacks
-	dw PhanpyEvosAttacks
-	dw DonphanEvosAttacks
-	dw Place4EvosAttacks
-	dw StantlerEvosAttacks
+	dw GolurkEvosAttacks
+	dw BronzorEvosAttacks
+	dw BronzongEvosAttacks
+	dw HonedgeEvosAttacks
+	dw DoubladeEvosAttacks
+	dw AegislashEvosAttacks
+	dw PawniardEvosAttacks
+	dw BisharpEvosAttacks
+	dw YamaskEvosAttacks
+	dw CofagrigusEvosAttacks
+	dw LitwickEvosAttacks
+	dw LampentEvosAttacks
+	dw ChandelureEvosAttacks
 	dw SpiritombEvosAttacks
 	dw DuskullEvosAttacks
 	dw DusclopsEvosAttacks
