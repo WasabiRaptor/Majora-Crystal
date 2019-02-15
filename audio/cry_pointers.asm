@@ -1,6 +1,6 @@
 Cries:
-	dba Cry_Nidoran_M
-	dba Cry_Nidoran_F
+	dba Cry_Gurdurr
+	dba Cry_Espurr
 	dba Cry_Slowpoke
 	dba Cry_Kangaskhan
 	dba Cry_Flareon
@@ -8,8 +8,8 @@ Cries:
 	dba Cry_Voltorb
 	dba Cry_Muk
 	dba Cry_Oddish
-	dba Cry_Raichu
-	dba Cry_Nidoqueen
+	dba Cry_Rotom
+	dba Cry_Timburr
 	dba Cry_Diglett
 	dba Cry_Seel
 	dba Cry_Drowzee
@@ -22,9 +22,9 @@ Cries:
 	dba Cry_Magnezone
 	dba Cry_Lycanroc
 	dba Cry_Zorua
-	dba Cry_Ekans
-	dba Cry_Fearow
-	dba Cry_Clefairy
+	dba Cry_Togepi
+	dba Cry_Persian
+	dba Cry_Purrloin
 	dba Cry_Venonat
 	dba Cry_Lapras
 	dba Cry_Zoroark
@@ -37,17 +37,17 @@ Cries:
 	dba Cry_Vileplume
 	dba Cry_Vulpix
 	dba Cry_Weepinbell
-	dba Cry_Marill
+	dba Cry_Braixen
 	dba Cry_Spinarak
-	dba Cry_Togepi
+	dba Cry_Heidreigon
 	dba Cry_Girafarig
 	dba Cry_Raikou
-	dba Cry_Mareep
-	dba Cry_Togetic
+	dba Cry_Litten
+	dba Cry_Cyndaquil
 	dba Cry_Hoothoot
 	dba Cry_Sentret
 	dba Cry_Slowking
-	dba Cry_Cyndaquil
+	dba Cry_Abomasnow
 	dba Cry_Chikorita
 	dba Cry_Totodile
 	dba Cry_Gligar
@@ -57,11 +57,11 @@ Cries:
 	dba Cry_Entei
 	dba Cry_Wooper
 	dba Cry_Mantine
-	dba Cry_Typhlosion
-	dba Cry_Natu
+	dba Cry_Ferrothorn
+	dba Cry_Quilava
 	dba Cry_Teddiursa
 	dba Cry_Sunflora
-	dba Cry_Ampharos
+	dba Cry_Incineroar
 	dba Cry_Magcargo
 	dba Cry_Pichu
 	dba Cry_Aipom

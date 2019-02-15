@@ -10,7 +10,7 @@ SometimesFleeMons:
 	db PLACE3
 	db DRATINI
 	db DRAGONAIR
-	db TOGETIC
+	db CYNDAQUIL
 	db UMBREONX
 	db UNOWN
 	db SNUBBULL

@@ -20,21 +20,21 @@ FramesPointers:
 	dw Porygon2Frames
 	dw PorygonZFrames
 	dw MeowthFrames
-	dw FearowFrames
-	dw EkansFrames
-	dw ArbokFrames
-	dw PikachuFrames
-	dw RaichuFrames
-	dw SandshrewFrames
-	dw SandslashFrames
-	dw NidoranFFrames
-	dw NidorinaFrames
-	dw NidoqueenFrames
-	dw NidoranMFrames
-	dw NidorinoFrames
-	dw NidokingFrames
-	dw ClefairyFrames
-	dw ClefableFrames
+	dw PersianFrames
+	dw TogepiFrames
+	dw TogeticFrames
+	dw TogekissFrames
+	dw RotomFrames
+	dw ChinglingFrames
+	dw ChimechoFrames
+	dw EspurrFrames
+	dw Meowstic_MFrames
+	dw TimburrFrames
+	dw GurdurrFrames
+	dw ConkeldurrFrames
+	dw DittoFrames
+	dw PurrloinFrames
+	dw LiepardFrames
 	dw VulpixFrames
 	dw NinetalesFrames
 	dw JigglypuffFrames
@@ -51,7 +51,7 @@ FramesPointers:
 	dw DiglettFrames
 	dw DugtrioFrames
 	dw Place5Frames
-	dw PersianFrames
+	dw PersianXFrames
 	dw PsyduckFrames
 	dw GolduckFrames
 	dw MankeyFrames
@@ -130,7 +130,7 @@ FramesPointers:
 	dw MagikarpFrames
 	dw GyaradosFrames
 	dw LaprasFrames
-	dw DittoFrames
+	dw DewpiderFrames
 	dw EeveexFrames
 	dw VaporeonxFrames
 	dw JolteonxFrames
@@ -153,9 +153,9 @@ FramesPointers:
 	dw ChikoritaFrames
 	dw BayleefFrames
 	dw MeganiumFrames
-	dw CyndaquilFrames
-	dw QuilavaFrames
-	dw TyphlosionFrames
+	dw AbomasnowFrames
+	dw FerroseedFrames
+	dw FerrothornFrames
 	dw TotodileFrames
 	dw CroconawFrames
 	dw FeraligatrFrames
@@ -173,16 +173,16 @@ FramesPointers:
 	dw PichuFrames
 	dw CleffaFrames
 	dw IgglybuffFrames
-	dw TogepiFrames
-	dw TogeticFrames
-	dw NatuFrames
-	dw XatuFrames
-	dw MareepFrames
-	dw FlaaffyFrames
-	dw AmpharosFrames
-	dw BellossomFrames
-	dw MarillFrames
-	dw AzumarillFrames
+	dw HeidreigonFrames
+	dw CyndaquilFrames
+	dw QuilavaFrames
+	dw TyphlosionFrames
+	dw LittenFrames
+	dw TorracatFrames
+	dw IncineroarFrames
+	dw FennekinFrames
+	dw BraixenFrames
+	dw DelphoxFrames
 	dw SudowoodoFrames
 	dw PolitoedFrames
 	dw HoppipFrames

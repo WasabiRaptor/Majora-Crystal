@@ -5,15 +5,15 @@ AlphabeticalPokedexOrder:
 	db AERODACTYL
 	db AIPOM
 	db ALAKAZAM
-	db AMPHAROS
-	db ARBOK
+	db INCINEROAR
+	db TOGETIC
 	db ARCANINE
 	db ARIADOS
 	db ARTICUNOX
-	db AZUMARILL
+	db DELPHOX
 	db BAYLEEF
 	db MAGNEMITE
-	db BELLOSSOM
+	db FENNEKIN
 	db BELLSPROUT
 	db SYLVEON
 	db SUICUNE
@@ -27,19 +27,19 @@ AlphabeticalPokedexOrder:
 	db ESPEON
 	db CHIKORITA
 	db CHINCHOU
-	db CLEFABLE
-	db CLEFAIRY
+	db LIEPARD
+	db PURRLOIN
 	db CLEFFA
 	db CLOYSTER
 	db CORSOLA
 	db CROBAT
 	db CROCONAW
 	db CUBONE
-	db CYNDAQUIL
+	db ABOMASNOW
 	db DELIBIRD
 	db DEWGONG
 	db DIGLETT
-	db DITTO
+	db DEWPIDER
 	db DODRIO
 	db DODUO
 	db DONPHAN
@@ -50,7 +50,7 @@ AlphabeticalPokedexOrder:
 	db DUGTRIO
 	db DUNSPARCE
 	db EEVEEX
-	db EKANS
+	db TOGEPI
 	db ELECTABUZZ
 	db ELECTRODE
 	db ARTICUNO
@@ -59,9 +59,9 @@ AlphabeticalPokedexOrder:
 	db EXEGGCUTE
 	db EXEGGUTOR
 	db FARFETCH_D
-	db FEAROW
+	db PERSIAN
 	db FERALIGATR
-	db FLAAFFY
+	db TORRACAT
 	db FLAREONX
 	db FORRETRESS
 	db FURRET
@@ -126,8 +126,8 @@ AlphabeticalPokedexOrder:
 	db PLACEHOLDER2
 	db MANKEY
 	db MANTINE
-	db MAREEP
-	db MARILL
+	db LITTEN
+	db BRAIXEN
 	db MAROWAK
 	db MEGANIUM
 	db PLACE5
@@ -140,13 +140,13 @@ AlphabeticalPokedexOrder:
 	db MR__MIME
 	db MUK
 	db MURKROW
-	db NATU
-	db NIDOKING
-	db NIDOQUEEN
-	db NIDORAN_F
-	db NIDORAN_M
-	db NIDORINA
-	db NIDORINO
+	db QUILAVA
+	db DITTO
+	db TIMBURR
+	db ESPURR
+	db GURDURR
+	db MEOWSTIC_M
+	db CONKELDURR
 	db NINETALES
 	db NOCTOWL
 	db OCTILLERY
@@ -156,13 +156,13 @@ AlphabeticalPokedexOrder:
 	db ONIX
 	db PARAS
 	db PARASECT
-	db PERSIAN
+	db PERSIANX
 	db PHANPY
 	db PICHU
 	db PORYGON
 	db MAGNEZONE
 	db MAGNETON
-	db PIKACHU
+	db TOGEKISS
 	db PILOSWINE
 	db PINECO
 	db PINSIR
@@ -177,9 +177,9 @@ AlphabeticalPokedexOrder:
 	db PSYDUCK
 	db SILVALLY
 	db QUAGSIRE
-	db QUILAVA
+	db FERROSEED
 	db QWILFISH
-	db RAICHU
+	db ROTOM
 	db RAIKOU
 	db RAPIDASH
 	db PORYGONZ
@@ -187,8 +187,8 @@ AlphabeticalPokedexOrder:
 	db REMORAID
 	db RHYDON
 	db RHYHORN
-	db SANDSHREW
-	db SANDSLASH
+	db CHINGLING
+	db CHIMECHO
 	db SCIZOR
 	db SCYTHER
 	db SEADRA
@@ -226,10 +226,10 @@ AlphabeticalPokedexOrder:
 	db TEDDIURSA
 	db TENTACOOL
 	db TENTACRUEL
-	db TOGEPI
-	db TOGETIC
+	db HEIDREIGON
+	db CYNDAQUIL
 	db TOTODILE
-	db TYPHLOSION
+	db FERROTHORN
 	db MAGEARNA
 	db TYROGUE
 	db UMBREONX
@@ -250,7 +250,7 @@ AlphabeticalPokedexOrder:
 	db WIGGLYTUFF
 	db WOBBUFFET
 	db WOOPER
-	db XATU
+	db TYPHLOSION
 	db YANMA
 	db ZAPDOSX
 	db ZUBAT

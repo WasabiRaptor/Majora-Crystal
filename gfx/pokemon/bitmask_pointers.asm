@@ -20,21 +20,21 @@ BitmasksPointers:
 	dw Porygon2Bitmasks
 	dw PorygonZBitmasks
 	dw MeowthBitmasks
-	dw FearowBitmasks
-	dw EkansBitmasks
-	dw ArbokBitmasks
-	dw PikachuBitmasks
-	dw RaichuBitmasks
-	dw SandshrewBitmasks
-	dw SandslashBitmasks
-	dw NidoranFBitmasks
-	dw NidorinaBitmasks
-	dw NidoqueenBitmasks
-	dw NidoranMBitmasks
-	dw NidorinoBitmasks
-	dw NidokingBitmasks
-	dw ClefairyBitmasks
-	dw ClefableBitmasks
+	dw PersianBitmasks
+	dw TogepiBitmasks
+	dw TogeticBitmasks
+	dw TogekissBitmasks
+	dw RotomBitmasks
+	dw ChinglingBitmasks
+	dw ChimechoBitmasks
+	dw EspurrBitmasks
+	dw Meowstic_MBitmasks
+	dw TimburrBitmasks
+	dw GurdurrBitmasks
+	dw ConkeldurrBitmasks
+	dw DittoBitmasks
+	dw PurrloinBitmasks
+	dw LiepardBitmasks
 	dw VulpixBitmasks
 	dw NinetalesBitmasks
 	dw JigglypuffBitmasks
@@ -51,7 +51,7 @@ BitmasksPointers:
 	dw DiglettBitmasks
 	dw DugtrioBitmasks
 	dw Place5Bitmasks
-	dw PersianBitmasks
+	dw PersianXBitmasks
 	dw PsyduckBitmasks
 	dw GolduckBitmasks
 	dw MankeyBitmasks
@@ -130,7 +130,7 @@ BitmasksPointers:
 	dw MagikarpBitmasks
 	dw GyaradosBitmasks
 	dw LaprasBitmasks
-	dw DittoBitmasks
+	dw DewpiderBitmasks
 	dw EeveexBitmasks
 	dw VaporeonxBitmasks
 	dw JolteonxBitmasks
@@ -153,9 +153,9 @@ BitmasksPointers:
 	dw ChikoritaBitmasks
 	dw BayleefBitmasks
 	dw MeganiumBitmasks
-	dw CyndaquilBitmasks
-	dw QuilavaBitmasks
-	dw TyphlosionBitmasks
+	dw AbomasnowBitmasks
+	dw FerroseedBitmasks
+	dw FerrothornBitmasks
 	dw TotodileBitmasks
 	dw CroconawBitmasks
 	dw FeraligatrBitmasks
@@ -173,16 +173,16 @@ BitmasksPointers:
 	dw PichuBitmasks
 	dw CleffaBitmasks
 	dw IgglybuffBitmasks
-	dw TogepiBitmasks
-	dw TogeticBitmasks
-	dw NatuBitmasks
-	dw XatuBitmasks
-	dw MareepBitmasks
-	dw FlaaffyBitmasks
-	dw AmpharosBitmasks
-	dw BellossomBitmasks
-	dw MarillBitmasks
-	dw AzumarillBitmasks
+	dw HeidreigonBitmasks
+	dw CyndaquilBitmasks
+	dw QuilavaBitmasks
+	dw TyphlosionBitmasks
+	dw LittenBitmasks
+	dw TorracatBitmasks
+	dw IncineroarBitmasks
+	dw FennekinBitmasks
+	dw BraixenBitmasks
+	dw DelphoxBitmasks
 	dw SudowoodoBitmasks
 	dw PolitoedBitmasks
 	dw HoppipBitmasks

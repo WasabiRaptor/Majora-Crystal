@@ -2,8 +2,8 @@
 	const_def
 
 ; gen 1
-	const CRY_NIDORAN_M
-	const CRY_NIDORAN_F
+	const CRY_GURDURR
+	const CRY_ESPURR
 	const CRY_SLOWPOKE
 	const CRY_KANGASKHAN
 	const CRY_CHARMANDER
@@ -11,8 +11,8 @@
 	const CRY_VOLTORB
 	const CRY_MUK
 	const CRY_ODDISH
-	const CRY_RAICHU
-	const CRY_NIDOQUEEN
+	const CRY_ROTOM
+	const CRY_TIMBURR
 	const CRY_DIGLETT
 	const CRY_SEEL
 	const CRY_DROWZEE
@@ -25,9 +25,9 @@
 	const CRY_MAGNEZONE
 	const CRY_WEEDLE
 	const CRY_CATERPIE
-	const CRY_EKANS
-	const CRY_FEAROW
-	const CRY_CLEFAIRY
+	const CRY_TOGEPI
+	const CRY_PERSIAN
+	const CRY_PURRLOIN
 	const CRY_VENONAT
 	const CRY_LAPRAS
 	const CRY_METAPOD
@@ -42,17 +42,17 @@
 	const CRY_WEEPINBELL
 
 ; gen 2
-	const CRY_MARILL
+	const CRY_BRAIXEN
 	const CRY_SPINARAK
-	const CRY_TOGEPI
+	const CRY_HEIDREIGON
 	const CRY_GIRAFARIG
 	const CRY_RAIKOU
-	const CRY_MAREEP
-	const CRY_TOGETIC
+	const CRY_LITTEN
+	const CRY_CYNDAQUIL
 	const CRY_HOOTHOOT
 	const CRY_SENTRET
 	const CRY_SLOWKING
-	const CRY_CYNDAQUIL
+	const CRY_ABOMASNOW
 	const CRY_CHIKORITA
 	const CRY_TOTODILE
 	const CRY_GLIGAR
@@ -62,11 +62,11 @@
 	const CRY_ENTEI
 	const CRY_WOOPER
 	const CRY_MANTINE
-	const CRY_TYPHLOSION
-	const CRY_NATU
+	const CRY_FERROTHORN
+	const CRY_QUILAVA
 	const CRY_TEDDIURSA
 	const CRY_SUNFLORA
-	const CRY_AMPHAROS
+	const CRY_INCINEROAR
 	const CRY_MAGCARGO
 	const CRY_PICHU
 	const CRY_AIPOM

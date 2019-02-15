@@ -21,16 +21,16 @@ EggMovePointers::
 	dw NoEggMoves
 	dw MeowthEggMoves
 	dw NoEggMoves
-	dw EkansEggMoves
+	dw TogepiEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw SandshrewEggMoves
+	dw ChinglingEggMoves
 	dw NoEggMoves
-	dw NidoranFEggMoves
+	dw EspurrEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw NidoranMEggMoves
+	dw GurdurrEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
@@ -157,7 +157,7 @@ endc
 	dw ChikoritaEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw CyndaquilEggMoves
+	dw AbomasnowEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw TotodileEggMoves
@@ -177,15 +177,15 @@ endc
 	dw PichuEggMoves
 	dw CleffaEggMoves
 	dw IgglybuffEggMoves
-	dw TogepiEggMoves
+	dw HeidreigonEggMoves
 	dw NoEggMoves
-	dw NatuEggMoves
+	dw QuilavaEggMoves
 	dw NoEggMoves
-	dw MareepEggMoves
+	dw LittenEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw MarillEggMoves
+	dw BraixenEggMoves
 	dw NoEggMoves
 	dw SudowoodoEggMoves
 	dw NoEggMoves

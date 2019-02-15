@@ -1,4 +1,4 @@
-	db EKANS ; 023
+	db TOGEPI ; 023
 
 	db  35,  60,  44,  55,  40,  54
     evs  0,   1,   0,   0,   0,   0
@@ -10,7 +10,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/ekans/front.dimensions"
+	INCBIN "gfx/pokemon/togepi/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate

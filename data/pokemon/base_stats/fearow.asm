@@ -1,4 +1,4 @@
-	db FEAROW ; 022
+	db PERSIAN ; 022
 
 	db  65,  90,  65, 100,  61,  61
     evs  0,   0,   0,   2,   0,   0
@@ -10,7 +10,7 @@
 	db NO_ITEM, SHARP_BEAK ; items
 	db GENDER_F50 ; gender ratio
 	db 15 ; step cycles to hatch
-	INCBIN "gfx/pokemon/fearow/front.dimensions"
+	INCBIN "gfx/pokemon/persian/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate

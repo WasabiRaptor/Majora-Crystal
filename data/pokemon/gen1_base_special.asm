@@ -22,21 +22,21 @@ KantoMonSpecials:
 	db  25 ; PORYGON2
 	db  50 ; PORYGONZ
 	db  31 ; MEOWTH
-	db  61 ; FEAROW
-	db  40 ; EKANS
-	db  65 ; ARBOK
-	db  50 ; PIKACHU
-	db  90 ; RAICHU
-	db  30 ; SANDSHREW
-	db  55 ; SANDSLASH
-	db  40 ; NIDORAN_F
-	db  55 ; NIDORINA
-	db  75 ; NIDOQUEEN
-	db  40 ; NIDORAN_M
-	db  55 ; NIDORINO
-	db  75 ; NIDOKING
-	db  60 ; CLEFAIRY
-	db  85 ; CLEFABLE
+	db  61 ; PERSIAN
+	db  40 ; TOGEPI
+	db  65 ; TOGETIC
+	db  50 ; TOGEKISS
+	db  90 ; ROTOM
+	db  30 ; CHINGLING
+	db  55 ; CHIMECHO
+	db  40 ; ESPURR
+	db  55 ; MEOWSTIC_M
+	db  75 ; TIMBURR
+	db  40 ; GURDURR
+	db  55 ; CONKELDURR
+	db  75 ; DITTO
+	db  60 ; PURRLOIN
+	db  85 ; LIEPARD
 	db  65 ; VULPIX
 	db 100 ; NINETALES
 	db  25 ; JIGGLYPUFF
@@ -53,7 +53,7 @@ KantoMonSpecials:
 	db  45 ; DIGLETT
 	db  70 ; DUGTRIO
 	db  40 ; PLACE5
-	db  65 ; PERSIAN
+	db  65 ; PERSIANX
 	db  50 ; PSYDUCK
 	db  80 ; GOLDUCK
 	db  35 ; MANKEY
@@ -132,7 +132,7 @@ KantoMonSpecials:
 	db  20 ; MAGIKARP
 	db 100 ; GYARADOS
 	db  95 ; LAPRAS
-	db  48 ; DITTO
+	db  48 ; DEWPIDER
 	db  65 ; EEVEEX
 	db 110 ; VAPOREONX
 	db 110 ; JOLTEONX

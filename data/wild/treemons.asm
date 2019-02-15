@@ -36,7 +36,7 @@ TreeMonSet_Canyon:
 TreeMonSet_Town:
 ; common
 	db 50, MEOWTH,    10
-	db 15, EKANS,      10
+	db 15, TOGEPI,      10
 	db 15, MEOWTH,    10
 	db 10, AIPOM,      10
 	db  5, AIPOM,      10
@@ -72,7 +72,7 @@ TreeMonSet_Route:
 TreeMonSet_Kanto:
 ; common
 	db 50, HOOTHOOT,   10
-	db 15, EKANS,      10
+	db 15, TOGEPI,      10
 	db 15, HOOTHOOT,   10
 	db 10, EXEGGCUTE,  10
 	db  5, EXEGGCUTE,  10

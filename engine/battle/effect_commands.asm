@@ -2765,12 +2765,12 @@ ThickClubBoost:
 LightBallBoost:
 ; Return in hl the stat value at hl.
 
-; If the attacking monster is Pikachu and it's
+; If the attacking monster is Togekiss and it's
 ; holding a Light Ball, double it.
 	push bc
 	push de
-	ld b, PIKACHU
-	ld c, PIKACHU
+	ld b, TOGEKISS
+	ld c, TOGEKISS
 	ld d, LIGHT_BALL
 	call SpeciesItemBoost
 	pop de

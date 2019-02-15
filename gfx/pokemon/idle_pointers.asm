@@ -20,21 +20,21 @@ AnimationIdlePointers:
 	dw Porygon2AnimationIdle
 	dw PorygonZAnimationIdle
 	dw MeowthAnimationIdle
-	dw FearowAnimationIdle
-	dw EkansAnimationIdle
-	dw ArbokAnimationIdle
-	dw PikachuAnimationIdle
-	dw RaichuAnimationIdle
-	dw SandshrewAnimationIdle
-	dw SandslashAnimationIdle
-	dw NidoranFAnimationIdle
-	dw NidorinaAnimationIdle
-	dw NidoqueenAnimationIdle
-	dw NidoranMAnimationIdle
-	dw NidorinoAnimationIdle
-	dw NidokingAnimationIdle
-	dw ClefairyAnimationIdle
-	dw ClefableAnimationIdle
+	dw PersianAnimationIdle
+	dw TogepiAnimationIdle
+	dw TogeticAnimationIdle
+	dw TogekissAnimationIdle
+	dw RotomAnimationIdle
+	dw ChinglingAnimationIdle
+	dw ChimechoAnimationIdle
+	dw EspurrAnimationIdle
+	dw Meowstic_MAnimationIdle
+	dw TimburrAnimationIdle
+	dw GurdurrAnimationIdle
+	dw ConkeldurrAnimationIdle
+	dw DittoAnimationIdle
+	dw PurrloinAnimationIdle
+	dw LiepardAnimationIdle
 	dw VulpixAnimationIdle
 	dw NinetalesAnimationIdle
 	dw JigglypuffAnimationIdle
@@ -51,7 +51,7 @@ AnimationIdlePointers:
 	dw DiglettAnimationIdle
 	dw DugtrioAnimationIdle
 	dw Place5AnimationIdle
-	dw PersianAnimationIdle
+	dw PersianXAnimationIdle
 	dw PsyduckAnimationIdle
 	dw GolduckAnimationIdle
 	dw MankeyAnimationIdle
@@ -130,7 +130,7 @@ AnimationIdlePointers:
 	dw MagikarpAnimationIdle
 	dw GyaradosAnimationIdle
 	dw LaprasAnimationIdle
-	dw DittoAnimationIdle
+	dw DewpiderAnimationIdle
 	dw EeveexAnimationIdle
 	dw VaporeonxAnimationIdle
 	dw JolteonxAnimationIdle
@@ -153,9 +153,9 @@ AnimationIdlePointers:
 	dw ChikoritaAnimationIdle
 	dw BayleefAnimationIdle
 	dw MeganiumAnimationIdle
-	dw CyndaquilAnimationIdle
-	dw QuilavaAnimationIdle
-	dw TyphlosionAnimationIdle
+	dw AbomasnowAnimationIdle
+	dw FerroseedAnimationIdle
+	dw FerrothornAnimationIdle
 	dw TotodileAnimationIdle
 	dw CroconawAnimationIdle
 	dw FeraligatrAnimationIdle
@@ -173,16 +173,16 @@ AnimationIdlePointers:
 	dw PichuAnimationIdle
 	dw CleffaAnimationIdle
 	dw IgglybuffAnimationIdle
-	dw TogepiAnimationIdle
-	dw TogeticAnimationIdle
-	dw NatuAnimationIdle
-	dw XatuAnimationIdle
-	dw MareepAnimationIdle
-	dw FlaaffyAnimationIdle
-	dw AmpharosAnimationIdle
-	dw BellossomAnimationIdle
-	dw MarillAnimationIdle
-	dw AzumarillAnimationIdle
+	dw HeidreigonAnimationIdle
+	dw CyndaquilAnimationIdle
+	dw QuilavaAnimationIdle
+	dw TyphlosionAnimationIdle
+	dw LittenAnimationIdle
+	dw TorracatAnimationIdle
+	dw IncineroarAnimationIdle
+	dw FennekinAnimationIdle
+	dw BraixenAnimationIdle
+	dw DelphoxAnimationIdle
 	dw SudowoodoAnimationIdle
 	dw PolitoedAnimationIdle
 	dw HoppipAnimationIdle

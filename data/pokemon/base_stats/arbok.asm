@@ -1,4 +1,4 @@
-	db ARBOK ; 024
+	db TOGETIC ; 024
 
 	db  60,  85,  69,  80,  65,  79
     evs  0,   2,   0,   0,   0,   0
@@ -10,7 +10,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/arbok/front.dimensions"
+	INCBIN "gfx/pokemon/togetic/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate

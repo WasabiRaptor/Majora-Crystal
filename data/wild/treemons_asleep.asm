@@ -8,7 +8,7 @@ AsleepTreeMonsNite:
 	db MIMIKYU
 	db MAGNEMITE
 	db MEOWTH
-	db EKANS
+	db TOGEPI
 	db EXEGGCUTE
 	db LEDYBA
 	db AIPOM

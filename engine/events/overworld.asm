@@ -419,7 +419,7 @@ AlreadySurfingText:
 	db "@"
 
 GetSurfType:
-; Surfing on Pikachu uses an alternate sprite.
+; Surfing on Togekiss uses an alternate sprite.
 ; This is done by using a separate movement type.
 
 	ld a, [wCurPartyMon]
@@ -429,7 +429,7 @@ GetSurfType:
 	add hl, de
 
 	ld a, [hl]
-	cp PIKACHU
+	cp TOGEKISS
 	ld a, PLAYER_SURF_PIKA
 	ret z
 	ld a, PLAYER_SURF

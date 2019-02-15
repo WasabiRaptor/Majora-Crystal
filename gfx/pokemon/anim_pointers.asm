@@ -20,21 +20,21 @@ AnimationPointers:
 	dw Porygon2Animation
 	dw PorygonZAnimation
 	dw MeowthAnimation
-	dw FearowAnimation
-	dw EkansAnimation
-	dw ArbokAnimation
-	dw PikachuAnimation
-	dw RaichuAnimation
-	dw SandshrewAnimation
-	dw SandslashAnimation
-	dw NidoranFAnimation
-	dw NidorinaAnimation
-	dw NidoqueenAnimation
-	dw NidoranMAnimation
-	dw NidorinoAnimation
-	dw NidokingAnimation
-	dw ClefairyAnimation
-	dw ClefableAnimation
+	dw PersianAnimation
+	dw TogepiAnimation
+	dw TogeticAnimation
+	dw TogekissAnimation
+	dw RotomAnimation
+	dw ChinglingAnimation
+	dw ChimechoAnimation
+	dw EspurrAnimation
+	dw Meowstic_MAnimation
+	dw TimburrAnimation
+	dw GurdurrAnimation
+	dw ConkeldurrAnimation
+	dw DittoAnimation
+	dw PurrloinAnimation
+	dw LiepardAnimation
 	dw VulpixAnimation
 	dw NinetalesAnimation
 	dw JigglypuffAnimation
@@ -51,7 +51,7 @@ AnimationPointers:
 	dw DiglettAnimation
 	dw DugtrioAnimation
 	dw Place5Animation
-	dw PersianAnimation
+	dw PersianXAnimation
 	dw PsyduckAnimation
 	dw GolduckAnimation
 	dw MankeyAnimation
@@ -130,7 +130,7 @@ AnimationPointers:
 	dw MagikarpAnimation
 	dw GyaradosAnimation
 	dw LaprasAnimation
-	dw DittoAnimation
+	dw DewpiderAnimation
 	dw EeveexAnimation
 	dw VaporeonxAnimation
 	dw JolteonxAnimation
@@ -153,9 +153,9 @@ AnimationPointers:
 	dw ChikoritaAnimation
 	dw BayleefAnimation
 	dw MeganiumAnimation
-	dw CyndaquilAnimation
-	dw QuilavaAnimation
-	dw TyphlosionAnimation
+	dw AbomasnowAnimation
+	dw FerroseedAnimation
+	dw FerrothornAnimation
 	dw TotodileAnimation
 	dw CroconawAnimation
 	dw FeraligatrAnimation
@@ -173,16 +173,16 @@ AnimationPointers:
 	dw PichuAnimation
 	dw CleffaAnimation
 	dw IgglybuffAnimation
-	dw TogepiAnimation
-	dw TogeticAnimation
-	dw NatuAnimation
-	dw XatuAnimation
-	dw MareepAnimation
-	dw FlaaffyAnimation
-	dw AmpharosAnimation
-	dw BellossomAnimation
-	dw MarillAnimation
-	dw AzumarillAnimation
+	dw HeidreigonAnimation
+	dw CyndaquilAnimation
+	dw QuilavaAnimation
+	dw TyphlosionAnimation
+	dw LittenAnimation
+	dw TorracatAnimation
+	dw IncineroarAnimation
+	dw FennekinAnimation
+	dw BraixenAnimation
+	dw DelphoxAnimation
 	dw SudowoodoAnimation
 	dw PolitoedAnimation
 	dw HoppipAnimation

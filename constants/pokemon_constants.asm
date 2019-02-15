@@ -39,22 +39,22 @@
 	const PORYGON2    	; 13
 	const PORYGONZ   	; 14
 	const MEOWTH    	; 15
+	const PERSIAN     	; 16
+	const TOGEPI      	; 17
+	const TOGETIC      	; 18
+	const TOGEKISS    	; 19
+	const ROTOM     	; 1a
+	const CHINGLING  	; 1b
+	const CHIMECHO  	; 1c
+	const ESPURR  		; 1d
+	const MEOWSTIC_M   	; 1e
+	const TIMBURR  		; 1f
+	const GURDURR  		; 20
+	const CONKELDURR   	; 21
+	const DITTO   		; 22
+	const PURRLOIN   	; 23
+	const LIEPARD   	; 24
 
-	const FEAROW     ; 16
-	const EKANS      ; 17
-	const ARBOK      ; 18
-	const PIKACHU    ; 19
-	const RAICHU     ; 1a
-	const SANDSHREW  ; 1b
-	const SANDSLASH  ; 1c
-	const NIDORAN_F  ; 1d
-	const NIDORINA   ; 1e
-	const NIDOQUEEN  ; 1f
-	const NIDORAN_M  ; 20
-	const NIDORINO   ; 21
-	const NIDOKING   ; 22
-	const CLEFAIRY   ; 23
-	const CLEFABLE   ; 24
 	const VULPIX     ; 25
 	const NINETALES  ; 26
 	const JIGGLYPUFF ; 27
@@ -71,7 +71,7 @@
 	const DIGLETT    ; 32
 	const DUGTRIO    ; 33
 	const PLACE5     ; 34
-	const PERSIAN    ; 35
+	const PERSIANX    ; 35
 	const PSYDUCK    ; 36
 	const GOLDUCK    ; 37
 	const MANKEY     ; 38
@@ -150,7 +150,9 @@
 	const MAGIKARP   ; 81
 	const GYARADOS   ; 82
 	const LAPRAS     ; 83
-	const DITTO      ; 84
+
+	const DEWPIDER      ; 84
+
 	const EEVEEX      ; 85
 	const VAPOREONX   ; 86
 	const JOLTEONX    ; 87
@@ -174,9 +176,11 @@ JOHTO_POKEMON EQU const_value
 	const CHIKORITA  ; 98
 	const BAYLEEF    ; 99
 	const MEGANIUM   ; 9a
-	const CYNDAQUIL  ; 9b
-	const QUILAVA    ; 9c
-	const TYPHLOSION ; 9d
+
+	const ABOMASNOW  	; 9b
+	const FERROSEED    	; 9c
+	const FERROTHORN ; 9d
+
 	const TOTODILE   ; 9e
 	const CROCONAW   ; 9f
 	const FERALIGATR ; a0
@@ -194,16 +198,18 @@ JOHTO_POKEMON EQU const_value
 	const PICHU      ; ac
 	const CLEFFA     ; ad
 	const IGGLYBUFF  ; ae
-	const TOGEPI     ; af
-	const TOGETIC    ; b0
-	const NATU       ; b1
-	const XATU       ; b2
-	const MAREEP     ; b3
-	const FLAAFFY    ; b4
-	const AMPHAROS   ; b5
-	const BELLOSSOM  ; b6
-	const MARILL     ; b7
-	const AZUMARILL  ; b8
+
+	const HEIDREIGON    ; af
+	const CYNDAQUIL    	; b0	
+	const QUILAVA       ; b1
+	const TYPHLOSION    ; b2
+	const LITTEN     	; b3
+	const TORRACAT    	; b4
+	const INCINEROAR   	; b5
+	const FENNEKIN  	; b6
+	const BRAIXEN     	; b7
+	const DELPHOX  		; b8
+
 	const SUDOWOODO  ; b9
 	const POLITOED   ; ba
 	const HOPPIP     ; bb

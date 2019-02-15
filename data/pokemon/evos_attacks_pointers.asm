@@ -22,21 +22,21 @@ EvosAttacksPointers::
 	dw Porygon2EvosAttacks
 	dw PorygonZEvosAttacks
 	dw MeowthEvosAttacks
-	dw FearowEvosAttacks
-	dw EkansEvosAttacks
-	dw ArbokEvosAttacks
-	dw PikachuEvosAttacks
-	dw RaichuEvosAttacks
-	dw SandshrewEvosAttacks
-	dw SandslashEvosAttacks
-	dw NidoranFEvosAttacks
-	dw NidorinaEvosAttacks
-	dw NidoqueenEvosAttacks
-	dw NidoranMEvosAttacks
-	dw NidorinoEvosAttacks
-	dw NidokingEvosAttacks
-	dw ClefairyEvosAttacks
-	dw ClefableEvosAttacks
+	dw PersianEvosAttacks
+	dw TogepiEvosAttacks
+	dw TogeticEvosAttacks
+	dw TogekissEvosAttacks
+	dw RotomEvosAttacks
+	dw ChinglingEvosAttacks
+	dw ChimechoEvosAttacks
+	dw EspurrEvosAttacks
+	dw Meowstic_MEvosAttacks
+	dw TimburrEvosAttacks
+	dw GurdurrEvosAttacks
+	dw ConkeldurrEvosAttacks
+	dw DittoEvosAttacks
+	dw PurrloinEvosAttacks
+	dw LiepardEvosAttacks
 	dw KantoVulpixEvosAttacks
 	dw KantoNinetalesEvosAttacks
 	dw JigglypuffEvosAttacks
@@ -53,7 +53,7 @@ EvosAttacksPointers::
 	dw DiglettEvosAttacks
 	dw DugtrioEvosAttacks
 	dw Place5EvosAttacks
-	dw PersianEvosAttacks
+	dw PersianXEvosAttacks
 	dw PsyduckEvosAttacks
 	dw GolduckEvosAttacks
 	dw MankeyEvosAttacks
@@ -132,7 +132,7 @@ EvosAttacksPointers::
 	dw MagikarpEvosAttacks
 	dw GyaradosEvosAttacks
 	dw LaprasEvosAttacks
-	dw DittoEvosAttacks
+	dw DewpiderEvosAttacks
 	dw EeveexEvosAttacks
 	dw VaporeonxEvosAttacks
 	dw JolteonxEvosAttacks
@@ -155,9 +155,9 @@ EvosAttacksPointers::
 	dw ChikoritaEvosAttacks
 	dw BayleefEvosAttacks
 	dw MeganiumEvosAttacks
-	dw CyndaquilEvosAttacks
-	dw QuilavaEvosAttacks
-	dw TyphlosionEvosAttacks
+	dw AbomasnowEvosAttacks
+	dw FerroseedEvosAttacks
+	dw FerrothornEvosAttacks
 	dw TotodileEvosAttacks
 	dw CroconawEvosAttacks
 	dw FeraligatrEvosAttacks
@@ -175,16 +175,16 @@ EvosAttacksPointers::
 	dw PichuEvosAttacks
 	dw CleffaEvosAttacks
 	dw IgglybuffEvosAttacks
-	dw TogepiEvosAttacks
-	dw TogeticEvosAttacks
-	dw NatuEvosAttacks
-	dw XatuEvosAttacks
-	dw MareepEvosAttacks
-	dw FlaaffyEvosAttacks
-	dw AmpharosEvosAttacks
-	dw BellossomEvosAttacks
-	dw MarillEvosAttacks
-	dw AzumarillEvosAttacks
+	dw HeidreigonEvosAttacks
+	dw CyndaquilEvosAttacks
+	dw QuilavaEvosAttacks
+	dw TyphlosionEvosAttacks
+	dw LittenEvosAttacks
+	dw TorracatEvosAttacks
+	dw IncineroarEvosAttacks
+	dw FennekinEvosAttacks
+	dw BraixenEvosAttacks
+	dw DelphoxEvosAttacks
 	dw SudowoodoEvosAttacks
 	dw PolitoedEvosAttacks
 	dw HoppipEvosAttacks

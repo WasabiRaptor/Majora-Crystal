@@ -69,7 +69,7 @@ MeowthEggMoves:
 	db TRI_ATTACK
 	db -1 ; end
 
-EkansEggMoves:
+TogepiEggMoves:
 	db PURSUIT
 	db SLAM
 	db SPITE
@@ -79,7 +79,7 @@ if _BRASS
 endc
 	db -1 ; end
 
-SandshrewEggMoves:
+ChinglingEggMoves:
 	db FLAIL
 	db SAFEGUARD
 	db COUNTER
@@ -89,7 +89,7 @@ if _BRASS
 endc
 	db -1 ; end
 
-NidoranFEggMoves:
+EspurrEggMoves:
 	db SUPERSONIC
 	db DISABLE
 	db TAKE_DOWN
@@ -99,7 +99,7 @@ NidoranFEggMoves:
 	db BEAT_UP
 	db -1 ; end
 
-NidoranMEggMoves:
+GurdurrEggMoves:
 	db SUPERSONIC
 	db DISABLE
 	db TAKE_DOWN
@@ -498,7 +498,7 @@ ChikoritaEggMoves:
 	db SWORDS_DANCE
 	db -1 ; end
 
-CyndaquilEggMoves:
+AbomasnowEggMoves:
 	db FURY_SWIPES
 	db QUICK_ATTACK
 	db REVERSAL
@@ -580,7 +580,7 @@ IgglybuffEggMoves:
 	db FAINT_ATTACK
 	db -1 ; end
 
-TogepiEggMoves:
+HeidreigonEggMoves:
 	db PRESENT
 	db MIRROR_MOVE
 	db PECK
@@ -588,7 +588,7 @@ TogepiEggMoves:
 	db FUTURE_SIGHT
 	db -1 ; end
 
-NatuEggMoves:
+QuilavaEggMoves:
 	db HAZE
 	db DRILL_PECK
 	db QUICK_ATTACK
@@ -596,7 +596,7 @@ NatuEggMoves:
 	db STEEL_WING
 	db -1 ; end
 
-MareepEggMoves:
+LittenEggMoves:
 	db THUNDERBOLT
 	db TAKE_DOWN
 	db BODY_SLAM
@@ -605,7 +605,7 @@ MareepEggMoves:
 	db REFLECT
 	db -1 ; end
 
-MarillEggMoves:
+BraixenEggMoves:
 	db LIGHT_SCREEN
 	db PRESENT
 	db AMNESIA

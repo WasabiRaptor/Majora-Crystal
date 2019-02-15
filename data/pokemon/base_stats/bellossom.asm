@@ -1,4 +1,4 @@
-	db BELLOSSOM ; 182
+	db FENNEKIN ; 182
 
 	db  75,  80,  85,  50,  90, 100
     evs  0,   0,   0,   0,   0,   3
@@ -10,7 +10,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/bellossom/front.dimensions"
+	INCBIN "gfx/pokemon/fennekin/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_SLOW ; growth rate

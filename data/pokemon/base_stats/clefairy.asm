@@ -1,4 +1,4 @@
-	db CLEFAIRY ; 035
+	db PURRLOIN ; 035
 
 	db  70,  45,  48,  35,  60,  65
     evs  2,   0,   0,   0,   0,   0
@@ -10,7 +10,7 @@
 	db MYSTERYBERRY, MOON_STONE ; items
 	db GENDER_F75 ; gender ratio
 	db 10 ; step cycles to hatch
-	INCBIN "gfx/pokemon/clefairy/front.dimensions"
+	INCBIN "gfx/pokemon/purrloin/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_FAST ; growth rate

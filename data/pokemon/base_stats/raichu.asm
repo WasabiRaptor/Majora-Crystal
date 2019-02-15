@@ -1,4 +1,4 @@
-	db RAICHU ; 026
+	db ROTOM ; 026
 
 	db  60,  90,  55, 100,  90,  80
     evs  0,   0,   0,   3,   0,   0
@@ -10,7 +10,7 @@
 	db NO_ITEM, BERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 10 ; step cycles to hatch
-	INCBIN "gfx/pokemon/raichu/front.dimensions"
+	INCBIN "gfx/pokemon/rotom/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate

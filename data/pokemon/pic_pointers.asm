@@ -44,36 +44,36 @@ PokemonPicPointers::
 	dba PorygonZBackpic
 	dba MeowthFrontpic
 	dba MeowthBackpic
-	dba FearowFrontpic
-	dba FearowBackpic
-	dba EkansFrontpic
-	dba EkansBackpic
-	dba ArbokFrontpic
-	dba ArbokBackpic
-	dba PikachuFrontpic
-	dba PikachuBackpic
-	dba RaichuFrontpic
-	dba RaichuBackpic
-	dba SandshrewFrontpic
-	dba SandshrewBackpic
-	dba SandslashFrontpic
-	dba SandslashBackpic
-	dba NidoranFFrontpic
-	dba NidoranFBackpic
-	dba NidorinaFrontpic
-	dba NidorinaBackpic
-	dba NidoqueenFrontpic
-	dba NidoqueenBackpic
-	dba NidoranMFrontpic
-	dba NidoranMBackpic
-	dba NidorinoFrontpic
-	dba NidorinoBackpic
-	dba NidokingFrontpic
-	dba NidokingBackpic
-	dba ClefairyFrontpic
-	dba ClefairyBackpic
-	dba ClefableFrontpic
-	dba ClefableBackpic
+	dba PersianFrontpic
+	dba PersianBackpic
+	dba TogepiFrontpic
+	dba TogepiBackpic
+	dba TogeticFrontpic
+	dba TogeticBackpic
+	dba TogekissFrontpic
+	dba TogekissBackpic
+	dba RotomFrontpic
+	dba RotomBackpic
+	dba ChinglingFrontpic
+	dba ChinglingBackpic
+	dba ChimechoFrontpic
+	dba ChimechoBackpic
+	dba EspurrFrontpic
+	dba EspurrBackpic
+	dba Meowstic_MFrontpic
+	dba Meowstic_MBackpic
+	dba TimburrFrontpic
+	dba TimburrBackpic
+	dba GurdurrFrontpic
+	dba GurdurrBackpic
+	dba ConkeldurrFrontpic
+	dba ConkeldurrBackpic
+	dba DittoFrontpic
+	dba DittoBackpic
+	dba PurrloinFrontpic
+	dba PurrloinBackpic
+	dba LiepardFrontpic
+	dba LiepardBackpic
 
 	;Vulpix and Nineteales now have their own table, like Unown so that they may have alternate forms
 	dbw -1, -1
@@ -110,8 +110,8 @@ PokemonPicPointers::
 	dba DugtrioBackpic
 	dba Place5Frontpic
 	dba Place5Backpic
-	dba PersianFrontpic
-	dba PersianBackpic
+	dba PersianXFrontpic
+	dba PersianXBackpic
 	dba PsyduckFrontpic
 	dba PsyduckBackpic
 	dba GolduckFrontpic
@@ -268,8 +268,8 @@ PokemonPicPointers::
 	dba GyaradosBackpic
 	dba LaprasFrontpic
 	dba LaprasBackpic
-	dba DittoFrontpic
-	dba DittoBackpic
+	dba DewpiderFrontpic
+	dba DewpiderBackpic
 	dba EeveexFrontpic
 	dba EeveeBackpic
 	dba VaporeonxFrontpic
@@ -314,12 +314,12 @@ PokemonPicPointers::
 	dba BayleefBackpic
 	dba MeganiumFrontpic
 	dba MeganiumBackpic
-	dba CyndaquilFrontpic
-	dba CyndaquilBackpic
-	dba QuilavaFrontpic
-	dba QuilavaBackpic
-	dba TyphlosionFrontpic
-	dba TyphlosionBackpic
+	dba AbomasnowFrontpic
+	dba AbomasnowBackpic
+	dba FerroseedFrontpic
+	dba FerroseedBackpic
+	dba FerrothornFrontpic
+	dba FerrothornBackpic
 	dba TotodileFrontpic
 	dba TotodileBackpic
 	dba CroconawFrontpic
@@ -354,26 +354,26 @@ PokemonPicPointers::
 	dba CleffaBackpic
 	dba IgglybuffFrontpic
 	dba IgglybuffBackpic
-	dba TogepiFrontpic
-	dba TogepiBackpic
-	dba TogeticFrontpic
-	dba TogeticBackpic
-	dba NatuFrontpic
-	dba NatuBackpic
-	dba XatuFrontpic
-	dba XatuBackpic
-	dba MareepFrontpic
-	dba MareepBackpic
-	dba FlaaffyFrontpic
-	dba FlaaffyBackpic
-	dba AmpharosFrontpic
-	dba AmpharosBackpic
-	dba BellossomFrontpic
-	dba BellossomBackpic
-	dba MarillFrontpic
-	dba MarillBackpic
-	dba AzumarillFrontpic
-	dba AzumarillBackpic
+	dba HeidreigonFrontpic
+	dba HeidreigonBackpic
+	dba CyndaquilFrontpic
+	dba CyndaquilBackpic
+	dba QuilavaFrontpic
+	dba QuilavaBackpic
+	dba TyphlosionFrontpic
+	dba TyphlosionBackpic
+	dba LittenFrontpic
+	dba LittenBackpic
+	dba TorracatFrontpic
+	dba TorracatBackpic
+	dba IncineroarFrontpic
+	dba IncineroarBackpic
+	dba FennekinFrontpic
+	dba FennekinBackpic
+	dba BraixenFrontpic
+	dba BraixenBackpic
+	dba DelphoxFrontpic
+	dba DelphoxBackpic
 	dba SudowoodoFrontpic
 	dba SudowoodoBackpic
 	dba PolitoedFrontpic

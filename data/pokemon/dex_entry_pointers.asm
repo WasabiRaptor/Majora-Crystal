@@ -21,21 +21,21 @@ PokedexDataPointerTable:
 	dw Porygon2PokedexEntry
 	dw PorygonZPokedexEntry
 	dw MeowthPokedexEntry
-	dw FearowPokedexEntry
-	dw EkansPokedexEntry
-	dw ArbokPokedexEntry
-	dw PikachuPokedexEntry
-	dw RaichuPokedexEntry
-	dw SandshrewPokedexEntry
-	dw SandslashPokedexEntry
-	dw NidoranFPokedexEntry
-	dw NidorinaPokedexEntry
-	dw NidoqueenPokedexEntry
-	dw NidoranMPokedexEntry
-	dw NidorinoPokedexEntry
-	dw NidokingPokedexEntry
-	dw ClefairyPokedexEntry
-	dw ClefablePokedexEntry
+	dw PersianPokedexEntry
+	dw TogepiPokedexEntry
+	dw TogeticPokedexEntry
+	dw TogekissPokedexEntry
+	dw RotomPokedexEntry
+	dw ChinglingPokedexEntry
+	dw ChimechoPokedexEntry
+	dw EspurrPokedexEntry
+	dw Meowstic_MPokedexEntry
+	dw TimburrPokedexEntry
+	dw GurdurrPokedexEntry
+	dw ConkeldurrPokedexEntry
+	dw DittoPokedexEntry
+	dw PurrloinPokedexEntry
+	dw LiepardPokedexEntry
 	dw VulpixPokedexEntry
 	dw NinetalesPokedexEntry
 	dw JigglypuffPokedexEntry
@@ -52,7 +52,7 @@ PokedexDataPointerTable:
 	dw DiglettPokedexEntry
 	dw DugtrioPokedexEntry
 	dw Place5PokedexEntry
-	dw PersianPokedexEntry
+	dw PersianXPokedexEntry
 	dw PsyduckPokedexEntry
 	dw GolduckPokedexEntry
 	dw MankeyPokedexEntry
@@ -131,7 +131,7 @@ PokedexDataPointerTable:
 	dw MagikarpPokedexEntry
 	dw GyaradosPokedexEntry
 	dw LaprasPokedexEntry
-	dw DittoPokedexEntry
+	dw DewpiderPokedexEntry
 	dw EeveexPokedexEntry
 	dw VaporeonxPokedexEntry
 	dw JolteonxPokedexEntry
@@ -154,9 +154,9 @@ PokedexDataPointerTable:
 	dw ChikoritaPokedexEntry
 	dw BayleefPokedexEntry
 	dw MeganiumPokedexEntry
-	dw CyndaquilPokedexEntry
-	dw QuilavaPokedexEntry
-	dw TyphlosionPokedexEntry
+	dw AbomasnowPokedexEntry
+	dw FerroseedPokedexEntry
+	dw FerrothornPokedexEntry
 	dw TotodilePokedexEntry
 	dw CroconawPokedexEntry
 	dw FeraligatrPokedexEntry
@@ -174,16 +174,16 @@ PokedexDataPointerTable:
 	dw PichuPokedexEntry
 	dw CleffaPokedexEntry
 	dw IgglybuffPokedexEntry
-	dw TogepiPokedexEntry
-	dw TogeticPokedexEntry
-	dw NatuPokedexEntry
-	dw XatuPokedexEntry
-	dw MareepPokedexEntry
-	dw FlaaffyPokedexEntry
-	dw AmpharosPokedexEntry
-	dw BellossomPokedexEntry
-	dw MarillPokedexEntry
-	dw AzumarillPokedexEntry
+	dw HeidreigonPokedexEntry
+	dw CyndaquilPokedexEntry
+	dw QuilavaPokedexEntry
+	dw TyphlosionPokedexEntry
+	dw LittenPokedexEntry
+	dw TorracatPokedexEntry
+	dw IncineroarPokedexEntry
+	dw FennekinPokedexEntry
+	dw BraixenPokedexEntry
+	dw DelphoxPokedexEntry
 	dw SudowoodoPokedexEntry
 	dw PolitoedPokedexEntry
 	dw HoppipPokedexEntry

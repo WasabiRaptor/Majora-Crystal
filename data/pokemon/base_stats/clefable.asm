@@ -1,4 +1,4 @@
-	db CLEFABLE ; 036
+	db LIEPARD ; 036
 
 	db  95,  70,  73,  60,  85,  90
     evs  3,   0,   0,   0,   0,   0
@@ -10,7 +10,7 @@
 	db MYSTERYBERRY, MOON_STONE ; items
 	db GENDER_F75 ; gender ratio
 	db 10 ; step cycles to hatch
-	INCBIN "gfx/pokemon/clefable/front.dimensions"
+	INCBIN "gfx/pokemon/liepard/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_FAST ; growth rate
