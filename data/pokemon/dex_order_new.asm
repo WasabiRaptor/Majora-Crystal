@@ -143,10 +143,10 @@ NewPokedexOrder:
 	db MACHOP
 	db MACHOKE
 	db MACHAMP
-	db TYROGUE
+	db DUSKULL
 	db HITMONLEE
 	db HITMONCHAN
-	db HITMONTOP
+	db DUSCLOPS
 	db GIRAFARIG
 	db TAUROS
 	db MOLTRES
@@ -166,7 +166,7 @@ NewPokedexOrder:
 	db TENTACRUEL
 	db KRABBY
 	db KINGLER
-	db SHUCKLE
+	db UNOWN
 	db STARYU
 	db STARMIE
 	db SHELLDER
@@ -235,9 +235,9 @@ NewPokedexOrder:
 	db LEAFEON
 	db GLACEON
 	db SYLVEON
-	db ARTICUNOX
-	db ZAPDOSX
-	db MOLTRESX
+	db DWEBBLE
+	db CRUSTLE
+	db TYROGUE
 	db RAIKOU
 	db ENTEI
 	db LATIAS

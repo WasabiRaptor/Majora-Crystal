@@ -10,7 +10,7 @@
 	db MOOMOO_MILK, MOOMOO_MILK ; items
 	db GENDER_F100 ; gender ratio
 	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/miltank/front.dimensions"
+	INCBIN "gfx/pokemon/moltres/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_SLOW ; growth rate

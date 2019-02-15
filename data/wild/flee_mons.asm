@@ -19,9 +19,9 @@ SometimesFleeMons:
 
 OftenFleeMons:
 	db CUBONE
-	db ARTICUNOX
-	db ZAPDOSX
-	db MOLTRESX
+	db DWEBBLE
+	db CRUSTLE
+	db TYROGUE
 	db QUAGSIRE
 	db DELIBIRD
 	db PHANPY

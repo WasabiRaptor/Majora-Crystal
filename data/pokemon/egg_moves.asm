@@ -717,7 +717,7 @@ QwilfishEggMoves:
 	db SUPERSONIC
 	db -1 ; end
 
-ShuckleEggMoves:
+UnownEggMoves:
 	db SWEET_SCENT
 	db -1 ; end
 
@@ -825,21 +825,21 @@ StantlerEggMoves:
 	db BITE
 	db -1 ; end
 
-TyrogueEggMoves:
+DuskullEggMoves:
 	db RAPID_SPIN
 	db HI_JUMP_KICK
 	db MACH_PUNCH
 	db MIND_READER
 	db -1 ; end
 
-SmoochumEggMoves:
+DusknoirEggMoves:
 if !_BRASS
 	db LOVELY_KISS
 endc
 	db MEDITATE
 	db -1 ; end
 
-ElekidEggMoves:
+ArticunoEggMoves:
 	db KARATE_CHOP
 	db BARRIER
 	db ROLLING_KICK
@@ -849,7 +849,7 @@ if _BRASS
 endc
 	db -1 ; end
 
-MagbyEggMoves:
+ZapdosEggMoves:
 	db KARATE_CHOP
 	db MEGA_PUNCH
 	db BARRIER
@@ -859,13 +859,13 @@ if _BRASS
 endc
 	db -1 ; end
 
-MiltankEggMoves:
+MoltresEggMoves:
 	db PRESENT
 	db REVERSAL
 	db SEISMIC_TOSS
 	db -1 ; end
 
-LarvitarEggMoves:
+LatiosEggMoves:
 	db PURSUIT
 	db STOMP
 	db OUTRAGE

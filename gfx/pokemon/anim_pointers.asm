@@ -142,9 +142,9 @@ AnimationPointers:
 	dw KabutopsAnimation
 	dw AerodactylAnimation
 	dw SnorlaxAnimation
-	dw ArticunoAnimation
-	dw ZapdosAnimation
-	dw MoltresAnimation
+	dw DwebbleAnimation
+	dw CrustleAnimation
+	dw TyrogueAnimation
 	dw DratiniAnimation
 	dw DragonairAnimation
 	dw DragoniteAnimation
@@ -199,7 +199,7 @@ AnimationPointers:
 	dw MurkrowAnimation
 	dw SlowkingAnimation
 	dw MisdreavusAnimation
-	dw UnownAnimation
+	dw CarbinkAnimation
 	dw WobbuffetAnimation
 	dw GirafarigAnimation
 	dw PinecoAnimation
@@ -211,7 +211,7 @@ AnimationPointers:
 	dw GranbullAnimation
 	dw QwilfishAnimation
 	dw ScizorAnimation
-	dw ShuckleAnimation
+	dw UnownAnimation
 	dw HeracrossAnimation
 	dw SneaselAnimation
 	dw TeddiursaAnimation
@@ -234,21 +234,21 @@ AnimationPointers:
 	dw Place4Animation
 	dw StantlerAnimation
 	dw SmeargleAnimation
-	dw TyrogueAnimation
-	dw HitmontopAnimation
-	dw SmoochumAnimation
-	dw ElekidAnimation
-	dw MagbyAnimation
-	dw MiltankAnimation
-	dw BlisseyAnimation
+	dw DuskullAnimation
+	dw DusclopsAnimation
+	dw DusknoirAnimation
+	dw ArticunoAnimation
+	dw ZapdosAnimation
+	dw MoltresAnimation
+	dw SuicuneAnimation
 	dw RaikouAnimation
 	dw EnteiAnimation
-	dw SuicuneAnimation
-	dw LarvitarAnimation
-	dw PupitarAnimation
-	dw TyranitarAnimation
-	dw LugiaAnimation
-	dw HoOhAnimation
+	dw LatiasAnimation
+	dw LatiosAnimation
+	dw SilvallyAnimation
+	dw MagearnaAnimation
+	dw ShayminAnimation
 	dw CelebiAnimation
-	dw GlazeonAnimation
+	dw ZygardeAnimation
+	dw MewAnimation
 	dw MewtwoAnimation

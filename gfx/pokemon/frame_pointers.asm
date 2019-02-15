@@ -142,9 +142,9 @@ FramesPointers:
 	dw KabutopsFrames
 	dw AerodactylFrames
 	dw SnorlaxFrames
-	dw ArticunoFrames
-	dw ZapdosFrames
-	dw MoltresFrames
+	dw DwebbleFrames
+	dw CrustleFrames
+	dw TyrogueFrames
 	dw DratiniFrames
 	dw DragonairFrames
 	dw DragoniteFrames
@@ -199,7 +199,7 @@ FramesPointers:
 	dw MurkrowFrames
 	dw SlowkingFrames
 	dw MisdreavusFrames
-	dw UnownFrames
+	dw CarbinkFrames
 	dw WobbuffetFrames
 	dw GirafarigFrames
 	dw PinecoFrames
@@ -211,7 +211,7 @@ FramesPointers:
 	dw GranbullFrames
 	dw QwilfishFrames
 	dw ScizorFrames
-	dw ShuckleFrames
+	dw UnownFrames
 	dw HeracrossFrames
 	dw SneaselFrames
 	dw TeddiursaFrames
@@ -234,21 +234,21 @@ FramesPointers:
 	dw Place4Frames
 	dw StantlerFrames
 	dw SmeargleFrames
-	dw TyrogueFrames
-	dw HitmontopFrames
-	dw SmoochumFrames
-	dw ElekidFrames
-	dw MagbyFrames
-	dw MiltankFrames
-	dw BlisseyFrames
+	dw DuskullFrames
+	dw DusclopsFrames
+	dw DusknoirFrames
+	dw ArticunoFrames
+	dw ZapdosFrames
+	dw MoltresFrames
+	dw SuicuneFrames
 	dw RaikouFrames
 	dw EnteiFrames
-	dw SuicuneFrames
-	dw LarvitarFrames
-	dw PupitarFrames
-	dw TyranitarFrames
-	dw LugiaFrames
-	dw HoOhFrames
+	dw LatiasFrames
+	dw LatiosFrames
+	dw SilvallyFrames
+	dw MagearnaFrames
+	dw ShayminFrames
 	dw CelebiFrames
-	dw GlazeonFrames
+	dw ZygardeFrames
+	dw MewFrames
 	dw MewtwoFrames

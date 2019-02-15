@@ -10,7 +10,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F25 ; gender ratio
 	db 25 ; step cycles to hatch
-	INCBIN "gfx/pokemon/elekid/front.dimensions"
+	INCBIN "gfx/pokemon/articuno/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate

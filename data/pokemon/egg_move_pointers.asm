@@ -215,7 +215,7 @@ endc
 	dw NoEggMoves
 	dw QwilfishEggMoves
 	dw NoEggMoves
-	dw ShuckleEggMoves
+	dw UnownEggMoves
 	dw HeracrossEggMoves
 	dw SneaselEggMoves
 	dw TeddiursaEggMoves
@@ -238,17 +238,17 @@ endc
 	dw NoEggMoves
 	dw StantlerEggMoves
 	dw NoEggMoves
-	dw TyrogueEggMoves
+	dw DuskullEggMoves
 	dw NoEggMoves
-	dw SmoochumEggMoves
-	dw ElekidEggMoves
-	dw MagbyEggMoves
-	dw MiltankEggMoves
-	dw NoEggMoves
-	dw NoEggMoves
+	dw DusknoirEggMoves
+	dw ArticunoEggMoves
+	dw ZapdosEggMoves
+	dw MoltresEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw LarvitarEggMoves
+	dw NoEggMoves
+	dw NoEggMoves
+	dw LatiosEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

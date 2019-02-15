@@ -10,7 +10,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 120 ; step cycles to hatch
-	INCBIN "gfx/pokemon/lugia/front.dimensions"
+	INCBIN "gfx/pokemon/shaymin/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_SLOW ; growth rate

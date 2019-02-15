@@ -62,7 +62,8 @@
 	const NIDOKING     	; 2a
 	const NIDOQUEEN     ; 2b
 	const SEVIPER      	; 2c
-	const ZANGOOSE  ; 2d
+	const ZANGOOSE  	; 2d
+
 	const PARAS      ; 2e
 	const PARASECT   ; 2f
 	const VENONAT    ; 30
@@ -163,16 +164,18 @@
 	const KABUTOPS   ; 8d
 	const AERODACTYL ; 8e
 	const SNORLAX    ; 8f
-	const ARTICUNOX   ; 90
-	const ZAPDOSX     ; 91
-	const MOLTRESX    ; 92
+
+	const DWEBBLE   	; 90
+	const CRUSTLE     	; 91
+	const TYROGUE    	; 92
+
 	const DRATINI    ; 93
 	const DRAGONAIR  ; 94
 	const DRAGONITE  ; 95
 
-	const RIOLU     ; 96
-	
-	const LUCARIO        ; 97
+	const RIOLU     	; 96
+	const LUCARIO       ; 97
+
 JOHTO_POKEMON EQU const_value
 	const CHIKORITA  ; 98
 	const BAYLEEF    ; 99
@@ -180,7 +183,7 @@ JOHTO_POKEMON EQU const_value
 
 	const ABOMASNOW  	; 9b
 	const FERROSEED    	; 9c
-	const FERROTHORN ; 9d
+	const FERROTHORN 	; 9d
 
 	const TOTODILE   ; 9e
 	const CROCONAW   ; 9f
@@ -228,7 +231,7 @@ JOHTO_POKEMON EQU const_value
 	const SLOWKING   ; c7
 	const MISDREAVUS ; c8
 
-	const CARBINK      ; c9
+	const CARBINK      	; c9
 
 	const WOBBUFFET  ; ca
 	const GIRAFARIG  ; cb
@@ -241,7 +244,9 @@ JOHTO_POKEMON EQU const_value
 	const GRANBULL   ; d2
 	const QWILFISH   ; d3
 	const SCIZOR     ; d4
-	const SHUCKLE    ; d5
+
+	const UNOWN    		; d5
+
 	const HERACROSS  ; d6
 	const SNEASEL    ; d7
 	const TEDDIURSA  ; d8
@@ -264,24 +269,24 @@ JOHTO_POKEMON EQU const_value
 	const PLACE4   ; e9
 	const STANTLER   ; ea
 	const SMEARGLE   ; eb
-	const TYROGUE    ; ec
-	const HITMONTOP  ; ed
-	const DUSKNOIR   ; ee
-	const ARTICUNO   ; ef
-	const ZAPDOS     ; f0
-	const MOLTRES    ; f1
-	const SUICUNE    ; f2
-	const RAIKOU     ; f3
-	const ENTEI      ; f4
-	const LATIAS     ; f5
-	const LATIOS     ; f6
-	const SILVALLY   ; f7
-	const MAGEARNA   ; f8
-	const SHAYMIN    ; f9
-	const CELEBI     ; fa
-	const ZYGARDE    ; fb
-	const MEW        ; fc
-	const MEWTWO     ; fd
+	const DUSKULL    	; ec
+	const DUSCLOPS  	; ed
+	const DUSKNOIR   	; ee
+	const ARTICUNO   	; ef
+	const ZAPDOS     	; f0
+	const MOLTRES    	; f1
+	const SUICUNE    	; f2
+	const RAIKOU     	; f3
+	const ENTEI      	; f4
+	const LATIAS     	; f5
+	const LATIOS     	; f6
+	const SILVALLY   	; f7
+	const MAGEARNA   	; f8
+	const SHAYMIN    	; f9
+	const CELEBI     	; fa
+	const ZYGARDE    	; fb
+	const MEW        	; fc
+	const MEWTWO     	; fd
 NUM_POKEMON EQU const_value + -1
 	const EGG        ; fe
 

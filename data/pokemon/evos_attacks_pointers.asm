@@ -144,9 +144,9 @@ EvosAttacksPointers::
 	dw KabutopsEvosAttacks
 	dw AerodactylEvosAttacks
 	dw SnorlaxEvosAttacks
-	dw ArticunoEvosAttacks
-	dw ZapdosEvosAttacks
-	dw MoltresEvosAttacks
+	dw DwebbleEvosAttacks
+	dw CrustleEvosAttacks
+	dw TyrogueEvosAttacks
 	dw DratiniEvosAttacks
 	dw DragonairEvosAttacks
 	dw DragoniteEvosAttacks
@@ -201,7 +201,7 @@ EvosAttacksPointers::
 	dw MurkrowEvosAttacks
 	dw SlowkingEvosAttacks
 	dw MisdreavusEvosAttacks
-	dw UnownEvosAttacks
+	dw CarbinkEvosAttacks
 	dw WobbuffetEvosAttacks
 	dw GirafarigEvosAttacks
 	dw PinecoEvosAttacks
@@ -213,7 +213,7 @@ EvosAttacksPointers::
 	dw GranbullEvosAttacks
 	dw QwilfishEvosAttacks
 	dw ScizorEvosAttacks
-	dw ShuckleEvosAttacks
+	dw UnownEvosAttacks
 	dw HeracrossEvosAttacks
 	dw SneaselEvosAttacks
 	dw TeddiursaEvosAttacks
@@ -236,21 +236,21 @@ EvosAttacksPointers::
 	dw Place4EvosAttacks
 	dw StantlerEvosAttacks
 	dw SmeargleEvosAttacks
-	dw TyrogueEvosAttacks
-	dw HitmontopEvosAttacks
-	dw SmoochumEvosAttacks
-	dw ElekidEvosAttacks
-	dw MagbyEvosAttacks
-	dw MiltankEvosAttacks
-	dw BlisseyEvosAttacks
+	dw DuskullEvosAttacks
+	dw DusclopsEvosAttacks
+	dw DusknoirEvosAttacks
+	dw ArticunoEvosAttacks
+	dw ZapdosEvosAttacks
+	dw MoltresEvosAttacks
+	dw SuicuneEvosAttacks
 	dw RaikouEvosAttacks
 	dw EnteiEvosAttacks
-	dw SuicuneEvosAttacks
-	dw LarvitarEvosAttacks
-	dw PupitarEvosAttacks
-	dw TyranitarEvosAttacks
-	dw LugiaEvosAttacks
-	dw HoOhEvosAttacks
+	dw LatiasEvosAttacks
+	dw LatiosEvosAttacks
+	dw SilvallyEvosAttacks
+	dw MagearnaEvosAttacks
+	dw ShayminEvosAttacks
 	dw CelebiEvosAttacks
-	dw GlazeonEvosAttacks
+	dw ZygardeEvosAttacks
+	dw MewEvosAttacks
 	dw MewtwoEvosAttacks

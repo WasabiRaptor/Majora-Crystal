@@ -143,9 +143,9 @@ PokedexDataPointerTable:
 	dw KabutopsPokedexEntry
 	dw AerodactylPokedexEntry
 	dw SnorlaxPokedexEntry
-	dw ArticunoPokedexEntry
-	dw ZapdosPokedexEntry
-	dw MoltresPokedexEntry
+	dw DwebblePokedexEntry
+	dw CrustlePokedexEntry
+	dw TyroguePokedexEntry
 	dw DratiniPokedexEntry
 	dw DragonairPokedexEntry
 	dw DragonitePokedexEntry
@@ -200,7 +200,7 @@ PokedexDataPointerTable:
 	dw MurkrowPokedexEntry
 	dw SlowkingPokedexEntry
 	dw MisdreavusPokedexEntry
-	dw UnownPokedexEntry
+	dw CarbinkPokedexEntry
 	dw WobbuffetPokedexEntry
 	dw GirafarigPokedexEntry
 	dw PinecoPokedexEntry
@@ -212,7 +212,7 @@ PokedexDataPointerTable:
 	dw GranbullPokedexEntry
 	dw QwilfishPokedexEntry
 	dw ScizorPokedexEntry
-	dw ShucklePokedexEntry
+	dw UnownPokedexEntry
 	dw HeracrossPokedexEntry
 	dw SneaselPokedexEntry
 	dw TeddiursaPokedexEntry
@@ -235,22 +235,22 @@ PokedexDataPointerTable:
 	dw Place4PokedexEntry
 	dw StantlerPokedexEntry
 	dw SmearglePokedexEntry
-	dw TyroguePokedexEntry
-	dw HitmontopPokedexEntry
-	dw SmoochumPokedexEntry
-	dw ElekidPokedexEntry
-	dw MagbyPokedexEntry
-	dw MiltankPokedexEntry
-	dw BlisseyPokedexEntry
+	dw DuskullPokedexEntry
+	dw DusclopsPokedexEntry
+	dw DusknoirPokedexEntry
+	dw ArticunoPokedexEntry
+	dw ZapdosPokedexEntry
+	dw MoltresPokedexEntry
+	dw SuicunePokedexEntry
 	dw RaikouPokedexEntry
 	dw EnteiPokedexEntry
-	dw SuicunePokedexEntry
-	dw LarvitarPokedexEntry
-	dw PupitarPokedexEntry
-	dw TyranitarPokedexEntry
-	dw LugiaPokedexEntry
-	dw HoOhPokedexEntry
+	dw LatiasPokedexEntry
+	dw LatiosPokedexEntry
+	dw SilvallyPokedexEntry
+	dw MagearnaPokedexEntry
+	dw ShayminPokedexEntry
 	dw CelebiPokedexEntry
-	dw GlazeonPokedexEntry
+	dw ZygardePokedexEntry
+	dw MewPokedexEntry
 	dw MewtwoPokedexEntry
 	

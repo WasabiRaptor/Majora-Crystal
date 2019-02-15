@@ -30,7 +30,7 @@ SpriteMons:
 	db VOLTORB
 	db LAPRAS
 	db RHYDON
-	db MOLTRESX
+	db TYROGUE
 	db SNORLAX
 	db GYARADOS
 	db SHAYMIN

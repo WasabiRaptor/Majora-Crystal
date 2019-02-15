@@ -292,12 +292,12 @@ PokemonPicPointers::
 	dba AerodactylBackpic
 	dba SnorlaxFrontpic
 	dba SnorlaxBackpic
-	dba ArticunoFrontpic
-	dba ArticunoBackpic
-	dba ZapdosFrontpic
-	dba ZapdosBackpic
-	dba MoltresFrontpic
-	dba MoltresBackpic
+	dba DwebbleFrontpic
+	dba DwebbleBackpic
+	dba CrustleFrontpic
+	dba CrustleBackpic
+	dba TyrogueFrontpic
+	dba TyrogueBackpic
 	dba DratiniFrontpic
 	dba DratiniBackpic
 	dba DragonairFrontpic
@@ -433,8 +433,8 @@ PokemonPicPointers::
 	dba QwilfishBackpic
 	dba ScizorFrontpic
 	dba ScizorBackpic
-	dba ShuckleFrontpic
-	dba ShuckleBackpic
+	dba UnownFrontpic
+	dba UnownBackpic
 	dba HeracrossFrontpic
 	dba HeracrossBackpic
 	dba SneaselFrontpic
@@ -479,40 +479,40 @@ PokemonPicPointers::
 	dba StantlerBackpic
 	dba SmeargleFrontpic
 	dba SmeargleBackpic
-	dba TyrogueFrontpic
-	dba TyrogueBackpic
-	dba HitmontopFrontpic
-	dba HitmontopBackpic
-	dba SmoochumFrontpic
-	dba SmoochumBackpic
-	dba ElekidFrontpic
-	dba ElekidBackpic
-	dba MagbyFrontpic
-	dba MagbyBackpic
-	dba MiltankFrontpic
-	dba MiltankBackpic
-	dba BlisseyFrontpic
-	dba BlisseyBackpic
+	dba DuskullFrontpic
+	dba DuskullBackpic
+	dba DusclopsFrontpic
+	dba DusclopsBackpic
+	dba DusknoirFrontpic
+	dba DusknoirBackpic
+	dba ArticunoFrontpic
+	dba ArticunoBackpic
+	dba ZapdosFrontpic
+	dba ZapdosBackpic
+	dba MoltresFrontpic
+	dba MoltresBackpic
+	dba SuicuneFrontpic
+	dba SuicuneBackpic
 	dba RaikouFrontpic
 	dba RaikouBackpic
 	dba EnteiFrontpic
 	dba EnteiBackpic
-	dba SuicuneFrontpic
-	dba SuicuneBackpic
-	dba LarvitarFrontpic
-	dba LarvitarBackpic
-	dba PupitarFrontpic
-	dba PupitarBackpic
-	dba TyranitarFrontpic
-	dba TyranitarBackpic
-	dba LugiaFrontpic
-	dba LugiaBackpic
-	dba HoOhFrontpic
-	dba HoOhBackpic
+	dba LatiasFrontpic
+	dba LatiasBackpic
+	dba LatiosFrontpic
+	dba LatiosBackpic
+	dba SilvallyFrontpic
+	dba SilvallyBackpic
+	dba MagearnaFrontpic
+	dba MagearnaBackpic
+	dba ShayminFrontpic
+	dba ShayminBackpic
 	dba CelebiFrontpic
 	dba CelebiBackpic
-	dba GlazeonFrontpic	
-	dba GlazeonBackpic
+	dba ZygardeFrontpic
+	dba ZygardeBackpic
+	dba MewFrontpic	
+	dba MewBackpic
 	dba MewtwoFrontpic	
 	dba MewtwoBackpic	
 	dba EggPic

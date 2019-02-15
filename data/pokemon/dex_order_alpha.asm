@@ -9,7 +9,7 @@ AlphabeticalPokedexOrder:
 	db TOGETIC
 	db ARCANINE
 	db ARIADOS
-	db ARTICUNOX
+	db DWEBBLE
 	db DELPHOX
 	db BAYLEEF
 	db MAGNEMITE
@@ -85,7 +85,7 @@ AlphabeticalPokedexOrder:
 	db HERACROSS
 	db HITMONCHAN
 	db HITMONLEE
-	db HITMONTOP
+	db DUSCLOPS
 	db CELEBI
 	db HOOTHOOT
 	db HOPPIP
@@ -136,7 +136,7 @@ AlphabeticalPokedexOrder:
 	db RIOLU
 	db MOLTRES
 	db MISDREAVUS
-	db MOLTRESX
+	db TYROGUE
 	db MR__MIME
 	db MUK
 	db MURKROW
@@ -196,7 +196,7 @@ AlphabeticalPokedexOrder:
 	db SEEL
 	db SENTRET
 	db SHELLDER
-	db SHUCKLE
+	db UNOWN
 	db SKARMORY
 	db SKIPLOOM
 	db SLOWBRO
@@ -231,7 +231,7 @@ AlphabeticalPokedexOrder:
 	db TOTODILE
 	db FERROTHORN
 	db MAGEARNA
-	db TYROGUE
+	db DUSKULL
 	db UMBREONX
 	db CARBINK
 	db URSARING
@@ -252,5 +252,5 @@ AlphabeticalPokedexOrder:
 	db WOOPER
 	db TYPHLOSION
 	db YANMA
-	db ZAPDOSX
+	db CRUSTLE
 	db NIDORINA

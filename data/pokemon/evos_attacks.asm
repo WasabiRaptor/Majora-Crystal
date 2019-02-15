@@ -1982,7 +1982,7 @@ SnorlaxEvosAttacks:
 	db 57, HYPER_BEAM
 	db 0 ; no more level-up moves
 
-ArticunoEvosAttacks:
+DwebbleEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, GUST
 	db 1, POWDER_SNOW
@@ -1994,7 +1994,7 @@ ArticunoEvosAttacks:
 	db 73, BLIZZARD
 	db 0 ; no more level-up moves
 
-ZapdosEvosAttacks:
+CrustleEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, THUNDERSHOCK
@@ -2006,7 +2006,7 @@ ZapdosEvosAttacks:
 	db 73, THUNDER
 	db 0 ; no more level-up moves
 
-MoltresEvosAttacks:
+TyrogueEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WING_ATTACK
 	db 1, EMBER
@@ -2760,7 +2760,7 @@ MisdreavusEvosAttacks:
 	db 46, PERISH_SONG
 	db 0 ; no more level-up moves
 
-UnownEvosAttacks:
+CarbinkEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HIDDEN_POWER
 	db 0 ; no more level-up moves
@@ -2907,7 +2907,7 @@ ScizorEvosAttacks:
 	db 48, DOUBLE_TEAM
 	db 0 ; no more level-up moves
 
-ShuckleEvosAttacks:
+UnownEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CONSTRICT
 	db 1, WITHDRAW
@@ -3202,15 +3202,15 @@ SmeargleEvosAttacks:
 	db 91, SKETCH
 	db 0 ; no more level-up moves
 
-TyrogueEvosAttacks:
+DuskullEvosAttacks:
 	db EVOLVE_STAT, 20, ATK_LT_DEF, HITMONCHAN
 	db EVOLVE_STAT, 20, ATK_GT_DEF, HITMONLEE
-	db EVOLVE_STAT, 20, ATK_EQ_DEF, HITMONTOP
+	db EVOLVE_STAT, 20, ATK_EQ_DEF, DUSCLOPS
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 0 ; no more level-up moves
 
-HitmontopEvosAttacks:
+DusclopsEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ROLLING_KICK
 	db 7, FOCUS_ENERGY
@@ -3223,7 +3223,7 @@ HitmontopEvosAttacks:
 	db 49, TRIPLE_KICK
 	db 0 ; no more level-up moves
 
-SmoochumEvosAttacks:
+DusknoirEvosAttacks:
 	db EVOLVE_LEVEL, 30, JYNX
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -3238,7 +3238,7 @@ SmoochumEvosAttacks:
 	db 49, BLIZZARD
 	db 0 ; no more level-up moves
 
-ElekidEvosAttacks:
+ArticunoEvosAttacks:
 	db EVOLVE_LEVEL, 30, ELECTABUZZ
 	db 0 ; no more evolutions
 	db 1, QUICK_ATTACK
@@ -3251,7 +3251,7 @@ ElekidEvosAttacks:
 	db 49, THUNDER
 	db 0 ; no more level-up moves
 
-MagbyEvosAttacks:
+ZapdosEvosAttacks:
 	db EVOLVE_LEVEL, 30, MAGMAR
 	db 0 ; no more evolutions
 	db 1, EMBER
@@ -3265,7 +3265,7 @@ MagbyEvosAttacks:
 	db 49, FIRE_BLAST
 	db 0 ; no more level-up moves
 
-MiltankEvosAttacks:
+MoltresEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 4, GROWL
@@ -3278,7 +3278,7 @@ MiltankEvosAttacks:
 	db 53, HEAL_BELL
 	db 0 ; no more level-up moves
 
-BlisseyEvosAttacks:
+SuicuneEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 4, GROWL
@@ -3319,7 +3319,7 @@ EnteiEvosAttacks:
 	db 71, FIRE_BLAST
 	db 0 ; no more level-up moves
 
-SuicuneEvosAttacks:
+LatiasEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BITE
 	db 1, LEER
@@ -3339,7 +3339,7 @@ endc
 	db 71, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-LarvitarEvosAttacks:
+LatiosEvosAttacks:
 	db EVOLVE_LEVEL, 30, SILVALLY
 	db 0 ; no more evolutions
 	db 1, BITE
@@ -3354,7 +3354,7 @@ LarvitarEvosAttacks:
 	db 57, HYPER_BEAM
 	db 0 ; no more level-up moves
 
-PupitarEvosAttacks:
+SilvallyEvosAttacks:
 	db EVOLVE_LEVEL, 55, MAGEARNA
 	db 0 ; no more evolutions
 	db 1, BITE
@@ -3371,7 +3371,7 @@ PupitarEvosAttacks:
 	db 65, HYPER_BEAM
 	db 0 ; no more level-up moves
 
-TyranitarEvosAttacks:
+MagearnaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BITE
 	db 1, LEER
@@ -3387,7 +3387,7 @@ TyranitarEvosAttacks:
 	db 75, HYPER_BEAM
 	db 0 ; no more level-up moves
 
-LugiaEvosAttacks:
+ShayminEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, AEROBLAST
 	db 11, SAFEGUARD
@@ -3401,7 +3401,7 @@ LugiaEvosAttacks:
 	db 99, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
-HoOhEvosAttacks:
+CelebiEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SACRED_FIRE
 	db 11, SAFEGUARD
@@ -3415,7 +3415,7 @@ HoOhEvosAttacks:
 	db 99, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
-CelebiEvosAttacks:
+ZygardeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LEECH_SEED
 	db 1, CONFUSION
@@ -3428,7 +3428,7 @@ CelebiEvosAttacks:
 	db 50, PERISH_SONG
 	db 0 ; no more level-up moves
 
-GlazeonEvosAttacks:
+MewEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP

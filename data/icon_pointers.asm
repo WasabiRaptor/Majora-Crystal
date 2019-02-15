@@ -33,8 +33,8 @@ IconPointers:
 	dw MothIcon
 	dw BatIcon
 	dw SnorlaxIcon
-	dw HoOhIcon
-	dw LugiaIcon
+	dw CelebiIcon
+	dw ShayminIcon
 	dw GyaradosIcon
 	dw SlowpokeIcon
 	dw VulpixIcon

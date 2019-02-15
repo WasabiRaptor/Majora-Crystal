@@ -10,7 +10,7 @@
 	db NO_ITEM, LUCKY_EGG ; items
 	db GENDER_F100 ; gender ratio
 	db 40 ; step cycles to hatch
-	INCBIN "gfx/pokemon/blissey/front.dimensions"
+	INCBIN "gfx/pokemon/suicune/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_FAST ; growth rate

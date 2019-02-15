@@ -10,7 +10,7 @@
 	db ICE_BERRY, ICE_BERRY ; items
 	db GENDER_F100 ; gender ratio
 	db 25 ; step cycles to hatch
-	INCBIN "gfx/pokemon/smoochum/front.dimensions"
+	INCBIN "gfx/pokemon/dusknoir/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate

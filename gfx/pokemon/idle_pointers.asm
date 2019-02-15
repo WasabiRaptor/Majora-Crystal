@@ -142,9 +142,9 @@ AnimationIdlePointers:
 	dw KabutopsAnimationIdle
 	dw AerodactylAnimationIdle
 	dw SnorlaxAnimationIdle
-	dw ArticunoAnimationIdle
-	dw ZapdosAnimationIdle
-	dw MoltresAnimationIdle
+	dw DwebbleAnimationIdle
+	dw CrustleAnimationIdle
+	dw TyrogueAnimationIdle
 	dw DratiniAnimationIdle
 	dw DragonairAnimationIdle
 	dw DragoniteAnimationIdle
@@ -199,7 +199,7 @@ AnimationIdlePointers:
 	dw MurkrowAnimationIdle
 	dw SlowkingAnimationIdle
 	dw MisdreavusAnimationIdle
-	dw UnownAnimationIdle
+	dw CarbinkAnimationIdle
 	dw WobbuffetAnimationIdle
 	dw GirafarigAnimationIdle
 	dw PinecoAnimationIdle
@@ -211,7 +211,7 @@ AnimationIdlePointers:
 	dw GranbullAnimationIdle
 	dw QwilfishAnimationIdle
 	dw ScizorAnimationIdle
-	dw ShuckleAnimationIdle
+	dw UnownAnimationIdle
 	dw HeracrossAnimationIdle
 	dw SneaselAnimationIdle
 	dw TeddiursaAnimationIdle
@@ -234,21 +234,21 @@ AnimationIdlePointers:
 	dw Place4AnimationIdle
 	dw StantlerAnimationIdle
 	dw SmeargleAnimationIdle
-	dw TyrogueAnimationIdle
-	dw HitmontopAnimationIdle
-	dw SmoochumAnimationIdle
-	dw ElekidAnimationIdle
-	dw MagbyAnimationIdle
-	dw MiltankAnimationIdle
-	dw BlisseyAnimationIdle
+	dw DuskullAnimationIdle
+	dw DusclopsAnimationIdle
+	dw DusknoirAnimationIdle
+	dw ArticunoAnimationIdle
+	dw ZapdosAnimationIdle
+	dw MoltresAnimationIdle
+	dw SuicuneAnimationIdle
 	dw RaikouAnimationIdle
 	dw EnteiAnimationIdle
-	dw SuicuneAnimationIdle
-	dw LarvitarAnimationIdle
-	dw PupitarAnimationIdle
-	dw TyranitarAnimationIdle
-	dw LugiaAnimationIdle
-	dw HoOhAnimationIdle
+	dw LatiasAnimationIdle
+	dw LatiosAnimationIdle
+	dw SilvallyAnimationIdle
+	dw MagearnaAnimationIdle
+	dw ShayminAnimationIdle
 	dw CelebiAnimationIdle
-	dw GlazeonAnimationIdle
+	dw ZygardeAnimationIdle
+	dw MewAnimationIdle
 	dw MewtwoAnimationIdle
