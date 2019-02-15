@@ -620,7 +620,7 @@ VulpixEggMoves:
 	db SELFDESTRUCT
 	db -1 ; end
 
-HoppipEggMoves:
+SlugmaEggMoves:
 	db CONFUSION
 	db GROWL
 	db ENCORE
@@ -630,7 +630,7 @@ HoppipEggMoves:
 	db PAY_DAY
 	db -1 ; end
 
-AipomEggMoves:
+HoundoomEggMoves:
 	db COUNTER
 	db SCREECH
 	db PURSUIT

@@ -69,6 +69,6 @@
 	const CRY_INCINEROAR
 	const CRY_BALTOY
 	const CRY_PICHU
-	const CRY_AIPOM
+	const CRY_HOUNDOOM
 	const CRY_CRYOGONAL
 	const CRY_LITWICK

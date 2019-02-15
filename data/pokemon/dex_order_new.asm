@@ -67,9 +67,9 @@ NewPokedexOrder:
 	db CHESPIN
 	db QUILLADIN
 	db CHESNAUGHT
-	db HOPPIP
-	db SKIPLOOM
-	db JUMPLUFF
+	db SLUGMA
+	db MAGCARGO
+	db HOUNDOUR
 	db SENTRET
 	db FURRET
 	db SANDSLASH
@@ -122,7 +122,7 @@ NewPokedexOrder:
 	db PASSIMIAN
 	db VOLTORB
 	db ELECTRODE
-	db AIPOM
+	db HOUNDOOM
 	db FROSSLASS
 	db SWINUB
 	db GRIMER

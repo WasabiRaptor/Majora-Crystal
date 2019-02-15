@@ -378,14 +378,14 @@ PokemonPicPointers::
 	dba VulpixBackpic
 	dba NinetalesFrontpic
 	dba NinetalesBackpic
-	dba HoppipFrontpic
-	dba HoppipBackpic
-	dba SkiploomFrontpic
-	dba SkiploomBackpic
-	dba JumpluffFrontpic
-	dba JumpluffBackpic
-	dba AipomFrontpic
-	dba AipomBackpic
+	dba SlugmaFrontpic
+	dba SlugmaBackpic
+	dba MagcargoFrontpic
+	dba MagcargoBackpic
+	dba HoundourFrontpic
+	dba HoundourBackpic
+	dba HoundoomFrontpic
+	dba HoundoomBackpic
 	dba FletchlingFrontpic
 	dba FletchlingBackpic
 	dba FletchinderFrontpic

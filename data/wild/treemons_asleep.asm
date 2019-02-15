@@ -11,7 +11,7 @@ AsleepTreeMonsNite:
 	db TOGEPI
 	db EXEGGCUTE
 	db LEDYBA
-	db AIPOM
+	db HOUNDOOM
 	db -1 ; end
 
 AsleepTreeMonsDay:

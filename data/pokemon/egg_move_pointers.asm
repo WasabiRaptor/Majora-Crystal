@@ -189,10 +189,10 @@ endc
 	dw NoEggMoves
 	dw VulpixEggMoves
 	dw NoEggMoves
-	dw HoppipEggMoves
+	dw SlugmaEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw AipomEggMoves
+	dw HoundoomEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw TalonflameEggMoves

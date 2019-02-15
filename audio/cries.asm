@@ -117,10 +117,10 @@ Cry_Pichu:
 	musicheader 1, 6, Cry_Pichu_Ch6
 	musicheader 1, 8, Cry_Pichu_Ch8
 
-Cry_Aipom:
-	musicheader 3, 5, Cry_Aipom_Ch5
-	musicheader 1, 6, Cry_Aipom_Ch6
-	musicheader 1, 8, Cry_Aipom_Ch8
+Cry_Houndoom:
+	musicheader 3, 5, Cry_Houndoom_Ch5
+	musicheader 1, 6, Cry_Houndoom_Ch6
+	musicheader 1, 8, Cry_Houndoom_Ch8
 
 Cry_Cryogonal:
 	musicheader 3, 5, Cry_Cryogonal_Ch5
@@ -790,7 +790,7 @@ Cry_Cleffa_Ch8:
 	noise __,  3, $61, $6b
 	endchannel
 
-Cry_Aipom_Ch5:
+Cry_Houndoom_Ch5:
 	sound_duty 2, 0, 1, 3
 	sound __,  4, $f8, $06b0
 	sound __,  2, $f8, $06a5
@@ -801,7 +801,7 @@ Cry_Aipom_Ch5:
 	sound C_,  5, $f2, $070e
 	endchannel
 
-Cry_Aipom_Ch6:
+Cry_Houndoom_Ch6:
 	sound_duty 3, 1, 2, 0
 .loop1
 	sound __,  2, $f1, $07b4
@@ -815,9 +815,9 @@ Cry_Aipom_Ch6:
 	sound C_,  1, $92, $0795
 	endchannel
 
-Cry_Aipom_Ch8:
+Cry_Houndoom_Ch8:
 	noise __,  1, $f1, $28
-	loopchannel 4, Cry_Aipom_Ch8
+	loopchannel 4, Cry_Houndoom_Ch8
 	noise __,  1, $91, $49
 	noise __,  2, $a8, $4a
 	noise __,  1, $e1, $4b

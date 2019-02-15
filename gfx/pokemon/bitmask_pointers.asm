@@ -185,10 +185,10 @@ BitmasksPointers:
 	dw DelphoxBitmasks
 	dw VulpixBitmasks
 	dw NinetalesBitmasks
-	dw HoppipBitmasks
-	dw SkiploomBitmasks
-	dw JumpluffBitmasks
-	dw AipomBitmasks
+	dw SlugmaBitmasks
+	dw MagcargoBitmasks
+	dw HoundourBitmasks
+	dw HoundoomBitmasks
 	dw FletchlingBitmasks
 	dw FletchinderBitmasks
 	dw TalonflameBitmasks

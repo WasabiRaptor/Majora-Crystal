@@ -185,10 +185,10 @@ FramesPointers:
 	dw DelphoxFrames
 	dw VulpixFrames
 	dw NinetalesFrames
-	dw HoppipFrames
-	dw SkiploomFrames
-	dw JumpluffFrames
-	dw AipomFrames
+	dw SlugmaFrames
+	dw MagcargoFrames
+	dw HoundourFrames
+	dw HoundoomFrames
 	dw FletchlingFrames
 	dw FletchinderFrames
 	dw TalonflameFrames
