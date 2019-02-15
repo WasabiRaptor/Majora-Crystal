@@ -67,9 +67,9 @@ BitmasksPointers:
 	dw IgglybuffBitmasks
 	dw JigglypuffBitmasks
 	dw WigglytuffBitmasks
-	dw BellsproutBitmasks
-	dw WeepinbellBitmasks
-	dw VictreebelBitmasks
+	dw ChespinBitmasks
+	dw QuilladinBitmasks
+	dw ChesnaughtBitmasks
 	dw TentacoolBitmasks
 	dw TentacruelBitmasks
 	dw GeodudeBitmasks

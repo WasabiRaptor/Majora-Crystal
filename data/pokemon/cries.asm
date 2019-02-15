@@ -73,16 +73,16 @@ PokemonCries::
 	mon_cry CRY_LUXRAY,   $0ee,  $081 ; IGGLYBUFF
 	mon_cry CRY_LUXRAY,   $048,  $0e0 ; JIGGLYPUFF
 	mon_cry CRY_LUXRAY,   $008,  $140 ; WIGGLYTUFF
-	mon_cry CRY_FLAAFFY,     $055,  $081 ; BELLSPROUT
-	mon_cry CRY_WEEPINBELL,  $044,  $0a0 ; WEEPINBELL
-	mon_cry CRY_WEEPINBELL,  $066,  $14c ; VICTREEBEL
+	mon_cry CRY_FLAAFFY,     $055,  $081 ; CHESPIN
+	mon_cry CRY_QUILLADIN,  $044,  $0a0 ; QUILLADIN
+	mon_cry CRY_QUILLADIN,  $066,  $14c ; CHESNAUGHT
 	mon_cry CRY_SWABLU,     $000,  $100 ; TENTACOOL
 	mon_cry CRY_SWABLU,     $0ee,  $17f ; TENTACRUEL
 	mon_cry CRY_GRIMER,      $0f0,  $090 ; GEODUDE
 	mon_cry CRY_GRIMER,      $000,  $100 ; GRAVELER
 	mon_cry CRY_GOLEM,       $0e0,  $0c0 ; GOLEM
-	mon_cry CRY_WEEPINBELL,  $000,  $100 ; PONYTA
-	mon_cry CRY_WEEPINBELL,  $020,  $140 ; RAPIDASH
+	mon_cry CRY_QUILLADIN,  $000,  $100 ; PONYTA
+	mon_cry CRY_QUILLADIN,  $020,  $140 ; RAPIDASH
 	mon_cry CRY_SLOWPOKE,    $000,  $100 ; SLOWPOKE
 	mon_cry CRY_LUXRAY,   $000,  $100 ; SLOWBRO
 	mon_cry CRY_METAPOD,     $080,  $0e0 ; PLACEHOLDER1
@@ -141,7 +141,7 @@ PokemonCries::
 	mon_cry CRY_SWABLU,     $0aa,  $17f ; VAPOREONX
 	mon_cry CRY_SWABLU,     $03d,  $100 ; JOLTEONX
 	mon_cry CRY_SWABLU,     $010,  $0a0 ; FLAREONX
-	mon_cry CRY_WEEPINBELL,  $0aa,  $17f ; PLACE3
+	mon_cry CRY_QUILLADIN,  $0aa,  $17f ; PLACE3
 	mon_cry CRY_LUXRAY,   $0f0,  $081 ; OMANYTE
 	mon_cry CRY_LUXRAY,   $0ff,  $0c0 ; OMASTAR
 	mon_cry CRY_CATERPIE,    $0bb,  $0c0 ; KABUTO

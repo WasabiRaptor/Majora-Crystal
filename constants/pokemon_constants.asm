@@ -83,13 +83,13 @@
 	const FLABEBE       ; 3f
 	const FLOETTE    	; 40
 	const FLORGES   	; 41
-
 	const IGGLYBUFF     ; 42
 	const JIGGLYPUFF    ; 43
 	const WIGGLYTUFF    ; 44
-	const BELLSPROUT ; 45
-	const WEEPINBELL ; 46
-	const VICTREEBEL ; 47
+	const CHESPIN 		; 45
+	const QUILLADIN 	; 46
+	const CHESNAUGHT 	; 47
+
 	const TENTACOOL  ; 48
 	const TENTACRUEL ; 49
 	const GEODUDE    ; 4a

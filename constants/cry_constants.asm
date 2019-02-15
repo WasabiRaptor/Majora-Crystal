@@ -39,7 +39,7 @@
 	const CRY_PORYGON2
 	const CRY_ZANGOOSE
 	const CRY_GRIMER
-	const CRY_WEEPINBELL
+	const CRY_QUILLADIN
 
 ; gen 2
 	const CRY_BRAIXEN

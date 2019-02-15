@@ -68,9 +68,9 @@ PokedexDataPointerTable:
 	dw IgglybuffPokedexEntry
 	dw JigglypuffPokedexEntry
 	dw WigglytuffPokedexEntry
-	dw BellsproutPokedexEntry
-	dw WeepinbellPokedexEntry
-	dw VictreebelPokedexEntry
+	dw ChespinPokedexEntry
+	dw QuilladinPokedexEntry
+	dw ChesnaughtPokedexEntry
 	dw TentacoolPokedexEntry
 	dw TentacruelPokedexEntry
 	dw GeodudePokedexEntry

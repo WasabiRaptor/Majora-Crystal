@@ -142,12 +142,12 @@ PokemonPicPointers::
 	dba JigglypuffBackpic
 	dba WigglytuffFrontpic
 	dba WigglytuffBackpic
-	dba BellsproutFrontpic
-	dba BellsproutBackpic
-	dba WeepinbellFrontpic
-	dba WeepinbellBackpic
-	dba VictreebelFrontpic
-	dba VictreebelBackpic
+	dba ChespinFrontpic
+	dba ChespinBackpic
+	dba QuilladinFrontpic
+	dba QuilladinBackpic
+	dba ChesnaughtFrontpic
+	dba ChesnaughtBackpic
 	dba TentacoolFrontpic
 	dba TentacoolBackpic
 	dba TentacruelFrontpic

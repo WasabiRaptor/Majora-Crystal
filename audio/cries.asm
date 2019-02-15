@@ -1012,10 +1012,10 @@ Cry_Vulpix:
 	musicheader 1, 6, Cry_Vulpix_Ch6
 	musicheader 1, 8, Cry_Vulpix_Ch8
 
-Cry_Weepinbell:
-	musicheader 3, 5, Cry_Weepinbell_Ch5
-	musicheader 1, 6, Cry_Weepinbell_Ch6
-	musicheader 1, 8, Cry_Weepinbell_Ch8
+Cry_Quilladin:
+	musicheader 3, 5, Cry_Quilladin_Ch5
+	musicheader 1, 6, Cry_Quilladin_Ch6
+	musicheader 1, 8, Cry_Quilladin_Ch8
 
 Unused_Cry_Ch5:
 	sound_duty 0, 0, 3, 3
@@ -1170,7 +1170,7 @@ Cry_Rhydon_Ch8:
 	noise __,  9, $d1, $2c
 	endchannel
 
-Cry_Weepinbell_Ch5:
+Cry_Quilladin_Ch5:
 	sound_duty 1, 1, 2, 2
 	sound __,  7, $f4, $0740
 	sound __, 16, $e3, $0730
@@ -1179,7 +1179,7 @@ Cry_Weepinbell_Ch5:
 	sound __,  9, $d1, $0750
 	endchannel
 
-Cry_Weepinbell_Ch6:
+Cry_Quilladin_Ch6:
 	sound_duty 3, 1, 3, 1
 	sound __,  7, $c3, $0712
 	sound __, 16, $b3, $0704
@@ -1188,7 +1188,7 @@ Cry_Weepinbell_Ch6:
 	sound __,  9, $b1, $0732
 	endchannel
 
-Cry_Weepinbell_Ch8:
+Cry_Quilladin_Ch8:
 	noise __,  9, $d6, $2c
 	noise __, 13, $c6, $3c
 	noise __, 11, $b6, $2c

@@ -67,9 +67,9 @@ AnimationIdlePointers:
 	dw IgglybuffAnimationIdle
 	dw JigglypuffAnimationIdle
 	dw WigglytuffAnimationIdle
-	dw BellsproutAnimationIdle
-	dw WeepinbellAnimationIdle
-	dw VictreebelAnimationIdle
+	dw ChespinAnimationIdle
+	dw QuilladinAnimationIdle
+	dw ChesnaughtAnimationIdle
 	dw TentacoolAnimationIdle
 	dw TentacruelAnimationIdle
 	dw GeodudeAnimationIdle

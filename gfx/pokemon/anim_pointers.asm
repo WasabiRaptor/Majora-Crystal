@@ -67,9 +67,9 @@ AnimationPointers:
 	dw IgglybuffAnimation
 	dw JigglypuffAnimation
 	dw WigglytuffAnimation
-	dw BellsproutAnimation
-	dw WeepinbellAnimation
-	dw VictreebelAnimation
+	dw ChespinAnimation
+	dw QuilladinAnimation
+	dw ChesnaughtAnimation
 	dw TentacoolAnimation
 	dw TentacruelAnimation
 	dw GeodudeAnimation

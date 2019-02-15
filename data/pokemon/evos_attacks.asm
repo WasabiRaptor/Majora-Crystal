@@ -936,8 +936,8 @@ WigglytuffEvosAttacks:
 	db 61, SUBMISSION
 	db 0 ; no more level-up moves
 
-BellsproutEvosAttacks:
-	db EVOLVE_LEVEL, 21, WEEPINBELL
+ChespinEvosAttacks:
+	db EVOLVE_LEVEL, 21, QUILLADIN
 	db 0 ; no more evolutions
 	db 1, VINE_WHIP
 	db 6, GROWTH
@@ -951,8 +951,8 @@ BellsproutEvosAttacks:
 	db 45, SLAM
 	db 0 ; no more level-up moves
 
-WeepinbellEvosAttacks:
-	db EVOLVE_ITEM, LEAF_STONE, VICTREEBEL
+QuilladinEvosAttacks:
+	db EVOLVE_ITEM, LEAF_STONE, CHESNAUGHT
 	db 0 ; no more evolutions
 	db 1, VINE_WHIP
 	db 1, GROWTH
@@ -968,7 +968,7 @@ WeepinbellEvosAttacks:
 	db 54, SLAM
 	db 0 ; no more level-up moves
 
-VictreebelEvosAttacks:
+ChesnaughtEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, VINE_WHIP
 	db 1, SLEEP_POWDER

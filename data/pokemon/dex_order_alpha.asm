@@ -14,7 +14,7 @@ AlphabeticalPokedexOrder:
 	db BAYLEEF
 	db MAGNEMITE
 	db FENNEKIN
-	db BELLSPROUT
+	db CHESPIN
 	db SYLVEON
 	db SUICUNE
 	db EEVEE
@@ -239,13 +239,13 @@ AlphabeticalPokedexOrder:
 	db ALTARIA
 	db SWABLU
 	db JOLTEON
-	db VICTREEBEL
+	db CHESNAUGHT
 	db ZANGOOSE
 	db VOLTORB
 	db GRIMER
 	db GLACEON
 	db LYCANROC
-	db WEEPINBELL
+	db QUILLADIN
 	db WEEZING
 	db NIDORINO
 	db WOBBUFFET

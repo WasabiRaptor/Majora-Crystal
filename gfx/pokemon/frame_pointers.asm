@@ -67,9 +67,9 @@ FramesPointers:
 	dw IgglybuffFrames
 	dw JigglypuffFrames
 	dw WigglytuffFrames
-	dw BellsproutFrames
-	dw WeepinbellFrames
-	dw VictreebelFrames
+	dw ChespinFrames
+	dw QuilladinFrames
+	dw ChesnaughtFrames
 	dw TentacoolFrames
 	dw TentacruelFrames
 	dw GeodudeFrames

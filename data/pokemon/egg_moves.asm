@@ -228,7 +228,7 @@ IgglybuffEggMoves:
 	db ENCORE
 	db -1 ; end
 
-BellsproutEggMoves:
+ChespinEggMoves:
 	db SWORDS_DANCE
 	db ENCORE
 	db REFLECT

@@ -36,7 +36,7 @@ Cries:
 	dba Cry_Porygon2
 	dba Cry_Zangoose
 	dba Cry_Vulpix
-	dba Cry_Weepinbell
+	dba Cry_Quilladin
 	dba Cry_Braixen
 	dba Cry_Spinarak
 	dba Cry_Heidreigon

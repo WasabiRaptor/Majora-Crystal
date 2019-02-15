@@ -69,9 +69,9 @@ EvosAttacksPointers::
 	dw IgglybuffEvosAttacks
 	dw JigglypuffEvosAttacks
 	dw WigglytuffEvosAttacks
-	dw BellsproutEvosAttacks
-	dw WeepinbellEvosAttacks
-	dw VictreebelEvosAttacks
+	dw ChespinEvosAttacks
+	dw QuilladinEvosAttacks
+	dw ChesnaughtEvosAttacks
 	dw TentacoolEvosAttacks
 	dw TentacruelEvosAttacks
 	dw GeodudeEvosAttacks
