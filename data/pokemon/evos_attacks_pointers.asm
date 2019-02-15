@@ -61,11 +61,11 @@ EvosAttacksPointers::
 	dw LuxrayEvosAttacks
 	dw SandshrewEvosAttacks
 	dw SandslashEvosAttacks
-	dw PoliwhirlEvosAttacks
-	dw PoliwrathEvosAttacks
-	dw AbraEvosAttacks
-	dw KadabraEvosAttacks
-	dw AlakazamEvosAttacks
+	dw CutieflyEvosAttacks
+	dw RibombeeEvosAttacks
+	dw FlabebeEvosAttacks
+	dw FloetteEvosAttacks
+	dw FlorgesEvosAttacks
 	dw MachopEvosAttacks
 	dw MachokeEvosAttacks
 	dw MachampEvosAttacks

@@ -6,5 +6,5 @@
 	next "croak out a tune,"
 
 	page "nearby SANDSLASH and"
-	next "POLIWHIRL gather"
+	next "CUTIEFLY gather"
 	next "immediately.@"

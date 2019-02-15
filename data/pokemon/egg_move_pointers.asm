@@ -61,7 +61,7 @@ EggMovePointers::
 	dw SandslashEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw AbraEggMoves
+	dw FlabebeEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw MachopEggMoves

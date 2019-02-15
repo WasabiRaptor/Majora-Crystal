@@ -817,7 +817,7 @@ SandshrewEvosAttacks:
 	db 0 ; no more level-up moves
 
 SandslashEvosAttacks:
-	db EVOLVE_LEVEL, 25, POLIWHIRL
+	db EVOLVE_LEVEL, 25, CUTIEFLY
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 7, HYPNOSIS
@@ -829,8 +829,8 @@ SandslashEvosAttacks:
 	db 43, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-PoliwhirlEvosAttacks:
-	db EVOLVE_ITEM, WATER_STONE, POLIWRATH
+CutieflyEvosAttacks:
+	db EVOLVE_ITEM, WATER_STONE, RIBOMBEE
 	db EVOLVE_TRADE, KINGS_ROCK, NINETALES
 	db 0 ; no more evolutions
 	db 1, BUBBLE
@@ -845,7 +845,7 @@ PoliwhirlEvosAttacks:
 	db 51, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-PoliwrathEvosAttacks:
+RibombeeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
 	db 1, HYPNOSIS
@@ -855,14 +855,14 @@ PoliwrathEvosAttacks:
 	db 51, MIND_READER
 	db 0 ; no more level-up moves
 
-AbraEvosAttacks:
-	db EVOLVE_LEVEL, 16, KADABRA
+FlabebeEvosAttacks:
+	db EVOLVE_LEVEL, 16, FLOETTE
 	db 0 ; no more evolutions
 	db 1, TELEPORT
 	db 0 ; no more level-up moves
 
-KadabraEvosAttacks:
-	db EVOLVE_TRADE, -1, ALAKAZAM
+FloetteEvosAttacks:
+	db EVOLVE_TRADE, -1, FLORGES
 	db 0 ; no more evolutions
 	db 1, TELEPORT
 	db 1, KINESIS
@@ -876,7 +876,7 @@ KadabraEvosAttacks:
 	db 45, REFLECT
 	db 0 ; no more level-up moves
 
-AlakazamEvosAttacks:
+FlorgesEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TELEPORT
 	db 1, KINESIS

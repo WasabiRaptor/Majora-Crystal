@@ -78,12 +78,12 @@
 	const LUXRAY  		; 3a
 	const SANDSHREW   	; 3b
 	const SANDSLASH    	; 3c
+	const CUTIEFLY  	; 3d
+	const RIBOMBEE  	; 3e
+	const FLABEBE       ; 3f
+	const FLOETTE    	; 40
+	const FLORGES   	; 41
 
-	const POLIWHIRL  ; 3d
-	const POLIWRATH  ; 3e
-	const ABRA       ; 3f
-	const KADABRA    ; 40
-	const ALAKAZAM   ; 41
 	const MACHOP     ; 42
 	const MACHOKE    ; 43
 	const MACHAMP    ; 44

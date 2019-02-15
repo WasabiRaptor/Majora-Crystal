@@ -59,11 +59,11 @@ AnimationIdlePointers:
 	dw LuxrayAnimationIdle
 	dw SandshrewAnimationIdle
 	dw SandslashAnimationIdle
-	dw PoliwhirlAnimationIdle
-	dw PoliwrathAnimationIdle
-	dw AbraAnimationIdle
-	dw KadabraAnimationIdle
-	dw AlakazamAnimationIdle
+	dw CutieflyAnimationIdle
+	dw RibombeeAnimationIdle
+	dw FlabebeAnimationIdle
+	dw FloetteAnimationIdle
+	dw FlorgesAnimationIdle
 	dw MachopAnimationIdle
 	dw MachokeAnimationIdle
 	dw MachampAnimationIdle

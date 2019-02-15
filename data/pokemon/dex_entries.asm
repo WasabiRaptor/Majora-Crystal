@@ -63,15 +63,15 @@ LuxioPokedexEntry::   INCLUDE "data/pokemon/dex_entries/luxio.asm"
 LuxrayPokedexEntry::  INCLUDE "data/pokemon/dex_entries/luxray.asm"
 SandshrewPokedexEntry::   INCLUDE "data/pokemon/dex_entries/sandshrew.asm"
 SandslashPokedexEntry::    INCLUDE "data/pokemon/dex_entries/sandslash.asm"
-PoliwhirlPokedexEntry::  INCLUDE "data/pokemon/dex_entries/poliwhirl.asm"
-PoliwrathPokedexEntry::  INCLUDE "data/pokemon/dex_entries/poliwrath.asm"
-AbraPokedexEntry::       INCLUDE "data/pokemon/dex_entries/abra.asm"
-KadabraPokedexEntry::    INCLUDE "data/pokemon/dex_entries/kadabra.asm"
+CutieflyPokedexEntry::  INCLUDE "data/pokemon/dex_entries/cutiefly.asm"
+RibombeePokedexEntry::  INCLUDE "data/pokemon/dex_entries/ribombee.asm"
+FlabebePokedexEntry::       INCLUDE "data/pokemon/dex_entries/flabebe.asm"
+FloettePokedexEntry::    INCLUDE "data/pokemon/dex_entries/floette.asm"
 
 
 SECTION "Pokedex Entries 065-128", ROMX
 
-AlakazamPokedexEntry::   INCLUDE "data/pokemon/dex_entries/alakazam.asm"
+FlorgesPokedexEntry::   INCLUDE "data/pokemon/dex_entries/florges.asm"
 MachopPokedexEntry::     INCLUDE "data/pokemon/dex_entries/machop.asm"
 MachokePokedexEntry::    INCLUDE "data/pokemon/dex_entries/machoke.asm"
 MachampPokedexEntry::    INCLUDE "data/pokemon/dex_entries/machamp.asm"

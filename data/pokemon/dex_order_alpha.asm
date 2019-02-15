@@ -1,10 +1,10 @@
 ; Every Pokémon sorted alphabetically by name.
 
 AlphabeticalPokedexOrder:
-	db ABRA
+	db FLABEBE
 	db AERODACTYL
 	db AIPOM
-	db ALAKAZAM
+	db FLORGES
 	db INCINEROAR
 	db TOGETIC
 	db SANDSHREW
@@ -101,7 +101,7 @@ AlphabeticalPokedexOrder:
 	db JYNX
 	db KABUTO
 	db KABUTOPS
-	db KADABRA
+	db FLOETTE
 	db MIMIKYU
 	db KANGASKHAN
 	db YAMASK
@@ -168,8 +168,8 @@ AlphabeticalPokedexOrder:
 	db PINSIR
 	db NINETALES
 	db SANDSLASH
-	db POLIWHIRL
-	db POLIWRATH
+	db CUTIEFLY
+	db RIBOMBEE
 	db PONYTA
 	db PLACE3
 	db LUXIO

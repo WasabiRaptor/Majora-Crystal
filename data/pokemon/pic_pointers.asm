@@ -126,16 +126,16 @@ PokemonPicPointers::
 	dba SandshrewBackpic
 	dba SandslashFrontpic
 	dba SandslashBackpic
-	dba PoliwhirlFrontpic
-	dba PoliwhirlBackpic
-	dba PoliwrathFrontpic
-	dba PoliwrathBackpic
-	dba AbraFrontpic
-	dba AbraBackpic
-	dba KadabraFrontpic
-	dba KadabraBackpic
-	dba AlakazamFrontpic
-	dba AlakazamBackpic
+	dba CutieflyFrontpic
+	dba CutieflyBackpic
+	dba RibombeeFrontpic
+	dba RibombeeBackpic
+	dba FlabebeFrontpic
+	dba FlabebeBackpic
+	dba FloetteFrontpic
+	dba FloetteBackpic
+	dba FlorgesFrontpic
+	dba FlorgesBackpic
 	dba MachopFrontpic
 	dba MachopBackpic
 	dba MachokeFrontpic

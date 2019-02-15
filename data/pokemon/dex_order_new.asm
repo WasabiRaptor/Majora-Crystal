@@ -73,8 +73,8 @@ NewPokedexOrder:
 	db SENTRET
 	db FURRET
 	db SANDSLASH
-	db POLIWHIRL
-	db POLIWRATH
+	db CUTIEFLY
+	db RIBOMBEE
 	db NINETALES
 	db MAGIKARP
 	db GYARADOS
@@ -89,9 +89,9 @@ NewPokedexOrder:
 	db FENNEKIN
 	db DROWZEE
 	db HYPNO
-	db ABRA
-	db KADABRA
-	db ALAKAZAM
+	db FLABEBE
+	db FLOETTE
+	db FLORGES
 	db DEWPIDER
 	db PINECO
 	db FORRETRESS

@@ -59,11 +59,11 @@ BitmasksPointers:
 	dw LuxrayBitmasks
 	dw SandshrewBitmasks
 	dw SandslashBitmasks
-	dw PoliwhirlBitmasks
-	dw PoliwrathBitmasks
-	dw AbraBitmasks
-	dw KadabraBitmasks
-	dw AlakazamBitmasks
+	dw CutieflyBitmasks
+	dw RibombeeBitmasks
+	dw FlabebeBitmasks
+	dw FloetteBitmasks
+	dw FlorgesBitmasks
 	dw MachopBitmasks
 	dw MachokeBitmasks
 	dw MachampBitmasks

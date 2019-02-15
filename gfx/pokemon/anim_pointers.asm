@@ -59,11 +59,11 @@ AnimationPointers:
 	dw LuxrayAnimation
 	dw SandshrewAnimation
 	dw SandslashAnimation
-	dw PoliwhirlAnimation
-	dw PoliwrathAnimation
-	dw AbraAnimation
-	dw KadabraAnimation
-	dw AlakazamAnimation
+	dw CutieflyAnimation
+	dw RibombeeAnimation
+	dw FlabebeAnimation
+	dw FloetteAnimation
+	dw FlorgesAnimation
 	dw MachopAnimation
 	dw MachokeAnimation
 	dw MachampAnimation

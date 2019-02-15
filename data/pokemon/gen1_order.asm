@@ -36,7 +36,7 @@ Pokered_MonIndices:
 	db PERSIAN
 	db MAGNETON
 	db SLOWPOKE
-	db KADABRA
+	db FLOETTE
 	db GRAVELER
 	db CHANSEY
 	db MACHOKE
@@ -108,8 +108,8 @@ Pokered_MonIndices:
 	db NIDORINA
 	db TOGEPI
 	db SENTRET
-	db POLIWHIRL
-	db POLIWRATH
+	db CUTIEFLY
+	db RIBOMBEE
 	db LYCANROC
 	db MIMIKYU
 	db MAGNEMITE
@@ -146,8 +146,8 @@ Pokered_MonIndices:
 	db MAROWAK
 	db DUSCLOPS ; MISSINGNO.
 	db HAUNTER
-	db ABRA
-	db ALAKAZAM
+	db FLABEBE
+	db FLORGES
 	db MAGNEZONE
 	db PORYGON
 	db STARMIE

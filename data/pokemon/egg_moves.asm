@@ -215,7 +215,7 @@ SandslashEggMoves:
 	db MIND_READER
 	db -1 ; end
 
-AbraEggMoves:
+FlabebeEggMoves:
 	db LIGHT_SCREEN
 	db ENCORE
 	db BARRIER

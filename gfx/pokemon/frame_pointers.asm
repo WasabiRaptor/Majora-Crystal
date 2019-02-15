@@ -59,11 +59,11 @@ FramesPointers:
 	dw LuxrayFrames
 	dw SandshrewFrames
 	dw SandslashFrames
-	dw PoliwhirlFrames
-	dw PoliwrathFrames
-	dw AbraFrames
-	dw KadabraFrames
-	dw AlakazamFrames
+	dw CutieflyFrames
+	dw RibombeeFrames
+	dw FlabebeFrames
+	dw FloetteFrames
+	dw FlorgesFrames
 	dw MachopFrames
 	dw MachokeFrames
 	dw MachampFrames
