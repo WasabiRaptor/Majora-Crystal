@@ -60,11 +60,11 @@ PokedexDataPointerTable:
 	dw LuxrayPokedexEntry
 	dw SandshrewPokedexEntry
 	dw SandslashPokedexEntry
-	dw PoliwhirlPokedexEntry
-	dw PoliwrathPokedexEntry
-	dw AbraPokedexEntry
-	dw KadabraPokedexEntry
-	dw AlakazamPokedexEntry
+	dw CutieflyPokedexEntry
+	dw RibombeePokedexEntry
+	dw FlabebePokedexEntry
+	dw FloettePokedexEntry
+	dw FlorgesPokedexEntry
 	dw MachopPokedexEntry
 	dw MachokePokedexEntry
 	dw MachampPokedexEntry

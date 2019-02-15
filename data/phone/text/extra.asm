@@ -1160,7 +1160,7 @@ UnknownText_0x66366:
 
 UnknownText_0x663a1:
 	text "Did you know…?"
-	line "ABRA was the first"
+	line "FLABEBE was the first"
 
 	para "#MON that BILL"
 	line "ostensibly caught."

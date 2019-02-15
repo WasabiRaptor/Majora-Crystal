@@ -61,11 +61,11 @@ KantoMonSpecials:
 	db  50 ; LUXRAY
 	db  80 ; SANDSHREW
 	db  40 ; SANDSLASH
-	db  50 ; POLIWHIRL
-	db  70 ; POLIWRATH
-	db 105 ; ABRA
-	db 120 ; KADABRA
-	db 135 ; ALAKAZAM
+	db  50 ; CUTIEFLY
+	db  70 ; RIBOMBEE
+	db 105 ; FLABEBE
+	db 120 ; FLOETTE
+	db 135 ; FLORGES
 	db  35 ; MACHOP
 	db  50 ; MACHOKE
 	db  65 ; MACHAMP

@@ -199,7 +199,7 @@ BrentBillTriviaScript:
 	ifequal 1, .Grandpa
 	ifequal 2, .Goldenrod
 	ifequal 3, .Route25
-	ifequal 4, .Abra
+	ifequal 4, .Flabebe
 	ifequal 5, .Sister
 	ifequal 6, .Milk
 	ifequal 7, .Battling
@@ -226,7 +226,7 @@ BrentBillTriviaScript:
 	buttonsound
 	jump PhoneScript_HangupText_Male
 
-.Abra:
+.Flabebe:
 	farwritetext UnknownText_0x663a1
 	buttonsound
 	jump PhoneScript_HangupText_Male

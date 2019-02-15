@@ -65,11 +65,11 @@ PokemonCries::
 	mon_cry CRY_LUXRAY,   $020,  $0c0 ; LUXRAY
 	mon_cry CRY_WEEDLE,      $000,  $100 ; SANDSHREW
 	mon_cry CRY_MAGNETON,      $0ff,  $17f ; SANDSLASH
-	mon_cry CRY_MAGNETON,      $077,  $0e0 ; POLIWHIRL
-	mon_cry CRY_MAGNETON,      $000,  $17f ; POLIWRATH
-	mon_cry CRY_METAPOD,     $0c0,  $081 ; ABRA
-	mon_cry CRY_METAPOD,     $0a8,  $140 ; KADABRA
-	mon_cry CRY_METAPOD,     $098,  $17f ; ALAKAZAM
+	mon_cry CRY_MAGNETON,      $077,  $0e0 ; CUTIEFLY
+	mon_cry CRY_MAGNETON,      $000,  $17f ; RIBOMBEE
+	mon_cry CRY_METAPOD,     $0c0,  $081 ; FLABEBE
+	mon_cry CRY_METAPOD,     $0a8,  $140 ; FLOETTE
+	mon_cry CRY_METAPOD,     $098,  $17f ; FLORGES
 	mon_cry CRY_LUXRAY,   $0ee,  $081 ; MACHOP
 	mon_cry CRY_LUXRAY,   $048,  $0e0 ; MACHOKE
 	mon_cry CRY_LUXRAY,   $008,  $140 ; MACHAMP
