@@ -641,13 +641,13 @@ AipomEggMoves:
 	db BEAT_UP
 	db -1 ; end
 
-YanmaEggMoves:
+TalonflameEggMoves:
 	db WHIRLWIND
 	db REVERSAL
 	db LEECH_LIFE
 	db -1 ; end
 
-WooperEggMoves:
+HeatmorEggMoves:
 	db BODY_SLAM
 	db ANCIENTPOWER
 	db SAFEGUARD

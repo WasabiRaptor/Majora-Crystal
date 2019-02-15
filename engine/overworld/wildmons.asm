@@ -417,28 +417,28 @@ _SwarmWildmonCheck:
 	ld hl, wSwarmFlags
 	bit SWARMFLAGS_CRYOGONAL_SWARM_F, [hl]
 	pop hl
-	jr z, .CheckYanma
+	jr z, .CheckTalonflame
 	ld a, [wCryogonalMapGroup]
 	cp d
-	jr nz, .CheckYanma
+	jr nz, .CheckTalonflame
 	ld a, [wCryogonalMapNumber]
 	cp e
-	jr nz, .CheckYanma
+	jr nz, .CheckTalonflame
 	call LookUpWildmonsForMapDE
 	jr nc, _NoSwarmWildmon
 	scf
 	ret
 
-.CheckYanma:
+.CheckTalonflame:
 	push hl
 	ld hl, wSwarmFlags
-	bit SWARMFLAGS_YANMA_SWARM_F, [hl]
+	bit SWARMFLAGS_TALONFLAME_SWARM_F, [hl]
 	pop hl
 	jr z, _NoSwarmWildmon
-	ld a, [wYanmaMapGroup]
+	ld a, [wTalonflameMapGroup]
 	cp d
 	jr nz, _NoSwarmWildmon
-	ld a, [wYanmaMapNumber]
+	ld a, [wTalonflameMapNumber]
 	cp e
 	jr nz, _NoSwarmWildmon
 	call LookUpWildmonsForMapDE

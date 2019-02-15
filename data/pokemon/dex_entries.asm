@@ -201,15 +201,15 @@ HoppipPokedexEntry::     INCLUDE "data/pokemon/dex_entries/hoppip.asm"
 SkiploomPokedexEntry::   INCLUDE "data/pokemon/dex_entries/skiploom.asm"
 JumpluffPokedexEntry::   INCLUDE "data/pokemon/dex_entries/jumpluff.asm"
 AipomPokedexEntry::      INCLUDE "data/pokemon/dex_entries/aipom.asm"
-SunkernPokedexEntry::    INCLUDE "data/pokemon/dex_entries/sunkern.asm"
-SunfloraPokedexEntry::   INCLUDE "data/pokemon/dex_entries/sunflora.asm"
+FletchlingPokedexEntry::    INCLUDE "data/pokemon/dex_entries/fletchling.asm"
+FletchinderPokedexEntry::   INCLUDE "data/pokemon/dex_entries/fletchinder.asm"
 
 
 SECTION "Pokedex Entries 193-251", ROMX
 
-YanmaPokedexEntry::      INCLUDE "data/pokemon/dex_entries/yanma.asm"
-WooperPokedexEntry::     INCLUDE "data/pokemon/dex_entries/wooper.asm"
-QuagsirePokedexEntry::   INCLUDE "data/pokemon/dex_entries/quagsire.asm"
+TalonflamePokedexEntry::      INCLUDE "data/pokemon/dex_entries/talonflame.asm"
+HeatmorPokedexEntry::     INCLUDE "data/pokemon/dex_entries/heatmor.asm"
+DurantPokedexEntry::   INCLUDE "data/pokemon/dex_entries/durant.asm"
 ArchenPokedexEntry::     INCLUDE "data/pokemon/dex_entries/archen.asm"
 ArcheopsPokedexEntry::    INCLUDE "data/pokemon/dex_entries/archeops.asm"
 RoggenrolaPokedexEntry::    INCLUDE "data/pokemon/dex_entries/roggenrola.asm"

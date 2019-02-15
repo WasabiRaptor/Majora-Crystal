@@ -22,7 +22,7 @@ OftenFleeMons:
 	db DWEBBLE
 	db CRUSTLE
 	db TYROGUE
-	db QUAGSIRE
+	db DURANT
 	db HONEDGE
 	db COFAGRIGUS
 	db SIGILYPH

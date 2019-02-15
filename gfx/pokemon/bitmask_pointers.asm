@@ -189,11 +189,11 @@ BitmasksPointers:
 	dw SkiploomBitmasks
 	dw JumpluffBitmasks
 	dw AipomBitmasks
-	dw SunkernBitmasks
-	dw SunfloraBitmasks
-	dw YanmaBitmasks
-	dw WooperBitmasks
-	dw QuagsireBitmasks
+	dw FletchlingBitmasks
+	dw FletchinderBitmasks
+	dw TalonflameBitmasks
+	dw HeatmorBitmasks
+	dw DurantBitmasks
 	dw ArchenBitmasks
 	dw ArcheopsBitmasks
 	dw RoggenrolaBitmasks

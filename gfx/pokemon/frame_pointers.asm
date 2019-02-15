@@ -189,11 +189,11 @@ FramesPointers:
 	dw SkiploomFrames
 	dw JumpluffFrames
 	dw AipomFrames
-	dw SunkernFrames
-	dw SunfloraFrames
-	dw YanmaFrames
-	dw WooperFrames
-	dw QuagsireFrames
+	dw FletchlingFrames
+	dw FletchinderFrames
+	dw TalonflameFrames
+	dw HeatmorFrames
+	dw DurantFrames
 	dw ArchenFrames
 	dw UmbreonFrames
 	dw RoggenrolaFrames

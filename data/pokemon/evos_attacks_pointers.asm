@@ -191,11 +191,11 @@ EvosAttacksPointers::
 	dw SkiploomEvosAttacks
 	dw JumpluffEvosAttacks
 	dw AipomEvosAttacks
-	dw SunkernEvosAttacks
-	dw SunfloraEvosAttacks
-	dw YanmaEvosAttacks
-	dw WooperEvosAttacks
-	dw QuagsireEvosAttacks
+	dw FletchlingEvosAttacks
+	dw FletchinderEvosAttacks
+	dw TalonflameEvosAttacks
+	dw HeatmorEvosAttacks
+	dw DurantEvosAttacks
 	dw ArchenEvosAttacks
 	dw ArcheopsEvosAttacks
 	dw RoggenrolaEvosAttacks

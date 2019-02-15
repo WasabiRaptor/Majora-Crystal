@@ -195,11 +195,11 @@ PokemonCries::
 	mon_cry CRY_CLEFFA,      $027,  $138 ; SKIPLOOM
 	mon_cry CRY_CLEFFA,      $000,  $180 ; JUMPLUFF
 	mon_cry CRY_AIPOM,      -$051,  $0e8 ; AIPOM
-	mon_cry CRY_BRAIXEN,      $12b,  $0b8 ; SUNKERN
-	mon_cry CRY_SUNFLORA,   -$020,  $180 ; SUNFLORA
-	mon_cry CRY_TOTODILE,    $031,  $0c8 ; YANMA
-	mon_cry CRY_WOOPER,      $093,  $0af ; WOOPER
-	mon_cry CRY_WOOPER,     -$0c6,  $140 ; QUAGSIRE
+	mon_cry CRY_BRAIXEN,      $12b,  $0b8 ; FLETCHLING
+	mon_cry CRY_FLETCHINDER,   -$020,  $180 ; FLETCHINDER
+	mon_cry CRY_TOTODILE,    $031,  $0c8 ; TALONFLAME
+	mon_cry CRY_HEATMOR,      $093,  $0af ; HEATMOR
+	mon_cry CRY_HEATMOR,     -$0c6,  $140 ; DURANT
 	mon_cry CRY_AIPOM,       $0a2,  $140 ; ARCHEN
 	mon_cry CRY_SWABLU,    -$0e9,  $0f0 ; ARCHEOPS
 	mon_cry CRY_BRAIXEN,     -$01f,  $180 ; ROGGENROLA
@@ -219,7 +219,7 @@ PokemonCries::
 	mon_cry CRY_INCINEROAR,    $000,  $160 ; MAMOSWINE
 	mon_cry CRY_CRYOGONAL,   $290,  $0a8 ; UNOWN
 	mon_cry CRY_INCINEROAR,    $035,  $0e0 ; NATU
-	mon_cry CRY_WOOPER,      $053,  $0af ; XATU
+	mon_cry CRY_HEATMOR,      $053,  $0af ; XATU
 	mon_cry CRY_SIGILYPH,   $7a2,  $06e ; SIGILYPH
 	mon_cry CRY_SIGILYPH,   $640,  $0d8 ; DRILLBUR
 	mon_cry CRY_EXCADRILL,     -$1d8,  $140 ; EXCADRILL
@@ -227,7 +227,7 @@ PokemonCries::
 	mon_cry CRY_ABOMASNOW,   $1fe,  $140 ; CLAYDOL
 	mon_cry CRY_BALTOY,   -$109,  $100 ; GOLETT
 	mon_cry CRY_BALTOY,    $0a1,  $0e8 ; GOLURK
-	mon_cry CRY_SUNFLORA,    $00d,  $100 ; BRONZOR
+	mon_cry CRY_FLETCHINDER,    $00d,  $100 ; BRONZOR
 	mon_cry CRY_TOTODILE,    $000,  $180 ; BRONZONG
 	mon_cry CRY_SIGILYPH,   $002,  $06a ; HONEDGE
 	mon_cry CRY_DOUBLADE,    -$0be,  $0f0 ; DOUBLADE
@@ -243,7 +243,7 @@ PokemonCries::
 	mon_cry CRY_AIPOM,       $02c,  $108 ; DUSKULL
 	mon_cry CRY_EXCADRILL,      $000,  $100 ; DUSCLOPS
 	mon_cry CRY_BRAIXEN,      $068,  $100 ; DUSKNOIR
-	mon_cry CRY_SUNFLORA,   -$2d8,  $0b4 ; ARTICUNO
+	mon_cry CRY_FLETCHINDER,   -$2d8,  $0b4 ; ARTICUNO
 	mon_cry CRY_SIGILYPH,   $176,  $03a ; ZAPDOS
 	mon_cry CRY_SNOWRUNT,     -$1cd,  $1a0 ; MOLTRES
 	mon_cry CRY_BOLDORE,    $293,  $140 ; SUICUNE

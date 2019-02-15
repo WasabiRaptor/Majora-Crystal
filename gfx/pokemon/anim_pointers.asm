@@ -189,11 +189,11 @@ AnimationPointers:
 	dw SkiploomAnimation
 	dw JumpluffAnimation
 	dw AipomAnimation
-	dw SunkernAnimation
-	dw SunfloraAnimation
-	dw YanmaAnimation
-	dw WooperAnimation
-	dw QuagsireAnimation
+	dw FletchlingAnimation
+	dw FletchinderAnimation
+	dw TalonflameAnimation
+	dw HeatmorAnimation
+	dw DurantAnimation
 	dw ArchenAnimation
 	dw ArcheopsAnimation
 	dw RoggenrolaAnimation

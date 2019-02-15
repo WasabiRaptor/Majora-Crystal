@@ -195,8 +195,8 @@ endc
 	dw AipomEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw YanmaEggMoves
-	dw WooperEggMoves
+	dw TalonflameEggMoves
+	dw HeatmorEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

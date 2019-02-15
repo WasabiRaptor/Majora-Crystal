@@ -2769,8 +2769,8 @@ wDailyRematchFlags:: ds 4
 wDailyPhoneItemFlags:: ds 4
 wDailyPhoneTimeOfDayFlags:: ds 4
 wKenjiBreakTimer:: ds 2 ; Kenji
-wYanmaMapGroup:: db ; dc5a
-wYanmaMapNumber:: db
+wTalonflameMapGroup:: db ; dc5a
+wTalonflameMapNumber:: db
 wPlayerMonSelection:: ds 3
 wdc5f:: ds 1
 wdc60:: ds 18

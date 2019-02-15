@@ -189,11 +189,11 @@ AnimationIdlePointers:
 	dw SkiploomAnimationIdle
 	dw JumpluffAnimationIdle
 	dw AipomAnimationIdle
-	dw SunkernAnimationIdle
-	dw SunfloraAnimationIdle
-	dw YanmaAnimationIdle
-	dw WooperAnimationIdle
-	dw QuagsireAnimationIdle
+	dw FletchlingAnimationIdle
+	dw FletchinderAnimationIdle
+	dw TalonflameAnimationIdle
+	dw HeatmorAnimationIdle
+	dw DurantAnimationIdle
 	dw ArchenAnimationIdle
 	dw ArcheopsAnimationIdle
 	dw RoggenrolaAnimationIdle

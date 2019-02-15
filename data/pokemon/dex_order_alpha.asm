@@ -176,7 +176,7 @@ AlphabeticalPokedexOrder:
 	db LAMPENT
 	db FLAAFFY
 	db SILVALLY
-	db QUAGSIRE
+	db DURANT
 	db FERROSEED
 	db PILOSWINE
 	db ROTOM
@@ -218,8 +218,8 @@ AlphabeticalPokedexOrder:
 	db MEWTWO
 	db VULPIX
 	db LATIAS
-	db SUNFLORA
-	db SUNKERN
+	db FLETCHINDER
+	db FLETCHLING
 	db CLAYDOL
 	db TANGELA
 	db TAUROS
@@ -249,8 +249,8 @@ AlphabeticalPokedexOrder:
 	db WEEZING
 	db NIDORINO
 	db AMAURA
-	db WOOPER
+	db HEATMOR
 	db TYPHLOSION
-	db YANMA
+	db TALONFLAME
 	db CRUSTLE
 	db NIDORINA

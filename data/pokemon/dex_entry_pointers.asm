@@ -190,11 +190,11 @@ PokedexDataPointerTable:
 	dw SkiploomPokedexEntry
 	dw JumpluffPokedexEntry
 	dw AipomPokedexEntry
-	dw SunkernPokedexEntry
-	dw SunfloraPokedexEntry
-	dw YanmaPokedexEntry
-	dw WooperPokedexEntry
-	dw QuagsirePokedexEntry
+	dw FletchlingPokedexEntry
+	dw FletchinderPokedexEntry
+	dw TalonflamePokedexEntry
+	dw HeatmorPokedexEntry
+	dw DurantPokedexEntry
 	dw ArchenPokedexEntry
 	dw ArcheopsPokedexEntry
 	dw RoggenrolaPokedexEntry

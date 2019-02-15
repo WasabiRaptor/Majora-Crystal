@@ -386,16 +386,16 @@ PokemonPicPointers::
 	dba JumpluffBackpic
 	dba AipomFrontpic
 	dba AipomBackpic
-	dba SunkernFrontpic
-	dba SunkernBackpic
-	dba SunfloraFrontpic
-	dba SunfloraBackpic
-	dba YanmaFrontpic
-	dba YanmaBackpic
-	dba WooperFrontpic
-	dba WooperBackpic
-	dba QuagsireFrontpic
-	dba QuagsireBackpic
+	dba FletchlingFrontpic
+	dba FletchlingBackpic
+	dba FletchinderFrontpic
+	dba FletchinderBackpic
+	dba TalonflameFrontpic
+	dba TalonflameBackpic
+	dba HeatmorFrontpic
+	dba HeatmorBackpic
+	dba DurantFrontpic
+	dba DurantBackpic
 	dba EspeonFrontpic
 	dba EspeonBackpic
 	dba UmbreonFrontpic

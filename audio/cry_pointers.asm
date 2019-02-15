@@ -55,12 +55,12 @@ Cries:
 	dba Cry_Excadrill
 	dba Cry_Ledyba
 	dba Cry_Entei
-	dba Cry_Wooper
+	dba Cry_Heatmor
 	dba Cry_Doublade
 	dba Cry_Ferrothorn
 	dba Cry_Quilava
 	dba Cry_Sigilyph
-	dba Cry_Sunflora
+	dba Cry_Fletchinder
 	dba Cry_Incineroar
 	dba Cry_Baltoy
 	dba Cry_Pichu

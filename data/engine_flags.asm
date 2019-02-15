@@ -171,4 +171,4 @@ EngineFlags:
 	engine_flag wPlayerSpriteSetupFlags, PLAYERSPRITESETUP_FEMALE_TO_MALE_F
 
 	engine_flag wSwarmFlags, SWARMFLAGS_CRYOGONAL_SWARM_F ; $a0
-	engine_flag wSwarmFlags, SWARMFLAGS_YANMA_SWARM_F
+	engine_flag wSwarmFlags, SWARMFLAGS_TALONFLAME_SWARM_F

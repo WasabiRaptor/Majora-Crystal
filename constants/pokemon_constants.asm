@@ -222,12 +222,12 @@ JOHTO_POKEMON EQU const_value
 	const SKIPLOOM   ; bc
 	const JUMPLUFF   ; bd
 	const AIPOM      ; be
-	const SUNKERN    ; bf
-	const SUNFLORA   ; c0
-	const YANMA      ; c1
-	const WOOPER     ; c2
-	const QUAGSIRE   ; c3
-
+	
+	const FLETCHLING    ; bf
+	const FLETCHINDER   ; c0
+	const TALONFLAME      ; c1
+	const HEATMOR       ; c2
+	const DURANT        ; c3
 	const ARCHEN        ; c4
 	const ARCHEOPS      ; c5
 	const ROGGENROLA    ; c6
