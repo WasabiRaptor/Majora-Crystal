@@ -82,7 +82,7 @@ AlphabeticalPokedexOrder:
 	db LUXRAY
 	db GYARADOS
 	db HAUNTER
-	db HERACROSS
+	db NATU
 	db HITMONCHAN
 	db HITMONLEE
 	db DUSCLOPS
@@ -119,7 +119,7 @@ AlphabeticalPokedexOrder:
 	db JIGGLYPUFF
 	db IGGLYBUFF
 	db ZAPDOS
-	db MAGCARGO
+	db BALTOY
 	db MAGIKARP
 	db MAGMAR
 	db PLACEHOLDER1
@@ -163,7 +163,7 @@ AlphabeticalPokedexOrder:
 	db MAGNEZONE
 	db MAGNETON
 	db TOGEKISS
-	db PILOSWINE
+	db GOLETT
 	db PINECO
 	db PINSIR
 	db NINETALES
@@ -202,10 +202,10 @@ AlphabeticalPokedexOrder:
 	db SLOWBRO
 	db SLOWKING
 	db SLOWPOKE
-	db SLUGMA
+	db EXCADRILL
 	db SPIRITOMB
 	db DUSKNOIR
-	db SNEASEL
+	db XATU
 	db SNORLAX
 	db SNUBBULL
 	db MEOWTH
@@ -220,10 +220,10 @@ AlphabeticalPokedexOrder:
 	db LATIAS
 	db SUNFLORA
 	db SUNKERN
-	db SWINUB
+	db CLAYDOL
 	db TANGELA
 	db TAUROS
-	db TEDDIURSA
+	db SIGILYPH
 	db TENTACOOL
 	db TENTACRUEL
 	db HEIDREIGON
@@ -234,7 +234,7 @@ AlphabeticalPokedexOrder:
 	db DUSKULL
 	db UMBREONX
 	db CARBINK
-	db URSARING
+	db DRILLBUR
 	db VAPOREONX
 	db ALTARIA
 	db SWABLU

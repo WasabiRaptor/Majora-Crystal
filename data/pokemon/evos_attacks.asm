@@ -2918,7 +2918,7 @@ UnownEvosAttacks:
 	db 37, REST
 	db 0 ; no more level-up moves
 
-HeracrossEvosAttacks:
+NatuEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -2931,7 +2931,7 @@ HeracrossEvosAttacks:
 	db 54, MEGAHORN
 	db 0 ; no more level-up moves
 
-SneaselEvosAttacks:
+XatuEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
@@ -2947,8 +2947,8 @@ if _BRASS
 endc
 	db 0 ; no more level-up moves
 
-TeddiursaEvosAttacks:
-	db EVOLVE_LEVEL, 30, URSARING
+SigilyphEvosAttacks:
+	db EVOLVE_LEVEL, 30, DRILLBUR
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
@@ -2961,7 +2961,7 @@ TeddiursaEvosAttacks:
 	db 50, THRASH
 	db 0 ; no more level-up moves
 
-UrsaringEvosAttacks:
+DrillburEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
@@ -2976,8 +2976,8 @@ UrsaringEvosAttacks:
 	db 59, THRASH
 	db 0 ; no more level-up moves
 
-SlugmaEvosAttacks:
-	db EVOLVE_LEVEL, 38, MAGCARGO
+ExcadrillEvosAttacks:
+	db EVOLVE_LEVEL, 38, BALTOY
 	db 0 ; no more evolutions
 	db 1, SMOG
 	db 8, EMBER
@@ -2989,7 +2989,7 @@ SlugmaEvosAttacks:
 	db 50, BODY_SLAM
 	db 0 ; no more level-up moves
 
-MagcargoEvosAttacks:
+BaltoyEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SMOG
 	db 1, EMBER
@@ -3003,8 +3003,8 @@ MagcargoEvosAttacks:
 	db 60, BODY_SLAM
 	db 0 ; no more level-up moves
 
-SwinubEvosAttacks:
-	db EVOLVE_LEVEL, 33, PILOSWINE
+ClaydolEvosAttacks:
+	db EVOLVE_LEVEL, 33, GOLETT
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 10, POWDER_SNOW
@@ -3017,7 +3017,7 @@ if _BRASS
 endc
 	db 0 ; no more level-up moves
 
-PiloswineEvosAttacks:
+GolettEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HORN_ATTACK
 	db 1, POWDER_SNOW

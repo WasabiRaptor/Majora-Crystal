@@ -216,13 +216,13 @@ endc
 	dw QwilfishEggMoves
 	dw NoEggMoves
 	dw UnownEggMoves
-	dw HeracrossEggMoves
-	dw SneaselEggMoves
-	dw TeddiursaEggMoves
+	dw NatuEggMoves
+	dw XatuEggMoves
+	dw SigilyphEggMoves
 	dw NoEggMoves
-	dw SlugmaEggMoves
+	dw ExcadrillEggMoves
 	dw NoEggMoves
-	dw SwinubEggMoves
+	dw ClaydolEggMoves
 	dw NoEggMoves
 	dw GolurkEggMoves
 	dw BronzorEggMoves

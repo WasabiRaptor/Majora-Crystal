@@ -435,22 +435,22 @@ PokemonPicPointers::
 	dba ScizorBackpic
 	dba UnownFrontpic
 	dba UnownBackpic
-	dba HeracrossFrontpic
-	dba HeracrossBackpic
-	dba SneaselFrontpic
-	dba SneaselBackpic
-	dba TeddiursaFrontpic
-	dba TeddiursaBackpic
-	dba UrsaringFrontpic
-	dba UrsaringBackpic
-	dba SlugmaFrontpic
-	dba SlugmaBackpic
-	dba MagcargoFrontpic
-	dba MagcargoBackpic
-	dba SwinubFrontpic
-	dba SwinubBackpic
-	dba PiloswineFrontpic
-	dba PiloswineBackpic
+	dba NatuFrontpic
+	dba NatuBackpic
+	dba XatuFrontpic
+	dba XatuBackpic
+	dba SigilyphFrontpic
+	dba SigilyphBackpic
+	dba DrillburFrontpic
+	dba DrillburBackpic
+	dba ExcadrillFrontpic
+	dba ExcadrillBackpic
+	dba BaltoyFrontpic
+	dba BaltoyBackpic
+	dba ClaydolFrontpic
+	dba ClaydolBackpic
+	dba GolettFrontpic
+	dba GolettBackpic
 	dba GolurkFrontpic
 	dba GolurkBackpic
 	dba BronzorFrontpic

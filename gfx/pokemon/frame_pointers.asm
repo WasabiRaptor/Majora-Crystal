@@ -212,14 +212,14 @@ FramesPointers:
 	dw QwilfishFrames
 	dw ScizorFrames
 	dw UnownFrames
-	dw HeracrossFrames
-	dw SneaselFrames
-	dw TeddiursaFrames
-	dw UrsaringFrames
-	dw SlugmaFrames
-	dw MagcargoFrames
-	dw SwinubFrames
-	dw PiloswineFrames
+	dw NatuFrames
+	dw XatuFrames
+	dw SigilyphFrames
+	dw DrillburFrames
+	dw ExcadrillFrames
+	dw BaltoyFrames
+	dw ClaydolFrames
+	dw GolettFrames
 	dw GolurkFrames
 	dw BronzorFrames
 	dw BronzongFrames

@@ -218,38 +218,38 @@ PokemonCries::
 	mon_cry CRY_SLOWKING,    $160,  $0e0 ; QWILFISH
 	mon_cry CRY_INCINEROAR,    $000,  $160 ; SCIZOR
 	mon_cry CRY_DUNSPARCE,   $290,  $0a8 ; UNOWN
-	mon_cry CRY_INCINEROAR,    $035,  $0e0 ; HERACROSS
-	mon_cry CRY_WOOPER,      $053,  $0af ; SNEASEL
-	mon_cry CRY_TEDDIURSA,   $7a2,  $06e ; TEDDIURSA
-	mon_cry CRY_TEDDIURSA,   $640,  $0d8 ; URSARING
-	mon_cry CRY_SLUGMA,     -$1d8,  $140 ; SLUGMA
-	mon_cry CRY_MAGCARGO,   -$20d,  $1c0 ; MAGCARGO
-	mon_cry CRY_ABOMASNOW,   $1fe,  $140 ; SWINUB
-	mon_cry CRY_MAGCARGO,   -$109,  $100 ; PILOSWINE
-	mon_cry CRY_MAGCARGO,    $0a1,  $0e8 ; GOLURK
+	mon_cry CRY_INCINEROAR,    $035,  $0e0 ; NATU
+	mon_cry CRY_WOOPER,      $053,  $0af ; XATU
+	mon_cry CRY_SIGILYPH,   $7a2,  $06e ; SIGILYPH
+	mon_cry CRY_SIGILYPH,   $640,  $0d8 ; DRILLBUR
+	mon_cry CRY_EXCADRILL,     -$1d8,  $140 ; EXCADRILL
+	mon_cry CRY_BALTOY,   -$20d,  $1c0 ; BALTOY
+	mon_cry CRY_ABOMASNOW,   $1fe,  $140 ; CLAYDOL
+	mon_cry CRY_BALTOY,   -$109,  $100 ; GOLETT
+	mon_cry CRY_BALTOY,    $0a1,  $0e8 ; GOLURK
 	mon_cry CRY_SUNFLORA,    $00d,  $100 ; BRONZOR
 	mon_cry CRY_TOTODILE,    $000,  $180 ; BRONZONG
-	mon_cry CRY_TEDDIURSA,   $002,  $06a ; HONEDGE
+	mon_cry CRY_SIGILYPH,   $002,  $06a ; HONEDGE
 	mon_cry CRY_DOUBLADE,    -$0be,  $0f0 ; DOUBLADE
 	mon_cry CRY_INCINEROAR,    $8a9,  $180 ; AEGISLASH
 	mon_cry CRY_ABOMASNOW,   $039,  $140 ; PAWNIARD
 	mon_cry CRY_TOTODILE,   -$10a,  $100 ; BISHARP
-	mon_cry CRY_SLUGMA,      $2fb,  $100 ; YAMASK
+	mon_cry CRY_EXCADRILL,      $2fb,  $100 ; YAMASK
 	mon_cry CRY_LARVITAR,     $048,  $230 ; COFAGRIGUS
 	mon_cry CRY_LITWICK,     $000,  $1a0 ; LITWICK
 	mon_cry CRY_GIRAFARIG,   $073,  $240 ; LAMPENT
 	mon_cry CRY_AIPOM,      -$160,  $180 ; CHANDELURE
 	mon_cry CRY_PICHU,      -$21a,  $1f0 ; SPIRITOMB
 	mon_cry CRY_AIPOM,       $02c,  $108 ; DUSKULL
-	mon_cry CRY_SLUGMA,      $000,  $100 ; DUSCLOPS
+	mon_cry CRY_EXCADRILL,      $000,  $100 ; DUSCLOPS
 	mon_cry CRY_BRAIXEN,      $068,  $100 ; DUSKNOIR
 	mon_cry CRY_SUNFLORA,   -$2d8,  $0b4 ; ARTICUNO
-	mon_cry CRY_TEDDIURSA,   $176,  $03a ; ZAPDOS
+	mon_cry CRY_SIGILYPH,   $176,  $03a ; ZAPDOS
 	mon_cry CRY_GLIGAR,     -$1cd,  $1a0 ; MOLTRES
 	mon_cry CRY_SLOWKING,    $293,  $140 ; SUICUNE
 	mon_cry CRY_RAIKOU,      $22e,  $120 ; RAIKOU
 	mon_cry CRY_ENTEI,       $000,  $1a0 ; ENTEI
-	mon_cry CRY_MAGCARGO,    $000,  $180 ; LATIAS
+	mon_cry CRY_BALTOY,    $000,  $180 ; LATIAS
 	mon_cry CRY_RAIKOU,      $05f,  $0d0 ; LATIOS
 	mon_cry CRY_SPINARAK,   -$1db,  $150 ; SILVALLY
 	mon_cry CRY_RAIKOU,     -$100,  $180 ; MAGEARNA

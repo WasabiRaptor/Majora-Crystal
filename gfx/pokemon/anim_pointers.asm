@@ -212,14 +212,14 @@ AnimationPointers:
 	dw QwilfishAnimation
 	dw ScizorAnimation
 	dw UnownAnimation
-	dw HeracrossAnimation
-	dw SneaselAnimation
-	dw TeddiursaAnimation
-	dw UrsaringAnimation
-	dw SlugmaAnimation
-	dw MagcargoAnimation
-	dw SwinubAnimation
-	dw PiloswineAnimation
+	dw NatuAnimation
+	dw XatuAnimation
+	dw SigilyphAnimation
+	dw DrillburAnimation
+	dw ExcadrillAnimation
+	dw BaltoyAnimation
+	dw ClaydolAnimation
+	dw GolettAnimation
 	dw GolurkAnimation
 	dw BronzorAnimation
 	dw BronzongAnimation
