@@ -265,7 +265,7 @@ TrevanantEggMoves:
 	db STOMP
 	db -1 ; end
 
-FarfetchDEggMoves:
+StuffulEggMoves:
 if !_BRASS
 	db STEEL_WING
 endc
@@ -276,7 +276,7 @@ endc
 	db FLAIL
 	db -1 ; end
 
-DoduoEggMoves:
+BewearEggMoves:
 	db QUICK_ATTACK
 	db SUPERSONIC
 	db HAZE
@@ -284,7 +284,7 @@ DoduoEggMoves:
 	db FLAIL
 	db -1 ; end
 
-SeelEggMoves:
+HeracrossEggMoves:
 	db LICK
 	db PERISH_SONG
 	db DISABLE

@@ -158,7 +158,7 @@ NewPokedexOrder:
 	db ELECTABUZZ
 	db MR__MIME
 	db SPIRITOMB
-	db FARFETCH_D
+	db STUFFUL
 	db QUILAVA
 	db TYPHLOSION
 	db PILOSWINE
@@ -176,7 +176,7 @@ NewPokedexOrder:
 	db BRONZONG
 	db CHINCHOU
 	db LANTURN
-	db SEEL
+	db HERACROSS
 	db DEWGONG
 	db LICKITUNG
 	db TANGELA
@@ -199,8 +199,8 @@ NewPokedexOrder:
 	db LITWICK
 	db DOUBLADE
 	db AEGISLASH
-	db DODUO
-	db DODRIO
+	db BEWEAR
+	db GIRAFARIG
 	db AMOONGUS
 	db PHANTUMP
 	db CUBONE

@@ -83,10 +83,10 @@ KantoMonSpecials:
 	db  80 ; BONSLY
 	db  95 ; SUDOWOODO
 	db 120 ; PASSIMIAN
-	db  58 ; FARFETCH_D
-	db  35 ; DODUO
-	db  60 ; DODRIO
-	db  70 ; SEEL
+	db  58 ; STUFFUL
+	db  35 ; BEWEAR
+	db  60 ; GIRAFARIG
+	db  70 ; HERACROSS
 	db  95 ; DEWGONG
 	db  40 ; GRIMER
 	db  65 ; MUK

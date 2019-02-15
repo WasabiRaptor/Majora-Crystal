@@ -81,10 +81,10 @@ BitmasksPointers:
 	dw BonslyBitmasks
 	dw SudowoodoBitmasks
 	dw PassimianBitmasks
-	dw FarfetchDBitmasks
-	dw DoduoBitmasks
-	dw DodrioBitmasks
-	dw SeelBitmasks
+	dw StuffulBitmasks
+	dw BewearBitmasks
+	dw GirafarigBitmasks
+	dw HeracrossBitmasks
 	dw DewgongBitmasks
 	dw GrimerBitmasks
 	dw MukBitmasks

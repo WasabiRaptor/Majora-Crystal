@@ -170,14 +170,14 @@ PokemonPicPointers::
 	dba SudowoodoBackpic
 	dba PassimianFrontpic
 	dba PassimianBackpic
-	dba FarfetchDFrontpic
-	dba FarfetchDBackpic
-	dba DoduoFrontpic
-	dba DoduoBackpic
-	dba DodrioFrontpic
-	dba DodrioBackpic
-	dba SeelFrontpic
-	dba SeelBackpic
+	dba StuffulFrontpic
+	dba StuffulBackpic
+	dba BewearFrontpic
+	dba BewearBackpic
+	dba GirafarigFrontpic
+	dba GirafarigBackpic
+	dba HeracrossFrontpic
+	dba HeracrossBackpic
 	dba DewgongFrontpic
 	dba DewgongBackpic
 	dba GrimerFrontpic

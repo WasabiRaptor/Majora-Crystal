@@ -81,10 +81,10 @@ AnimationPointers:
 	dw BonslyAnimation
 	dw SudowoodoAnimation
 	dw PassimianAnimation
-	dw FarfetchDAnimation
-	dw DoduoAnimation
-	dw DodrioAnimation
-	dw SeelAnimation
+	dw StuffulAnimation
+	dw BewearAnimation
+	dw GirafarigAnimation
+	dw HeracrossAnimation
 	dw DewgongAnimation
 	dw GrimerAnimation
 	dw MukAnimation

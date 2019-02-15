@@ -602,9 +602,9 @@ BirdKeeperGroup:
 
 	; BIRD_KEEPER (5)
 	db "TOBY@", TRAINERTYPE_NORMAL
-	db 15, DODUO
-	db 16, DODUO
-	db 17, DODUO
+	db 15, BEWEAR
+	db 16, BEWEAR
+	db 17, BEWEAR
 	db -1 ; end
 
 	; BIRD_KEEPER (6)
@@ -634,9 +634,9 @@ BirdKeeperGroup:
 
 	; BIRD_KEEPER (10)
 	db "BORIS@", TRAINERTYPE_NORMAL
-	db 30, DODUO
-	db 28, DODUO
-	db 32, DODRIO
+	db 30, BEWEAR
+	db 28, BEWEAR
+	db 32, GIRAFARIG
 	db -1 ; end
 
 	; BIRD_KEEPER (11)
@@ -646,7 +646,7 @@ BirdKeeperGroup:
 
 	; BIRD_KEEPER (12)
 	db "JOSE@", TRAINERTYPE_NORMAL
-	db 36, FARFETCH_D
+	db 36, STUFFUL
 	db -1 ; end
 
 	; BIRD_KEEPER (13)
@@ -658,12 +658,12 @@ BirdKeeperGroup:
 
 	; BIRD_KEEPER (14)
 	db "JOSE@", TRAINERTYPE_NORMAL
-	db 34, FARFETCH_D
+	db 34, STUFFUL
 	db -1 ; end
 
 	; BIRD_KEEPER (15)
 	db "PERRY@", TRAINERTYPE_NORMAL
-	db 34, FARFETCH_D
+	db 34, STUFFUL
 	db -1 ; end
 
 	; BIRD_KEEPER (16)
@@ -674,7 +674,7 @@ BirdKeeperGroup:
 
 	; BIRD_KEEPER (17)
 	db "JOSE@", TRAINERTYPE_MOVES
-	db 40, FARFETCH_D, FURY_ATTACK, PROTECT, FLY, SLASH
+	db 40, STUFFUL, FURY_ATTACK, PROTECT, FLY, SLASH
 	db -1 ; end
 
 	; BIRD_KEEPER (18)
@@ -1103,7 +1103,7 @@ BeautyGroup:
 	; BEAUTY (7)
 	db "CAROLINE@", TRAINERTYPE_NORMAL
 	db 30, BRAIXEN
-	db 32, SEEL
+	db 32, HERACROSS
 	db 30, BRAIXEN
 	db -1 ; end
 
@@ -1834,9 +1834,9 @@ SwimmerMGroup:
 
 	; SWIMMERM (9)
 	db "HAL@", TRAINERTYPE_NORMAL
-	db 24, SEEL
+	db 24, HERACROSS
 	db 25, DEWGONG
-	db 24, SEEL
+	db 24, HERACROSS
 	db -1 ; end
 
 	; SWIMMERM (10)
@@ -1947,7 +1947,7 @@ SwimmerFGroup:
 
 	; SWIMMERF (5)
 	db "DENISE@", TRAINERTYPE_NORMAL
-	db 22, SEEL
+	db 22, HERACROSS
 	db -1 ; end
 
 	; SWIMMERF (6)
@@ -2012,9 +2012,9 @@ SwimmerFGroup:
 
 	; SWIMMERF (17)
 	db "NIKKI@", TRAINERTYPE_NORMAL
-	db 28, SEEL
-	db 28, SEEL
-	db 28, SEEL
+	db 28, HERACROSS
+	db 28, HERACROSS
+	db 28, HERACROSS
 	db 28, DEWGONG
 	db -1 ; end
 
@@ -3196,9 +3196,9 @@ MediumGroup:
 BoarderGroup:
 	; BOARDER (1)
 	db "RONALD@", TRAINERTYPE_NORMAL
-	db 24, SEEL
+	db 24, HERACROSS
 	db 25, DEWGONG
-	db 24, SEEL
+	db 24, HERACROSS
 	db -1 ; end
 
 	; BOARDER (2)

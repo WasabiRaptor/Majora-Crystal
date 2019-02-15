@@ -84,10 +84,10 @@ MonMenuIcons:
 	db ICON_TREVANANT    ; BONSLY
 	db ICON_VOLTORB     ; SUDOWOODO
 	db ICON_VOLTORB     ; PASSIMIAN
-	db ICON_BIRD        ; FARFETCH_D
-	db ICON_BIRD        ; DODUO
-	db ICON_BIRD        ; DODRIO
-	db ICON_LAPRAS      ; SEEL
+	db ICON_BIRD        ; STUFFUL
+	db ICON_BIRD        ; BEWEAR
+	db ICON_BIRD        ; GIRAFARIG
+	db ICON_LAPRAS      ; HERACROSS
 	db ICON_LAPRAS      ; DEWGONG
 	db ICON_BLOB        ; GRIMER
 	db ICON_BLOB        ; MUK

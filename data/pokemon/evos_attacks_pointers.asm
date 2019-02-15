@@ -83,10 +83,10 @@ EvosAttacksPointers::
 	dw BonslyEvosAttacks
 	dw SudowoodoEvosAttacks
 	dw PassimianEvosAttacks
-	dw FarfetchDEvosAttacks
-	dw DoduoEvosAttacks
-	dw DodrioEvosAttacks
-	dw SeelEvosAttacks
+	dw StuffulEvosAttacks
+	dw BewearEvosAttacks
+	dw GirafarigEvosAttacks
+	dw HeracrossEvosAttacks
 	dw DewgongEvosAttacks
 	dw GrimerEvosAttacks
 	dw MukEvosAttacks

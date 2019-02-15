@@ -100,11 +100,11 @@
 	const BONSLY    	; 50
 	const SUDOWOODO  	; 51
 	const PASSIMIAN   	; 52
+	const STUFFUL 		; 53
+	const BEWEAR      	; 54
+	const GIRAFARIG     ; 55
+	const HERACROSS     ; 56
 
-	const FARFETCH_D ; 53
-	const DODUO      ; 54
-	const DODRIO     ; 55
-	const SEEL       ; 56
 	const DEWGONG    ; 57
 	const GRIMER     ; 58
 	const MUK        ; 59
