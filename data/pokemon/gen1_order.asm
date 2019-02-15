@@ -37,7 +37,7 @@ Pokered_MonIndices:
 	db MAGNETON
 	db SLOWPOKE
 	db FLOETTE
-	db GRAVELER
+	db WHIMSICOTT
 	db CHANSEY
 	db JIGGLYPUFF
 	db MR__MIME
@@ -167,7 +167,7 @@ Pokered_MonIndices:
 	db PORYGONZ
 	db CONKELDURR
 	db MEOWSTIC_M
-	db GEODUDE
+	db COTTONEE
 	db PLACE3
 	db AERODACTYL
 	db RAIKOU ; MISSINGNO.

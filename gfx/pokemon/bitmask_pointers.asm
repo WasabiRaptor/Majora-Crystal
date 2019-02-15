@@ -72,8 +72,8 @@ BitmasksPointers:
 	dw ChesnaughtBitmasks
 	dw DeerlingBitmasks
 	dw SawsbuckBitmasks
-	dw GeodudeBitmasks
-	dw GravelerBitmasks
+	dw CottoneeBitmasks
+	dw WhimsicottBitmasks
 	dw GolemBitmasks
 	dw PonytaBitmasks
 	dw RapidashBitmasks

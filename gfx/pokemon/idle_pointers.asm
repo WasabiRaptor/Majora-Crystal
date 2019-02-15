@@ -72,8 +72,8 @@ AnimationIdlePointers:
 	dw ChesnaughtAnimationIdle
 	dw DeerlingAnimationIdle
 	dw SawsbuckAnimationIdle
-	dw GeodudeAnimationIdle
-	dw GravelerAnimationIdle
+	dw CottoneeAnimationIdle
+	dw WhimsicottAnimationIdle
 	dw GolemAnimationIdle
 	dw PonytaAnimationIdle
 	dw RapidashAnimationIdle

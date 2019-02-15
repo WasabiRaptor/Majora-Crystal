@@ -152,10 +152,10 @@ PokemonPicPointers::
 	dba DeerlingBackpic
 	dba SawsbuckFrontpic
 	dba SawsbuckBackpic
-	dba GeodudeFrontpic
-	dba GeodudeBackpic
-	dba GravelerFrontpic
-	dba GravelerBackpic
+	dba CottoneeFrontpic
+	dba CottoneeBackpic
+	dba WhimsicottFrontpic
+	dba WhimsicottBackpic
 	dba GolemFrontpic
 	dba GolemBackpic
 	dba PonytaFrontpic

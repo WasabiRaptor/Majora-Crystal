@@ -72,8 +72,8 @@ AnimationPointers:
 	dw ChesnaughtAnimation
 	dw DeerlingAnimation
 	dw SawsbuckAnimation
-	dw GeodudeAnimation
-	dw GravelerAnimation
+	dw CottoneeAnimation
+	dw WhimsicottAnimation
 	dw GolemAnimation
 	dw PonytaAnimation
 	dw RapidashAnimation

@@ -34,8 +34,8 @@ NewPokedexOrder:
 	db LEDIAN
 	db SPINARAK
 	db ARIADOS
-	db GEODUDE
-	db GRAVELER
+	db COTTONEE
+	db WHIMSICOTT
 	db GOLEM
 	db NIDORINA
 	db NIDOKING

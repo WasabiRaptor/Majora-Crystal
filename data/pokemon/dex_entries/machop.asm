@@ -6,5 +6,5 @@
 	next "the mountains. It"
 
 	page "can even pick up a"
-	next "GRAVELER with"
+	next "WHIMSICOTT with"
 	next "ease.@"

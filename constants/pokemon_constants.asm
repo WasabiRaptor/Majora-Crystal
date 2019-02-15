@@ -91,9 +91,9 @@
 	const CHESNAUGHT 	; 47
 	const DEERLING  	; 48
 	const SAWSBUCK 		; 49
+	const COTTONEE    	; 4a
+	const WHIMSICOTT   	; 4b
 
-	const GEODUDE    ; 4a
-	const GRAVELER   ; 4b
 	const GOLEM      ; 4c
 	const PONYTA     ; 4d
 	const RAPIDASH   ; 4e

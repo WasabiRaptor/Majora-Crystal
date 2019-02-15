@@ -72,8 +72,8 @@ FramesPointers:
 	dw ChesnaughtFrames
 	dw DeerlingFrames
 	dw SawsbuckFrames
-	dw GeodudeFrames
-	dw GravelerFrames
+	dw CottoneeFrames
+	dw WhimsicottFrames
 	dw GolemFrames
 	dw PonytaFrames
 	dw RapidashFrames

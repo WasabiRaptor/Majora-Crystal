@@ -78,8 +78,8 @@ PokemonCries::
 	mon_cry CRY_QUILLADIN,  $066,  $14c ; CHESNAUGHT
 	mon_cry CRY_SWABLU,     $000,  $100 ; DEERLING
 	mon_cry CRY_SWABLU,     $0ee,  $17f ; SAWSBUCK
-	mon_cry CRY_GRIMER,      $0f0,  $090 ; GEODUDE
-	mon_cry CRY_GRIMER,      $000,  $100 ; GRAVELER
+	mon_cry CRY_GRIMER,      $0f0,  $090 ; COTTONEE
+	mon_cry CRY_GRIMER,      $000,  $100 ; WHIMSICOTT
 	mon_cry CRY_GOLEM,       $0e0,  $0c0 ; GOLEM
 	mon_cry CRY_QUILLADIN,  $000,  $100 ; PONYTA
 	mon_cry CRY_QUILLADIN,  $020,  $140 ; RAPIDASH

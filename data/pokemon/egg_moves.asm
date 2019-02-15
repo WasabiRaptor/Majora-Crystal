@@ -244,7 +244,7 @@ DeerlingEggMoves:
 	db SAFEGUARD
 	db -1 ; end
 
-GeodudeEggMoves:
+CottoneeEggMoves:
 	db MEGA_PUNCH
 	db ROCK_SLIDE
 	db -1 ; end

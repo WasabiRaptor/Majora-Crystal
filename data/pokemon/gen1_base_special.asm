@@ -74,8 +74,8 @@ KantoMonSpecials:
 	db 100 ; CHESNAUGHT
 	db 100 ; DEERLING
 	db 120 ; SAWSBUCK
-	db  30 ; GEODUDE
-	db  45 ; GRAVELER
+	db  30 ; COTTONEE
+	db  45 ; WHIMSICOTT
 	db  55 ; GOLEM
 	db  65 ; PONYTA
 	db  80 ; RAPIDASH

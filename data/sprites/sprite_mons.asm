@@ -1,7 +1,7 @@
 SpriteMons:
 ; entries correspond to SPRITE_* constants past SPRITE_POKEMON
 	db UNOWN
-	db GEODUDE
+	db COTTONEE
 	db LUXRAY
 	db LYCANROC
 	db SHELLDER

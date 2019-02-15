@@ -67,7 +67,7 @@ AlphabeticalPokedexOrder:
 	db PUPITAR
 	db GASTLY
 	db GENGAR
-	db GEODUDE
+	db COTTONEE
 	db GIRAFARIG
 	db MEW
 	db GLIGAR
@@ -77,7 +77,7 @@ AlphabeticalPokedexOrder:
 	db AMPHAROS
 	db GOLEM
 	db GRANBULL
-	db GRAVELER
+	db WHIMSICOTT
 	db GRIMER
 	db LUXRAY
 	db GYARADOS

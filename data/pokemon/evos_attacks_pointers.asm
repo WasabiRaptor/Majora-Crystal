@@ -74,8 +74,8 @@ EvosAttacksPointers::
 	dw ChesnaughtEvosAttacks
 	dw DeerlingEvosAttacks
 	dw SawsbuckEvosAttacks
-	dw GeodudeEvosAttacks
-	dw GravelerEvosAttacks
+	dw CottoneeEvosAttacks
+	dw WhimsicottEvosAttacks
 	dw GolemEvosAttacks
 	dw PonytaEvosAttacks
 	dw RapidashEvosAttacks

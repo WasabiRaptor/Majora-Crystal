@@ -73,8 +73,8 @@ PokedexDataPointerTable:
 	dw ChesnaughtPokedexEntry
 	dw DeerlingPokedexEntry
 	dw SawsbuckPokedexEntry
-	dw GeodudePokedexEntry
-	dw GravelerPokedexEntry
+	dw CottoneePokedexEntry
+	dw WhimsicottPokedexEntry
 	dw GolemPokedexEntry
 	dw PonytaPokedexEntry
 	dw RapidashPokedexEntry
