@@ -36,11 +36,11 @@ ValidateOTTrademon:
 	add hl, bc
 	ld a, [hl]
 
-	; Magnemite and Magneton's types changed
+	; Placeholder1 and Magneton's types changed
 	; from Electric to Electric/Steel.
-	cp MAGNEMITE
+	cp PLACEHOLDER1
 	jr z, .normal
-	cp MAGNETON
+	cp PLACEHOLDER2
 	jr z, .normal
 
 	ld [wCurSpecies], a

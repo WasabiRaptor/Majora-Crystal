@@ -12,7 +12,7 @@ AlphabeticalPokedexOrder:
 	db ARTICUNO
 	db AZUMARILL
 	db BAYLEEF
-	db BEEDRILL
+	db MAGNEMITE
 	db BELLOSSOM
 	db BELLSPROUT
 	db SYLVEON
@@ -102,7 +102,7 @@ AlphabeticalPokedexOrder:
 	db KABUTO
 	db KABUTOPS
 	db KADABRA
-	db KAKUNA
+	db MIMIKYU
 	db KANGASKHAN
 	db KINGDRA
 	db KINGLER
@@ -122,15 +122,15 @@ AlphabeticalPokedexOrder:
 	db MAGCARGO
 	db MAGIKARP
 	db MAGMAR
-	db MAGNEMITE
-	db MAGNETON
+	db PLACEHOLDER1
+	db PLACEHOLDER2
 	db MANKEY
 	db MANTINE
 	db MAREEP
 	db MARILL
 	db MAROWAK
 	db MEGANIUM
-	db MEOWTH
+	db PLACE5
 	db ZOROARK
 	db MEW
 	db MEWTWO
@@ -159,9 +159,9 @@ AlphabeticalPokedexOrder:
 	db PERSIAN
 	db PHANPY
 	db PICHU
-	db PIDGEOT
-	db PIDGEOTTO
-	db PIDGEY
+	db PORYGON
+	db MAGNEZONE
+	db MAGNETON
 	db PIKACHU
 	db PILOSWINE
 	db PINECO
@@ -171,8 +171,8 @@ AlphabeticalPokedexOrder:
 	db POLIWHIRL
 	db POLIWRATH
 	db PONYTA
-	db PORYGON
-	db PORYGON2
+	db PLACE3
+	db PLACE4
 	db PRIMEAPE
 	db PSYDUCK
 	db PUPITAR
@@ -182,8 +182,8 @@ AlphabeticalPokedexOrder:
 	db RAICHU
 	db RAIKOU
 	db RAPIDASH
-	db RATICATE
-	db RATTATA
+	db PORYGONZ
+	db PORYGON2
 	db REMORAID
 	db RHYDON
 	db RHYHORN
@@ -208,7 +208,7 @@ AlphabeticalPokedexOrder:
 	db SNEASEL
 	db SNORLAX
 	db SNUBBULL
-	db SPEAROW
+	db MEOWTH
 	db SPINARAK
 	db LEAFEON
 	db STANTLER

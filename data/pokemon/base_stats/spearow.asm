@@ -1,4 +1,4 @@
-	db SPEAROW ; 021
+	db MEOWTH ; 021
 
 	db  40,  60,  30,  70,  31,  31
     evs  0,   0,   0,   1,   0,   0
@@ -10,7 +10,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 15 ; step cycles to hatch
-	INCBIN "gfx/pokemon/spearow/front.dimensions"
+	INCBIN "gfx/pokemon/meowth/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate

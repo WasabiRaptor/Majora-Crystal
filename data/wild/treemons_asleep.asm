@@ -5,9 +5,9 @@ AsleepTreeMonsNite:
 	db ZOROARK
 	db ROCKRUFF
 	db LYCANROC
-	db KAKUNA
-	db BEEDRILL
-	db SPEAROW
+	db MIMIKYU
+	db MAGNEMITE
+	db MEOWTH
 	db EKANS
 	db EXEGGCUTE
 	db LEDYBA

@@ -32,15 +32,15 @@
 	const ZOROARK		; 0b
 	const ROCKRUFF		; 0c
 	const LYCANROC		; 0d
+	const MIMIKYU     	; 0e
+	const MAGNEMITE   	; 0f
+	const MAGNETON     	; 10
+	const MAGNEZONE  	; 11
+	const PORYGON    	; 12
+	const PORYGON2    	; 13
+	const PORYGONZ   	; 14
+	const MEOWTH    	; 15
 
-	const KAKUNA     ; 0e
-	const BEEDRILL   ; 0f
-	const PIDGEY     ; 10
-	const PIDGEOTTO  ; 11
-	const PIDGEOT    ; 12
-	const RATTATA    ; 13
-	const RATICATE   ; 14
-	const SPEAROW    ; 15
 	const FEAROW     ; 16
 	const EKANS      ; 17
 	const ARBOK      ; 18
@@ -71,7 +71,7 @@
 	const VENOMOTH   ; 31
 	const DIGLETT    ; 32
 	const DUGTRIO    ; 33
-	const MEOWTH     ; 34
+	const PLACE5     ; 34
 	const PERSIAN    ; 35
 	const PSYDUCK    ; 36
 	const GOLDUCK    ; 37
@@ -100,8 +100,8 @@
 	const RAPIDASH   ; 4e
 	const SLOWPOKE   ; 4f
 	const SLOWBRO    ; 50
-	const MAGNEMITE  ; 51
-	const MAGNETON   ; 52
+	const PLACEHOLDER1  ; 51
+	const PLACEHOLDER2   ; 52
 	const FARFETCH_D ; 53
 	const DODUO      ; 54
 	const DODRIO     ; 55
@@ -156,7 +156,7 @@
 	const VAPOREONX   ; 86
 	const JOLTEONX    ; 87
 	const FLAREONX    ; 88
-	const PORYGON    ; 89
+	const PLACE3    ; 89
 	const OMANYTE    ; 8a
 	const OMASTAR    ; 8b
 	const KABUTO     ; 8c
@@ -253,7 +253,7 @@ JOHTO_POKEMON EQU const_value
 	const KINGDRA    ; e6
 	const PHANPY     ; e7
 	const DONPHAN    ; e8
-	const PORYGON2   ; e9
+	const PLACE4   ; e9
 	const STANTLER   ; ea
 	const SMEARGLE   ; eb
 	const TYROGUE    ; ec

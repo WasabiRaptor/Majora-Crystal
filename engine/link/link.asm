@@ -716,9 +716,9 @@ Link_PrepPartyData_Gen1:
 	ld [de], a
 	inc de
 	ld a, [bc]
-	cp MAGNEMITE
+	cp PLACEHOLDER1
 	jr z, .steel_type
-	cp MAGNETON
+	cp PLACEHOLDER2
 	jr nz, .skip_steel
 
 .steel_type

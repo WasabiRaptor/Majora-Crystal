@@ -12,14 +12,14 @@ BitmasksPointers:
 	dw ZoroarkBitmasks
 	dw RockruffBitmasks
 	dw LycanrocBitmasks
-	dw KakunaBitmasks
-	dw BeedrillBitmasks
-	dw PidgeyBitmasks
-	dw PidgeottoBitmasks
-	dw PidgeotBitmasks
-	dw RattataBitmasks
-	dw RaticateBitmasks
-	dw SpearowBitmasks
+	dw MimikyuBitmasks
+	dw MagnemiteBitmasks
+	dw MagnetonBitmasks
+	dw MagnezoneBitmasks
+	dw PorygonBitmasks
+	dw Porygon2Bitmasks
+	dw PorygonZBitmasks
+	dw MeowthBitmasks
 	dw FearowBitmasks
 	dw EkansBitmasks
 	dw ArbokBitmasks
@@ -50,7 +50,7 @@ BitmasksPointers:
 	dw VenomothBitmasks
 	dw DiglettBitmasks
 	dw DugtrioBitmasks
-	dw MeowthBitmasks
+	dw Place5Bitmasks
 	dw PersianBitmasks
 	dw PsyduckBitmasks
 	dw GolduckBitmasks
@@ -79,7 +79,7 @@ BitmasksPointers:
 	dw RapidashBitmasks
 	dw SlowpokeBitmasks
 	dw SlowbroBitmasks
-	dw MagnemiteBitmasks
+	dw Placeholder1Bitmasks
 	dw MagnetonBitmasks
 	dw FarfetchDBitmasks
 	dw DoduoBitmasks
@@ -135,7 +135,7 @@ BitmasksPointers:
 	dw VaporeonxBitmasks
 	dw JolteonxBitmasks
 	dw FlareonxBitmasks
-	dw PorygonBitmasks
+	dw Place3Bitmasks
 	dw OmanyteBitmasks
 	dw OmastarBitmasks
 	dw KabutoBitmasks
@@ -231,7 +231,7 @@ BitmasksPointers:
 	dw KingdraBitmasks
 	dw PhanpyBitmasks
 	dw DonphanBitmasks
-	dw Porygon2Bitmasks
+	dw Place4Bitmasks
 	dw StantlerBitmasks
 	dw SmeargleBitmasks
 	dw TyrogueBitmasks

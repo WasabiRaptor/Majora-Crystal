@@ -43,7 +43,7 @@ LeafeonEggMoves:
 	db FLAIL
 	db -1 ; end
 
-PidgeyEggMoves:
+MagnetonEggMoves:
 	db PURSUIT
 	db FAINT_ATTACK
 	db FORESIGHT
@@ -52,7 +52,7 @@ if !_BRASS
 endc
 	db -1 ; end
 
-RattataEggMoves:
+Porygon2EggMoves:
 	db SCREECH
 	db FLAME_WHEEL
 	db FURY_SWIPES
@@ -61,7 +61,7 @@ RattataEggMoves:
 	db REVERSAL
 	db -1 ; end
 
-SpearowEggMoves:
+MeowthEggMoves:
 	db FAINT_ATTACK
 	db FALSE_SWIPE
 	db SCARY_FACE
@@ -170,7 +170,7 @@ DiglettEggMoves:
 	db BEAT_UP
 	db -1 ; end
 
-MeowthEggMoves:
+Place5EggMoves:
 	db SPITE
 	db CHARM
 	db HYPNOSIS

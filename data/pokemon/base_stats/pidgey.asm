@@ -1,4 +1,4 @@
-	db PIDGEY ; 016
+	db MAGNETON ; 016
 
 	db  40,  45,  40,  56,  35,  35
     evs  0,   0,   0,   1,   0,   0
@@ -10,7 +10,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 15 ; step cycles to hatch
-	INCBIN "gfx/pokemon/pidgey/front.dimensions"
+	INCBIN "gfx/pokemon/magneton/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_SLOW ; growth rate

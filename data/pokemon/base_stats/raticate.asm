@@ -1,4 +1,4 @@
-	db RATICATE ; 020
+	db PORYGONZ ; 020
 
 	db  55,  81,  60,  97,  50,  70
     evs  0,   0,   0,   2,   0,   0
@@ -10,7 +10,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 15 ; step cycles to hatch
-	INCBIN "gfx/pokemon/raticate/front.dimensions"
+	INCBIN "gfx/pokemon/porygonz/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate

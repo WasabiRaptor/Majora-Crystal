@@ -15,14 +15,14 @@ MonMenuIcons:
 	db ICON_FOX			; ROCKRUFF
 	db ICON_FOX			; LYCANROC
 	
-	db ICON_CATERPILLAR ; KAKUNA
-	db ICON_BUG         ; BEEDRILL
-	db ICON_BIRD        ; PIDGEY
-	db ICON_BIRD        ; PIDGEOTTO
-	db ICON_BIRD        ; PIDGEOT
-	db ICON_FOX         ; RATTATA
-	db ICON_FOX         ; RATICATE
-	db ICON_BIRD        ; SPEAROW
+	db ICON_CATERPILLAR ; MIMIKYU
+	db ICON_BUG         ; MAGNEMITE
+	db ICON_BIRD        ; MAGNETON
+	db ICON_BIRD        ; MAGNEZONE
+	db ICON_BIRD        ; PORYGON
+	db ICON_FOX         ; PORYGON2
+	db ICON_FOX         ; PORYGONZ
+	db ICON_BIRD        ; MEOWTH
 	db ICON_BIRD        ; FEAROW
 	db ICON_SERPENT     ; EKANS
 	db ICON_SERPENT     ; ARBOK
@@ -53,7 +53,7 @@ MonMenuIcons:
 	db ICON_MOTH        ; VENOMOTH
 	db ICON_DIGLETT     ; DIGLETT
 	db ICON_DIGLETT     ; DUGTRIO
-	db ICON_FOX         ; MEOWTH
+	db ICON_FOX         ; PLACE5
 	db ICON_FOX         ; PERSIAN
 	db ICON_MONSTER     ; PSYDUCK
 	db ICON_MONSTER     ; GOLDUCK
@@ -82,8 +82,8 @@ MonMenuIcons:
 	db ICON_EQUINE      ; RAPIDASH
 	db ICON_SLOWPOKE    ; SLOWPOKE
 	db ICON_SLOWPOKE    ; SLOWBRO
-	db ICON_VOLTORB     ; MAGNEMITE
-	db ICON_VOLTORB     ; MAGNETON
+	db ICON_VOLTORB     ; PLACEHOLDER1
+	db ICON_VOLTORB     ; PLACEHOLDER2
 	db ICON_BIRD        ; FARFETCH_D
 	db ICON_BIRD        ; DODUO
 	db ICON_BIRD        ; DODRIO
@@ -138,7 +138,7 @@ MonMenuIcons:
 	db ICON_FOX         ; VAPOREONX
 	db ICON_FOX         ; JOLTEONX
 	db ICON_FOX         ; FLAREONX
-	db ICON_VOLTORB     ; PORYGON
+	db ICON_VOLTORB     ; PLACE3
 	db ICON_SHELL       ; OMANYTE
 	db ICON_SHELL       ; OMASTAR
 	db ICON_SHELL       ; KABUTO
@@ -234,7 +234,7 @@ MonMenuIcons:
 	db ICON_BIGMON      ; KINGDRA
 	db ICON_EQUINE      ; PHANPY
 	db ICON_EQUINE      ; DONPHAN
-	db ICON_VOLTORB     ; PORYGON2
+	db ICON_VOLTORB     ; PLACE4
 	db ICON_EQUINE      ; STANTLER
 	db ICON_MONSTER     ; SMEARGLE
 	db ICON_FIGHTER     ; TYROGUE

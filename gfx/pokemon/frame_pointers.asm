@@ -12,14 +12,14 @@ FramesPointers:
 	dw ZoroarkFrames
 	dw RockruffFrames
 	dw LycanrocFrames
-	dw KakunaFrames
-	dw BeedrillFrames
-	dw PidgeyFrames
-	dw PidgeottoFrames
-	dw PidgeotFrames
-	dw RattataFrames
-	dw RaticateFrames
-	dw SpearowFrames
+	dw MimikyuFrames
+	dw MagnemiteFrames
+	dw MagnetonFrames
+	dw MagnezoneFrames
+	dw PorygonFrames
+	dw Porygon2Frames
+	dw PorygonZFrames
+	dw MeowthFrames
 	dw FearowFrames
 	dw EkansFrames
 	dw ArbokFrames
@@ -50,7 +50,7 @@ FramesPointers:
 	dw VenomothFrames
 	dw DiglettFrames
 	dw DugtrioFrames
-	dw MeowthFrames
+	dw Place5Frames
 	dw PersianFrames
 	dw PsyduckFrames
 	dw GolduckFrames
@@ -79,7 +79,7 @@ FramesPointers:
 	dw RapidashFrames
 	dw SlowpokeFrames
 	dw SlowbroFrames
-	dw MagnemiteFrames
+	dw Placeholder1Frames
 	dw MagnetonFrames
 	dw FarfetchDFrames
 	dw DoduoFrames
@@ -135,7 +135,7 @@ FramesPointers:
 	dw VaporeonxFrames
 	dw JolteonxFrames
 	dw FlareonxFrames
-	dw PorygonFrames
+	dw Place3Frames
 	dw OmanyteFrames
 	dw OmastarFrames
 	dw KabutoFrames
@@ -231,7 +231,7 @@ FramesPointers:
 	dw KingdraFrames
 	dw PhanpyFrames
 	dw DonphanFrames
-	dw Porygon2Frames
+	dw Place4Frames
 	dw StantlerFrames
 	dw SmeargleFrames
 	dw TyrogueFrames

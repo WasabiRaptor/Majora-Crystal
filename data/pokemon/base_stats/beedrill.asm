@@ -1,4 +1,4 @@
-	db BEEDRILL ; 015
+	db MAGNEMITE ; 015
 
 	db  65,  80,  40,  75,  45,  80
     evs  0,   2,   0,   0,   0,   1
@@ -10,7 +10,7 @@
 	db NO_ITEM, POISON_BARB ; items
 	db GENDER_F50 ; gender ratio
 	db 15 ; step cycles to hatch
-	INCBIN "gfx/pokemon/beedrill/front.dimensions"
+	INCBIN "gfx/pokemon/magnemite/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate

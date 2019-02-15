@@ -14,12 +14,12 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw PidgeyEggMoves
+	dw MagnetonEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw RattataEggMoves
+	dw Porygon2EggMoves
 	dw NoEggMoves
-	dw SpearowEggMoves
+	dw MeowthEggMoves
 	dw NoEggMoves
 	dw EkansEggMoves
 	dw NoEggMoves
@@ -50,7 +50,7 @@ EggMovePointers::
 	dw NoEggMoves
 	dw DiglettEggMoves
 	dw NoEggMoves
-	dw MeowthEggMoves
+	dw Place5EggMoves
 	dw NoEggMoves
 	dw PsyduckEggMoves
 	dw NoEggMoves

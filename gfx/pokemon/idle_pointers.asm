@@ -12,14 +12,14 @@ AnimationIdlePointers:
 	dw ZoroarkAnimationIdle
 	dw RockruffAnimationIdle
 	dw LycanrocAnimationIdle
-	dw KakunaAnimationIdle
-	dw BeedrillAnimationIdle
-	dw PidgeyAnimationIdle
-	dw PidgeottoAnimationIdle
-	dw PidgeotAnimationIdle
-	dw RattataAnimationIdle
-	dw RaticateAnimationIdle
-	dw SpearowAnimationIdle
+	dw MimikyuAnimationIdle
+	dw MagnemiteAnimationIdle
+	dw MagnetonAnimationIdle
+	dw MagnezoneAnimationIdle
+	dw PorygonAnimationIdle
+	dw Porygon2AnimationIdle
+	dw PorygonZAnimationIdle
+	dw MeowthAnimationIdle
 	dw FearowAnimationIdle
 	dw EkansAnimationIdle
 	dw ArbokAnimationIdle
@@ -50,7 +50,7 @@ AnimationIdlePointers:
 	dw VenomothAnimationIdle
 	dw DiglettAnimationIdle
 	dw DugtrioAnimationIdle
-	dw MeowthAnimationIdle
+	dw Place5AnimationIdle
 	dw PersianAnimationIdle
 	dw PsyduckAnimationIdle
 	dw GolduckAnimationIdle
@@ -79,7 +79,7 @@ AnimationIdlePointers:
 	dw RapidashAnimationIdle
 	dw SlowpokeAnimationIdle
 	dw SlowbroAnimationIdle
-	dw MagnemiteAnimationIdle
+	dw Placeholder1AnimationIdle
 	dw MagnetonAnimationIdle
 	dw FarfetchDAnimationIdle
 	dw DoduoAnimationIdle
@@ -135,7 +135,7 @@ AnimationIdlePointers:
 	dw VaporeonxAnimationIdle
 	dw JolteonxAnimationIdle
 	dw FlareonxAnimationIdle
-	dw PorygonAnimationIdle
+	dw Place3AnimationIdle
 	dw OmanyteAnimationIdle
 	dw OmastarAnimationIdle
 	dw KabutoAnimationIdle
@@ -231,7 +231,7 @@ AnimationIdlePointers:
 	dw KingdraAnimationIdle
 	dw PhanpyAnimationIdle
 	dw DonphanAnimationIdle
-	dw Porygon2AnimationIdle
+	dw Place4AnimationIdle
 	dw StantlerAnimationIdle
 	dw SmeargleAnimationIdle
 	dw TyrogueAnimationIdle

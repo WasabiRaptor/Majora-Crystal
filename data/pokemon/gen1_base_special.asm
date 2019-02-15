@@ -14,14 +14,14 @@ KantoMonSpecials:
 	db  25 ; ZOROARK
 	db  80 ; ROCKRUFF
 	db  20 ; LYCANROC
-	db  25 ; KAKUNA
-	db  45 ; BEEDRILL
-	db  35 ; PIDGEY
-	db  50 ; PIDGEOTTO
-	db  70 ; PIDGEOT
-	db  25 ; RATTATA
-	db  50 ; RATICATE
-	db  31 ; SPEAROW
+	db  25 ; MIMIKYU
+	db  45 ; MAGNEMITE
+	db  35 ; MAGNETON
+	db  50 ; MAGNEZONE
+	db  70 ; PORYGON
+	db  25 ; PORYGON2
+	db  50 ; PORYGONZ
+	db  31 ; MEOWTH
 	db  61 ; FEAROW
 	db  40 ; EKANS
 	db  65 ; ARBOK
@@ -52,7 +52,7 @@ KantoMonSpecials:
 	db  90 ; VENOMOTH
 	db  45 ; DIGLETT
 	db  70 ; DUGTRIO
-	db  40 ; MEOWTH
+	db  40 ; PLACE5
 	db  65 ; PERSIAN
 	db  50 ; PSYDUCK
 	db  80 ; GOLDUCK
@@ -81,8 +81,8 @@ KantoMonSpecials:
 	db  80 ; RAPIDASH
 	db  40 ; SLOWPOKE
 	db  80 ; SLOWBRO
-	db  95 ; MAGNEMITE
-	db 120 ; MAGNETON
+	db  95 ; PLACEHOLDER1
+	db 120 ; PLACEHOLDER2
 	db  58 ; FARFETCH_D
 	db  35 ; DODUO
 	db  60 ; DODRIO
@@ -137,7 +137,7 @@ KantoMonSpecials:
 	db 110 ; VAPOREONX
 	db 110 ; JOLTEONX
 	db 110 ; FLAREONX
-	db  75 ; PORYGON
+	db  75 ; PLACE3
 	db  90 ; OMANYTE
 	db 115 ; OMASTAR
 	db  45 ; KABUTO

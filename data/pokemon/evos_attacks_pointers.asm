@@ -14,14 +14,14 @@ EvosAttacksPointers::
 	dw ZoroarkEvosAttacks
 	dw RockruffEvosAttacks
 	dw LycanrocEvosAttacks
-	dw KakunaEvosAttacks
-	dw BeedrillEvosAttacks
-	dw PidgeyEvosAttacks
-	dw PidgeottoEvosAttacks
-	dw PidgeotEvosAttacks
-	dw RattataEvosAttacks
-	dw RaticateEvosAttacks
-	dw SpearowEvosAttacks
+	dw MimikyuEvosAttacks
+	dw MagnemiteEvosAttacks
+	dw MagnetonEvosAttacks
+	dw MagnezoneEvosAttacks
+	dw PorygonEvosAttacks
+	dw Porygon2EvosAttacks
+	dw PorygonZEvosAttacks
+	dw MeowthEvosAttacks
 	dw FearowEvosAttacks
 	dw EkansEvosAttacks
 	dw ArbokEvosAttacks
@@ -52,7 +52,7 @@ EvosAttacksPointers::
 	dw VenomothEvosAttacks
 	dw DiglettEvosAttacks
 	dw DugtrioEvosAttacks
-	dw MeowthEvosAttacks
+	dw Place5EvosAttacks
 	dw PersianEvosAttacks
 	dw PsyduckEvosAttacks
 	dw GolduckEvosAttacks
@@ -81,7 +81,7 @@ EvosAttacksPointers::
 	dw RapidashEvosAttacks
 	dw SlowpokeEvosAttacks
 	dw SlowbroEvosAttacks
-	dw MagnemiteEvosAttacks
+	dw Placeholder1EvosAttacks
 	dw MagnetonEvosAttacks
 	dw FarfetchDEvosAttacks
 	dw DoduoEvosAttacks
@@ -137,7 +137,7 @@ EvosAttacksPointers::
 	dw VaporeonxEvosAttacks
 	dw JolteonxEvosAttacks
 	dw FlareonxEvosAttacks
-	dw PorygonEvosAttacks
+	dw Place3EvosAttacks
 	dw OmanyteEvosAttacks
 	dw OmastarEvosAttacks
 	dw KabutoEvosAttacks
@@ -233,7 +233,7 @@ EvosAttacksPointers::
 	dw KingdraEvosAttacks
 	dw PhanpyEvosAttacks
 	dw DonphanEvosAttacks
-	dw Porygon2EvosAttacks
+	dw Place4EvosAttacks
 	dw StantlerEvosAttacks
 	dw SmeargleEvosAttacks
 	dw TyrogueEvosAttacks

@@ -13,13 +13,13 @@ Cries:
 	dba Cry_Diglett
 	dba Cry_Seel
 	dba Cry_Drowzee
-	dba Cry_Pidgey
+	dba Cry_Magneton
 	dba Cry_Eevee
-	dba Cry_Spearow
+	dba Cry_Meowth
 	dba Cry_Rhydon
 	dba Cry_Golem
 	dba Cry_Sylveon
-	dba Cry_Pidgeotto
+	dba Cry_Magnezone
 	dba Cry_Lycanroc
 	dba Cry_Zorua
 	dba Cry_Ekans
@@ -33,7 +33,7 @@ Cries:
 	dba Cry_Growlithe
 	dba Cry_Krabby
 	dba Cry_Psyduck
-	dba Cry_Rattata
+	dba Cry_Porygon2
 	dba Cry_Vileplume
 	dba Cry_Vulpix
 	dba Cry_Weepinbell

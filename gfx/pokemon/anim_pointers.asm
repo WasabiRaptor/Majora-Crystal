@@ -12,14 +12,14 @@ AnimationPointers:
 	dw ZoroarkAnimation
 	dw RockruffAnimation
 	dw LycanrocAnimation
-	dw KakunaAnimation
-	dw BeedrillAnimation
-	dw PidgeyAnimation
-	dw PidgeottoAnimation
-	dw PidgeotAnimation
-	dw RattataAnimation
-	dw RaticateAnimation
-	dw SpearowAnimation
+	dw MimikyuAnimation
+	dw MagnemiteAnimation
+	dw MagnetonAnimation
+	dw MagnezoneAnimation
+	dw PorygonAnimation
+	dw Porygon2Animation
+	dw PorygonZAnimation
+	dw MeowthAnimation
 	dw FearowAnimation
 	dw EkansAnimation
 	dw ArbokAnimation
@@ -50,7 +50,7 @@ AnimationPointers:
 	dw VenomothAnimation
 	dw DiglettAnimation
 	dw DugtrioAnimation
-	dw MeowthAnimation
+	dw Place5Animation
 	dw PersianAnimation
 	dw PsyduckAnimation
 	dw GolduckAnimation
@@ -79,7 +79,7 @@ AnimationPointers:
 	dw RapidashAnimation
 	dw SlowpokeAnimation
 	dw SlowbroAnimation
-	dw MagnemiteAnimation
+	dw Placeholder1Animation
 	dw MagnetonAnimation
 	dw FarfetchDAnimation
 	dw DoduoAnimation
@@ -135,7 +135,7 @@ AnimationPointers:
 	dw VaporeonxAnimation
 	dw JolteonxAnimation
 	dw FlareonxAnimation
-	dw PorygonAnimation
+	dw Place3Animation
 	dw OmanyteAnimation
 	dw OmastarAnimation
 	dw KabutoAnimation
@@ -231,7 +231,7 @@ AnimationPointers:
 	dw KingdraAnimation
 	dw PhanpyAnimation
 	dw DonphanAnimation
-	dw Porygon2Animation
+	dw Place4Animation
 	dw StantlerAnimation
 	dw SmeargleAnimation
 	dw TyrogueAnimation

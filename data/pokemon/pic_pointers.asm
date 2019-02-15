@@ -28,22 +28,22 @@ PokemonPicPointers::
 	dba RockruffBackpic
 	dba LycanrocFrontpic
 	dba LycanrocBackpic
-	dba KakunaFrontpic
-	dba KakunaBackpic
-	dba BeedrillFrontpic
-	dba BeedrillBackpic
-	dba PidgeyFrontpic
-	dba PidgeyBackpic
-	dba PidgeottoFrontpic
-	dba PidgeottoBackpic
-	dba PidgeotFrontpic
-	dba PidgeotBackpic
-	dba RattataFrontpic
-	dba RattataBackpic
-	dba RaticateFrontpic
-	dba RaticateBackpic
-	dba SpearowFrontpic
-	dba SpearowBackpic
+	dba MimikyuFrontpic
+	dba MimikyuBackpic
+	dba MagnemiteFrontpic
+	dba MagnemiteBackpic
+	dba MagnetonFrontpic
+	dba MagnetonBackpic
+	dba MagnezoneFrontpic
+	dba MagnezoneBackpic
+	dba PorygonFrontpic
+	dba PorygonBackpic
+	dba Porygon2Frontpic
+	dba Porygon2Backpic
+	dba PorygonZFrontpic
+	dba PorygonZBackpic
+	dba MeowthFrontpic
+	dba MeowthBackpic
 	dba FearowFrontpic
 	dba FearowBackpic
 	dba EkansFrontpic
@@ -108,8 +108,8 @@ PokemonPicPointers::
 	dba DiglettBackpic
 	dba DugtrioFrontpic
 	dba DugtrioBackpic
-	dba MeowthFrontpic
-	dba MeowthBackpic
+	dba Place5Frontpic
+	dba Place5Backpic
 	dba PersianFrontpic
 	dba PersianBackpic
 	dba PsyduckFrontpic
@@ -166,8 +166,8 @@ PokemonPicPointers::
 	dba SlowpokeBackpic
 	dba SlowbroFrontpic
 	dba SlowbroBackpic
-	dba MagnemiteFrontpic
-	dba MagnemiteBackpic
+	dba Placeholder1Frontpic
+	dba Placeholder1Backpic
 	dba MagnetonFrontpic
 	dba MagnetonBackpic
 	dba FarfetchDFrontpic
@@ -278,8 +278,8 @@ PokemonPicPointers::
 	dba JolteonxBackpic
 	dba FlareonxFrontpic
 	dba FlareonxBackpic
-	dba PorygonFrontpic
-	dba PorygonBackpic
+	dba Place3Frontpic
+	dba Place3Backpic
 	dba OmanyteFrontpic
 	dba OmanyteBackpic
 	dba OmastarFrontpic
@@ -473,8 +473,8 @@ PokemonPicPointers::
 	dba PhanpyBackpic
 	dba DonphanFrontpic
 	dba DonphanBackpic
-	dba Porygon2Frontpic
-	dba Porygon2Backpic
+	dba Place4Frontpic
+	dba Place4Backpic
 	dba StantlerFrontpic
 	dba StantlerBackpic
 	dba SmeargleFrontpic

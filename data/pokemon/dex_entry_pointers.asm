@@ -13,14 +13,14 @@ PokedexDataPointerTable:
 	dw ZoroarkPokedexEntry
 	dw RockruffPokedexEntry
 	dw LycanrocPokedexEntry
-	dw KakunaPokedexEntry
-	dw BeedrillPokedexEntry
-	dw PidgeyPokedexEntry
-	dw PidgeottoPokedexEntry
-	dw PidgeotPokedexEntry
-	dw RattataPokedexEntry
-	dw RaticatePokedexEntry
-	dw SpearowPokedexEntry
+	dw MimikyuPokedexEntry
+	dw MagnemitePokedexEntry
+	dw MagnetonPokedexEntry
+	dw MagnezonePokedexEntry
+	dw PorygonPokedexEntry
+	dw Porygon2PokedexEntry
+	dw PorygonZPokedexEntry
+	dw MeowthPokedexEntry
 	dw FearowPokedexEntry
 	dw EkansPokedexEntry
 	dw ArbokPokedexEntry
@@ -51,7 +51,7 @@ PokedexDataPointerTable:
 	dw VenomothPokedexEntry
 	dw DiglettPokedexEntry
 	dw DugtrioPokedexEntry
-	dw MeowthPokedexEntry
+	dw Place5PokedexEntry
 	dw PersianPokedexEntry
 	dw PsyduckPokedexEntry
 	dw GolduckPokedexEntry
@@ -80,7 +80,7 @@ PokedexDataPointerTable:
 	dw RapidashPokedexEntry
 	dw SlowpokePokedexEntry
 	dw SlowbroPokedexEntry
-	dw MagnemitePokedexEntry
+	dw Placeholder1PokedexEntry
 	dw MagnetonPokedexEntry
 	dw FarfetchDPokedexEntry
 	dw DoduoPokedexEntry
@@ -136,7 +136,7 @@ PokedexDataPointerTable:
 	dw VaporeonxPokedexEntry
 	dw JolteonxPokedexEntry
 	dw FlareonxPokedexEntry
-	dw PorygonPokedexEntry
+	dw Place3PokedexEntry
 	dw OmanytePokedexEntry
 	dw OmastarPokedexEntry
 	dw KabutoPokedexEntry
@@ -232,7 +232,7 @@ PokedexDataPointerTable:
 	dw KingdraPokedexEntry
 	dw PhanpyPokedexEntry
 	dw DonphanPokedexEntry
-	dw Porygon2PokedexEntry
+	dw Place4PokedexEntry
 	dw StantlerPokedexEntry
 	dw SmearglePokedexEntry
 	dw TyroguePokedexEntry

@@ -1,4 +1,4 @@
-	db PIDGEOTTO ; 017
+	db MAGNEZONE ; 017
 
 	db  63,  60,  55,  71,  50,  50
     evs  0,   0,   0,   2,   0,   0
@@ -10,7 +10,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 15 ; step cycles to hatch
-	INCBIN "gfx/pokemon/pidgeotto/front.dimensions"
+	INCBIN "gfx/pokemon/magnezone/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_SLOW ; growth rate

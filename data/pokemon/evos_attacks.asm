@@ -199,20 +199,20 @@ RockruffEvosAttacks:
 	db 0 ; no more level-up moves
 
 LycanrocEvosAttacks:
-	db EVOLVE_LEVEL, 7, KAKUNA
+	db EVOLVE_LEVEL, 7, MIMIKYU
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 1, STRING_SHOT
 	db 0 ; no more level-up moves
 
-KakunaEvosAttacks:
-	db EVOLVE_LEVEL, 10, BEEDRILL
+MimikyuEvosAttacks:
+	db EVOLVE_LEVEL, 10, MAGNEMITE
 	db 0 ; no more evolutions
 	db 1, HARDEN
 	db 7, HARDEN
 	db 0 ; no more level-up moves
 
-BeedrillEvosAttacks:
+MagnemiteEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, FURY_ATTACK
 	db 10, FURY_ATTACK
@@ -224,8 +224,8 @@ BeedrillEvosAttacks:
 	db 40, AGILITY
 	db 0 ; no more level-up moves
 
-PidgeyEvosAttacks:
-	db EVOLVE_LEVEL, 18, PIDGEOTTO
+MagnetonEvosAttacks:
+	db EVOLVE_LEVEL, 18, MAGNEZONE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 5, SAND_ATTACK
@@ -237,8 +237,8 @@ PidgeyEvosAttacks:
 	db 47, MIRROR_MOVE
 	db 0 ; no more level-up moves
 
-PidgeottoEvosAttacks:
-	db EVOLVE_LEVEL, 36, PIDGEOT
+MagnezoneEvosAttacks:
+	db EVOLVE_LEVEL, 36, PORYGON
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, SAND_ATTACK
@@ -252,7 +252,7 @@ PidgeottoEvosAttacks:
 	db 55, MIRROR_MOVE
 	db 0 ; no more level-up moves
 
-PidgeotEvosAttacks:
+PorygonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, SAND_ATTACK
@@ -267,8 +267,8 @@ PidgeotEvosAttacks:
 	db 61, MIRROR_MOVE
 	db 0 ; no more level-up moves
 
-RattataEvosAttacks:
-	db EVOLVE_LEVEL, 20, RATICATE
+Porygon2EvosAttacks:
+	db EVOLVE_LEVEL, 20, PORYGONZ
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
@@ -279,7 +279,7 @@ RattataEvosAttacks:
 	db 34, SUPER_FANG
 	db 0 ; no more level-up moves
 
-RaticateEvosAttacks:
+PorygonZEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
@@ -291,7 +291,7 @@ RaticateEvosAttacks:
 	db 40, SUPER_FANG
 	db 0 ; no more level-up moves
 
-SpearowEvosAttacks:
+MeowthEvosAttacks:
 	db EVOLVE_LEVEL, 20, FEAROW
 	db 0 ; no more evolutions
 	db 1, PECK
@@ -708,7 +708,7 @@ endc
 	db 61, FISSURE
 	db 0 ; no more level-up moves
 
-MeowthEvosAttacks:
+Place5EvosAttacks:
 	db EVOLVE_LEVEL, 28, PERSIAN
 	db 0 ; no more evolutions
 	db 1, SCRATCH
@@ -1113,8 +1113,8 @@ SlowbroEvosAttacks:
 	db 54, PSYCHIC_M
 	db 0 ; no more level-up moves
 
-MagnemiteEvosAttacks:
-	db EVOLVE_LEVEL, 30, MAGNETON
+Placeholder1EvosAttacks:
+	db EVOLVE_LEVEL, 30, PLACEHOLDER2
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 6, THUNDERSHOCK
@@ -1887,8 +1887,8 @@ FlareonxEvosAttacks:
 	db 52, FLAMETHROWER
 	db 0 ; no more level-up moves
 
-PorygonEvosAttacks:
-	db EVOLVE_TRADE, UP_GRADE, PORYGON2
+Place3EvosAttacks:
+	db EVOLVE_TRADE, UP_GRADE, PLACE4
 	db 0 ; no more evolutions
 	db 1, CONVERSION2
 	db 1, TACKLE
@@ -3163,7 +3163,7 @@ DonphanEvosAttacks:
 	db 49, EARTHQUAKE
 	db 0 ; no more level-up moves
 
-Porygon2EvosAttacks:
+Place4EvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CONVERSION2
 	db 1, TACKLE
