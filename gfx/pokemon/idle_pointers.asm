@@ -81,10 +81,10 @@ AnimationIdlePointers:
 	dw BonslyAnimationIdle
 	dw SudowoodoAnimationIdle
 	dw PassimianAnimationIdle
-	dw FarfetchDAnimationIdle
-	dw DoduoAnimationIdle
-	dw DodrioAnimationIdle
-	dw SeelAnimationIdle
+	dw StuffulAnimationIdle
+	dw BewearAnimationIdle
+	dw GirafarigAnimationIdle
+	dw HeracrossAnimationIdle
 	dw DewgongAnimationIdle
 	dw GrimerAnimationIdle
 	dw MukAnimationIdle

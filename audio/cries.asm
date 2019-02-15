@@ -887,10 +887,10 @@ Cry_Mienfoo:
 	musicheader 1, 6, Cry_Mienfoo_Ch6
 	musicheader 1, 8, Cry_Mienfoo_Ch8
 
-Cry_Seel:
-	musicheader 3, 5, Cry_Seel_Ch5
-	musicheader 1, 6, Cry_Seel_Ch6
-	musicheader 1, 8, Cry_Seel_Ch8
+Cry_Heracross:
+	musicheader 3, 5, Cry_Heracross_Ch5
+	musicheader 1, 6, Cry_Heracross_Ch6
+	musicheader 1, 8, Cry_Heracross_Ch8
 
 Cry_Drowzee:
 	musicheader 3, 5, Cry_Drowzee_Ch5
@@ -1417,7 +1417,7 @@ Cry_Mienfoo_Ch8:
 	noise __,  9, $a1, $4c
 	endchannel
 
-Cry_Seel_Ch5:
+Cry_Heracross_Ch5:
 	sound_duty 0, 3, 0, 3
 	sound __,  9, $f5, $0600
 	sound __,  3, $d2, $0638
@@ -1430,7 +1430,7 @@ Cry_Seel_Ch5:
 	sound __,  9, $c1, $0620
 	endchannel
 
-Cry_Seel_Ch6:
+Cry_Heracross_Ch6:
 	sound_duty 0, 1, 0, 1
 	sound __, 13, $c3, $05c0
 	sound __,  4, $b1, $05f9
@@ -1441,7 +1441,7 @@ Cry_Seel_Ch6:
 	sound __,  3, $81, $05d1
 	sound __,  3, $91, $05d9
 	sound __,  9, $91, $05e1
-Cry_Seel_Ch8:
+Cry_Heracross_Ch8:
 	endchannel
 
 Cry_Trevanant_Ch5:

@@ -1151,7 +1151,7 @@ BattleCommand_Critical:
 	jr .Tally
 
 .Farfetchd:
-	cp FARFETCH_D
+	cp STUFFUL
 	jr nz, .FocusEnergy
 	ld a, [hl]
 	cp STICK

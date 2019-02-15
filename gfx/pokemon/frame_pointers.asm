@@ -81,10 +81,10 @@ FramesPointers:
 	dw BonslyFrames
 	dw SudowoodoFrames
 	dw PassimianFrames
-	dw FarfetchDFrames
-	dw DoduoFrames
-	dw DodrioFrames
-	dw SeelFrames
+	dw StuffulFrames
+	dw BewearFrames
+	dw GirafarigFrames
+	dw HeracrossFrames
 	dw DewgongFrames
 	dw GrimerFrames
 	dw MukFrames

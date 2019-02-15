@@ -87,11 +87,11 @@ PokemonCries::
 	mon_cry CRY_LUXRAY,   $000,  $100 ; BONSLY
 	mon_cry CRY_METAPOD,     $080,  $0e0 ; SUDOWOODO
 	mon_cry CRY_METAPOD,     $020,  $140 ; PASSIMIAN
-	mon_cry CRY_MEOWTH,     $0dd,  $081 ; FARFETCH_D
-	mon_cry CRY_MIENFOO,     $0bb,  $081 ; DODUO
-	mon_cry CRY_MIENFOO,     $099,  $0a0 ; DODRIO
-	mon_cry CRY_SEEL,        $088,  $140 ; SEEL
-	mon_cry CRY_SEEL,        $023,  $17f ; DEWGONG
+	mon_cry CRY_MEOWTH,     $0dd,  $081 ; STUFFUL
+	mon_cry CRY_MIENFOO,     $0bb,  $081 ; BEWEAR
+	mon_cry CRY_MIENFOO,     $099,  $0a0 ; GIRAFARIG
+	mon_cry CRY_HERACROSS,        $088,  $140 ; HERACROSS
+	mon_cry CRY_HERACROSS,        $023,  $17f ; DEWGONG
 	mon_cry CRY_GRIMER,      $000,  $100 ; GRIMER
 	mon_cry CRY_MUK,         $0ef,  $17f ; MUK
 	mon_cry CRY_PERSIAN,      $000,  $100 ; SHELLDER
@@ -111,8 +111,8 @@ PokemonCries::
 	mon_cry CRY_PURRLOIN,    $000,  $100 ; CUBONE
 	mon_cry CRY_NIDOQUEEN,      $04f,  $0e0 ; MAROWAK
 	mon_cry CRY_FOONGUS,       $080,  $140 ; HITMONLEE
-	mon_cry CRY_SEEL,        $0ee,  $140 ; HITMONCHAN
-	mon_cry CRY_SEEL,        $000,  $100 ; LICKITUNG
+	mon_cry CRY_HERACROSS,        $0ee,  $140 ; HITMONCHAN
+	mon_cry CRY_HERACROSS,        $000,  $100 ; LICKITUNG
 	mon_cry CRY_FOONGUS,       $0e6,  $15d ; KOFFING
 	mon_cry CRY_FOONGUS,       $0ff,  $17f ; WEEZING
 	mon_cry CRY_CHARMANDER,  $000,  $100 ; RHYHORN

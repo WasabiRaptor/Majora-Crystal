@@ -82,10 +82,10 @@ PokedexDataPointerTable:
 	dw BonslyPokedexEntry
 	dw SudowoodoPokedexEntry
 	dw PassimianPokedexEntry
-	dw FarfetchDPokedexEntry
-	dw DoduoPokedexEntry
-	dw DodrioPokedexEntry
-	dw SeelPokedexEntry
+	dw StuffulPokedexEntry
+	dw BewearPokedexEntry
+	dw GirafarigPokedexEntry
+	dw HeracrossPokedexEntry
 	dw DewgongPokedexEntry
 	dw GrimerPokedexEntry
 	dw MukPokedexEntry

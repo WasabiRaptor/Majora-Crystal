@@ -40,8 +40,8 @@ AlphabeticalPokedexOrder:
 	db DEWGONG
 	db MIENFOO
 	db DEWPIDER
-	db DODRIO
-	db DODUO
+	db GIRAFARIG
+	db BEWEAR
 	db LITWICK
 	db DRAGONAIR
 	db DRAGONITE
@@ -58,7 +58,7 @@ AlphabeticalPokedexOrder:
 	db ESPEONX
 	db EXEGGCUTE
 	db EXEGGUTOR
-	db FARFETCH_D
+	db STUFFUL
 	db PERSIAN
 	db FERALIGATR
 	db TORRACAT
@@ -193,7 +193,7 @@ AlphabeticalPokedexOrder:
 	db SCYTHER
 	db SEADRA
 	db SEAKING
-	db SEEL
+	db HERACROSS
 	db LARVITAR
 	db SHELLDER
 	db UNOWN

@@ -14,7 +14,7 @@
 	const CRY_ROTOM
 	const CRY_TIMBURR
 	const CRY_MIENFOO
-	const CRY_SEEL
+	const CRY_HERACROSS
 	const CRY_DROWZEE
 	const CRY_MAGNETON
 	const CRY_BULBASAUR

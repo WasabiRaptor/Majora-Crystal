@@ -11,7 +11,7 @@ Cries:
 	dba Cry_Rotom
 	dba Cry_Timburr
 	dba Cry_Mienfoo
-	dba Cry_Seel
+	dba Cry_Heracross
 	dba Cry_Drowzee
 	dba Cry_Passimian
 	dba Cry_Eevee

@@ -1147,7 +1147,7 @@ endc
 	db 53, ZAP_CANNON
 	db 0 ; no more level-up moves
 
-FarfetchDEvosAttacks:
+StuffulEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 7, SAND_ATTACK
@@ -1159,8 +1159,8 @@ FarfetchDEvosAttacks:
 	db 44, FALSE_SWIPE
 	db 0 ; no more level-up moves
 
-DoduoEvosAttacks:
-	db EVOLVE_LEVEL, 31, DODRIO
+BewearEvosAttacks:
+	db EVOLVE_LEVEL, 31, GIRAFARIG
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, GROWL
@@ -1172,7 +1172,7 @@ DoduoEvosAttacks:
 	db 37, AGILITY
 	db 0 ; no more level-up moves
 
-DodrioEvosAttacks:
+GirafarigEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, GROWL
@@ -1186,7 +1186,7 @@ DodrioEvosAttacks:
 	db 47, AGILITY
 	db 0 ; no more level-up moves
 
-SeelEvosAttacks:
+HeracrossEvosAttacks:
 	db EVOLVE_LEVEL, 34, DEWGONG
 	db 0 ; no more evolutions
 	db 1, HEADBUTT
