@@ -40,8 +40,8 @@ SpriteAnimOAMData:
 	dbw $11, .OAMData_1x1_Palette0             ; SPRITE_ANIM_OAMSET_GS_INTRO_SPARKLE_1
 	dbw $12, .OAMData_1x1_Palette0             ; SPRITE_ANIM_OAMSET_GS_INTRO_SPARKLE_2
 	dbw $13, .OAMData_1x1_Palette0             ; SPRITE_ANIM_OAMSET_GS_INTRO_SPARKLE_3
-	dbw $00, .OAMData_SlotsGolem               ; SPRITE_ANIM_OAMSET_SLOTS_GOLEM_1
-	dbw $08, .OAMData_SlotsGolem               ; SPRITE_ANIM_OAMSET_SLOTS_GOLEM_2
+	dbw $00, .OAMData_SlotsFoongus               ; SPRITE_ANIM_OAMSET_SLOTS_FOONGUS_1
+	dbw $08, .OAMData_SlotsFoongus               ; SPRITE_ANIM_OAMSET_SLOTS_FOONGUS_2
 	dbw $10, .OAMData_SlotsChansey1            ; SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_1
 	dbw $10, .OAMData_SlotsChansey2            ; SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_2
 	dbw $10, .OAMData_SlotsChansey3            ; SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_3
@@ -482,7 +482,7 @@ SpriteAnimOAMData:
 	dsprite  1,  4, -1,  4, $0d, 1 | OBP_NUM
 	dsprite  1,  4,  0,  4, $0e, 1 | OBP_NUM
 
-.OAMData_SlotsGolem:
+.OAMData_SlotsFoongus:
 	db 6
 	dsprite -2,  4, -2,  4, $00, 5 | OBP_NUM
 	dsprite -2,  4, -1,  4, $02, 5 | OBP_NUM

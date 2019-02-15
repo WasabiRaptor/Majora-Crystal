@@ -917,10 +917,10 @@ Cry_Rhydon:
 	musicheader 1, 6, Cry_Rhydon_Ch6
 	musicheader 1, 8, Cry_Rhydon_Ch8
 
-Cry_Golem:
-	musicheader 3, 5, Cry_Golem_Ch5
-	musicheader 1, 6, Cry_Golem_Ch6
-	musicheader 1, 8, Cry_Golem_Ch8
+Cry_Foongus:
+	musicheader 3, 5, Cry_Foongus_Ch5
+	musicheader 1, 6, Cry_Foongus_Ch6
+	musicheader 1, 8, Cry_Foongus_Ch8
 
 Cry_Sylveon:
 	musicheader 3, 5, Cry_Sylveon_Ch5
@@ -1669,7 +1669,7 @@ Cry_Lapras_Ch8:
 	noise __,  9, $91, $2c
 	endchannel
 
-Cry_Golem_Ch5:
+Cry_Foongus_Ch5:
 	sound_duty 1, 1, 2, 2
 	sound __, 13, $f2, $0440
 	sound __, 16, $e3, $04a0
@@ -1677,7 +1677,7 @@ Cry_Golem_Ch5:
 	sound __,  9, $d1, $0480
 	endchannel
 
-Cry_Golem_Ch6:
+Cry_Foongus_Ch6:
 	sound_duty 2, 3, 2, 3
 	sound __, 12, $d2, $0438
 	sound __, 15, $c6, $0498
@@ -1685,7 +1685,7 @@ Cry_Golem_Ch6:
 	sound __,  9, $b1, $0478
 	endchannel
 
-Cry_Golem_Ch8:
+Cry_Foongus_Ch8:
 	noise __, 11, $e6, $6c
 	noise __, 16, $d2, $5c
 	noise __,  4, $c2, $6c

@@ -13,7 +13,7 @@ SpriteAnimFrameData:
 	dw .Frameset_GameFreakLogo
 	dw .Frameset_GSIntroStar
 	dw .Frameset_GSIntroSparkle
-	dw .Frameset_SlotsGolem
+	dw .Frameset_SlotsFoongus
 	dw .Frameset_SlotsChansey
 	dw .Frameset_SlotsChansey2
 	dw .Frameset_SlotsEgg
@@ -160,11 +160,11 @@ SpriteAnimFrameData:
 	frame SPRITE_ANIM_OAMSET_GS_INTRO_SPARKLE_2,  2
 	dorestart
 
-.Frameset_SlotsGolem:
-	frame SPRITE_ANIM_OAMSET_SLOTS_GOLEM_1,  7
-	frame SPRITE_ANIM_OAMSET_SLOTS_GOLEM_2,  7
-	frame SPRITE_ANIM_OAMSET_SLOTS_GOLEM_1,  7, OAM_Y_FLIP
-	frame SPRITE_ANIM_OAMSET_SLOTS_GOLEM_2,  7, OAM_X_FLIP
+.Frameset_SlotsFoongus:
+	frame SPRITE_ANIM_OAMSET_SLOTS_FOONGUS_1,  7
+	frame SPRITE_ANIM_OAMSET_SLOTS_FOONGUS_2,  7
+	frame SPRITE_ANIM_OAMSET_SLOTS_FOONGUS_1,  7, OAM_Y_FLIP
+	frame SPRITE_ANIM_OAMSET_SLOTS_FOONGUS_2,  7, OAM_X_FLIP
 	dorestart
 
 .Frameset_SlotsChansey:

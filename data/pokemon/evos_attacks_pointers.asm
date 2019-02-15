@@ -76,8 +76,8 @@ EvosAttacksPointers::
 	dw SawsbuckEvosAttacks
 	dw CottoneeEvosAttacks
 	dw WhimsicottEvosAttacks
-	dw GolemEvosAttacks
-	dw PonytaEvosAttacks
+	dw FoongusEvosAttacks
+	dw AmoongusEvosAttacks
 	dw RapidashEvosAttacks
 	dw SlowpokeEvosAttacks
 	dw SlowbroEvosAttacks

@@ -93,9 +93,9 @@
 	const SAWSBUCK 		; 49
 	const COTTONEE    	; 4a
 	const WHIMSICOTT   	; 4b
+	const FOONGUS      	; 4c
+	const AMOONGUS     	; 4d
 
-	const GOLEM      ; 4c
-	const PONYTA     ; 4d
 	const RAPIDASH   ; 4e
 	const SLOWPOKE   ; 4f
 	const SLOWBRO    ; 50

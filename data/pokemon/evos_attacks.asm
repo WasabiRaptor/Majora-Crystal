@@ -1020,7 +1020,7 @@ CottoneeEvosAttacks:
 	db 0 ; no more level-up moves
 
 WhimsicottEvosAttacks:
-	db EVOLVE_TRADE, -1, GOLEM
+	db EVOLVE_TRADE, -1, FOONGUS
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, DEFENSE_CURL
@@ -1035,7 +1035,7 @@ WhimsicottEvosAttacks:
 	db 48, EXPLOSION
 	db 0 ; no more level-up moves
 
-GolemEvosAttacks:
+FoongusEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, DEFENSE_CURL
@@ -1051,7 +1051,7 @@ GolemEvosAttacks:
 	db 48, EXPLOSION
 	db 0 ; no more level-up moves
 
-PonytaEvosAttacks:
+AmoongusEvosAttacks:
 	db EVOLVE_LEVEL, 40, RAPIDASH
 	db 0 ; no more evolutions
 	db 1, TACKLE

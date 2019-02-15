@@ -47,7 +47,7 @@ Pokered_MonIndices:
 	db FURRET
 	db FLAAFFY
 	db DROWZEE
-	db GOLEM
+	db FOONGUS
 	db NATU ; MISSINGNO.
 	db MAGMAR
 	db CELEBI ; MISSINGNO.
@@ -161,7 +161,7 @@ Pokered_MonIndices:
 	db ZAPDOS ; MISSINGNO.
 	db MOLTRES ; MISSINGNO.
 	db SUICUNE ; MISSINGNO.
-	db PONYTA
+	db AMOONGUS
 	db RAPIDASH
 	db PORYGON2
 	db PORYGONZ

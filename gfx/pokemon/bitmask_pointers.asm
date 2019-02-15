@@ -74,8 +74,8 @@ BitmasksPointers:
 	dw SawsbuckBitmasks
 	dw CottoneeBitmasks
 	dw WhimsicottBitmasks
-	dw GolemBitmasks
-	dw PonytaBitmasks
+	dw FoongusBitmasks
+	dw AmoongusBitmasks
 	dw RapidashBitmasks
 	dw SlowpokeBitmasks
 	dw SlowbroBitmasks

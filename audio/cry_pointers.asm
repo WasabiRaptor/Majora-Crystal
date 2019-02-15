@@ -17,7 +17,7 @@ Cries:
 	dba Cry_Eevee
 	dba Cry_Meowth
 	dba Cry_Rhydon
-	dba Cry_Golem
+	dba Cry_Foongus
 	dba Cry_Sylveon
 	dba Cry_Magnezone
 	dba Cry_Lycanroc

@@ -75,7 +75,7 @@ AlphabeticalPokedexOrder:
 	db NIDOKING
 	db GOLDEEN
 	db AMPHAROS
-	db GOLEM
+	db FOONGUS
 	db GRANBULL
 	db WHIMSICOTT
 	db GRIMER
@@ -170,7 +170,7 @@ AlphabeticalPokedexOrder:
 	db SANDSLASH
 	db CUTIEFLY
 	db RIBOMBEE
-	db PONYTA
+	db AMOONGUS
 	db PLACE3
 	db LUXIO
 	db LAMPENT

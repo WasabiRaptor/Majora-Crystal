@@ -22,7 +22,7 @@ DoAnimFrame:
 	dw .GameFreakLogo
 	dw .GSIntroStar
 	dw .GSIntroSparkle
-	dw .SlotsGolem
+	dw .SlotsFoongus
 	dw .SlotsChansey
 	dw .SlotsChanseyEgg
 	dw .MailCursor
@@ -350,8 +350,8 @@ DoAnimFrame:
 	call DeinitializeSprite
 	ret
 
-.SlotsGolem:
-	callfar Slots_AnimateGolem
+.SlotsFoongus:
+	callfar Slots_AnimateFoongus
 	ret
 
 .SlotsChansey:

@@ -74,8 +74,8 @@ AnimationIdlePointers:
 	dw SawsbuckAnimationIdle
 	dw CottoneeAnimationIdle
 	dw WhimsicottAnimationIdle
-	dw GolemAnimationIdle
-	dw PonytaAnimationIdle
+	dw FoongusAnimationIdle
+	dw AmoongusAnimationIdle
 	dw RapidashAnimationIdle
 	dw SlowpokeAnimationIdle
 	dw SlowbroAnimationIdle

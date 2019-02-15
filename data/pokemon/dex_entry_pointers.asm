@@ -75,8 +75,8 @@ PokedexDataPointerTable:
 	dw SawsbuckPokedexEntry
 	dw CottoneePokedexEntry
 	dw WhimsicottPokedexEntry
-	dw GolemPokedexEntry
-	dw PonytaPokedexEntry
+	dw FoongusPokedexEntry
+	dw AmoongusPokedexEntry
 	dw RapidashPokedexEntry
 	dw SlowpokePokedexEntry
 	dw SlowbroPokedexEntry

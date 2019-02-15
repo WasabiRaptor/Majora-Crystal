@@ -74,8 +74,8 @@ AnimationPointers:
 	dw SawsbuckAnimation
 	dw CottoneeAnimation
 	dw WhimsicottAnimation
-	dw GolemAnimation
-	dw PonytaAnimation
+	dw FoongusAnimation
+	dw AmoongusAnimation
 	dw RapidashAnimation
 	dw SlowpokeAnimation
 	dw SlowbroAnimation

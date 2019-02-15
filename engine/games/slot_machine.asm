@@ -66,9 +66,9 @@ SLOTS_END_LOOP_F EQU 7
 	const REEL_ACTION_WAIT_DROP_REEL
 	const REEL_ACTION_START_SLOW_ADVANCE_REEL3
 	const REEL_ACTION_WAIT_SLOW_ADVANCE_REEL3
-	const REEL_ACTION_INIT_GOLEM
-	const REEL_ACTION_WAIT_GOLEM
-	const REEL_ACTION_END_GOLEM
+	const REEL_ACTION_INIT_FOONGUS
+	const REEL_ACTION_WAIT_FOONGUS
+	const REEL_ACTION_END_FOONGUS
 	const REEL_ACTION_INIT_CHANSEY
 	const REEL_ACTION_WAIT_CHANSEY
 	const REEL_ACTION_WAIT_EGG
@@ -575,13 +575,13 @@ Slots_StopReel3:
 ; If matching SEVEN symbols and NO bias to SEVEN:
 ; - REEL_ACTION_STOP_REEL3, 37.5%
 ; - REEL_ACTION_START_SLOW_ADVANCE_REEL3, 31.3%
-; - REEL_ACTION_INIT_GOLEM, 31.3%
+; - REEL_ACTION_INIT_FOONGUS, 31.3%
 ; - REEL_ACTION_INIT_CHANSEY, 0%
 
 ; If matching SEVEN symbols and bias to SEVEN:
 ; - REEL_ACTION_STOP_REEL3, 29.7%
 ; - REEL_ACTION_START_SLOW_ADVANCE_REEL3, 23.4%
-; - REEL_ACTION_INIT_GOLEM, 23.4%
+; - REEL_ACTION_INIT_FOONGUS, 23.4%
 ; - REEL_ACTION_INIT_CHANSEY, 23.4%
 
 	ld a, [wFirstTwoReelsMatching]
@@ -599,7 +599,7 @@ Slots_StopReel3:
 	cp 120
 	jr nc, .slow_advance
 	cp 60
-	jr nc, .golem
+	jr nc, .foongus
 	ld a, REEL_ACTION_INIT_CHANSEY
 	ret
 
@@ -609,8 +609,8 @@ Slots_StopReel3:
 	jr nc, .stop
 	cp 80
 	jr nc, .slow_advance
-.golem
-	ld a, REEL_ACTION_INIT_GOLEM
+.foongus
+	ld a, REEL_ACTION_INIT_FOONGUS
 	ret
 
 .slow_advance
@@ -839,9 +839,9 @@ ReelActionJumptable:
 	dw ReelAction_WaitDropReel                ; 0f
 	dw ReelAction_StartSlowAdvanceReel3       ; 10
 	dw ReelAction_WaitSlowAdvanceReel3        ; 11
-	dw ReelAction_InitGolem                   ; 12
-	dw ReelAction_WaitGolem                   ; 13
-	dw ReelAction_EndGolem                    ; 14
+	dw ReelAction_InitFoongus                   ; 12
+	dw ReelAction_WaitFoongus                   ; 13
+	dw ReelAction_EndFoongus                    ; 14
 	dw ReelAction_InitChansey                 ; 15
 	dw ReelAction_WaitChansey                 ; 16
 	dw ReelAction_WaitEgg                     ; 17
@@ -1060,13 +1060,13 @@ ReelAction_FastSpinReel2UntilLinedUp7s:
 	call Slots_StopReel
 	ret
 
-ReelAction_InitGolem:
+ReelAction_InitFoongus:
 ; Ensures SEVENs are lined up if there's bias to SEVEN.
 ; Ensures nothing is lined up if there's no bias symbols.
 ; No other bias symbols are compatible with this mode.
 
-; This is achieved by throwing Golem until the desired result
-; is produced. The amount of Golem thrown can be anywhere from
+; This is achieved by throwing Foongus until the desired result
+; is produced. The amount of Foongus thrown can be anywhere from
 ;  1 to 14 for SEVEN bias, and 4-8 for no bias.
 
 	call Slots_CheckMatchedAllThreeReels
@@ -1076,15 +1076,15 @@ ReelAction_InitGolem:
 	call Slots_WaitSFX
 	ld hl, REEL_ACTION
 	add hl, bc
-	inc [hl] ; REEL_ACTION_WAIT_GOLEM
+	inc [hl] ; REEL_ACTION_WAIT_FOONGUS
 	ld hl, REEL_SPIN_RATE
 	add hl, bc
 	ld [hl], 0
-	call Slots_GetNumberOfGolems
+	call Slots_GetNumberOfFoonguss
 	push bc
 	push af
 	depixel 12, 13
-	ld a, SPRITE_ANIM_INDEX_SLOTS_GOLEM
+	ld a, SPRITE_ANIM_INDEX_SLOTS_FOONGUS
 	call _InitSpriteAnimStruct
 	ld hl, SPRITEANIMSTRUCT_0E
 	add hl, bc
@@ -1093,7 +1093,7 @@ ReelAction_InitGolem:
 	pop bc
 	xor a
 	ld [wSlotsDelay], a
-ReelAction_WaitGolem:
+ReelAction_WaitFoongus:
 	ld a, [wSlotsDelay]
 	cp 2
 	jr z, .two
@@ -1109,18 +1109,18 @@ ReelAction_WaitGolem:
 .one
 	ld hl, REEL_ACTION
 	add hl, bc
-	inc [hl] ; REEL_ACTION_END_GOLEM
+	inc [hl] ; REEL_ACTION_END_FOONGUS
 	ld hl, REEL_SPIN_RATE
 	add hl, bc
 	ld [hl], 8
 	ret
 
-ReelAction_EndGolem:
+ReelAction_EndFoongus:
 	xor a
 	ld [wSlotsDelay], a
 	ld hl, REEL_ACTION
 	add hl, bc
-	dec [hl] ; REEL_ACTION_WAIT_GOLEM
+	dec [hl] ; REEL_ACTION_WAIT_FOONGUS
 	ld hl, REEL_SPIN_RATE
 	add hl, bc
 	ld [hl], 0
@@ -1214,7 +1214,7 @@ ReelAction_Unused:
 	ld hl, REEL_ACTION
 	add hl, bc
 	inc [hl] ; REEL_ACTION_CHECK_DROP_REEL
-	call Slots_GetNumberOfGolems
+	call Slots_GetNumberOfFoonguss
 	ld hl, REEL_MANIP_DELAY
 	add hl, bc
 	ld [hl], a
@@ -1520,7 +1520,7 @@ Slots_CopyReelState:
 	ld [de], a
 	ret
 
-Slots_GetNumberOfGolems:
+Slots_GetNumberOfFoonguss:
 	ld hl, REEL_POSITION
 	add hl, bc
 	ld a, [hl]
@@ -1900,7 +1900,7 @@ endr
 	call WaitSFX
 	ret
 
-Slots_AnimateGolem:
+Slots_AnimateFoongus:
 	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
 	add hl, bc
 	ld e, [hl]

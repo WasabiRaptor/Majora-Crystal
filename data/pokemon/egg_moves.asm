@@ -249,7 +249,7 @@ CottoneeEggMoves:
 	db ROCK_SLIDE
 	db -1 ; end
 
-PonytaEggMoves:
+AmoongusEggMoves:
 	db FLAME_WHEEL
 	db THRASH
 	db DOUBLE_KICK

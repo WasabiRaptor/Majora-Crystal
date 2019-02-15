@@ -80,8 +80,8 @@ PokemonCries::
 	mon_cry CRY_SWABLU,     $0ee,  $17f ; SAWSBUCK
 	mon_cry CRY_GRIMER,      $0f0,  $090 ; COTTONEE
 	mon_cry CRY_GRIMER,      $000,  $100 ; WHIMSICOTT
-	mon_cry CRY_GOLEM,       $0e0,  $0c0 ; GOLEM
-	mon_cry CRY_QUILLADIN,  $000,  $100 ; PONYTA
+	mon_cry CRY_FOONGUS,       $0e0,  $0c0 ; FOONGUS
+	mon_cry CRY_QUILLADIN,  $000,  $100 ; AMOONGUS
 	mon_cry CRY_QUILLADIN,  $020,  $140 ; RAPIDASH
 	mon_cry CRY_SLOWPOKE,    $000,  $100 ; SLOWPOKE
 	mon_cry CRY_LUXRAY,   $000,  $100 ; SLOWBRO
@@ -110,15 +110,15 @@ PokemonCries::
 	mon_cry CRY_DROWZEE,     $000,  $100 ; EXEGGUTOR
 	mon_cry CRY_PURRLOIN,    $000,  $100 ; CUBONE
 	mon_cry CRY_NIDOQUEEN,      $04f,  $0e0 ; MAROWAK
-	mon_cry CRY_GOLEM,       $080,  $140 ; HITMONLEE
+	mon_cry CRY_FOONGUS,       $080,  $140 ; HITMONLEE
 	mon_cry CRY_SEEL,        $0ee,  $140 ; HITMONCHAN
 	mon_cry CRY_SEEL,        $000,  $100 ; LICKITUNG
-	mon_cry CRY_GOLEM,       $0e6,  $15d ; KOFFING
-	mon_cry CRY_GOLEM,       $0ff,  $17f ; WEEZING
+	mon_cry CRY_FOONGUS,       $0e6,  $15d ; KOFFING
+	mon_cry CRY_FOONGUS,       $0ff,  $17f ; WEEZING
 	mon_cry CRY_CHARMANDER,  $000,  $100 ; RHYHORN
 	mon_cry CRY_RHYDON,      $000,  $100 ; RHYDON
 	mon_cry CRY_MAGNEZONE,   $00a,  $140 ; CHANSEY
-	mon_cry CRY_GOLEM,       $000,  $100 ; TANGELA
+	mon_cry CRY_FOONGUS,       $000,  $100 ; TANGELA
 	mon_cry CRY_KANGASKHAN,  $000,  $100 ; KANGASKHAN
 	mon_cry CRY_PURRLOIN,    $099,  $090 ; HORSEA
 	mon_cry CRY_PURRLOIN,    $03c,  $081 ; SEADRA

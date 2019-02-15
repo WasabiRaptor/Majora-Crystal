@@ -36,7 +36,7 @@ NewPokedexOrder:
 	db ARIADOS
 	db COTTONEE
 	db WHIMSICOTT
-	db GOLEM
+	db FOONGUS
 	db NIDORINA
 	db NIDOKING
 	db CROBAT
@@ -201,7 +201,7 @@ NewPokedexOrder:
 	db AEGISLASH
 	db DODUO
 	db DODRIO
-	db PONYTA
+	db AMOONGUS
 	db RAPIDASH
 	db CUBONE
 	db MAROWAK

@@ -156,10 +156,10 @@ PokemonPicPointers::
 	dba CottoneeBackpic
 	dba WhimsicottFrontpic
 	dba WhimsicottBackpic
-	dba GolemFrontpic
-	dba GolemBackpic
-	dba PonytaFrontpic
-	dba PonytaBackpic
+	dba FoongusFrontpic
+	dba FoongusBackpic
+	dba AmoongusFrontpic
+	dba AmoongusBackpic
 	dba RapidashFrontpic
 	dba RapidashBackpic
 	dba SlowpokeFrontpic

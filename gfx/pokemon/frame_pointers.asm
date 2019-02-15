@@ -74,8 +74,8 @@ FramesPointers:
 	dw SawsbuckFrames
 	dw CottoneeFrames
 	dw WhimsicottFrames
-	dw GolemFrames
-	dw PonytaFrames
+	dw FoongusFrames
+	dw AmoongusFrames
 	dw RapidashFrames
 	dw SlowpokeFrames
 	dw SlowbroFrames

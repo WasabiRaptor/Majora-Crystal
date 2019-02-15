@@ -76,8 +76,8 @@ KantoMonSpecials:
 	db 120 ; SAWSBUCK
 	db  30 ; COTTONEE
 	db  45 ; WHIMSICOTT
-	db  55 ; GOLEM
-	db  65 ; PONYTA
+	db  55 ; FOONGUS
+	db  65 ; AMOONGUS
 	db  80 ; RAPIDASH
 	db  40 ; SLOWPOKE
 	db  80 ; SLOWBRO
