@@ -1208,9 +1208,9 @@ wcd49:: db
 wcd4a:: ds 1
 wcd4b:: ds 1
 
-wEZChatCursorXCoord::
+wUnusedEZChatCursorXCoord::
 wcd4c:: db
-wEZChatCursorYCoord::
+wUnusedEZChatCursorYCoord::
 wcd4d:: db
 
 wcd4e:: ds 1

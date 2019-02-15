@@ -39,7 +39,6 @@ DoAnimFrame:
 	dw .FlyLeaf
 	dw .FlyTo
 	dw .GSIntroHoOh
-	dw .EZChatCursor
 	dw .IntroSuicune
 	dw .IntroPichuWooper
 	dw .IntroSuicune
@@ -825,10 +824,6 @@ DoAnimFrame:
 	ld a, [hl]
 	add $10
 	ld [hl], a
-	ret
-
-.EZChatCursor
-	;farcall AnimateEZChatCursor
 	ret
 
 .Celebi

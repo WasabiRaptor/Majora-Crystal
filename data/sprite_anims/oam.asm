@@ -93,13 +93,6 @@ SpriteAnimOAMData:
 	dbw $00, .OAMData_GSIntroHoOh4             ; SPRITE_ANIM_OAMSET_GS_INTRO_HO_OH_4
 	dbw $00, .OAMData_GSIntroHoOh5             ; SPRITE_ANIM_OAMSET_GS_INTRO_HO_OH_5
 	dbw $04, .OAMData_Tree                     ; SPRITE_ANIM_OAMSET_HEADBUTT_TREE_2
-	dbw $00, .OAMData_EZChatCursor1            ; SPRITE_ANIM_OAMSET_EZCHAT_CURSOR_1
-	dbw $00, .OAMData_EZChatCursor2            ; SPRITE_ANIM_OAMSET_EZCHAT_CURSOR_2
-	dbw $00, .OAMData_EZChatCursor3            ; SPRITE_ANIM_OAMSET_EZCHAT_CURSOR_3
-	dbw $00, .OAMData_EZChatCursor4            ; SPRITE_ANIM_OAMSET_EZCHAT_CURSOR_4
-	dbw $00, .OAMData_EZChatCursor5            ; SPRITE_ANIM_OAMSET_EZCHAT_CURSOR_5
-	dbw $00, .OAMData_EZChatCursor6            ; SPRITE_ANIM_OAMSET_EZCHAT_CURSOR_6
-	dbw $00, .OAMData_EZChatCursor7            ; SPRITE_ANIM_OAMSET_EZCHAT_CURSOR_7
 	dbw $00, .OAMData_BlueWalk                 ; SPRITE_ANIM_OAMSET_BLUE_WALK_1
 	dbw $04, .OAMData_BlueWalk                 ; SPRITE_ANIM_OAMSET_BLUE_WALK_2
 	dbw $00, .OAMData_MagnetTrainBlue          ; SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_1
@@ -688,57 +681,6 @@ SpriteAnimOAMData:
 .OAMData_GSTitleTrail:
 	db 1
 	dsprite -1,  4, -1,  4, $00, 1 | OBP_NUM
-
-.OAMData_EZChatCursor1:
-	db 12
-	dsprite  0,  0,  0,  0, $30, 0
-	dsprite  0,  0,  1,  0, $31, 0
-	dsprite  0,  0,  2,  0, $31, 0
-	dsprite  0,  0,  3,  0, $31, 0
-	dsprite  0,  0,  4,  0, $31, 0
-	dsprite  0,  0,  5,  0, $32, 0
-	dsprite  1,  0,  0,  0, $33, 0
-	dsprite  1,  0,  1,  0, $34, 0
-	dsprite  1,  0,  2,  0, $34, 0
-	dsprite  1,  0,  3,  0, $34, 0
-	dsprite  1,  0,  4,  0, $34, 0
-	dsprite  1,  0,  5,  0, $35, 0
-
-.OAMData_EZChatCursor2:
-	db 1
-	dsprite  0,  0,  0,  0, $ed, 0
-
-.OAMData_EZChatCursor3:
-	db 4
-	dsprite -1,  7, -1,  7, $30, 0
-	dsprite -1,  7,  0,  1, $32, 0
-	dsprite  0,  1, -1,  7, $33, 0
-	dsprite  0,  1,  0,  1, $35, 0
-
-.OAMData_EZChatCursor4:
-	db 8
-	dsprite -1,  7, -1,  7, $30, 0
-	dsprite -1,  7,  0,  4, $31, 0
-	dsprite -1,  7,  1,  4, $31, 0
-	dsprite -1,  7,  2,  1, $32, 0
-	dsprite  0,  1, -1,  7, $33, 0
-	dsprite  0,  1,  0,  4, $34, 0
-	dsprite  0,  1,  1,  4, $34, 0
-	dsprite  0,  1,  2,  1, $35, 0
-
-.OAMData_EZChatCursor5:
-	db 1
-	dsprite  0,  0,  0,  0, $34, 0
-
-.OAMData_EZChatCursor6:
-	db 2
-	dsprite  0,  0,  0,  0, $30, 0
-	dsprite  1,  0,  0,  0, $33, 0
-
-.OAMData_EZChatCursor7:
-	db 2
-	dsprite  0,  0,  0,  0, $32, 0
-	dsprite  1,  0,  0,  0, $35, 0
 
 .OAMData_BlueWalk:
 	db 4

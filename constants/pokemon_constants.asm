@@ -10,7 +10,6 @@
 ; - PokemonPalettes (see data/pokemon/palettes.asm)
 ; - PokedexDataPointerTable (see data/pokemon/dex_entry_pointers.asm)
 ; - AlphabeticalPokedexOrder (see data/pokemon/dex_order_alpha.asm)
-; - EZChat_SortedPokemon (see data/pokemon/ezchat_order.asm)
 ; - NewPokedexOrder (see data/pokemon/dex_order_new.asm)
 ; - Pokered_MonIndices (see data/pokemon/gen1_order.asm)
 ; - AnimationPointers (see gfx/pokemon/anim_pointers.asm)
