@@ -36,7 +36,7 @@ BitmasksPointers:
 	dw PurrloinBitmasks
 	dw LiepardBitmasks
 	dw VulpixBitmasks
-	dw NinetalesBitmasks
+	dw MukBitmasks
 	dw JigglypuffBitmasks
 	dw WigglytuffBitmasks
 	dw ZubatBitmasks
@@ -148,8 +148,8 @@ BitmasksPointers:
 	dw DratiniBitmasks
 	dw DragonairBitmasks
 	dw DragoniteBitmasks
-	dw MewtwoBitmasks
-	dw MewBitmasks
+	dw RioluBitmasks
+	dw LucarioBitmasks
 	dw ChikoritaBitmasks
 	dw BayleefBitmasks
 	dw MeganiumBitmasks
@@ -183,8 +183,8 @@ BitmasksPointers:
 	dw FennekinBitmasks
 	dw BraixenBitmasks
 	dw DelphoxBitmasks
-	dw SudowoodoBitmasks
-	dw PolitoedBitmasks
+	dw VulpixBitmasks
+	dw NinetalesBitmasks
 	dw HoppipBitmasks
 	dw SkiploomBitmasks
 	dw JumpluffBitmasks
@@ -251,5 +251,5 @@ BitmasksPointers:
 	dw HoOhBitmasks
 	dw CelebiBitmasks
 	dw GlazeonBitmasks
-	dw SubstituteMonBitmasks
+	dw MewtwoBitmasks
 

@@ -75,7 +75,7 @@ NewPokedexOrder:
 	db POLIWAG
 	db POLIWHIRL
 	db POLIWRATH
-	db POLITOED
+	db NINETALES
 	db MAGIKARP
 	db GYARADOS
 	db GOLDEEN
@@ -106,7 +106,7 @@ NewPokedexOrder:
 	db SUNFLORA
 	db EXEGGCUTE
 	db EXEGGUTOR
-	db SUDOWOODO
+	db VULPIX
 	db WOBBUFFET
 	db VENONAT
 	db VENOMOTH
@@ -125,8 +125,8 @@ NewPokedexOrder:
 	db AIPOM
 	db SNUBBULL
 	db GRANBULL
-	db VULPIX
-	db NINETALES
+	db GRIMER
+	db MUK
 	db GROWLITHE
 	db ARCANINE
 	db STANTLER
@@ -249,8 +249,8 @@ NewPokedexOrder:
 	db MAGEARNA
 	db SHAYMIN
 	db CELEBI
-	db MEWTWOX
-	db MEWX
+	db RIOLU
+	db LUCARIO
 	db ZYGARDE
 	db MEW
 	db MEWTWO

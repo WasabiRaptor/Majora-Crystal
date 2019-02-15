@@ -38,7 +38,7 @@
 	const CRY_PSYDUCK
 	const CRY_PORYGON2
 	const CRY_VILEPLUME
-	const CRY_VULPIX
+	const CRY_GRIMER
 	const CRY_WEEPINBELL
 
 ; gen 2

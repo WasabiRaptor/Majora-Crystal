@@ -35,7 +35,7 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw KantoVulpixEggMoves
+	dw GrimerEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
@@ -187,7 +187,7 @@ endc
 	dw NoEggMoves
 	dw BraixenEggMoves
 	dw NoEggMoves
-	dw SudowoodoEggMoves
+	dw VulpixEggMoves
 	dw NoEggMoves
 	dw HoppipEggMoves
 	dw NoEggMoves

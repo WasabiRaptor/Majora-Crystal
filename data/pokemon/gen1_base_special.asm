@@ -37,8 +37,8 @@ KantoMonSpecials:
 	db  75 ; DITTO
 	db  60 ; PURRLOIN
 	db  85 ; LIEPARD
-	db  65 ; VULPIX
-	db 100 ; NINETALES
+	db  65 ; GRIMER
+	db 100 ; MUK
 	db  25 ; JIGGLYPUFF
 	db  50 ; WIGGLYTUFF
 	db  40 ; ZUBAT
@@ -150,5 +150,5 @@ KantoMonSpecials:
 	db  50 ; DRATINI
 	db  70 ; DRAGONAIR
 	db 100 ; DRAGONITE
-	db 154 ; MEWTWOX
-	db 100 ; MEWX
+	db 154 ; RIOLU
+	db 100 ; LUCARIO

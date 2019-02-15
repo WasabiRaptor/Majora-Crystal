@@ -36,7 +36,7 @@ AnimationPointers:
 	dw PurrloinAnimation
 	dw LiepardAnimation
 	dw VulpixAnimation
-	dw NinetalesAnimation
+	dw MukAnimation
 	dw JigglypuffAnimation
 	dw WigglytuffAnimation
 	dw ZubatAnimation
@@ -148,8 +148,8 @@ AnimationPointers:
 	dw DratiniAnimation
 	dw DragonairAnimation
 	dw DragoniteAnimation
-	dw MewtwoAnimation
-	dw MewAnimation
+	dw RioluAnimation
+	dw LucarioAnimation
 	dw ChikoritaAnimation
 	dw BayleefAnimation
 	dw MeganiumAnimation
@@ -183,8 +183,8 @@ AnimationPointers:
 	dw FennekinAnimation
 	dw BraixenAnimation
 	dw DelphoxAnimation
-	dw SudowoodoAnimation
-	dw PolitoedAnimation
+	dw VulpixAnimation
+	dw NinetalesAnimation
 	dw HoppipAnimation
 	dw SkiploomAnimation
 	dw JumpluffAnimation
@@ -251,4 +251,4 @@ AnimationPointers:
 	dw HoOhAnimation
 	dw CelebiAnimation
 	dw GlazeonAnimation
-	dw SubstituteMonAnimation
+	dw MewtwoAnimation

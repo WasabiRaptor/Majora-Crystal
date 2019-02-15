@@ -54,14 +54,14 @@ UnownPicPointers::
 	dba UnownZBackpic
 
 VulpixPicPointers::
-	dba KantoVulpixFrontpic
-	dba KantoVulpixBackpic
+	dba VulpixFrontpic
+	dba VulpixBackpic
 	dba Vulpix_AlolaFrontpic
 	dba Vulpix_AlolaBackpic
 
 NinetalesPicPointers::
-	dba KantoNinetalesFrontpic
-	dba KantoNinetalesBackpic
+	dba NinetalesFrontpic
+	dba NinetalesBackpic
 	dba Ninetales_AlolaFrontpic
 	dba Ninetales_AlolaBackpic
 

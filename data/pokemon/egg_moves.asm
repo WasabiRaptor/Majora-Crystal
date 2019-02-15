@@ -109,7 +109,7 @@ GurdurrEggMoves:
 	db BEAT_UP
 	db -1 ; end
 
-KantoVulpixEggMoves:
+GrimerEggMoves:
 	db FAINT_ATTACK
 	db HYPNOSIS
 	db FLAIL
@@ -616,7 +616,7 @@ BraixenEggMoves:
 	db FORESIGHT
 	db -1 ; end
 
-SudowoodoEggMoves:
+VulpixEggMoves:
 	db SELFDESTRUCT
 	db -1 ; end
 

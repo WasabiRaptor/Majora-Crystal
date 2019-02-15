@@ -54,9 +54,9 @@
 	const DITTO   		; 22
 	const PURRLOIN   	; 23
 	const LIEPARD   	; 24
+	const GRIMER     	; 25
+	const MUK  			; 26
 
-	const VULPIX     ; 25
-	const NINETALES  ; 26
 	const JIGGLYPUFF ; 27
 	const WIGGLYTUFF ; 28
 	const ZUBAT      ; 29
@@ -170,8 +170,10 @@
 	const DRATINI    ; 93
 	const DRAGONAIR  ; 94
 	const DRAGONITE  ; 95
-	const MEWTWOX     ; 96
-	const MEWX        ; 97
+
+	const RIOLU     ; 96
+	
+	const LUCARIO        ; 97
 JOHTO_POKEMON EQU const_value
 	const CHIKORITA  ; 98
 	const BAYLEEF    ; 99
@@ -209,9 +211,9 @@ JOHTO_POKEMON EQU const_value
 	const FENNEKIN  	; b6
 	const BRAIXEN     	; b7
 	const DELPHOX  		; b8
+	const VULPIX  		; b9
+	const NINETALES   	; ba
 
-	const SUDOWOODO  ; b9
-	const POLITOED   ; ba
 	const HOPPIP     ; bb
 	const SKIPLOOM   ; bc
 	const JUMPLUFF   ; bd

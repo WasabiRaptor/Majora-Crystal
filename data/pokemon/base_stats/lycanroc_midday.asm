@@ -10,7 +10,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/ninetales/front.dimensions" ; TEMP
+	INCBIN "gfx/pokemon/muk/front.dimensions" ; TEMP
 	db 3, 1 ;total form differences, which form this is
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate

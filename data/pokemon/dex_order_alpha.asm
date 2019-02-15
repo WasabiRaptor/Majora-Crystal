@@ -132,8 +132,8 @@ AlphabeticalPokedexOrder:
 	db MEGANIUM
 	db PLACE5
 	db ZOROARK
-	db MEWX
-	db MEWTWOX
+	db LUCARIO
+	db RIOLU
 	db MOLTRES
 	db MISDREAVUS
 	db MOLTRESX
@@ -147,7 +147,7 @@ AlphabeticalPokedexOrder:
 	db GURDURR
 	db MEOWSTIC_M
 	db CONKELDURR
-	db NINETALES
+	db MUK
 	db NOCTOWL
 	db OCTILLERY
 	db ODDISH
@@ -166,7 +166,7 @@ AlphabeticalPokedexOrder:
 	db PILOSWINE
 	db PINECO
 	db PINSIR
-	db POLITOED
+	db NINETALES
 	db POLIWAG
 	db POLIWHIRL
 	db POLIWRATH
@@ -216,7 +216,7 @@ AlphabeticalPokedexOrder:
 	db STARYU
 	db STEELIX
 	db MEWTWO
-	db SUDOWOODO
+	db VULPIX
 	db LATIAS
 	db SUNFLORA
 	db SUNKERN
@@ -242,7 +242,7 @@ AlphabeticalPokedexOrder:
 	db VICTREEBEL
 	db VILEPLUME
 	db VOLTORB
-	db VULPIX
+	db GRIMER
 	db GLACEON
 	db LYCANROC
 	db WEEPINBELL

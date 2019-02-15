@@ -36,7 +36,7 @@ FramesPointers:
 	dw PurrloinFrames
 	dw LiepardFrames
 	dw VulpixFrames
-	dw NinetalesFrames
+	dw MukFrames
 	dw JigglypuffFrames
 	dw WigglytuffFrames
 	dw ZubatFrames
@@ -148,8 +148,8 @@ FramesPointers:
 	dw DratiniFrames
 	dw DragonairFrames
 	dw DragoniteFrames
-	dw MewtwoFrames
-	dw MewFrames
+	dw RioluFrames
+	dw LucarioFrames
 	dw ChikoritaFrames
 	dw BayleefFrames
 	dw MeganiumFrames
@@ -183,8 +183,8 @@ FramesPointers:
 	dw FennekinFrames
 	dw BraixenFrames
 	dw DelphoxFrames
-	dw SudowoodoFrames
-	dw PolitoedFrames
+	dw VulpixFrames
+	dw NinetalesFrames
 	dw HoppipFrames
 	dw SkiploomFrames
 	dw JumpluffFrames
@@ -251,4 +251,4 @@ FramesPointers:
 	dw HoOhFrames
 	dw CelebiFrames
 	dw GlazeonFrames
-	dw SubstituteMonFrames
+	dw MewtwoFrames

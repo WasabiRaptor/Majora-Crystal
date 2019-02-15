@@ -37,8 +37,8 @@ EvosAttacksPointers::
 	dw DittoEvosAttacks
 	dw PurrloinEvosAttacks
 	dw LiepardEvosAttacks
-	dw KantoVulpixEvosAttacks
-	dw KantoNinetalesEvosAttacks
+	dw GrimerEvosAttacks
+	dw MukEvosAttacks
 	dw JigglypuffEvosAttacks
 	dw WigglytuffEvosAttacks
 	dw ZubatEvosAttacks
@@ -150,8 +150,8 @@ EvosAttacksPointers::
 	dw DratiniEvosAttacks
 	dw DragonairEvosAttacks
 	dw DragoniteEvosAttacks
-	dw MewtwoEvosAttacks
-	dw MewEvosAttacks
+	dw RioluEvosAttacks
+	dw LucarioEvosAttacks
 	dw ChikoritaEvosAttacks
 	dw BayleefEvosAttacks
 	dw MeganiumEvosAttacks
@@ -185,8 +185,8 @@ EvosAttacksPointers::
 	dw FennekinEvosAttacks
 	dw BraixenEvosAttacks
 	dw DelphoxEvosAttacks
-	dw SudowoodoEvosAttacks
-	dw PolitoedEvosAttacks
+	dw VulpixEvosAttacks
+	dw NinetalesEvosAttacks
 	dw HoppipEvosAttacks
 	dw SkiploomEvosAttacks
 	dw JumpluffEvosAttacks
@@ -253,4 +253,4 @@ EvosAttacksPointers::
 	dw HoOhEvosAttacks
 	dw CelebiEvosAttacks
 	dw GlazeonEvosAttacks
-	dw SubstituteMonEvosAttacks
+	dw MewtwoEvosAttacks

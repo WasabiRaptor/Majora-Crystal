@@ -1872,10 +1872,10 @@ LinkTrade:
 	ld b, $1
 	pop af
 	ld c, a
-	cp MEWX
+	cp LUCARIO
 	jr z, .loop
 	ld a, [wCurPartySpecies]
-	cp MEWX
+	cp LUCARIO
 	jr z, .loop
 	ld b, $2
 	ld a, c

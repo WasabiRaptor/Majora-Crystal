@@ -19,7 +19,7 @@ Pokered_MonIndices:
 	db RHYHORN
 	db LAPRAS
 	db ARCANINE
-	db MEWX
+	db LUCARIO
 	db GYARADOS
 	db SHELLDER
 	db TENTACOOL
@@ -80,8 +80,8 @@ Pokered_MonIndices:
 	db CORSOLA ; MISSINGNO.
 	db REMORAID ; MISSINGNO.
 	db OCTILLERY ; MISSINGNO.
-	db VULPIX
-	db NINETALES
+	db GRIMER
+	db MUK
 	db TOGEKISS
 	db ROTOM
 	db DELIBIRD ; MISSINGNO.
@@ -129,7 +129,7 @@ Pokered_MonIndices:
 	db GOLDUCK
 	db HYPNO
 	db GOLBAT
-	db MEWTWOX
+	db RIOLU
 	db SNORLAX
 	db MAGIKARP
 	db PLACE4 ; MISSINGNO.
@@ -223,8 +223,8 @@ Pokered_MonIndices:
 	db FENNEKIN
 	db BRAIXEN
 	db DELPHOX
-	db SUDOWOODO
-	db POLITOED
+	db VULPIX
+	db NINETALES
 	db HOPPIP
 	db SKIPLOOM
 	db JUMPLUFF

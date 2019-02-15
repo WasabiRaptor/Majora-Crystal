@@ -25,8 +25,8 @@ UnownXBitmasks: INCLUDE "gfx/pokemon/unown_x/bitmask.asm"
 UnownYBitmasks: INCLUDE "gfx/pokemon/unown_y/bitmask.asm"
 UnownZBitmasks: INCLUDE "gfx/pokemon/unown_z/bitmask.asm"
 
-KantoVulpixBitmasks: INCLUDE "gfx/pokemon/vulpix/bitmask.asm"
+VulpixBitmasks: INCLUDE "gfx/pokemon/vulpix/bitmask.asm"
 Vulpix_AlolaBitmasks: INCLUDE "gfx/pokemon/vulpix/bitmask.asm"
 
-KantoNinetalesBitmasks: INCLUDE "gfx/pokemon/ninetales/bitmask.asm"
+NinetalesBitmasks: INCLUDE "gfx/pokemon/ninetales/bitmask.asm"
 Ninetales_AlolaBitmasks: INCLUDE "gfx/pokemon/ninetales_alola/bitmask.asm"

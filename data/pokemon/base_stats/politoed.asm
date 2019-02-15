@@ -1,4 +1,4 @@
-	db POLITOED ; 186
+	db NINETALES ; 186
 
 	db  90,  75,  75,  70,  90, 100
     evs  0,   0,   0,   0,   0,   3
@@ -10,7 +10,7 @@
 	db NO_ITEM, KINGS_ROCK ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/politoed/front.dimensions"
+	INCBIN "gfx/pokemon/ninetales/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_SLOW ; growth rate

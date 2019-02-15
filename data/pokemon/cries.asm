@@ -41,8 +41,8 @@ PokemonCries::
 	mon_cry CRY_ROTOM,      $000,  $100 ; DITTO
 	mon_cry CRY_PURRLOIN,    $0cc,  $081 ; PURRLOIN
 	mon_cry CRY_PURRLOIN,    $0aa,  $0a0 ; LIEPARD
-	mon_cry CRY_VULPIX,      $04f,  $090 ; VULPIX
-	mon_cry CRY_VULPIX,      $088,  $0e0 ; NINETALES
+	mon_cry CRY_GRIMER,      $04f,  $090 ; GRIMER
+	mon_cry CRY_GRIMER,      $088,  $0e0 ; MUK
 	mon_cry CRY_MAGNETON,      $0ff,  $0b5 ; JIGGLYPUFF
 	mon_cry CRY_MAGNETON,      $068,  $0e0 ; WIGGLYTUFF
 	mon_cry CRY_SQUIRTLE,    $0e0,  $100 ; ZUBAT
@@ -78,8 +78,8 @@ PokemonCries::
 	mon_cry CRY_WEEPINBELL,  $066,  $14c ; VICTREEBEL
 	mon_cry CRY_VENONAT,     $000,  $100 ; TENTACOOL
 	mon_cry CRY_VENONAT,     $0ee,  $17f ; TENTACRUEL
-	mon_cry CRY_VULPIX,      $0f0,  $090 ; GEODUDE
-	mon_cry CRY_VULPIX,      $000,  $100 ; GRAVELER
+	mon_cry CRY_GRIMER,      $0f0,  $090 ; GEODUDE
+	mon_cry CRY_GRIMER,      $000,  $100 ; GRAVELER
 	mon_cry CRY_GOLEM,       $0e0,  $0c0 ; GOLEM
 	mon_cry CRY_WEEPINBELL,  $000,  $100 ; PONYTA
 	mon_cry CRY_WEEPINBELL,  $020,  $140 ; RAPIDASH
@@ -154,8 +154,8 @@ PokemonCries::
 	mon_cry CRY_BULBASAUR,   $060,  $0c0 ; DRATINI
 	mon_cry CRY_BULBASAUR,   $040,  $100 ; DRAGONAIR
 	mon_cry CRY_BULBASAUR,   $03c,  $140 ; DRAGONITE
-	mon_cry CRY_PARAS,       $099,  $17f ; MEWTWOX
-	mon_cry CRY_PARAS,       $0ee,  $17f ; MEWX
+	mon_cry CRY_PARAS,       $099,  $17f ; RIOLU
+	mon_cry CRY_PARAS,       $0ee,  $17f ; LUCARIO
 	mon_cry CRY_CHIKORITA,  -$010,  $0b0 ; CHIKORITA
 	mon_cry CRY_CHIKORITA,  -$022,  $120 ; BAYLEEF
 	mon_cry CRY_CHIKORITA,  -$0b7,  $200 ; MEGANIUM
@@ -189,8 +189,8 @@ PokemonCries::
 	mon_cry CRY_CLEFFA,      $084,  $150 ; FENNEKIN
 	mon_cry CRY_BRAIXEN,      $11b,  $120 ; BRAIXEN
 	mon_cry CRY_BRAIXEN,      $0b6,  $180 ; DELPHOX
-	mon_cry CRY_CLEFFA,      $f40,  $180 ; SUDOWOODO
-	mon_cry CRY_CLEFFA,     -$2a3,  $1c8 ; POLITOED
+	mon_cry CRY_CLEFFA,      $f40,  $180 ; VULPIX
+	mon_cry CRY_CLEFFA,     -$2a3,  $1c8 ; NINETALES
 	mon_cry CRY_CLEFFA,      $03b,  $0c8 ; HOPPIP
 	mon_cry CRY_CLEFFA,      $027,  $138 ; SKIPLOOM
 	mon_cry CRY_CLEFFA,      $000,  $180 ; JUMPLUFF

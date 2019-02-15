@@ -28,10 +28,10 @@ UnownYFrames: INCLUDE "gfx/pokemon/unown_y/frames.asm"
 UnownZFrames: INCLUDE "gfx/pokemon/unown_z/frames.asm"
 
 VulpixFrames:
-KantoVulpixFrames:     INCLUDE "gfx/pokemon/vulpix/frames.asm"
+VulpixFrames:     INCLUDE "gfx/pokemon/vulpix/frames.asm"
 Vulpix_AlolaFrames:     INCLUDE "gfx/pokemon/vulpix/frames.asm"
 
 
 NinetalesFrames:
-KantoNinetalesFrames: INCLUDE "gfx/pokemon/ninetales/frames.asm"
+NinetalesFrames: INCLUDE "gfx/pokemon/ninetales/frames.asm"
 Ninetales_AlolaFrames: INCLUDE "gfx/pokemon/ninetales_alola/frames.asm"

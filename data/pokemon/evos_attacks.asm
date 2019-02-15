@@ -489,8 +489,8 @@ LiepardEvosAttacks:
 	db 1, MOONLIGHT
 	db 0 ; no more level-up moves
 
-KantoVulpixEvosAttacks:
-	db EVOLVE_ITEM, FIRE_STONE, NINETALES
+GrimerEvosAttacks:
+	db EVOLVE_ITEM, FIRE_STONE, MUK
 	db 0 ; no more evolutions
 	db 1, EMBER
 	db 1, TAIL_WHIP
@@ -503,7 +503,7 @@ KantoVulpixEvosAttacks:
 	db 0 ; no more level-up moves
 
 Vulpix_AlolaEvosAttacks:
-	db EVOLVE_ITEM, FIRE_STONE, NINETALES
+	db EVOLVE_ITEM, FIRE_STONE, MUK
 	db 0 ; no more evolutions
 	db 1, POWDER_SNOW
 	db 1, TAIL_WHIP
@@ -515,7 +515,7 @@ Vulpix_AlolaEvosAttacks:
 	db 37, BLIZZARD
 	db 0 ; no more level-up moves
 
-KantoNinetalesEvosAttacks:
+MukEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, EMBER
 	db 1, QUICK_ATTACK
@@ -524,7 +524,7 @@ KantoNinetalesEvosAttacks:
 	db 43, FIRE_SPIN
 	db 0 ; no more level-up moves
 
-Ninetales_AlolaEvosAttacks:
+Muk_AlolaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POWDER_SNOW
 	db 1, QUICK_ATTACK
@@ -831,7 +831,7 @@ PoliwagEvosAttacks:
 
 PoliwhirlEvosAttacks:
 	db EVOLVE_ITEM, WATER_STONE, POLIWRATH
-	db EVOLVE_TRADE, KINGS_ROCK, POLITOED
+	db EVOLVE_TRADE, KINGS_ROCK, NINETALES
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 1, HYPNOSIS
@@ -2067,7 +2067,7 @@ DragoniteEvosAttacks:
 	db 75, HYPER_BEAM
 	db 0 ; no more level-up moves
 
-MewtwoEvosAttacks:
+RioluEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CONFUSION
 	db 1, DISABLE
@@ -2082,7 +2082,7 @@ MewtwoEvosAttacks:
 	db 99, SAFEGUARD
 	db 0 ; no more level-up moves
 
-MewEvosAttacks:
+LucarioEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 10, TRANSFORM
@@ -2542,7 +2542,7 @@ DelphoxEvosAttacks:
 	db 48, RAIN_DANCE
 	db 0 ; no more level-up moves
 
-SudowoodoEvosAttacks:
+VulpixEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ROCK_THROW
 	db 1, MIMIC
@@ -2553,7 +2553,7 @@ SudowoodoEvosAttacks:
 	db 46, SLAM
 	db 0 ; no more level-up moves
 
-PolitoedEvosAttacks:
+NinetalesEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
 	db 1, HYPNOSIS
@@ -3442,7 +3442,7 @@ GlazeonEvosAttacks:
 	db 52, FLAMETHROWER
 	db 0 ; no more level-up moves
 
-SubstituteMonEvosAttacks:
+MewtwoEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, COUNTER
 	db 1, MIRROR_COAT

@@ -304,10 +304,10 @@ PokemonPicPointers::
 	dba DragonairBackpic
 	dba DragoniteFrontpic
 	dba DragoniteBackpic
-	dba MewtwoFrontpic
-	dba MewtwoBackpic
-	dba MewFrontpic
-	dba MewBackpic
+	dba RioluFrontpic
+	dba RioluBackpic
+	dba LucarioFrontpic
+	dba LucarioBackpic
 	dba ChikoritaFrontpic
 	dba ChikoritaBackpic
 	dba BayleefFrontpic
@@ -374,10 +374,10 @@ PokemonPicPointers::
 	dba BraixenBackpic
 	dba DelphoxFrontpic
 	dba DelphoxBackpic
-	dba SudowoodoFrontpic
-	dba SudowoodoBackpic
-	dba PolitoedFrontpic
-	dba PolitoedBackpic
+	dba VulpixFrontpic
+	dba VulpixBackpic
+	dba NinetalesFrontpic
+	dba NinetalesBackpic
 	dba HoppipFrontpic
 	dba HoppipBackpic
 	dba SkiploomFrontpic
@@ -513,6 +513,6 @@ PokemonPicPointers::
 	dba CelebiBackpic
 	dba GlazeonFrontpic	
 	dba GlazeonBackpic
-	dba SubstituteMonFrontpic	
-	dba SubstituteMonBackpic	
+	dba MewtwoFrontpic	
+	dba MewtwoBackpic	
 	dba EggPic

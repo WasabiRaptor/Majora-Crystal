@@ -37,7 +37,7 @@ PokedexDataPointerTable:
 	dw PurrloinPokedexEntry
 	dw LiepardPokedexEntry
 	dw VulpixPokedexEntry
-	dw NinetalesPokedexEntry
+	dw MukPokedexEntry
 	dw JigglypuffPokedexEntry
 	dw WigglytuffPokedexEntry
 	dw ZubatPokedexEntry
@@ -149,8 +149,8 @@ PokedexDataPointerTable:
 	dw DratiniPokedexEntry
 	dw DragonairPokedexEntry
 	dw DragonitePokedexEntry
-	dw MewtwoPokedexEntry
-	dw MewPokedexEntry
+	dw RioluPokedexEntry
+	dw LucarioPokedexEntry
 	dw ChikoritaPokedexEntry
 	dw BayleefPokedexEntry
 	dw MeganiumPokedexEntry
@@ -184,8 +184,8 @@ PokedexDataPointerTable:
 	dw FennekinPokedexEntry
 	dw BraixenPokedexEntry
 	dw DelphoxPokedexEntry
-	dw SudowoodoPokedexEntry
-	dw PolitoedPokedexEntry
+	dw VulpixPokedexEntry
+	dw NinetalesPokedexEntry
 	dw HoppipPokedexEntry
 	dw SkiploomPokedexEntry
 	dw JumpluffPokedexEntry
@@ -252,5 +252,5 @@ PokedexDataPointerTable:
 	dw HoOhPokedexEntry
 	dw CelebiPokedexEntry
 	dw GlazeonPokedexEntry
-	dw SubstituteMonPokedexEntry
+	dw MewtwoPokedexEntry
 	

@@ -27,10 +27,10 @@ UnownBitmasksPointers:
 	dw UnownZBitmasks
 
 VulpixBitmasksPointers:
-	dw KantoVulpixBitmasks
+	dw VulpixBitmasks
 	dw Vulpix_AlolaBitmasks
 
 NinetalesBitmasksPointers:
-	dw KantoNinetalesBitmasks
+	dw NinetalesBitmasks
 	dw Ninetales_AlolaBitmasks
 	
