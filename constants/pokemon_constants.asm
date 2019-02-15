@@ -227,12 +227,12 @@ JOHTO_POKEMON EQU const_value
 	const YANMA      ; c1
 	const WOOPER     ; c2
 	const QUAGSIRE   ; c3
-	const ESPEONX     ; c4
-	const UMBREONX    ; c5
-	const MURKROW    ; c6
-	const SLOWKING   ; c7
-	const MISDREAVUS ; c8
 
+	const ARCHEN        ; c4
+	const ARCHEOPS      ; c5
+	const ROGGENROLA    ; c6
+	const BOLDORE       ; c7
+	const GIGALITH      ; c8
 	const CARBINK      	; c9
 	const AMAURA        ; ca
 	const AURORUS       ; cb

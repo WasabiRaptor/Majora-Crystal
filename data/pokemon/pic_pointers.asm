@@ -400,12 +400,12 @@ PokemonPicPointers::
 	dba EspeonBackpic
 	dba UmbreonFrontpic
 	dba UmbreonBackpic
-	dba MurkrowFrontpic
-	dba MurkrowBackpic
-	dba SlowkingFrontpic
-	dba SlowkingBackpic
-	dba MisdreavusFrontpic
-	dba MisdreavusBackpic
+	dba RoggenrolaFrontpic
+	dba RoggenrolaBackpic
+	dba BoldoreFrontpic
+	dba BoldoreBackpic
+	dba GigalithFrontpic
+	dba GigalithBackpic
 
 	; Unown pics have their own table. See UnownPicPointers
 	dbw -1, -1

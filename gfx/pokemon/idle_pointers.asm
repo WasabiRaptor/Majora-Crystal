@@ -194,11 +194,11 @@ AnimationIdlePointers:
 	dw YanmaAnimationIdle
 	dw WooperAnimationIdle
 	dw QuagsireAnimationIdle
-	dw EspeonxAnimationIdle
-	dw UmbreonxAnimationIdle
-	dw MurkrowAnimationIdle
-	dw SlowkingAnimationIdle
-	dw MisdreavusAnimationIdle
+	dw ArchenAnimationIdle
+	dw ArcheopsAnimationIdle
+	dw RoggenrolaAnimationIdle
+	dw BoldoreAnimationIdle
+	dw GigalithAnimationIdle
 	dw CarbinkAnimationIdle
 	dw AmauraAnimationIdle
 	dw AurorusAnimationIdle

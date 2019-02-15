@@ -200,9 +200,9 @@ endc
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw MurkrowEggMoves
+	dw RoggenrolaEggMoves
 	dw NoEggMoves
-	dw MisdreavusEggMoves
+	dw GigalithEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw AurorusEggMoves

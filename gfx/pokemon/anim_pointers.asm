@@ -194,11 +194,11 @@ AnimationPointers:
 	dw YanmaAnimation
 	dw WooperAnimation
 	dw QuagsireAnimation
-	dw EspeonxAnimation
-	dw UmbreonxAnimation
-	dw MurkrowAnimation
-	dw SlowkingAnimation
-	dw MisdreavusAnimation
+	dw ArchenAnimation
+	dw ArcheopsAnimation
+	dw RoggenrolaAnimation
+	dw BoldoreAnimation
+	dw GigalithAnimation
 	dw CarbinkAnimation
 	dw AmauraAnimation
 	dw AurorusAnimation

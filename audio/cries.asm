@@ -30,10 +30,10 @@ Cry_Larvitar:
 	musicheader 2, 5, Cry_Larvitar_Ch5
 	musicheader 1, 6, Cry_Larvitar_Ch6
 
-Cry_Slowking:
-	musicheader 3, 5, Cry_Slowking_Ch5
-	musicheader 1, 6, Cry_Slowking_Ch6
-	musicheader 1, 8, Cry_Slowking_Ch8
+Cry_Boldore:
+	musicheader 3, 5, Cry_Boldore_Ch5
+	musicheader 1, 6, Cry_Boldore_Ch6
+	musicheader 1, 8, Cry_Boldore_Ch8
 
 Cry_Litten:
 	musicheader 2, 5, Cry_Litten_Ch5
@@ -223,7 +223,7 @@ Cry_Cryogonal_Ch8:
 	noise C#,  1, $b5, $5f
 	endchannel
 
-Cry_Slowking_Ch5:
+Cry_Boldore_Ch5:
 	sound_duty 3, 0, 3, 0
 	sound __,  3, $f1, $0550
 	sound __,  3, $f1, $0530
@@ -234,7 +234,7 @@ Cry_Slowking_Ch5:
 	sound C_,  1, $f2, $0550
 	endchannel
 
-Cry_Slowking_Ch6:
+Cry_Boldore_Ch6:
 	sound_duty 2, 0, 3, 3
 	sound __,  5, $e1, $0620
 	sound __,  6, $e2, $0500
@@ -243,7 +243,7 @@ Cry_Slowking_Ch6:
 	sound C_,  1, $e2, $0500
 	endchannel
 
-Cry_Slowking_Ch8:
+Cry_Boldore_Ch8:
 	noise __,  3, $8a, $5d
 	noise __,  3, $9a, $4c
 	noise __,  6, $9a, $5d

@@ -195,11 +195,11 @@ PokedexDataPointerTable:
 	dw YanmaPokedexEntry
 	dw WooperPokedexEntry
 	dw QuagsirePokedexEntry
-	dw EspeonxPokedexEntry
-	dw UmbreonxPokedexEntry
-	dw MurkrowPokedexEntry
-	dw SlowkingPokedexEntry
-	dw MisdreavusPokedexEntry
+	dw ArchenPokedexEntry
+	dw ArcheopsPokedexEntry
+	dw RoggenrolaPokedexEntry
+	dw BoldorePokedexEntry
+	dw GigalithPokedexEntry
 	dw CarbinkPokedexEntry
 	dw AmauraPokedexEntry
 	dw AurorusPokedexEntry

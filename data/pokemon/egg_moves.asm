@@ -653,7 +653,7 @@ WooperEggMoves:
 	db SAFEGUARD
 	db -1 ; end
 
-MurkrowEggMoves:
+RoggenrolaEggMoves:
 	db WHIRLWIND
 	db DRILL_PECK
 	db QUICK_ATTACK
@@ -664,7 +664,7 @@ if _BRASS
 endc
 	db -1 ; end
 
-MisdreavusEggMoves:
+GigalithEggMoves:
 	db SCREECH
 	db DESTINY_BOND
 	db -1 ; end

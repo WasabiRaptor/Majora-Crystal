@@ -11,7 +11,7 @@ SometimesFleeMons:
 	db DRATINI
 	db DRAGONAIR
 	db CYNDAQUIL
-	db UMBREONX
+	db ARCHEOPS
 	db UNOWN
 	db FROSSLASS
 	db NATU

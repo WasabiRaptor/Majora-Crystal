@@ -1084,7 +1084,7 @@ PhantumpEvosAttacks:
 
 TrevanantEvosAttacks:
 	db EVOLVE_LEVEL, 37, BONSLY
-	db EVOLVE_TRADE, KINGS_ROCK, SLOWKING
+	db EVOLVE_TRADE, KINGS_ROCK, BOLDORE
 	db 0 ; no more evolutions
 	db 1, CURSE
 	db 1, TACKLE
@@ -1828,8 +1828,8 @@ EeveexEvosAttacks:
 	db EVOLVE_ITEM, THUNDERSTONE, JOLTEONX
 	db EVOLVE_ITEM, WATER_STONE, VAPOREONX
 	db EVOLVE_ITEM, FIRE_STONE, FLAREONX
-	db EVOLVE_HAPPINESS, TR_MORNDAY, ESPEONX
-	db EVOLVE_HAPPINESS, TR_NITE, UMBREONX
+	db EVOLVE_HAPPINESS, TR_MORNDAY, ARCHEN
+	db EVOLVE_HAPPINESS, TR_NITE, ARCHEOPS
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
@@ -2697,7 +2697,7 @@ QuagsireEvosAttacks:
 	db 59, HAZE
 	db 0 ; no more level-up moves
 
-EspeonxEvosAttacks:
+ArchenEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
@@ -2711,7 +2711,7 @@ EspeonxEvosAttacks:
 	db 52, MORNING_SUN
 	db 0 ; no more level-up moves
 
-UmbreonxEvosAttacks:
+ArcheopsEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
@@ -2725,7 +2725,7 @@ UmbreonxEvosAttacks:
 	db 52, MOONLIGHT
 	db 0 ; no more level-up moves
 
-MurkrowEvosAttacks:
+RoggenrolaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 11, PURSUIT
@@ -2735,7 +2735,7 @@ MurkrowEvosAttacks:
 	db 41, MEAN_LOOK
 	db 0 ; no more level-up moves
 
-SlowkingEvosAttacks:
+BoldoreEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CURSE
 	db 1, TACKLE
@@ -2748,7 +2748,7 @@ SlowkingEvosAttacks:
 	db 48, PSYCHIC_M
 	db 0 ; no more level-up moves
 
-MisdreavusEvosAttacks:
+GigalithEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, GROWL
 	db 1, PSYWAVE

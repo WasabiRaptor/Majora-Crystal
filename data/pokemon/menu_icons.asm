@@ -197,11 +197,11 @@ MonMenuIcons:
 	db ICON_BUG         ; YANMA
 	db ICON_MONSTER     ; WOOPER
 	db ICON_MONSTER     ; QUAGSIRE
-	db ICON_FOX         ; ESPEONX
-	db ICON_FOX         ; UMBREONX
-	db ICON_BIRD        ; MURKROW
-	db ICON_TREVANANT    ; SLOWKING
-	db ICON_GHOST       ; MISDREAVUS
+	db ICON_FOX         ; ARCHEN
+	db ICON_FOX         ; ARCHEOPS
+	db ICON_BIRD        ; ROGGENROLA
+	db ICON_TREVANANT    ; BOLDORE
+	db ICON_GHOST       ; GIGALITH
 	db ICON_CARBINK       ; CARBINK
 	db ICON_GHOST       ; AMAURA
 	db ICON_EQUINE      ; AURORUS

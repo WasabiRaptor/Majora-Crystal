@@ -194,11 +194,11 @@ BitmasksPointers:
 	dw YanmaBitmasks
 	dw WooperBitmasks
 	dw QuagsireBitmasks
-	dw EspeonxBitmasks
-	dw UmbreonxBitmasks
-	dw MurkrowBitmasks
-	dw SlowkingBitmasks
-	dw MisdreavusBitmasks
+	dw ArchenBitmasks
+	dw ArcheopsBitmasks
+	dw RoggenrolaBitmasks
+	dw BoldoreBitmasks
+	dw GigalithBitmasks
 	dw CarbinkBitmasks
 	dw AmauraBitmasks
 	dw AurorusBitmasks

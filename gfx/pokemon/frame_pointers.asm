@@ -194,11 +194,11 @@ FramesPointers:
 	dw YanmaFrames
 	dw WooperFrames
 	dw QuagsireFrames
-	dw EspeonxFrames
+	dw ArchenFrames
 	dw UmbreonFrames
-	dw MurkrowFrames
-	dw SlowkingFrames
-	dw MisdreavusFrames
+	dw RoggenrolaFrames
+	dw BoldoreFrames
+	dw GigalithFrames
 	dw CarbinkFrames
 	dw AmauraFrames
 	dw AurorusFrames

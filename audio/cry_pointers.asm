@@ -46,7 +46,7 @@ Cries:
 	dba Cry_Cyndaquil
 	dba Cry_Tyranitar
 	dba Cry_Larvitar
-	dba Cry_Slowking
+	dba Cry_Boldore
 	dba Cry_Abomasnow
 	dba Cry_Chikorita
 	dba Cry_Totodile

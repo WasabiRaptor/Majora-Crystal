@@ -196,11 +196,11 @@ EvosAttacksPointers::
 	dw YanmaEvosAttacks
 	dw WooperEvosAttacks
 	dw QuagsireEvosAttacks
-	dw EspeonxEvosAttacks
-	dw UmbreonxEvosAttacks
-	dw MurkrowEvosAttacks
-	dw SlowkingEvosAttacks
-	dw MisdreavusEvosAttacks
+	dw ArchenEvosAttacks
+	dw ArcheopsEvosAttacks
+	dw RoggenrolaEvosAttacks
+	dw BoldoreEvosAttacks
+	dw GigalithEvosAttacks
 	dw CarbinkEvosAttacks
 	dw AmauraEvosAttacks
 	dw AurorusEvosAttacks

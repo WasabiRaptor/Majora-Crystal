@@ -55,7 +55,7 @@ AlphabeticalPokedexOrder:
 	db ELECTRODE
 	db ARTICUNO
 	db ENTEI
-	db ESPEONX
+	db ARCHEN
 	db EXEGGCUTE
 	db EXEGGUTOR
 	db FARFETCH_D
@@ -135,11 +135,11 @@ AlphabeticalPokedexOrder:
 	db LUCARIO
 	db RIOLU
 	db MOLTRES
-	db MISDREAVUS
+	db GIGALITH
 	db TYROGUE
 	db MR__MIME
 	db MUK
-	db MURKROW
+	db ROGGENROLA
 	db QUILAVA
 	db DITTO
 	db TIMBURR
@@ -200,7 +200,7 @@ AlphabeticalPokedexOrder:
 	db AEGISLASH
 	db SKIPLOOM
 	db BONSLY
-	db SLOWKING
+	db BOLDORE
 	db TREVANANT
 	db EXCADRILL
 	db SPIRITOMB
@@ -232,7 +232,7 @@ AlphabeticalPokedexOrder:
 	db FERROTHORN
 	db MAGEARNA
 	db DUSKULL
-	db UMBREONX
+	db ARCHEOPS
 	db CARBINK
 	db DRILLBUR
 	db VAPOREONX
