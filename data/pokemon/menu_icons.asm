@@ -203,17 +203,17 @@ MonMenuIcons:
 	db ICON_SLOWPOKE    ; SLOWKING
 	db ICON_GHOST       ; MISDREAVUS
 	db ICON_CARBINK       ; CARBINK
-	db ICON_GHOST       ; WOBBUFFET
-	db ICON_EQUINE      ; GIRAFARIG
-	db ICON_BUG         ; PINECO
-	db ICON_BUG         ; FORRETRESS
-	db ICON_SERPENT     ; DUNSPARCE
-	db ICON_BUG         ; GLIGAR
-	db ICON_SERPENT     ; STEELIX
-	db ICON_MONSTER     ; SNUBBULL
-	db ICON_MONSTER     ; GRANBULL
-	db ICON_FISH        ; QWILFISH
-	db ICON_BUG         ; SCIZOR
+	db ICON_GHOST       ; AMAURA
+	db ICON_EQUINE      ; AURORUS
+	db ICON_BUG         ; SNEASEL
+	db ICON_BUG         ; WEAVILE
+	db ICON_SERPENT     ; CRYOGONAL
+	db ICON_BUG         ; SNOWRUNT
+	db ICON_SERPENT     ; GLALIE
+	db ICON_MONSTER     ; FROSSLASS
+	db ICON_MONSTER     ; SWINUB
+	db ICON_FISH        ; PILOSWINE
+	db ICON_BUG         ; MAMOSWINE
 	db ICON_BUG         ; UNOWN
 	db ICON_BUG         ; NATU
 	db ICON_FOX         ; XATU

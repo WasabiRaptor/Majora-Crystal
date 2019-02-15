@@ -1308,7 +1308,7 @@ GengarEvosAttacks:
 	db 0 ; no more level-up moves
 
 OnixEvosAttacks:
-	db EVOLVE_TRADE, METAL_COAT, STEELIX
+	db EVOLVE_TRADE, METAL_COAT, GLALIE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, SCREECH
@@ -1700,7 +1700,7 @@ MrMimeEvosAttacks:
 	db 0 ; no more level-up moves
 
 ScytherEvosAttacks:
-	db EVOLVE_TRADE, METAL_COAT, SCIZOR
+	db EVOLVE_TRADE, METAL_COAT, MAMOSWINE
 	db 0 ; no more evolutions
 	db 1, QUICK_ATTACK
 	db 1, LEER
@@ -2765,7 +2765,7 @@ CarbinkEvosAttacks:
 	db 1, HIDDEN_POWER
 	db 0 ; no more level-up moves
 
-WobbuffetEvosAttacks:
+AmauraEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, COUNTER
 	db 1, MIRROR_COAT
@@ -2773,7 +2773,7 @@ WobbuffetEvosAttacks:
 	db 1, DESTINY_BOND
 	db 0 ; no more level-up moves
 
-GirafarigEvosAttacks:
+AurorusEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
@@ -2787,8 +2787,8 @@ GirafarigEvosAttacks:
 	db 54, CRUNCH
 	db 0 ; no more level-up moves
 
-PinecoEvosAttacks:
-	db EVOLVE_LEVEL, 31, FORRETRESS
+SneaselEvosAttacks:
+	db EVOLVE_LEVEL, 31, WEAVILE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, PROTECT
@@ -2801,7 +2801,7 @@ PinecoEvosAttacks:
 	db 50, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
-ForretressEvosAttacks:
+WeavileEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, PROTECT
@@ -2815,7 +2815,7 @@ ForretressEvosAttacks:
 	db 59, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
-DunsparceEvosAttacks:
+CryogonalEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, RAGE
 	db 5, DEFENSE_CURL
@@ -2826,7 +2826,7 @@ DunsparceEvosAttacks:
 	db 38, TAKE_DOWN
 	db 0 ; no more level-up moves
 
-GligarEvosAttacks:
+SnowruntEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 6, SAND_ATTACK
@@ -2838,7 +2838,7 @@ GligarEvosAttacks:
 	db 52, GUILLOTINE
 	db 0 ; no more level-up moves
 
-SteelixEvosAttacks:
+GlalieEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, SCREECH
@@ -2851,8 +2851,8 @@ SteelixEvosAttacks:
 	db 49, CRUNCH
 	db 0 ; no more level-up moves
 
-SnubbullEvosAttacks:
-	db EVOLVE_LEVEL, 23, GRANBULL
+FrosslassEvosAttacks:
+	db EVOLVE_LEVEL, 23, SWINUB
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, SCARY_FACE
@@ -2865,7 +2865,7 @@ SnubbullEvosAttacks:
 	db 43, TAKE_DOWN
 	db 0 ; no more level-up moves
 
-GranbullEvosAttacks:
+SwinubEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, SCARY_FACE
@@ -2878,7 +2878,7 @@ GranbullEvosAttacks:
 	db 51, TAKE_DOWN
 	db 0 ; no more level-up moves
 
-QwilfishEvosAttacks:
+PiloswineEvosAttacks:
 	db 0 ; no more evolutions
 if _BRASS
 	db 1, SPIKES
@@ -2893,7 +2893,7 @@ endc
 	db 46, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-ScizorEvosAttacks:
+MamoswineEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, QUICK_ATTACK
 	db 1, LEER

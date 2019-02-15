@@ -669,7 +669,7 @@ MisdreavusEggMoves:
 	db DESTINY_BOND
 	db -1 ; end
 
-GirafarigEggMoves:
+AurorusEggMoves:
 	db TAKE_DOWN
 	db AMNESIA
 	db FORESIGHT
@@ -677,14 +677,14 @@ GirafarigEggMoves:
 	db BEAT_UP
 	db -1 ; end
 
-PinecoEggMoves:
+SneaselEggMoves:
 	db REFLECT
 	db PIN_MISSILE
 	db FLAIL
 	db SWIFT
 	db -1 ; end
 
-DunsparceEggMoves:
+CryogonalEggMoves:
 	db BIDE
 	db ANCIENTPOWER
 	db ROCK_SLIDE
@@ -692,14 +692,14 @@ DunsparceEggMoves:
 	db RAGE
 	db -1 ; end
 
-GligarEggMoves:
+SnowruntEggMoves:
 	db METAL_CLAW
 	db WING_ATTACK
 	db RAZOR_WIND
 	db COUNTER
 	db -1 ; end
 
-SnubbullEggMoves:
+FrosslassEggMoves:
 	db METRONOME
 	db FAINT_ATTACK
 	db REFLECT
@@ -710,7 +710,7 @@ SnubbullEggMoves:
 	db LEER
 	db -1 ; end
 
-QwilfishEggMoves:
+PiloswineEggMoves:
 	db FLAIL
 	db HAZE
 	db BUBBLEBEAM

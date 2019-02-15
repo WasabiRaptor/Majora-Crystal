@@ -49,14 +49,14 @@ Cry_Chikorita:
 	musicheader 1, 6, Cry_Chikorita_Ch6
 	musicheader 1, 8, Cry_Chikorita_Ch8
 
-Cry_Gligar:
-	musicheader 2, 5, Cry_Gligar_Ch5
-	musicheader 1, 8, Cry_Gligar_Ch8
+Cry_Snowrunt:
+	musicheader 2, 5, Cry_Snowrunt_Ch5
+	musicheader 1, 8, Cry_Snowrunt_Ch8
 
-Cry_Girafarig:
-	musicheader 3, 5, Cry_Girafarig_Ch5
-	musicheader 1, 6, Cry_Girafarig_Ch6
-	musicheader 1, 8, Cry_Girafarig_Ch8
+Cry_Aurorus:
+	musicheader 3, 5, Cry_Aurorus_Ch5
+	musicheader 1, 6, Cry_Aurorus_Ch6
+	musicheader 1, 8, Cry_Aurorus_Ch8
 
 Cry_Excadrill:
 	musicheader 2, 5, Cry_Excadrill_Ch5
@@ -122,10 +122,10 @@ Cry_Aipom:
 	musicheader 1, 6, Cry_Aipom_Ch6
 	musicheader 1, 8, Cry_Aipom_Ch8
 
-Cry_Dunsparce:
-	musicheader 3, 5, Cry_Dunsparce_Ch5
-	musicheader 1, 6, Cry_Dunsparce_Ch6
-	musicheader 1, 8, Cry_Dunsparce_Ch8
+Cry_Cryogonal:
+	musicheader 3, 5, Cry_Cryogonal_Ch5
+	musicheader 1, 6, Cry_Cryogonal_Ch6
+	musicheader 1, 8, Cry_Cryogonal_Ch8
 
 Cry_Baltoy:
 	musicheader 3, 5, Cry_Baltoy_Ch5
@@ -198,7 +198,7 @@ Cry_Baltoy_Ch8:
 	noise C_,  5, $c2, $5f
 	endchannel
 
-Cry_Dunsparce_Ch5:
+Cry_Cryogonal_Ch5:
 	sound_duty 2, 0, 2, 0
 	sound __,  2, $f8, $05b0
 	sound __,  2, $f8, $04b4
@@ -211,13 +211,13 @@ Cry_Dunsparce_Ch5:
 	soundinput $88
 	endchannel
 
-Cry_Dunsparce_Ch6:
+Cry_Cryogonal_Ch6:
 	sound_duty 2, 0, 2, 0
 	sound __,  9, $b8, $04c8
 	sound C#,  1, $b5, $0410
 	endchannel
 
-Cry_Dunsparce_Ch8:
+Cry_Cryogonal_Ch8:
 	noise __,  4, $ff, $4b
 	noise __,  4, $ef, $4c
 	noise C#,  1, $b5, $5f
@@ -448,7 +448,7 @@ Cry_Litten_Ch5:
 Cry_Litten_Ch6:
 	sound_duty 1, 0, 0, 0
 Cry_Litten_branch_f3145:
-Cry_Gligar_branch_f3145:
+Cry_Snowrunt_branch_f3145:
 	sound __,  5, $3a, $073d
 	sound __,  7, $f8, $0762
 	sound __,  7, $f8, $0760
@@ -471,7 +471,7 @@ Cry_Abomasnow_Ch6:
 	endchannel
 
 Cry_Abomasnow_Ch8:
-Cry_Gligar_Ch8:
+Cry_Snowrunt_Ch8:
 	noise __,  9, $3f, $52
 	noise C#,  1, $93, $4f
 	endchannel
@@ -492,18 +492,18 @@ Cry_Chikorita_Ch8:
 	noise __,  9, $94, $3
 	endchannel
 
-Cry_Gligar_Ch5:
+Cry_Snowrunt_Ch5:
 	sound_duty 2, 0, 2, 2
-	jumpchannel Cry_Gligar_branch_f3145
+	jumpchannel Cry_Snowrunt_branch_f3145
 
-Cry_Girafarig_Ch5:
+Cry_Aurorus_Ch5:
 	dutycycle $1
 	tone $0004
-	jumpchannel Cry_Girafarig_branch_f31af
+	jumpchannel Cry_Aurorus_branch_f31af
 
-Cry_Girafarig_Ch6:
+Cry_Aurorus_Ch6:
 	sound_duty 1, 0, 0, 1
-Cry_Girafarig_branch_f31af:
+Cry_Aurorus_branch_f31af:
 	sound __,  5, $68, $0758
 	sound __,  3, $e8, $0760
 	sound __,  3, $e8, $0767
@@ -511,7 +511,7 @@ Cry_Girafarig_branch_f31af:
 	sound __,  8, $f1, $0767
 	endchannel
 
-Cry_Girafarig_Ch8:
+Cry_Aurorus_Ch8:
 	noise __,  5, $29, $0
 	noise __,  3, $39, $1
 	noise __,  3, $49, $2

@@ -411,28 +411,28 @@ PokemonPicPointers::
 	dbw -1, -1
 	dbw -1, -1
 
-	dba WobbuffetFrontpic
-	dba WobbuffetBackpic
-	dba GirafarigFrontpic
-	dba GirafarigBackpic
-	dba PinecoFrontpic
-	dba PinecoBackpic
-	dba ForretressFrontpic
-	dba ForretressBackpic
-	dba DunsparceFrontpic
-	dba DunsparceBackpic
-	dba GligarFrontpic
-	dba GligarBackpic
-	dba SteelixFrontpic
-	dba SteelixBackpic
-	dba SnubbullFrontpic
-	dba SnubbullBackpic
-	dba GranbullFrontpic
-	dba GranbullBackpic
-	dba QwilfishFrontpic
-	dba QwilfishBackpic
-	dba ScizorFrontpic
-	dba ScizorBackpic
+	dba AmauraFrontpic
+	dba AmauraBackpic
+	dba AurorusFrontpic
+	dba AurorusBackpic
+	dba SneaselFrontpic
+	dba SneaselBackpic
+	dba WeavileFrontpic
+	dba WeavileBackpic
+	dba CryogonalFrontpic
+	dba CryogonalBackpic
+	dba SnowruntFrontpic
+	dba SnowruntBackpic
+	dba GlalieFrontpic
+	dba GlalieBackpic
+	dba FrosslassFrontpic
+	dba FrosslassBackpic
+	dba SwinubFrontpic
+	dba SwinubBackpic
+	dba PiloswineFrontpic
+	dba PiloswineBackpic
+	dba MamoswineFrontpic
+	dba MamoswineBackpic
 	dba UnownFrontpic
 	dba UnownBackpic
 	dba NatuFrontpic

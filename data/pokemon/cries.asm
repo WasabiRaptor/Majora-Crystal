@@ -206,18 +206,18 @@ PokemonCries::
 	mon_cry CRY_SLOWKING,    $104,  $200 ; SLOWKING
 	mon_cry CRY_TYRANITAR,    $130,  $0e8 ; MISDREAVUS
 	mon_cry CRY_TYRANITAR,    $162,  $100 ; CARBINK
-	mon_cry CRY_INCINEROAR,    $27b,  $144 ; WOBBUFFET
-	mon_cry CRY_GIRAFARIG,   $041,  $200 ; GIRAFARIG
-	mon_cry CRY_SLOWKING,    $080,  $100 ; PINECO
-	mon_cry CRY_SLOWKING,    $000,  $180 ; FORRETRESS
-	mon_cry CRY_DUNSPARCE,   $1c4,  $100 ; DUNSPARCE
-	mon_cry CRY_GLIGAR,     -$102,  $100 ; GLIGAR
-	mon_cry CRY_FERROTHORN,  $0ef,  $0f7 ; STEELIX
-	mon_cry CRY_DUNSPARCE,   $112,  $0e8 ; SNUBBULL
-	mon_cry CRY_DUNSPARCE,   $000,  $180 ; GRANBULL
-	mon_cry CRY_SLOWKING,    $160,  $0e0 ; QWILFISH
-	mon_cry CRY_INCINEROAR,    $000,  $160 ; SCIZOR
-	mon_cry CRY_DUNSPARCE,   $290,  $0a8 ; UNOWN
+	mon_cry CRY_INCINEROAR,    $27b,  $144 ; AMAURA
+	mon_cry CRY_AURORUS,   $041,  $200 ; AURORUS
+	mon_cry CRY_SLOWKING,    $080,  $100 ; SNEASEL
+	mon_cry CRY_SLOWKING,    $000,  $180 ; WEAVILE
+	mon_cry CRY_CRYOGONAL,   $1c4,  $100 ; CRYOGONAL
+	mon_cry CRY_SNOWRUNT,     -$102,  $100 ; SNOWRUNT
+	mon_cry CRY_FERROTHORN,  $0ef,  $0f7 ; GLALIE
+	mon_cry CRY_CRYOGONAL,   $112,  $0e8 ; FROSSLASS
+	mon_cry CRY_CRYOGONAL,   $000,  $180 ; SWINUB
+	mon_cry CRY_SLOWKING,    $160,  $0e0 ; PILOSWINE
+	mon_cry CRY_INCINEROAR,    $000,  $160 ; MAMOSWINE
+	mon_cry CRY_CRYOGONAL,   $290,  $0a8 ; UNOWN
 	mon_cry CRY_INCINEROAR,    $035,  $0e0 ; NATU
 	mon_cry CRY_WOOPER,      $053,  $0af ; XATU
 	mon_cry CRY_SIGILYPH,   $7a2,  $06e ; SIGILYPH
@@ -237,7 +237,7 @@ PokemonCries::
 	mon_cry CRY_EXCADRILL,      $2fb,  $100 ; YAMASK
 	mon_cry CRY_LARVITAR,     $048,  $230 ; COFAGRIGUS
 	mon_cry CRY_LITWICK,     $000,  $1a0 ; LITWICK
-	mon_cry CRY_GIRAFARIG,   $073,  $240 ; LAMPENT
+	mon_cry CRY_AURORUS,   $073,  $240 ; LAMPENT
 	mon_cry CRY_AIPOM,      -$160,  $180 ; CHANDELURE
 	mon_cry CRY_PICHU,      -$21a,  $1f0 ; SPIRITOMB
 	mon_cry CRY_AIPOM,       $02c,  $108 ; DUSKULL
@@ -245,7 +245,7 @@ PokemonCries::
 	mon_cry CRY_BRAIXEN,      $068,  $100 ; DUSKNOIR
 	mon_cry CRY_SUNFLORA,   -$2d8,  $0b4 ; ARTICUNO
 	mon_cry CRY_SIGILYPH,   $176,  $03a ; ZAPDOS
-	mon_cry CRY_GLIGAR,     -$1cd,  $1a0 ; MOLTRES
+	mon_cry CRY_SNOWRUNT,     -$1cd,  $1a0 ; MOLTRES
 	mon_cry CRY_SLOWKING,    $293,  $140 ; SUICUNE
 	mon_cry CRY_RAIKOU,      $22e,  $120 ; RAIKOU
 	mon_cry CRY_ENTEI,       $000,  $1a0 ; ENTEI

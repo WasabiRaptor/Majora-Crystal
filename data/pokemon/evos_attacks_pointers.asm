@@ -202,17 +202,17 @@ EvosAttacksPointers::
 	dw SlowkingEvosAttacks
 	dw MisdreavusEvosAttacks
 	dw CarbinkEvosAttacks
-	dw WobbuffetEvosAttacks
-	dw GirafarigEvosAttacks
-	dw PinecoEvosAttacks
-	dw ForretressEvosAttacks
-	dw DunsparceEvosAttacks
-	dw GligarEvosAttacks
-	dw SteelixEvosAttacks
-	dw SnubbullEvosAttacks
-	dw GranbullEvosAttacks
-	dw QwilfishEvosAttacks
-	dw ScizorEvosAttacks
+	dw AmauraEvosAttacks
+	dw AurorusEvosAttacks
+	dw SneaselEvosAttacks
+	dw WeavileEvosAttacks
+	dw CryogonalEvosAttacks
+	dw SnowruntEvosAttacks
+	dw GlalieEvosAttacks
+	dw FrosslassEvosAttacks
+	dw SwinubEvosAttacks
+	dw PiloswineEvosAttacks
+	dw MamoswineEvosAttacks
 	dw UnownEvosAttacks
 	dw NatuEvosAttacks
 	dw XatuEvosAttacks

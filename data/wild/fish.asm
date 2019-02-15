@@ -12,14 +12,14 @@ FishGroups:
 	fishgroup 50 percent + 1, .Lake_Old,             .Lake_Good,             .Lake_Super
 	fishgroup 50 percent + 1, .Pond_Old,             .Pond_Good,             .Pond_Super
 	fishgroup 50 percent + 1, .Dratini_Old,          .Dratini_Good,          .Dratini_Super
-	fishgroup 50 percent + 1, .Qwilfish_Swarm_Old,   .Qwilfish_Swarm_Good,   .Qwilfish_Swarm_Super
+	fishgroup 50 percent + 1, .Piloswine_Swarm_Old,   .Piloswine_Swarm_Good,   .Piloswine_Swarm_Super
 	fishgroup 50 percent + 1, .Bronzor_Swarm_Old,   .Bronzor_Swarm_Good,   .Bronzor_Swarm_Super
 	fishgroup 50 percent + 1, .Gyarados_Old,         .Gyarados_Good,         .Gyarados_Super
 	fishgroup 50 percent + 1, .Dratini_2_Old,        .Dratini_2_Good,        .Dratini_2_Super
 	fishgroup 50 percent + 1, .WhirlIslands_Old,     .WhirlIslands_Good,     .WhirlIslands_Super
-	fishgroup 50 percent + 1, .Qwilfish_Old,         .Qwilfish_Good,         .Qwilfish_Super
+	fishgroup 50 percent + 1, .Piloswine_Old,         .Piloswine_Good,         .Piloswine_Super
 	fishgroup 50 percent + 1, .Bronzor_Old,         .Bronzor_Good,         .Bronzor_Super
-	fishgroup 50 percent + 1, .Qwilfish_NoSwarm_Old, .Qwilfish_NoSwarm_Good, .Qwilfish_NoSwarm_Super
+	fishgroup 50 percent + 1, .Piloswine_NoSwarm_Old, .Piloswine_NoSwarm_Good, .Piloswine_NoSwarm_Super
 
 .Shore_Old:
 	db  70 percent + 1, MAGIKARP,   10
@@ -96,20 +96,20 @@ FishGroups:
 	db  90 percent + 1, MAGIKARP,   40
 	db 100 percent,     DRAGONAIR,  40
 
-.Qwilfish_Swarm_Old:
+.Piloswine_Swarm_Old:
 	db  70 percent + 1, MAGIKARP,   5
 	db  85 percent + 1, MAGIKARP,   5
-	db 100 percent,     QWILFISH,   5
-.Qwilfish_Swarm_Good:
+	db 100 percent,     PILOSWINE,   5
+.Piloswine_Swarm_Good:
 	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     QWILFISH,   20
-	db  90 percent + 1, QWILFISH,   20
+	db  70 percent,     PILOSWINE,   20
+	db  90 percent + 1, PILOSWINE,   20
 	db 100 percent,     time_group 10
-.Qwilfish_Swarm_Super:
-	db  40 percent,     QWILFISH,   40
+.Piloswine_Swarm_Super:
+	db  40 percent,     PILOSWINE,   40
 	db  70 percent,     time_group 11
-	db  90 percent + 1, QWILFISH,   40
-	db 100 percent,     QWILFISH,   40
+	db  90 percent + 1, PILOSWINE,   40
+	db 100 percent,     PILOSWINE,   40
 
 .Bronzor_Swarm_Old:
 	db  70 percent + 1, MAGIKARP,   10
@@ -171,23 +171,23 @@ FishGroups:
 	db  90 percent + 1, KINGLER,    40
 	db 100 percent,     SEADRA,     40
 
-.Qwilfish_NoSwarm_Old:
-.Qwilfish_Old:
+.Piloswine_NoSwarm_Old:
+.Piloswine_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
 	db 100 percent,     DEERLING,  10
-.Qwilfish_NoSwarm_Good:
-.Qwilfish_Good:
+.Piloswine_NoSwarm_Good:
+.Piloswine_Good:
 	db  35 percent,     MAGIKARP,   20
 	db  70 percent,     DEERLING,  20
 	db  90 percent + 1, DEERLING,  20
 	db 100 percent,     time_group 20
-.Qwilfish_NoSwarm_Super:
-.Qwilfish_Super:
+.Piloswine_NoSwarm_Super:
+.Piloswine_Super:
 	db  40 percent,     DEERLING,  40
 	db  70 percent,     time_group 21
 	db  90 percent + 1, MAGIKARP,   40
-	db 100 percent,     QWILFISH,   40
+	db 100 percent,     PILOSWINE,   40
 
 .Bronzor_Old:
 	db  70 percent + 1, MAGIKARP,   10
@@ -216,8 +216,8 @@ TimeFishGroups:
 	db SANDSLASH,    40,  SANDSLASH,    40 ; 7
 	db DRATINI,    20,  DRATINI,    20 ; 8
 	db DRATINI,    40,  DRATINI,    40 ; 9
-	db QWILFISH,   20,  QWILFISH,   20 ; 10
-	db QWILFISH,   40,  QWILFISH,   40 ; 11
+	db PILOSWINE,   20,  PILOSWINE,   20 ; 10
+	db PILOSWINE,   40,  PILOSWINE,   40 ; 11
 	db BRONZOR,   20,  BRONZOR,   20 ; 12
 	db BRONZOR,   40,  BRONZOR,   40 ; 13
 	db GYARADOS,   20,  GYARADOS,   20 ; 14

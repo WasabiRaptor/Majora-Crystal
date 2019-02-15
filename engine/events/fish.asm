@@ -99,8 +99,8 @@ GetFishGroupIndex:
 	jr z, .done
 
 	ld a, d
-	cp FISHGROUP_QWILFISH
-	jr z, .qwilfish
+	cp FISHGROUP_PILOSWINE
+	jr z, .piloswine
 	cp FISHGROUP_BRONZOR
 	jr z, .bronzor
 
@@ -110,11 +110,11 @@ GetFishGroupIndex:
 	ld d, 0
 	ret
 
-.qwilfish
+.piloswine
 	ld a, [wFishingSwarmFlag]
-	cp FISHSWARM_QWILFISH
+	cp FISHSWARM_PILOSWINE
 	jr nz, .done
-	ld d, FISHGROUP_QWILFISH_SWARM
+	ld d, FISHGROUP_PILOSWINE_SWARM
 	jr .done
 
 .bronzor

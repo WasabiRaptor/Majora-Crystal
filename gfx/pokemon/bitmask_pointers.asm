@@ -200,17 +200,17 @@ BitmasksPointers:
 	dw SlowkingBitmasks
 	dw MisdreavusBitmasks
 	dw CarbinkBitmasks
-	dw WobbuffetBitmasks
-	dw GirafarigBitmasks
-	dw PinecoBitmasks
-	dw ForretressBitmasks
-	dw DunsparceBitmasks
-	dw GligarBitmasks
-	dw SteelixBitmasks
-	dw SnubbullBitmasks
-	dw GranbullBitmasks
-	dw QwilfishBitmasks
-	dw ScizorBitmasks
+	dw AmauraBitmasks
+	dw AurorusBitmasks
+	dw SneaselBitmasks
+	dw WeavileBitmasks
+	dw CryogonalBitmasks
+	dw SnowruntBitmasks
+	dw GlalieBitmasks
+	dw FrosslassBitmasks
+	dw SwinubBitmasks
+	dw PiloswineBitmasks
+	dw MamoswineBitmasks
 	dw UnownBitmasks
 	dw NatuBitmasks
 	dw XatuBitmasks

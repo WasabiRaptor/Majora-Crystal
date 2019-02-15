@@ -40,7 +40,7 @@ Cries:
 	dba Cry_Braixen
 	dba Cry_Spinarak
 	dba Cry_Heidreigon
-	dba Cry_Girafarig
+	dba Cry_Aurorus
 	dba Cry_Raikou
 	dba Cry_Litten
 	dba Cry_Cyndaquil
@@ -50,7 +50,7 @@ Cries:
 	dba Cry_Abomasnow
 	dba Cry_Chikorita
 	dba Cry_Totodile
-	dba Cry_Gligar
+	dba Cry_Snowrunt
 	dba Cry_Cleffa
 	dba Cry_Excadrill
 	dba Cry_Ledyba
@@ -65,5 +65,5 @@ Cries:
 	dba Cry_Baltoy
 	dba Cry_Pichu
 	dba Cry_Aipom
-	dba Cry_Dunsparce
+	dba Cry_Cryogonal
 	dba Cry_Litwick

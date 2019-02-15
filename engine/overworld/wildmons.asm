@@ -415,13 +415,13 @@ _SwarmWildmonCheck:
 	call CopyCurrMapDE
 	push hl
 	ld hl, wSwarmFlags
-	bit SWARMFLAGS_DUNSPARCE_SWARM_F, [hl]
+	bit SWARMFLAGS_CRYOGONAL_SWARM_F, [hl]
 	pop hl
 	jr z, .CheckYanma
-	ld a, [wDunsparceMapGroup]
+	ld a, [wCryogonalMapGroup]
 	cp d
 	jr nz, .CheckYanma
-	ld a, [wDunsparceMapNumber]
+	ld a, [wCryogonalMapNumber]
 	cp e
 	jr nz, .CheckYanma
 	call LookUpWildmonsForMapDE

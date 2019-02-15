@@ -200,17 +200,17 @@ AnimationIdlePointers:
 	dw SlowkingAnimationIdle
 	dw MisdreavusAnimationIdle
 	dw CarbinkAnimationIdle
-	dw WobbuffetAnimationIdle
-	dw GirafarigAnimationIdle
-	dw PinecoAnimationIdle
-	dw ForretressAnimationIdle
-	dw DunsparceAnimationIdle
-	dw GligarAnimationIdle
-	dw SteelixAnimationIdle
-	dw SnubbullAnimationIdle
-	dw GranbullAnimationIdle
-	dw QwilfishAnimationIdle
-	dw ScizorAnimationIdle
+	dw AmauraAnimationIdle
+	dw AurorusAnimationIdle
+	dw SneaselAnimationIdle
+	dw WeavileAnimationIdle
+	dw CryogonalAnimationIdle
+	dw SnowruntAnimationIdle
+	dw GlalieAnimationIdle
+	dw FrosslassAnimationIdle
+	dw SwinubAnimationIdle
+	dw PiloswineAnimationIdle
+	dw MamoswineAnimationIdle
 	dw UnownAnimationIdle
 	dw NatuAnimationIdle
 	dw XatuAnimationIdle

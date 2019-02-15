@@ -2905,8 +2905,8 @@ wEggMon::  box_struct wEggMon ; df7b
 wBugContestSecondPartySpecies:: db
 wContestMon:: party_struct wContestMon ; df9c
 
-wDunsparceMapGroup:: db
-wDunsparceMapNumber:: db
+wCryogonalMapGroup:: db
+wCryogonalMapNumber:: db
 wFishingSwarmFlag:: db
 
 wRoamMon1:: roam_struct wRoamMon1 ; dfcf
