@@ -5,9 +5,9 @@ SpriteMons:
 	db GROWLITHE
 	db LYCANROC
 	db SHELLDER
-	db ODDISH
+	db NIDOQUEEN
 	db GENGAR
-	db ZUBAT
+	db NIDORINA
 	db MAGIKARP
 	db LEAFEON
 	db HEIDREIGON
@@ -20,7 +20,7 @@ SpriteMons:
 	db JYNX
 	db STARMIE
 	db EEVEE
-	db JIGGLYPUFF
+	db NIDORAN_M
 	db GRIMER
 	db TOGEPI
 	db PARAS

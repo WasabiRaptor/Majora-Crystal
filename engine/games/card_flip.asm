@@ -802,15 +802,15 @@ CardFlip_CheckWinCondition:
 	dw .Impossible
 	dw .PikaJiggly
 	dw .PikaJiggly
-	dw .PoliOddish
-	dw .PoliOddish
+	dw .PoliNidoqueen
+	dw .PoliNidoqueen
 
 	dw .Impossible
 	dw .Impossible
 	dw .Pikachu
-	dw .Jigglypuff
+	dw .Nidoran_M
 	dw .Poliwag
-	dw .Oddish
+	dw .Nidoqueen
 
 	dw .OneTwo
 	dw .One
@@ -863,7 +863,7 @@ CardFlip_CheckWinCondition:
 	jp nz, .Lose
 	jr .WinSix
 
-.PoliOddish:
+.PoliNidoqueen:
 	ld a, [wCardFlipFaceUpCard]
 	and $2
 	jr nz, .WinSix
@@ -905,7 +905,7 @@ CardFlip_CheckWinCondition:
 	jr z, .WinTwelve
 	jp .Lose
 
-.Jigglypuff:
+.Nidoran_M:
 	ld a, [wCardFlipFaceUpCard]
 	and $3
 	cp $1
@@ -919,7 +919,7 @@ CardFlip_CheckWinCondition:
 	jr z, .WinTwelve
 	jp .Lose
 
-.Oddish:
+.Nidoqueen:
 	ld a, [wCardFlipFaceUpCard]
 	and $3
 	cp $3

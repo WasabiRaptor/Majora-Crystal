@@ -867,10 +867,10 @@ Cry_Muk:
 	musicheader 1, 6, Cry_Muk_Ch6
 	musicheader 1, 8, Cry_Muk_Ch8
 
-Cry_Oddish:
-	musicheader 3, 5, Cry_Oddish_Ch5
-	musicheader 1, 6, Cry_Oddish_Ch6
-	musicheader 1, 8, Cry_Oddish_Ch8
+Cry_Nidoqueen:
+	musicheader 3, 5, Cry_Nidoqueen_Ch5
+	musicheader 1, 6, Cry_Nidoqueen_Ch6
+	musicheader 1, 8, Cry_Nidoqueen_Ch8
 
 Cry_Rotom:
 	musicheader 3, 5, Cry_Rotom_Ch5
@@ -1002,10 +1002,10 @@ Cry_Porygon2:
 	musicheader 1, 6, Cry_Porygon2_Ch6
 	musicheader 1, 8, Cry_Porygon2_Ch8
 
-Cry_Vileplume:
-	musicheader 3, 5, Cry_Vileplume_Ch5
-	musicheader 1, 6, Cry_Vileplume_Ch6
-	musicheader 1, 8, Cry_Vileplume_Ch8
+Cry_Zangoose:
+	musicheader 3, 5, Cry_Zangoose_Ch5
+	musicheader 1, 6, Cry_Zangoose_Ch6
+	musicheader 1, 8, Cry_Zangoose_Ch8
 
 Cry_Vulpix:
 	musicheader 3, 5, Cry_Vulpix_Ch5
@@ -1081,7 +1081,7 @@ Cry_Rotom_Ch8:
 	noise __,  9, $c1, $3b
 	endchannel
 
-Cry_Vileplume_Ch5:
+Cry_Zangoose_Ch5:
 	sound_duty 0, 0, 3, 3
 	sound __, 16, $f7, $07c0
 	sound __,  7, $e4, $07c1
@@ -1090,7 +1090,7 @@ Cry_Vileplume_Ch5:
 	sound __,  9, $c1, $07c0
 	endchannel
 
-Cry_Vileplume_Ch6:
+Cry_Zangoose_Ch6:
 	sound_duty 3, 3, 1, 1
 	sound __, 16, $97, $0781
 	sound __,  7, $84, $0780
@@ -1098,7 +1098,7 @@ Cry_Vileplume_Ch6:
 	sound __, 16, $83, $0781
 	endchannel
 
-Cry_Vileplume_Ch8:
+Cry_Zangoose_Ch8:
 	noise __,  4, $f2, $3c
 	noise __, 14, $e6, $2c
 	noise __, 16, $d7, $3c
@@ -1555,7 +1555,7 @@ Cry_Timburr_Ch8:
 	noise __,  9, $91, $3c
 	endchannel
 
-Cry_Oddish_Ch5:
+Cry_Nidoqueen_Ch5:
 	sound_duty 0, 0, 3, 3
 	sound __, 16, $f6, $0565
 	sound __, 11, $e4, $057c
@@ -1563,7 +1563,7 @@ Cry_Oddish_Ch5:
 	sound __, 16, $b2, $053c
 	endchannel
 
-Cry_Oddish_Ch6:
+Cry_Nidoqueen_Ch6:
 	sound_duty 2, 2, 1, 1
 	sound __, 15, $d6, $0503
 	sound __, 10, $b4, $051b
@@ -1571,7 +1571,7 @@ Cry_Oddish_Ch6:
 	sound __, 16, $a2, $04db
 	endchannel
 
-Cry_Oddish_Ch8:
+Cry_Nidoqueen_Ch8:
 	noise __, 13, $e6, $4c
 	noise __, 12, $d7, $5c
 	noise __, 16, $c2, $4c

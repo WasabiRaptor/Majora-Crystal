@@ -39,13 +39,13 @@ EvosAttacksPointers::
 	dw LiepardEvosAttacks
 	dw GrimerEvosAttacks
 	dw MukEvosAttacks
-	dw JigglypuffEvosAttacks
-	dw WigglytuffEvosAttacks
-	dw ZubatEvosAttacks
-	dw GolbatEvosAttacks
-	dw OddishEvosAttacks
-	dw GloomEvosAttacks
-	dw VileplumeEvosAttacks
+	dw Nidoran_MEvosAttacks
+	dw NidorinoEvosAttacks
+	dw NidorinaEvosAttacks
+	dw NidokingEvosAttacks
+	dw NidoqueenEvosAttacks
+	dw SeviperEvosAttacks
+	dw ZangooseEvosAttacks
 	dw ParasEvosAttacks
 	dw ParasectEvosAttacks
 	dw VenonatEvosAttacks

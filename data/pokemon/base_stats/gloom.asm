@@ -1,4 +1,4 @@
-	db GLOOM ; 044
+	db SEVIPER ; 044
 
 	db  60,  65,  70,  40,  85,  75
     evs  0,   0,   0,   0,   2,   0
@@ -10,7 +10,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/gloom/front.dimensions"
+	INCBIN "gfx/pokemon/seviper/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_SLOW ; growth rate

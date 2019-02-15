@@ -39,9 +39,9 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw ZubatEggMoves
+	dw NidorinaEggMoves
 	dw NoEggMoves
-	dw OddishEggMoves
+	dw NidoqueenEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw ParasEggMoves

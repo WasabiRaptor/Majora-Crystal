@@ -56,14 +56,13 @@
 	const LIEPARD   	; 24
 	const GRIMER     	; 25
 	const MUK  			; 26
-
-	const JIGGLYPUFF ; 27
-	const WIGGLYTUFF ; 28
-	const ZUBAT      ; 29
-	const GOLBAT     ; 2a
-	const ODDISH     ; 2b
-	const GLOOM      ; 2c
-	const VILEPLUME  ; 2d
+	const NIDORAN_M 	; 27
+	const NIDORINO 		; 28
+	const NIDORINA      ; 29
+	const NIDOKING     	; 2a
+	const NIDOQUEEN     ; 2b
+	const SEVIPER      	; 2c
+	const ZANGOOSE  ; 2d
 	const PARAS      ; 2e
 	const PARASECT   ; 2f
 	const VENONAT    ; 30
@@ -228,7 +227,9 @@ JOHTO_POKEMON EQU const_value
 	const MURKROW    ; c6
 	const SLOWKING   ; c7
 	const MISDREAVUS ; c8
-	const UNOWN      ; c9
+
+	const CARBINK      ; c9
+
 	const WOBBUFFET  ; ca
 	const GIRAFARIG  ; cb
 	const PINECO     ; cc

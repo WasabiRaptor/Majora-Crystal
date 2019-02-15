@@ -93,7 +93,7 @@ The high nibble sets the volume of channel 3. Only 4 values are accepted (0=Mute
 
 This cycles the channel through 4 duty definitions, one per frame.
 Each pair of bits defines a duty, same as the `dutycycle` command.
-This is mostly only used in cries, SFX, and Jigglypuff's song in RBY.
+This is mostly only used in cries, SFX, and Nidoran_M's song in RBY.
 
 
 ## `$DF`: `togglesfx`

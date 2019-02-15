@@ -311,7 +311,7 @@ endr
 
 .BlkPacketTable_GSIntro:
 	dw BlkPacket_9a86, PalPacket_GSIntroShellderLapras
-	dw BlkPacket_GSIntroJigglypuffPikachu, PalPacket_GSIntroJigglypuffPikachu
+	dw BlkPacket_GSIntroNidoran_MPikachu, PalPacket_GSIntroNidoran_MPikachu
 	dw BlkPacket_9a86, PalPacket_GSIntroStartersTransition
 
 .SGB_GSTitleScreen:

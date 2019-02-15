@@ -38,13 +38,13 @@ PokedexDataPointerTable:
 	dw LiepardPokedexEntry
 	dw VulpixPokedexEntry
 	dw MukPokedexEntry
-	dw JigglypuffPokedexEntry
-	dw WigglytuffPokedexEntry
-	dw ZubatPokedexEntry
-	dw GolbatPokedexEntry
-	dw OddishPokedexEntry
-	dw GloomPokedexEntry
-	dw VileplumePokedexEntry
+	dw Nidoran_MPokedexEntry
+	dw NidorinoPokedexEntry
+	dw NidorinaPokedexEntry
+	dw NidokingPokedexEntry
+	dw NidoqueenPokedexEntry
+	dw SeviperPokedexEntry
+	dw ZangoosePokedexEntry
 	dw ParasPokedexEntry
 	dw ParasectPokedexEntry
 	dw VenonatPokedexEntry

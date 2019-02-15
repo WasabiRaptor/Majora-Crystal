@@ -37,13 +37,13 @@ BitmasksPointers:
 	dw LiepardBitmasks
 	dw VulpixBitmasks
 	dw MukBitmasks
-	dw JigglypuffBitmasks
-	dw WigglytuffBitmasks
-	dw ZubatBitmasks
-	dw GolbatBitmasks
-	dw OddishBitmasks
-	dw GloomBitmasks
-	dw VileplumeBitmasks
+	dw Nidoran_MBitmasks
+	dw NidorinoBitmasks
+	dw NidorinaBitmasks
+	dw NidokingBitmasks
+	dw NidoqueenBitmasks
+	dw SeviperBitmasks
+	dw ZangooseBitmasks
 	dw ParasBitmasks
 	dw ParasectBitmasks
 	dw VenonatBitmasks

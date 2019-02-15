@@ -82,20 +82,20 @@ PokemonPicPointers::
 	dbw -1, -1
 	dbw -1, -1
 
-	dba JigglypuffFrontpic
-	dba JigglypuffBackpic
-	dba WigglytuffFrontpic
-	dba WigglytuffBackpic
-	dba ZubatFrontpic
-	dba ZubatBackpic
-	dba GolbatFrontpic
-	dba GolbatBackpic
-	dba OddishFrontpic
-	dba OddishBackpic
-	dba GloomFrontpic
-	dba GloomBackpic
-	dba VileplumeFrontpic
-	dba VileplumeBackpic
+	dba Nidoran_MFrontpic
+	dba Nidoran_MBackpic
+	dba NidorinoFrontpic
+	dba NidorinoBackpic
+	dba NidorinaFrontpic
+	dba NidorinaBackpic
+	dba NidokingFrontpic
+	dba NidokingBackpic
+	dba NidoqueenFrontpic
+	dba NidoqueenBackpic
+	dba SeviperFrontpic
+	dba SeviperBackpic
+	dba ZangooseFrontpic
+	dba ZangooseBackpic
 	dba ParasFrontpic
 	dba ParasBackpic
 	dba ParasectFrontpic

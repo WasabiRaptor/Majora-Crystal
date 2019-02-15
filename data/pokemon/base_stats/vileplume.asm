@@ -1,4 +1,4 @@
-	db VILEPLUME ; 045
+	db ZANGOOSE ; 045
 
 	db  75,  80,  85,  50, 100,  90
     evs  0,   0,   0,   0,   3,   0
@@ -10,7 +10,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/vileplume/front.dimensions"
+	INCBIN "gfx/pokemon/zangoose/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_SLOW ; growth rate

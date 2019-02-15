@@ -2,7 +2,7 @@
 	const_def
 	const ICON_NULL
 	const ICON_POLIWAG
-	const ICON_JIGGLYPUFF
+	const ICON_NIDORAN_M
 	const ICON_DIGLETT
 	const ICON_PIKACHU
 	const ICON_STARYU
@@ -10,7 +10,7 @@
 	const ICON_BIRD
 	const ICON_MONSTER
 	const ICON_CLEFAIRY
-	const ICON_ODDISH
+	const ICON_NIDOQUEEN
 	const ICON_BUG
 	const ICON_GHOST
 	const ICON_LAPRAS

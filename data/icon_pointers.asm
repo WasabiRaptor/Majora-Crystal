@@ -2,7 +2,7 @@ IconPointers:
 ; entries correspond to ICON_* constants
 	dw NullIcon
 	dw PoliwagIcon
-	dw JigglypuffIcon
+	dw Nidoran_MIcon
 	dw DiglettIcon
 	dw PikachuIcon
 	dw StaryuIcon
@@ -10,7 +10,7 @@ IconPointers:
 	dw BirdIcon
 	dw MonsterIcon
 	dw ClefairyIcon
-	dw OddishIcon
+	dw NidoqueenIcon
 	dw BugIcon
 	dw GhostIcon
 	dw LaprasIcon

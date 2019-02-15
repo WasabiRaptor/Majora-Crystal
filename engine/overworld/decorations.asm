@@ -255,7 +255,7 @@ FindOwnedPosters:
 	db DECO_TOWN_MAP ; 10
 	db DECO_PIKACHU_POSTER ; 11
 	db DECO_CLEFAIRY_POSTER ; 12
-	db DECO_JIGGLYPUFF_POSTER ; 13
+	db DECO_NIDORAN_M_POSTER ; 13
 	db -1
 
 DecoConsoleMenu:
@@ -291,7 +291,7 @@ FindOwnedOrnaments:
 	db DECO_PIKACHU_DOLL ; 1e
 	db DECO_SURF_PIKACHU_DOLL ; 1f
 	db DECO_CLEFAIRY_DOLL ; 20
-	db DECO_JIGGLYPUFF_DOLL ; 21
+	db DECO_NIDORAN_M_DOLL ; 21
 	db DECO_BULBASAUR_DOLL ; 22
 	db DECO_CHARMANDER_DOLL ; 23
 	db DECO_SQUIRTLE_DOLL ; 24
@@ -299,7 +299,7 @@ FindOwnedOrnaments:
 	db DECO_DIGLETT_DOLL ; 26
 	db DECO_STARMIE_DOLL ; 27
 	db DECO_MAGIKARP_DOLL ; 28
-	db DECO_ODDISH_DOLL ; 29
+	db DECO_NIDOQUEEN_DOLL ; 29
 	db DECO_GENGAR_DOLL ; 2a
 	db DECO_SHELLDER_DOLL ; 2b
 	db DECO_GRIMER_DOLL ; 2c
@@ -1000,7 +1000,7 @@ DecorationDesc_PosterPointers:
 	dbw DECO_TOWN_MAP, DecorationDesc_TownMapPoster
 	dbw DECO_PIKACHU_POSTER, DecorationDesc_PikachuPoster
 	dbw DECO_CLEFAIRY_POSTER, DecorationDesc_ClefairyPoster
-	dbw DECO_JIGGLYPUFF_POSTER, DecorationDesc_JigglypuffPoster
+	dbw DECO_NIDORAN_M_POSTER, DecorationDesc_Nidoran_MPoster
 	db -1
 
 DecorationDesc_TownMapPoster:
@@ -1032,11 +1032,11 @@ DecorationDesc_ClefairyPoster:
 	text_jump UnknownText_0x1bc591
 	db "@"
 
-DecorationDesc_JigglypuffPoster:
-	jumptext .JigglypuffPosterText
+DecorationDesc_Nidoran_MPoster:
+	jumptext .Nidoran_MPosterText
 
-.JigglypuffPosterText:
-	; It's a poster of a cute JIGGLYPUFF.
+.Nidoran_MPosterText:
+	; It's a poster of a cute NIDORAN_M.
 	text_jump UnknownText_0x1bc5b3
 	db "@"
 

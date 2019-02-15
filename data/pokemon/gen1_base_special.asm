@@ -39,13 +39,13 @@ KantoMonSpecials:
 	db  85 ; LIEPARD
 	db  65 ; GRIMER
 	db 100 ; MUK
-	db  25 ; JIGGLYPUFF
-	db  50 ; WIGGLYTUFF
-	db  40 ; ZUBAT
-	db  75 ; GOLBAT
-	db  75 ; ODDISH
-	db  85 ; GLOOM
-	db 100 ; VILEPLUME
+	db  25 ; NIDORAN_M
+	db  50 ; NIDORINO
+	db  40 ; NIDORINA
+	db  75 ; NIDOKING
+	db  75 ; NIDOQUEEN
+	db  85 ; SEVIPER
+	db 100 ; ZANGOOSE
 	db  55 ; PARAS
 	db  80 ; PARASECT
 	db  40 ; VENONAT

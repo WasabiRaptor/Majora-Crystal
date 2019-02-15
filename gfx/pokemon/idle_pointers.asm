@@ -37,13 +37,13 @@ AnimationIdlePointers:
 	dw LiepardAnimationIdle
 	dw VulpixAnimationIdle
 	dw MukAnimationIdle
-	dw JigglypuffAnimationIdle
-	dw WigglytuffAnimationIdle
-	dw ZubatAnimationIdle
-	dw GolbatAnimationIdle
-	dw OddishAnimationIdle
-	dw GloomAnimationIdle
-	dw VileplumeAnimationIdle
+	dw Nidoran_MAnimationIdle
+	dw NidorinoAnimationIdle
+	dw NidorinaAnimationIdle
+	dw NidokingAnimationIdle
+	dw NidoqueenAnimationIdle
+	dw SeviperAnimationIdle
+	dw ZangooseAnimationIdle
 	dw ParasAnimationIdle
 	dw ParasectAnimationIdle
 	dw VenonatAnimationIdle

@@ -37,13 +37,13 @@ FramesPointers:
 	dw LiepardFrames
 	dw VulpixFrames
 	dw MukFrames
-	dw JigglypuffFrames
-	dw WigglytuffFrames
-	dw ZubatFrames
-	dw GolbatFrames
-	dw OddishFrames
-	dw GloomFrames
-	dw VileplumeFrames
+	dw Nidoran_MFrames
+	dw NidorinoFrames
+	dw NidorinaFrames
+	dw NidokingFrames
+	dw NidoqueenFrames
+	dw SeviperFrames
+	dw ZangooseFrames
 	dw ParasFrames
 	dw ParasectFrames
 	dw VenonatFrames

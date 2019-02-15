@@ -43,13 +43,13 @@ PokemonCries::
 	mon_cry CRY_PURRLOIN,    $0aa,  $0a0 ; LIEPARD
 	mon_cry CRY_GRIMER,      $04f,  $090 ; GRIMER
 	mon_cry CRY_GRIMER,      $088,  $0e0 ; MUK
-	mon_cry CRY_MAGNETON,      $0ff,  $0b5 ; JIGGLYPUFF
-	mon_cry CRY_MAGNETON,      $068,  $0e0 ; WIGGLYTUFF
-	mon_cry CRY_SQUIRTLE,    $0e0,  $100 ; ZUBAT
-	mon_cry CRY_SQUIRTLE,    $0fa,  $100 ; GOLBAT
-	mon_cry CRY_ODDISH,      $0dd,  $081 ; ODDISH
-	mon_cry CRY_ODDISH,      $0aa,  $0c0 ; GLOOM
-	mon_cry CRY_VILEPLUME,   $022,  $17f ; VILEPLUME
+	mon_cry CRY_MAGNETON,      $0ff,  $0b5 ; NIDORAN_M
+	mon_cry CRY_MAGNETON,      $068,  $0e0 ; NIDORINO
+	mon_cry CRY_SQUIRTLE,    $0e0,  $100 ; NIDORINA
+	mon_cry CRY_SQUIRTLE,    $0fa,  $100 ; NIDOKING
+	mon_cry CRY_NIDOQUEEN,      $0dd,  $081 ; NIDOQUEEN
+	mon_cry CRY_NIDOQUEEN,      $0aa,  $0c0 ; SEVIPER
+	mon_cry CRY_ZANGOOSE,   $022,  $17f ; ZANGOOSE
 	mon_cry CRY_PARAS,       $020,  $160 ; PARAS
 	mon_cry CRY_PARAS,       $042,  $17f ; PARASECT
 	mon_cry CRY_VENONAT,     $044,  $0c0 ; VENONAT
@@ -109,7 +109,7 @@ PokemonCries::
 	mon_cry CRY_DIGLETT,     $000,  $100 ; EXEGGCUTE
 	mon_cry CRY_DROWZEE,     $000,  $100 ; EXEGGUTOR
 	mon_cry CRY_PURRLOIN,    $000,  $100 ; CUBONE
-	mon_cry CRY_ODDISH,      $04f,  $0e0 ; MAROWAK
+	mon_cry CRY_NIDOQUEEN,      $04f,  $0e0 ; MAROWAK
 	mon_cry CRY_GOLEM,       $080,  $140 ; HITMONLEE
 	mon_cry CRY_SEEL,        $0ee,  $140 ; HITMONCHAN
 	mon_cry CRY_SEEL,        $000,  $100 ; LICKITUNG
@@ -146,7 +146,7 @@ PokemonCries::
 	mon_cry CRY_GROWLITHE,   $0ff,  $0c0 ; OMASTAR
 	mon_cry CRY_CATERPIE,    $0bb,  $0c0 ; KABUTO
 	mon_cry CRY_PERSIAN,      $0ee,  $081 ; KABUTOPS
-	mon_cry CRY_VILEPLUME,   $020,  $170 ; AERODACTYL
+	mon_cry CRY_ZANGOOSE,   $020,  $170 ; AERODACTYL
 	mon_cry CRY_GRIMER,      $055,  $081 ; SNORLAX
 	mon_cry CRY_ROTOM,      $080,  $0c0 ; ARTICUNOX
 	mon_cry CRY_PERSIAN,      $0ff,  $100 ; ZAPDOSX
@@ -205,7 +205,7 @@ PokemonCries::
 	mon_cry CRY_BRAIXEN,     -$01f,  $180 ; MURKROW
 	mon_cry CRY_SLOWKING,    $104,  $200 ; SLOWKING
 	mon_cry CRY_HOOTHOOT,    $130,  $0e8 ; MISDREAVUS
-	mon_cry CRY_HOOTHOOT,    $162,  $100 ; UNOWN
+	mon_cry CRY_HOOTHOOT,    $162,  $100 ; CARBINK
 	mon_cry CRY_INCINEROAR,    $27b,  $144 ; WOBBUFFET
 	mon_cry CRY_GIRAFARIG,   $041,  $200 ; GIRAFARIG
 	mon_cry CRY_SLOWKING,    $080,  $100 ; PINECO

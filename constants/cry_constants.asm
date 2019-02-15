@@ -10,7 +10,7 @@
 	const CRY_GRIMER
 	const CRY_VOLTORB
 	const CRY_MUK
-	const CRY_ODDISH
+	const CRY_NIDOQUEEN
 	const CRY_ROTOM
 	const CRY_TIMBURR
 	const CRY_DIGLETT
@@ -37,7 +37,7 @@
 	const CRY_KRABBY
 	const CRY_PSYDUCK
 	const CRY_PORYGON2
-	const CRY_VILEPLUME
+	const CRY_ZANGOOSE
 	const CRY_GRIMER
 	const CRY_WEEPINBELL
 

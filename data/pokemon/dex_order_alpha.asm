@@ -71,8 +71,8 @@ AlphabeticalPokedexOrder:
 	db GIRAFARIG
 	db MEW
 	db GLIGAR
-	db GLOOM
-	db GOLBAT
+	db SEVIPER
+	db NIDOKING
 	db GOLDEEN
 	db GOLDUCK
 	db GOLEM
@@ -95,7 +95,7 @@ AlphabeticalPokedexOrder:
 	db HYPNO
 	db IGGLYBUFF
 	db VAPOREON
-	db JIGGLYPUFF
+	db NIDORAN_M
 	db JOLTEONX
 	db JUMPLUFF
 	db JYNX
@@ -150,7 +150,7 @@ AlphabeticalPokedexOrder:
 	db MUK
 	db NOCTOWL
 	db OCTILLERY
-	db ODDISH
+	db NIDOQUEEN
 	db OMANYTE
 	db OMASTAR
 	db ONIX
@@ -233,24 +233,24 @@ AlphabeticalPokedexOrder:
 	db MAGEARNA
 	db TYROGUE
 	db UMBREONX
-	db UNOWN
+	db CARBINK
 	db URSARING
 	db VAPOREONX
 	db VENOMOTH
 	db VENONAT
 	db JOLTEON
 	db VICTREEBEL
-	db VILEPLUME
+	db ZANGOOSE
 	db VOLTORB
 	db GRIMER
 	db GLACEON
 	db LYCANROC
 	db WEEPINBELL
 	db WEEZING
-	db WIGGLYTUFF
+	db NIDORINO
 	db WOBBUFFET
 	db WOOPER
 	db TYPHLOSION
 	db YANMA
 	db ZAPDOSX
-	db ZUBAT
+	db NIDORINA

@@ -7,7 +7,7 @@ Cries:
 	dba Cry_Grimer
 	dba Cry_Voltorb
 	dba Cry_Muk
-	dba Cry_Oddish
+	dba Cry_Nidoqueen
 	dba Cry_Rotom
 	dba Cry_Timburr
 	dba Cry_Diglett
@@ -34,7 +34,7 @@ Cries:
 	dba Cry_Krabby
 	dba Cry_Psyduck
 	dba Cry_Porygon2
-	dba Cry_Vileplume
+	dba Cry_Zangoose
 	dba Cry_Vulpix
 	dba Cry_Weepinbell
 	dba Cry_Braixen

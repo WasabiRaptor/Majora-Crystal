@@ -448,7 +448,7 @@ _CGB_GSIntro:
 
 .Jumptable:
 	dw .ShellderLaprasScene
-	dw .JigglypuffPikachuScene
+	dw .Nidoran_MPikachuScene
 	dw .StartersUmbreonScene
 
 .ShellderLaprasScene:
@@ -480,14 +480,14 @@ _CGB_GSIntro:
 	RGB 31, 00, 00
 	RGB 03, 04, 06
 
-.JigglypuffPikachuScene:
+.Nidoran_MPikachuScene:
 	ld de, wBGPals1
-	ld a, PREDEFPAL_GS_INTRO_JIGGLYPUFF_PIKACHU_BG
+	ld a, PREDEFPAL_GS_INTRO_NIDORAN_M_PIKACHU_BG
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
 
 	ld de, wOBPals1
-	ld a, PREDEFPAL_GS_INTRO_JIGGLYPUFF_PIKACHU_OB
+	ld a, PREDEFPAL_GS_INTRO_NIDORAN_M_PIKACHU_OB
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
 	call WipeAttrMap

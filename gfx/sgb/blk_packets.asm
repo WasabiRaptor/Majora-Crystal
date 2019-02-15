@@ -18,7 +18,7 @@ BlkPacket_9a86:
 	attr_blk_data %011, 0,0,0, 00,00, 19,17
 	ds 8
 
-BlkPacket_GSIntroJigglypuffPikachu:
+BlkPacket_GSIntroNidoran_MPikachu:
 	attr_blk 1
 	attr_blk_data %111, 1,1,0, 00,10, 19,13
 	ds 8

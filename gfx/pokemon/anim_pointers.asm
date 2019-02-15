@@ -37,13 +37,13 @@ AnimationPointers:
 	dw LiepardAnimation
 	dw VulpixAnimation
 	dw MukAnimation
-	dw JigglypuffAnimation
-	dw WigglytuffAnimation
-	dw ZubatAnimation
-	dw GolbatAnimation
-	dw OddishAnimation
-	dw GloomAnimation
-	dw VileplumeAnimation
+	dw Nidoran_MAnimation
+	dw NidorinoAnimation
+	dw NidorinaAnimation
+	dw NidokingAnimation
+	dw NidoqueenAnimation
+	dw SeviperAnimation
+	dw ZangooseAnimation
 	dw ParasAnimation
 	dw ParasectAnimation
 	dw VenonatAnimation

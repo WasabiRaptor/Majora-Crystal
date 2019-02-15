@@ -15,13 +15,13 @@ SpriteAnimOAMData:
 	dbw $06, .OAMData_GSIntroLapras            ; SPRITE_ANIM_OAMSET_GS_INTRO_LAPRAS_4
 	dbw $0c, .OAMData_GSIntroNote              ; SPRITE_ANIM_OAMSET_GS_INTRO_NOTE
 	dbw $0d, .OAMData_1x1_Palette0             ; SPRITE_ANIM_OAMSET_GS_INTRO_INVISIBLE_NOTE
-	dbw $00, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_JIGGLYPUFF_1
-	dbw $04, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_JIGGLYPUFF_2
-	dbw $08, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_JIGGLYPUFF_3
-	dbw $40, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_PIKACHU_1
-	dbw $44, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_PIKACHU_2
-	dbw $48, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_PIKACHU_3
-	dbw $4c, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_PIKACHU_4
+	dbw $00, .OAMData_GSIntroNidoran_MPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_NIDORAN_M_1
+	dbw $04, .OAMData_GSIntroNidoran_MPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_NIDORAN_M_2
+	dbw $08, .OAMData_GSIntroNidoran_MPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_NIDORAN_M_3
+	dbw $40, .OAMData_GSIntroNidoran_MPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_PIKACHU_1
+	dbw $44, .OAMData_GSIntroNidoran_MPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_PIKACHU_2
+	dbw $48, .OAMData_GSIntroNidoran_MPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_PIKACHU_3
+	dbw $4c, .OAMData_GSIntroNidoran_MPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_PIKACHU_4
 	dbw $80, .OAMData_GSIntroPikachuTail       ; SPRITE_ANIM_OAMSET_GS_INTRO_PIKACHU_TAIL_1
 	dbw $85, .OAMData_GSIntroPikachuTail       ; SPRITE_ANIM_OAMSET_GS_INTRO_PIKACHU_TAIL_2
 	dbw $8a, .OAMData_GSIntroPikachuTail       ; SPRITE_ANIM_OAMSET_GS_INTRO_PIKACHU_TAIL_3
@@ -251,7 +251,7 @@ SpriteAnimOAMData:
 	dsprite  0,  4, -1,  4, $21, 0
 	dsprite  0,  4,  0,  4, $22, 0
 
-.OAMData_GSIntroJigglypuffPikachu:
+.OAMData_GSIntroNidoran_MPikachu:
 	db 16
 	dsprite -2,  0, -2,  0, $00, 0
 	dsprite -2,  0, -1,  0, $01, 0

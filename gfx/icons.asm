@@ -2,7 +2,7 @@ Icons: ; used only for BANK(Icons)
 
 NullIcon:
 PoliwagIcon:      INCBIN "gfx/icons/poliwag.2bpp"
-JigglypuffIcon:   INCBIN "gfx/icons/jigglypuff.2bpp"
+Nidoran_MIcon:   INCBIN "gfx/icons/nidoran_m.2bpp"
 DiglettIcon:      INCBIN "gfx/icons/diglett.2bpp"
 TogekissIcon:      INCBIN "gfx/icons/togekiss.2bpp"
 StaryuIcon:       INCBIN "gfx/icons/staryu.2bpp"
@@ -10,7 +10,7 @@ FishIcon:         INCBIN "gfx/icons/fish.2bpp"
 BirdIcon:         INCBIN "gfx/icons/bird.2bpp"
 MonsterIcon:      INCBIN "gfx/icons/monster.2bpp"
 PurrloinIcon:     INCBIN "gfx/icons/purrloin.2bpp"
-OddishIcon:       INCBIN "gfx/icons/oddish.2bpp"
+NidoqueenIcon:       INCBIN "gfx/icons/nidoqueen.2bpp"
 BugIcon:          INCBIN "gfx/icons/bug.2bpp"
 GhostIcon:        INCBIN "gfx/icons/ghost.2bpp"
 LaprasIcon:       INCBIN "gfx/icons/lapras.2bpp"
