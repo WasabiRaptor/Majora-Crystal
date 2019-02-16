@@ -384,14 +384,14 @@ INCBIN "gfx/pokemon/vulpix/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/vulpix/shiny.pal"
 INCBIN "gfx/pokemon/ninetales/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/ninetales/shiny.pal"
-INCBIN "gfx/pokemon/hoppip/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/hoppip/shiny.pal"
-INCBIN "gfx/pokemon/skiploom/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/skiploom/shiny.pal"
-INCBIN "gfx/pokemon/jumpluff/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/jumpluff/shiny.pal"
-INCBIN "gfx/pokemon/aipom/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/aipom/shiny.pal"
+INCBIN "gfx/pokemon/slugma/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/slugma/shiny.pal"
+INCBIN "gfx/pokemon/magcargo/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/magcargo/shiny.pal"
+INCBIN "gfx/pokemon/houndour/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/houndour/shiny.pal"
+INCBIN "gfx/pokemon/houndoom/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/houndoom/shiny.pal"
 INCBIN "gfx/pokemon/fletchling/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/fletchling/shiny.pal"
 INCBIN "gfx/pokemon/fletchinder/front.gbcpal", middle_colors

@@ -64,6 +64,6 @@ Cries:
 	dba Cry_Incineroar
 	dba Cry_Baltoy
 	dba Cry_Pichu
-	dba Cry_Aipom
+	dba Cry_Houndoom
 	dba Cry_Cryogonal
 	dba Cry_Litwick

@@ -9,7 +9,7 @@ PokemonCries::
 	mon_cry CRY_SWABLU,     $0aa,  $17f ; VAPOREON
 	mon_cry CRY_SWABLU,     $03d,  $100 ; JOLTEON
 	mon_cry CRY_SWABLU,     $010,  $0a0 ; FLAREON
-	mon_cry CRY_AIPOM,       $0a2,  $140 ; ESPEON
+	mon_cry CRY_HOUNDOOM,       $0a2,  $140 ; ESPEON
 	mon_cry CRY_SWABLU,    -$0e9,  $0f0 ; UMBREON
 	mon_cry CRY_SQUIRTLE,    $060,  $0c0 ; LEAFEON
 	mon_cry CRY_SQUIRTLE,    $020,  $0c0 ; GLACEON
@@ -191,16 +191,16 @@ PokemonCries::
 	mon_cry CRY_BRAIXEN,      $0b6,  $180 ; DELPHOX
 	mon_cry CRY_CLEFFA,      $f40,  $180 ; VULPIX
 	mon_cry CRY_CLEFFA,     -$2a3,  $1c8 ; NINETALES
-	mon_cry CRY_CLEFFA,      $03b,  $0c8 ; HOPPIP
-	mon_cry CRY_CLEFFA,      $027,  $138 ; SKIPLOOM
-	mon_cry CRY_CLEFFA,      $000,  $180 ; JUMPLUFF
-	mon_cry CRY_AIPOM,      -$051,  $0e8 ; AIPOM
+	mon_cry CRY_CLEFFA,      $03b,  $0c8 ; SLUGMA
+	mon_cry CRY_CLEFFA,      $027,  $138 ; MAGCARGO
+	mon_cry CRY_CLEFFA,      $000,  $180 ; HOUNDOUR
+	mon_cry CRY_HOUNDOOM,      -$051,  $0e8 ; HOUNDOOM
 	mon_cry CRY_BRAIXEN,      $12b,  $0b8 ; FLETCHLING
 	mon_cry CRY_FLETCHINDER,   -$020,  $180 ; FLETCHINDER
 	mon_cry CRY_TOTODILE,    $031,  $0c8 ; TALONFLAME
 	mon_cry CRY_HEATMOR,      $093,  $0af ; HEATMOR
 	mon_cry CRY_HEATMOR,     -$0c6,  $140 ; DURANT
-	mon_cry CRY_AIPOM,       $0a2,  $140 ; ARCHEN
+	mon_cry CRY_HOUNDOOM,       $0a2,  $140 ; ARCHEN
 	mon_cry CRY_SWABLU,    -$0e9,  $0f0 ; ARCHEOPS
 	mon_cry CRY_BRAIXEN,     -$01f,  $180 ; ROGGENROLA
 	mon_cry CRY_BOLDORE,    $104,  $200 ; BOLDORE
@@ -238,9 +238,9 @@ PokemonCries::
 	mon_cry CRY_LARVITAR,     $048,  $230 ; COFAGRIGUS
 	mon_cry CRY_LITWICK,     $000,  $1a0 ; LITWICK
 	mon_cry CRY_AURORUS,   $073,  $240 ; LAMPENT
-	mon_cry CRY_AIPOM,      -$160,  $180 ; CHANDELURE
+	mon_cry CRY_HOUNDOOM,      -$160,  $180 ; CHANDELURE
 	mon_cry CRY_PICHU,      -$21a,  $1f0 ; SPIRITOMB
-	mon_cry CRY_AIPOM,       $02c,  $108 ; DUSKULL
+	mon_cry CRY_HOUNDOOM,       $02c,  $108 ; DUSKULL
 	mon_cry CRY_EXCADRILL,      $000,  $100 ; DUSCLOPS
 	mon_cry CRY_BRAIXEN,      $068,  $100 ; DUSKNOIR
 	mon_cry CRY_FLETCHINDER,   -$2d8,  $0b4 ; ARTICUNO
@@ -254,7 +254,7 @@ PokemonCries::
 	mon_cry CRY_SPINARAK,   -$1db,  $150 ; SILVALLY
 	mon_cry CRY_RAIKOU,     -$100,  $180 ; MAGEARNA
 	mon_cry CRY_FERROTHORN,  $000,  $100 ; SHAYMIN
-	mon_cry CRY_AIPOM,       $000,  $180 ; CELEBI
+	mon_cry CRY_HOUNDOOM,       $000,  $180 ; CELEBI
 	mon_cry CRY_ENTEI,       $14a,  $111 ; ZYGARDE
 	mon_cry CRY_SWABLU,     $010,  $0a0 ; MEW
 	mon_cry CRY_SWABLU,     $010,  $0a0 ; MEWTWO

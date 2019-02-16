@@ -185,10 +185,10 @@ AnimationPointers:
 	dw DelphoxAnimation
 	dw VulpixAnimation
 	dw NinetalesAnimation
-	dw HoppipAnimation
-	dw SkiploomAnimation
-	dw JumpluffAnimation
-	dw AipomAnimation
+	dw SlugmaAnimation
+	dw MagcargoAnimation
+	dw HoundourAnimation
+	dw HoundoomAnimation
 	dw FletchlingAnimation
 	dw FletchinderAnimation
 	dw TalonflameAnimation

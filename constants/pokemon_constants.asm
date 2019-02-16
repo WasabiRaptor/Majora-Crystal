@@ -219,15 +219,13 @@ JOHTO_POKEMON EQU const_value
 	const DELPHOX  		; b8
 	const VULPIX  		; b9
 	const NINETALES   	; ba
-
-	const HOPPIP     ; bb
-	const SKIPLOOM   ; bc
-	const JUMPLUFF   ; bd
-	const AIPOM      ; be
-	
+	const SLUGMA        ; bb
+	const MAGCARGO      ; bc
+	const HOUNDOUR      ; bd
+	const HOUNDOOM      ; be
 	const FLETCHLING    ; bf
 	const FLETCHINDER   ; c0
-	const TALONFLAME      ; c1
+	const TALONFLAME    ; c1
 	const HEATMOR       ; c2
 	const DURANT        ; c3
 	const ARCHEN        ; c4

@@ -187,10 +187,10 @@ EvosAttacksPointers::
 	dw DelphoxEvosAttacks
 	dw VulpixEvosAttacks
 	dw NinetalesEvosAttacks
-	dw HoppipEvosAttacks
-	dw SkiploomEvosAttacks
-	dw JumpluffEvosAttacks
-	dw AipomEvosAttacks
+	dw SlugmaEvosAttacks
+	dw MagcargoEvosAttacks
+	dw HoundourEvosAttacks
+	dw HoundoomEvosAttacks
 	dw FletchlingEvosAttacks
 	dw FletchinderEvosAttacks
 	dw TalonflameEvosAttacks

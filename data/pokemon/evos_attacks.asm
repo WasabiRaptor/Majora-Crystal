@@ -2563,8 +2563,8 @@ NinetalesEvosAttacks:
 	db 51, SWAGGER
 	db 0 ; no more level-up moves
 
-HoppipEvosAttacks:
-	db EVOLVE_LEVEL, 18, SKIPLOOM
+SlugmaEvosAttacks:
+	db EVOLVE_LEVEL, 18, MAGCARGO
 	db 0 ; no more evolutions
 	db 1, SPLASH
 if _BRASS
@@ -2582,8 +2582,8 @@ endc
 	db 30, MEGA_DRAIN
 	db 0 ; no more level-up moves
 
-SkiploomEvosAttacks:
-	db EVOLVE_LEVEL, 27, JUMPLUFF
+MagcargoEvosAttacks:
+	db EVOLVE_LEVEL, 27, HOUNDOUR
 	db 0 ; no more evolutions
 	db 1, SPLASH
 	db 1, SYNTHESIS
@@ -2602,7 +2602,7 @@ endc
 	db 36, MEGA_DRAIN
 	db 0 ; no more level-up moves
 
-JumpluffEvosAttacks:
+HoundourEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SPLASH
 	db 1, SYNTHESIS
@@ -2621,7 +2621,7 @@ endc
 	db 44, MEGA_DRAIN
 	db 0 ; no more level-up moves
 
-AipomEvosAttacks:
+HoundoomEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, TAIL_WHIP

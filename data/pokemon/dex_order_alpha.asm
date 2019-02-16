@@ -3,7 +3,7 @@
 AlphabeticalPokedexOrder:
 	db FLABEBE
 	db AERODACTYL
-	db AIPOM
+	db HOUNDOOM
 	db FLORGES
 	db INCINEROAR
 	db TOGETIC
@@ -88,7 +88,7 @@ AlphabeticalPokedexOrder:
 	db DUSCLOPS
 	db CELEBI
 	db TYRANITAR
-	db HOPPIP
+	db SLUGMA
 	db HORSEA
 	db BISHARP
 	db PAWNIARD
@@ -97,7 +97,7 @@ AlphabeticalPokedexOrder:
 	db VAPOREON
 	db NIDORAN_M
 	db JOLTEONX
-	db JUMPLUFF
+	db HOUNDOUR
 	db JYNX
 	db KABUTO
 	db KABUTOPS
@@ -198,7 +198,7 @@ AlphabeticalPokedexOrder:
 	db GALVANTULA
 	db UNOWN
 	db AEGISLASH
-	db SKIPLOOM
+	db MAGCARGO
 	db BONSLY
 	db BOLDORE
 	db TREVANANT

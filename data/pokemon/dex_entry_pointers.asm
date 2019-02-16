@@ -186,10 +186,10 @@ PokedexDataPointerTable:
 	dw DelphoxPokedexEntry
 	dw VulpixPokedexEntry
 	dw NinetalesPokedexEntry
-	dw HoppipPokedexEntry
-	dw SkiploomPokedexEntry
-	dw JumpluffPokedexEntry
-	dw AipomPokedexEntry
+	dw SlugmaPokedexEntry
+	dw MagcargoPokedexEntry
+	dw HoundourPokedexEntry
+	dw HoundoomPokedexEntry
 	dw FletchlingPokedexEntry
 	dw FletchinderPokedexEntry
 	dw TalonflamePokedexEntry

@@ -185,10 +185,10 @@ AnimationIdlePointers:
 	dw DelphoxAnimationIdle
 	dw VulpixAnimationIdle
 	dw NinetalesAnimationIdle
-	dw HoppipAnimationIdle
-	dw SkiploomAnimationIdle
-	dw JumpluffAnimationIdle
-	dw AipomAnimationIdle
+	dw SlugmaAnimationIdle
+	dw MagcargoAnimationIdle
+	dw HoundourAnimationIdle
+	dw HoundoomAnimationIdle
 	dw FletchlingAnimationIdle
 	dw FletchinderAnimationIdle
 	dw TalonflameAnimationIdle
