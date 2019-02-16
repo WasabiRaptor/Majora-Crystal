@@ -122,10 +122,10 @@ AnimationIdlePointers:
 	dw StarmieAnimationIdle
 	dw MrMimeAnimationIdle
 	dw SamurottAnimationIdle
-	dw JynxAnimationIdle
-	dw ElectabuzzAnimationIdle
-	dw MagmarAnimationIdle
-	dw PinsirAnimationIdle
+	dw BuizelAnimationIdle
+	dw FloatzelAnimationIdle
+	dw AzurilAnimationIdle
+	dw MarillAnimationIdle
 	dw AzumarillAnimationIdle
 	dw MagikarpAnimationIdle
 	dw AnorithAnimationIdle

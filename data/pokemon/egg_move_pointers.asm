@@ -129,7 +129,7 @@ endc
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw PinsirEggMoves
+	dw MarillEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

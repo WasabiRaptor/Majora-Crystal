@@ -252,14 +252,14 @@ PokemonPicPointers::
 	dba MrMimeBackpic
 	dba SamurottFrontpic
 	dba SamurottBackpic
-	dba JynxFrontpic
-	dba JynxBackpic
-	dba ElectabuzzFrontpic
-	dba ElectabuzzBackpic
-	dba MagmarFrontpic
-	dba MagmarBackpic
-	dba PinsirFrontpic
-	dba PinsirBackpic
+	dba BuizelFrontpic
+	dba BuizelBackpic
+	dba FloatzelFrontpic
+	dba FloatzelBackpic
+	dba AzurilFrontpic
+	dba AzurilBackpic
+	dba MarillFrontpic
+	dba MarillBackpic
 	dba AzumarillFrontpic
 	dba AzumarillBackpic
 	dba MagikarpFrontpic

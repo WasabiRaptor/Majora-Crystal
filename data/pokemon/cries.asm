@@ -128,10 +128,10 @@ PokemonCries::
 	mon_cry CRY_SENTRET,       $000,  $100 ; STARMIE
 	mon_cry CRY_KRABBY,      $008,  $0c0 ; MR__MIME
 	mon_cry CRY_CATERPIE,    $000,  $100 ; SAMUROTT
-	mon_cry CRY_SCIZOR,     $0ff,  $17f ; JYNX
-	mon_cry CRY_VOLTORB,     $08f,  $17f ; ELECTABUZZ
-	mon_cry CRY_CHARMANDER,  $0ff,  $0b0 ; MAGMAR
-	mon_cry CRY_MAGNEZONE,   $000,  $100 ; PINSIR
+	mon_cry CRY_SCIZOR,     $0ff,  $17f ; BUIZEL
+	mon_cry CRY_VOLTORB,     $08f,  $17f ; FLOATZEL
+	mon_cry CRY_CHARMANDER,  $0ff,  $0b0 ; AZURIL
+	mon_cry CRY_MAGNEZONE,   $000,  $100 ; MARILL
 	mon_cry CRY_SQUIRTLE,    $011,  $0c0 ; AZUMARILL
 	mon_cry CRY_TOGEPI,       $080,  $080 ; LAPRAS
 	mon_cry CRY_TOGEPI,       $000,  $100 ; ANORITH

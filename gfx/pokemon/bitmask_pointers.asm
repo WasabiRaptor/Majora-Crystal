@@ -122,10 +122,10 @@ BitmasksPointers:
 	dw StarmieBitmasks
 	dw MrMimeBitmasks
 	dw SamurottBitmasks
-	dw JynxBitmasks
-	dw ElectabuzzBitmasks
-	dw MagmarBitmasks
-	dw PinsirBitmasks
+	dw BuizelBitmasks
+	dw FloatzelBitmasks
+	dw AzurilBitmasks
+	dw MarillBitmasks
 	dw AzumarillBitmasks
 	dw MagikarpBitmasks
 	dw AnorithBitmasks

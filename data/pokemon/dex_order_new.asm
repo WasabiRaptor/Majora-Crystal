@@ -112,7 +112,7 @@ NewPokedexOrder:
 	db ALTARIA
 	db SAMUROTT
 	db MAMOSWINE
-	db PINSIR
+	db MARILL
 	db NATU
 	db KOFFING
 	db WEEZING
@@ -151,11 +151,11 @@ NewPokedexOrder:
 	db AZUMARILL
 	db MOLTRES
 	db ZAPDOS
-	db MAGMAR
+	db AZURIL
 	db DUSKNOIR
-	db JYNX
+	db BUIZEL
 	db ARTICUNO
-	db ELECTABUZZ
+	db FLOATZEL
 	db MR__MIME
 	db SPIRITOMB
 	db STUFFUL

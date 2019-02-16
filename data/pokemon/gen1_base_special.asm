@@ -124,10 +124,10 @@ KantoMonSpecials:
 	db 100 ; STARMIE
 	db 100 ; MR__MIME
 	db  55 ; SAMUROTT
-	db  95 ; JYNX
-	db  85 ; ELECTABUZZ
-	db  85 ; MAGMAR
-	db  55 ; PINSIR
+	db  95 ; BUIZEL
+	db  85 ; FLOATZEL
+	db  85 ; AZURIL
+	db  55 ; MARILL
 	db  70 ; AZUMARILL
 	db  20 ; LAPRAS
 	db 100 ; ANORITH

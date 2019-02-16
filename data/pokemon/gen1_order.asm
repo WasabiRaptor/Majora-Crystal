@@ -27,7 +27,7 @@ Pokered_MonIndices:
 	db SAMUROTT
 	db STARYU
 	db SYLVEON
-	db PINSIR
+	db MARILL
 	db TANGELA
 	db MAMOSWINE ; MISSINGNO.
 	db UNOWN ; MISSINGNO.
@@ -49,9 +49,9 @@ Pokered_MonIndices:
 	db SCIZOR
 	db FOONGUS
 	db NATU ; MISSINGNO.
-	db MAGMAR
+	db AZURIL
 	db CELEBI ; MISSINGNO.
-	db ELECTABUZZ
+	db FLOATZEL
 	db PASSIMIAN
 	db KOFFING
 	db XATU ; MISSINGNO.
@@ -70,7 +70,7 @@ Pokered_MonIndices:
 	db GOLETT ; MISSINGNO.
 	db BEWEAR
 	db SANDSLASH
-	db JYNX
+	db BUIZEL
 	db TYROGUE
 	db DWEBBLE
 	db CRUSTLE

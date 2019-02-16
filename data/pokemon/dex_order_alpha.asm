@@ -54,7 +54,7 @@ AlphabeticalPokedexOrder:
 	db CRYOGONAL
 	db ARAQUANID
 	db TOGEPI
-	db ELECTABUZZ
+	db FLOATZEL
 	db ELECTRODE
 	db ARTICUNO
 	db ENTEI
@@ -101,7 +101,7 @@ AlphabeticalPokedexOrder:
 	db NIDORAN_M
 	db GYARADOS
 	db HOUNDOUR
-	db JYNX
+	db BUIZEL
 	db QWILFISH
 	db CHINCHOU
 	db FLOETTE
@@ -124,7 +124,7 @@ AlphabeticalPokedexOrder:
 	db ZAPDOS
 	db BALTOY
 	db LAPRAS
-	db MAGMAR
+	db AZURIL
 	db SUDOWOODO
 	db PASSIMIAN
 	db SHINX
@@ -168,7 +168,7 @@ AlphabeticalPokedexOrder:
 	db TOGEKISS
 	db GOLETT
 	db SNEASEL
-	db PINSIR
+	db MARILL
 	db NINETALES
 	db SANDSLASH
 	db CUTIEFLY

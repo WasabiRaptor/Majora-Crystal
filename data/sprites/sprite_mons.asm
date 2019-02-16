@@ -17,7 +17,7 @@ SpriteMons:
 	db TOGEKISS
 	db PURRLOIN
 	db FLAREON
-	db JYNX
+	db BUIZEL
 	db STARMIE
 	db EEVEE
 	db NIDORAN_M

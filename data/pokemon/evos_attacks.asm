@@ -1714,7 +1714,7 @@ SamurottEvosAttacks:
 	db 48, DOUBLE_TEAM
 	db 0 ; no more level-up moves
 
-JynxEvosAttacks:
+BuizelEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LICK
@@ -1730,7 +1730,7 @@ JynxEvosAttacks:
 	db 57, BLIZZARD
 	db 0 ; no more level-up moves
 
-ElectabuzzEvosAttacks:
+FloatzelEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, QUICK_ATTACK
 	db 1, LEER
@@ -1743,7 +1743,7 @@ ElectabuzzEvosAttacks:
 	db 58, THUNDER
 	db 0 ; no more level-up moves
 
-MagmarEvosAttacks:
+AzurilEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, EMBER
 	db 1, LEER
@@ -1759,7 +1759,7 @@ MagmarEvosAttacks:
 	db 57, FIRE_BLAST
 	db 0 ; no more level-up moves
 
-PinsirEvosAttacks:
+MarillEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, VICEGRIP
 	db 7, FOCUS_ENERGY
@@ -3224,7 +3224,7 @@ DusclopsEvosAttacks:
 	db 0 ; no more level-up moves
 
 DusknoirEvosAttacks:
-	db EVOLVE_LEVEL, 30, JYNX
+	db EVOLVE_LEVEL, 30, BUIZEL
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LICK
@@ -3239,7 +3239,7 @@ DusknoirEvosAttacks:
 	db 0 ; no more level-up moves
 
 ArticunoEvosAttacks:
-	db EVOLVE_LEVEL, 30, ELECTABUZZ
+	db EVOLVE_LEVEL, 30, FLOATZEL
 	db 0 ; no more evolutions
 	db 1, QUICK_ATTACK
 	db 1, LEER
@@ -3252,7 +3252,7 @@ ArticunoEvosAttacks:
 	db 0 ; no more level-up moves
 
 ZapdosEvosAttacks:
-	db EVOLVE_LEVEL, 30, MAGMAR
+	db EVOLVE_LEVEL, 30, AZURIL
 	db 0 ; no more evolutions
 	db 1, EMBER
 	db 7, LEER

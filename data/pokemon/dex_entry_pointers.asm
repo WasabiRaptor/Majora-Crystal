@@ -123,10 +123,10 @@ PokedexDataPointerTable:
 	dw StarmiePokedexEntry
 	dw MrMimePokedexEntry
 	dw SamurottPokedexEntry
-	dw JynxPokedexEntry
-	dw ElectabuzzPokedexEntry
-	dw MagmarPokedexEntry
-	dw PinsirPokedexEntry
+	dw BuizelPokedexEntry
+	dw FloatzelPokedexEntry
+	dw AzurilPokedexEntry
+	dw MarillPokedexEntry
 	dw AzumarillPokedexEntry
 	dw MagikarpPokedexEntry
 	dw AnorithPokedexEntry

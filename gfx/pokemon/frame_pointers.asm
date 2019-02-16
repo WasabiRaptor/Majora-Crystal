@@ -122,10 +122,10 @@ FramesPointers:
 	dw StarmieFrames
 	dw MrMimeFrames
 	dw SamurottFrames
-	dw JynxFrames
-	dw ElectabuzzFrames
-	dw MagmarFrames
-	dw PinsirFrames
+	dw BuizelFrames
+	dw FloatzelFrames
+	dw AzurilFrames
+	dw MarillFrames
 	dw AzumarillFrames
 	dw MagikarpFrames
 	dw AnorithFrames

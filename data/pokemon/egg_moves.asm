@@ -435,7 +435,7 @@ SamurottEggMoves:
 	db LIGHT_SCREEN
 	db -1 ; end
 
-PinsirEggMoves:
+MarillEggMoves:
 	db FURY_ATTACK
 	db FLAIL
 	db -1 ; end

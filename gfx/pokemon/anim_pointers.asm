@@ -122,10 +122,10 @@ AnimationPointers:
 	dw StarmieAnimation
 	dw MrMimeAnimation
 	dw SamurottAnimation
-	dw JynxAnimation
-	dw ElectabuzzAnimation
-	dw MagmarAnimation
-	dw PinsirAnimation
+	dw BuizelAnimation
+	dw FloatzelAnimation
+	dw AzurilAnimation
+	dw MarillAnimation
 	dw AzumarillAnimation
 	dw MagikarpAnimation
 	dw AnorithAnimation

@@ -142,20 +142,17 @@
 	const STARMIE    ; 79
 	const MR__MIME   ; 7a
 
-	const SAMUROTT    ; 7b
-
-	const JYNX       ; 7c
-	const ELECTABUZZ ; 7d
-	const MAGMAR     ; 7e
-	const PINSIR     ; 7f
-
+	const SAMUROTT      ; 7b
+	const BUIZEL        ; 7c
+	const FLOATZEL      ; 7d
+	const AZURIL        ; 7e
+	const MARILL        ; 7f
 	const AZUMARILL     ; 80
 	const LAPRAS   		; 81
 	const ANORITH   	; 82
 	const ARMALDO     	; 83
 	const DEWPIDER      ; 84
 	const ARAQUANID     ; 85
-
 	const MAGIKARP      ; 86
 	const GYARADOS      ; 87
 	const FEEBAS        ; 88

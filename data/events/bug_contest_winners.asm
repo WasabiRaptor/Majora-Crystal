@@ -34,11 +34,11 @@ BugContestant_CooltrainerMNick:
 	db COOLTRAINERM, NICK
 	dbw SAMUROTT,    357
 	dbw ROCKRUFF, 349
-	dbw PINSIR,     368
+	dbw MARILL,     368
 
 BugContestant_PokefanMWilliam:
 	db POKEFANM, WILLIAM
-	dbw PINSIR,     332
+	dbw MARILL,     332
 	dbw ROCKRUFF, 324
 	dbw SWABLU,    321
 
@@ -50,7 +50,7 @@ BugContestant_BugCatcherBenny:
 
 BugContestant_CamperBarry:
 	db CAMPER, BARRY
-	dbw PINSIR,     366
+	dbw MARILL,     366
 	dbw SWABLU,    329
 	dbw MIMIKYU,     314
 
@@ -69,7 +69,7 @@ BugContestant_BugCatcherJosh:
 BugContestant_YoungsterSamuel:
 	db YOUNGSTER, SAMUEL
 	dbw LYCANROC,     270
-	dbw PINSIR,     282
+	dbw MARILL,     282
 	dbw ZORUA,   251
 
 BugContestant_SchoolboyKipp:

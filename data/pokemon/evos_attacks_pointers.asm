@@ -124,10 +124,10 @@ EvosAttacksPointers::
 	dw StarmieEvosAttacks
 	dw MrMimeEvosAttacks
 	dw SamurottEvosAttacks
-	dw JynxEvosAttacks
-	dw ElectabuzzEvosAttacks
-	dw MagmarEvosAttacks
-	dw PinsirEvosAttacks
+	dw BuizelEvosAttacks
+	dw FloatzelEvosAttacks
+	dw AzurilEvosAttacks
+	dw MarillEvosAttacks
 	dw AzumarillEvosAttacks
 	dw MagikarpEvosAttacks
 	dw AnorithEvosAttacks
