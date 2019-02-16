@@ -49,7 +49,7 @@ Cries:
 	dba Cry_Boldore
 	dba Cry_Abomasnow
 	dba Cry_Chikorita
-	dba Cry_Totodile
+	dba Cry_Shuckle
 	dba Cry_Snowrunt
 	dba Cry_Deino
 	dba Cry_Excadrill

@@ -156,9 +156,9 @@ FramesPointers:
 	dw AbomasnowFrames
 	dw FerroseedFrames
 	dw FerrothornFrames
-	dw TotodileFrames
-	dw CroconawFrames
-	dw FeraligatrFrames
+	dw ShuckleFrames
+	dw NosepassFrames
+	dw ProbopassFrames
 	dw LarvitarFrames
 	dw PupitarFrames
 	dw TyranitarFrames

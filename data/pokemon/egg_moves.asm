@@ -509,7 +509,7 @@ if _BRASS
 endc
 	db -1 ; end
 
-TotodileEggMoves:
+ShuckleEggMoves:
 	db CRUNCH
 	db THRASH
 	db HYDRO_PUMP

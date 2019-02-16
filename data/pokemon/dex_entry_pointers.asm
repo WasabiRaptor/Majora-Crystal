@@ -157,9 +157,9 @@ PokedexDataPointerTable:
 	dw AbomasnowPokedexEntry
 	dw FerroseedPokedexEntry
 	dw FerrothornPokedexEntry
-	dw TotodilePokedexEntry
-	dw CroconawPokedexEntry
-	dw FeraligatrPokedexEntry
+	dw ShucklePokedexEntry
+	dw NosepassPokedexEntry
+	dw ProbopassPokedexEntry
 	dw LarvitarPokedexEntry
 	dw PupitarPokedexEntry
 	dw TyranitarPokedexEntry

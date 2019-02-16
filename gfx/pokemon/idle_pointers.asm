@@ -156,9 +156,9 @@ AnimationIdlePointers:
 	dw AbomasnowAnimationIdle
 	dw FerroseedAnimationIdle
 	dw FerrothornAnimationIdle
-	dw TotodileAnimationIdle
-	dw CroconawAnimationIdle
-	dw FeraligatrAnimationIdle
+	dw ShuckleAnimationIdle
+	dw NosepassAnimationIdle
+	dw ProbopassAnimationIdle
 	dw LarvitarAnimationIdle
 	dw PupitarAnimationIdle
 	dw TyranitarAnimationIdle

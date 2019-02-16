@@ -320,12 +320,12 @@ PokemonPicPointers::
 	dba FerroseedBackpic
 	dba FerrothornFrontpic
 	dba FerrothornBackpic
-	dba TotodileFrontpic
-	dba TotodileBackpic
-	dba CroconawFrontpic
-	dba CroconawBackpic
-	dba FeraligatrFrontpic
-	dba FeraligatrBackpic
+	dba ShuckleFrontpic
+	dba ShuckleBackpic
+	dba NosepassFrontpic
+	dba NosepassBackpic
+	dba ProbopassFrontpic
+	dba ProbopassBackpic
 	dba LarvitarFrontpic
 	dba LarvitarBackpic
 	dba PupitarFrontpic

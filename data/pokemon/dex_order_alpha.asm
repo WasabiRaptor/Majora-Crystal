@@ -33,7 +33,7 @@ AlphabeticalPokedexOrder:
 	db DEINO
 	db GOLURK
 	db HAXORUS
-	db CROCONAW
+	db NOSEPASS
 	db CUBONE
 	db ABOMASNOW
 	db HONEDGE
@@ -60,7 +60,7 @@ AlphabeticalPokedexOrder:
 	db EXEGGUTOR
 	db STUFFUL
 	db PERSIAN
-	db FERALIGATR
+	db PROBOPASS
 	db TORRACAT
 	db FLAREONX
 	db WEAVILE
@@ -228,7 +228,7 @@ AlphabeticalPokedexOrder:
 	db SAWSBUCK
 	db HEIDREIGON
 	db CYNDAQUIL
-	db TOTODILE
+	db SHUCKLE
 	db FERROTHORN
 	db MAGEARNA
 	db DUSKULL

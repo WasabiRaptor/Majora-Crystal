@@ -54,7 +54,7 @@
 	const CRY_BOLDORE
 	const CRY_ABOMASNOW
 	const CRY_CHIKORITA
-	const CRY_TOTODILE
+	const CRY_SHUCKLE
 	const CRY_SNOWRUNT
 	const CRY_DEINO
 	const CRY_EXCADRILL

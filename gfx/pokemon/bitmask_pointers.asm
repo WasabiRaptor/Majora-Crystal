@@ -156,9 +156,9 @@ BitmasksPointers:
 	dw AbomasnowBitmasks
 	dw FerroseedBitmasks
 	dw FerrothornBitmasks
-	dw TotodileBitmasks
-	dw CroconawBitmasks
-	dw FeraligatrBitmasks
+	dw ShuckleBitmasks
+	dw NosepassBitmasks
+	dw ProbopassBitmasks
 	dw LarvitarBitmasks
 	dw PupitarBitmasks
 	dw TyranitarBitmasks
