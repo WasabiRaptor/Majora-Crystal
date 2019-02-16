@@ -322,4 +322,26 @@ NUM_REGIONAL EQU const_value + -1 ; 2
 	const MIDDAY
 	const MIDNIGHT
 	const DUSK
+	; const DAWN
 NUM_LYCANROC EQU const_value + -1 ; 3
+
+	BETA EQU 1
+
+	const_def 1
+	const FAN_ROTOM
+	const FROST_ROTOM
+	const HEAT_ROTOM
+	const MOW_ROTOM
+	const WASH_ROTOM
+NUM_ROTOM EQU const_value + -1 ; 5
+
+	const_def 1
+	const TEN_PERCENT
+	const FIFTY_PERCENT
+	const COMPLETE
+NUM_ZYGARDE EQU const_value + -1 ; 3
+
+	const_def 1
+	const LAND_SHAYMIN
+	const SKY_SHAYMIN
+NUM_SHAYMIN EQU const_value + -1 ; 2
