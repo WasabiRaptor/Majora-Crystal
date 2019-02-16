@@ -91,10 +91,10 @@ FramesPointers:
 	dw GalvantulaFrames
 	dw PinecoFrames
 	dw ForretressFrames
-	dw HaunterFrames
-	dw GengarFrames
-	dw OnixFrames
-	dw DrowzeeFrames
+	dw YanmaFrames
+	dw YanmegaFrames
+	dw ScytherFrames
+	dw ScizorFrames
 	dw HypnoFrames
 	dw KrabbyFrames
 	dw KinglerFrames
@@ -121,7 +121,7 @@ FramesPointers:
 	dw StaryuFrames
 	dw StarmieFrames
 	dw MrMimeFrames
-	dw ScytherFrames
+	dw SamurottFrames
 	dw JynxFrames
 	dw ElectabuzzFrames
 	dw MagmarFrames

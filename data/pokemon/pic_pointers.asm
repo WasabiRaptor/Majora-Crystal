@@ -190,14 +190,14 @@ PokemonPicPointers::
 	dba PinecoBackpic
 	dba ForretressFrontpic
 	dba ForretressBackpic
-	dba HaunterFrontpic
-	dba HaunterBackpic
-	dba GengarFrontpic
-	dba GengarBackpic
-	dba OnixFrontpic
-	dba OnixBackpic
-	dba DrowzeeFrontpic
-	dba DrowzeeBackpic
+	dba YanmaFrontpic
+	dba YanmaBackpic
+	dba YanmegaFrontpic
+	dba YanmegaBackpic
+	dba ScytherFrontpic
+	dba ScytherBackpic
+	dba ScizorFrontpic
+	dba ScizorBackpic
 	dba HypnoFrontpic
 	dba HypnoBackpic
 	dba KrabbyFrontpic
@@ -250,8 +250,8 @@ PokemonPicPointers::
 	dba StarmieBackpic
 	dba MrMimeFrontpic
 	dba MrMimeBackpic
-	dba ScytherFrontpic
-	dba ScytherBackpic
+	dba SamurottFrontpic
+	dba SamurottBackpic
 	dba JynxFrontpic
 	dba JynxBackpic
 	dba ElectabuzzFrontpic

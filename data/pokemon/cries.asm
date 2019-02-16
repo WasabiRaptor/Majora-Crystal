@@ -97,17 +97,17 @@ PokemonCries::
 	mon_cry CRY_PERSIAN,      $000,  $100 ; GALVANTULA
 	mon_cry CRY_PERSIAN,      $06f,  $160 ; PINECO
 	mon_cry CRY_METAPOD,     $000,  $100 ; FORRETRESS
-	mon_cry CRY_METAPOD,     $030,  $0c0 ; HAUNTER
-	mon_cry CRY_JOLTIK,         $000,  $17f ; GENGAR
-	mon_cry CRY_TOGEPI,       $0ff,  $140 ; ONIX
-	mon_cry CRY_DROWZEE,     $088,  $0a0 ; DROWZEE
-	mon_cry CRY_DROWZEE,     $0ee,  $0c0 ; HYPNO
+	mon_cry CRY_METAPOD,     $030,  $0c0 ; YANMA
+	mon_cry CRY_JOLTIK,         $000,  $17f ; YANMEGA
+	mon_cry CRY_TOGEPI,       $0ff,  $140 ; SCYTHER
+	mon_cry CRY_SCIZOR,     $088,  $0a0 ; SCIZOR
+	mon_cry CRY_SCIZOR,     $0ee,  $0c0 ; HYPNO
 	mon_cry CRY_KRABBY,      $020,  $160 ; KRABBY
 	mon_cry CRY_KRABBY,      $0ee,  $160 ; KINGLER
 	mon_cry CRY_VOLTORB,     $0ed,  $100 ; VOLTORB
 	mon_cry CRY_VOLTORB,     $0a8,  $110 ; ELECTRODE
 	mon_cry CRY_MIENFOO,     $000,  $100 ; EXEGGCUTE
-	mon_cry CRY_DROWZEE,     $000,  $100 ; EXEGGUTOR
+	mon_cry CRY_SCIZOR,     $000,  $100 ; EXEGGUTOR
 	mon_cry CRY_PURRLOIN,    $000,  $100 ; CUBONE
 	mon_cry CRY_NIDOQUEEN,      $04f,  $0e0 ; MAROWAK
 	mon_cry CRY_FOONGUS,       $080,  $140 ; HITMONLEE
@@ -127,8 +127,8 @@ PokemonCries::
 	mon_cry CRY_SENTRET,       $002,  $0a0 ; STARYU
 	mon_cry CRY_SENTRET,       $000,  $100 ; STARMIE
 	mon_cry CRY_KRABBY,      $008,  $0c0 ; MR__MIME
-	mon_cry CRY_CATERPIE,    $000,  $100 ; SCYTHER
-	mon_cry CRY_DROWZEE,     $0ff,  $17f ; JYNX
+	mon_cry CRY_CATERPIE,    $000,  $100 ; SAMUROTT
+	mon_cry CRY_SCIZOR,     $0ff,  $17f ; JYNX
 	mon_cry CRY_VOLTORB,     $08f,  $17f ; ELECTABUZZ
 	mon_cry CRY_CHARMANDER,  $0ff,  $0b0 ; MAGMAR
 	mon_cry CRY_MAGNEZONE,   $000,  $100 ; PINSIR

@@ -110,11 +110,11 @@
 	const GALVANTULA   	; 5a
 	const PINECO   		; 5b
 	const FORRETRESS    ; 5c
+	const YANMA    		; 5d
+	const YANMEGA     	; 5e
+	const SCYTHER       ; 5f
+	const SCIZOR    	; 60
 
-	const HAUNTER    ; 5d
-	const GENGAR     ; 5e
-	const ONIX       ; 5f
-	const DROWZEE    ; 60
 	const HYPNO      ; 61
 	const KRABBY     ; 62
 	const KINGLER    ; 63
@@ -141,7 +141,9 @@
 	const STARYU     ; 78
 	const STARMIE    ; 79
 	const MR__MIME   ; 7a
-	const SCYTHER    ; 7b
+
+	const SAMUROTT    ; 7b
+
 	const JYNX       ; 7c
 	const ELECTABUZZ ; 7d
 	const MAGMAR     ; 7e

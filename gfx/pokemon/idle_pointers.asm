@@ -91,10 +91,10 @@ AnimationIdlePointers:
 	dw GalvantulaAnimationIdle
 	dw PinecoAnimationIdle
 	dw ForretressAnimationIdle
-	dw HaunterAnimationIdle
-	dw GengarAnimationIdle
-	dw OnixAnimationIdle
-	dw DrowzeeAnimationIdle
+	dw YanmaAnimationIdle
+	dw YanmegaAnimationIdle
+	dw ScytherAnimationIdle
+	dw ScizorAnimationIdle
 	dw HypnoAnimationIdle
 	dw KrabbyAnimationIdle
 	dw KinglerAnimationIdle
@@ -121,7 +121,7 @@ AnimationIdlePointers:
 	dw StaryuAnimationIdle
 	dw StarmieAnimationIdle
 	dw MrMimeAnimationIdle
-	dw ScytherAnimationIdle
+	dw SamurottAnimationIdle
 	dw JynxAnimationIdle
 	dw ElectabuzzAnimationIdle
 	dw MagmarAnimationIdle

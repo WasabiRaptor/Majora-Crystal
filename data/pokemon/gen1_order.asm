@@ -12,7 +12,7 @@ Pokered_MonIndices:
 	db LICKITUNG
 	db EXEGGCUTE
 	db GRIMER
-	db GENGAR
+	db YANMEGA
 	db ESPURR
 	db TIMBURR
 	db CUBONE
@@ -24,7 +24,7 @@ Pokered_MonIndices:
 	db GALVANTULA
 	db DEERLING
 	db FORRETRESS
-	db SCYTHER
+	db SAMUROTT
 	db STARYU
 	db SYLVEON
 	db PINSIR
@@ -32,7 +32,7 @@ Pokered_MonIndices:
 	db MAMOSWINE ; MISSINGNO.
 	db UNOWN ; MISSINGNO.
 	db LUXRAY
-	db ONIX
+	db SCYTHER
 	db PERSIAN
 	db MAGNETON
 	db TREVANANT
@@ -46,7 +46,7 @@ Pokered_MonIndices:
 	db TOGETIC
 	db FURRET
 	db FLAAFFY
-	db DROWZEE
+	db SCIZOR
 	db FOONGUS
 	db NATU ; MISSINGNO.
 	db MAGMAR
@@ -145,7 +145,7 @@ Pokered_MonIndices:
 	db MAREEP
 	db MAROWAK
 	db DUSCLOPS ; MISSINGNO.
-	db HAUNTER
+	db YANMA
 	db FLABEBE
 	db FLORGES
 	db MAGNEZONE

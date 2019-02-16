@@ -18,7 +18,7 @@ BuenasPasswordTable:
 .HealingItems:  db BUENA_ITEM,   12, POTION, ANTIDOTE, PARLYZ_HEAL
 .Balls:         db BUENA_ITEM,   12, POKE_BALL, GREAT_BALL, ULTRA_BALL
 .Pokemon1:      db BUENA_MON,    10, TOGEKISS, PORYGON2, COTTONEE
-.Pokemon2:      db BUENA_MON,    10, TYRANITAR, AXEW, DROWZEE
+.Pokemon2:      db BUENA_MON,    10, TYRANITAR, AXEW, SCIZOR
 .JohtoTowns:    db BUENA_STRING, 16, "NEW BARK TOWN@", "CHERRYGROVE CITY@", "AZALEA TOWN@"
 .Types:         db BUENA_STRING,  6, "FLYING@", "BUG@", "GRASS@"
 .Moves:         db BUENA_MOVE,   12, TACKLE, GROWL, MUD_SLAP

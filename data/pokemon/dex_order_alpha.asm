@@ -46,7 +46,7 @@ AlphabeticalPokedexOrder:
 	db DRAGONAIR
 	db DRAGONITE
 	db DRATINI
-	db DROWZEE
+	db SCIZOR
 	db MIENSHAO
 	db CRYOGONAL
 	db ARAQUANID
@@ -66,7 +66,7 @@ AlphabeticalPokedexOrder:
 	db WEAVILE
 	db PUPITAR
 	db FORRETRESS
-	db GENGAR
+	db YANMEGA
 	db COTTONEE
 	db AURORUS
 	db MEW
@@ -81,7 +81,7 @@ AlphabeticalPokedexOrder:
 	db GRIMER
 	db LUXRAY
 	db ANORITH
-	db HAUNTER
+	db YANMA
 	db NATU
 	db HITMONCHAN
 	db HITMONLEE
@@ -153,7 +153,7 @@ AlphabeticalPokedexOrder:
 	db NIDOQUEEN
 	db OMANYTE
 	db OMASTAR
-	db ONIX
+	db SCYTHER
 	db SENTRET
 	db FURRET
 	db MAREEP
@@ -190,7 +190,7 @@ AlphabeticalPokedexOrder:
 	db CHINGLING
 	db CHIMECHO
 	db MAMOSWINE
-	db SCYTHER
+	db SAMUROTT
 	db SEADRA
 	db SEAKING
 	db HERACROSS

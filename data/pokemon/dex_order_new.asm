@@ -59,10 +59,10 @@ NewPokedexOrder:
 	db HEATMOR
 	db DURANT
 	db GASTLY
-	db HAUNTER
-	db GENGAR
+	db YANMA
+	db YANMEGA
 	db CARBINK
-	db ONIX
+	db SCYTHER
 	db GLALIE
 	db CHESPIN
 	db QUILLADIN
@@ -87,7 +87,7 @@ NewPokedexOrder:
 	db SEVIPER
 	db ZANGOOSE
 	db FENNEKIN
-	db DROWZEE
+	db SCIZOR
 	db HYPNO
 	db FLABEBE
 	db FLOETTE
@@ -110,7 +110,7 @@ NewPokedexOrder:
 	db AMAURA
 	db SWABLU
 	db ALTARIA
-	db SCYTHER
+	db SAMUROTT
 	db MAMOSWINE
 	db PINSIR
 	db NATU

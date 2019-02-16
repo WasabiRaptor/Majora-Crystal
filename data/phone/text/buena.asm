@@ -367,12 +367,12 @@ UnknownText_0xa183d:
 	line "the first #MON"
 
 	para "MARY caught was a"
-	line "DROWZEE?"
+	line "SCIZOR?"
 
 	para "Isn't that so out"
 	line "of character?"
 
-	para "But MARY's DROWZEE"
+	para "But MARY's SCIZOR"
 	line "kept making her"
 
 	para "fall asleep on the"

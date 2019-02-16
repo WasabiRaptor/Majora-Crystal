@@ -91,10 +91,10 @@ AnimationPointers:
 	dw GalvantulaAnimation
 	dw PinecoAnimation
 	dw ForretressAnimation
-	dw HaunterAnimation
-	dw GengarAnimation
-	dw OnixAnimation
-	dw DrowzeeAnimation
+	dw YanmaAnimation
+	dw YanmegaAnimation
+	dw ScytherAnimation
+	dw ScizorAnimation
 	dw HypnoAnimation
 	dw KrabbyAnimation
 	dw KinglerAnimation
@@ -121,7 +121,7 @@ AnimationPointers:
 	dw StaryuAnimation
 	dw StarmieAnimation
 	dw MrMimeAnimation
-	dw ScytherAnimation
+	dw SamurottAnimation
 	dw JynxAnimation
 	dw ElectabuzzAnimation
 	dw MagmarAnimation

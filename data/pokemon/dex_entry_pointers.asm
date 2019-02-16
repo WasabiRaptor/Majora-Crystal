@@ -92,10 +92,10 @@ PokedexDataPointerTable:
 	dw GalvantulaPokedexEntry
 	dw PinecoPokedexEntry
 	dw ForretressPokedexEntry
-	dw HaunterPokedexEntry
-	dw GengarPokedexEntry
-	dw OnixPokedexEntry
-	dw DrowzeePokedexEntry
+	dw YanmaPokedexEntry
+	dw YanmegaPokedexEntry
+	dw ScytherPokedexEntry
+	dw ScizorPokedexEntry
 	dw HypnoPokedexEntry
 	dw KrabbyPokedexEntry
 	dw KinglerPokedexEntry
@@ -122,7 +122,7 @@ PokedexDataPointerTable:
 	dw StaryuPokedexEntry
 	dw StarmiePokedexEntry
 	dw MrMimePokedexEntry
-	dw ScytherPokedexEntry
+	dw SamurottPokedexEntry
 	dw JynxPokedexEntry
 	dw ElectabuzzPokedexEntry
 	dw MagmarPokedexEntry

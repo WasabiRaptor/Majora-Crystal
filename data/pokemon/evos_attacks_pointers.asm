@@ -93,10 +93,10 @@ EvosAttacksPointers::
 	dw GalvantulaEvosAttacks
 	dw PinecoEvosAttacks
 	dw ForretressEvosAttacks
-	dw HaunterEvosAttacks
-	dw GengarEvosAttacks
-	dw OnixEvosAttacks
-	dw DrowzeeEvosAttacks
+	dw YanmaEvosAttacks
+	dw YanmegaEvosAttacks
+	dw ScytherEvosAttacks
+	dw ScizorEvosAttacks
 	dw HypnoEvosAttacks
 	dw KrabbyEvosAttacks
 	dw KinglerEvosAttacks
@@ -123,7 +123,7 @@ EvosAttacksPointers::
 	dw StaryuEvosAttacks
 	dw StarmieEvosAttacks
 	dw MrMimeEvosAttacks
-	dw ScytherEvosAttacks
+	dw SamurottEvosAttacks
 	dw JynxEvosAttacks
 	dw ElectabuzzEvosAttacks
 	dw MagmarEvosAttacks

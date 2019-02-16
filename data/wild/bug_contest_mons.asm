@@ -8,6 +8,6 @@ ContestMons:
 	db  5, MAGNEMITE,   12, 15
 	db 10, SWABLU,    10, 16
 	db 10, SENTRET,      10, 17
-	db  5, SCYTHER,    13, 14
+	db  5, SAMUROTT,    13, 14
 	db  5, PINSIR,     13, 14
 	db -1, ALTARIA,   30, 40

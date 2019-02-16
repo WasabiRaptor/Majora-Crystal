@@ -93,10 +93,10 @@ KantoMonSpecials:
 	db  45 ; GALVANTULA
 	db  85 ; PINECO
 	db 100 ; FORRETRESS
-	db 115 ; HAUNTER
-	db 130 ; GENGAR
-	db  30 ; ONIX
-	db  90 ; DROWZEE
+	db 115 ; YANMA
+	db 130 ; YANMEGA
+	db  30 ; SCYTHER
+	db  90 ; SCIZOR
 	db 115 ; HYPNO
 	db  25 ; KRABBY
 	db  50 ; KINGLER
@@ -123,7 +123,7 @@ KantoMonSpecials:
 	db  70 ; STARYU
 	db 100 ; STARMIE
 	db 100 ; MR__MIME
-	db  55 ; SCYTHER
+	db  55 ; SAMUROTT
 	db  95 ; JYNX
 	db  85 ; ELECTABUZZ
 	db  85 ; MAGMAR

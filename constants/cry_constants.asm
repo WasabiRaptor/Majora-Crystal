@@ -15,7 +15,7 @@
 	const CRY_TIMBURR
 	const CRY_MIENFOO
 	const CRY_HERACROSS
-	const CRY_DROWZEE
+	const CRY_SCIZOR
 	const CRY_MAGNETON
 	const CRY_BULBASAUR
 	const CRY_MEOWTH

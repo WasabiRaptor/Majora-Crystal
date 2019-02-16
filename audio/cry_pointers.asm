@@ -12,7 +12,7 @@ Cries:
 	dba Cry_Timburr
 	dba Cry_Mienfoo
 	dba Cry_Heracross
-	dba Cry_Drowzee
+	dba Cry_Scizor
 	dba Cry_Passimian
 	dba Cry_Eevee
 	dba Cry_Meowth

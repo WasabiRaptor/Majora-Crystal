@@ -93,8 +93,8 @@ EggMovePointers::
 	dw ForretressEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw OnixEggMoves
-	dw DrowzeeEggMoves
+	dw ScytherEggMoves
+	dw ScizorEggMoves
 	dw NoEggMoves
 	dw KrabbyEggMoves
 	dw NoEggMoves
@@ -125,7 +125,7 @@ else
 endc
 	dw NoEggMoves
 	dw MrMimeEggMoves
-	dw ScytherEggMoves
+	dw SamurottEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

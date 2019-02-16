@@ -892,10 +892,10 @@ Cry_Heracross:
 	musicheader 1, 6, Cry_Heracross_Ch6
 	musicheader 1, 8, Cry_Heracross_Ch8
 
-Cry_Drowzee:
-	musicheader 3, 5, Cry_Drowzee_Ch5
-	musicheader 1, 6, Cry_Drowzee_Ch6
-	musicheader 1, 8, Cry_Drowzee_Ch8
+Cry_Scizor:
+	musicheader 3, 5, Cry_Scizor_Ch5
+	musicheader 1, 6, Cry_Scizor_Ch6
+	musicheader 1, 8, Cry_Scizor_Ch8
 
 Cry_Passimian:
 	musicheader 3, 5, Cry_Passimian_Ch5
@@ -1459,7 +1459,7 @@ Cry_Trevanant_Ch6:
 Cry_Trevanant_Ch8:
 	endchannel
 
-Cry_Drowzee_Ch5:
+Cry_Scizor_Ch5:
 	sound_duty 0, 2, 0, 2
 	sound __,  6, $f2, $0650
 	sound __, 10, $d1, $0660
@@ -1467,10 +1467,10 @@ Cry_Drowzee_Ch5:
 	sound __, 10, $c1, $0622
 	sound __,  6, $f2, $0610
 	sound __,  7, $d1, $0620
-	loopchannel 2, Cry_Drowzee_Ch5
+	loopchannel 2, Cry_Scizor_Ch5
 	endchannel
 
-Cry_Drowzee_Ch6:
+Cry_Scizor_Ch6:
 	sound_duty 0, 0, 0, 1
 	sound __,  5, $8, 0
 	sound __,  6, $f2, $0651
@@ -1485,7 +1485,7 @@ Cry_Drowzee_Ch6:
 	sound __,  5, $d1, $0621
 	endchannel
 
-Cry_Drowzee_Ch8:
+Cry_Scizor_Ch8:
 	noise __,  7, $d2, $1c
 	noise __, 10, $b1, $2c
 	noise __,  9, $c2, $2c

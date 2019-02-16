@@ -313,12 +313,12 @@ ForretressEggMoves:
 	db HAZE
 	db -1 ; end
 
-OnixEggMoves:
+ScytherEggMoves:
 	db ROCK_SLIDE
 	db FLAIL
 	db -1 ; end
 
-DrowzeeEggMoves:
+ScizorEggMoves:
 	db LIGHT_SCREEN
 	db BARRIER
 	db -1 ; end
@@ -426,7 +426,7 @@ MrMimeEggMoves:
 	db MIMIC
 	db -1 ; end
 
-ScytherEggMoves:
+SamurottEggMoves:
 	db COUNTER
 	db SAFEGUARD
 	db BATON_PASS

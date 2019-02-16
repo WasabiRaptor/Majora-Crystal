@@ -1265,7 +1265,7 @@ endc
 	db 0 ; no more level-up moves
 
 ForretressEvosAttacks:
-	db EVOLVE_LEVEL, 25, HAUNTER
+	db EVOLVE_LEVEL, 25, YANMA
 	db 0 ; no more evolutions
 	db 1, HYPNOSIS
 	db 1, LICK
@@ -1278,8 +1278,8 @@ ForretressEvosAttacks:
 	db 36, DESTINY_BOND
 	db 0 ; no more level-up moves
 
-HaunterEvosAttacks:
-	db EVOLVE_TRADE, -1, GENGAR
+YanmaEvosAttacks:
+	db EVOLVE_TRADE, -1, YANMEGA
 	db 0 ; no more evolutions
 	db 1, HYPNOSIS
 	db 1, LICK
@@ -1293,7 +1293,7 @@ HaunterEvosAttacks:
 	db 48, DESTINY_BOND
 	db 0 ; no more level-up moves
 
-GengarEvosAttacks:
+YanmegaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HYPNOSIS
 	db 1, LICK
@@ -1307,7 +1307,7 @@ GengarEvosAttacks:
 	db 48, DESTINY_BOND
 	db 0 ; no more level-up moves
 
-OnixEvosAttacks:
+ScytherEvosAttacks:
 	db EVOLVE_TRADE, METAL_COAT, GLALIE
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -1320,7 +1320,7 @@ OnixEvosAttacks:
 	db 40, SLAM
 	db 0 ; no more level-up moves
 
-DrowzeeEvosAttacks:
+ScizorEvosAttacks:
 	db EVOLVE_LEVEL, 26, HYPNO
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -1699,7 +1699,7 @@ MrMimeEvosAttacks:
 	db 46, SAFEGUARD
 	db 0 ; no more level-up moves
 
-ScytherEvosAttacks:
+SamurottEvosAttacks:
 	db EVOLVE_TRADE, METAL_COAT, MAMOSWINE
 	db 0 ; no more evolutions
 	db 1, QUICK_ATTACK

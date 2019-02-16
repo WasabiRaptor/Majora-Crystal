@@ -32,7 +32,7 @@ BugContestant_BugCatcherEd:
 
 BugContestant_CooltrainerMNick:
 	db COOLTRAINERM, NICK
-	dbw SCYTHER,    357
+	dbw SAMUROTT,    357
 	dbw ROCKRUFF, 349
 	dbw PINSIR,     368
 
@@ -62,7 +62,7 @@ BugContestant_PicnickerCindy:
 
 BugContestant_BugCatcherJosh:
 	db BUG_CATCHER, JOSH
-	dbw SCYTHER,    326
+	dbw SAMUROTT,    326
 	dbw ROCKRUFF, 292
 	dbw ZOROARK,    282
 

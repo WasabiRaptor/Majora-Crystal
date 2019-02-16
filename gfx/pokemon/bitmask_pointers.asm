@@ -91,10 +91,10 @@ BitmasksPointers:
 	dw GalvantulaBitmasks
 	dw PinecoBitmasks
 	dw ForretressBitmasks
-	dw HaunterBitmasks
-	dw GengarBitmasks
-	dw OnixBitmasks
-	dw DrowzeeBitmasks
+	dw YanmaBitmasks
+	dw YanmegaBitmasks
+	dw ScytherBitmasks
+	dw ScizorBitmasks
 	dw HypnoBitmasks
 	dw KrabbyBitmasks
 	dw KinglerBitmasks
@@ -121,7 +121,7 @@ BitmasksPointers:
 	dw StaryuBitmasks
 	dw StarmieBitmasks
 	dw MrMimeBitmasks
-	dw ScytherBitmasks
+	dw SamurottBitmasks
 	dw JynxBitmasks
 	dw ElectabuzzBitmasks
 	dw MagmarBitmasks
