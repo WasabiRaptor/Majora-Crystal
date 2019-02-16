@@ -2093,7 +2093,7 @@ LucarioEvosAttacks:
 	db 0 ; no more level-up moves
 
 ChikoritaEvosAttacks:
-	db EVOLVE_LEVEL, 16, BAYLEEF
+	db EVOLVE_LEVEL, 16, MEDICHAM
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
@@ -2107,8 +2107,8 @@ ChikoritaEvosAttacks:
 	db 50, SOLARBEAM
 	db 0 ; no more level-up moves
 
-BayleefEvosAttacks:
-	db EVOLVE_LEVEL, 32, MEGANIUM
+MedichamEvosAttacks:
+	db EVOLVE_LEVEL, 32, SNOVER
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
@@ -2124,7 +2124,7 @@ BayleefEvosAttacks:
 	db 55, SOLARBEAM
 	db 0 ; no more level-up moves
 
-MeganiumEvosAttacks:
+SnoverEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
@@ -2181,8 +2181,8 @@ FerrothornEvosAttacks:
 	db 60, FLAMETHROWER
 	db 0 ; no more level-up moves
 
-TotodileEvosAttacks:
-	db EVOLVE_LEVEL, 18, CROCONAW
+ShuckleEvosAttacks:
+	db EVOLVE_LEVEL, 18, NOSEPASS
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
@@ -2195,8 +2195,8 @@ TotodileEvosAttacks:
 	db 52, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-CroconawEvosAttacks:
-	db EVOLVE_LEVEL, 30, FERALIGATR
+NosepassEvosAttacks:
+	db EVOLVE_LEVEL, 30, PROBOPASS
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
@@ -2210,7 +2210,7 @@ CroconawEvosAttacks:
 	db 55, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-FeraligatrEvosAttacks:
+ProbopassEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER

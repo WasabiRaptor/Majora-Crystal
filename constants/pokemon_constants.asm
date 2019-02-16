@@ -179,24 +179,19 @@
 	const LUCARIO       ; 97
 
 JOHTO_POKEMON EQU const_value
-	const CHIKORITA  ; 98
-	const BAYLEEF    ; 99
-	const MEGANIUM   ; 9a
-
+	const MEDITITE  ; 98
+	const MEDICHAM    ; 99
+	const SNOVER   ; 9a
 	const ABOMASNOW  	; 9b
 	const FERROSEED    	; 9c
 	const FERROTHORN 	; 9d
-
-	const TOTODILE   ; 9e
-	const CROCONAW   ; 9f
-	const FERALIGATR ; a0
-
+	const SHUCKLE       ; 9e
+	const NOSEPASS      ; 9f
+	const PROBOPASS     ; a0
 	const LARVITAR    	; a1
 	const PUPITAR     	; a2
 	const TYRANITAR   	; a3
-
-	const NOIBAT    ; a4
-
+	const NOIBAT        ; a4
 	const NOIVERN     	; a5
 	const DRUDDIGON     ; a6
 	const AXEW          ; a7

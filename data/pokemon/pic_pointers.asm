@@ -310,22 +310,22 @@ PokemonPicPointers::
 	dba LucarioBackpic
 	dba ChikoritaFrontpic
 	dba ChikoritaBackpic
-	dba BayleefFrontpic
-	dba BayleefBackpic
-	dba MeganiumFrontpic
-	dba MeganiumBackpic
+	dba MedichamFrontpic
+	dba MedichamBackpic
+	dba SnoverFrontpic
+	dba SnoverBackpic
 	dba AbomasnowFrontpic
 	dba AbomasnowBackpic
 	dba FerroseedFrontpic
 	dba FerroseedBackpic
 	dba FerrothornFrontpic
 	dba FerrothornBackpic
-	dba TotodileFrontpic
-	dba TotodileBackpic
-	dba CroconawFrontpic
-	dba CroconawBackpic
-	dba FeraligatrFrontpic
-	dba FeraligatrBackpic
+	dba ShuckleFrontpic
+	dba ShuckleBackpic
+	dba NosepassFrontpic
+	dba NosepassBackpic
+	dba ProbopassFrontpic
+	dba ProbopassBackpic
 	dba LarvitarFrontpic
 	dba LarvitarBackpic
 	dba PupitarFrontpic

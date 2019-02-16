@@ -153,14 +153,14 @@ EvosAttacksPointers::
 	dw RioluEvosAttacks
 	dw LucarioEvosAttacks
 	dw ChikoritaEvosAttacks
-	dw BayleefEvosAttacks
-	dw MeganiumEvosAttacks
+	dw MedichamEvosAttacks
+	dw SnoverEvosAttacks
 	dw AbomasnowEvosAttacks
 	dw FerroseedEvosAttacks
 	dw FerrothornEvosAttacks
-	dw TotodileEvosAttacks
-	dw CroconawEvosAttacks
-	dw FeraligatrEvosAttacks
+	dw ShuckleEvosAttacks
+	dw NosepassEvosAttacks
+	dw ProbopassEvosAttacks
 	dw LarvitarEvosAttacks
 	dw PupitarEvosAttacks
 	dw TyranitarEvosAttacks

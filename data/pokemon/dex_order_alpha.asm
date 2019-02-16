@@ -11,7 +11,7 @@ AlphabeticalPokedexOrder:
 	db FRAXURE
 	db DWEBBLE
 	db DELPHOX
-	db BAYLEEF
+	db MEDICHAM
 	db MAGNEMITE
 	db FENNEKIN
 	db CHESPIN
@@ -25,7 +25,7 @@ AlphabeticalPokedexOrder:
 	db UMBREON
 	db FLAREON
 	db ESPEON
-	db CHIKORITA
+	db MEDITITE
 	db JANGMO_O
 	db LIEPARD
 	db PURRLOIN
@@ -33,7 +33,7 @@ AlphabeticalPokedexOrder:
 	db DEINO
 	db GOLURK
 	db HAXORUS
-	db CROCONAW
+	db NOSEPASS
 	db CUBONE
 	db ABOMASNOW
 	db HONEDGE
@@ -60,7 +60,7 @@ AlphabeticalPokedexOrder:
 	db EXEGGUTOR
 	db STUFFUL
 	db PERSIAN
-	db FERALIGATR
+	db PROBOPASS
 	db TORRACAT
 	db FLAREONX
 	db WEAVILE
@@ -129,7 +129,7 @@ AlphabeticalPokedexOrder:
 	db LITTEN
 	db BRAIXEN
 	db MAROWAK
-	db MEGANIUM
+	db SNOVER
 	db HAWLUCHA
 	db ZOROARK
 	db LUCARIO
@@ -228,7 +228,7 @@ AlphabeticalPokedexOrder:
 	db SAWSBUCK
 	db HEIDREIGON
 	db CYNDAQUIL
-	db TOTODILE
+	db SHUCKLE
 	db FERROTHORN
 	db MAGEARNA
 	db DUSKULL

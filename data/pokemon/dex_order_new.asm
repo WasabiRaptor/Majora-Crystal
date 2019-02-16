@@ -1,15 +1,15 @@
 ; Every Pokémon sorted in New Pokédex Order.
 
 NewPokedexOrder:
-	db CHIKORITA
-	db BAYLEEF
-	db MEGANIUM
+	db MEDITITE
+	db MEDICHAM
+	db SNOVER
 	db ABOMASNOW
 	db FERROSEED
 	db FERROTHORN
-	db TOTODILE
-	db CROCONAW
-	db FERALIGATR
+	db SHUCKLE
+	db NOSEPASS
+	db PROBOPASS
 	db MAGNETON
 	db MAGNEZONE
 	db PORYGON

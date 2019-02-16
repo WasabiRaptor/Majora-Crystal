@@ -151,14 +151,14 @@ FramesPointers:
 	dw RioluFrames
 	dw LucarioFrames
 	dw ChikoritaFrames
-	dw BayleefFrames
-	dw MeganiumFrames
+	dw MedichamFrames
+	dw SnoverFrames
 	dw AbomasnowFrames
 	dw FerroseedFrames
 	dw FerrothornFrames
-	dw TotodileFrames
-	dw CroconawFrames
-	dw FeraligatrFrames
+	dw ShuckleFrames
+	dw NosepassFrames
+	dw ProbopassFrames
 	dw LarvitarFrames
 	dw PupitarFrames
 	dw TyranitarFrames
