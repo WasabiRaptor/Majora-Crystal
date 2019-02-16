@@ -153,8 +153,8 @@ EvosAttacksPointers::
 	dw RioluEvosAttacks
 	dw LucarioEvosAttacks
 	dw ChikoritaEvosAttacks
-	dw BayleefEvosAttacks
-	dw MeganiumEvosAttacks
+	dw MedichamEvosAttacks
+	dw SnoverEvosAttacks
 	dw AbomasnowEvosAttacks
 	dw FerroseedEvosAttacks
 	dw FerrothornEvosAttacks

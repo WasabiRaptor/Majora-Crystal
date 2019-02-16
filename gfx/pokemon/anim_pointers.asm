@@ -151,8 +151,8 @@ AnimationPointers:
 	dw RioluAnimation
 	dw LucarioAnimation
 	dw ChikoritaAnimation
-	dw BayleefAnimation
-	dw MeganiumAnimation
+	dw MedichamAnimation
+	dw SnoverAnimation
 	dw AbomasnowAnimation
 	dw FerroseedAnimation
 	dw FerrothornAnimation

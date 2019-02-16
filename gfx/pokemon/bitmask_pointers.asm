@@ -151,8 +151,8 @@ BitmasksPointers:
 	dw RioluBitmasks
 	dw LucarioBitmasks
 	dw ChikoritaBitmasks
-	dw BayleefBitmasks
-	dw MeganiumBitmasks
+	dw MedichamBitmasks
+	dw SnoverBitmasks
 	dw AbomasnowBitmasks
 	dw FerroseedBitmasks
 	dw FerrothornBitmasks

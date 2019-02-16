@@ -151,8 +151,8 @@ FramesPointers:
 	dw RioluFrames
 	dw LucarioFrames
 	dw ChikoritaFrames
-	dw BayleefFrames
-	dw MeganiumFrames
+	dw MedichamFrames
+	dw SnoverFrames
 	dw AbomasnowFrames
 	dw FerroseedFrames
 	dw FerrothornFrames

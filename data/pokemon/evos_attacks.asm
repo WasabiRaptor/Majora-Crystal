@@ -2093,7 +2093,7 @@ LucarioEvosAttacks:
 	db 0 ; no more level-up moves
 
 ChikoritaEvosAttacks:
-	db EVOLVE_LEVEL, 16, BAYLEEF
+	db EVOLVE_LEVEL, 16, MEDICHAM
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
@@ -2107,8 +2107,8 @@ ChikoritaEvosAttacks:
 	db 50, SOLARBEAM
 	db 0 ; no more level-up moves
 
-BayleefEvosAttacks:
-	db EVOLVE_LEVEL, 32, MEGANIUM
+MedichamEvosAttacks:
+	db EVOLVE_LEVEL, 32, SNOVER
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
@@ -2124,7 +2124,7 @@ BayleefEvosAttacks:
 	db 55, SOLARBEAM
 	db 0 ; no more level-up moves
 
-MeganiumEvosAttacks:
+SnoverEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL

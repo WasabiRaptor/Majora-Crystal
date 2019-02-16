@@ -152,8 +152,8 @@ PokedexDataPointerTable:
 	dw RioluPokedexEntry
 	dw LucarioPokedexEntry
 	dw ChikoritaPokedexEntry
-	dw BayleefPokedexEntry
-	dw MeganiumPokedexEntry
+	dw MedichamPokedexEntry
+	dw SnoverPokedexEntry
 	dw AbomasnowPokedexEntry
 	dw FerroseedPokedexEntry
 	dw FerrothornPokedexEntry

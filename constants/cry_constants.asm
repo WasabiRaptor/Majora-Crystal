@@ -53,7 +53,7 @@
 	const CRY_LARVITAR
 	const CRY_BOLDORE
 	const CRY_ABOMASNOW
-	const CRY_CHIKORITA
+	const CRY_MEDITITE
 	const CRY_SHUCKLE
 	const CRY_SNOWRUNT
 	const CRY_DEINO

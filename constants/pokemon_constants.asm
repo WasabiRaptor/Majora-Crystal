@@ -177,10 +177,9 @@
 	const LUCARIO       ; 97
 
 JOHTO_POKEMON EQU const_value
-	const CHIKORITA  ; 98
-	const BAYLEEF    ; 99
-	const MEGANIUM   ; 9a
-
+	const MEDITITE  ; 98
+	const MEDICHAM    ; 99
+	const SNOVER   ; 9a
 	const ABOMASNOW  	; 9b
 	const FERROSEED    	; 9c
 	const FERROTHORN 	; 9d

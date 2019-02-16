@@ -156,9 +156,9 @@ PokemonCries::
 	mon_cry CRY_BULBASAUR,   $03c,  $140 ; DRAGONITE
 	mon_cry CRY_SENTRET,       $099,  $17f ; RIOLU
 	mon_cry CRY_SENTRET,       $0ee,  $17f ; LUCARIO
-	mon_cry CRY_CHIKORITA,  -$010,  $0b0 ; CHIKORITA
-	mon_cry CRY_CHIKORITA,  -$022,  $120 ; BAYLEEF
-	mon_cry CRY_CHIKORITA,  -$0b7,  $200 ; MEGANIUM
+	mon_cry CRY_MEDITITE,  -$010,  $0b0 ; MEDITITE
+	mon_cry CRY_MEDITITE,  -$022,  $120 ; MEDICHAM
+	mon_cry CRY_MEDITITE,  -$0b7,  $200 ; SNOVER
 	mon_cry CRY_ABOMASNOW,   $347,  $080 ; ABOMASNOW
 	mon_cry CRY_ABOMASNOW,   $321,  $120 ; FERROSEED
 	mon_cry CRY_FERROTHORN,  $f00,  $0d4 ; FERROTHORN
@@ -178,7 +178,7 @@ PokemonCries::
 	mon_cry CRY_ABOMASNOW,   $2d0,  $110 ; HAKAMO_O
 	mon_cry CRY_KOMMO_O,       $000,  $140 ; KOMMO_O
 	mon_cry CRY_DEINO,      $061,  $091 ; DEINO
-	mon_cry CRY_CHIKORITA,   $0e8,  $0e8 ; ZWEILOUS
+	mon_cry CRY_MEDITITE,   $0e8,  $0e8 ; ZWEILOUS
 	mon_cry CRY_HEIDREIGON,      $010,  $100 ; HEIDREIGON
 	mon_cry CRY_CYNDAQUIL,     $03b,  $038 ; CYNDAQUIL
 	mon_cry CRY_QUILAVA,       -$067,  $100 ; QUILAVA

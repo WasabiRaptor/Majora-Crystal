@@ -1,9 +1,9 @@
 ; Every Pokémon sorted in New Pokédex Order.
 
 NewPokedexOrder:
-	db CHIKORITA
-	db BAYLEEF
-	db MEGANIUM
+	db MEDITITE
+	db MEDICHAM
+	db SNOVER
 	db ABOMASNOW
 	db FERROSEED
 	db FERROTHORN
