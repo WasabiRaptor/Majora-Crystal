@@ -102,10 +102,10 @@ KantoMonSpecials:
 	db  50 ; KINGLER
 	db  55 ; VOLTORB
 	db  80 ; ELECTRODE
-	db  60 ; EXEGGCUTE
-	db 125 ; EXEGGUTOR
-	db  40 ; CUBONE
-	db  50 ; MAROWAK
+	db  60 ; SHROOMISH
+	db 125 ; BRELOOM
+	db  40 ; CROAGUNK
+	db  50 ; TOXICROAK
 	db  35 ; SANDILE
 	db  35 ; KROKOROK
 	db  60 ; KROOKODILE

@@ -9,7 +9,7 @@ AsleepTreeMonsNite:
 	db MAGNEMITE
 	db MEOWTH
 	db TOGEPI
-	db EXEGGCUTE
+	db SHROOMISH
 	db NOIVERN
 	db HOUNDOOM
 	db -1 ; end

@@ -1035,7 +1035,7 @@ LevelBallMultiplier:
 ; These two texts were carried over from gen 1.
 ; They are not used in gen 2, and are dummied out.
 
-Text_RBY_CatchMarowak:
+Text_RBY_CatchToxicroak:
 	; It dodged the thrown BALL! This #MON can't be caught!
 	text_jump UnknownText_0x1c5a5a
 	db "@"

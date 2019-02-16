@@ -100,10 +100,10 @@ BitmasksPointers:
 	dw KinglerBitmasks
 	dw VoltorbBitmasks
 	dw ElectrodeBitmasks
-	dw ExeggcuteBitmasks
-	dw ExeggutorBitmasks
-	dw CuboneBitmasks
-	dw MarowakBitmasks
+	dw ShroomishBitmasks
+	dw BreloomBitmasks
+	dw CroagunkBitmasks
+	dw ToxicroakBitmasks
 	dw SandileBitmasks
 	dw KrokorokBitmasks
 	dw KrookodileBitmasks

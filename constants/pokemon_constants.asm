@@ -120,11 +120,11 @@
 	const KINGLER    ; 63
 	const VOLTORB    ; 64
 	const ELECTRODE  ; 65
-	const EXEGGCUTE  ; 66
-	const EXEGGUTOR  ; 67
-	const CUBONE     ; 68
-	const MAROWAK    ; 69
-	
+
+	const SHROOMISH     ; 66
+	const BRELOOM       ; 67
+	const CROAGUNK      ; 68
+	const TOXICROAK     ; 69
 	const SANDILE       ; 6a
 	const KROKOROK      ; 6b
 	const KROOKODILE    ; 6c

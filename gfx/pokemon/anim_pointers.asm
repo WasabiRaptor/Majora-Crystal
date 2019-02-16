@@ -100,10 +100,10 @@ AnimationPointers:
 	dw KinglerAnimation
 	dw VoltorbAnimation
 	dw ElectrodeAnimation
-	dw ExeggcuteAnimation
-	dw ExeggutorAnimation
-	dw CuboneAnimation
-	dw MarowakAnimation
+	dw ShroomishAnimation
+	dw BreloomAnimation
+	dw CroagunkAnimation
+	dw ToxicroakAnimation
 	dw SandileAnimation
 	dw KrokorokAnimation
 	dw KrookodileAnimation

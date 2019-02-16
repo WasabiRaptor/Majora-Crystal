@@ -1408,8 +1408,8 @@ ElectrodeEvosAttacks:
 	db 48, MIRROR_COAT
 	db 0 ; no more level-up moves
 
-ExeggcuteEvosAttacks:
-	db EVOLVE_ITEM, LEAF_STONE, EXEGGUTOR
+ShroomishEvosAttacks:
+	db EVOLVE_ITEM, LEAF_STONE, BRELOOM
 	db 0 ; no more evolutions
 	db 1, BARRAGE
 	db 1, HYPNOSIS
@@ -1422,7 +1422,7 @@ ExeggcuteEvosAttacks:
 	db 43, SOLARBEAM
 	db 0 ; no more level-up moves
 
-ExeggutorEvosAttacks:
+BreloomEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BARRAGE
 	db 1, HYPNOSIS
@@ -1431,8 +1431,8 @@ ExeggutorEvosAttacks:
 	db 31, EGG_BOMB
 	db 0 ; no more level-up moves
 
-CuboneEvosAttacks:
-	db EVOLVE_LEVEL, 28, MAROWAK
+CroagunkEvosAttacks:
+	db EVOLVE_LEVEL, 28, TOXICROAK
 	db 0 ; no more evolutions
 	db 1, GROWL
 	db 5, TAIL_WHIP
@@ -1447,7 +1447,7 @@ CuboneEvosAttacks:
 	db 41, BONE_RUSH
 	db 0 ; no more level-up moves
 
-MarowakEvosAttacks:
+ToxicroakEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, GROWL
 	db 1, TAIL_WHIP

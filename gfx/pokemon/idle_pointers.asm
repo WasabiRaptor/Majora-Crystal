@@ -100,10 +100,10 @@ AnimationIdlePointers:
 	dw KinglerAnimationIdle
 	dw VoltorbAnimationIdle
 	dw ElectrodeAnimationIdle
-	dw ExeggcuteAnimationIdle
-	dw ExeggutorAnimationIdle
-	dw CuboneAnimationIdle
-	dw MarowakAnimationIdle
+	dw ShroomishAnimationIdle
+	dw BreloomAnimationIdle
+	dw CroagunkAnimationIdle
+	dw ToxicroakAnimationIdle
 	dw SandileAnimationIdle
 	dw KrokorokAnimationIdle
 	dw KrookodileAnimationIdle

@@ -331,7 +331,7 @@ KrabbyEggMoves:
 	db SLAM
 	db -1 ; end
 
-ExeggcuteEggMoves:
+ShroomishEggMoves:
 	db SYNTHESIS
 	db MOONLIGHT
 	db REFLECT
@@ -339,7 +339,7 @@ ExeggcuteEggMoves:
 	db ANCIENTPOWER
 	db -1 ; end
 
-CuboneEggMoves:
+CroagunkEggMoves:
 	db ROCK_SLIDE
 	db ANCIENTPOWER
 	db BELLY_DRUM

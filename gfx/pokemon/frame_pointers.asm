@@ -100,10 +100,10 @@ FramesPointers:
 	dw KinglerFrames
 	dw VoltorbFrames
 	dw ElectrodeFrames
-	dw ExeggcuteFrames
-	dw ExeggutorFrames
-	dw CuboneFrames
-	dw MarowakFrames
+	dw ShroomishFrames
+	dw BreloomFrames
+	dw CroagunkFrames
+	dw ToxicroakFrames
 	dw SandileFrames
 	dw KrokorokFrames
 	dw KrookodileFrames

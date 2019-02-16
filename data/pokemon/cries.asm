@@ -106,10 +106,10 @@ PokemonCries::
 	mon_cry CRY_KRABBY,      $0ee,  $160 ; KINGLER
 	mon_cry CRY_VOLTORB,     $0ed,  $100 ; VOLTORB
 	mon_cry CRY_VOLTORB,     $0a8,  $110 ; ELECTRODE
-	mon_cry CRY_MIENFOO,     $000,  $100 ; EXEGGCUTE
-	mon_cry CRY_SCIZOR,     $000,  $100 ; EXEGGUTOR
-	mon_cry CRY_PURRLOIN,    $000,  $100 ; CUBONE
-	mon_cry CRY_NIDOQUEEN,      $04f,  $0e0 ; MAROWAK
+	mon_cry CRY_MIENFOO,     $000,  $100 ; SHROOMISH
+	mon_cry CRY_SCIZOR,     $000,  $100 ; BRELOOM
+	mon_cry CRY_PURRLOIN,    $000,  $100 ; CROAGUNK
+	mon_cry CRY_NIDOQUEEN,      $04f,  $0e0 ; TOXICROAK
 	mon_cry CRY_FOONGUS,       $080,  $140 ; SANDILE
 	mon_cry CRY_HERACROSS,        $0ee,  $140 ; KROKOROK
 	mon_cry CRY_HERACROSS,        $000,  $100 ; KROOKODILE

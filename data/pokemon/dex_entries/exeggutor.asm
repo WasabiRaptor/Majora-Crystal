@@ -7,4 +7,4 @@
 
 	page "heads. A head that"
 	next "drops off becomes"
-	next "an EXEGGCUTE.@"
+	next "an SHROOMISH.@"

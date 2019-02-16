@@ -101,10 +101,10 @@ PokedexDataPointerTable:
 	dw KinglerPokedexEntry
 	dw VoltorbPokedexEntry
 	dw ElectrodePokedexEntry
-	dw ExeggcutePokedexEntry
-	dw ExeggutorPokedexEntry
-	dw CubonePokedexEntry
-	dw MarowakPokedexEntry
+	dw ShroomishPokedexEntry
+	dw BreloomPokedexEntry
+	dw CroagunkPokedexEntry
+	dw ToxicroakPokedexEntry
 	dw SandilePokedexEntry
 	dw KrokorokPokedexEntry
 	dw KrookodilePokedexEntry

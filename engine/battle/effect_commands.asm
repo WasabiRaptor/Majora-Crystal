@@ -2750,12 +2750,12 @@ CheckDamageStatsCritical:
 ThickClubBoost:
 ; Return in hl the stat value at hl.
 
-; If the attacking monster is Cubone or Marowak and
+; If the attacking monster is Croagunk or Toxicroak and
 ; it's holding a Thick Club, double it.
 	push bc
 	push de
-	ld b, CUBONE
-	ld c, MAROWAK
+	ld b, CROAGUNK
+	ld c, TOXICROAK
 	ld d, THICK_CLUB
 	call SpeciesItemBoost
 	pop de

@@ -56,17 +56,17 @@ TreeMonSet_Route:
 	db 50, TYRANITAR,   10
 	db 15, AXEW,   10
 	db 15, NOIVERN,     10
-	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db 10, SHROOMISH,  10
+	db  5, SHROOMISH,  10
+	db  5, SHROOMISH,  10
 	db -1
 ; rare
 	db 50, TYRANITAR,   10
 	db 15, SNEASEL,     10
 	db 15, SNEASEL,     10
-	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db 10, SHROOMISH,  10
+	db  5, SHROOMISH,  10
+	db  5, SHROOMISH,  10
 	db -1
 
 TreeMonSet_Kanto:
@@ -74,17 +74,17 @@ TreeMonSet_Kanto:
 	db 50, TYRANITAR,   10
 	db 15, TOGEPI,      10
 	db 15, TYRANITAR,   10
-	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db 10, SHROOMISH,  10
+	db  5, SHROOMISH,  10
+	db  5, SHROOMISH,  10
 	db -1
 ; rare
 	db 50, TYRANITAR,   10
 	db 15, SNEASEL,     10
 	db 15, SNEASEL,     10
-	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db 10, SHROOMISH,  10
+	db  5, SHROOMISH,  10
+	db  5, SHROOMISH,  10
 	db -1
 
 TreeMonSet_Lake:
@@ -92,17 +92,17 @@ TreeMonSet_Lake:
 	db 50, TYRANITAR,   10
 	db 15, SWABLU,    10
 	db 15, TYRANITAR,   10
-	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db 10, SHROOMISH,  10
+	db  5, SHROOMISH,  10
+	db  5, SHROOMISH,  10
 	db -1
 ; rare
 	db 50, TYRANITAR,   10
 	db 15, SNEASEL,     10
 	db 15, SNEASEL,     10
-	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db 10, SHROOMISH,  10
+	db  5, SHROOMISH,  10
+	db  5, SHROOMISH,  10
 	db -1
 
 TreeMonSet_Forest:

@@ -34,7 +34,7 @@ AlphabeticalPokedexOrder:
 	db GOLURK
 	db HAXORUS
 	db NOSEPASS
-	db CUBONE
+	db CROAGUNK
 	db ABOMASNOW
 	db HONEDGE
 	db LEDYBA
@@ -59,8 +59,8 @@ AlphabeticalPokedexOrder:
 	db ARTICUNO
 	db ENTEI
 	db ARCHEN
-	db EXEGGCUTE
-	db EXEGGUTOR
+	db SHROOMISH
+	db BRELOOM
 	db STUFFUL
 	db PERSIAN
 	db PROBOPASS
@@ -131,7 +131,7 @@ AlphabeticalPokedexOrder:
 	db DOUBLADE
 	db LITTEN
 	db BRAIXEN
-	db MAROWAK
+	db TOXICROAK
 	db SNOVER
 	db HAWLUCHA
 	db ZOROARK

@@ -208,14 +208,14 @@ PokemonPicPointers::
 	dba VoltorbBackpic
 	dba ElectrodeFrontpic
 	dba ElectrodeBackpic
-	dba ExeggcuteFrontpic
-	dba ExeggcuteBackpic
-	dba ExeggutorFrontpic
-	dba ExeggutorBackpic
-	dba CuboneFrontpic
-	dba CuboneBackpic
-	dba MarowakFrontpic
-	dba MarowakBackpic
+	dba ShroomishFrontpic
+	dba ShroomishBackpic
+	dba BreloomFrontpic
+	dba BreloomBackpic
+	dba CroagunkFrontpic
+	dba CroagunkBackpic
+	dba ToxicroakFrontpic
+	dba ToxicroakBackpic
 	dba SandileFrontpic
 	dba SandileBackpic
 	dba KrokorokFrontpic

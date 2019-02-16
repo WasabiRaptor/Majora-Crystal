@@ -102,10 +102,10 @@ EvosAttacksPointers::
 	dw KinglerEvosAttacks
 	dw VoltorbEvosAttacks
 	dw ElectrodeEvosAttacks
-	dw ExeggcuteEvosAttacks
-	dw ExeggutorEvosAttacks
-	dw CuboneEvosAttacks
-	dw MarowakEvosAttacks
+	dw ShroomishEvosAttacks
+	dw BreloomEvosAttacks
+	dw CroagunkEvosAttacks
+	dw ToxicroakEvosAttacks
 	dw SandileEvosAttacks
 	dw KrokorokEvosAttacks
 	dw KrookodileEvosAttacks

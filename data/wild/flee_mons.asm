@@ -18,7 +18,7 @@ SometimesFleeMons:
 	db -1
 
 OftenFleeMons:
-	db CUBONE
+	db CROAGUNK
 	db DWEBBLE
 	db CRUSTLE
 	db TYROGUE
