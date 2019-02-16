@@ -138,9 +138,9 @@ EvosAttacksPointers::
 	dw JolteonxEvosAttacks
 	dw FlareonxEvosAttacks
 	dw Place3EvosAttacks
-	dw OmanyteEvosAttacks
-	dw OmastarEvosAttacks
-	dw KabutoEvosAttacks
+	dw FinneonEvosAttacks
+	dw LumineonEvosAttacks
+	dw QwilfishEvosAttacks
 	dw ChinchouEvosAttacks
 	dw LanturnEvosAttacks
 	dw StunfiskEvosAttacks

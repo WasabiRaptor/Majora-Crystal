@@ -136,9 +136,9 @@ FramesPointers:
 	dw JolteonxFrames
 	dw FlareonxFrames
 	dw Place3Frames
-	dw OmanyteFrames
-	dw OmastarFrames
-	dw KabutoFrames
+	dw FinneonFrames
+	dw LumineonFrames
+	dw QwilfishFrames
 	dw ChinchouFrames
 	dw LanturnFrames
 	dw StunfiskFrames

@@ -102,7 +102,7 @@ AlphabeticalPokedexOrder:
 	db JOLTEONX
 	db HOUNDOUR
 	db JYNX
-	db KABUTO
+	db QWILFISH
 	db CHINCHOU
 	db FLOETTE
 	db MIMIKYU
@@ -154,8 +154,8 @@ AlphabeticalPokedexOrder:
 	db NOIBAT
 	db BRONZONG
 	db NIDOQUEEN
-	db OMANYTE
-	db OMASTAR
+	db FINNEON
+	db LUMINEON
 	db SCYTHER
 	db SENTRET
 	db FURRET

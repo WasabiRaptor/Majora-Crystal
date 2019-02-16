@@ -160,10 +160,10 @@
 	const JOLTEONX    ; 87
 	const FLAREONX    ; 88
 	const PLACE3    ; 89
-	const OMANYTE    ; 8a
-	const OMASTAR    ; 8b
-	const KABUTO     ; 8c
 	
+	const FINNEON       ; 8a
+	const LUMINEON      ; 8b
+	const QWILFISH      ; 8c
 	const CHINCHOU      ; 8d
 	const LANTURN       ; 8e
 	const STUNFISK      ; 8f

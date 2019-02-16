@@ -137,9 +137,9 @@ PokedexDataPointerTable:
 	dw JolteonxPokedexEntry
 	dw FlareonxPokedexEntry
 	dw Place3PokedexEntry
-	dw OmanytePokedexEntry
-	dw OmastarPokedexEntry
-	dw KabutoPokedexEntry
+	dw FinneonPokedexEntry
+	dw LumineonPokedexEntry
+	dw QwilfishPokedexEntry
 	dw ChinchouPokedexEntry
 	dw LanturnPokedexEntry
 	dw StunfiskPokedexEntry

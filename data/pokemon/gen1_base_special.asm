@@ -138,9 +138,9 @@ KantoMonSpecials:
 	db 110 ; JOLTEONX
 	db 110 ; FLAREONX
 	db  75 ; PLACE3
-	db  90 ; OMANYTE
-	db 115 ; OMASTAR
-	db  45 ; KABUTO
+	db  90 ; FINNEON
+	db 115 ; LUMINEON
+	db  45 ; QWILFISH
 	db  70 ; CHINCHOU
 	db  60 ; LANTURN
 	db  65 ; STUNFISK

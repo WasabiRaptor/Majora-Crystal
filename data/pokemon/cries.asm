@@ -142,9 +142,9 @@ PokemonCries::
 	mon_cry CRY_SWABLU,     $03d,  $100 ; JOLTEONX
 	mon_cry CRY_SWABLU,     $010,  $0a0 ; FLAREONX
 	mon_cry CRY_QUILLADIN,  $0aa,  $17f ; PLACE3
-	mon_cry CRY_LUXRAY,   $0f0,  $081 ; OMANYTE
-	mon_cry CRY_LUXRAY,   $0ff,  $0c0 ; OMASTAR
-	mon_cry CRY_CATERPIE,    $0bb,  $0c0 ; KABUTO
+	mon_cry CRY_LUXRAY,   $0f0,  $081 ; FINNEON
+	mon_cry CRY_LUXRAY,   $0ff,  $0c0 ; LUMINEON
+	mon_cry CRY_CATERPIE,    $0bb,  $0c0 ; QWILFISH
 	mon_cry CRY_PERSIAN,      $0ee,  $081 ; CHINCHOU
 	mon_cry CRY_ZANGOOSE,   $020,  $170 ; LANTURN
 	mon_cry CRY_LEDIAN,      $055,  $081 ; STUNFISK

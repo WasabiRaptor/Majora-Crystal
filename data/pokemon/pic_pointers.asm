@@ -280,12 +280,12 @@ PokemonPicPointers::
 	dba FlareonxBackpic
 	dba Place3Frontpic
 	dba Place3Backpic
-	dba OmanyteFrontpic
-	dba OmanyteBackpic
-	dba OmastarFrontpic
-	dba OmastarBackpic
-	dba KabutoFrontpic
-	dba KabutoBackpic
+	dba FinneonFrontpic
+	dba FinneonBackpic
+	dba LumineonFrontpic
+	dba LumineonBackpic
+	dba QwilfishFrontpic
+	dba QwilfishBackpic
 	dba ChinchouFrontpic
 	dba ChinchouBackpic
 	dba LanturnFrontpic

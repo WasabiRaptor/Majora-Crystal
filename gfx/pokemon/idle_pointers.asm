@@ -136,9 +136,9 @@ AnimationIdlePointers:
 	dw JolteonxAnimationIdle
 	dw FlareonxAnimationIdle
 	dw Place3AnimationIdle
-	dw OmanyteAnimationIdle
-	dw OmastarAnimationIdle
-	dw KabutoAnimationIdle
+	dw FinneonAnimationIdle
+	dw LumineonAnimationIdle
+	dw QwilfishAnimationIdle
 	dw ChinchouAnimationIdle
 	dw LanturnAnimationIdle
 	dw StunfiskAnimationIdle

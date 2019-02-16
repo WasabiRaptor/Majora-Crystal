@@ -220,9 +220,9 @@ NewPokedexOrder:
 	db CHANSEY
 	db SUICUNE
 	db ARMALDO
-	db OMANYTE
-	db OMASTAR
-	db KABUTO
+	db FINNEON
+	db LUMINEON
+	db QWILFISH
 	db CHINCHOU
 	db LANTURN
 	db STUNFISK

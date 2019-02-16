@@ -140,9 +140,9 @@ endc
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw OmanyteEggMoves
+	dw FinneonEggMoves
 	dw NoEggMoves
-	dw KabutoEggMoves
+	dw QwilfishEggMoves
 	dw NoEggMoves
 	dw LanturnEggMoves
 	dw StunfiskEggMoves

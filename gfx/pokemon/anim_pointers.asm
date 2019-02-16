@@ -136,9 +136,9 @@ AnimationPointers:
 	dw JolteonxAnimation
 	dw FlareonxAnimation
 	dw Place3Animation
-	dw OmanyteAnimation
-	dw OmastarAnimation
-	dw KabutoAnimation
+	dw FinneonAnimation
+	dw LumineonAnimation
+	dw QwilfishAnimation
 	dw ChinchouAnimation
 	dw LanturnAnimation
 	dw StunfiskAnimation

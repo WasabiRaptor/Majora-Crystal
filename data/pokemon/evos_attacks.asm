@@ -1902,8 +1902,8 @@ Place3EvosAttacks:
 	db 44, ZAP_CANNON
 	db 0 ; no more level-up moves
 
-OmanyteEvosAttacks:
-	db EVOLVE_LEVEL, 40, OMASTAR
+FinneonEvosAttacks:
+	db EVOLVE_LEVEL, 40, LUMINEON
 	db 0 ; no more evolutions
 	db 1, CONSTRICT
 	db 1, WITHDRAW
@@ -1915,7 +1915,7 @@ OmanyteEvosAttacks:
 	db 55, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-OmastarEvosAttacks:
+LumineonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CONSTRICT
 	db 1, WITHDRAW
@@ -1929,7 +1929,7 @@ OmastarEvosAttacks:
 	db 65, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-KabutoEvosAttacks:
+QwilfishEvosAttacks:
 	db EVOLVE_LEVEL, 40, CHINCHOU
 	db 0 ; no more evolutions
 	db 1, SCRATCH

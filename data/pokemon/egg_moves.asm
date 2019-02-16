@@ -450,7 +450,7 @@ AraquanidEggMoves:
 	db CHARM
 	db -1 ; end
 
-OmanyteEggMoves:
+FinneonEggMoves:
 	db BUBBLEBEAM
 	db AURORA_BEAM
 	db SLAM
@@ -458,7 +458,7 @@ OmanyteEggMoves:
 	db HAZE
 	db -1 ; end
 
-KabutoEggMoves:
+QwilfishEggMoves:
 	db BUBBLEBEAM
 	db AURORA_BEAM
 	db RAPID_SPIN

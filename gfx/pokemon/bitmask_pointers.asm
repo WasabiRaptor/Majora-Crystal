@@ -136,9 +136,9 @@ BitmasksPointers:
 	dw JolteonxBitmasks
 	dw FlareonxBitmasks
 	dw Place3Bitmasks
-	dw OmanyteBitmasks
-	dw OmastarBitmasks
-	dw KabutoBitmasks
+	dw FinneonBitmasks
+	dw LumineonBitmasks
+	dw QwilfishBitmasks
 	dw ChinchouBitmasks
 	dw LanturnBitmasks
 	dw StunfiskBitmasks

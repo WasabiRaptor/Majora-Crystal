@@ -139,9 +139,9 @@ MonMenuIcons:
 	db ICON_FOX         ; JOLTEONX
 	db ICON_FOX         ; FLAREONX
 	db ICON_VOLTORB     ; PLACE3
-	db ICON_SHELL       ; OMANYTE
-	db ICON_SHELL       ; OMASTAR
-	db ICON_SHELL       ; KABUTO
+	db ICON_SHELL       ; FINNEON
+	db ICON_SHELL       ; LUMINEON
+	db ICON_SHELL       ; QWILFISH
 	db ICON_SHELL       ; CHINCHOU
 	db ICON_BIRD        ; LANTURN
 	db ICON_STUNFISK     ; STUNFISK
