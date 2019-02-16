@@ -34,7 +34,7 @@ EeveeEvosAttacks:
 	db 46, SOLARBEAM
 	db 0 ; no more level-up moves
 
-VaporeonEvosAttacks:
+MagikarpEvosAttacks:
 	db EVOLVE_LEVEL, 32, JOLTEON
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -1825,9 +1825,9 @@ DewpiderEvosAttacks:
 	db 0 ; no more level-up moves
 
 AraquanidEvosAttacks:
-	db EVOLVE_ITEM, THUNDERSTONE, JOLTEONX
-	db EVOLVE_ITEM, WATER_STONE, VAPOREONX
-	db EVOLVE_ITEM, FIRE_STONE, FLAREONX
+	db EVOLVE_ITEM, THUNDERSTONE, GYARADOS
+	db EVOLVE_ITEM, WATER_STONE, MAGIKARP
+	db EVOLVE_ITEM, FIRE_STONE, FEEBAS
 	db EVOLVE_HAPPINESS, TR_MORNDAY, ARCHEN
 	db EVOLVE_HAPPINESS, TR_NITE, ARCHEOPS
 	db 0 ; no more evolutions
@@ -1845,7 +1845,7 @@ endc
 	db 42, TAKE_DOWN
 	db 0 ; no more level-up moves
 
-VaporeonxEvosAttacks:
+MagikarpxEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
@@ -1859,7 +1859,7 @@ VaporeonxEvosAttacks:
 	db 52, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-JolteonxEvosAttacks:
+GyaradosEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
@@ -1873,7 +1873,7 @@ JolteonxEvosAttacks:
 	db 52, THUNDER
 	db 0 ; no more level-up moves
 
-FlareonxEvosAttacks:
+FeebasEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
@@ -1887,7 +1887,7 @@ FlareonxEvosAttacks:
 	db 52, FLAMETHROWER
 	db 0 ; no more level-up moves
 
-Place3EvosAttacks:
+MiloticEvosAttacks:
 	db EVOLVE_TRADE, UP_GRADE, LAMPENT
 	db 0 ; no more evolutions
 	db 1, CONVERSION2

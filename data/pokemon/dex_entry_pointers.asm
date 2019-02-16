@@ -1,7 +1,7 @@
 PokedexDataPointerTable:
 ; entries correspond to constants/pokemon_constants.asm
 	dw EeveePokedexEntry
-	dw VaporeonPokedexEntry
+	dw MagikarpPokedexEntry
 	dw JolteonPokedexEntry
 	dw FlareonPokedexEntry
 	dw EspeonPokedexEntry
@@ -133,10 +133,10 @@ PokedexDataPointerTable:
 	dw ArmaldoPokedexEntry
 	dw DewpiderPokedexEntry
 	dw AraquanidPokedexEntry
-	dw VaporeonxPokedexEntry
-	dw JolteonxPokedexEntry
-	dw FlareonxPokedexEntry
-	dw Place3PokedexEntry
+	dw MagikarpxPokedexEntry
+	dw GyaradosPokedexEntry
+	dw FeebasPokedexEntry
+	dw MiloticPokedexEntry
 	dw FinneonPokedexEntry
 	dw LumineonPokedexEntry
 	dw QwilfishPokedexEntry

@@ -1,6 +1,6 @@
 FramesPointers:
 	dw EeveeFrames
-	dw VaporeonFrames
+	dw MagikarpFrames
 	dw JolteonFrames
 	dw FlareonFrames
 	dw EspeonFrames
@@ -132,10 +132,10 @@ FramesPointers:
 	dw ArmaldoFrames
 	dw DewpiderFrames
 	dw AraquanidFrames
-	dw VaporeonxFrames
-	dw JolteonxFrames
-	dw FlareonxFrames
-	dw Place3Frames
+	dw MagikarpxFrames
+	dw GyaradosFrames
+	dw FeebasFrames
+	dw MiloticFrames
 	dw FinneonFrames
 	dw LumineonFrames
 	dw QwilfishFrames

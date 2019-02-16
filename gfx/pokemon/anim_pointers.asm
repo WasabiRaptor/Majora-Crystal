@@ -1,6 +1,6 @@
 AnimationPointers:
 	dw EeveeAnimation
-	dw VaporeonAnimation
+	dw MagikarpAnimation
 	dw JolteonAnimation
 	dw FlareonAnimation
 	dw EspeonAnimation
@@ -132,10 +132,10 @@ AnimationPointers:
 	dw ArmaldoAnimation
 	dw DewpiderAnimation
 	dw AraquanidAnimation
-	dw VaporeonxAnimation
-	dw JolteonxAnimation
-	dw FlareonxAnimation
-	dw Place3Animation
+	dw MagikarpxAnimation
+	dw GyaradosAnimation
+	dw FeebasAnimation
+	dw MiloticAnimation
 	dw FinneonAnimation
 	dw LumineonAnimation
 	dw QwilfishAnimation

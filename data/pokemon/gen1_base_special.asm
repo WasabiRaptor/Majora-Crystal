@@ -134,10 +134,10 @@ KantoMonSpecials:
 	db  95 ; ARMALDO
 	db  48 ; DEWPIDER
 	db  65 ; ARAQUANID
-	db 110 ; VAPOREONX
-	db 110 ; JOLTEONX
-	db 110 ; FLAREONX
-	db  75 ; PLACE3
+	db 110 ; MAGIKARP
+	db 110 ; GYARADOS
+	db 110 ; FEEBAS
+	db  75 ; MILOTIC
 	db  90 ; FINNEON
 	db 115 ; LUMINEON
 	db  45 ; QWILFISH

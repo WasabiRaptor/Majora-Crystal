@@ -7,7 +7,7 @@ SometimesFleeMons:
 	db TANGELA
 	db MR__MIME
 	db ARAQUANID
-	db PLACE3
+	db MILOTIC
 	db HITMONCHAN
 	db HITMONLEE
 	db CYNDAQUIL

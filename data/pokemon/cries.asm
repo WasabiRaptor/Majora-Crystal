@@ -138,10 +138,10 @@ PokemonCries::
 	mon_cry CRY_ARMALDO,      $000,  $100 ; ARMALDO
 	mon_cry CRY_MAGNETON,      $0ff,  $17f ; DEWPIDER
 	mon_cry CRY_SWABLU,     $088,  $0e0 ; ARAQUANID
-	mon_cry CRY_SWABLU,     $0aa,  $17f ; VAPOREONX
-	mon_cry CRY_SWABLU,     $03d,  $100 ; JOLTEONX
-	mon_cry CRY_SWABLU,     $010,  $0a0 ; FLAREONX
-	mon_cry CRY_QUILLADIN,  $0aa,  $17f ; PLACE3
+	mon_cry CRY_SWABLU,     $0aa,  $17f ; MAGIKARP
+	mon_cry CRY_SWABLU,     $03d,  $100 ; GYARADOS
+	mon_cry CRY_SWABLU,     $010,  $0a0 ; FEEBAS
+	mon_cry CRY_QUILLADIN,  $0aa,  $17f ; MILOTIC
 	mon_cry CRY_LUXRAY,   $0f0,  $081 ; FINNEON
 	mon_cry CRY_LUXRAY,   $0ff,  $0c0 ; LUMINEON
 	mon_cry CRY_CATERPIE,    $0bb,  $0c0 ; QWILFISH

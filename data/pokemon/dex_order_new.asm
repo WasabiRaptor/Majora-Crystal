@@ -181,9 +181,9 @@ NewPokedexOrder:
 	db LICKITUNG
 	db TANGELA
 	db ARAQUANID
-	db VAPOREONX
-	db JOLTEONX
-	db FLAREONX
+	db MAGIKARP
+	db GYARADOS
+	db FEEBAS
 	db ARCHEN
 	db ARCHEOPS
 	db HORSEA
@@ -215,7 +215,7 @@ NewPokedexOrder:
 	db BALTOY
 	db XATU
 	db GIGALITH
-	db PLACE3
+	db MILOTIC
 	db LAMPENT
 	db CHANSEY
 	db SUICUNE

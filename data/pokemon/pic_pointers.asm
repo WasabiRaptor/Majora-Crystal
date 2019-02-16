@@ -4,8 +4,8 @@ PokemonPicPointers::
 ; entries correspond to Pokémon species, two apiece
 	dba EeveeFrontpic
 	dba EeveeBackpic
-	dba VaporeonFrontpic
-	dba VaporeonBackpic
+	dba MagikarpFrontpic
+	dba MagikarpBackpic
 	dba JolteonFrontpic
 	dba JolteonBackpic
 	dba FlareonFrontpic
@@ -272,14 +272,14 @@ PokemonPicPointers::
 	dba DewpiderBackpic
 	dba AraquanidFrontpic
 	dba EeveeBackpic
-	dba VaporeonxFrontpic
-	dba VaporeonxBackpic
-	dba JolteonxFrontpic
-	dba JolteonxBackpic
-	dba FlareonxFrontpic
-	dba FlareonxBackpic
-	dba Place3Frontpic
-	dba Place3Backpic
+	dba MagikarpxFrontpic
+	dba MagikarpxBackpic
+	dba GyaradosFrontpic
+	dba GyaradosBackpic
+	dba FeebasFrontpic
+	dba FeebasBackpic
+	dba MiloticFrontpic
+	dba MiloticBackpic
 	dba FinneonFrontpic
 	dba FinneonBackpic
 	dba LumineonFrontpic

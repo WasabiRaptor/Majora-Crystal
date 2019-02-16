@@ -2,7 +2,7 @@
 
 EvosAttacksPointers::
 	dw EeveeEvosAttacks
-	dw VaporeonEvosAttacks
+	dw MagikarpEvosAttacks
 	dw JolteonEvosAttacks
 	dw FlareonEvosAttacks
 	dw EspeonEvosAttacks
@@ -134,10 +134,10 @@ EvosAttacksPointers::
 	dw ArmaldoEvosAttacks
 	dw DewpiderEvosAttacks
 	dw AraquanidEvosAttacks
-	dw VaporeonxEvosAttacks
-	dw JolteonxEvosAttacks
-	dw FlareonxEvosAttacks
-	dw Place3EvosAttacks
+	dw MagikarpxEvosAttacks
+	dw GyaradosEvosAttacks
+	dw FeebasEvosAttacks
+	dw MiloticEvosAttacks
 	dw FinneonEvosAttacks
 	dw LumineonEvosAttacks
 	dw QwilfishEvosAttacks

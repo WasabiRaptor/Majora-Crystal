@@ -156,11 +156,10 @@
 	const DEWPIDER      ; 84
 	const ARAQUANID     ; 85
 
-	const VAPOREONX   ; 86
-	const JOLTEONX    ; 87
-	const FLAREONX    ; 88
-	const PLACE3    ; 89
-	
+	const MAGIKARP      ; 86
+	const GYARADOS      ; 87
+	const FEEBAS        ; 88
+	const MILOTIC       ; 89
 	const FINNEON       ; 8a
 	const LUMINEON      ; 8b
 	const QWILFISH      ; 8c

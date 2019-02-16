@@ -135,10 +135,10 @@ MonMenuIcons:
 	db ICON_ARMALDO      ; ARMALDO
 	db ICON_BLOB        ; DEWPIDER
 	db ICON_FOX         ; ARAQUANID
-	db ICON_FOX         ; VAPOREONX
-	db ICON_FOX         ; JOLTEONX
-	db ICON_FOX         ; FLAREONX
-	db ICON_VOLTORB     ; PLACE3
+	db ICON_FOX         ; MAGIKARP
+	db ICON_FOX         ; GYARADOS
+	db ICON_FOX         ; FEEBAS
+	db ICON_VOLTORB     ; MILOTIC
 	db ICON_SHELL       ; FINNEON
 	db ICON_SHELL       ; LUMINEON
 	db ICON_SHELL       ; QWILFISH

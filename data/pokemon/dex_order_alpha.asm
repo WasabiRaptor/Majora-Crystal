@@ -65,7 +65,7 @@ AlphabeticalPokedexOrder:
 	db PERSIAN
 	db PROBOPASS
 	db TORRACAT
-	db FLAREONX
+	db FEEBAS
 	db WEAVILE
 	db PUPITAR
 	db FORRETRESS
@@ -99,7 +99,7 @@ AlphabeticalPokedexOrder:
 	db ZWEILOUS
 	db VAPOREON
 	db NIDORAN_M
-	db JOLTEONX
+	db GYARADOS
 	db HOUNDOUR
 	db JYNX
 	db QWILFISH
@@ -174,7 +174,7 @@ AlphabeticalPokedexOrder:
 	db CUTIEFLY
 	db RIBOMBEE
 	db AMOONGUS
-	db PLACE3
+	db MILOTIC
 	db LUXIO
 	db LAMPENT
 	db FLAAFFY
@@ -238,7 +238,7 @@ AlphabeticalPokedexOrder:
 	db ARCHEOPS
 	db CARBINK
 	db DRILLBUR
-	db VAPOREONX
+	db MAGIKARP
 	db ALTARIA
 	db SWABLU
 	db JOLTEON
