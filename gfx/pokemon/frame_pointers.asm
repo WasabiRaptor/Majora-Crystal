@@ -139,9 +139,9 @@ FramesPointers:
 	dw OmanyteFrames
 	dw OmastarFrames
 	dw KabutoFrames
-	dw KabutopsFrames
-	dw AerodactylFrames
-	dw SnorlaxFrames
+	dw ChinchouFrames
+	dw LanturnFrames
+	dw StunfiskFrames
 	dw DwebbleFrames
 	dw CrustleFrames
 	dw TyrogueFrames

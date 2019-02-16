@@ -139,9 +139,9 @@ AnimationIdlePointers:
 	dw OmanyteAnimationIdle
 	dw OmastarAnimationIdle
 	dw KabutoAnimationIdle
-	dw KabutopsAnimationIdle
-	dw AerodactylAnimationIdle
-	dw SnorlaxAnimationIdle
+	dw ChinchouAnimationIdle
+	dw LanturnAnimationIdle
+	dw StunfiskAnimationIdle
 	dw DwebbleAnimationIdle
 	dw CrustleAnimationIdle
 	dw TyrogueAnimationIdle

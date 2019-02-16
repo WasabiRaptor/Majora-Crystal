@@ -2,7 +2,7 @@
 
 AlphabeticalPokedexOrder:
 	db FLABEBE
-	db AERODACTYL
+	db LANTURN
 	db HOUNDOOM
 	db FLORGES
 	db INCINEROAR
@@ -103,7 +103,7 @@ AlphabeticalPokedexOrder:
 	db HOUNDOUR
 	db JYNX
 	db KABUTO
-	db KABUTOPS
+	db CHINCHOU
 	db FLOETTE
 	db MIMIKYU
 	db KANGASKHAN
@@ -209,7 +209,7 @@ AlphabeticalPokedexOrder:
 	db SPIRITOMB
 	db DUSKNOIR
 	db XATU
-	db SNORLAX
+	db STUNFISK
 	db FROSSLASS
 	db MEOWTH
 	db AXEW

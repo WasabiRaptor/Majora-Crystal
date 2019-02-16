@@ -140,9 +140,9 @@ PokedexDataPointerTable:
 	dw OmanytePokedexEntry
 	dw OmastarPokedexEntry
 	dw KabutoPokedexEntry
-	dw KabutopsPokedexEntry
-	dw AerodactylPokedexEntry
-	dw SnorlaxPokedexEntry
+	dw ChinchouPokedexEntry
+	dw LanturnPokedexEntry
+	dw StunfiskPokedexEntry
 	dw DwebblePokedexEntry
 	dw CrustlePokedexEntry
 	dw TyroguePokedexEntry

@@ -286,12 +286,12 @@ PokemonPicPointers::
 	dba OmastarBackpic
 	dba KabutoFrontpic
 	dba KabutoBackpic
-	dba KabutopsFrontpic
-	dba KabutopsBackpic
-	dba AerodactylFrontpic
-	dba AerodactylBackpic
-	dba SnorlaxFrontpic
-	dba SnorlaxBackpic
+	dba ChinchouFrontpic
+	dba ChinchouBackpic
+	dba LanturnFrontpic
+	dba LanturnBackpic
+	dba StunfiskFrontpic
+	dba StunfiskBackpic
 	dba DwebbleFrontpic
 	dba DwebbleBackpic
 	dba CrustleFrontpic

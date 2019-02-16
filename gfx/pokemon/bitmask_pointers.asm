@@ -139,9 +139,9 @@ BitmasksPointers:
 	dw OmanyteBitmasks
 	dw OmastarBitmasks
 	dw KabutoBitmasks
-	dw KabutopsBitmasks
-	dw AerodactylBitmasks
-	dw SnorlaxBitmasks
+	dw ChinchouBitmasks
+	dw LanturnBitmasks
+	dw StunfiskBitmasks
 	dw DwebbleBitmasks
 	dw CrustleBitmasks
 	dw TyrogueBitmasks

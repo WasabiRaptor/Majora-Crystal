@@ -141,9 +141,9 @@ EvosAttacksPointers::
 	dw OmanyteEvosAttacks
 	dw OmastarEvosAttacks
 	dw KabutoEvosAttacks
-	dw KabutopsEvosAttacks
-	dw AerodactylEvosAttacks
-	dw SnorlaxEvosAttacks
+	dw ChinchouEvosAttacks
+	dw LanturnEvosAttacks
+	dw StunfiskEvosAttacks
 	dw DwebbleEvosAttacks
 	dw CrustleEvosAttacks
 	dw TyrogueEvosAttacks

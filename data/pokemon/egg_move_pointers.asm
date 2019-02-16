@@ -144,8 +144,8 @@ endc
 	dw NoEggMoves
 	dw KabutoEggMoves
 	dw NoEggMoves
-	dw AerodactylEggMoves
-	dw SnorlaxEggMoves
+	dw LanturnEggMoves
+	dw StunfiskEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

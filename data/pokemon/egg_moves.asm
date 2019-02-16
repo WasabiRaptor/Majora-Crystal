@@ -466,7 +466,7 @@ KabutoEggMoves:
 	db FLAIL
 	db -1 ; end
 
-AerodactylEggMoves:
+LanturnEggMoves:
 	db WHIRLWIND
 	db PURSUIT
 	db FORESIGHT
@@ -475,7 +475,7 @@ if !_BRASS
 endc
 	db -1 ; end
 
-SnorlaxEggMoves:
+StunfiskEggMoves:
 	db LICK
 if !_BRASS
 	db CHARM

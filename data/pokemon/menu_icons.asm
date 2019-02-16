@@ -142,9 +142,9 @@ MonMenuIcons:
 	db ICON_SHELL       ; OMANYTE
 	db ICON_SHELL       ; OMASTAR
 	db ICON_SHELL       ; KABUTO
-	db ICON_SHELL       ; KABUTOPS
-	db ICON_BIRD        ; AERODACTYL
-	db ICON_SNORLAX     ; SNORLAX
+	db ICON_SHELL       ; CHINCHOU
+	db ICON_BIRD        ; LANTURN
+	db ICON_STUNFISK     ; STUNFISK
 	db ICON_BIRD        ; DWEBBLE
 	db ICON_BIRD        ; CRUSTLE
 	db ICON_BIRD        ; TYROGUE

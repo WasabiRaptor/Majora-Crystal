@@ -145,9 +145,9 @@ PokemonCries::
 	mon_cry CRY_LUXRAY,   $0f0,  $081 ; OMANYTE
 	mon_cry CRY_LUXRAY,   $0ff,  $0c0 ; OMASTAR
 	mon_cry CRY_CATERPIE,    $0bb,  $0c0 ; KABUTO
-	mon_cry CRY_PERSIAN,      $0ee,  $081 ; KABUTOPS
-	mon_cry CRY_ZANGOOSE,   $020,  $170 ; AERODACTYL
-	mon_cry CRY_LEDIAN,      $055,  $081 ; SNORLAX
+	mon_cry CRY_PERSIAN,      $0ee,  $081 ; CHINCHOU
+	mon_cry CRY_ZANGOOSE,   $020,  $170 ; LANTURN
+	mon_cry CRY_LEDIAN,      $055,  $081 ; STUNFISK
 	mon_cry CRY_ROTOM,      $080,  $0c0 ; DWEBBLE
 	mon_cry CRY_PERSIAN,      $0ff,  $100 ; CRUSTLE
 	mon_cry CRY_ROTOM,      $0f8,  $0c0 ; TYROGUE

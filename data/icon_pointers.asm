@@ -32,7 +32,7 @@ IconPointers:
 	dw JellyfishIcon
 	dw MothIcon
 	dw BatIcon
-	dw SnorlaxIcon
+	dw StunfiskIcon
 	dw CelebiIcon
 	dw ShayminIcon
 	dw AnorithIcon

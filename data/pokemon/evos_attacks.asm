@@ -1930,7 +1930,7 @@ OmastarEvosAttacks:
 	db 0 ; no more level-up moves
 
 KabutoEvosAttacks:
-	db EVOLVE_LEVEL, 40, KABUTOPS
+	db EVOLVE_LEVEL, 40, CHINCHOU
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, HARDEN
@@ -1942,7 +1942,7 @@ KabutoEvosAttacks:
 	db 55, ANCIENTPOWER
 	db 0 ; no more level-up moves
 
-KabutopsEvosAttacks:
+ChinchouEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, HARDEN
@@ -1956,7 +1956,7 @@ KabutopsEvosAttacks:
 	db 65, ANCIENTPOWER
 	db 0 ; no more level-up moves
 
-AerodactylEvosAttacks:
+LanturnEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WING_ATTACK
 	db 8, AGILITY
@@ -1968,7 +1968,7 @@ AerodactylEvosAttacks:
 	db 50, HYPER_BEAM
 	db 0 ; no more level-up moves
 
-SnorlaxEvosAttacks:
+StunfiskEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 8, AMNESIA

@@ -31,7 +31,7 @@ SpriteMons:
 	db ARMALDO
 	db RHYDON
 	db TYROGUE
-	db SNORLAX
+	db STUNFISK
 	db GYARADOS
 	db SHAYMIN
 	db CELEBI

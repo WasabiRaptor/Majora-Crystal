@@ -139,9 +139,9 @@ AnimationPointers:
 	dw OmanyteAnimation
 	dw OmastarAnimation
 	dw KabutoAnimation
-	dw KabutopsAnimation
-	dw AerodactylAnimation
-	dw SnorlaxAnimation
+	dw ChinchouAnimation
+	dw LanturnAnimation
+	dw StunfiskAnimation
 	dw DwebbleAnimation
 	dw CrustleAnimation
 	dw TyrogueAnimation

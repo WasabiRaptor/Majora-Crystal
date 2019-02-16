@@ -32,7 +32,7 @@
 	const ICON_JELLYFISH
 	const ICON_MOTH
 	const ICON_BAT
-	const ICON_SNORLAX
+	const ICON_STUNFISK
 	const ICON_HO_OH
 	const ICON_LUGIA
 	const ICON_ANORITH

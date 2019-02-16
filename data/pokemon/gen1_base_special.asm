@@ -141,9 +141,9 @@ KantoMonSpecials:
 	db  90 ; OMANYTE
 	db 115 ; OMASTAR
 	db  45 ; KABUTO
-	db  70 ; KABUTOPS
-	db  60 ; AERODACTYL
-	db  65 ; SNORLAX
+	db  70 ; CHINCHOU
+	db  60 ; LANTURN
+	db  65 ; STUNFISK
 	db 125 ; DWEBBLE
 	db 125 ; CRUSTLE
 	db 125 ; TYROGUE

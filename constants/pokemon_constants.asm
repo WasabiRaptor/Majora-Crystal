@@ -163,10 +163,10 @@
 	const OMANYTE    ; 8a
 	const OMASTAR    ; 8b
 	const KABUTO     ; 8c
-	const KABUTOPS   ; 8d
-	const AERODACTYL ; 8e
-	const SNORLAX    ; 8f
-
+	
+	const CHINCHOU      ; 8d
+	const LANTURN       ; 8e
+	const STUNFISK      ; 8f
 	const DWEBBLE   	; 90
 	const CRUSTLE     	; 91
 	const TYROGUE    	; 92
