@@ -5,7 +5,7 @@ Cries:
 	dba Cry_Goodra
 	dba Cry_Flareon
 	dba Cry_Ledian
-	dba Cry_Voltorb
+	dba Cry_Morelull
 	dba Cry_Joltik
 	dba Cry_Nidoqueen
 	dba Cry_Rotom
@@ -31,7 +31,7 @@ Cries:
 	dba Cry_Leafeon
 	dba Cry_Sentret
 	dba Cry_Luxray
-	dba Cry_Krabby
+	dba Cry_Whirlipede
 	dba Cry_Flaaffy
 	dba Cry_Porygon2
 	dba Cry_Zangoose

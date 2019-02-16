@@ -124,6 +124,6 @@ TreeMonSet_Forest:
 	db -1
 
 TreeMonSet_Rock:
-	db 90, KRABBY,     15
+	db 90, WHIRLIPEDE,     15
 	db 10, UNOWN,    15
 	db -1

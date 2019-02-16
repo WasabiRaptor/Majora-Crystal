@@ -24,17 +24,17 @@ FishGroups:
 .Shore_Old:
 	db  70 percent + 1, LAPRAS,   10
 	db  85 percent + 1, LAPRAS,   10
-	db 100 percent,     KRABBY,     10
+	db 100 percent,     WHIRLIPEDE,     10
 .Shore_Good:
 	db  35 percent,     LAPRAS,   20
-	db  70 percent,     KRABBY,     20
-	db  90 percent + 1, KRABBY,     20
+	db  70 percent,     WHIRLIPEDE,     20
+	db  90 percent + 1, WHIRLIPEDE,     20
 	db 100 percent,     time_group 0
 .Shore_Super:
-	db  40 percent,     KRABBY,     40
+	db  40 percent,     WHIRLIPEDE,     40
 	db  70 percent,     time_group 1
-	db  90 percent + 1, KRABBY,     40
-	db 100 percent,     KINGLER,    40
+	db  90 percent + 1, WHIRLIPEDE,     40
+	db 100 percent,     SCOLIPEDE,    40
 
 .Ocean_Old:
 	db  70 percent + 1, LAPRAS,   10
@@ -159,16 +159,16 @@ FishGroups:
 .WhirlIslands_Old:
 	db  70 percent + 1, LAPRAS,   10
 	db  85 percent + 1, LAPRAS,   10
-	db 100 percent,     KRABBY,     10
+	db 100 percent,     WHIRLIPEDE,     10
 .WhirlIslands_Good:
 	db  35 percent,     LAPRAS,   20
-	db  70 percent,     KRABBY,     20
-	db  90 percent + 1, KRABBY,     20
+	db  70 percent,     WHIRLIPEDE,     20
+	db  90 percent + 1, WHIRLIPEDE,     20
 	db 100 percent,     time_group 18
 .WhirlIslands_Super:
-	db  40 percent,     KRABBY,     40
+	db  40 percent,     WHIRLIPEDE,     40
 	db  70 percent,     time_group 19
-	db  90 percent + 1, KINGLER,    40
+	db  90 percent + 1, SCOLIPEDE,    40
 	db 100 percent,     MISMAGIUS,     40
 
 .Piloswine_NoSwarm_Old:

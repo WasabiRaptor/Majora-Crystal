@@ -27,7 +27,7 @@ SpriteMons:
 	db DEERLING
 	db AZUMARILL
 	db IGGLYBUFF
-	db VOLTORB
+	db MORELULL
 	db ARMALDO
 	db DRAMPA
 	db TYROGUE

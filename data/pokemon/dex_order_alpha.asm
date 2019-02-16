@@ -55,7 +55,7 @@ AlphabeticalPokedexOrder:
 	db ARAQUANID
 	db TOGEPI
 	db FLOATZEL
-	db ELECTRODE
+	db SHIINOTIC
 	db ARTICUNO
 	db ENTEI
 	db ARCHEN
@@ -95,7 +95,7 @@ AlphabeticalPokedexOrder:
 	db MISDREAVUS
 	db BISHARP
 	db PAWNIARD
-	db HYPNO
+	db VENIPEDE
 	db ZWEILOUS
 	db VAPOREON
 	db NIDORAN_M
@@ -108,9 +108,9 @@ AlphabeticalPokedexOrder:
 	db MIMIKYU
 	db GOODRA
 	db YAMASK
-	db KINGLER
+	db SCOLIPEDE
 	db TYMPOLE
-	db KRABBY
+	db WHIRLIPEDE
 	db ARMALDO
 	db HAKAMO_O
 	db LATIOS
@@ -244,7 +244,7 @@ AlphabeticalPokedexOrder:
 	db JOLTEON
 	db CHESNAUGHT
 	db ZANGOOSE
-	db VOLTORB
+	db MORELULL
 	db LEDIAN
 	db GLACEON
 	db LYCANROC

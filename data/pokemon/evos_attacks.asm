@@ -1321,7 +1321,7 @@ ScytherEvosAttacks:
 	db 0 ; no more level-up moves
 
 ScizorEvosAttacks:
-	db EVOLVE_LEVEL, 26, HYPNO
+	db EVOLVE_LEVEL, 26, VENIPEDE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, HYPNOSIS
@@ -1335,7 +1335,7 @@ ScizorEvosAttacks:
 	db 45, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
-HypnoEvosAttacks:
+VenipedeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, HYPNOSIS
@@ -1351,8 +1351,8 @@ HypnoEvosAttacks:
 	db 60, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
-KrabbyEvosAttacks:
-	db EVOLVE_LEVEL, 28, KINGLER
+WhirlipedeEvosAttacks:
+	db EVOLVE_LEVEL, 28, SCOLIPEDE
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 5, LEER
@@ -1364,7 +1364,7 @@ KrabbyEvosAttacks:
 	db 41, CRABHAMMER
 	db 0 ; no more level-up moves
 
-KinglerEvosAttacks:
+ScolipedeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 1, LEER
@@ -1378,8 +1378,8 @@ KinglerEvosAttacks:
 	db 49, CRABHAMMER
 	db 0 ; no more level-up moves
 
-VoltorbEvosAttacks:
-	db EVOLVE_LEVEL, 30, ELECTRODE
+MorelullEvosAttacks:
+	db EVOLVE_LEVEL, 30, SHIINOTIC
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 9, SCREECH
@@ -1392,7 +1392,7 @@ VoltorbEvosAttacks:
 	db 41, MIRROR_COAT
 	db 0 ; no more level-up moves
 
-ElectrodeEvosAttacks:
+ShiinoticEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, SCREECH

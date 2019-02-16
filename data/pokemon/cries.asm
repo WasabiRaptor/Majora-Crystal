@@ -101,11 +101,11 @@ PokemonCries::
 	mon_cry CRY_JOLTIK,         $000,  $17f ; YANMEGA
 	mon_cry CRY_TOGEPI,       $0ff,  $140 ; SCYTHER
 	mon_cry CRY_SCIZOR,     $088,  $0a0 ; SCIZOR
-	mon_cry CRY_SCIZOR,     $0ee,  $0c0 ; HYPNO
-	mon_cry CRY_KRABBY,      $020,  $160 ; KRABBY
-	mon_cry CRY_KRABBY,      $0ee,  $160 ; KINGLER
-	mon_cry CRY_VOLTORB,     $0ed,  $100 ; VOLTORB
-	mon_cry CRY_VOLTORB,     $0a8,  $110 ; ELECTRODE
+	mon_cry CRY_SCIZOR,     $0ee,  $0c0 ; VENIPEDE
+	mon_cry CRY_WHIRLIPEDE,      $020,  $160 ; WHIRLIPEDE
+	mon_cry CRY_WHIRLIPEDE,      $0ee,  $160 ; SCOLIPEDE
+	mon_cry CRY_MORELULL,     $0ed,  $100 ; MORELULL
+	mon_cry CRY_MORELULL,     $0a8,  $110 ; SHIINOTIC
 	mon_cry CRY_MIENFOO,     $000,  $100 ; SHROOMISH
 	mon_cry CRY_SCIZOR,     $000,  $100 ; BRELOOM
 	mon_cry CRY_PURRLOIN,    $000,  $100 ; CROAGUNK
@@ -126,10 +126,10 @@ PokemonCries::
 	mon_cry CRY_CATERPIE,    $010,  $17f ; HAUNTER
 	mon_cry CRY_SENTRET,       $002,  $0a0 ; GENGAR
 	mon_cry CRY_SENTRET,       $000,  $100 ; OSHAWOTT
-	mon_cry CRY_KRABBY,      $008,  $0c0 ; DEWOTT
+	mon_cry CRY_WHIRLIPEDE,      $008,  $0c0 ; DEWOTT
 	mon_cry CRY_CATERPIE,    $000,  $100 ; SAMUROTT
 	mon_cry CRY_SCIZOR,     $0ff,  $17f ; BUIZEL
-	mon_cry CRY_VOLTORB,     $08f,  $17f ; FLOATZEL
+	mon_cry CRY_MORELULL,     $08f,  $17f ; FLOATZEL
 	mon_cry CRY_CHARMANDER,  $0ff,  $0b0 ; AZURIL
 	mon_cry CRY_MAGNEZONE,   $000,  $100 ; MARILL
 	mon_cry CRY_SQUIRTLE,    $011,  $0c0 ; AZUMARILL

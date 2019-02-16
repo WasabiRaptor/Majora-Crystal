@@ -95,11 +95,11 @@ AnimationPointers:
 	dw YanmegaAnimation
 	dw ScytherAnimation
 	dw ScizorAnimation
-	dw HypnoAnimation
-	dw KrabbyAnimation
-	dw KinglerAnimation
-	dw VoltorbAnimation
-	dw ElectrodeAnimation
+	dw VenipedeAnimation
+	dw WhirlipedeAnimation
+	dw ScolipedeAnimation
+	dw MorelullAnimation
+	dw ShiinoticAnimation
 	dw ShroomishAnimation
 	dw BreloomAnimation
 	dw CroagunkAnimation

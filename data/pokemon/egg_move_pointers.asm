@@ -96,7 +96,7 @@ EggMovePointers::
 	dw ScytherEggMoves
 	dw ScizorEggMoves
 	dw NoEggMoves
-	dw KrabbyEggMoves
+	dw WhirlipedeEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

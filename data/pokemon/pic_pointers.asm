@@ -198,16 +198,16 @@ PokemonPicPointers::
 	dba ScytherBackpic
 	dba ScizorFrontpic
 	dba ScizorBackpic
-	dba HypnoFrontpic
-	dba HypnoBackpic
-	dba KrabbyFrontpic
-	dba KrabbyBackpic
-	dba KinglerFrontpic
-	dba KinglerBackpic
-	dba VoltorbFrontpic
-	dba VoltorbBackpic
-	dba ElectrodeFrontpic
-	dba ElectrodeBackpic
+	dba VenipedeFrontpic
+	dba VenipedeBackpic
+	dba WhirlipedeFrontpic
+	dba WhirlipedeBackpic
+	dba ScolipedeFrontpic
+	dba ScolipedeBackpic
+	dba MorelullFrontpic
+	dba MorelullBackpic
+	dba ShiinoticFrontpic
+	dba ShiinoticBackpic
 	dba ShroomishFrontpic
 	dba ShroomishBackpic
 	dba BreloomFrontpic

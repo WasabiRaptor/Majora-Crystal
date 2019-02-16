@@ -97,11 +97,11 @@ EvosAttacksPointers::
 	dw YanmegaEvosAttacks
 	dw ScytherEvosAttacks
 	dw ScizorEvosAttacks
-	dw HypnoEvosAttacks
-	dw KrabbyEvosAttacks
-	dw KinglerEvosAttacks
-	dw VoltorbEvosAttacks
-	dw ElectrodeEvosAttacks
+	dw VenipedeEvosAttacks
+	dw WhirlipedeEvosAttacks
+	dw ScolipedeEvosAttacks
+	dw MorelullEvosAttacks
+	dw ShiinoticEvosAttacks
 	dw ShroomishEvosAttacks
 	dw BreloomEvosAttacks
 	dw CroagunkEvosAttacks

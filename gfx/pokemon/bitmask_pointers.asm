@@ -95,11 +95,11 @@ BitmasksPointers:
 	dw YanmegaBitmasks
 	dw ScytherBitmasks
 	dw ScizorBitmasks
-	dw HypnoBitmasks
-	dw KrabbyBitmasks
-	dw KinglerBitmasks
-	dw VoltorbBitmasks
-	dw ElectrodeBitmasks
+	dw VenipedeBitmasks
+	dw WhirlipedeBitmasks
+	dw ScolipedeBitmasks
+	dw MorelullBitmasks
+	dw ShiinoticBitmasks
 	dw ShroomishBitmasks
 	dw BreloomBitmasks
 	dw CroagunkBitmasks

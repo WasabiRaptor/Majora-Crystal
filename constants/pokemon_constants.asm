@@ -114,13 +114,11 @@
 	const YANMEGA     	; 5e
 	const SCYTHER       ; 5f
 	const SCIZOR    	; 60
-
-	const HYPNO      ; 61
-	const KRABBY     ; 62
-	const KINGLER    ; 63
-	const VOLTORB    ; 64
-	const ELECTRODE  ; 65
-
+	const VENIPEDE      ; 61
+	const WHIRLIPEDE    ; 62
+	const SCOLIPEDE     ; 63
+	const MORELULL      ; 64
+	const SHIINOTIC     ; 65
 	const SHROOMISH     ; 66
 	const BRELOOM       ; 67
 	const CROAGUNK      ; 68

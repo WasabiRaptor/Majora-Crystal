@@ -88,7 +88,7 @@ NewPokedexOrder:
 	db ZANGOOSE
 	db FENNEKIN
 	db SCIZOR
-	db HYPNO
+	db VENIPEDE
 	db FLABEBE
 	db FLOETTE
 	db FLORGES
@@ -120,8 +120,8 @@ NewPokedexOrder:
 	db MUK
 	db SUDOWOODO
 	db PASSIMIAN
-	db VOLTORB
-	db ELECTRODE
+	db MORELULL
+	db SHIINOTIC
 	db HOUNDOOM
 	db FROSSLASS
 	db SWINUB
@@ -164,8 +164,8 @@ NewPokedexOrder:
 	db PILOSWINE
 	db DEERLING
 	db SAWSBUCK
-	db KRABBY
-	db KINGLER
+	db WHIRLIPEDE
+	db SCOLIPEDE
 	db UNOWN
 	db GENGAR
 	db OSHAWOTT

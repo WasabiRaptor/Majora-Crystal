@@ -857,10 +857,10 @@ Cry_Ledian:
 	musicheader 1, 6, Cry_Ledian_Ch6
 	musicheader 1, 8, Cry_Ledian_Ch8
 
-Cry_Voltorb:
-	musicheader 3, 5, Cry_Voltorb_Ch5
-	musicheader 1, 6, Cry_Voltorb_Ch6
-	musicheader 1, 8, Cry_Voltorb_Ch8
+Cry_Morelull:
+	musicheader 3, 5, Cry_Morelull_Ch5
+	musicheader 1, 6, Cry_Morelull_Ch6
+	musicheader 1, 8, Cry_Morelull_Ch8
 
 Cry_Joltik:
 	musicheader 3, 5, Cry_Joltik_Ch5
@@ -987,10 +987,10 @@ Cry_Luxray:
 	musicheader 1, 6, Cry_Luxray_Ch6
 	musicheader 1, 8, Cry_Luxray_Ch8
 
-Cry_Krabby:
-	musicheader 3, 5, Cry_Krabby_Ch5
-	musicheader 1, 6, Cry_Krabby_Ch6
-	musicheader 1, 8, Cry_Krabby_Ch8
+Cry_Whirlipede:
+	musicheader 3, 5, Cry_Whirlipede_Ch5
+	musicheader 1, 6, Cry_Whirlipede_Ch6
+	musicheader 1, 8, Cry_Whirlipede_Ch8
 
 Cry_Flaaffy:
 	musicheader 3, 5, Cry_Flaaffy_Ch5
@@ -1324,7 +1324,7 @@ Cry_Passimian_Ch8:
 	noise __,  9, $61, $11
 	endchannel
 
-Cry_Voltorb_Ch5:
+Cry_Morelull_Ch5:
 	sound_duty 2, 2, 3, 3
 	sound __,  7, $83, $0247
 	sound __, 16, $62, $0226
@@ -1332,10 +1332,10 @@ Cry_Voltorb_Ch5:
 	sound __, 10, $63, $0206
 	sound __, 16, $82, $0225
 	sound __, 16, $42, $0207
-Cry_Voltorb_Ch6:
+Cry_Morelull_Ch6:
 	endchannel
 
-Cry_Voltorb_Ch8:
+Cry_Morelull_Ch8:
 	noise __,  9, $d4, $8c
 	noise __,  5, $e2, $9c
 	noise __, 16, $c6, $8c
@@ -1973,7 +1973,7 @@ Cry_Luxray_Ch8:
 	noise __,  9, $b1, $44
 	endchannel
 
-Cry_Krabby_Ch5:
+Cry_Whirlipede_Ch5:
 	sound_duty 0, 0, 3, 3
 	sound __, 14, $f1, $0511
 	sound __, 14, $e1, $0515
@@ -1981,7 +1981,7 @@ Cry_Krabby_Ch5:
 	sound __,  9, $d1, $0511
 	endchannel
 
-Cry_Krabby_Ch6:
+Cry_Whirlipede_Ch6:
 	sound_duty 1, 1, 1, 0
 	sound __, 13, $e1, $050c
 	sound __, 13, $d1, $0510
@@ -1989,7 +1989,7 @@ Cry_Krabby_Ch6:
 	sound __,  9, $c1, $050a
 	endchannel
 
-Cry_Krabby_Ch8:
+Cry_Whirlipede_Ch8:
 	noise __, 15, $f2, $65
 	noise __, 14, $e2, $55
 	noise __, 15, $d2, $56

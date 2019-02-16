@@ -8,7 +8,7 @@
 	const CRY_GOODRA
 	const CRY_CHARMANDER
 	const CRY_GRIMER
-	const CRY_VOLTORB
+	const CRY_MORELULL
 	const CRY_JOLTIK
 	const CRY_NIDOQUEEN
 	const CRY_ROTOM
@@ -34,7 +34,7 @@
 	const CRY_SQUIRTLE
 	const CRY_SENTRET
 	const CRY_LUXRAY
-	const CRY_KRABBY
+	const CRY_WHIRLIPEDE
 	const CRY_FLAAFFY
 	const CRY_PORYGON2
 	const CRY_ZANGOOSE

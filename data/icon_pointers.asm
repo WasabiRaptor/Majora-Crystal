@@ -20,7 +20,7 @@ IconPointers:
 	dw ShellIcon
 	dw BlobIcon
 	dw SerpentIcon
-	dw VoltorbIcon
+	dw MorelullIcon
 	dw SquirtleIcon
 	dw BulbasaurIcon
 	dw CharmanderIcon

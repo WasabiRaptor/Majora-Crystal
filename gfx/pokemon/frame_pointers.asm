@@ -95,11 +95,11 @@ FramesPointers:
 	dw YanmegaFrames
 	dw ScytherFrames
 	dw ScizorFrames
-	dw HypnoFrames
-	dw KrabbyFrames
-	dw KinglerFrames
-	dw VoltorbFrames
-	dw ElectrodeFrames
+	dw VenipedeFrames
+	dw WhirlipedeFrames
+	dw ScolipedeFrames
+	dw MorelullFrames
+	dw ShiinoticFrames
 	dw ShroomishFrames
 	dw BreloomFrames
 	dw CroagunkFrames

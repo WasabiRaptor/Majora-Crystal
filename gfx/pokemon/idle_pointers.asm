@@ -95,11 +95,11 @@ AnimationIdlePointers:
 	dw YanmegaAnimationIdle
 	dw ScytherAnimationIdle
 	dw ScizorAnimationIdle
-	dw HypnoAnimationIdle
-	dw KrabbyAnimationIdle
-	dw KinglerAnimationIdle
-	dw VoltorbAnimationIdle
-	dw ElectrodeAnimationIdle
+	dw VenipedeAnimationIdle
+	dw WhirlipedeAnimationIdle
+	dw ScolipedeAnimationIdle
+	dw MorelullAnimationIdle
+	dw ShiinoticAnimationIdle
 	dw ShroomishAnimationIdle
 	dw BreloomAnimationIdle
 	dw CroagunkAnimationIdle

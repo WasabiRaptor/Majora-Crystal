@@ -323,7 +323,7 @@ ScizorEggMoves:
 	db BARRIER
 	db -1 ; end
 
-KrabbyEggMoves:
+WhirlipedeEggMoves:
 	db DIG
 	db HAZE
 	db AMNESIA

@@ -97,11 +97,11 @@ KantoMonSpecials:
 	db 130 ; YANMEGA
 	db  30 ; SCYTHER
 	db  90 ; SCIZOR
-	db 115 ; HYPNO
-	db  25 ; KRABBY
-	db  50 ; KINGLER
-	db  55 ; VOLTORB
-	db  80 ; ELECTRODE
+	db 115 ; VENIPEDE
+	db  25 ; WHIRLIPEDE
+	db  50 ; SCOLIPEDE
+	db  55 ; MORELULL
+	db  80 ; SHIINOTIC
 	db  60 ; SHROOMISH
 	db 125 ; BRELOOM
 	db  40 ; CROAGUNK

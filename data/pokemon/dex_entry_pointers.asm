@@ -96,11 +96,11 @@ PokedexDataPointerTable:
 	dw YanmegaPokedexEntry
 	dw ScytherPokedexEntry
 	dw ScizorPokedexEntry
-	dw HypnoPokedexEntry
-	dw KrabbyPokedexEntry
-	dw KinglerPokedexEntry
-	dw VoltorbPokedexEntry
-	dw ElectrodePokedexEntry
+	dw VenipedePokedexEntry
+	dw WhirlipedePokedexEntry
+	dw ScolipedePokedexEntry
+	dw MorelullPokedexEntry
+	dw ShiinoticPokedexEntry
 	dw ShroomishPokedexEntry
 	dw BreloomPokedexEntry
 	dw CroagunkPokedexEntry
