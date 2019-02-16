@@ -162,7 +162,7 @@ AnimationPointers:
 	dw LarvitarAnimation
 	dw PupitarAnimation
 	dw TyranitarAnimation
-	dw NoctowlAnimation
+	dw NoibatAnimation
 	dw NoivernAnimation
 	dw DruddigonAnimation
 	dw AxewAnimation

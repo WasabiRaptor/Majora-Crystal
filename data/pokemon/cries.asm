@@ -168,7 +168,7 @@ PokemonCries::
 	mon_cry CRY_LARVITAR,     $08a,  $0b8 ; LARVITAR
 	mon_cry CRY_LARVITAR,     $06b,  $102 ; PUPITAR
 	mon_cry CRY_TYRANITAR,    $091,  $0d8 ; TYRANITAR
-	mon_cry CRY_TYRANITAR,    $000,  $1a0 ; NOCTOWL
+	mon_cry CRY_TYRANITAR,    $000,  $1a0 ; NOIBAT
 	mon_cry CRY_NOIVERN,      $000,  $0de ; NOIVERN
 	mon_cry CRY_NOIVERN,     -$096,  $138 ; DRUDDIGON
 	mon_cry CRY_AXEW,    $011,  $200 ; AXEW

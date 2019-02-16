@@ -16,7 +16,7 @@ NewPokedexOrder:
 	db MEOWTH
 	db PERSIAN
 	db TYRANITAR
-	db NOCTOWL
+	db NOIBAT
 	db PORYGON2
 	db PORYGONZ
 	db LARVITAR

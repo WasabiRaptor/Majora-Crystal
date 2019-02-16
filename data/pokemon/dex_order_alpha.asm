@@ -148,7 +148,7 @@ AlphabeticalPokedexOrder:
 	db MEOWSTIC_M
 	db CONKELDURR
 	db JOLTIK
-	db NOCTOWL
+	db NOIBAT
 	db BRONZONG
 	db NIDOQUEEN
 	db OMANYTE

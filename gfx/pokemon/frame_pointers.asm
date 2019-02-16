@@ -162,7 +162,7 @@ FramesPointers:
 	dw LarvitarFrames
 	dw PupitarFrames
 	dw TyranitarFrames
-	dw NoctowlFrames
+	dw NoibatFrames
 	dw NoivernFrames
 	dw DruddigonFrames
 	dw AxewFrames

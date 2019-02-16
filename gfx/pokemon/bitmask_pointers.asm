@@ -162,7 +162,7 @@ BitmasksPointers:
 	dw LarvitarBitmasks
 	dw PupitarBitmasks
 	dw TyranitarBitmasks
-	dw NoctowlBitmasks
+	dw NoibatBitmasks
 	dw NoivernBitmasks
 	dw DruddigonBitmasks
 	dw AxewBitmasks

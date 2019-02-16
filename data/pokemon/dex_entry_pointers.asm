@@ -163,7 +163,7 @@ PokedexDataPointerTable:
 	dw LarvitarPokedexEntry
 	dw PupitarPokedexEntry
 	dw TyranitarPokedexEntry
-	dw NoctowlPokedexEntry
+	dw NoibatPokedexEntry
 	dw NoivernPokedexEntry
 	dw DruddigonPokedexEntry
 	dw AxewPokedexEntry

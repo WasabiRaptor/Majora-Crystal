@@ -165,7 +165,7 @@ MonMenuIcons:
 	db ICON_FOX         ; LARVITAR
 	db ICON_FOX         ; PUPITAR
 	db ICON_BIRD        ; TYRANITAR
-	db ICON_BIRD        ; NOCTOWL
+	db ICON_BIRD        ; NOIBAT
 	db ICON_BUG         ; NOIVERN
 	db ICON_BUG         ; DRUDDIGON
 	db ICON_BUG         ; AXEW

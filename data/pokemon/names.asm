@@ -162,7 +162,7 @@ PokemonNames::
 	db "LARVITAR@@@"
 	db "PUPITAR@@@@"
 	db "TYRANITAR@@"
-	db "NOCTOWL@@@"
+	db "NOIBAT@@@"
 	db "NOIVERN@@@@"
 	db "DRUDDIGON@@@@"
 	db "AXEW@@"

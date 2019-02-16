@@ -162,7 +162,7 @@ AnimationIdlePointers:
 	dw LarvitarAnimationIdle
 	dw PupitarAnimationIdle
 	dw TyranitarAnimationIdle
-	dw NoctowlAnimationIdle
+	dw NoibatAnimationIdle
 	dw NoivernAnimationIdle
 	dw DruddigonAnimationIdle
 	dw AxewAnimationIdle

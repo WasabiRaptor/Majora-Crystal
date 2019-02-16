@@ -2251,7 +2251,7 @@ PupitarEvosAttacks:
 	db 0 ; no more level-up moves
 
 TyranitarEvosAttacks:
-	db EVOLVE_LEVEL, 20, NOCTOWL
+	db EVOLVE_LEVEL, 20, NOIBAT
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
@@ -2264,7 +2264,7 @@ TyranitarEvosAttacks:
 	db 48, DREAM_EATER
 	db 0 ; no more level-up moves
 
-NoctowlEvosAttacks:
+NoibatEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL

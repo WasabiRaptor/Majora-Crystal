@@ -193,7 +193,7 @@ JOHTO_POKEMON EQU const_value
 	const PUPITAR     	; a2
 	const TYRANITAR   	; a3
 
-	const NOCTOWL    ; a4
+	const NOIBAT    ; a4
 
 	const NOIVERN     	; a5
 	const DRUDDIGON     ; a6

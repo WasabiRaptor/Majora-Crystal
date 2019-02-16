@@ -164,7 +164,7 @@ EvosAttacksPointers::
 	dw LarvitarEvosAttacks
 	dw PupitarEvosAttacks
 	dw TyranitarEvosAttacks
-	dw NoctowlEvosAttacks
+	dw NoibatEvosAttacks
 	dw NoivernEvosAttacks
 	dw DruddigonEvosAttacks
 	dw AxewEvosAttacks

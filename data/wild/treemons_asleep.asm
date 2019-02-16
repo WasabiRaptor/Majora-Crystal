@@ -17,7 +17,7 @@ AsleepTreeMonsNite:
 AsleepTreeMonsDay:
 	db SWABLU
 	db TYRANITAR
-	db NOCTOWL
+	db NOIBAT
 	db AXEW
 	db NATU
 	db -1 ; end
@@ -25,7 +25,7 @@ AsleepTreeMonsDay:
 AsleepTreeMonsMorn:
 	db SWABLU
 	db TYRANITAR
-	db NOCTOWL
+	db NOIBAT
 	db AXEW
 	db NATU
 	db -1 ; end

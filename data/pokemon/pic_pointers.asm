@@ -332,8 +332,8 @@ PokemonPicPointers::
 	dba PupitarBackpic
 	dba TyranitarFrontpic
 	dba TyranitarBackpic
-	dba NoctowlFrontpic
-	dba NoctowlBackpic
+	dba NoibatFrontpic
+	dba NoibatBackpic
 	dba NoivernFrontpic
 	dba NoivernBackpic
 	dba DruddigonFrontpic

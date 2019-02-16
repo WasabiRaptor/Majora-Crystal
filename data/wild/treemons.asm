@@ -110,7 +110,7 @@ TreeMonSet_Forest:
 	db 50, TYRANITAR,   10
 	db 15, SNEASEL,     10
 	db 15, SNEASEL,     10
-	db 10, NOCTOWL,    10
+	db 10, NOIBAT,    10
 	db  5, ROCKRUFF, 10
 	db  5, MAGNEMITE,   10
 	db -1
