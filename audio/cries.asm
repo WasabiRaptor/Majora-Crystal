@@ -11,10 +11,10 @@ Cry_Cyndaquil:
 	musicheader 2, 5, Cry_Cyndaquil_Ch5
 	musicheader 1, 6, Cry_Cyndaquil_Ch6
 
-Cry_Spinarak:
-	musicheader 3, 5, Cry_Spinarak_Ch5
-	musicheader 1, 6, Cry_Spinarak_Ch6
-	musicheader 1, 8, Cry_Spinarak_Ch8
+Cry_Axew:
+	musicheader 3, 5, Cry_Axew_Ch5
+	musicheader 1, 6, Cry_Axew_Ch6
+	musicheader 1, 8, Cry_Axew_Ch8
 
 Cry_Raikou:
 	musicheader 3, 5, Cry_Raikou_Ch5
@@ -335,7 +335,7 @@ Cry_Cyndaquil_Ch6:
 	sound __,  9, $f2, $07c2
 	endchannel
 
-Cry_Spinarak_Ch5:
+Cry_Axew_Ch5:
 	dutycycle $1
 	sound __,  4, $2c, $07c4
 	sound __,  2, $0, $0001
@@ -343,7 +343,7 @@ Cry_Spinarak_Ch5:
 	sound __,  7, $b4, $07bb
 	endchannel
 
-Cry_Spinarak_Ch6:
+Cry_Axew_Ch6:
 	sound_duty 2, 2, 2, 0
 	sound __,  4, $2c, $07c7
 	sound __,  2, $0, 0
@@ -351,7 +351,7 @@ Cry_Spinarak_Ch6:
 	sound __,  7, $b4, $07bd
 	endchannel
 
-Cry_Spinarak_Ch8:
+Cry_Axew_Ch8:
 	noise __,  4, $92, $10
 	noise __,  2, $39, $0
 	noise __,  6, $69, $10

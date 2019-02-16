@@ -171,9 +171,9 @@ PokemonCries::
 	mon_cry CRY_TYRANITAR,    $000,  $1a0 ; NOCTOWL
 	mon_cry CRY_NOIVERN,      $000,  $0de ; NOIVERN
 	mon_cry CRY_NOIVERN,     -$096,  $138 ; DRUDDIGON
-	mon_cry CRY_SPINARAK,    $011,  $200 ; SPINARAK
-	mon_cry CRY_SPINARAK,   -$0ae,  $1e2 ; ARIADOS
-	mon_cry CRY_SQUIRTLE,   -$010,  $140 ; CROBAT
+	mon_cry CRY_AXEW,    $011,  $200 ; AXEW
+	mon_cry CRY_AXEW,   -$0ae,  $1e2 ; FRAXURE
+	mon_cry CRY_SQUIRTLE,   -$010,  $140 ; HAXORUS
 	mon_cry CRY_ABOMASNOW,   $3c9,  $140 ; JANGMO_O
 	mon_cry CRY_ABOMASNOW,   $2d0,  $110 ; HAKAMO_O
 	mon_cry CRY_KOMMO_O,       $000,  $140 ; KOMMO_O
@@ -251,7 +251,7 @@ PokemonCries::
 	mon_cry CRY_ENTEI,       $000,  $1a0 ; ENTEI
 	mon_cry CRY_BALTOY,    $000,  $180 ; LATIAS
 	mon_cry CRY_RAIKOU,      $05f,  $0d0 ; LATIOS
-	mon_cry CRY_SPINARAK,   -$1db,  $150 ; SILVALLY
+	mon_cry CRY_AXEW,   -$1db,  $150 ; SILVALLY
 	mon_cry CRY_RAIKOU,     -$100,  $180 ; MAGEARNA
 	mon_cry CRY_FERROTHORN,  $000,  $100 ; SHAYMIN
 	mon_cry CRY_HOUNDOOM,       $000,  $180 ; CELEBI

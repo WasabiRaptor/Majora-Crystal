@@ -165,9 +165,9 @@ AnimationIdlePointers:
 	dw NoctowlAnimationIdle
 	dw NoivernAnimationIdle
 	dw DruddigonAnimationIdle
-	dw SpinarakAnimationIdle
-	dw AriadosAnimationIdle
-	dw CrobatAnimationIdle
+	dw AxewAnimationIdle
+	dw FraxureAnimationIdle
+	dw HaxorusAnimationIdle
 	dw Jangmo_oAnimationIdle
 	dw Hakamo_oAnimationIdle
 	dw Kommo_oAnimationIdle

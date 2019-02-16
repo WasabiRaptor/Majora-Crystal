@@ -543,7 +543,7 @@ NoivernEggMoves:
 	db LIGHT_SCREEN
 	db -1 ; end
 
-SpinarakEggMoves:
+AxewEggMoves:
 	db PSYBEAM
 	db DISABLE
 	db SONICBOOM

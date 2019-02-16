@@ -568,7 +568,7 @@ NidorinaEvosAttacks:
 	db 0 ; no more level-up moves
 
 NidokingEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, CROBAT
+	db EVOLVE_HAPPINESS, TR_ANYTIME, HAXORUS
 	db 0 ; no more evolutions
 	db 1, SCREECH
 	db 1, LEECH_LIFE
@@ -2309,8 +2309,8 @@ DruddigonEvosAttacks:
 	db 60, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
-SpinarakEvosAttacks:
-	db EVOLVE_LEVEL, 22, ARIADOS
+AxewEvosAttacks:
+	db EVOLVE_LEVEL, 22, FRAXURE
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 1, STRING_SHOT
@@ -2328,7 +2328,7 @@ endc
 	db 53, PSYCHIC_M
 	db 0 ; no more level-up moves
 
-AriadosEvosAttacks:
+FraxureEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 1, STRING_SHOT
@@ -2348,7 +2348,7 @@ endc
 	db 63, PSYCHIC_M
 	db 0 ; no more level-up moves
 
-CrobatEvosAttacks:
+HaxorusEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCREECH
 	db 1, LEECH_LIFE

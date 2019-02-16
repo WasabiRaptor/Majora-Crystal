@@ -38,7 +38,7 @@ Cries:
 	dba Cry_Vulpix
 	dba Cry_Quilladin
 	dba Cry_Braixen
-	dba Cry_Spinarak
+	dba Cry_Axew
 	dba Cry_Heidreigon
 	dba Cry_Aurorus
 	dba Cry_Raikou

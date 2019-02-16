@@ -205,9 +205,9 @@ Pokered_MonIndices:
 	db NOCTOWL
 	db NOIVERN
 	db DRUDDIGON
-	db SPINARAK
-	db ARIADOS
-	db CROBAT
+	db AXEW
+	db FRAXURE
+	db HAXORUS
 	db JANGMO_O
 	db HAKAMO_O
 	db KOMMO_O

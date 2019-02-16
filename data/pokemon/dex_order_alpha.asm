@@ -8,7 +8,7 @@ AlphabeticalPokedexOrder:
 	db INCINEROAR
 	db TOGETIC
 	db SANDSHREW
-	db ARIADOS
+	db FRAXURE
 	db DWEBBLE
 	db DELPHOX
 	db BAYLEEF
@@ -32,7 +32,7 @@ AlphabeticalPokedexOrder:
 	db PINECO
 	db DEINO
 	db GOLURK
-	db CROBAT
+	db HAXORUS
 	db CROCONAW
 	db CUBONE
 	db ABOMASNOW
@@ -209,7 +209,7 @@ AlphabeticalPokedexOrder:
 	db SNORLAX
 	db FROSSLASS
 	db MEOWTH
-	db SPINARAK
+	db AXEW
 	db LEAFEON
 	db CHANDELURE
 	db STARMIE

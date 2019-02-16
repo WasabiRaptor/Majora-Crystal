@@ -197,13 +197,11 @@ JOHTO_POKEMON EQU const_value
 
 	const NOIVERN     	; a5
 	const DRUDDIGON     ; a6
-
-	const SPINARAK   ; a7
-	const ARIADOS    ; a8
-	const CROBAT     ; a9
-
+	const AXEW          ; a7
+	const FRAXURE       ; a8
+	const HAXORUS       ; a9
 	const JANGMO_O      ; aa
-	const HAKAMO_O       ; ab
+	const HAKAMO_O      ; ab
 	const KOMMO_O       ; ac
 	const DEINO         ; ad
 	const ZWEILOUS  	; ae

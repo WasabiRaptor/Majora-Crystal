@@ -168,9 +168,9 @@ MonMenuIcons:
 	db ICON_BIRD        ; NOCTOWL
 	db ICON_BUG         ; NOIVERN
 	db ICON_BUG         ; DRUDDIGON
-	db ICON_BUG         ; SPINARAK
-	db ICON_BUG         ; ARIADOS
-	db ICON_BAT         ; CROBAT
+	db ICON_BUG         ; AXEW
+	db ICON_BUG         ; FRAXURE
+	db ICON_BAT         ; HAXORUS=
 	db ICON_FISH        ; JANGMO_O
 	db ICON_FISH        ; HAKAMO_O
 	db ICON_TOGEKISS     ; KOMMO_O

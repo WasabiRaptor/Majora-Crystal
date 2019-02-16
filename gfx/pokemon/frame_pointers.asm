@@ -165,9 +165,9 @@ FramesPointers:
 	dw NoctowlFrames
 	dw NoivernFrames
 	dw DruddigonFrames
-	dw SpinarakFrames
-	dw AriadosFrames
-	dw CrobatFrames
+	dw AxewFrames
+	dw FraxureFrames
+	dw HaxorusFrames
 	dw Jangmo_oFrames
 	dw Hakamo_oFrames
 	dw Kommo_oFrames

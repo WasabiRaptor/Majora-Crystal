@@ -338,12 +338,12 @@ PokemonPicPointers::
 	dba NoivernBackpic
 	dba DruddigonFrontpic
 	dba DruddigonBackpic
-	dba SpinarakFrontpic
-	dba SpinarakBackpic
-	dba AriadosFrontpic
-	dba AriadosBackpic
-	dba CrobatFrontpic
-	dba CrobatBackpic
+	dba AxewFrontpic
+	dba AxewBackpic
+	dba FraxureFrontpic
+	dba FraxureBackpic
+	dba HaxorusFrontpic
+	dba HaxorusBackpic
 	dba Jangmo_oFrontpic
 	dba Jangmo_oBackpic
 	dba Hakamo_oFrontpic

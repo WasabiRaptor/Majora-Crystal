@@ -166,9 +166,9 @@ PokedexDataPointerTable:
 	dw NoctowlPokedexEntry
 	dw NoivernPokedexEntry
 	dw DruddigonPokedexEntry
-	dw SpinarakPokedexEntry
-	dw AriadosPokedexEntry
-	dw CrobatPokedexEntry
+	dw AxewPokedexEntry
+	dw FraxurePokedexEntry
+	dw HaxorusPokedexEntry
 	dw Jangmo_oPokedexEntry
 	dw Hakamo_oPokedexEntry
 	dw Kommo_oPokedexEntry

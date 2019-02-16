@@ -169,7 +169,7 @@ endc
 	dw NoEggMoves
 	dw NoivernEggMoves
 	dw NoEggMoves
-	dw SpinarakEggMoves
+	dw AxewEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw Jangmo_oEggMoves

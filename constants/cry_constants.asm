@@ -43,7 +43,7 @@
 
 ; gen 2
 	const CRY_BRAIXEN
-	const CRY_SPINARAK
+	const CRY_AXEW
 	const CRY_HEIDREIGON
 	const CRY_AURORUS
 	const CRY_RAIKOU

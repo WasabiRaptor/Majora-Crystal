@@ -165,9 +165,9 @@ AnimationPointers:
 	dw NoctowlAnimation
 	dw NoivernAnimation
 	dw DruddigonAnimation
-	dw SpinarakAnimation
-	dw AriadosAnimation
-	dw CrobatAnimation
+	dw AxewAnimation
+	dw FraxureAnimation
+	dw HaxorusAnimation
 	dw Jangmo_oAnimation
 	dw Hakamo_oAnimation
 	dw Kommo_oAnimation

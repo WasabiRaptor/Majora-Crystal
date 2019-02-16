@@ -167,9 +167,9 @@ EvosAttacksPointers::
 	dw NoctowlEvosAttacks
 	dw NoivernEvosAttacks
 	dw DruddigonEvosAttacks
-	dw SpinarakEvosAttacks
-	dw AriadosEvosAttacks
-	dw CrobatEvosAttacks
+	dw AxewEvosAttacks
+	dw FraxureEvosAttacks
+	dw HaxorusEvosAttacks
 	dw Jangmo_oEvosAttacks
 	dw Hakamo_oEvosAttacks
 	dw Kommo_oEvosAttacks

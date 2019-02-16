@@ -165,9 +165,9 @@ BitmasksPointers:
 	dw NoctowlBitmasks
 	dw NoivernBitmasks
 	dw DruddigonBitmasks
-	dw SpinarakBitmasks
-	dw AriadosBitmasks
-	dw CrobatBitmasks
+	dw AxewBitmasks
+	dw FraxureBitmasks
+	dw HaxorusBitmasks
 	dw Jangmo_oBitmasks
 	dw Hakamo_oBitmasks
 	dw Kommo_oBitmasks
