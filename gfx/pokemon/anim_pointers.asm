@@ -106,11 +106,11 @@ AnimationPointers:
 	dw MarowakAnimation
 	dw SandileAnimation
 	dw KrokorokAnimation
-	dw LickitungAnimation
-	dw KoffingAnimation
-	dw WeezingAnimation
-	dw RhyhornAnimation
-	dw RhydonAnimation
+	dw KrookodileAnimation
+	dw TympoleAnimation
+	dw PalpitoadAnimation
+	dw SeismitoadAnimation
+	dw DrampaAnimation
 	dw GoomyAnimation
 	dw SliggooAnimation
 	dw GoodraAnimation

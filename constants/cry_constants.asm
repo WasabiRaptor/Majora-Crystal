@@ -19,7 +19,7 @@
 	const CRY_MAGNETON
 	const CRY_BULBASAUR
 	const CRY_MEOWTH
-	const CRY_RHYDON
+	const CRY_DRAMPA
 	const CRY_FOONGUS
 	const CRY_BLASTOISE
 	const CRY_MAGNEZONE

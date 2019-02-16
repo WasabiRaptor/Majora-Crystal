@@ -29,7 +29,7 @@ SpriteMons:
 	db IGGLYBUFF
 	db VOLTORB
 	db ARMALDO
-	db RHYDON
+	db DRAMPA
 	db TYROGUE
 	db STUNFISK
 	db GYARADOS

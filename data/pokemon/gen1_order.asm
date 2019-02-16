@@ -1,5 +1,5 @@
 Pokered_MonIndices:
-	db RHYDON
+	db DRAMPA
 	db GOODRA
 	db GURDURR
 	db PURRLOIN
@@ -9,14 +9,14 @@ Pokered_MonIndices:
 	db BONSLY
 	db VAPOREON
 	db EXEGGUTOR
-	db LICKITUNG
+	db KROOKODILE
 	db EXEGGCUTE
 	db GRIMER
 	db YANMEGA
 	db ESPURR
 	db TIMBURR
 	db CUBONE
-	db RHYHORN
+	db SEISMITOAD
 	db ARMALDO
 	db SANDSHREW
 	db LUCARIO
@@ -53,7 +53,7 @@ Pokered_MonIndices:
 	db CELEBI ; MISSINGNO.
 	db FLOATZEL
 	db PASSIMIAN
-	db KOFFING
+	db TYMPOLE
 	db XATU ; MISSINGNO.
 	db SHINX
 	db HERACROSS
@@ -141,7 +141,7 @@ Pokered_MonIndices:
 	db DUSKULL ; MISSINGNO.
 	db ELECTRODE
 	db LIEPARD
-	db WEEZING
+	db PALPITOAD
 	db MAREEP
 	db MAROWAK
 	db DUSCLOPS ; MISSINGNO.

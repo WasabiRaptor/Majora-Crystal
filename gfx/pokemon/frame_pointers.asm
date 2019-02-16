@@ -106,11 +106,11 @@ FramesPointers:
 	dw MarowakFrames
 	dw SandileFrames
 	dw KrokorokFrames
-	dw LickitungFrames
-	dw KoffingFrames
-	dw WeezingFrames
-	dw RhyhornFrames
-	dw RhydonFrames
+	dw KrookodileFrames
+	dw TympoleFrames
+	dw PalpitoadFrames
+	dw SeismitoadFrames
+	dw DrampaFrames
 	dw GoomyFrames
 	dw SliggooFrames
 	dw GoodraFrames

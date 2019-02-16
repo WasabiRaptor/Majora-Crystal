@@ -127,13 +127,11 @@
 	
 	const SANDILE       ; 6a
 	const KROKOROK      ; 6b
-	
-	const LICKITUNG  ; 6c
-	const KOFFING    ; 6d
-	const WEEZING    ; 6e
-	const RHYHORN    ; 6f
-	const RHYDON     ; 70
-	
+	const KROOKODILE    ; 6c
+	const TYMPOLE       ; 6d
+	const PALPITOAD     ; 6e
+	const SEISMITOAD    ; 6f
+	const DRAMPA        ; 70
 	const GOOMY         ; 71
 	const SLIGGOO       ; 72
 	const GOODRA        ; 73

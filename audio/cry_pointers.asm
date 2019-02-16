@@ -16,7 +16,7 @@ Cries:
 	dba Cry_Passimian
 	dba Cry_Eevee
 	dba Cry_Meowth
-	dba Cry_Rhydon
+	dba Cry_Drampa
 	dba Cry_Foongus
 	dba Cry_Sylveon
 	dba Cry_Magnezone

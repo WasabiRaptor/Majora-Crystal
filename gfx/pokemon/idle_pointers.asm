@@ -106,11 +106,11 @@ AnimationIdlePointers:
 	dw MarowakAnimationIdle
 	dw SandileAnimationIdle
 	dw KrokorokAnimationIdle
-	dw LickitungAnimationIdle
-	dw KoffingAnimationIdle
-	dw WeezingAnimationIdle
-	dw RhyhornAnimationIdle
-	dw RhydonAnimationIdle
+	dw KrookodileAnimationIdle
+	dw TympoleAnimationIdle
+	dw PalpitoadAnimationIdle
+	dw SeismitoadAnimationIdle
+	dw DrampaAnimationIdle
 	dw GoomyAnimationIdle
 	dw SliggooAnimationIdle
 	dw GoodraAnimationIdle

@@ -114,8 +114,8 @@ NewPokedexOrder:
 	db MAMOSWINE
 	db MARILL
 	db NATU
-	db KOFFING
-	db WEEZING
+	db TYMPOLE
+	db PALPITOAD
 	db GRIMER
 	db MUK
 	db SUDOWOODO
@@ -178,7 +178,7 @@ NewPokedexOrder:
 	db HAKAMO_O
 	db HERACROSS
 	db LEDYBA
-	db LICKITUNG
+	db KROOKODILE
 	db SLIGGOO
 	db ARAQUANID
 	db MAGIKARP
@@ -206,8 +206,8 @@ NewPokedexOrder:
 	db CUBONE
 	db MAROWAK
 	db GOODRA
-	db RHYHORN
-	db RHYDON
+	db SEISMITOAD
+	db DRAMPA
 	db ROGGENROLA
 	db PAWNIARD
 	db BISHARP

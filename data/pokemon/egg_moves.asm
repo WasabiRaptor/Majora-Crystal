@@ -351,13 +351,13 @@ if _BRASS
 endc
 	db -1 ; end
 
-LickitungEggMoves:
+KrookodileEggMoves:
 	db BELLY_DRUM
 	db MAGNITUDE
 	db BODY_SLAM
 	db -1 ; end
 
-KoffingEggMoves:
+TympoleEggMoves:
 	db SCREECH
 	db PSYWAVE
 	db PSYBEAM
@@ -365,7 +365,7 @@ KoffingEggMoves:
 	db PAIN_SPLIT
 	db -1 ; end
 
-RhyhornEggMoves:
+SeismitoadEggMoves:
 	db CRUNCH
 	db REVERSAL
 	db ROCK_SLIDE

@@ -112,11 +112,11 @@ PokemonCries::
 	mon_cry CRY_NIDOQUEEN,      $04f,  $0e0 ; MAROWAK
 	mon_cry CRY_FOONGUS,       $080,  $140 ; SANDILE
 	mon_cry CRY_HERACROSS,        $0ee,  $140 ; KROKOROK
-	mon_cry CRY_HERACROSS,        $000,  $100 ; LICKITUNG
-	mon_cry CRY_FOONGUS,       $0e6,  $15d ; KOFFING
-	mon_cry CRY_FOONGUS,       $0ff,  $17f ; WEEZING
-	mon_cry CRY_CHARMANDER,  $000,  $100 ; RHYHORN
-	mon_cry CRY_RHYDON,      $000,  $100 ; RHYDON
+	mon_cry CRY_HERACROSS,        $000,  $100 ; KROOKODILE
+	mon_cry CRY_FOONGUS,       $0e6,  $15d ; TYMPOLE
+	mon_cry CRY_FOONGUS,       $0ff,  $17f ; PALPITOAD
+	mon_cry CRY_CHARMANDER,  $000,  $100 ; SEISMITOAD
+	mon_cry CRY_DRAMPA,      $000,  $100 ; DRAMPA
 	mon_cry CRY_MAGNEZONE,   $00a,  $140 ; GOOMY
 	mon_cry CRY_FOONGUS,       $000,  $100 ; SLIGGOO
 	mon_cry CRY_GOODRA,  $000,  $100 ; GOODRA

@@ -108,11 +108,11 @@ KantoMonSpecials:
 	db  50 ; MAROWAK
 	db  35 ; SANDILE
 	db  35 ; KROKOROK
-	db  60 ; LICKITUNG
-	db  60 ; KOFFING
-	db  85 ; WEEZING
-	db  30 ; RHYHORN
-	db  45 ; RHYDON
+	db  60 ; KROOKODILE
+	db  60 ; TYMPOLE
+	db  85 ; PALPITOAD
+	db  30 ; SEISMITOAD
+	db  45 ; DRAMPA
 	db 105 ; GOOMY
 	db 100 ; SLIGGOO
 	db  40 ; GOODRA

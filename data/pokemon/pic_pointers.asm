@@ -220,16 +220,16 @@ PokemonPicPointers::
 	dba SandileBackpic
 	dba KrokorokFrontpic
 	dba KrokorokBackpic
-	dba LickitungFrontpic
-	dba LickitungBackpic
-	dba KoffingFrontpic
-	dba KoffingBackpic
-	dba WeezingFrontpic
-	dba WeezingBackpic
-	dba RhyhornFrontpic
-	dba RhyhornBackpic
-	dba RhydonFrontpic
-	dba RhydonBackpic
+	dba KrookodileFrontpic
+	dba KrookodileBackpic
+	dba TympoleFrontpic
+	dba TympoleBackpic
+	dba PalpitoadFrontpic
+	dba PalpitoadBackpic
+	dba SeismitoadFrontpic
+	dba SeismitoadBackpic
+	dba DrampaFrontpic
+	dba DrampaBackpic
 	dba GoomyFrontpic
 	dba GoomyBackpic
 	dba SliggooFrontpic

@@ -912,10 +912,10 @@ Cry_Meowth:
 	musicheader 1, 6, Cry_Meowth_Ch6
 	musicheader 1, 8, Cry_Meowth_Ch8
 
-Cry_Rhydon:
-	musicheader 3, 5, Cry_Rhydon_Ch5
-	musicheader 1, 6, Cry_Rhydon_Ch6
-	musicheader 1, 8, Cry_Rhydon_Ch8
+Cry_Drampa:
+	musicheader 3, 5, Cry_Drampa_Ch5
+	musicheader 1, 6, Cry_Drampa_Ch6
+	musicheader 1, 8, Cry_Drampa_Ch8
 
 Cry_Foongus:
 	musicheader 3, 5, Cry_Foongus_Ch5
@@ -1137,7 +1137,7 @@ Cry_Vulpix_Ch8:
 	noise __, 16, $a2, $5c
 	endchannel
 
-Cry_Rhydon_Ch5:
+Cry_Drampa_Ch5:
 	sound_duty 0, 0, 3, 3
 	sound __,  7, $f7, $07a0
 	sound __,  9, $e6, $07a4
@@ -1148,7 +1148,7 @@ Cry_Rhydon_Ch5:
 	sound __,  9, $b1, $0730
 	endchannel
 
-Cry_Rhydon_Ch6:
+Cry_Drampa_Ch6:
 	sound_duty 2, 2, 0, 0
 	sound __,  5, $8, 0
 	sound __,  7, $a7, $0741
@@ -1160,7 +1160,7 @@ Cry_Rhydon_Ch6:
 	sound __,  9, $71, $06d8
 	endchannel
 
-Cry_Rhydon_Ch8:
+Cry_Drampa_Ch8:
 	noise __,  3, $f2, $4c
 	noise __,  7, $e6, $3a
 	noise __,  5, $d7, $3a

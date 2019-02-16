@@ -106,11 +106,11 @@ BitmasksPointers:
 	dw MarowakBitmasks
 	dw SandileBitmasks
 	dw KrokorokBitmasks
-	dw LickitungBitmasks
-	dw KoffingBitmasks
-	dw WeezingBitmasks
-	dw RhyhornBitmasks
-	dw RhydonBitmasks
+	dw KrookodileBitmasks
+	dw TympoleBitmasks
+	dw PalpitoadBitmasks
+	dw SeismitoadBitmasks
+	dw DrampaBitmasks
 	dw GoomyBitmasks
 	dw SliggooBitmasks
 	dw GoodraBitmasks

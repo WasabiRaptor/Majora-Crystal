@@ -107,11 +107,11 @@ PokedexDataPointerTable:
 	dw MarowakPokedexEntry
 	dw SandilePokedexEntry
 	dw KrokorokPokedexEntry
-	dw LickitungPokedexEntry
-	dw KoffingPokedexEntry
-	dw WeezingPokedexEntry
-	dw RhyhornPokedexEntry
-	dw RhydonPokedexEntry
+	dw KrookodilePokedexEntry
+	dw TympolePokedexEntry
+	dw PalpitoadPokedexEntry
+	dw SeismitoadPokedexEntry
+	dw DrampaPokedexEntry
 	dw GoomyPokedexEntry
 	dw SliggooPokedexEntry
 	dw GoodraPokedexEntry

@@ -1494,7 +1494,7 @@ KrokorokEvosAttacks:
 	db 50, COUNTER
 	db 0 ; no more level-up moves
 
-LickitungEvosAttacks:
+KrookodileEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LICK
 	db 7, SUPERSONIC
@@ -1506,8 +1506,8 @@ LickitungEvosAttacks:
 	db 43, SCREECH
 	db 0 ; no more level-up moves
 
-KoffingEvosAttacks:
-	db EVOLVE_LEVEL, 35, WEEZING
+TympoleEvosAttacks:
+	db EVOLVE_LEVEL, 35, PALPITOAD
 	db 0 ; no more evolutions
 	db 1, POISON_GAS
 	db 1, TACKLE
@@ -1520,7 +1520,7 @@ KoffingEvosAttacks:
 	db 45, DESTINY_BOND
 	db 0 ; no more level-up moves
 
-WeezingEvosAttacks:
+PalpitoadEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POISON_GAS
 	db 1, TACKLE
@@ -1535,8 +1535,8 @@ WeezingEvosAttacks:
 	db 51, DESTINY_BOND
 	db 0 ; no more level-up moves
 
-RhyhornEvosAttacks:
-	db EVOLVE_LEVEL, 42, RHYDON
+SeismitoadEvosAttacks:
+	db EVOLVE_LEVEL, 42, DRAMPA
 	db 0 ; no more evolutions
 	db 1, HORN_ATTACK
 	db 1, TAIL_WHIP
@@ -1548,7 +1548,7 @@ RhyhornEvosAttacks:
 	db 55, EARTHQUAKE
 	db 0 ; no more level-up moves
 
-RhydonEvosAttacks:
+DrampaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HORN_ATTACK
 	db 1, TAIL_WHIP

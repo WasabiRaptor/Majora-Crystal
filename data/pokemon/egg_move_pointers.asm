@@ -106,10 +106,10 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw LickitungEggMoves
-	dw KoffingEggMoves
+	dw KrookodileEggMoves
+	dw TympoleEggMoves
 	dw NoEggMoves
-	dw RhyhornEggMoves
+	dw SeismitoadEggMoves
 	dw NoEggMoves
 	dw GoomyEggMoves
 	dw SliggooEggMoves

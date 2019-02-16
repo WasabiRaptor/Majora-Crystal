@@ -108,11 +108,11 @@ EvosAttacksPointers::
 	dw MarowakEvosAttacks
 	dw SandileEvosAttacks
 	dw KrokorokEvosAttacks
-	dw LickitungEvosAttacks
-	dw KoffingEvosAttacks
-	dw WeezingEvosAttacks
-	dw RhyhornEvosAttacks
-	dw RhydonEvosAttacks
+	dw KrookodileEvosAttacks
+	dw TympoleEvosAttacks
+	dw PalpitoadEvosAttacks
+	dw SeismitoadEvosAttacks
+	dw DrampaEvosAttacks
 	dw GoomyEvosAttacks
 	dw SliggooEvosAttacks
 	dw GoodraEvosAttacks

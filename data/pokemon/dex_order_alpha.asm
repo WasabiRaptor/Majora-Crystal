@@ -109,14 +109,14 @@ AlphabeticalPokedexOrder:
 	db GOODRA
 	db YAMASK
 	db KINGLER
-	db KOFFING
+	db TYMPOLE
 	db KRABBY
 	db ARMALDO
 	db HAKAMO_O
 	db LATIOS
 	db DRUDDIGON
 	db NOIVERN
-	db LICKITUNG
+	db KROOKODILE
 	db SHAYMIN
 	db WIGGLYTUFF
 	db JIGGLYPUFF
@@ -188,8 +188,8 @@ AlphabeticalPokedexOrder:
 	db PORYGONZ
 	db PORYGON2
 	db BRONZOR
-	db RHYDON
-	db RHYHORN
+	db DRAMPA
+	db SEISMITOAD
 	db CHINGLING
 	db CHIMECHO
 	db MAMOSWINE
@@ -249,7 +249,7 @@ AlphabeticalPokedexOrder:
 	db GLACEON
 	db LYCANROC
 	db QUILLADIN
-	db WEEZING
+	db PALPITOAD
 	db NIDORINO
 	db AMAURA
 	db HEATMOR

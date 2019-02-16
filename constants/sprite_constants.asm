@@ -137,7 +137,7 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_MACHOP ; 9a
 	const SPRITE_VOLTORB ; 9b
 	const SPRITE_LAPRAS ; 9c
-	const SPRITE_RHYDON ; 9d
+	const SPRITE_DRAMPA ; 9d
 	const SPRITE_MOLTRES ; 9e
 	const SPRITE_STUNFISK ; 9f
 	const SPRITE_GYARADOS ; a0
