@@ -104,8 +104,8 @@ AnimationIdlePointers:
 	dw ExeggutorAnimationIdle
 	dw CuboneAnimationIdle
 	dw MarowakAnimationIdle
-	dw HitmonleeAnimationIdle
-	dw HitmonchanAnimationIdle
+	dw SandileAnimationIdle
+	dw KrokorokAnimationIdle
 	dw LickitungAnimationIdle
 	dw KoffingAnimationIdle
 	dw WeezingAnimationIdle
@@ -145,9 +145,9 @@ AnimationIdlePointers:
 	dw DwebbleAnimationIdle
 	dw CrustleAnimationIdle
 	dw TyrogueAnimationIdle
-	dw DratiniAnimationIdle
-	dw DragonairAnimationIdle
-	dw DragoniteAnimationIdle
+	dw HitmonchanAnimationIdle
+	dw HitmonleeAnimationIdle
+	dw HitmontopAnimationIdle
 	dw RioluAnimationIdle
 	dw LucarioAnimationIdle
 	dw ChikoritaAnimationIdle

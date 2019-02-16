@@ -104,8 +104,8 @@ FramesPointers:
 	dw ExeggutorFrames
 	dw CuboneFrames
 	dw MarowakFrames
-	dw HitmonleeFrames
-	dw HitmonchanFrames
+	dw SandileFrames
+	dw KrokorokFrames
 	dw LickitungFrames
 	dw KoffingFrames
 	dw WeezingFrames
@@ -145,9 +145,9 @@ FramesPointers:
 	dw DwebbleFrames
 	dw CrustleFrames
 	dw TyrogueFrames
-	dw DratiniFrames
-	dw DragonairFrames
-	dw DragoniteFrames
+	dw HitmonchanFrames
+	dw HitmonleeFrames
+	dw HitmontopFrames
 	dw RioluFrames
 	dw LucarioFrames
 	dw ChikoritaFrames

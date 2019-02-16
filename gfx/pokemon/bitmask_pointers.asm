@@ -104,8 +104,8 @@ BitmasksPointers:
 	dw ExeggutorBitmasks
 	dw CuboneBitmasks
 	dw MarowakBitmasks
-	dw HitmonleeBitmasks
-	dw HitmonchanBitmasks
+	dw SandileBitmasks
+	dw KrokorokBitmasks
 	dw LickitungBitmasks
 	dw KoffingBitmasks
 	dw WeezingBitmasks
@@ -145,9 +145,9 @@ BitmasksPointers:
 	dw DwebbleBitmasks
 	dw CrustleBitmasks
 	dw TyrogueBitmasks
-	dw DratiniBitmasks
-	dw DragonairBitmasks
-	dw DragoniteBitmasks
+	dw HitmonchanBitmasks
+	dw HitmonleeBitmasks
+	dw HitmontopBitmasks
 	dw RioluBitmasks
 	dw LucarioBitmasks
 	dw ChikoritaBitmasks

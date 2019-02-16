@@ -106,8 +106,8 @@ EvosAttacksPointers::
 	dw ExeggutorEvosAttacks
 	dw CuboneEvosAttacks
 	dw MarowakEvosAttacks
-	dw HitmonleeEvosAttacks
-	dw HitmonchanEvosAttacks
+	dw SandileEvosAttacks
+	dw KrokorokEvosAttacks
 	dw LickitungEvosAttacks
 	dw KoffingEvosAttacks
 	dw WeezingEvosAttacks
@@ -147,9 +147,9 @@ EvosAttacksPointers::
 	dw DwebbleEvosAttacks
 	dw CrustleEvosAttacks
 	dw TyrogueEvosAttacks
-	dw DratiniEvosAttacks
-	dw DragonairEvosAttacks
-	dw DragoniteEvosAttacks
+	dw HitmonchanEvosAttacks
+	dw HitmonleeEvosAttacks
+	dw HitmontopEvosAttacks
 	dw RioluEvosAttacks
 	dw LucarioEvosAttacks
 	dw ChikoritaEvosAttacks

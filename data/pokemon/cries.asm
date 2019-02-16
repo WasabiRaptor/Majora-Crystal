@@ -110,8 +110,8 @@ PokemonCries::
 	mon_cry CRY_SCIZOR,     $000,  $100 ; EXEGGUTOR
 	mon_cry CRY_PURRLOIN,    $000,  $100 ; CUBONE
 	mon_cry CRY_NIDOQUEEN,      $04f,  $0e0 ; MAROWAK
-	mon_cry CRY_FOONGUS,       $080,  $140 ; HITMONLEE
-	mon_cry CRY_HERACROSS,        $0ee,  $140 ; HITMONCHAN
+	mon_cry CRY_FOONGUS,       $080,  $140 ; SANDILE
+	mon_cry CRY_HERACROSS,        $0ee,  $140 ; KROKOROK
 	mon_cry CRY_HERACROSS,        $000,  $100 ; LICKITUNG
 	mon_cry CRY_FOONGUS,       $0e6,  $15d ; KOFFING
 	mon_cry CRY_FOONGUS,       $0ff,  $17f ; WEEZING
@@ -151,9 +151,9 @@ PokemonCries::
 	mon_cry CRY_ROTOM,      $080,  $0c0 ; DWEBBLE
 	mon_cry CRY_PERSIAN,      $0ff,  $100 ; CRUSTLE
 	mon_cry CRY_ROTOM,      $0f8,  $0c0 ; TYROGUE
-	mon_cry CRY_BULBASAUR,   $060,  $0c0 ; DRATINI
-	mon_cry CRY_BULBASAUR,   $040,  $100 ; DRAGONAIR
-	mon_cry CRY_BULBASAUR,   $03c,  $140 ; DRAGONITE
+	mon_cry CRY_BULBASAUR,   $060,  $0c0 ; HITMONCHAN
+	mon_cry CRY_BULBASAUR,   $040,  $100 ; HITMONLEE
+	mon_cry CRY_BULBASAUR,   $03c,  $140 ; HITMONTOP
 	mon_cry CRY_SENTRET,       $099,  $17f ; RIOLU
 	mon_cry CRY_SENTRET,       $0ee,  $17f ; LUCARIO
 	mon_cry CRY_MEDITITE,  -$010,  $0b0 ; MEDITITE

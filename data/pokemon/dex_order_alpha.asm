@@ -46,6 +46,9 @@ AlphabeticalPokedexOrder:
 	db DRAGONAIR
 	db DRAGONITE
 	db DRATINI
+	db HITMONLEE
+	db HITMONTOP
+	db HITMONCHAN
 	db SCIZOR
 	db MIENSHAO
 	db CRYOGONAL
@@ -83,8 +86,8 @@ AlphabeticalPokedexOrder:
 	db ANORITH
 	db YANMA
 	db NATU
-	db HITMONCHAN
-	db HITMONLEE
+	db KROKOROK
+	db SANDILE
 	db DUSCLOPS
 	db CELEBI
 	db TYRANITAR

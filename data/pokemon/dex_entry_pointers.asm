@@ -105,8 +105,8 @@ PokedexDataPointerTable:
 	dw ExeggutorPokedexEntry
 	dw CubonePokedexEntry
 	dw MarowakPokedexEntry
-	dw HitmonleePokedexEntry
-	dw HitmonchanPokedexEntry
+	dw SandilePokedexEntry
+	dw KrokorokPokedexEntry
 	dw LickitungPokedexEntry
 	dw KoffingPokedexEntry
 	dw WeezingPokedexEntry
@@ -146,9 +146,9 @@ PokedexDataPointerTable:
 	dw DwebblePokedexEntry
 	dw CrustlePokedexEntry
 	dw TyroguePokedexEntry
-	dw DratiniPokedexEntry
-	dw DragonairPokedexEntry
-	dw DragonitePokedexEntry
+	dw HitmonchanPokedexEntry
+	dw HitmonleePokedexEntry
+	dw HitmontopPokedexEntry
 	dw RioluPokedexEntry
 	dw LucarioPokedexEntry
 	dw ChikoritaPokedexEntry

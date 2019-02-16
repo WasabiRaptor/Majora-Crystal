@@ -124,8 +124,8 @@
 	const EXEGGUTOR  ; 67
 	const CUBONE     ; 68
 	const MAROWAK    ; 69
-	const HITMONLEE  ; 6a
-	const HITMONCHAN ; 6b
+	const SANDILE  ; 6a
+	const KROKOROK ; 6b
 	const LICKITUNG  ; 6c
 	const KOFFING    ; 6d
 	const WEEZING    ; 6e
@@ -170,18 +170,16 @@
 	const DWEBBLE   	; 90
 	const CRUSTLE     	; 91
 	const TYROGUE    	; 92
-
-	const DRATINI    ; 93
-	const DRAGONAIR  ; 94
-	const DRAGONITE  ; 95
-
+	const HITMONCHAN    ; 93
+	const HITMONLEE     ; 94
+	const HITMONTOP     ; 95
 	const RIOLU     	; 96
 	const LUCARIO       ; 97
 
 JOHTO_POKEMON EQU const_value
-	const MEDITITE  ; 98
-	const MEDICHAM    ; 99
-	const SNOVER   ; 9a
+	const MEDITITE      ; 98
+	const MEDICHAM      ; 99
+	const SNOVER        ; 9a
 	const ABOMASNOW  	; 9b
 	const FERROSEED    	; 9c
 	const FERROTHORN 	; 9d

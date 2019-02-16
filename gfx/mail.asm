@@ -55,7 +55,7 @@ INCBIN "gfx/mail/ditto.1bpp"
 MailMewGFX:
 INCBIN "gfx/mail/mew.1bpp"
 
-MailDragoniteGFX:
+MailHitmontopGFX:
 INCBIN "gfx/mail/dragonite.1bpp"
 
 MailLarvitarGFX:

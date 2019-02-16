@@ -149,7 +149,7 @@ endc
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw DratiniEggMoves
+	dw HitmonchanEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

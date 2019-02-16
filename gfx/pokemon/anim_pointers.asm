@@ -104,8 +104,8 @@ AnimationPointers:
 	dw ExeggutorAnimation
 	dw CuboneAnimation
 	dw MarowakAnimation
-	dw HitmonleeAnimation
-	dw HitmonchanAnimation
+	dw SandileAnimation
+	dw KrokorokAnimation
 	dw LickitungAnimation
 	dw KoffingAnimation
 	dw WeezingAnimation
@@ -145,9 +145,9 @@ AnimationPointers:
 	dw DwebbleAnimation
 	dw CrustleAnimation
 	dw TyrogueAnimation
-	dw DratiniAnimation
-	dw DragonairAnimation
-	dw DragoniteAnimation
+	dw HitmonchanAnimation
+	dw HitmonleeAnimation
+	dw HitmontopAnimation
 	dw RioluAnimation
 	dw LucarioAnimation
 	dw ChikoritaAnimation

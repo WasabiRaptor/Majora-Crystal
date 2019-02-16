@@ -952,7 +952,7 @@ SurfMailDesc:
 	next "(HOLD)@"
 
 LiteBlueMailDesc:
-	db   "DRATINI-print"
+	db   "HITMONCHAN-print"
 	next "MAIL. (HOLD)@"
 
 PortraitMailDesc:

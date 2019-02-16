@@ -106,8 +106,8 @@ KantoMonSpecials:
 	db 125 ; EXEGGUTOR
 	db  40 ; CUBONE
 	db  50 ; MAROWAK
-	db  35 ; HITMONLEE
-	db  35 ; HITMONCHAN
+	db  35 ; SANDILE
+	db  35 ; KROKOROK
 	db  60 ; LICKITUNG
 	db  60 ; KOFFING
 	db  85 ; WEEZING
@@ -147,8 +147,8 @@ KantoMonSpecials:
 	db 125 ; DWEBBLE
 	db 125 ; CRUSTLE
 	db 125 ; TYROGUE
-	db  50 ; DRATINI
-	db  70 ; DRAGONAIR
-	db 100 ; DRAGONITE
+	db  50 ; HITMONCHAN
+	db  70 ; HITMONLEE
+	db 100 ; HITMONTOP
 	db 154 ; RIOLU
 	db 100 ; LUCARIO

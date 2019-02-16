@@ -8,8 +8,8 @@ SometimesFleeMons:
 	db MR__MIME
 	db ARAQUANID
 	db PLACE3
-	db DRATINI
-	db DRAGONAIR
+	db HITMONCHAN
+	db HITMONLEE
 	db CYNDAQUIL
 	db ARCHEOPS
 	db UNOWN

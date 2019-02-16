@@ -216,10 +216,10 @@ PokemonPicPointers::
 	dba CuboneBackpic
 	dba MarowakFrontpic
 	dba MarowakBackpic
-	dba HitmonleeFrontpic
-	dba HitmonleeBackpic
-	dba HitmonchanFrontpic
-	dba HitmonchanBackpic
+	dba SandileFrontpic
+	dba SandileBackpic
+	dba KrokorokFrontpic
+	dba KrokorokBackpic
 	dba LickitungFrontpic
 	dba LickitungBackpic
 	dba KoffingFrontpic
@@ -298,12 +298,12 @@ PokemonPicPointers::
 	dba CrustleBackpic
 	dba TyrogueFrontpic
 	dba TyrogueBackpic
-	dba DratiniFrontpic
-	dba DratiniBackpic
-	dba DragonairFrontpic
-	dba DragonairBackpic
-	dba DragoniteFrontpic
-	dba DragoniteBackpic
+	dba HitmonchanFrontpic
+	dba HitmonchanBackpic
+	dba HitmonleeFrontpic
+	dba HitmonleeBackpic
+	dba HitmontopFrontpic
+	dba HitmontopBackpic
 	dba RioluFrontpic
 	dba RioluBackpic
 	dba LucarioFrontpic

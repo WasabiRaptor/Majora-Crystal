@@ -1465,7 +1465,7 @@ MarowakEvosAttacks:
 	db 53, BONE_RUSH
 	db 0 ; no more level-up moves
 
-HitmonleeEvosAttacks:
+SandileEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, DOUBLE_KICK
 	db 6, MEDITATE
@@ -1480,7 +1480,7 @@ HitmonleeEvosAttacks:
 	db 51, REVERSAL
 	db 0 ; no more level-up moves
 
-HitmonchanEvosAttacks:
+KrokorokEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, COMET_PUNCH
 	db 7, AGILITY
@@ -2018,8 +2018,8 @@ TyrogueEvosAttacks:
 	db 73, SKY_ATTACK
 	db 0 ; no more level-up moves
 
-DratiniEvosAttacks:
-	db EVOLVE_LEVEL, 30, DRAGONAIR
+HitmonchanEvosAttacks:
+	db EVOLVE_LEVEL, 30, HITMONLEE
 	db 0 ; no more evolutions
 	db 1, WRAP
 	db 1, LEER
@@ -2033,8 +2033,8 @@ DratiniEvosAttacks:
 	db 57, HYPER_BEAM
 	db 0 ; no more level-up moves
 
-DragonairEvosAttacks:
-	db EVOLVE_LEVEL, 55, DRAGONITE
+HitmonleeEvosAttacks:
+	db EVOLVE_LEVEL, 55, HITMONTOP
 	db 0 ; no more evolutions
 	db 1, WRAP
 	db 1, LEER
@@ -2050,7 +2050,7 @@ DragonairEvosAttacks:
 	db 65, HYPER_BEAM
 	db 0 ; no more level-up moves
 
-DragoniteEvosAttacks:
+HitmontopEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WRAP
 	db 1, LEER
@@ -3203,8 +3203,8 @@ SpiritombEvosAttacks:
 	db 0 ; no more level-up moves
 
 DuskullEvosAttacks:
-	db EVOLVE_STAT, 20, ATK_LT_DEF, HITMONCHAN
-	db EVOLVE_STAT, 20, ATK_GT_DEF, HITMONLEE
+	db EVOLVE_STAT, 20, ATK_LT_DEF, KROKOROK
+	db EVOLVE_STAT, 20, ATK_GT_DEF, SANDILE
 	db EVOLVE_STAT, 20, ATK_EQ_DEF, DUSCLOPS
 	db 0 ; no more evolutions
 	db 1, TACKLE

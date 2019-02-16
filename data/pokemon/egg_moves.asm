@@ -482,7 +482,7 @@ if !_BRASS
 endc
 	db -1 ; end
 
-DratiniEggMoves:
+HitmonchanEggMoves:
 	db LIGHT_SCREEN
 	db MIST
 	db HAZE
