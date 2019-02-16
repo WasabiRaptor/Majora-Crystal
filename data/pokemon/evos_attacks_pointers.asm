@@ -113,11 +113,11 @@ EvosAttacksPointers::
 	dw WeezingEvosAttacks
 	dw RhyhornEvosAttacks
 	dw RhydonEvosAttacks
-	dw ChanseyEvosAttacks
-	dw TangelaEvosAttacks
-	dw KangaskhanEvosAttacks
-	dw HorseaEvosAttacks
-	dw SeadraEvosAttacks
+	dw GoomyEvosAttacks
+	dw SliggooEvosAttacks
+	dw GoodraEvosAttacks
+	dw MisdreavusEvosAttacks
+	dw MismagiusEvosAttacks
 	dw GastlyEvosAttacks
 	dw HaunterEvosAttacks
 	dw GengarEvosAttacks

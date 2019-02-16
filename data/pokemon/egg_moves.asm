@@ -375,13 +375,13 @@ RhyhornEggMoves:
 	db MAGNITUDE
 	db -1 ; end
 
-ChanseyEggMoves:
+GoomyEggMoves:
 	db PRESENT
 	db METRONOME
 	db HEAL_BELL
 	db -1 ; end
 
-TangelaEggMoves:
+SliggooEggMoves:
 	db FLAIL
 	db CONFUSION
 	db MEGA_DRAIN
@@ -389,7 +389,7 @@ TangelaEggMoves:
 	db AMNESIA
 	db -1 ; end
 
-KangaskhanEggMoves:
+GoodraEggMoves:
 	db STOMP
 	db FORESIGHT
 	db FOCUS_ENERGY
@@ -397,7 +397,7 @@ KangaskhanEggMoves:
 	db DISABLE
 	db -1 ; end
 
-HorseaEggMoves:
+MisdreavusEggMoves:
 	db FLAIL
 	db AURORA_BEAM
 	db OCTAZOOKA

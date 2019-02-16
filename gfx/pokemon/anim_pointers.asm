@@ -111,11 +111,11 @@ AnimationPointers:
 	dw WeezingAnimation
 	dw RhyhornAnimation
 	dw RhydonAnimation
-	dw ChanseyAnimation
-	dw TangelaAnimation
-	dw KangaskhanAnimation
-	dw HorseaAnimation
-	dw SeadraAnimation
+	dw GoomyAnimation
+	dw SliggooAnimation
+	dw GoodraAnimation
+	dw MisdreavusAnimation
+	dw MismagiusAnimation
 	dw GastlyAnimation
 	dw HaunterAnimation
 	dw GengarAnimation

@@ -111,11 +111,11 @@ AnimationIdlePointers:
 	dw WeezingAnimationIdle
 	dw RhyhornAnimationIdle
 	dw RhydonAnimationIdle
-	dw ChanseyAnimationIdle
-	dw TangelaAnimationIdle
-	dw KangaskhanAnimationIdle
-	dw HorseaAnimationIdle
-	dw SeadraAnimationIdle
+	dw GoomyAnimationIdle
+	dw SliggooAnimationIdle
+	dw GoodraAnimationIdle
+	dw MisdreavusAnimationIdle
+	dw MismagiusAnimationIdle
 	dw GastlyAnimationIdle
 	dw HaunterAnimationIdle
 	dw GengarAnimationIdle

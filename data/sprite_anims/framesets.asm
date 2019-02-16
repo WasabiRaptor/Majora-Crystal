@@ -14,8 +14,8 @@ SpriteAnimFrameData:
 	dw .Frameset_GSIntroStar
 	dw .Frameset_GSIntroSparkle
 	dw .Frameset_SlotsFoongus
-	dw .Frameset_SlotsChansey
-	dw .Frameset_SlotsChansey2
+	dw .Frameset_SlotsGoomy
+	dw .Frameset_SlotsGoomy2
 	dw .Frameset_SlotsEgg
 	dw .Frameset_RedWalk
 	dw .Frameset_StillCursor
@@ -167,19 +167,19 @@ SpriteAnimFrameData:
 	frame SPRITE_ANIM_OAMSET_SLOTS_FOONGUS_2,  7, OAM_X_FLIP
 	dorestart
 
-.Frameset_SlotsChansey:
-	frame SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_1,  7
-	frame SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_2,  7
-	frame SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_1,  7
-	frame SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_3,  7
+.Frameset_SlotsGoomy:
+	frame SPRITE_ANIM_OAMSET_SLOTS_GOOMY_1,  7
+	frame SPRITE_ANIM_OAMSET_SLOTS_GOOMY_2,  7
+	frame SPRITE_ANIM_OAMSET_SLOTS_GOOMY_1,  7
+	frame SPRITE_ANIM_OAMSET_SLOTS_GOOMY_3,  7
 	dorestart
 
-.Frameset_SlotsChansey2:
-	frame SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_1,  7
-	frame SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_4,  7
-	frame SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_5,  7
-	frame SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_4,  7
-	frame SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_1,  7
+.Frameset_SlotsGoomy2:
+	frame SPRITE_ANIM_OAMSET_SLOTS_GOOMY_1,  7
+	frame SPRITE_ANIM_OAMSET_SLOTS_GOOMY_4,  7
+	frame SPRITE_ANIM_OAMSET_SLOTS_GOOMY_5,  7
+	frame SPRITE_ANIM_OAMSET_SLOTS_GOOMY_4,  7
+	frame SPRITE_ANIM_OAMSET_SLOTS_GOOMY_1,  7
 	endanim
 
 .Frameset_SlotsEgg:

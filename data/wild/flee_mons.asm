@@ -4,7 +4,7 @@ FleeMons:
 SometimesFleeMons:
 	db SUDOWOODO
 	db LEDIAN
-	db TANGELA
+	db SLIGGOO
 	db DEWOTT
 	db ARAQUANID
 	db MILOTIC

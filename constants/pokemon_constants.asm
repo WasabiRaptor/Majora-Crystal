@@ -133,12 +133,12 @@
 	const WEEZING    ; 6e
 	const RHYHORN    ; 6f
 	const RHYDON     ; 70
-	const CHANSEY    ; 71
-	const TANGELA    ; 72
-	const KANGASKHAN ; 73
-	const HORSEA     ; 74
-	const SEADRA     ; 75
 	
+	const GOOMY         ; 71
+	const SLIGGOO       ; 72
+	const GOODRA        ; 73
+	const MISDREAVUS    ; 74
+	const MISMAGIUS     ; 75
 	const GASTLY        ; 76
 	const HAUNTER       ; 77
 	const GENGAR        ; 78

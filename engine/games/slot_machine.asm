@@ -69,8 +69,8 @@ SLOTS_END_LOOP_F EQU 7
 	const REEL_ACTION_INIT_FOONGUS
 	const REEL_ACTION_WAIT_FOONGUS
 	const REEL_ACTION_END_FOONGUS
-	const REEL_ACTION_INIT_CHANSEY
-	const REEL_ACTION_WAIT_CHANSEY
+	const REEL_ACTION_INIT_GOOMY
+	const REEL_ACTION_WAIT_GOOMY
 	const REEL_ACTION_WAIT_EGG
 	const REEL_ACTION_DROP_REEL
 
@@ -576,13 +576,13 @@ Slots_StopReel3:
 ; - REEL_ACTION_STOP_REEL3, 37.5%
 ; - REEL_ACTION_START_SLOW_ADVANCE_REEL3, 31.3%
 ; - REEL_ACTION_INIT_FOONGUS, 31.3%
-; - REEL_ACTION_INIT_CHANSEY, 0%
+; - REEL_ACTION_INIT_GOOMY, 0%
 
 ; If matching SEVEN symbols and bias to SEVEN:
 ; - REEL_ACTION_STOP_REEL3, 29.7%
 ; - REEL_ACTION_START_SLOW_ADVANCE_REEL3, 23.4%
 ; - REEL_ACTION_INIT_FOONGUS, 23.4%
-; - REEL_ACTION_INIT_CHANSEY, 23.4%
+; - REEL_ACTION_INIT_GOOMY, 23.4%
 
 	ld a, [wFirstTwoReelsMatching]
 	and a
@@ -600,7 +600,7 @@ Slots_StopReel3:
 	jr nc, .slow_advance
 	cp 60
 	jr nc, .foongus
-	ld a, REEL_ACTION_INIT_CHANSEY
+	ld a, REEL_ACTION_INIT_GOOMY
 	ret
 
 .biased
@@ -842,8 +842,8 @@ ReelActionJumptable:
 	dw ReelAction_InitFoongus                   ; 12
 	dw ReelAction_WaitFoongus                   ; 13
 	dw ReelAction_EndFoongus                    ; 14
-	dw ReelAction_InitChansey                 ; 15
-	dw ReelAction_WaitChansey                 ; 16
+	dw ReelAction_InitGoomy                 ; 15
+	dw ReelAction_WaitGoomy                 ; 16
 	dw ReelAction_WaitEgg                     ; 17
 	dw ReelAction_DropReel                    ; 18
 
@@ -1126,10 +1126,10 @@ ReelAction_EndFoongus:
 	ld [hl], 0
 	ret
 
-ReelAction_InitChansey:
+ReelAction_InitGoomy:
 ; Ensures the lining up of SEVEN symbols, but this mode is only possible
 ; when there is bias to SEVEN symbols (and even then, it's still rare).
-; Chansey releases and egg and reel #3 is made to advance 17 slots very
+; Goomy releases and egg and reel #3 is made to advance 17 slots very
 ; quickly as many times as necessary for the match to SEVENs to show up.
 
 	call Slots_CheckMatchedAllThreeReels
@@ -1139,20 +1139,20 @@ ReelAction_InitChansey:
 	call Slots_WaitSFX
 	ld hl, REEL_ACTION
 	add hl, bc
-	inc [hl] ; REEL_ACTION_WAIT_CHANSEY
+	inc [hl] ; REEL_ACTION_WAIT_GOOMY
 	ld hl, REEL_SPIN_RATE
 	add hl, bc
 	ld [hl], 0
 	push bc
 	depixel 12, 0
-	ld a, SPRITE_ANIM_INDEX_SLOTS_CHANSEY
+	ld a, SPRITE_ANIM_INDEX_SLOTS_GOOMY
 	call _InitSpriteAnimStruct
 	pop bc
 	xor a
 	ld [wSlotsDelay], a
 	ret
 
-ReelAction_WaitChansey:
+ReelAction_WaitGoomy:
 	ld a, [wSlotsDelay]
 	and a
 	ret z
@@ -1200,7 +1200,7 @@ ReelAction_DropReel:
 	ld hl, REEL_ACTION
 	add hl, bc
 	dec [hl]
-	dec [hl] ; REEL_ACTION_WAIT_CHANSEY
+	dec [hl] ; REEL_ACTION_WAIT_GOOMY
 	ld a, 1
 	ld [wSlotsDelay], a
 	ret
@@ -1999,7 +1999,7 @@ Slots_AnimateFoongus:
 	ldh [hSCY], a
 	ret
 
-Slots_AnimateChansey:
+Slots_AnimateGoomy:
 	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
 	add hl, bc
 	ld e, [hl]

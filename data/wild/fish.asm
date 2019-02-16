@@ -169,7 +169,7 @@ FishGroups:
 	db  40 percent,     KRABBY,     40
 	db  70 percent,     time_group 19
 	db  90 percent + 1, KINGLER,    40
-	db 100 percent,     SEADRA,     40
+	db 100 percent,     MISMAGIUS,     40
 
 .Piloswine_NoSwarm_Old:
 .Piloswine_Old:
@@ -224,7 +224,7 @@ TimeFishGroups:
 	db ANORITH,   40,  ANORITH,   40 ; 15
 	db HITMONCHAN,    10,  HITMONCHAN,    10 ; 16
 	db HITMONCHAN,    10,  HITMONCHAN,    10 ; 17
-	db HORSEA,     20,  HORSEA,     20 ; 18
-	db HORSEA,     40,  HORSEA,     40 ; 19
+	db MISDREAVUS,     20,  MISDREAVUS,     20 ; 18
+	db MISDREAVUS,     40,  MISDREAVUS,     40 ; 19
 	db DEERLING,  20,  DEERLING,  20 ; 20
 	db DEERLING,  40,  DEERLING,  40 ; 21

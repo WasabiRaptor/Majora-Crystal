@@ -5,7 +5,7 @@
 	const CRY_GURDURR
 	const CRY_ESPURR
 	const CRY_TREVANANT
-	const CRY_KANGASKHAN
+	const CRY_GOODRA
 	const CRY_CHARMANDER
 	const CRY_GRIMER
 	const CRY_VOLTORB

@@ -28,7 +28,7 @@ NUM_SPRITE_ANIM_STRUCTS EQU 10 ; see wSpriteAnimationStructs
 	const SPRITE_ANIM_INDEX_GS_INTRO_STAR            ; 04
 	const SPRITE_ANIM_INDEX_GS_INTRO_SPARKLE         ; 05
 	const SPRITE_ANIM_INDEX_SLOTS_FOONGUS              ; 06
-	const SPRITE_ANIM_INDEX_SLOTS_CHANSEY            ; 07
+	const SPRITE_ANIM_INDEX_SLOTS_GOOMY            ; 07
 	const SPRITE_ANIM_INDEX_SLOTS_EGG                ; 08
 	const SPRITE_ANIM_INDEX_COMPOSE_MAIL_CURSOR      ; 09
 	const SPRITE_ANIM_INDEX_RED_WALK                 ; 0a
@@ -78,7 +78,7 @@ NUM_SPRITE_ANIM_STRUCTS EQU 10 ; see wSpriteAnimationStructs
 	const SPRITE_ANIM_SEQ_GS_INTRO_STAR           ; 07
 	const SPRITE_ANIM_SEQ_GS_INTRO_SPARKLE        ; 08
 	const SPRITE_ANIM_SEQ_SLOTS_FOONGUS             ; 09
-	const SPRITE_ANIM_SEQ_SLOTS_CHANSEY           ; 0a
+	const SPRITE_ANIM_SEQ_SLOTS_GOOMY           ; 0a
 	const SPRITE_ANIM_SEQ_SLOTS_EGG               ; 0b
 	const SPRITE_ANIM_SEQ_MAIL_CURSOR             ; 0c
 	const SPRITE_ANIM_SEQ_UNUSED_CURSOR           ; 0d
@@ -119,8 +119,8 @@ NUM_SPRITE_ANIM_STRUCTS EQU 10 ; see wSpriteAnimationStructs
 	const SPRITE_ANIM_FRAMESET_GS_INTRO_STAR            ; 0b
 	const SPRITE_ANIM_FRAMESET_GS_INTRO_SPARKLE         ; 0c
 	const SPRITE_ANIM_FRAMESET_SLOTS_FOONGUS              ; 0d
-	const SPRITE_ANIM_FRAMESET_SLOTS_CHANSEY            ; 0e
-	const SPRITE_ANIM_FRAMESET_SLOTS_CHANSEY_2          ; 0f
+	const SPRITE_ANIM_FRAMESET_SLOTS_GOOMY            ; 0e
+	const SPRITE_ANIM_FRAMESET_SLOTS_GOOMY_2          ; 0f
 	const SPRITE_ANIM_FRAMESET_SLOTS_EGG                ; 10
 	const SPRITE_ANIM_FRAMESET_RED_WALK                 ; 11
 	const SPRITE_ANIM_FRAMESET_STILL_CURSOR             ; 12
@@ -208,11 +208,11 @@ NUM_SPRITE_ANIM_STRUCTS EQU 10 ; see wSpriteAnimationStructs
 	const SPRITE_ANIM_OAMSET_GS_INTRO_SPARKLE_3         ; 26
 	const SPRITE_ANIM_OAMSET_SLOTS_FOONGUS_1              ; 27
 	const SPRITE_ANIM_OAMSET_SLOTS_FOONGUS_2              ; 28
-	const SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_1            ; 29
-	const SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_2            ; 2a
-	const SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_3            ; 2b
-	const SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_4            ; 2c
-	const SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_5            ; 2d
+	const SPRITE_ANIM_OAMSET_SLOTS_GOOMY_1            ; 29
+	const SPRITE_ANIM_OAMSET_SLOTS_GOOMY_2            ; 2a
+	const SPRITE_ANIM_OAMSET_SLOTS_GOOMY_3            ; 2b
+	const SPRITE_ANIM_OAMSET_SLOTS_GOOMY_4            ; 2c
+	const SPRITE_ANIM_OAMSET_SLOTS_GOOMY_5            ; 2d
 	const SPRITE_ANIM_OAMSET_SLOTS_EGG                  ; 2e
 	const SPRITE_ANIM_OAMSET_STILL_CURSOR               ; 2f
 	const SPRITE_ANIM_OAMSET_TRADE_POKE_BALL_1          ; 30

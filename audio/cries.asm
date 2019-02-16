@@ -842,10 +842,10 @@ Cry_Trevanant:
 	musicheader 1, 6, Cry_Trevanant_Ch6
 	musicheader 1, 8, Cry_Trevanant_Ch8
 
-Cry_Kangaskhan:
-	musicheader 3, 5, Cry_Kangaskhan_Ch5
-	musicheader 1, 6, Cry_Kangaskhan_Ch6
-	musicheader 1, 8, Cry_Kangaskhan_Ch8
+Cry_Goodra:
+	musicheader 3, 5, Cry_Goodra_Ch5
+	musicheader 1, 6, Cry_Goodra_Ch6
+	musicheader 1, 8, Cry_Goodra_Ch8
 
 Cry_Flareon:
 	musicheader 3, 5, Cry_Flareon_Ch5
@@ -1195,7 +1195,7 @@ Cry_Quilladin_Ch8:
 	noise __,  9, $91, $1c
 	endchannel
 
-Cry_Kangaskhan_Ch5:
+Cry_Goodra_Ch5:
 	sound_duty 0, 0, 3, 3
 	sound __,  5, $f7, $0608
 	sound __,  7, $e6, $0600
@@ -1206,7 +1206,7 @@ Cry_Kangaskhan_Ch5:
 	sound __,  9, $e1, $0580
 	endchannel
 
-Cry_Kangaskhan_Ch6:
+Cry_Goodra_Ch6:
 	sound_duty 2, 2, 0, 0
 	sound __,  5, $c7, $0504
 	sound __,  7, $a6, $0502
@@ -1217,7 +1217,7 @@ Cry_Kangaskhan_Ch6:
 	sound __,  9, $c1, $0482
 	endchannel
 
-Cry_Kangaskhan_Ch8:
+Cry_Goodra_Ch8:
 	noise __, 13, $e4, $4c
 	noise __, 11, $c7, $5c
 	noise __, 13, $b6, $4c

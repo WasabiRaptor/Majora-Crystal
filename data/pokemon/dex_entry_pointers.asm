@@ -112,11 +112,11 @@ PokedexDataPointerTable:
 	dw WeezingPokedexEntry
 	dw RhyhornPokedexEntry
 	dw RhydonPokedexEntry
-	dw ChanseyPokedexEntry
-	dw TangelaPokedexEntry
-	dw KangaskhanPokedexEntry
-	dw HorseaPokedexEntry
-	dw SeadraPokedexEntry
+	dw GoomyPokedexEntry
+	dw SliggooPokedexEntry
+	dw GoodraPokedexEntry
+	dw MisdreavusPokedexEntry
+	dw MismagiusPokedexEntry
 	dw GastlyPokedexEntry
 	dw HaunterPokedexEntry
 	dw GengarPokedexEntry

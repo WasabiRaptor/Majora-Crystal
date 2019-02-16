@@ -230,16 +230,16 @@ PokemonPicPointers::
 	dba RhyhornBackpic
 	dba RhydonFrontpic
 	dba RhydonBackpic
-	dba ChanseyFrontpic
-	dba ChanseyBackpic
-	dba TangelaFrontpic
-	dba TangelaBackpic
-	dba KangaskhanFrontpic
-	dba KangaskhanBackpic
-	dba HorseaFrontpic
-	dba HorseaBackpic
-	dba SeadraFrontpic
-	dba SeadraBackpic
+	dba GoomyFrontpic
+	dba GoomyBackpic
+	dba SliggooFrontpic
+	dba SliggooBackpic
+	dba GoodraFrontpic
+	dba GoodraBackpic
+	dba MisdreavusFrontpic
+	dba MisdreavusBackpic
+	dba MismagiusFrontpic
+	dba MismagiusBackpic
 	dba GastlyFrontpic
 	dba GastlyBackpic
 	dba HaunterFrontpic

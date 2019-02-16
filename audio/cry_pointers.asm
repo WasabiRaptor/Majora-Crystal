@@ -2,7 +2,7 @@ Cries:
 	dba Cry_Gurdurr
 	dba Cry_Espurr
 	dba Cry_Trevanant
-	dba Cry_Kangaskhan
+	dba Cry_Goodra
 	dba Cry_Flareon
 	dba Cry_Ledian
 	dba Cry_Voltorb

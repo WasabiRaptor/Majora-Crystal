@@ -111,10 +111,10 @@ EggMovePointers::
 	dw NoEggMoves
 	dw RhyhornEggMoves
 	dw NoEggMoves
-	dw ChanseyEggMoves
-	dw TangelaEggMoves
-	dw KangaskhanEggMoves
-	dw HorseaEggMoves
+	dw GoomyEggMoves
+	dw SliggooEggMoves
+	dw GoodraEggMoves
+	dw MisdreavusEggMoves
 	dw NoEggMoves
 	dw GastlyEggMoves
 	dw NoEggMoves

@@ -113,11 +113,11 @@ KantoMonSpecials:
 	db  85 ; WEEZING
 	db  30 ; RHYHORN
 	db  45 ; RHYDON
-	db 105 ; CHANSEY
-	db 100 ; TANGELA
-	db  40 ; KANGASKHAN
-	db  70 ; HORSEA
-	db  95 ; SEADRA
+	db 105 ; GOOMY
+	db 100 ; SLIGGOO
+	db  40 ; GOODRA
+	db  70 ; MISDREAVUS
+	db  95 ; MISMAGIUS
 	db  50 ; GASTLY
 	db  80 ; HAUNTER
 	db  70 ; GENGAR

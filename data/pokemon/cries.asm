@@ -117,11 +117,11 @@ PokemonCries::
 	mon_cry CRY_FOONGUS,       $0ff,  $17f ; WEEZING
 	mon_cry CRY_CHARMANDER,  $000,  $100 ; RHYHORN
 	mon_cry CRY_RHYDON,      $000,  $100 ; RHYDON
-	mon_cry CRY_MAGNEZONE,   $00a,  $140 ; CHANSEY
-	mon_cry CRY_FOONGUS,       $000,  $100 ; TANGELA
-	mon_cry CRY_KANGASKHAN,  $000,  $100 ; KANGASKHAN
-	mon_cry CRY_PURRLOIN,    $099,  $090 ; HORSEA
-	mon_cry CRY_PURRLOIN,    $03c,  $081 ; SEADRA
+	mon_cry CRY_MAGNEZONE,   $00a,  $140 ; GOOMY
+	mon_cry CRY_FOONGUS,       $000,  $100 ; SLIGGOO
+	mon_cry CRY_GOODRA,  $000,  $100 ; GOODRA
+	mon_cry CRY_PURRLOIN,    $099,  $090 ; MISDREAVUS
+	mon_cry CRY_PURRLOIN,    $03c,  $081 ; MISMAGIUS
 	mon_cry CRY_CATERPIE,    $080,  $0c0 ; GASTLY
 	mon_cry CRY_CATERPIE,    $010,  $17f ; HAUNTER
 	mon_cry CRY_SENTRET,       $002,  $0a0 ; GENGAR

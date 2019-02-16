@@ -42,11 +42,11 @@ SpriteAnimOAMData:
 	dbw $13, .OAMData_1x1_Palette0             ; SPRITE_ANIM_OAMSET_GS_INTRO_SPARKLE_3
 	dbw $00, .OAMData_SlotsFoongus               ; SPRITE_ANIM_OAMSET_SLOTS_FOONGUS_1
 	dbw $08, .OAMData_SlotsFoongus               ; SPRITE_ANIM_OAMSET_SLOTS_FOONGUS_2
-	dbw $10, .OAMData_SlotsChansey1            ; SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_1
-	dbw $10, .OAMData_SlotsChansey2            ; SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_2
-	dbw $10, .OAMData_SlotsChansey3            ; SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_3
-	dbw $10, .OAMData_SlotsChansey4            ; SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_4
-	dbw $10, .OAMData_SlotsChansey5            ; SPRITE_ANIM_OAMSET_SLOTS_CHANSEY_5
+	dbw $10, .OAMData_SlotsGoomy1            ; SPRITE_ANIM_OAMSET_SLOTS_GOOMY_1
+	dbw $10, .OAMData_SlotsGoomy2            ; SPRITE_ANIM_OAMSET_SLOTS_GOOMY_2
+	dbw $10, .OAMData_SlotsGoomy3            ; SPRITE_ANIM_OAMSET_SLOTS_GOOMY_3
+	dbw $10, .OAMData_SlotsGoomy4            ; SPRITE_ANIM_OAMSET_SLOTS_GOOMY_4
+	dbw $10, .OAMData_SlotsGoomy5            ; SPRITE_ANIM_OAMSET_SLOTS_GOOMY_5
 	dbw $3a, .OAMData_1x1_Palette0             ; SPRITE_ANIM_OAMSET_SLOTS_EGG
 	dbw $00, .OAMData_RedWalk                  ; SPRITE_ANIM_OAMSET_STILL_CURSOR
 	dbw $00, .OAMData_TradePokeBall1           ; SPRITE_ANIM_OAMSET_TRADE_POKE_BALL_1
@@ -491,7 +491,7 @@ SpriteAnimOAMData:
 	dsprite  0,  4, -1,  4, $06, 5 | OBP_NUM
 	dsprite  0,  4,  0,  4, $04, 5 | OBP_NUM | X_FLIP
 
-.OAMData_SlotsChansey1:
+.OAMData_SlotsGoomy1:
 	db 6
 	dsprite -2,  4, -2,  4, $00, 6 | OBP_NUM
 	dsprite -2,  4, -1,  4, $02, 6 | OBP_NUM
@@ -500,7 +500,7 @@ SpriteAnimOAMData:
 	dsprite  0,  4, -1,  4, $08, 6 | OBP_NUM
 	dsprite  0,  4,  0,  4, $0a, 6 | OBP_NUM
 
-.OAMData_SlotsChansey2:
+.OAMData_SlotsGoomy2:
 	db 6
 	dsprite -2,  4, -2,  4, $00, 6 | OBP_NUM
 	dsprite -2,  4, -1,  4, $02, 6 | OBP_NUM
@@ -509,7 +509,7 @@ SpriteAnimOAMData:
 	dsprite  0,  4, -1,  4, $0e, 6 | OBP_NUM
 	dsprite  0,  4,  0,  4, $10, 6 | OBP_NUM
 
-.OAMData_SlotsChansey3:
+.OAMData_SlotsGoomy3:
 	db 6
 	dsprite -2,  4, -2,  4, $00, 6 | OBP_NUM
 	dsprite -2,  4, -1,  4, $02, 6 | OBP_NUM
@@ -518,7 +518,7 @@ SpriteAnimOAMData:
 	dsprite  0,  4, -1,  4, $14, 6 | OBP_NUM
 	dsprite  0,  4,  0,  4, $16, 6 | OBP_NUM
 
-.OAMData_SlotsChansey4:
+.OAMData_SlotsGoomy4:
 	db 6
 	dsprite -2,  4, -2,  4, $00, 6 | OBP_NUM
 	dsprite -2,  4, -1,  4, $02, 6 | OBP_NUM
@@ -527,7 +527,7 @@ SpriteAnimOAMData:
 	dsprite  0,  4, -1,  4, $1a, 6 | OBP_NUM
 	dsprite  0,  4,  0,  4, $1c, 6 | OBP_NUM
 
-.OAMData_SlotsChansey5:
+.OAMData_SlotsGoomy5:
 	db 6
 	dsprite -2,  4, -2,  4, $1e, 6 | OBP_NUM
 	dsprite -2,  4, -1,  4, $20, 6 | OBP_NUM

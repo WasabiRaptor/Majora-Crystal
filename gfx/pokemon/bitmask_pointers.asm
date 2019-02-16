@@ -111,11 +111,11 @@ BitmasksPointers:
 	dw WeezingBitmasks
 	dw RhyhornBitmasks
 	dw RhydonBitmasks
-	dw ChanseyBitmasks
-	dw TangelaBitmasks
-	dw KangaskhanBitmasks
-	dw HorseaBitmasks
-	dw SeadraBitmasks
+	dw GoomyBitmasks
+	dw SliggooBitmasks
+	dw GoodraBitmasks
+	dw MisdreavusBitmasks
+	dw MismagiusBitmasks
 	dw GastlyBitmasks
 	dw HaunterBitmasks
 	dw GengarBitmasks

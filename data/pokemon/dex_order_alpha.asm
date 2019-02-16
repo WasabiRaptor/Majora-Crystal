@@ -21,7 +21,7 @@ AlphabeticalPokedexOrder:
 	db ROCKRUFF
 	db ZORUA
 	db ZYGARDE
-	db CHANSEY
+	db GOOMY
 	db UMBREON
 	db FLAREON
 	db ESPEON
@@ -92,7 +92,7 @@ AlphabeticalPokedexOrder:
 	db CELEBI
 	db TYRANITAR
 	db SLUGMA
-	db HORSEA
+	db MISDREAVUS
 	db BISHARP
 	db PAWNIARD
 	db HYPNO
@@ -106,7 +106,7 @@ AlphabeticalPokedexOrder:
 	db CHINCHOU
 	db FLOETTE
 	db MIMIKYU
-	db KANGASKHAN
+	db GOODRA
 	db YAMASK
 	db KINGLER
 	db KOFFING
@@ -194,7 +194,7 @@ AlphabeticalPokedexOrder:
 	db CHIMECHO
 	db MAMOSWINE
 	db SAMUROTT
-	db SEADRA
+	db MISMAGIUS
 	db HAUNTER
 	db HERACROSS
 	db LARVITAR
@@ -224,7 +224,7 @@ AlphabeticalPokedexOrder:
 	db FLETCHINDER
 	db FLETCHLING
 	db CLAYDOL
-	db TANGELA
+	db SLIGGOO
 	db AZUMARILL
 	db SIGILYPH
 	db DEERLING

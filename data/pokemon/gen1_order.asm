@@ -1,6 +1,6 @@
 Pokered_MonIndices:
 	db RHYDON
-	db KANGASKHAN
+	db GOODRA
 	db GURDURR
 	db PURRLOIN
 	db MEOWTH
@@ -28,7 +28,7 @@ Pokered_MonIndices:
 	db GENGAR
 	db SYLVEON
 	db MARILL
-	db TANGELA
+	db SLIGGOO
 	db MAMOSWINE ; MISSINGNO.
 	db UNOWN ; MISSINGNO.
 	db LUXRAY
@@ -38,7 +38,7 @@ Pokered_MonIndices:
 	db TREVANANT
 	db FLOETTE
 	db WHIMSICOTT
-	db CHANSEY
+	db GOOMY
 	db JIGGLYPUFF
 	db DEWOTT
 	db SANDILE
@@ -90,8 +90,8 @@ Pokered_MonIndices:
 	db HITMONLEE
 	db QWILFISH
 	db CHINCHOU
-	db HORSEA
-	db SEADRA
+	db MISDREAVUS
+	db MISMAGIUS
 	db AEGISLASH ; MISSINGNO.
 	db PAWNIARD ; MISSINGNO.
 	db CHINGLING

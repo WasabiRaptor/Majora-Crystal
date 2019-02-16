@@ -1562,7 +1562,7 @@ RhydonEvosAttacks:
 	db 65, EARTHQUAKE
 	db 0 ; no more level-up moves
 
-ChanseyEvosAttacks:
+GoomyEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, SUICUNE
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -1578,7 +1578,7 @@ ChanseyEvosAttacks:
 	db 57, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
-TangelaEvosAttacks:
+SliggooEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CONSTRICT
 	db 4, SLEEP_POWDER
@@ -1592,7 +1592,7 @@ TangelaEvosAttacks:
 	db 46, GROWTH
 	db 0 ; no more level-up moves
 
-KangaskhanEvosAttacks:
+GoodraEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, COMET_PUNCH
 	db 7, LEER
@@ -1605,8 +1605,8 @@ KangaskhanEvosAttacks:
 	db 49, REVERSAL
 	db 0 ; no more level-up moves
 
-HorseaEvosAttacks:
-	db EVOLVE_LEVEL, 32, SEADRA
+MisdreavusEvosAttacks:
+	db EVOLVE_LEVEL, 32, MISMAGIUS
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 8, SMOKESCREEN
@@ -1617,7 +1617,7 @@ HorseaEvosAttacks:
 	db 43, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-SeadraEvosAttacks:
+MismagiusEvosAttacks:
 	db EVOLVE_TRADE, DRAGON_SCALE, YAMASK
 	db 0 ; no more evolutions
 	db 1, BUBBLE

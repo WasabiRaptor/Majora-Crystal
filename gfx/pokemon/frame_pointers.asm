@@ -111,11 +111,11 @@ FramesPointers:
 	dw WeezingFrames
 	dw RhyhornFrames
 	dw RhydonFrames
-	dw ChanseyFrames
-	dw TangelaFrames
-	dw KangaskhanFrames
-	dw HorseaFrames
-	dw SeadraFrames
+	dw GoomyFrames
+	dw SliggooFrames
+	dw GoodraFrames
+	dw MisdreavusFrames
+	dw MismagiusFrames
 	dw GastlyFrames
 	dw HaunterFrames
 	dw GengarFrames

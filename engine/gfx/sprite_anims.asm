@@ -23,8 +23,8 @@ DoAnimFrame:
 	dw .GSIntroStar
 	dw .GSIntroSparkle
 	dw .SlotsFoongus
-	dw .SlotsChansey
-	dw .SlotsChanseyEgg
+	dw .SlotsGoomy
+	dw .SlotsGoomyEgg
 	dw .MailCursor
 	dw .UnusedCursor
 	dw .DummyGameCursor
@@ -354,18 +354,18 @@ DoAnimFrame:
 	callfar Slots_AnimateFoongus
 	ret
 
-.SlotsChansey:
-	callfar Slots_AnimateChansey
+.SlotsGoomy:
+	callfar Slots_AnimateGoomy
 	ld hl, wcf64
 	ld a, [hl]
 	cp $2
 	ret nz
 	ld [hl], $3
-	ld a, SPRITE_ANIM_FRAMESET_SLOTS_CHANSEY_2
+	ld a, SPRITE_ANIM_FRAMESET_SLOTS_GOOMY_2
 	call _ReinitSpriteAnimFrame
 	ret
 
-.SlotsChanseyEgg:
+.SlotsGoomyEgg:
 	ld hl, SPRITEANIMSTRUCT_JUMPTABLE_INDEX
 	add hl, bc
 	ld a, [hl]
