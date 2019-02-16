@@ -5,10 +5,10 @@ ENDM
 
 OddEggProbabilities:
 prob_total = 0
-; Pichu
+; Kommo_o
 	prob 8
 	prob 1
-; Cleffa
+; Deino
 	prob 16
 	prob 3
 ; Igglybuff
@@ -30,7 +30,7 @@ prob_total = 0
 OddEggs:
 
 OddEgg1:
-	db PICHU
+	db KOMMO_O
 	db NO_ITEM
 	db THUNDERSHOCK, CHARM, DIZZY_PUNCH, 0
 	dw 02048 ; OT ID
@@ -54,7 +54,7 @@ OddEgg1:
 	db "EGG@@@@@@@@"
 OddEgg1End:
 
-	db PICHU
+	db KOMMO_O
 	db NO_ITEM
 	db THUNDERSHOCK, CHARM, DIZZY_PUNCH, 0
 	dw 00256 ; OT ID
@@ -80,7 +80,7 @@ OddEgg1End:
 	bigdw 9 ; SDef
 	db "EGG@@@@@@@@"
 
-	db CLEFFA
+	db DEINO
 	db NO_ITEM
 	db TACKLE, CHARM, DIZZY_PUNCH, 0
 	dw 04096 ; OT ID
@@ -106,7 +106,7 @@ OddEgg1End:
 	bigdw 10 ; SDef
 	db "EGG@@@@@@@@"
 
-	db CLEFFA
+	db DEINO
 	db NO_ITEM
 	db TACKLE, CHARM, DIZZY_PUNCH, 0
 	dw 00768 ; OT ID

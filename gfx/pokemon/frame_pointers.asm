@@ -168,10 +168,10 @@ FramesPointers:
 	dw SpinarakFrames
 	dw AriadosFrames
 	dw CrobatFrames
-	dw ChinchouFrames
-	dw LanturnFrames
-	dw PichuFrames
-	dw CleffaFrames
+	dw Jangmo_oFrames
+	dw Hakamo_oFrames
+	dw Kommo_oFrames
+	dw DeinoFrames
 	dw ZweilousFrames
 	dw HeidreigonFrames
 	dw CyndaquilFrames

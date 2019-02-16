@@ -51,7 +51,7 @@ Cries:
 	dba Cry_Chikorita
 	dba Cry_Totodile
 	dba Cry_Snowrunt
-	dba Cry_Cleffa
+	dba Cry_Deino
 	dba Cry_Excadrill
 	dba Cry_Noivern
 	dba Cry_Entei
@@ -63,7 +63,7 @@ Cries:
 	dba Cry_Fletchinder
 	dba Cry_Incineroar
 	dba Cry_Baltoy
-	dba Cry_Pichu
+	dba Cry_Kommo_o
 	dba Cry_Houndoom
 	dba Cry_Cryogonal
 	dba Cry_Litwick

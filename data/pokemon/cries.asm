@@ -174,10 +174,10 @@ PokemonCries::
 	mon_cry CRY_SPINARAK,    $011,  $200 ; SPINARAK
 	mon_cry CRY_SPINARAK,   -$0ae,  $1e2 ; ARIADOS
 	mon_cry CRY_SQUIRTLE,   -$010,  $140 ; CROBAT
-	mon_cry CRY_ABOMASNOW,   $3c9,  $140 ; CHINCHOU
-	mon_cry CRY_ABOMASNOW,   $2d0,  $110 ; LANTURN
-	mon_cry CRY_PICHU,       $000,  $140 ; PICHU
-	mon_cry CRY_CLEFFA,      $061,  $091 ; CLEFFA
+	mon_cry CRY_ABOMASNOW,   $3c9,  $140 ; JANGMO_O
+	mon_cry CRY_ABOMASNOW,   $2d0,  $110 ; HAKAMO_O
+	mon_cry CRY_KOMMO_O,       $000,  $140 ; KOMMO_O
+	mon_cry CRY_DEINO,      $061,  $091 ; DEINO
 	mon_cry CRY_CHIKORITA,   $0e8,  $0e8 ; ZWEILOUS
 	mon_cry CRY_HEIDREIGON,      $010,  $100 ; HEIDREIGON
 	mon_cry CRY_CYNDAQUIL,     $03b,  $038 ; CYNDAQUIL
@@ -186,14 +186,14 @@ PokemonCries::
 	mon_cry CRY_LITTEN,      $022,  $0d8 ; LITTEN
 	mon_cry CRY_LITTEN,     -$007,  $180 ; TORRACAT
 	mon_cry CRY_INCINEROAR,   -$07c,  $0e8 ; INCINEROAR
-	mon_cry CRY_CLEFFA,      $084,  $150 ; FENNEKIN
+	mon_cry CRY_DEINO,      $084,  $150 ; FENNEKIN
 	mon_cry CRY_BRAIXEN,      $11b,  $120 ; BRAIXEN
 	mon_cry CRY_BRAIXEN,      $0b6,  $180 ; DELPHOX
-	mon_cry CRY_CLEFFA,      $f40,  $180 ; VULPIX
-	mon_cry CRY_CLEFFA,     -$2a3,  $1c8 ; NINETALES
-	mon_cry CRY_CLEFFA,      $03b,  $0c8 ; SLUGMA
-	mon_cry CRY_CLEFFA,      $027,  $138 ; MAGCARGO
-	mon_cry CRY_CLEFFA,      $000,  $180 ; HOUNDOUR
+	mon_cry CRY_DEINO,      $f40,  $180 ; VULPIX
+	mon_cry CRY_DEINO,     -$2a3,  $1c8 ; NINETALES
+	mon_cry CRY_DEINO,      $03b,  $0c8 ; SLUGMA
+	mon_cry CRY_DEINO,      $027,  $138 ; MAGCARGO
+	mon_cry CRY_DEINO,      $000,  $180 ; HOUNDOUR
 	mon_cry CRY_HOUNDOOM,      -$051,  $0e8 ; HOUNDOOM
 	mon_cry CRY_BRAIXEN,      $12b,  $0b8 ; FLETCHLING
 	mon_cry CRY_FLETCHINDER,   -$020,  $180 ; FLETCHINDER
@@ -239,7 +239,7 @@ PokemonCries::
 	mon_cry CRY_LITWICK,     $000,  $1a0 ; LITWICK
 	mon_cry CRY_AURORUS,   $073,  $240 ; LAMPENT
 	mon_cry CRY_HOUNDOOM,      -$160,  $180 ; CHANDELURE
-	mon_cry CRY_PICHU,      -$21a,  $1f0 ; SPIRITOMB
+	mon_cry CRY_KOMMO_O,      -$21a,  $1f0 ; SPIRITOMB
 	mon_cry CRY_HOUNDOOM,       $02c,  $108 ; DUSKULL
 	mon_cry CRY_EXCADRILL,      $000,  $100 ; DUSCLOPS
 	mon_cry CRY_BRAIXEN,      $068,  $100 ; DUSKNOIR

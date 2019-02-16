@@ -201,11 +201,11 @@ JOHTO_POKEMON EQU const_value
 	const SPINARAK   ; a7
 	const ARIADOS    ; a8
 	const CROBAT     ; a9
-	const CHINCHOU   ; aa
-	const LANTURN    ; ab
-	const PICHU      ; ac
-	const CLEFFA     ; ad
 
+	const JANGMO_O      ; aa
+	const HAKAMO_O       ; ab
+	const KOMMO_O       ; ac
+	const DEINO         ; ad
 	const ZWEILOUS  	; ae
 	const HEIDREIGON    ; af
 	const CYNDAQUIL    	; b0	

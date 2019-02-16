@@ -2361,8 +2361,8 @@ CrobatEvosAttacks:
 	db 55, HAZE
 	db 0 ; no more level-up moves
 
-ChinchouEvosAttacks:
-	db EVOLVE_LEVEL, 27, LANTURN
+Jangmo_oEvosAttacks:
+	db EVOLVE_LEVEL, 27, HAKAMO_O
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 1, THUNDER_WAVE
@@ -2375,7 +2375,7 @@ ChinchouEvosAttacks:
 	db 41, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-LanturnEvosAttacks:
+Hakamo_oEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 1, THUNDER_WAVE
@@ -2389,7 +2389,7 @@ LanturnEvosAttacks:
 	db 53, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-PichuEvosAttacks:
+Kommo_oEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, TOGEKISS
 	db 0 ; no more evolutions
 	db 1, THUNDERSHOCK
@@ -2399,7 +2399,7 @@ PichuEvosAttacks:
 	db 11, SWEET_KISS
 	db 0 ; no more level-up moves
 
-CleffaEvosAttacks:
+DeinoEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, PURRLOIN
 	db 0 ; no more evolutions
 	db 1, TACKLE

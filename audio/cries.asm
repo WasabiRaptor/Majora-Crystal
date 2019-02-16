@@ -107,15 +107,15 @@ Cry_Totodile:
 	musicheader 1, 6, Cry_Totodile_Ch6
 	musicheader 1, 8, Cry_Totodile_Ch8
 
-Cry_Cleffa:
-	musicheader 3, 5, Cry_Cleffa_Ch5
-	musicheader 1, 6, Cry_Cleffa_Ch6
-	musicheader 1, 8, Cry_Cleffa_Ch8
+Cry_Deino:
+	musicheader 3, 5, Cry_Deino_Ch5
+	musicheader 1, 6, Cry_Deino_Ch6
+	musicheader 1, 8, Cry_Deino_Ch8
 
-Cry_Pichu:
-	musicheader 3, 5, Cry_Pichu_Ch5
-	musicheader 1, 6, Cry_Pichu_Ch6
-	musicheader 1, 8, Cry_Pichu_Ch8
+Cry_Kommo_o:
+	musicheader 3, 5, Cry_Kommo_o_Ch5
+	musicheader 1, 6, Cry_Kommo_o_Ch6
+	musicheader 1, 8, Cry_Kommo_o_Ch8
 
 Cry_Houndoom:
 	musicheader 3, 5, Cry_Houndoom_Ch5
@@ -254,7 +254,7 @@ Cry_Boldore_Ch8:
 	noise C_,  1, $b2, $6f
 	endchannel
 
-Cry_Pichu_Ch5:
+Cry_Kommo_o_Ch5:
 	dutycycle $0
 	soundinput $f7
 	sound __,  3, $f8, $078d
@@ -268,7 +268,7 @@ Cry_Pichu_Ch5:
 	soundinput $88
 	endchannel
 
-Cry_Pichu_Ch6:
+Cry_Kommo_o_Ch6:
 	sound_duty 0, 0, 1, 0
 	sound __,  3, $c8, $076d
 	sound __,  3, $c8, $0771
@@ -277,7 +277,7 @@ Cry_Pichu_Ch6:
 	sound __,  3, $c8, $0798
 	endchannel
 
-Cry_Pichu_Ch8:
+Cry_Kommo_o_Ch8:
 	noise __,  3, $b8, $1
 	noise __,  3, $b8, $19
 	noise __,  3, $c8, $18
@@ -758,7 +758,7 @@ Cry_Totodile_Ch8:
 	noise C#,  9, $d3, $6e
 	endchannel
 
-Cry_Cleffa_Ch5:
+Cry_Deino_Ch5:
 	sound_duty 1, 2, 3, 0
 	soundinput $ff
 	sound __,  3, $f8, $0720
@@ -773,7 +773,7 @@ Cry_Cleffa_Ch5:
 	soundinput $88
 	endchannel
 
-Cry_Cleffa_Ch6:
+Cry_Deino_Ch6:
 	sound_duty 2, 0, 2, 0
 	sound __,  7, $b2, $071e
 	sound __,  6, $92, $0779
@@ -781,7 +781,7 @@ Cry_Cleffa_Ch6:
 	sound __,  9, $a1, $0735
 	endchannel
 
-Cry_Cleffa_Ch8:
+Cry_Deino_Ch8:
 	noise __,  3, $64, $7f
 	noise __,  3, $84, $7d
 	noise __,  3, $a4, $6f

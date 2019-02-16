@@ -172,10 +172,10 @@ endc
 	dw SpinarakEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw ChinchouEggMoves
+	dw Jangmo_oEggMoves
 	dw NoEggMoves
-	dw PichuEggMoves
-	dw CleffaEggMoves
+	dw Kommo_oEggMoves
+	dw DeinoEggMoves
 	dw ZweilousEggMoves
 	dw HeidreigonEggMoves
 	dw NoEggMoves

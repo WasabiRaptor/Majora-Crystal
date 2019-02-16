@@ -170,10 +170,10 @@ EvosAttacksPointers::
 	dw SpinarakEvosAttacks
 	dw AriadosEvosAttacks
 	dw CrobatEvosAttacks
-	dw ChinchouEvosAttacks
-	dw LanturnEvosAttacks
-	dw PichuEvosAttacks
-	dw CleffaEvosAttacks
+	dw Jangmo_oEvosAttacks
+	dw Hakamo_oEvosAttacks
+	dw Kommo_oEvosAttacks
+	dw DeinoEvosAttacks
 	dw ZweilousEvosAttacks
 	dw HeidreigonEvosAttacks
 	dw CyndaquilEvosAttacks
