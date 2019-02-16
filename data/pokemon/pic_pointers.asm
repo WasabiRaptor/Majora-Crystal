@@ -344,14 +344,14 @@ PokemonPicPointers::
 	dba AriadosBackpic
 	dba CrobatFrontpic
 	dba CrobatBackpic
-	dba ChinchouFrontpic
-	dba ChinchouBackpic
-	dba LanturnFrontpic
-	dba LanturnBackpic
-	dba PichuFrontpic
-	dba PichuBackpic
-	dba CleffaFrontpic
-	dba CleffaBackpic
+	dba Jangmo_oFrontpic
+	dba Jangmo_oBackpic
+	dba Hakamo_oFrontpic
+	dba Hakamo_oBackpic
+	dba Kommo_oFrontpic
+	dba Kommo_oBackpic
+	dba DeinoFrontpic
+	dba DeinoBackpic
 	dba ZweilousFrontpic
 	dba ZweilousBackpic
 	dba HeidreigonFrontpic

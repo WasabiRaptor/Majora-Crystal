@@ -168,10 +168,10 @@ BitmasksPointers:
 	dw SpinarakBitmasks
 	dw AriadosBitmasks
 	dw CrobatBitmasks
-	dw ChinchouBitmasks
-	dw LanturnBitmasks
-	dw PichuBitmasks
-	dw CleffaBitmasks
+	dw Jangmo_oBitmasks
+	dw Hakamo_oBitmasks
+	dw Kommo_oBitmasks
+	dw DeinoBitmasks
 	dw ZweilousBitmasks
 	dw HeidreigonBitmasks
 	dw CyndaquilBitmasks

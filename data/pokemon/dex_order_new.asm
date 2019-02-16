@@ -21,7 +21,7 @@ NewPokedexOrder:
 	db PORYGONZ
 	db LARVITAR
 	db PUPITAR
-	db PICHU
+	db KOMMO_O
 	db TOGEKISS
 	db ROTOM
 	db ZORUA
@@ -40,7 +40,7 @@ NewPokedexOrder:
 	db NIDORINA
 	db NIDOKING
 	db CROBAT
-	db CLEFFA
+	db DEINO
 	db PURRLOIN
 	db LIEPARD
 	db ZWEILOUS
@@ -174,8 +174,8 @@ NewPokedexOrder:
 	db GOLURK
 	db BRONZOR
 	db BRONZONG
-	db CHINCHOU
-	db LANTURN
+	db JANGMO_O
+	db HAKAMO_O
 	db HERACROSS
 	db DEWGONG
 	db LICKITUNG

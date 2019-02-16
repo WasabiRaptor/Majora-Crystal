@@ -168,10 +168,10 @@ AnimationIdlePointers:
 	dw SpinarakAnimationIdle
 	dw AriadosAnimationIdle
 	dw CrobatAnimationIdle
-	dw ChinchouAnimationIdle
-	dw LanturnAnimationIdle
-	dw PichuAnimationIdle
-	dw CleffaAnimationIdle
+	dw Jangmo_oAnimationIdle
+	dw Hakamo_oAnimationIdle
+	dw Kommo_oAnimationIdle
+	dw DeinoAnimationIdle
 	dw ZweilousAnimationIdle
 	dw HeidreigonAnimationIdle
 	dw CyndaquilAnimationIdle

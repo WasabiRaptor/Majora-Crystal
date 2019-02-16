@@ -551,13 +551,13 @@ SpinarakEggMoves:
 	db PURSUIT
 	db -1 ; end
 
-ChinchouEggMoves:
+Jangmo_oEggMoves:
 	db FLAIL
 	db SUPERSONIC
 	db SCREECH
 	db -1 ; end
 
-PichuEggMoves:
+Kommo_oEggMoves:
 	db REVERSAL
 	db BIDE
 	db PRESENT
@@ -565,7 +565,7 @@ PichuEggMoves:
 	db DOUBLESLAP
 	db -1 ; end
 
-CleffaEggMoves:
+DeinoEggMoves:
 	db PRESENT
 	db METRONOME
 	db AMNESIA

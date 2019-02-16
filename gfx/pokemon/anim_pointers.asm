@@ -168,10 +168,10 @@ AnimationPointers:
 	dw SpinarakAnimation
 	dw AriadosAnimation
 	dw CrobatAnimation
-	dw ChinchouAnimation
-	dw LanturnAnimation
-	dw PichuAnimation
-	dw CleffaAnimation
+	dw Jangmo_oAnimation
+	dw Hakamo_oAnimation
+	dw Kommo_oAnimation
+	dw DeinoAnimation
 	dw ZweilousAnimation
 	dw HeidreigonAnimation
 	dw CyndaquilAnimation

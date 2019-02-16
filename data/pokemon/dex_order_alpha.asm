@@ -26,10 +26,10 @@ AlphabeticalPokedexOrder:
 	db FLAREON
 	db ESPEON
 	db CHIKORITA
-	db CHINCHOU
+	db JANGMO_O
 	db LIEPARD
 	db PURRLOIN
-	db CLEFFA
+	db DEINO
 	db CLOYSTER
 	db GOLURK
 	db CROBAT
@@ -108,7 +108,7 @@ AlphabeticalPokedexOrder:
 	db KINGLER
 	db KOFFING
 	db KRABBY
-	db LANTURN
+	db HAKAMO_O
 	db LAPRAS
 	db LATIOS
 	db LEDIAN
@@ -158,7 +158,7 @@ AlphabeticalPokedexOrder:
 	db FURRET
 	db MAREEP
 	db COFAGRIGUS
-	db PICHU
+	db KOMMO_O
 	db PORYGON
 	db MAGNEZONE
 	db MAGNETON

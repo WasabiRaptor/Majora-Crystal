@@ -169,10 +169,10 @@ PokedexDataPointerTable:
 	dw SpinarakPokedexEntry
 	dw AriadosPokedexEntry
 	dw CrobatPokedexEntry
-	dw ChinchouPokedexEntry
-	dw LanturnPokedexEntry
-	dw PichuPokedexEntry
-	dw CleffaPokedexEntry
+	dw Jangmo_oPokedexEntry
+	dw Hakamo_oPokedexEntry
+	dw Kommo_oPokedexEntry
+	dw DeinoPokedexEntry
 	dw ZweilousPokedexEntry
 	dw HeidreigonPokedexEntry
 	dw CyndaquilPokedexEntry

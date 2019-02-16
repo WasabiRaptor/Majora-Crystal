@@ -208,10 +208,10 @@ Pokered_MonIndices:
 	db SPINARAK
 	db ARIADOS
 	db CROBAT
-	db CHINCHOU
-	db LANTURN
-	db PICHU
-	db CLEFFA
+	db JANGMO_O
+	db HAKAMO_O
+	db KOMMO_O
+	db DEINO
 	db ZWEILOUS
 	db HEIDREIGON
 	db CYNDAQUIL

@@ -56,7 +56,7 @@
 	const CRY_CHIKORITA
 	const CRY_TOTODILE
 	const CRY_SNOWRUNT
-	const CRY_CLEFFA
+	const CRY_DEINO
 	const CRY_EXCADRILL
 	const CRY_LEDYBA
 	const CRY_ENTEI
@@ -68,7 +68,7 @@
 	const CRY_FLETCHINDER
 	const CRY_INCINEROAR
 	const CRY_BALTOY
-	const CRY_PICHU
+	const CRY_KOMMO_O
 	const CRY_HOUNDOOM
 	const CRY_CRYOGONAL
 	const CRY_LITWICK
