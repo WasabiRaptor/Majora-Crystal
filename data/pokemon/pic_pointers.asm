@@ -240,16 +240,16 @@ PokemonPicPointers::
 	dba HorseaBackpic
 	dba SeadraFrontpic
 	dba SeadraBackpic
-	dba GoldeenFrontpic
-	dba GoldeenBackpic
-	dba SeakingFrontpic
-	dba SeakingBackpic
-	dba StaryuFrontpic
-	dba StaryuBackpic
-	dba StarmieFrontpic
-	dba StarmieBackpic
-	dba MrMimeFrontpic
-	dba MrMimeBackpic
+	dba GastlyFrontpic
+	dba GastlyBackpic
+	dba HaunterFrontpic
+	dba HaunterBackpic
+	dba GengarFrontpic
+	dba GengarBackpic
+	dba OshawottFrontpic
+	dba OshawottBackpic
+	dba DewottFrontpic
+	dba DewottBackpic
 	dba SamurottFrontpic
 	dba SamurottBackpic
 	dba BuizelFrontpic

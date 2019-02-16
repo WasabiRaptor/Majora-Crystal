@@ -18,7 +18,7 @@ SpriteMons:
 	db PURRLOIN
 	db FLAREON
 	db BUIZEL
-	db STARMIE
+	db OSHAWOTT
 	db EEVEE
 	db NIDORAN_M
 	db LEDIAN

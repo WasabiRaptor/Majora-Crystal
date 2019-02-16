@@ -122,11 +122,11 @@ PokemonCries::
 	mon_cry CRY_KANGASKHAN,  $000,  $100 ; KANGASKHAN
 	mon_cry CRY_PURRLOIN,    $099,  $090 ; HORSEA
 	mon_cry CRY_PURRLOIN,    $03c,  $081 ; SEADRA
-	mon_cry CRY_CATERPIE,    $080,  $0c0 ; GOLDEEN
-	mon_cry CRY_CATERPIE,    $010,  $17f ; SEAKING
-	mon_cry CRY_SENTRET,       $002,  $0a0 ; STARYU
-	mon_cry CRY_SENTRET,       $000,  $100 ; STARMIE
-	mon_cry CRY_KRABBY,      $008,  $0c0 ; MR__MIME
+	mon_cry CRY_CATERPIE,    $080,  $0c0 ; GASTLY
+	mon_cry CRY_CATERPIE,    $010,  $17f ; HAUNTER
+	mon_cry CRY_SENTRET,       $002,  $0a0 ; GENGAR
+	mon_cry CRY_SENTRET,       $000,  $100 ; OSHAWOTT
+	mon_cry CRY_KRABBY,      $008,  $0c0 ; DEWOTT
 	mon_cry CRY_CATERPIE,    $000,  $100 ; SAMUROTT
 	mon_cry CRY_SCIZOR,     $0ff,  $17f ; BUIZEL
 	mon_cry CRY_VOLTORB,     $08f,  $17f ; FLOATZEL

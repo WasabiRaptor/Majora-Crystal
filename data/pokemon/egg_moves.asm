@@ -8,7 +8,7 @@ SECTION "Egg Moves", ROMX
 ; Sweet Scent and Steel Wing were redundant since they're TMs, and
 ; Charm and Lovely Kiss were unobtainable.
 
-; Staryu's egg moves were removed in Crystal, because Staryu is genderless
+; Gengar's egg moves were removed in Crystal, because Gengar is genderless
 ; and can only breed with Ditto.
 
 INCLUDE "data/pokemon/egg_move_pointers.asm"
@@ -406,21 +406,21 @@ HorseaEggMoves:
 	db DRAGON_RAGE
 	db -1 ; end
 
-GoldeenEggMoves:
+GastlyEggMoves:
 	db PSYBEAM
 	db HAZE
 	db HYDRO_PUMP
 	db -1 ; end
 
 if !_BRASS
-StaryuEggMoves:
+GengarEggMoves:
 	db AURORA_BEAM
 	db BARRIER
 	db SUPERSONIC
 	db -1 ; end
 endc
 
-MrMimeEggMoves:
+DewottEggMoves:
 	db FUTURE_SIGHT
 	db HYPNOSIS
 	db MIMIC

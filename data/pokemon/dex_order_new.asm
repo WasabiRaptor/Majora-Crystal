@@ -78,8 +78,8 @@ NewPokedexOrder:
 	db NINETALES
 	db LAPRAS
 	db ANORITH
-	db GOLDEEN
-	db SEAKING
+	db GASTLY
+	db HAUNTER
 	db TREVANANT
 	db BONSLY
 	db BOLDORE
@@ -156,7 +156,7 @@ NewPokedexOrder:
 	db BUIZEL
 	db ARTICUNO
 	db FLOATZEL
-	db MR__MIME
+	db DEWOTT
 	db SPIRITOMB
 	db STUFFUL
 	db QUILAVA
@@ -167,8 +167,8 @@ NewPokedexOrder:
 	db KRABBY
 	db KINGLER
 	db UNOWN
-	db STARYU
-	db STARMIE
+	db GENGAR
+	db OSHAWOTT
 	db GALVANTULA
 	db PINECO
 	db GOLURK

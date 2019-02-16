@@ -54,17 +54,17 @@ FishGroups:
 .Lake_Old:
 	db  70 percent + 1, LAPRAS,   10
 	db  85 percent + 1, LAPRAS,   10
-	db 100 percent,     GOLDEEN,    10
+	db 100 percent,     GASTLY,    10
 .Lake_Good:
 	db  35 percent,     LAPRAS,   20
-	db  70 percent,     GOLDEEN,    20
-	db  90 percent + 1, GOLDEEN,    20
+	db  70 percent,     GASTLY,    20
+	db  90 percent + 1, GASTLY,    20
 	db 100 percent,     time_group 4
 .Lake_Super:
-	db  40 percent,     GOLDEEN,    40
+	db  40 percent,     GASTLY,    40
 	db  70 percent,     time_group 5
 	db  90 percent + 1, LAPRAS,   40
-	db 100 percent,     SEAKING,    40
+	db 100 percent,     HAUNTER,    40
 
 .Pond_Old:
 	db  70 percent + 1, LAPRAS,   10
@@ -206,12 +206,12 @@ FishGroups:
 
 TimeFishGroups:
 	;  day              nite
-	db GOLURK,    20,  STARYU,     20 ; 0
-	db GOLURK,    40,  STARYU,     40 ; 1
+	db GOLURK,    20,  GENGAR,     20 ; 0
+	db GOLURK,    40,  GENGAR,     40 ; 1
 	db GALVANTULA,   20,  GALVANTULA,   20 ; 2
 	db GALVANTULA,   40,  GALVANTULA,   40 ; 3
-	db GOLDEEN,    20,  GOLDEEN,    20 ; 4
-	db GOLDEEN,    40,  GOLDEEN,    40 ; 5
+	db GASTLY,    20,  GASTLY,    20 ; 4
+	db GASTLY,    40,  GASTLY,    40 ; 5
 	db SANDSLASH,    20,  SANDSLASH,    20 ; 6
 	db SANDSLASH,    40,  SANDSLASH,    40 ; 7
 	db HITMONCHAN,    20,  HITMONCHAN,    20 ; 8

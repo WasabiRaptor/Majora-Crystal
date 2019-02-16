@@ -76,7 +76,7 @@ AlphabeticalPokedexOrder:
 	db SNOWRUNT
 	db SEVIPER
 	db NIDOKING
-	db GOLDEEN
+	db GASTLY
 	db AMPHAROS
 	db FOONGUS
 	db SWINUB
@@ -140,7 +140,7 @@ AlphabeticalPokedexOrder:
 	db MOLTRES
 	db GIGALITH
 	db TYROGUE
-	db MR__MIME
+	db DEWOTT
 	db MUK
 	db ROGGENROLA
 	db QUILAVA
@@ -195,7 +195,7 @@ AlphabeticalPokedexOrder:
 	db MAMOSWINE
 	db SAMUROTT
 	db SEADRA
-	db SEAKING
+	db HAUNTER
 	db HERACROSS
 	db LARVITAR
 	db GALVANTULA
@@ -215,8 +215,8 @@ AlphabeticalPokedexOrder:
 	db AXEW
 	db LEAFEON
 	db CHANDELURE
-	db STARMIE
-	db STARYU
+	db OSHAWOTT
+	db GENGAR
 	db GLALIE
 	db MEWTWO
 	db VULPIX

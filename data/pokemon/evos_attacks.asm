@@ -1632,8 +1632,8 @@ SeadraEvosAttacks:
 	db 51, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-GoldeenEvosAttacks:
-	db EVOLVE_LEVEL, 33, SEAKING
+GastlyEvosAttacks:
+	db EVOLVE_LEVEL, 33, HAUNTER
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, TAIL_WHIP
@@ -1646,7 +1646,7 @@ GoldeenEvosAttacks:
 	db 52, AGILITY
 	db 0 ; no more level-up moves
 
-SeakingEvosAttacks:
+HaunterEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, TAIL_WHIP
@@ -1660,8 +1660,8 @@ SeakingEvosAttacks:
 	db 61, AGILITY
 	db 0 ; no more level-up moves
 
-StaryuEvosAttacks:
-	db EVOLVE_ITEM, WATER_STONE, STARMIE
+GengarEvosAttacks:
+	db EVOLVE_ITEM, WATER_STONE, OSHAWOTT
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, HARDEN
@@ -1675,7 +1675,7 @@ StaryuEvosAttacks:
 	db 50, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-StarmieEvosAttacks:
+OshawottEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, RAPID_SPIN
@@ -1684,7 +1684,7 @@ StarmieEvosAttacks:
 	db 37, CONFUSE_RAY
 	db 0 ; no more level-up moves
 
-MrMimeEvosAttacks:
+DewottEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BARRIER
 	db 6, CONFUSION

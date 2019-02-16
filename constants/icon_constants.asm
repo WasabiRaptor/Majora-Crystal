@@ -5,7 +5,7 @@
 	const ICON_NIDORAN_M
 	const ICON_MIENFOO
 	const ICON_PIKACHU
-	const ICON_STARYU
+	const ICON_GENGAR
 	const ICON_FISH
 	const ICON_BIRD
 	const ICON_MONSTER

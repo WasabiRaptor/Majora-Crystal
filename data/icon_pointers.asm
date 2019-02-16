@@ -5,7 +5,7 @@ IconPointers:
 	dw Nidoran_MIcon
 	dw MienfooIcon
 	dw PikachuIcon
-	dw StaryuIcon
+	dw GengarIcon
 	dw FishIcon
 	dw BirdIcon
 	dw MonsterIcon

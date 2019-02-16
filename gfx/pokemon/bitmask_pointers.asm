@@ -116,11 +116,11 @@ BitmasksPointers:
 	dw KangaskhanBitmasks
 	dw HorseaBitmasks
 	dw SeadraBitmasks
-	dw GoldeenBitmasks
-	dw SeakingBitmasks
-	dw StaryuBitmasks
-	dw StarmieBitmasks
-	dw MrMimeBitmasks
+	dw GastlyBitmasks
+	dw HaunterBitmasks
+	dw GengarBitmasks
+	dw OshawottBitmasks
+	dw DewottBitmasks
 	dw SamurottBitmasks
 	dw BuizelBitmasks
 	dw FloatzelBitmasks

@@ -117,11 +117,11 @@ PokedexDataPointerTable:
 	dw KangaskhanPokedexEntry
 	dw HorseaPokedexEntry
 	dw SeadraPokedexEntry
-	dw GoldeenPokedexEntry
-	dw SeakingPokedexEntry
-	dw StaryuPokedexEntry
-	dw StarmiePokedexEntry
-	dw MrMimePokedexEntry
+	dw GastlyPokedexEntry
+	dw HaunterPokedexEntry
+	dw GengarPokedexEntry
+	dw OshawottPokedexEntry
+	dw DewottPokedexEntry
 	dw SamurottPokedexEntry
 	dw BuizelPokedexEntry
 	dw FloatzelPokedexEntry

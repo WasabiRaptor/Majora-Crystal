@@ -5,7 +5,7 @@ SometimesFleeMons:
 	db SUDOWOODO
 	db LEDIAN
 	db TANGELA
-	db MR__MIME
+	db DEWOTT
 	db ARAQUANID
 	db MILOTIC
 	db HITMONCHAN

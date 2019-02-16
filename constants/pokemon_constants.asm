@@ -124,8 +124,10 @@
 	const EXEGGUTOR  ; 67
 	const CUBONE     ; 68
 	const MAROWAK    ; 69
-	const SANDILE  ; 6a
-	const KROKOROK ; 6b
+	
+	const SANDILE       ; 6a
+	const KROKOROK      ; 6b
+	
 	const LICKITUNG  ; 6c
 	const KOFFING    ; 6d
 	const WEEZING    ; 6e
@@ -136,12 +138,12 @@
 	const KANGASKHAN ; 73
 	const HORSEA     ; 74
 	const SEADRA     ; 75
-	const GOLDEEN    ; 76
-	const SEAKING    ; 77
-	const STARYU     ; 78
-	const STARMIE    ; 79
-	const MR__MIME   ; 7a
-
+	
+	const GASTLY        ; 76
+	const HAUNTER       ; 77
+	const GENGAR        ; 78
+	const OSHAWOTT      ; 79
+	const DEWOTT        ; 7a
 	const SAMUROTT      ; 7b
 	const BUIZEL        ; 7c
 	const FLOATZEL      ; 7d

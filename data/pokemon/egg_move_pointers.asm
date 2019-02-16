@@ -116,15 +116,15 @@ EggMovePointers::
 	dw KangaskhanEggMoves
 	dw HorseaEggMoves
 	dw NoEggMoves
-	dw GoldeenEggMoves
+	dw GastlyEggMoves
 	dw NoEggMoves
 if _BRASS
 	dw NoEggMoves
 else
-	dw StaryuEggMoves
+	dw GengarEggMoves
 endc
 	dw NoEggMoves
-	dw MrMimeEggMoves
+	dw DewottEggMoves
 	dw SamurottEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

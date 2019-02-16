@@ -116,11 +116,11 @@ AnimationPointers:
 	dw KangaskhanAnimation
 	dw HorseaAnimation
 	dw SeadraAnimation
-	dw GoldeenAnimation
-	dw SeakingAnimation
-	dw StaryuAnimation
-	dw StarmieAnimation
-	dw MrMimeAnimation
+	dw GastlyAnimation
+	dw HaunterAnimation
+	dw GengarAnimation
+	dw OshawottAnimation
+	dw DewottAnimation
 	dw SamurottAnimation
 	dw BuizelAnimation
 	dw FloatzelAnimation

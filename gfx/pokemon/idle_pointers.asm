@@ -116,11 +116,11 @@ AnimationIdlePointers:
 	dw KangaskhanAnimationIdle
 	dw HorseaAnimationIdle
 	dw SeadraAnimationIdle
-	dw GoldeenAnimationIdle
-	dw SeakingAnimationIdle
-	dw StaryuAnimationIdle
-	dw StarmieAnimationIdle
-	dw MrMimeAnimationIdle
+	dw GastlyAnimationIdle
+	dw HaunterAnimationIdle
+	dw GengarAnimationIdle
+	dw OshawottAnimationIdle
+	dw DewottAnimationIdle
 	dw SamurottAnimationIdle
 	dw BuizelAnimationIdle
 	dw FloatzelAnimationIdle

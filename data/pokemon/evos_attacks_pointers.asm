@@ -118,11 +118,11 @@ EvosAttacksPointers::
 	dw KangaskhanEvosAttacks
 	dw HorseaEvosAttacks
 	dw SeadraEvosAttacks
-	dw GoldeenEvosAttacks
-	dw SeakingEvosAttacks
-	dw StaryuEvosAttacks
-	dw StarmieEvosAttacks
-	dw MrMimeEvosAttacks
+	dw GastlyEvosAttacks
+	dw HaunterEvosAttacks
+	dw GengarEvosAttacks
+	dw OshawottEvosAttacks
+	dw DewottEvosAttacks
 	dw SamurottEvosAttacks
 	dw BuizelEvosAttacks
 	dw FloatzelEvosAttacks

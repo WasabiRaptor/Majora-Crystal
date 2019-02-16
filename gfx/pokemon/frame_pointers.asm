@@ -116,11 +116,11 @@ FramesPointers:
 	dw KangaskhanFrames
 	dw HorseaFrames
 	dw SeadraFrames
-	dw GoldeenFrames
-	dw SeakingFrames
-	dw StaryuFrames
-	dw StarmieFrames
-	dw MrMimeFrames
+	dw GastlyFrames
+	dw HaunterFrames
+	dw GengarFrames
+	dw OshawottFrames
+	dw DewottFrames
 	dw SamurottFrames
 	dw BuizelFrames
 	dw FloatzelFrames
