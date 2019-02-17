@@ -1,5 +1,7 @@
 
-	dbba LYCANROC,  LycanrocPicPointers  
+    dbba LYCANROC,  LycanrocPicPointers
+    dbba MEOWTH,    MeowthPicPointers  
+    dbba PERSIAN,   PersianPicPointers   
     dbba GRIMER,    GrimerPicPointers
     dbba MUK,       MukPicPointers
     dbba ROTOM,     RotomPicPointers

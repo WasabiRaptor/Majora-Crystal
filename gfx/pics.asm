@@ -792,6 +792,12 @@ Zygarde_Ten_PercentBackpic: INCBIN "gfx/pokemon/zygarde_ten_percent/back.2bpp.lz
 Zygarde_CompleteFrontpic:   INCBIN "gfx/pokemon/zygarde_complete/front.animated.2bpp.lz"
 Zygarde_CompleteBackpic:    INCBIN "gfx/pokemon/zygarde_complete/back.2bpp.lz"
 
+Meowth_AlolaFrontpic:       INCBIN "gfx/pokemon/meowth_alola/front.animated.2bpp.lz"
+Meowth_AlolaBackpic:        INCBIN "gfx/pokemon/meowth_alola/back.2bpp.lz"
+
+Persian_AlolaFrontpic:      INCBIN "gfx/pokemon/persian_alola/front.animated.2bpp.lz"
+Persian_AlolaBackpic:       INCBIN "gfx/pokemon/persian_alola/back.2bpp.lz"
+
 ; Sections "Pics 20" to "Pics 24" are not used for any graphics,
 ; but entries for their banks exist in FixPicBank (see engine/gfx/load_pics.asm).
 

@@ -320,10 +320,10 @@ PokeAnim_InitPicAttributes:
 	ld a, BANK(wFormVariable)
 	ld hl, wFormVariable
 	call GetFarWRAMByte
-	ld [wPokeAnimUnownLetter], a
+	ld [wPokeAnimAltForm], a
 
 	call PokeAnim_GetSpeciesOrUnown
-	ld [wPokeAnimSpeciesOrUnown], a
+	ld [wPokeAnimSpeciesOrAltForm], a
 
 	call PokeAnim_GetFrontpicDims
 	ld a, c
@@ -940,7 +940,7 @@ GetMonAnimPointer:
 	ld l, e
 .idles
 
-	ld a, [wPokeAnimSpeciesOrUnown]
+	ld a, [wPokeAnimSpeciesOrAltForm]
 	dec a
 	ld e, a
 	ld d, 0
@@ -1039,7 +1039,7 @@ GetMonFramesPointer:
 	ld a, c
 	ld [wPokeAnimFramesBank], a
 
-	ld a, [wPokeAnimSpeciesOrUnown]
+	ld a, [wPokeAnimSpeciesOrAltForm]
 	dec a
 	ld e, a
 	ld d, 0
@@ -1092,7 +1092,7 @@ GetMonBitmaskPointer:
 .LoadedBitmasks
 	ld [wPokeAnimBitmaskBank], a
 
-	ld a, [wPokeAnimSpeciesOrUnown]
+	ld a, [wPokeAnimSpeciesOrAltForm]
 	dec a
 	ld e, a
 	ld d, 0
@@ -1128,13 +1128,13 @@ PokeAnim_GetSpeciesOrUnown:
 	ld a, [wPokeAnimSpecies]
 	ret
 .vulpix
-	ld a, [wPokeAnimUnownLetter]
+	ld a, [wPokeAnimAltForm]
 	ret
 .ninetales
-	ld a, [wPokeAnimUnownLetter]
+	ld a, [wPokeAnimAltForm]
 	ret
 .unown
-	ld a, [wPokeAnimUnownLetter]
+	ld a, [wPokeAnimAltForm]
 	ret
 
 Unused_HOF_AnimateAlignedFrontpic:

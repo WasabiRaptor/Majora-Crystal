@@ -8,6 +8,18 @@ LycanrocPicPointers::
 	dba Lycanroc_DawnFrontpic
 	dba Lycanroc_DawnBackpic
 
+MeowthPicPointers::
+	dba MeowthFrontpic
+	dba MeowthBackpic
+	dba Meowth_AlolaFrontpic
+	dba Meowth_AlolaBackpic
+
+PersianPicPointers::
+	dba PersianFrontpic
+	dba PersianBackpic
+	dba Persian_AlolaFrontpic
+	dba Persian_AlolaBackpic
+
 GrimerPicPointers::
 	dba GrimerFrontpic
 	dba GrimerBackpic
