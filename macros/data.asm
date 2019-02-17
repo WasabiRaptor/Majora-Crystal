@@ -24,6 +24,11 @@ dbww: MACRO
 	dw \2, \3
 ENDM
 
+dbbww: MACRO
+	db \1, \2
+	dw \3, \4
+ENDM
+
 dbwww: MACRO
 	db \1
 	dw \2, \3, \4
@@ -85,7 +90,12 @@ dbba: MACRO
 	db \1
 	dba \2
 	ENDM
-	
+
+dbbba: MACRO
+	db \1, \2
+	dba \3
+ENDM	
+
 dbpixel: MACRO
 if _NARG >= 4
 ; x tile, x pxl, y tile, y pxl

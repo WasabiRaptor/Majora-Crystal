@@ -4,7 +4,7 @@ INCLUDE "constants.asm"
 SECTION "Pokedex Entries 001-064", ROMX
 
 EeveePokedexEntry::  INCLUDE "data/pokemon/dex_entries/eevee.asm"
-MagikarpPokedexEntry::    INCLUDE "data/pokemon/dex_entries/magikarp.asm"
+VaporeonPokedexEntry::    INCLUDE "data/pokemon/dex_entries/vaporeon.asm"
 JolteonPokedexEntry::   INCLUDE "data/pokemon/dex_entries/jolteon.asm"
 FlareonPokedexEntry:: INCLUDE "data/pokemon/dex_entries/flareon.asm"
 EspeonPokedexEntry:: INCLUDE "data/pokemon/dex_entries/espeon.asm"
@@ -139,12 +139,12 @@ AzumarillPokedexEntry::     INCLUDE "data/pokemon/dex_entries/azumarill.asm"
 
 SECTION "Pokedex Entries 129-192", ROMX
 
-MagikarpPokedexEntry::   INCLUDE "data/pokemon/dex_entries/magikarp.asm"
+LaprasPokedexEntry::   INCLUDE "data/pokemon/dex_entries/lapras.asm"
 AnorithPokedexEntry::   INCLUDE "data/pokemon/dex_entries/anorith.asm"
 ArmaldoPokedexEntry::     INCLUDE "data/pokemon/dex_entries/armaldo.asm"
 DewpiderPokedexEntry::      INCLUDE "data/pokemon/dex_entries/dewpider.asm"
 AraquanidPokedexEntry::      INCLUDE "data/pokemon/dex_entries/araquanid.asm"
-MagikarpxPokedexEntry::   INCLUDE "data/pokemon/dex_entries/magikarp.asm"
+MagikarpPokedexEntry::   INCLUDE "data/pokemon/dex_entries/magikarp.asm"
 GyaradosPokedexEntry::    INCLUDE "data/pokemon/dex_entries/gyarados.asm"
 FeebasPokedexEntry::    INCLUDE "data/pokemon/dex_entries/feebas.asm"
 MiloticPokedexEntry::    INCLUDE "data/pokemon/dex_entries/milotic.asm"

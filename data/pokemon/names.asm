@@ -37,7 +37,7 @@ PokemonNames::
 	db "LIEPARD@@"
 	db "GRIMER@@@@"
 	db "MUK@"
-	db "NIDORAN_M"
+	db "NIDORAN"
 	db "NIDORINO"
 	db "NIDORINA@@@@@"
 	db "NIDOKING@@@@"

@@ -1,6 +1,6 @@
 AnimationIdlePointers:
 	dw EeveeAnimationIdle
-	dw MagikarpAnimationIdle
+	dw VaporeonAnimationIdle
 	dw JolteonAnimationIdle
 	dw FlareonAnimationIdle
 	dw EspeonAnimationIdle
@@ -127,12 +127,12 @@ AnimationIdlePointers:
 	dw AzurilAnimationIdle
 	dw MarillAnimationIdle
 	dw AzumarillAnimationIdle
-	dw MagikarpAnimationIdle
+	dw LaprasAnimationIdle
 	dw AnorithAnimationIdle
 	dw ArmaldoAnimationIdle
 	dw DewpiderAnimationIdle
 	dw AraquanidAnimationIdle
-	dw MagikarpxAnimationIdle
+	dw MagikarpAnimationIdle
 	dw GyaradosAnimationIdle
 	dw FeebasAnimationIdle
 	dw MiloticAnimationIdle

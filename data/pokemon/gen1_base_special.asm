@@ -39,7 +39,7 @@ KantoMonSpecials:
 	db  85 ; LIEPARD
 	db  65 ; GRIMER
 	db 100 ; MUK
-	db  25 ; NIDORAN_M
+	db  25 ; NIDORAN
 	db  50 ; NIDORINO
 	db  40 ; NIDORINA
 	db  75 ; NIDOKING

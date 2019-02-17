@@ -20,7 +20,7 @@ SpriteMons:
 	db BUIZEL
 	db OSHAWOTT
 	db EEVEE
-	db NIDORAN_M
+	db NIDORAN
 	db LEDIAN
 	db TOGEPI
 	db SENTRET

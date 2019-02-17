@@ -1,6 +1,6 @@
 BitmasksPointers:
 	dw EeveeBitmasks
-	dw MagikarpBitmasks
+	dw VaporeonBitmasks
 	dw JolteonBitmasks
 	dw FlareonBitmasks
 	dw EspeonBitmasks
@@ -127,12 +127,12 @@ BitmasksPointers:
 	dw AzurilBitmasks
 	dw MarillBitmasks
 	dw AzumarillBitmasks
-	dw MagikarpBitmasks
+	dw LaprasBitmasks
 	dw AnorithBitmasks
 	dw ArmaldoBitmasks
 	dw DewpiderBitmasks
 	dw AraquanidBitmasks
-	dw MagikarpxBitmasks
+	dw MagikarpBitmasks
 	dw GyaradosBitmasks
 	dw FeebasBitmasks
 	dw MiloticBitmasks

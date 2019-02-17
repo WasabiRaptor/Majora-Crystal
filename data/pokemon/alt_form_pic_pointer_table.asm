@@ -6,7 +6,7 @@
     dbba MUK,       MukPicPointers
     dbba ROTOM,     RotomPicPointers
 	dbba MEOWSTIC,  MeowsticPicPointers
-    dbba NIDORAN_M, NidoranPicPointers
+    dbba NIDORAN,   NidoranPicPointers
     dbba SANDSHREW, SandshrewPicPointers
     dbba SANDSLASH, SandslashPicPointers
     dbba SAWSBUCK,  SawsbuckPicPointers

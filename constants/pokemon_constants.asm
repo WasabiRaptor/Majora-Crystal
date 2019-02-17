@@ -30,7 +30,7 @@
 	const ZORUA			; 0a
 	const ZOROARK		; 0b
 	const ROCKRUFF		; 0c
-	const LYCANROC		; 0d alt forms
+	const LYCANROC		; 0d alt forms alt palettes
 	const MIMIKYU     	; 0e
 	const MAGNEMITE   	; 0f
 	const MAGNETON     	; 10
@@ -38,16 +38,16 @@
 	const PORYGON    	; 12
 	const PORYGON2    	; 13
 	const PORYGONZ   	; 14
-	const MEOWTH    	; 15
-	const PERSIAN     	; 16
+	const MEOWTH    	; 15 alt forms alt palettes
+	const PERSIAN     	; 16 alt forms alt palettes
 	const TOGEPI      	; 17
 	const TOGETIC      	; 18
 	const TOGEKISS    	; 19
-	const ROTOM     	; 1a alt forms
+	const ROTOM     	; 1a alt forms alt palettes
 	const CHINGLING  	; 1b
 	const CHIMECHO  	; 1c
 	const ESPURR  		; 1d
-	const MEOWSTIC_M   	; 1e alt forms
+	const MEOWSTIC_M   	; 1e alt forms alt palettes
 	const TIMBURR  		; 1f
 	const GURDURR  		; 20
 	const CONKELDURR   	; 21
@@ -56,7 +56,7 @@
 	const LIEPARD   	; 24
 	const GRIMER     	; 25
 	const MUK  			; 26
-	const NIDORAN_M 	; 27 alt forms
+	const NIDORAN 	; 27 alt forms alt palettes
 	const NIDORINO 		; 28
 	const NIDORINA      ; 29
 	const NIDOKING     	; 2a
@@ -76,21 +76,21 @@
 	const SHINX     	; 38
 	const LUXIO   		; 39
 	const LUXRAY  		; 3a
-	const SANDSHREW   	; 3b alt forms
-	const SANDSLASH    	; 3c alt forms
+	const SANDSHREW   	; 3b alt forms alt palettes
+	const SANDSLASH    	; 3c alt forms alt palettes
 	const CUTIEFLY  	; 3d
 	const RIBOMBEE  	; 3e
-	const FLABEBE       ; 3f
-	const FLOETTE    	; 40
-	const FLORGES   	; 41
+	const FLABEBE       ; 3f alt palettes
+	const FLOETTE    	; 40 alt palettes
+	const FLORGES   	; 41 alt palettes
 	const IGGLYBUFF     ; 42
 	const JIGGLYPUFF    ; 43
 	const WIGGLYTUFF    ; 44
 	const CHESPIN 		; 45
 	const QUILLADIN 	; 46
 	const CHESNAUGHT 	; 47
-	const DEERLING  	; 48
-	const SAWSBUCK 		; 49 alt forms
+	const DEERLING  	; 48 alt palettes
+	const SAWSBUCK 		; 49 alt forms alt palettes
 	const COTTONEE    	; 4a
 	const WHIMSICOTT   	; 4b
 	const FOONGUS      	; 4c
@@ -204,8 +204,8 @@ JOHTO_POKEMON EQU const_value
 	const FENNEKIN  	; b6
 	const BRAIXEN     	; b7
 	const DELPHOX  		; b8
-	const VULPIX  		; b9 alt forms
-	const NINETALES   	; ba alt forms
+	const VULPIX  		; b9 alt forms alt palettes
+	const NINETALES   	; ba alt forms alt palettes
 	const SLUGMA        ; bb
 	const MAGCARGO      ; bc
 	const HOUNDOUR      ; bd

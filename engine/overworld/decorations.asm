@@ -255,7 +255,7 @@ FindOwnedPosters:
 	db DECO_TOWN_MAP ; 10
 	db DECO_PIKACHU_POSTER ; 11
 	db DECO_CLEFAIRY_POSTER ; 12
-	db DECO_NIDORAN_M_POSTER ; 13
+	db DECO_NIDORAN_POSTER ; 13
 	db -1
 
 DecoConsoleMenu:
@@ -291,7 +291,7 @@ FindOwnedOrnaments:
 	db DECO_PIKACHU_DOLL ; 1e
 	db DECO_SURF_PIKACHU_DOLL ; 1f
 	db DECO_CLEFAIRY_DOLL ; 20
-	db DECO_NIDORAN_M_DOLL ; 21
+	db DECO_NIDORAN_DOLL ; 21
 	db DECO_BULBASAUR_DOLL ; 22
 	db DECO_CHARMANDER_DOLL ; 23
 	db DECO_SQUIRTLE_DOLL ; 24
@@ -1000,7 +1000,7 @@ DecorationDesc_PosterPointers:
 	dbw DECO_TOWN_MAP, DecorationDesc_TownMapPoster
 	dbw DECO_PIKACHU_POSTER, DecorationDesc_PikachuPoster
 	dbw DECO_CLEFAIRY_POSTER, DecorationDesc_ClefairyPoster
-	dbw DECO_NIDORAN_M_POSTER, DecorationDesc_Nidoran_MPoster
+	dbw DECO_NIDORAN_POSTER, DecorationDesc_Nidoran_MPoster
 	db -1
 
 DecorationDesc_TownMapPoster:
@@ -1036,7 +1036,7 @@ DecorationDesc_Nidoran_MPoster:
 	jumptext .Nidoran_MPosterText
 
 .Nidoran_MPosterText:
-	; It's a poster of a cute NIDORAN_M.
+	; It's a poster of a cute NIDORAN.
 	text_jump UnknownText_0x1bc5b3
 	db "@"
 

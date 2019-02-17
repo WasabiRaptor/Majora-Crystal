@@ -35,7 +35,7 @@ PalPacket_GSIntroShellderLapras:
 	sgb_pal_set GS_INTRO_SHELLDER_LAPRAS, 00, 00, 00
 
 PalPacket_GSIntroNidoran_MPikachu:
-	sgb_pal_set GS_INTRO_NIDORAN_M_PIKACHU_BG, GS_INTRO_NIDORAN_M_PIKACHU_OB, 00, 00
+	sgb_pal_set GS_INTRO_NIDORAN_PIKACHU_BG, GS_INTRO_NIDORAN_PIKACHU_OB, 00, 00
 
 PalPacket_GSIntroStartersTransition:
 	sgb_pal_set GS_INTRO_STARTERS_TRANSITION, 00, 00, 00
@@ -47,7 +47,7 @@ PalPacket_Pack:
 	sgb_pal_set PACK, 00, 00, 00
 
 PalPacket_BetaPikachuMinigame:
-	sgb_pal_set GS_INTRO_NIDORAN_M_PIKACHU_OB, 00, 00, 00
+	sgb_pal_set GS_INTRO_NIDORAN_PIKACHU_OB, 00, 00, 00
 
 PalPacket_PartyMenu:
 	sgb_pal_set PARTY_ICON, HP_GREEN, HP_YELLOW, HP_RED

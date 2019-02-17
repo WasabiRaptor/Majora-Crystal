@@ -38,7 +38,7 @@ ENDM
 
 BaseData::
 INCLUDE "data/pokemon/base_stats/eevee.asm"
-INCLUDE "data/pokemon/base_stats/magikarp.asm"
+INCLUDE "data/pokemon/base_stats/vaporeon.asm"
 INCLUDE "data/pokemon/base_stats/jolteon.asm"
 INCLUDE "data/pokemon/base_stats/flareon.asm"
 INCLUDE "data/pokemon/base_stats/espeon.asm"
@@ -166,7 +166,7 @@ INCLUDE "data/pokemon/base_stats/floatzel.asm"
 INCLUDE "data/pokemon/base_stats/azuril.asm"
 INCLUDE "data/pokemon/base_stats/marill.asm"
 INCLUDE "data/pokemon/base_stats/azumarill.asm"
-INCLUDE "data/pokemon/base_stats/magikarp.asm"
+INCLUDE "data/pokemon/base_stats/lapras.asm"
 INCLUDE "data/pokemon/base_stats/anorith.asm"
 INCLUDE "data/pokemon/base_stats/armaldo.asm"
 INCLUDE "data/pokemon/base_stats/dewpider.asm"

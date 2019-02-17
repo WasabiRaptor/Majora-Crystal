@@ -86,7 +86,7 @@ __enum__ = 0
 	deco  TOWN_MAP
 	deco  PIKACHU_POSTER
 	deco  CLEFAIRY_POSTER
-	deco  NIDORAN_M_POSTER
+	deco  NIDORAN_POSTER
 ; FindOwnedConsoles.consoles values (see engine/overworld/decorations.asm)
 	const CONSOLES
 	deco  FAMICOM
@@ -103,7 +103,7 @@ __enum__ = 0
 	deco  PIKACHU_DOLL
 	deco  SURF_PIKACHU_DOLL
 	deco  CLEFAIRY_DOLL
-	deco  NIDORAN_M_DOLL
+	deco  NIDORAN_DOLL
 	deco  BULBASAUR_DOLL
 	deco  CHARMANDER_DOLL
 	deco  SQUIRTLE_DOLL

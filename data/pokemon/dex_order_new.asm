@@ -44,7 +44,7 @@ NewPokedexOrder:
 	db PURRLOIN
 	db LIEPARD
 	db ZWEILOUS
-	db NIDORAN_M
+	db NIDORAN
 	db NIDORINO
 	db HEIDREIGON
 	db CYNDAQUIL

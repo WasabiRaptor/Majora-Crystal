@@ -34,7 +34,7 @@ EeveeEvosAttacks:
 	db 46, SOLARBEAM
 	db 0 ; no more level-up moves
 
-MagikarpEvosAttacks:
+VaporeonEvosAttacks:
 	db EVOLVE_LEVEL, 32, JOLTEON
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -1784,7 +1784,7 @@ AzumarillEvosAttacks:
 	db 53, TAKE_DOWN
 	db 0 ; no more level-up moves
 
-MagikarpEvosAttacks:
+LaprasEvosAttacks:
 	db EVOLVE_LEVEL, 20, ANORITH
 	db 0 ; no more evolutions
 	db 1, SPLASH
@@ -1845,7 +1845,7 @@ endc
 	db 42, TAKE_DOWN
 	db 0 ; no more level-up moves
 
-MagikarpxEvosAttacks:
+MagikarpEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
@@ -2410,7 +2410,7 @@ DeinoEvosAttacks:
 	db 0 ; no more level-up moves
 
 ZweilousEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, NIDORAN_M
+	db EVOLVE_HAPPINESS, TR_ANYTIME, NIDORAN
 	db 0 ; no more evolutions
 	db 1, SING
 	db 1, CHARM

@@ -1,6 +1,6 @@
 AnimationPointers:
 	dw EeveeAnimation
-	dw MagikarpAnimation
+	dw VaporeonAnimation
 	dw JolteonAnimation
 	dw FlareonAnimation
 	dw EspeonAnimation
@@ -127,12 +127,12 @@ AnimationPointers:
 	dw AzurilAnimation
 	dw MarillAnimation
 	dw AzumarillAnimation
-	dw MagikarpAnimation
+	dw LaprasAnimation
 	dw AnorithAnimation
 	dw ArmaldoAnimation
 	dw DewpiderAnimation
 	dw AraquanidAnimation
-	dw MagikarpxAnimation
+	dw MagikarpAnimation
 	dw GyaradosAnimation
 	dw FeebasAnimation
 	dw MiloticAnimation

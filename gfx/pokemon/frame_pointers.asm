@@ -1,6 +1,6 @@
 FramesPointers:
 	dw EeveeFrames
-	dw MagikarpFrames
+	dw VaporeonFrames
 	dw JolteonFrames
 	dw FlareonFrames
 	dw EspeonFrames
@@ -127,12 +127,12 @@ FramesPointers:
 	dw AzurilFrames
 	dw MarillFrames
 	dw AzumarillFrames
-	dw MagikarpFrames
+	dw LaprasFrames
 	dw AnorithFrames
 	dw ArmaldoFrames
 	dw DewpiderFrames
 	dw AraquanidFrames
-	dw MagikarpxFrames
+	dw MagikarpFrames
 	dw GyaradosFrames
 	dw FeebasFrames
 	dw MiloticFrames

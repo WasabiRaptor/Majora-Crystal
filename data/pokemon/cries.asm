@@ -43,7 +43,7 @@ PokemonCries::
 	mon_cry CRY_PURRLOIN,    $0aa,  $0a0 ; LIEPARD
 	mon_cry CRY_GRIMER,      $04f,  $090 ; GRIMER
 	mon_cry CRY_GRIMER,      $088,  $0e0 ; MUK
-	mon_cry CRY_MAGNETON,      $0ff,  $0b5 ; NIDORAN_M
+	mon_cry CRY_MAGNETON,      $0ff,  $0b5 ; NIDORAN
 	mon_cry CRY_MAGNETON,      $068,  $0e0 ; NIDORINO
 	mon_cry CRY_SQUIRTLE,    $0e0,  $100 ; NIDORINA
 	mon_cry CRY_SQUIRTLE,    $0fa,  $100 ; NIDOKING

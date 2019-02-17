@@ -1,4 +1,4 @@
-	db NIDORAN_M ; 032
+	db NIDORAN ; 032
 
 	db  46,  57,  40,  50,  40,  40
 	evs  0,   1,   0,   0,   0,   0

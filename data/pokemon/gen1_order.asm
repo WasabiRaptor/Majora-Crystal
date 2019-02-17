@@ -98,7 +98,7 @@ Pokered_MonIndices:
 	db CHIMECHO
 	db FINNEON
 	db LUMINEON
-	db NIDORAN_M
+	db NIDORAN
 	db NIDORINO
 	db ARAQUANID
 	db FEEBAS

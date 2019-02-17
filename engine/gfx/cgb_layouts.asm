@@ -482,12 +482,12 @@ _CGB_GSIntro:
 
 .Nidoran_MPikachuScene:
 	ld de, wBGPals1
-	ld a, PREDEFPAL_GS_INTRO_NIDORAN_M_PIKACHU_BG
+	ld a, PREDEFPAL_GS_INTRO_NIDORAN_PIKACHU_BG
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
 
 	ld de, wOBPals1
-	ld a, PREDEFPAL_GS_INTRO_NIDORAN_M_PIKACHU_OB
+	ld a, PREDEFPAL_GS_INTRO_NIDORAN_PIKACHU_OB
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
 	call WipeAttrMap

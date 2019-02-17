@@ -4,7 +4,7 @@
 ; then a row of the bottom two tiles for those eight footprints.
 
 INCBIN "gfx/footprints/eevee.1bpp"  
-INCBIN "gfx/footprints/magikarp.1bpp"    
+INCBIN "gfx/footprints/vaporeon.1bpp"    
 INCBIN "gfx/footprints/jolteon.1bpp"   
 INCBIN "gfx/footprints/flareon.1bpp" 
 INCBIN "gfx/footprints/espeon.1bpp" 
@@ -131,7 +131,7 @@ INCBIN "gfx/footprints/floatzel.1bpp"
 INCBIN "gfx/footprints/azuril.1bpp"     
 INCBIN "gfx/footprints/marill.1bpp"     
 INCBIN "gfx/footprints/azumarill.1bpp"     
-INCBIN "gfx/footprints/magikarp.1bpp"   
+INCBIN "gfx/footprints/lapras.1bpp"   
 INCBIN "gfx/footprints/anorith.1bpp"   
 INCBIN "gfx/footprints/armaldo.1bpp"     
 INCBIN "gfx/footprints/dewpider.1bpp"      

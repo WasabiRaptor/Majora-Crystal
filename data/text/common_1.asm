@@ -325,7 +325,7 @@ UnknownText_0x1bc591::
 
 UnknownText_0x1bc5b3::
 	text "It's a poster of a"
-	line "cute NIDORAN_M."
+	line "cute NIDORAN."
 	done
 
 UnknownText_0x1bc5d7::

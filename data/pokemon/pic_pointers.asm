@@ -4,8 +4,8 @@ PokemonPicPointers::
 ; entries correspond to Pokémon species, two apiece
 	dba EeveeFrontpic
 	dba EeveeBackpic
-	dba MagikarpFrontpic
-	dba MagikarpBackpic
+	dba VaporeonFrontpic
+	dba VaporeonBackpic
 	dba JolteonFrontpic
 	dba JolteonBackpic
 	dba FlareonFrontpic
@@ -42,10 +42,10 @@ PokemonPicPointers::
 	dba Porygon2Backpic
 	dba PorygonZFrontpic
 	dba PorygonZBackpic
-	dba MeowthFrontpic
-	dba MeowthBackpic
-	dba PersianFrontpic
-	dba PersianBackpic
+	dba MeowthFrontpic		;alt forms
+	dba MeowthBackpic		;alt forms
+	dba PersianFrontpic		;alt forms
+	dba PersianBackpic		;alt forms
 	dba TogepiFrontpic
 	dba TogepiBackpic
 	dba TogeticFrontpic
@@ -258,8 +258,8 @@ PokemonPicPointers::
 	dba MarillBackpic
 	dba AzumarillFrontpic
 	dba AzumarillBackpic
-	dba MagikarpFrontpic
-	dba MagikarpBackpic
+	dba LaprasFrontpic
+	dba LaprasBackpic
 	dba AnorithFrontpic
 	dba AnorithBackpic
 	dba ArmaldoFrontpic
@@ -267,9 +267,9 @@ PokemonPicPointers::
 	dba DewpiderFrontpic
 	dba DewpiderBackpic
 	dba AraquanidFrontpic
-	dba EeveeBackpic
-	dba MagikarpxFrontpic
-	dba MagikarpxBackpic
+	dba AraquanidBackpic
+	dba MagikarpFrontpic
+	dba MagikarpBackpic
 	dba GyaradosFrontpic
 	dba GyaradosBackpic
 	dba FeebasFrontpic
@@ -498,8 +498,8 @@ PokemonPicPointers::
 	dba SilvallyBackpic
 	dba MagearnaFrontpic
 	dba MagearnaBackpic
-	dba ShayminFrontpic
-	dba ShayminBackpic
+	dba ShayminFrontpic		;alt forms
+	dba ShayminBackpic		;alt forms
 	dba CelebiFrontpic
 	dba CelebiBackpic
 	dba ZygardeFrontpic		;alt forms
