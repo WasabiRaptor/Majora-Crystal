@@ -12,9 +12,11 @@ INCBIN "gfx/pokemon/ninetales_alola/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/ninetales_alola/shiny.pal"
 
 LycanrocPalettes:
-;INCBIN "gfx/pokemon/lycanroc_midday/front.gbcpal", middle_colors
-;INCLUDE "gfx/pokemon/lycanroc_midday/shiny.pal"
-;INCBIN "gfx/pokemon/lycanroc_midnight/front.gbcpal", middle_colors
-;INCLUDE "gfx/pokemon/lycanroc_midnight/shiny.pal"
-;INCBIN "gfx/pokemon/lycanroc_dusk/front.gbcpal", middle_colors
-;INCLUDE "gfx/pokemon/lycanroc_dusk/shiny.pal"
+INCBIN "gfx/pokemon/lycanroc_midday/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/lycanroc_midday/shiny.pal"
+INCBIN "gfx/pokemon/lycanroc_midnight/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/lycanroc_midnight/shiny.pal"
+INCBIN "gfx/pokemon/lycanroc_dusk/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/lycanroc_dusk/shiny.pal"
+INCBIN "gfx/pokemon/lycanroc_dawn/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/lycanroc_dawn/shiny.pal"

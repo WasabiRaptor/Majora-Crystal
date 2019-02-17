@@ -184,9 +184,9 @@ ShayminPicPointers::
 	dba Shaymin_SkyBackpic
 
 ZygardePicPointers::
-	dba ZygardeFrontpic
-	dba ZygardeBackpic
 	dba Zygarde_Ten_PercentFrontpic
 	dba Zygarde_Ten_PercentBackpic
+	dba ZygardeFrontpic
+	dba ZygardeBackpic
 	dba Zygarde_CompleteFrontpic
 	dba Zygarde_CompleteBackpic
