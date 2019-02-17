@@ -1,3 +1,85 @@
+LycanrocPicPointers::
+	dba LycanrocFrontpic
+	dba LycanrocBackpic
+	dba Lycanroc_MidnightFrontpic
+	dba Lycanroc_MidnightBackpic
+	dba Lycanroc_DuskFrontpic
+	dba Lycanroc_DuskBackpic
+	dba Lycanroc_DawnFrontpic
+	dba Lycanroc_DawnBackpic
+
+GrimerPicPointers::
+	dba GrimerFrontpic
+	dba GrimerBackpic
+	dba Grimer_AlolaFrontpic
+	dba Grimer_AlolaBackpic
+
+MukPicPointers::
+	dba MukFrontpic
+	dba MukBackpic
+	dba Muk_AlolaFrontpic
+	dba Muk_AlolaBackpic
+
+RotomPicPointers
+	dba RotomFrontpic
+	dba RotomBackpic
+	dba Rotom_FanFrontpic
+	dba Rotom_FanBackpic
+	dba Rotom_FrostFrontpic
+	dba Rotom_FrostBackpic
+	dba Rotom_HeatFrontpic
+	dba Rotom_HeatBackpic
+	dba Rotom_MowFrontpic
+	dba Rotom_MowBackpic
+	dba Rotom_WashFrontpic
+	dba Rotom_WashBackpic
+
+MeowsticPicPointers::
+	dba Meowstic_MFrontpic
+	dba Meowstic_MBackpic
+	dba Meowstic_FFrontpic
+	dba Meowstic_FBackpic
+
+NidoranPicPointers::
+	dba Nidoran_MFrontpic
+	dba Nidoran_MBackpic
+	dba Nidoran_FFrontpic
+	dba Nidoran_FBackpic
+
+SandshrewPicPointers::
+	dba SandshrewFrontpic
+	dba SandshrewBackpic
+	dba Sandshrew_AlolaFrontpic
+	dba Sandshrew_AlolaBackpic
+
+SandslashPicPointers::
+	dba SandslashFrontpic
+	dba SandslashBackpic
+	dba Sandslash_AlolaFrontpic
+	dba Sandslash_AlolaBackpic
+
+SawsbuckPicPointers::
+	dba SawsbuckFrontpic
+	dba SawsbuckBackpic
+	dba Sawsbuck_SummerFrontpic
+	dba Sawsbuck_SummerBackpic
+	dba Sawsbuck_FallFrontpic
+	dba Sawsbuck_FallBackpic
+	dba Sawsbuck_WinterFrontpic
+	dba Sawsbuck_WinterBackpic
+
+VulpixPicPointers::
+	dba VulpixFrontpic
+	dba VulpixBackpic
+	dba Vulpix_AlolaFrontpic
+	dba Vulpix_AlolaBackpic
+
+NinetalesPicPointers::
+	dba NinetalesFrontpic
+	dba NinetalesBackpic
+	dba Ninetales_AlolaFrontpic
+	dba Ninetales_AlolaBackpic
+
 UnownPicPointers::
 ; entries correspond to Unown letters, two apiece
 	dba UnownAFrontpic
@@ -53,16 +135,40 @@ UnownPicPointers::
 	dba UnownZFrontpic
 	dba UnownZBackpic
 
-VulpixPicPointers::
-	dba VulpixFrontpic
-	dba VulpixBackpic
-	dba Vulpix_AlolaFrontpic
-	dba Vulpix_AlolaBackpic
+AegislashPicPointers::
+	dba AegislashFrontpic
+	dba AegislashBackpic
+	dba Aegislash_BladeFrontpic
+	dba Aegislash_BladeBackpic
 
-NinetalesPicPointers::
-	dba NinetalesFrontpic
-	dba NinetalesBackpic
-	dba Ninetales_AlolaFrontpic
-	dba Ninetales_AlolaBackpic
+SuicunePicPointers::
+	dba SuicuneFrontpic
+	dba SuicuneBackpic
+	dba Suicune_BetaFrontpic
+	dba Suicune_BetaBackpic
 
+RaikouPicPointers::
+	dba RaikouFrontpic
+	dba RaikouBackpic
+	dba Raikou_BetaFrontpic
+	dba Raikou_BetaBackpic
 
+EnteiPicPointers::
+	dba EnteiFrontpic
+	dba EnteiBackpic
+	dba Entei_BetaFrontpic
+	dba Entei_BetaBackpic
+
+ShayminPicPointers::
+	dba ShayminFrontpic
+	dba ShayminBackpic
+	dba Shaymin_SkyFrontpic
+	dba Shaymin_SkyBackpic
+
+ZygardePicPointers::
+	dba ZygardeFrontpic
+	dba ZygardeBackpic
+	dba Zygarde_Ten_PercentFrontpic
+	dba Zygarde_Ten_PercentBackpic
+	dba Zygarde_CompleteFrontpic
+	dba Zygarde_CompleteBackpic

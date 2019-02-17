@@ -152,17 +152,11 @@ _GetFrontpic:
 
 GetFrontpicPointer:
 	ld a, [wCurPartySpecies]
-	cp UNOWN
-	jr z, .unown
-	cp VULPIX
-	jr z, .vulpix
-	cp NINETALES
-	jr z, .ninetales
-
-	ld hl, PokemonPicPointers
-	ld d, BANK(PokemonPicPointers)
-
-.ok
+	call GetRelevantPicPointers
+	ld a, [wCurPartySpecies]
+	jr nc, .notvariant
+	ld a, [wFormVariable]
+.notvariant
 	dec a
 	ld bc, 6
 	call AddNTimes
@@ -174,22 +168,6 @@ GetFrontpicPointer:
 	call GetFarHalfword
 	pop bc
 	ret
-
-.vulpix
-	ld a, [wFormVariable]
-	ld hl, VulpixPicPointers
-	ld d, BANK(VulpixPicPointers)
-	jr .ok
-.ninetales
-	ld a, [wFormVariable]
-	ld hl, NinetalesPicPointers
-	ld d, BANK(NinetalesPicPointers)
-	jr .ok
-.unown
-	ld a, [wFormVariable]
-	ld hl, UnownPicPointers
-	ld d, BANK(UnownPicPointers)
-	jr .ok
 	
 GetAnimatedEnemyFrontpic:
 	push hl
@@ -281,28 +259,23 @@ GetMonBackpic:
 	ld a, [wCurPartySpecies]
 	call IsAPokemon
 	ret c
-
 	ld a, [wCurPartySpecies]
 	ld b, a
 	ld a, [wFormVariable]
 	ld c, a
-	ldh a, [rSVBK]
+	ld a, [rSVBK]
 	push af
-	ld a, BANK(wDecompressScratch)
-	ldh [rSVBK], a
+	ld a, $6
+	ld [rSVBK], a
 	push de
-
 	ld a, b
-	cp VULPIX
-	jr z, .vulpix
-	cp NINETALES
-	jr z, .ninetales
-	cp UNOWN
-	jr z, .unown
-	
-	ld hl, PokemonPicPointers
-	ld d, BANK(PokemonPicPointers)	
-.ok
+	push bc
+	call GetRelevantPicPointers
+	pop bc
+	ld a, b
+	jr nc, .notvariant
+	ld a, c
+.notvariant
 	dec a
 	ld bc, 6
 	call AddNTimes
@@ -322,30 +295,12 @@ GetMonBackpic:
 	call FixBackpicAlignment
 	pop hl
 	ld de, wDecompressScratch
-	ldh a, [hROMBank]
+	ld a, [hROMBank]
 	ld b, a
 	call Get2bpp
 	pop af
-	ldh [rSVBK], a
+	ld [rSVBK], a
 	ret
-
-.unown
-	ld a, c
-	ld hl, UnownPicPointers
-	ld d, BANK(UnownPicPointers)
-	jr .ok
-
-.vulpix
-	ld a, c
-	ld hl, VulpixPicPointers
-	ld d, BANK(VulpixPicPointers)
-	jr .ok
-
-.ninetales
-	ld a, c
-	ld hl, NinetalesPicPointers
-	ld d, BANK(NinetalesPicPointers)
-	jr .ok
 
 Function511ec:
 	ld a, c
@@ -546,3 +501,21 @@ endr
 	jr nz, .right_loop
 	pop bc
 	ret
+
+
+GetRelevantPicPointers:
+; given species in a, return *PicPointers in hl and BANK(*PicPointers) in d
+; returns c for variants, nc for normal species
+	ld hl, .AltFormPicPointerTable
+	ld de, 4
+	call IsInArray
+	inc hl
+	ld a, [hli]
+	ld d, a
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ret
+
+.AltFormPicPointerTable:
+INCLUDE "data/pokemon/alt_form_pic_pointer_table.asm"

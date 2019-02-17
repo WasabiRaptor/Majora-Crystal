@@ -81,6 +81,11 @@ rept _NARG
 endr
 ENDM
 
+dbba: MACRO
+	db \1
+	dba \2
+	ENDM
+	
 dbpixel: MACRO
 if _NARG >= 4
 ; x tile, x pxl, y tile, y pxl

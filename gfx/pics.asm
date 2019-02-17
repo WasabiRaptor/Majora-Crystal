@@ -710,10 +710,10 @@ SECTION "Pics 19", ROMX
 
 UnownIBackpic:              INCBIN "gfx/pokemon/unown_i/back.2bpp.lz"
 UnownRBackpic:              INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
-MewFrontpic: 	 		INCBIN "gfx/pokemon/mew/front.animated.2bpp.lz"
-MewBackpic: 	 		INCBIN "gfx/pokemon/mew/back.2bpp.lz"
-MewtwoFrontpic: 	 	INCBIN "gfx/pokemon/mewtwo/front.animated.2bpp.lz"
-MewtwoBackpic: 	 	INCBIN "gfx/pokemon/mewtwo/back.2bpp.lz"
+MewFrontpic: 	 		    INCBIN "gfx/pokemon/mew/front.animated.2bpp.lz"
+MewBackpic: 	 		    INCBIN "gfx/pokemon/mew/back.2bpp.lz"
+MewtwoFrontpic: 	 	    INCBIN "gfx/pokemon/mewtwo/front.animated.2bpp.lz"
+MewtwoBackpic: 	 	        INCBIN "gfx/pokemon/mewtwo/back.2bpp.lz"
 
 GrimerFrontpic:      	    INCBIN "gfx/pokemon/grimer/front.animated.2bpp.lz"
 GrimerBackpic:       	    INCBIN "gfx/pokemon/grimer/back.2bpp.lz"
@@ -734,6 +734,63 @@ NinetalesFrontpic:   	    INCBIN "gfx/pokemon/ninetales/front.animated.2bpp.lz"
 NinetalesBackpic:    	    INCBIN "gfx/pokemon/ninetales/back.2bpp.lz"
 Ninetales_AlolaFrontpic:   	INCBIN "gfx/pokemon/ninetales_alola/front.animated.2bpp.lz"
 Ninetales_AlolaBackpic:    	INCBIN "gfx/pokemon/ninetales_alola/back.2bpp.lz"
+
+Lycanroc_MidnightFrontpic:  INCBIN "gfx/pokemon/lycanroc_midnight/front.animated.2bpp.lz"
+Lycanroc_MidnightBackpic:   INCBIN "gfx/pokemon/lycanroc_midnight/back.2bpp.lz"
+Lycanroc_DuskFrontpic:      INCBIN "gfx/pokemon/lycanroc_dusk/front.animated.2bpp.lz"
+Lycanroc_DuskBackpic:       INCBIN "gfx/pokemon/lycanroc_dusk/back.2bpp.lz"
+Lycanroc_DawnFrontpic:      INCBIN "gfx/pokemon/lycanroc_dawn/front.animated.2bpp.lz"
+Lycanroc_DawnBackpic:       INCBIN "gfx/pokemon/lycanroc_dawn/back.2bpp.lz"
+
+Rotom_FanFrontpic:          INCBIN "gfx/pokemon/rotom_fan/front.animated.2bpp.lz"
+Rotom_FanBackpic:           INCBIN "gfx/pokemon/rotom_fan/back.2bpp.lz"
+Rotom_FrostFrontpic:        INCBIN "gfx/pokemon/rotom_frost/front.animated.2bpp.lz"
+Rotom_FrostBackpic:         INCBIN "gfx/pokemon/rotom_frost/back.2bpp.lz"
+Rotom_HeatFrontpic:         INCBIN "gfx/pokemon/rotom_heat/front.animated.2bpp.lz"
+Rotom_HeatBackpic:          INCBIN "gfx/pokemon/rotom_heat/back.2bpp.lz"
+Rotom_MowFrontpic:          INCBIN "gfx/pokemon/rotom_mow/front.animated.2bpp.lz"
+Rotom_MowBackpic:           INCBIN "gfx/pokemon/rotom_mow/back.2bpp.lz"
+Rotom_WashFrontpic:         INCBIN "gfx/pokemon/rotom_wash/front.animated.2bpp.lz"
+Rotom_WashBackpic:          INCBIN "gfx/pokemon/rotom_wash/back.2bpp.lz"
+
+Meowstic_FFrontpic:         INCBIN "gfx/pokemon/meowstic_f/front.animated.2bpp.lz"
+Meowstic_FBackpic:          INCBIN "gfx/pokemon/meowstic_f/back.2bpp.lz"
+
+Nidoran_FFrontpic:          INCBIN "gfx/pokemon/nidoran_f/front.animated.2bpp.lz"
+Nidoran_FBackpic:           INCBIN "gfx/pokemon/nidoran_f/back.2bpp.lz"
+
+Sandshrew_AlolaFrontpic:    INCBIN "gfx/pokemon/sandshrew_alola/front.animated.2bpp.lz"
+Sandshrew_AlolaBackpic:     INCBIN "gfx/pokemon/sandshrew_alola/back.2bpp.lz"
+
+Sandslash_AlolaFrontpic:    INCBIN "gfx/pokemon/sandslash_alola/front.animated.2bpp.lz"
+Sandslash_AlolaBackpic:     INCBIN "gfx/pokemon/sandslash_alola/back.2bpp.lz"
+
+Sawsbuck_SummerFrontpic:    INCBIN "gfx/pokemon/sawsbuck_summer/front.animated.2bpp.lz"
+Sawsbuck_SummerBackpic:     INCBIN "gfx/pokemon/sawsbuck_summer/back.2bpp.lz"
+Sawsbuck_FallFrontpic:      INCBIN "gfx/pokemon/sawsbuck_fall/front.animated.2bpp.lz"
+Sawsbuck_FallBackpic:       INCBIN "gfx/pokemon/sawsbuck_fall/back.2bpp.lz"
+Sawsbuck_WinterFrontpic:    INCBIN "gfx/pokemon/sawsbuck_winter/front.animated.2bpp.lz"
+Sawsbuck_WinterBackpic:     INCBIN "gfx/pokemon/sawsbuck_winter/back.2bpp.lz"
+
+Aegislash_BladeFrontpic:    INCBIN "gfx/pokemon/aegislash_blade/front.animated.2bpp.lz"
+Aegislash_BladeBackpic:     INCBIN "gfx/pokemon/aegislash_blade/back.2bpp.lz"
+
+Suicune_BetaFrontpic:       INCBIN "gfx/pokemon/suicune_beta/front.animated.2bpp.lz"
+Suicune_BetaBackpic:        INCBIN "gfx/pokemon/suicune_beta/back.2bpp.lz"
+
+Raikou_BetaFrontpic:        INCBIN "gfx/pokemon/raikou_beta/front.animated.2bpp.lz"
+Raikou_BetaBackpic:         INCBIN "gfx/pokemon/raikou_beta/back.2bpp.lz"
+
+Entei_BetaFrontpic:         INCBIN "gfx/pokemon/entei_beta/front.animated.2bpp.lz"
+Entei_BetaBackpic:          INCBIN "gfx/pokemon/entei_beta/back.2bpp.lz"
+
+Shaymin_SkyFrontpic:        INCBIN "gfx/pokemon/shaymin_sky/front.animated.2bpp.lz"
+Shaymin_SkyBackpic:         INCBIN "gfx/pokemon/shaymin_sky/back.2bpp.lz"
+
+Zygarde_Ten_PercentFrontpic:INCBIN "gfx/pokemon/zygarde_ten_percent/front.animated.2bpp.lz"
+Zygarde_Ten_PercentBackpic: INCBIN "gfx/pokemon/zygarde_ten_percent/back.2bpp.lz"
+Zygarde_CompleteFrontpic:   INCBIN "gfx/pokemon/zygarde_complete/front.animated.2bpp.lz"
+Zygarde_CompleteBackpic:    INCBIN "gfx/pokemon/zygarde_complete/back.2bpp.lz"
 
 ; Sections "Pics 20" to "Pics 24" are not used for any graphics,
 ; but entries for their banks exist in FixPicBank (see engine/gfx/load_pics.asm).

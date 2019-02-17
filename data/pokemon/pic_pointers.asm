@@ -26,8 +26,8 @@ PokemonPicPointers::
 	dba ZoroarkBackpic
 	dba RockruffFrontpic
 	dba RockruffBackpic
-	dba LycanrocFrontpic
-	dba LycanrocBackpic
+	dba LycanrocFrontpic	;alt forms
+	dba LycanrocBackpic		;alt forms
 	dba MimikyuFrontpic
 	dba MimikyuBackpic
 	dba MagnemiteFrontpic
@@ -52,16 +52,16 @@ PokemonPicPointers::
 	dba TogeticBackpic
 	dba TogekissFrontpic
 	dba TogekissBackpic
-	dba RotomFrontpic
-	dba RotomBackpic
+	dba RotomFrontpic		;alt forms
+	dba RotomBackpic		;alt forms
 	dba ChinglingFrontpic
 	dba ChinglingBackpic
 	dba ChimechoFrontpic
 	dba ChimechoBackpic
 	dba EspurrFrontpic
 	dba EspurrBackpic
-	dba Meowstic_MFrontpic
-	dba Meowstic_MBackpic
+	dba Meowstic_MFrontpic 	;alt forms
+	dba Meowstic_MBackpic	;alt forms
 	dba TimburrFrontpic
 	dba TimburrBackpic
 	dba GurdurrFrontpic
@@ -74,16 +74,12 @@ PokemonPicPointers::
 	dba PurrloinBackpic
 	dba LiepardFrontpic
 	dba LiepardBackpic
-
-	;Vulpix and Nineteales now have their own table, like Unown so that they may have alternate forms
-	dbw -1, -1
-	dbw -1, -1
-
-	dbw -1, -1
-	dbw -1, -1
-
-	dba Nidoran_MFrontpic
-	dba Nidoran_MBackpic
+	dba GrimerFrontpic 		;alt forms
+	dba GrimerBackpic		;alt forms
+	dba MukFrontpic			;alt forms
+	dba MukBackpic			;alt forms
+	dba Nidoran_MFrontpic	;alt forms
+	dba Nidoran_MBackpic	;alt forms
 	dba NidorinoFrontpic
 	dba NidorinoBackpic
 	dba NidorinaFrontpic
@@ -122,10 +118,10 @@ PokemonPicPointers::
 	dba LuxioBackpic
 	dba LuxrayFrontpic
 	dba LuxrayBackpic
-	dba SandshrewFrontpic
-	dba SandshrewBackpic
-	dba SandslashFrontpic
-	dba SandslashBackpic
+	dba SandshrewFrontpic	;alt forms
+	dba SandshrewBackpic	;alt forms
+	dba SandslashFrontpic	;alt forms
+	dba SandslashBackpic	;alt forms
 	dba CutieflyFrontpic
 	dba CutieflyBackpic
 	dba RibombeeFrontpic
@@ -150,8 +146,8 @@ PokemonPicPointers::
 	dba ChesnaughtBackpic
 	dba DeerlingFrontpic
 	dba DeerlingBackpic
-	dba SawsbuckFrontpic
-	dba SawsbuckBackpic
+	dba SawsbuckFrontpic	;alt forms
+	dba SawsbuckBackpic		;alt forms
 	dba CottoneeFrontpic
 	dba CottoneeBackpic
 	dba WhimsicottFrontpic
@@ -374,8 +370,8 @@ PokemonPicPointers::
 	dba BraixenBackpic
 	dba DelphoxFrontpic
 	dba DelphoxBackpic
-	dba VulpixFrontpic
-	dba VulpixBackpic
+	dba VulpixFrontpic 		;alt forms
+	dba VulpixBackpic 		;alt forms
 	dba NinetalesFrontpic
 	dba NinetalesBackpic
 	dba SlugmaFrontpic
@@ -406,11 +402,8 @@ PokemonPicPointers::
 	dba BoldoreBackpic
 	dba GigalithFrontpic
 	dba GigalithBackpic
-
-	; Unown pics have their own table. See UnownPicPointers
-	dbw -1, -1
-	dbw -1, -1
-
+	dba CarbinkFrontpic
+	dba	CarbinkBackpic
 	dba AmauraFrontpic
 	dba AmauraBackpic
 	dba AurorusFrontpic
@@ -433,8 +426,8 @@ PokemonPicPointers::
 	dba PiloswineBackpic
 	dba MamoswineFrontpic
 	dba MamoswineBackpic
-	dba UnownFrontpic
-	dba UnownBackpic
+	dba UnownFrontpic 		;alt forms
+	dba UnownBackpic		;alt forms
 	dba NatuFrontpic
 	dba NatuBackpic
 	dba XatuFrontpic
@@ -461,8 +454,8 @@ PokemonPicPointers::
 	dba HonedgeBackpic
 	dba DoubladeFrontpic
 	dba DoubladeBackpic
-	dba AegislashFrontpic
-	dba AegislashBackpic
+	dba AegislashFrontpic	;alt forms
+	dba AegislashBackpic	;alt forms
 	dba PawniardFrontpic
 	dba PawniardBackpic
 	dba BisharpFrontpic
@@ -491,12 +484,12 @@ PokemonPicPointers::
 	dba ZapdosBackpic
 	dba MoltresFrontpic
 	dba MoltresBackpic
-	dba SuicuneFrontpic
-	dba SuicuneBackpic
-	dba RaikouFrontpic
-	dba RaikouBackpic
-	dba EnteiFrontpic
-	dba EnteiBackpic
+	dba SuicuneFrontpic		;alt forms
+	dba SuicuneBackpic		;alt forms
+	dba RaikouFrontpic		;alt forms
+	dba RaikouBackpic		;alt forms
+	dba EnteiFrontpic		;alt forms
+	dba EnteiBackpic		;alt forms
 	dba LatiasFrontpic
 	dba LatiasBackpic
 	dba LatiosFrontpic
@@ -509,8 +502,8 @@ PokemonPicPointers::
 	dba ShayminBackpic
 	dba CelebiFrontpic
 	dba CelebiBackpic
-	dba ZygardeFrontpic
-	dba ZygardeBackpic
+	dba ZygardeFrontpic		;alt forms
+	dba ZygardeBackpic		;alt forms
 	dba MewFrontpic	
 	dba MewBackpic
 	dba MewtwoFrontpic	

@@ -30,7 +30,7 @@
 	const ZORUA			; 0a
 	const ZOROARK		; 0b
 	const ROCKRUFF		; 0c
-	const LYCANROC		; 0d
+	const LYCANROC		; 0d alt forms
 	const MIMIKYU     	; 0e
 	const MAGNEMITE   	; 0f
 	const MAGNETON     	; 10
@@ -43,11 +43,11 @@
 	const TOGEPI      	; 17
 	const TOGETIC      	; 18
 	const TOGEKISS    	; 19
-	const ROTOM     	; 1a
+	const ROTOM     	; 1a alt forms
 	const CHINGLING  	; 1b
 	const CHIMECHO  	; 1c
 	const ESPURR  		; 1d
-	const MEOWSTIC_M   	; 1e
+	const MEOWSTIC_M   	; 1e alt forms
 	const TIMBURR  		; 1f
 	const GURDURR  		; 20
 	const CONKELDURR   	; 21
@@ -56,7 +56,7 @@
 	const LIEPARD   	; 24
 	const GRIMER     	; 25
 	const MUK  			; 26
-	const NIDORAN_M 	; 27
+	const NIDORAN_M 	; 27 alt forms
 	const NIDORINO 		; 28
 	const NIDORINA      ; 29
 	const NIDOKING     	; 2a
@@ -76,8 +76,8 @@
 	const SHINX     	; 38
 	const LUXIO   		; 39
 	const LUXRAY  		; 3a
-	const SANDSHREW   	; 3b
-	const SANDSLASH    	; 3c
+	const SANDSHREW   	; 3b alt forms
+	const SANDSLASH    	; 3c alt forms
 	const CUTIEFLY  	; 3d
 	const RIBOMBEE  	; 3e
 	const FLABEBE       ; 3f
@@ -90,7 +90,7 @@
 	const QUILLADIN 	; 46
 	const CHESNAUGHT 	; 47
 	const DEERLING  	; 48
-	const SAWSBUCK 		; 49
+	const SAWSBUCK 		; 49 alt forms
 	const COTTONEE    	; 4a
 	const WHIMSICOTT   	; 4b
 	const FOONGUS      	; 4c
@@ -204,8 +204,8 @@ JOHTO_POKEMON EQU const_value
 	const FENNEKIN  	; b6
 	const BRAIXEN     	; b7
 	const DELPHOX  		; b8
-	const VULPIX  		; b9
-	const NINETALES   	; ba
+	const VULPIX  		; b9 alt forms
+	const NINETALES   	; ba alt forms
 	const SLUGMA        ; bb
 	const MAGCARGO      ; bc
 	const HOUNDOUR      ; bd
@@ -232,7 +232,7 @@ JOHTO_POKEMON EQU const_value
 	const SWINUB        ; d2
 	const PILOSWINE     ; d3
 	const MAMOSWINE     ; d4
-	const UNOWN    		; d5
+	const UNOWN    		; d5 alt forms
 	const NATU          ; d6
 	const XATU          ; d7
 	const SIGILYPH      ; d8
@@ -246,7 +246,7 @@ JOHTO_POKEMON EQU const_value
 	const BRONZONG      ; e0
 	const HONEDGE       ; e1
 	const DOUBLADE      ; e2
-	const AEGISLASH     ; e3
+	const AEGISLASH     ; e3 alt forms
 	const PAWNIARD      ; e4
 	const BISHARP       ; e5
 	const YAMASK        ; e6
@@ -261,16 +261,16 @@ JOHTO_POKEMON EQU const_value
 	const ARTICUNO   	; ef
 	const ZAPDOS     	; f0
 	const MOLTRES    	; f1
-	const SUICUNE    	; f2
-	const RAIKOU     	; f3
-	const ENTEI      	; f4
+	const SUICUNE    	; f2 alt forms
+	const RAIKOU     	; f3 alt forms
+	const ENTEI      	; f4 alt forms
 	const LATIAS     	; f5
 	const LATIOS     	; f6
 	const SILVALLY   	; f7
 	const MAGEARNA   	; f8
-	const SHAYMIN    	; f9
+	const SHAYMIN    	; f9 alt forms
 	const CELEBI     	; fa
-	const ZYGARDE    	; fb
+	const ZYGARDE    	; fb alt forms
 	const MEW        	; fc
 	const MEWTWO     	; fd
 NUM_POKEMON EQU const_value + -1
@@ -322,18 +322,19 @@ NUM_REGIONAL EQU const_value + -1 ; 2
 	const MIDDAY
 	const MIDNIGHT
 	const DUSK
-	; const DAWN
-NUM_LYCANROC EQU const_value + -1 ; 3
+	const DAWN
+NUM_LYCANROC EQU const_value + -1 ; 4
 
-	BETA EQU 1
+	BETA EQU 2
 
 	const_def 1
+	const GHOST_ROTOM
 	const FAN_ROTOM
 	const FROST_ROTOM
 	const HEAT_ROTOM
 	const MOW_ROTOM
 	const WASH_ROTOM
-NUM_ROTOM EQU const_value + -1 ; 5
+NUM_ROTOM EQU const_value + -1 ; 6
 
 	const_def 1
 	const TEN_PERCENT
@@ -345,3 +346,10 @@ NUM_ZYGARDE EQU const_value + -1 ; 3
 	const LAND_SHAYMIN
 	const SKY_SHAYMIN
 NUM_SHAYMIN EQU const_value + -1 ; 2
+
+	const_def 1
+	const SPRING
+	const SUMMER
+	const FALL
+	const WINTER
+NUM_SAWSBUCK EQU const_value + -1 ;4
