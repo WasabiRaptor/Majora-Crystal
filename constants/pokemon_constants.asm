@@ -102,7 +102,7 @@
 	const PASSIMIAN   	; 52
 	const STUFFUL 		; 53
 	const BEWEAR      	; 54
-	const GIRAFARIG     ; 55
+	const GIRAFARIG     ; 55 alt forms
 	const HERACROSS     ; 56
 	const LEDYBA    	; 57
 	const LEDIAN     	; 58

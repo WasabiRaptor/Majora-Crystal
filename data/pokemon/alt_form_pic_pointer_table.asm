@@ -8,6 +8,7 @@
     dbba SANDSHREW, SandshrewPicPointers
     dbba SANDSLASH, SandslashPicPointers
     dbba SAWSBUCK,  SawsbuckPicPointers
+    dbba GIRAFARIG, GirafarigPicPointers
     dbba VULPIX,    VulpixkPicPointers
     dbba NINETALES, NinetalesPicPointers
     dbba UNOWN,     UnownPicPointers

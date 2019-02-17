@@ -170,8 +170,8 @@ PokemonPicPointers::
 	dba StuffulBackpic
 	dba BewearFrontpic
 	dba BewearBackpic
-	dba GirafarigFrontpic
-	dba GirafarigBackpic
+	dba GirafarigFrontpic	;alt forms
+	dba GirafarigBackpic	;alt forms
 	dba HeracrossFrontpic
 	dba HeracrossBackpic
 	dba LedybaFrontpic

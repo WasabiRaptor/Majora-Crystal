@@ -68,6 +68,12 @@ SawsbuckPicPointers::
 	dba Sawsbuck_WinterFrontpic
 	dba Sawsbuck_WinterBackpic
 
+GirafarigPicPointers::
+	dba GirafarigFrontpic
+	dba GirafarigBackpic
+	dba Girafarig_BetaFrontpic
+	dba Girafarig_BetaBackpic
+
 VulpixPicPointers::
 	dba VulpixFrontpic
 	dba VulpixBackpic
