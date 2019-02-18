@@ -138,12 +138,20 @@ INCLUDE "gfx/pokemon/ninetales/shiny.pal"
 INCBIN "gfx/pokemon/ninetales_alola/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/ninetales_alola/shiny.pal"
 
-LycanrocPalettes:
-INCBIN "gfx/pokemon/lycanroc_midday/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/lycanroc_midday/shiny.pal"
-INCBIN "gfx/pokemon/lycanroc_midnight/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/lycanroc_midnight/shiny.pal"
-INCBIN "gfx/pokemon/lycanroc_dusk/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/lycanroc_dusk/shiny.pal"
-INCBIN "gfx/pokemon/lycanroc_dawn/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/lycanroc_dawn/shiny.pal"
+SuicunePalettes:
+INCBIN "gfx/pokemon/suicune/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/suicune/shiny.pal"
+INCBIN "gfx/pokemon/suicune_beta/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/suicune_beta/shiny.pal"
+
+RaikouPalettes:
+INCBIN "gfx/pokemon/raikou/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/raikou/shiny.pal"
+INCBIN "gfx/pokemon/raikou_beta/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/raikou_beta/shiny.pal"
+
+EnteiPalettes:
+INCBIN "gfx/pokemon/entei/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/entei/shiny.pal"
+INCBIN "gfx/pokemon/entei_beta/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/entei_beta/shiny.pal"
