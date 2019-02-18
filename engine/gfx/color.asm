@@ -607,14 +607,12 @@ LoadPortraitPalette:
 BattleObjectPals:
 INCLUDE "gfx/battle_anims/battle_anims.pal"
 
-_GetMonPalettePointer:
-	cp VULPIX
-	jr z, .vulpix
-	cp NINETALES
-	jr z, .ninetales
-
-	ld bc, PokemonPalettes
-.GotPalette
+_GetMonPalettePointer:	
+	call GetRelevantPallete
+	jr nc, .notvariant
+	ld a, [wAltForm]
+	dec a
+.notvariant
 	ld l, a
 	ld h, $0
 	add hl, hl
@@ -623,19 +621,22 @@ _GetMonPalettePointer:
 	add hl, bc
 	ret
 
-.vulpix
-	ld a, [wAltForm]
-	dec a
-	ld bc, VulpixPalettes
-	jr .GotPalette
+GetRelevantPallete:
+; given species in a, return *Palette in bc
+	ld hl, .AltFormPaletteTable
+	ld de, 4
+	call IsInArray
+	ld d, a
+	inc hl
+	inc hl
+	ld a, [hli]
+	ld b, [hl]
+	ld c, a
+	ld a, d
+	ret
 
-
-.ninetales
-	ld a, [wAltForm]
-	dec a
-	ld bc, NinetalesPalettes
-	jr .GotPalette
-
+.AltFormPaletteTable:
+INCLUDE "data/pokemon/alt_form_palette_table.asm"
 
 GetMonNormalOrShinyPalettePointer:
 	push bc

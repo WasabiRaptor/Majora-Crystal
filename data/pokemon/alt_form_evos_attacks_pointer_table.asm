@@ -11,8 +11,5 @@
     dbba GIRAFARIG, GirafarigEvosAttacksPointers
     dbba VULPIX,    VulpixkEvosAttacksPointers
     dbba NINETALES, NinetalesEvosAttacksPointers
-    dbba SUICUNE,   SuicuneEvosAttacksPointers
-    dbba RAIKOU,    RaikouEvosAttacksPointers
-    dbba ENTEI,     EnteiEvosAttacksPointers
     dbba SHAYMIN,   ShayminEvosAttacksPointers
 	dbba -1,        EvosAttacksPointers
