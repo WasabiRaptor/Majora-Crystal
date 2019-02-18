@@ -5,7 +5,7 @@
     next "hard shell, its"
     next "body is very"
 
-    next "sturdy. It skewers"
+    page "sturdy. It skewers"
     next "prey with its"
     next "claws to feed.@" 
     

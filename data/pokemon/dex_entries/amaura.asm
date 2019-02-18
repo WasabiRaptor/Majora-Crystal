@@ -5,8 +5,8 @@
     next "areas in ancient"
     next "times. It's said"
 
-    next "that when Amaura"
+    page "that when Amaura"
     next "whinnies, auroras"
     next "appear in the" 
          
-    next "night sky.@"
+    page "night sky.@"

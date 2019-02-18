@@ -5,6 +5,6 @@
     next "their Poké Ball"
     next "caps to lure prey,"
 
-    next "but very few"
+    page "but very few"
     next "Pokémon are fooled"
     next "by this.@"     

@@ -5,7 +5,7 @@
     next "beautiful melody"
     next "trilling among"
 
-    next "mountains far from"
+    page "mountains far from"
     next "people, then it is"
     next "Altaria's humming.@"
    

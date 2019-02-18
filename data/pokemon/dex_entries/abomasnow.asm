@@ -5,6 +5,6 @@
     next "areas in snow by"
     next "whipping up"
     
-    next "blizzards. "
+    page "blizzards. "
     next "It's also known as"
     next "'The Ice Monster.'@"

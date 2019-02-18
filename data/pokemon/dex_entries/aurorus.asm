@@ -5,6 +5,6 @@
     next "shaped crystals,"
     next "it can instantly"
 
-    next "create a wall of"
+    page "create a wall of"
     next "ice to block an"
     next "opponent's attack.@" 

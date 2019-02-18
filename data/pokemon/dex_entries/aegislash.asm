@@ -5,8 +5,8 @@
     next "innate qualities"
     next "of leadership."
 
-    next "In legend, whoever"
+    page "In legend, whoever"
     next "it recognizes is"
     next "destined to become"
 
-    next "king.@"
+    page "king.@"

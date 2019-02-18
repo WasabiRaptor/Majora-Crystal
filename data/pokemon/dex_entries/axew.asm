@@ -5,6 +5,6 @@
     next "tusks to crush the"
     next "berries they eat."
 
-    next "Repeated regrowth"
+    page "Repeated regrowth"
     next "makes their tusks"
     next "strong and sharp.@" 

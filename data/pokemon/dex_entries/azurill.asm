@@ -5,9 +5,9 @@
     next "flinging around"
     next "values in its"
 
-    next "its tail, which is"
+    page "its tail, which is"
     next "bigger than its"
     next "body. The tail is" 
          
-    next "a floatation"
+    page "a floatation"
     next "device in water.@" 
