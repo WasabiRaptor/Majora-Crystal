@@ -288,7 +288,7 @@ INCLUDE "data/pokemon/base_stats/silvally.asm"
 INCLUDE "data/pokemon/base_stats/magearna.asm"
 INCLUDE "data/pokemon/base_stats/shaymin.asm"
 INCLUDE "data/pokemon/base_stats/celebi.asm"
-INCLUDE "data/pokemon/base_stats/zygarde.asm"
+INCLUDE "data/pokemon/base_stats/zygarde_fifty_percent.asm"
 INCLUDE "data/pokemon/base_stats/mew.asm"
 INCLUDE "data/pokemon/base_stats/mewtwo.asm"
 

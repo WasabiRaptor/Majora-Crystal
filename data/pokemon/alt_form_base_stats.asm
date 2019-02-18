@@ -74,5 +74,5 @@ ShayminBaseData::
 
 ZygardeBaseData::
 	INCLUDE "data/pokemon/base_stats/zygarde_ten_percent.asm"
-	INCLUDE "data/pokemon/base_stats/zygarde.asm"
+	INCLUDE "data/pokemon/base_stats/zygarde_fifty_percent.asm"
 	INCLUDE "data/pokemon/base_stats/zygarde_complete.asm"
