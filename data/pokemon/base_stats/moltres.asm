@@ -1,4 +1,4 @@
-	db MOLTRES ; 146
+	db MOLTRES ; 241
 
 	db  90, 100,  90,  90, 125,  85
     evs  0,   0,   0,   0,   3,   0

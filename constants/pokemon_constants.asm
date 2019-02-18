@@ -320,15 +320,17 @@ NUM_REGIONAL EQU const_value + -1 ; 2
 
 	const_def 1
 	const MIDDAY
-	const MIDNIGHT
 	const DUSK
+	const MIDNIGHT
 	const DAWN
 NUM_LYCANROC EQU const_value + -1 ; 4
 
-	BETA EQU 2
-
 	const_def 1
-	const GHOST_ROTOM
+	const DEFAULT_FORM
+	const BETA
+NUM_BETA EQU const_value + -1 ; 2
+
+	const_def 2
 	const FAN_ROTOM
 	const FROST_ROTOM
 	const HEAT_ROTOM
@@ -353,3 +355,8 @@ NUM_SHAYMIN EQU const_value + -1 ; 2
 	const FALL
 	const WINTER
 NUM_SAWSBUCK EQU const_value + -1 ;4
+
+	const_def 1
+	const TYPE_FULL
+	const TYPE_NULL
+NUM_SILVALLY EQU const_value + -1 ;2
