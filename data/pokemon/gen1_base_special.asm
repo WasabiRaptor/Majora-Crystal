@@ -126,7 +126,7 @@ KantoMonSpecials:
 	db  55 ; SAMUROTT
 	db  95 ; BUIZEL
 	db  85 ; FLOATZEL
-	db  85 ; AZURIL
+	db  85 ; AZURILL
 	db  55 ; MARILL
 	db  70 ; AZUMARILL
 	db  20 ; LAPRAS

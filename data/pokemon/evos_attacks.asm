@@ -1877,7 +1877,7 @@ FloatzelEvosAttacks:
 	db 58, THUNDER
 	db 0 ; no more level-up moves
 
-AzurilEvosAttacks:
+AzurillEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, EMBER
 	db 1, LEER
@@ -3405,7 +3405,7 @@ ArticunoEvosAttacks:
 	db 0 ; no more level-up moves
 
 ZapdosEvosAttacks:
-	db EVOLVE_LEVEL, 30, AZURIL
+	db EVOLVE_LEVEL, 30, AZURILL
 	db 0 ; no more evolutions
 	db 1, EMBER
 	db 7, LEER

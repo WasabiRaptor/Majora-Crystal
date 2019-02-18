@@ -17,7 +17,7 @@ AlphabeticalPokedexOrder:
 	db AURORUS
 	db AXEW
 	db AZUMARILL
-	db AZURIL
+	db AZURILL
 	;B
 	db BALTOY
 	db BEWEAR

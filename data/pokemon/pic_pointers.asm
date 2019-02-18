@@ -252,8 +252,8 @@ PokemonPicPointers::
 	dba BuizelBackpic
 	dba FloatzelFrontpic
 	dba FloatzelBackpic
-	dba AzurilFrontpic
-	dba AzurilBackpic
+	dba AzurillFrontpic
+	dba AzurillBackpic
 	dba MarillFrontpic
 	dba MarillBackpic
 	dba AzumarillFrontpic

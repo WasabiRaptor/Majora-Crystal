@@ -124,7 +124,7 @@ BitmasksPointers:
 	dw SamurottBitmasks
 	dw BuizelBitmasks
 	dw FloatzelBitmasks
-	dw AzurilBitmasks
+	dw AzurillBitmasks
 	dw MarillBitmasks
 	dw AzumarillBitmasks
 	dw LaprasBitmasks

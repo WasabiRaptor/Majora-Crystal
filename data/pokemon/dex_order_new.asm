@@ -151,7 +151,7 @@ NewPokedexOrder:
 	db AZUMARILL
 	db MOLTRES
 	db ZAPDOS
-	db AZURIL
+	db AZURILL
 	db DUSKNOIR
 	db BUIZEL
 	db ARTICUNO

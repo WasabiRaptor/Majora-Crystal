@@ -143,7 +143,7 @@
 	const SAMUROTT      ; 7b
 	const BUIZEL        ; 7c
 	const FLOATZEL      ; 7d
-	const AZURIL        ; 7e
+	const AZURILL        ; 7e
 	const MARILL        ; 7f
 	const AZUMARILL     ; 80
 	const LAPRAS   		; 81

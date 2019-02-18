@@ -124,7 +124,7 @@ AnimationPointers:
 	dw SamurottAnimation
 	dw BuizelAnimation
 	dw FloatzelAnimation
-	dw AzurilAnimation
+	dw AzurillAnimation
 	dw MarillAnimation
 	dw AzumarillAnimation
 	dw LaprasAnimation

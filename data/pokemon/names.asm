@@ -124,7 +124,7 @@ PokemonNames::
 	db "SAMUROTT@@@"
 	db "BUIZEL@@@@@@"
 	db "FLOATZEL"
-	db "AZURIL@@@@"
+	db "AZURILL@@@@"
 	db "MARILL@@@@"
 	db "AZUMARILL@@@@"
 	db "LAPRAS@@"

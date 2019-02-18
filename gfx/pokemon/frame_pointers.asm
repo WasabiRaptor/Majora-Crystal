@@ -124,7 +124,7 @@ FramesPointers:
 	dw SamurottFrames
 	dw BuizelFrames
 	dw FloatzelFrames
-	dw AzurilFrames
+	dw AzurillFrames
 	dw MarillFrames
 	dw AzumarillFrames
 	dw LaprasFrames

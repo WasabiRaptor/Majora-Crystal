@@ -448,7 +448,7 @@ SchoolboyGroup:
 	db "DANNY@", TRAINERTYPE_NORMAL
 	db 31, BUIZEL
 	db 31, FLOATZEL
-	db 31, AZURIL
+	db 31, AZURILL
 	db -1 ; end
 
 	; SCHOOLBOY (6)
@@ -2463,14 +2463,14 @@ BikerGroup:
 
 	; BIKER (8)
 	db "JOEL@", TRAINERTYPE_NORMAL
-	db 32, AZURIL
-	db 32, AZURIL
+	db 32, AZURILL
+	db 32, AZURILL
 	db -1 ; end
 
 	; BIKER (9)
 	db "GLENN@", TRAINERTYPE_NORMAL
 	db 28, TYMPOLE
-	db 30, AZURIL
+	db 30, AZURILL
 	db 32, PALPITOAD
 	db -1 ; end
 
@@ -2478,7 +2478,7 @@ BlaineGroup:
 	; BLAINE (1)
 	db "BLAINE@", TRAINERTYPE_MOVES
 	db 45, BALTOY,   CURSE, SMOG, FLAMETHROWER, ROCK_SLIDE
-	db 45, AZURIL,     THUNDERPUNCH, FIRE_PUNCH, SUNNY_DAY, CONFUSE_RAY
+	db 45, AZURILL,     THUNDERPUNCH, FIRE_PUNCH, SUNNY_DAY, CONFUSE_RAY
 	db 50, PHANTUMP,   QUICK_ATTACK, FIRE_SPIN, FURY_ATTACK, FIRE_BLAST
 	db -1 ; end
 
@@ -2486,7 +2486,7 @@ BurglarGroup:
 	; BURGLAR (1)
 	db "DUNCAN@", TRAINERTYPE_NORMAL
 	db 23, TYMPOLE
-	db 25, AZURIL
+	db 25, AZURILL
 	db 23, TYMPOLE
 	db -1 ; end
 
@@ -2499,7 +2499,7 @@ BurglarGroup:
 	; BURGLAR (3)
 	db "COREY@", TRAINERTYPE_NORMAL
 	db 25, TYMPOLE
-	db 28, AZURIL
+	db 28, AZURILL
 	db 25, TYMPOLE
 	db 30, TYMPOLE
 	db -1 ; end
@@ -2507,9 +2507,9 @@ BurglarGroup:
 FirebreatherGroup:
 	; FIREBREATHER (1)
 	db "OTIS@", TRAINERTYPE_NORMAL
-	db 29, AZURIL
+	db 29, AZURILL
 	db 32, PALPITOAD
-	db 29, AZURIL
+	db 29, AZURILL
 	db -1 ; end
 
 	; FIREBREATHER (2)
@@ -2538,8 +2538,8 @@ FirebreatherGroup:
 
 	; FIREBREATHER (6)
 	db "WALT@", TRAINERTYPE_NORMAL
-	db 11, AZURIL
-	db 13, AZURIL
+	db 11, AZURILL
+	db 13, AZURILL
 	db -1 ; end
 
 	; FIREBREATHER (7)
@@ -2566,7 +2566,7 @@ JugglerGroup:
 	; JUGGLER (2)
 	db "FRITZ@", TRAINERTYPE_NORMAL
 	db 29, DEWOTT
-	db 29, AZURIL
+	db 29, AZURILL
 	db 29, JIGGLYPUFF
 	db -1 ; end
 

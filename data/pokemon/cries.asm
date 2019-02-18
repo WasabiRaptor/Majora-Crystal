@@ -130,7 +130,7 @@ PokemonCries::
 	mon_cry CRY_CATERPIE,    $000,  $100 ; SAMUROTT
 	mon_cry CRY_SCIZOR,     $0ff,  $17f ; BUIZEL
 	mon_cry CRY_MORELULL,     $08f,  $17f ; FLOATZEL
-	mon_cry CRY_CHARMANDER,  $0ff,  $0b0 ; AZURIL
+	mon_cry CRY_CHARMANDER,  $0ff,  $0b0 ; AZURILL
 	mon_cry CRY_MAGNEZONE,   $000,  $100 ; MARILL
 	mon_cry CRY_SQUIRTLE,    $011,  $0c0 ; AZUMARILL
 	mon_cry CRY_TOGEPI,       $080,  $080 ; LAPRAS

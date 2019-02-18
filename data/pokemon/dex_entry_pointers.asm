@@ -125,7 +125,7 @@ PokedexDataPointerTable:
 	dw SamurottPokedexEntry
 	dw BuizelPokedexEntry
 	dw FloatzelPokedexEntry
-	dw AzurilPokedexEntry
+	dw AzurillPokedexEntry
 	dw MarillPokedexEntry
 	dw AzumarillPokedexEntry
 	dw LaprasPokedexEntry

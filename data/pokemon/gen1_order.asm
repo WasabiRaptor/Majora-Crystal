@@ -49,7 +49,7 @@ Pokered_MonIndices:
 	db SCIZOR
 	db FOONGUS
 	db NATU ; MISSINGNO.
-	db AZURIL
+	db AZURILL
 	db CELEBI ; MISSINGNO.
 	db FLOATZEL
 	db PASSIMIAN

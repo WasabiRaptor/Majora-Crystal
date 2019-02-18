@@ -132,7 +132,7 @@ DewottPokedexEntry::     INCLUDE "data/pokemon/dex_entries/dewott.asm"
 SamurottPokedexEntry::    INCLUDE "data/pokemon/dex_entries/samurott.asm"
 BuizelPokedexEntry::       INCLUDE "data/pokemon/dex_entries/buizel.asm"
 FloatzelPokedexEntry:: INCLUDE "data/pokemon/dex_entries/floatzel.asm"
-AzurilPokedexEntry::     INCLUDE "data/pokemon/dex_entries/azuril.asm"
+AzurillPokedexEntry::     INCLUDE "data/pokemon/dex_entries/azurill.asm"
 MarillPokedexEntry::     INCLUDE "data/pokemon/dex_entries/marill.asm"
 AzumarillPokedexEntry::     INCLUDE "data/pokemon/dex_entries/azumarill.asm"
 

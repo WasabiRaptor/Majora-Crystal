@@ -124,7 +124,7 @@ AnimationIdlePointers:
 	dw SamurottAnimationIdle
 	dw BuizelAnimationIdle
 	dw FloatzelAnimationIdle
-	dw AzurilAnimationIdle
+	dw AzurillAnimationIdle
 	dw MarillAnimationIdle
 	dw AzumarillAnimationIdle
 	dw LaprasAnimationIdle

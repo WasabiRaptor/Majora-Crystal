@@ -126,7 +126,7 @@ EvosAttacksPointers::
 	dw SamurottEvosAttacks
 	dw BuizelEvosAttacks
 	dw FloatzelEvosAttacks
-	dw AzurilEvosAttacks
+	dw AzurillEvosAttacks
 	dw MarillEvosAttacks
 	dw AzumarillEvosAttacks
 	dw LaprasEvosAttacks
