@@ -527,12 +527,12 @@ FillMoves:
 	jr .GetLevel
 
 .vulpix
-	ld a, [wFormVariable]
+	ld a, [wAltForm]
 	ld hl, VulpixEvosAttacksPointers
 	jr .got_pointers
 
 .ninetales
-	ld a, [wFormVariable]
+	ld a, [wAltForm]
 	ld hl, NinetalesEvosAttacksPointers
 	jr .got_pointers
 

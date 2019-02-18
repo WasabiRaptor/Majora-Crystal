@@ -3322,7 +3322,7 @@ LoadEnemyMonToSwitchTo:
 	jr nz, .skip_unown
 	ld hl, wEnemyMonDVs
 	predef GetFormData
-	ld a, [wFormVariable]
+	ld a, [wAltForm]
 	ld [wFirstUnownSeen], a
 .skip_unown
 
@@ -6422,7 +6422,7 @@ CheckUnownLetter:
 	ld l, a
 
 	push de
-	ld a, [wFormVariable]
+	ld a, [wAltForm]
 	ld de, 1
 	push bc
 	call IsInArray
@@ -8108,7 +8108,7 @@ InitEnemyWildmon:
 	ld a, [wFirstUnownSeen]
 	and a
 	jr nz, .skip_unown
-	ld a, [wFormVariable]
+	ld a, [wAltForm]
 	ld [wFirstUnownSeen], a
 .skip_unown
 	ld de, vTiles2

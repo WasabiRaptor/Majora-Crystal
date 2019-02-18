@@ -468,7 +468,7 @@ AddTempmonToParty:
 	ld a, [wFirstUnownSeen]
 	and a
 	jr nz, .done
-	ld a, [wFormVariable]
+	ld a, [wAltForm]
 	ld [wFirstUnownSeen], a
 .done
 

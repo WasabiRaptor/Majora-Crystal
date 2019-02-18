@@ -10,43 +10,19 @@ GetBaseData::
 	ld a, [wCurSpecies]
 	cp EGG
 	jr z, .egg
-
 	ld bc, BASE_DATA_SIZE
-
-	cp VULPIX
-	jr z, .vulpix
-	cp NINETALES
-	jr z, .ninetales
-
-
-	ld a, BANK(BaseData)
-	rst Bankswitch
+	push bc
+	call GetRelevantBaseData
+	pop bc
 	ld a, [wCurSpecies]
-; Get BaseData
-	dec a
-	ld hl, BaseData
-.got_base_data
+	jr nc, .notaltform
+	ld a, [wAltForm]
+.notaltform
 	call AddNTimes
 	ld de, wCurBaseData
 	ld bc, BASE_DATA_SIZE
 	call CopyBytes
 	jr .end	
-
-.vulpix
-	ld a, BANK(VulpixBaseData)
-	rst Bankswitch
-	ld a, [wFormVariable]
-	dec a
-	ld hl, VulpixBaseData
-	jr .got_base_data
-	
-.ninetales
-	ld a, BANK(NinetalesBaseData)
-	rst Bankswitch
-	ld a, [wFormVariable]
-	dec a
-	ld hl, NinetalesBaseData
-	jr .got_base_data
 
 .egg
 ; ????
@@ -91,3 +67,20 @@ GetNick::
 	pop bc
 	pop hl
 	ret
+
+GetRelevantBaseData:
+; given species in a, return *BaseData in hl and BANK(*BaseData) bankswitch the bank
+; returns c for variants, nc for normal species
+	ld hl, .BaseDataTable
+	ld de, 4
+	call IsInArray
+	inc hl
+	ld a, [hli]
+	rst bankswitch
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ret
+
+.BaseDataTable:
+INCLUDE "data/pokemon/alt_form_base_data_table.asm"

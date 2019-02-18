@@ -1,5 +1,5 @@
 UpdateUnownDex:
-	ld a, [wFormVariable]
+	ld a, [wAltForm]
 	ld c, a
 	ld b, NUM_UNOWN
 	ld hl, wUnownDex

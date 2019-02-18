@@ -9,7 +9,7 @@ GetFormData::
 	ret
 
 .unown
-; Return Unown letter in wFormVariable based on DVs at hl
+; Return Unown letter in wAltForm based on DVs at hl
 
 ; Take the middle 2 bits of each DV and place them in order:
 ;	atk  def  spd  spc
@@ -55,7 +55,7 @@ GetFormData::
 ; Increment to get 1-26
 	ldh a, [hQuotient + 3]
 	inc a
-	ld [wFormVariable], a
+	ld [wAltForm], a
 	ret
 
 .regional
@@ -78,7 +78,7 @@ GetFormData::
 .alolan
 	ld a, ALOLAN
 .done
-	ld [wFormVariable], a
+	ld [wAltForm], a
 	ret
 
 
@@ -155,7 +155,7 @@ GetFrontpicPointer:
 	call GetRelevantPicPointers
 	ld a, [wCurPartySpecies]
 	jr nc, .notvariant
-	ld a, [wFormVariable]
+	ld a, [wAltForm]
 .notvariant
 	dec a
 	ld bc, 6
@@ -261,7 +261,7 @@ GetMonBackpic:
 	ret c
 	ld a, [wCurPartySpecies]
 	ld b, a
-	ld a, [wFormVariable]
+	ld a, [wAltForm]
 	ld c, a
 	ld a, [rSVBK]
 	push af

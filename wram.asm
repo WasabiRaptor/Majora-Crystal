@@ -2152,7 +2152,7 @@ wForcedSwitch:: db
 
 wTrainerClass:: db ; d233
 
-wFormVariable:: db ; d234
+wAltForm:: db ; d234
 
 wMoveSelectionMenuType:: db
 

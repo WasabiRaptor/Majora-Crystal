@@ -624,14 +624,14 @@ _GetMonPalettePointer:
 	ret
 
 .vulpix
-	ld a, [wFormVariable]
+	ld a, [wAltForm]
 	dec a
 	ld bc, VulpixPalettes
 	jr .GotPalette
 
 
 .ninetales
-	ld a, [wFormVariable]
+	ld a, [wAltForm]
 	dec a
 	ld bc, NinetalesPalettes
 	jr .GotPalette

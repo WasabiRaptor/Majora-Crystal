@@ -135,7 +135,7 @@ _UnownPrinter:
 	cp 26
 	jr z, .vacant
 	inc a
-	ld [wFormVariable], a
+	ld [wAltForm], a
 	ld a, UNOWN
 	ld [wCurPartySpecies], a
 	xor a
