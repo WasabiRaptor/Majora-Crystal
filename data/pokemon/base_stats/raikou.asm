@@ -11,7 +11,7 @@
 	db GENDER_UNKNOWN ; gender ratio
 	db 80 ; step cycles to hatch
 	INCBIN "gfx/pokemon/raikou/front.dimensions"
-	db 0, 0 ;form differences
+	db NUM_BETA, DEFAULT_FORM ;form differences
 	db 0, 0	;abilities
 	db GROWTH_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups

@@ -1,7 +1,7 @@
 LycanrocEvosAttacksPointers::
 	dw LycanrocEvosAttacks
-	dw Lycanroc_MidnightEvosAttacks
 	dw Lycanroc_DuskEvosAttacks
+	dw Lycanroc_MidnightEvosAttacks
 	dw Lycanroc_DawnEvosAttacks
 
 MeowthEvosAttacksPointers::

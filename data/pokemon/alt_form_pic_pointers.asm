@@ -1,10 +1,10 @@
 LycanrocPicPointers::
 	dba LycanrocFrontpic
 	dba LycanrocBackpic
-	dba Lycanroc_MidnightFrontpic
-	dba Lycanroc_MidnightBackpic
 	dba Lycanroc_DuskFrontpic
 	dba Lycanroc_DuskBackpic
+	dba Lycanroc_MidnightFrontpic
+	dba Lycanroc_MidnightBackpic
 	dba Lycanroc_DawnFrontpic
 	dba Lycanroc_DawnBackpic
 
