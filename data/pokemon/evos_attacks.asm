@@ -204,6 +204,24 @@ LycanrocEvosAttacks:
 	db 1, POISON_STING
 	db 1, STRING_SHOT
 	db 0 ; no more level-up moves
+Lycanroc_MidnightEvosAttacks:
+	db EVOLVE_LEVEL, 7, MIMIKYU
+	db 0 ; no more evolutions
+	db 1, POISON_STING
+	db 1, STRING_SHOT
+	db 0 ; no more level-up moves
+Lycanroc_DuskEvosAttacks:
+	db EVOLVE_LEVEL, 7, MIMIKYU
+	db 0 ; no more evolutions
+	db 1, POISON_STING
+	db 1, STRING_SHOT
+	db 0 ; no more level-up moves
+Lycanroc_DawnEvosAttacks:
+	db EVOLVE_LEVEL, 7, MIMIKYU
+	db 0 ; no more evolutions
+	db 1, POISON_STING
+	db 1, STRING_SHOT
+	db 0 ; no more level-up moves
 
 MimikyuEvosAttacks:
 	db EVOLVE_LEVEL, 10, MAGNEMITE
@@ -303,8 +321,33 @@ MeowthEvosAttacks:
 	db 37, DRILL_PECK
 	db 43, AGILITY
 	db 0 ; no more level-up moves
+Meowth_AlolaEvosAttacks:
+	db EVOLVE_LEVEL, 20, PERSIAN
+	db 0 ; no more evolutions
+	db 1, PECK
+	db 1, GROWL
+	db 7, LEER
+	db 13, FURY_ATTACK
+	db 25, PURSUIT
+	db 31, MIRROR_MOVE
+	db 37, DRILL_PECK
+	db 43, AGILITY
+	db 0 ; no more level-up moves
 
 PersianEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, PECK
+	db 1, GROWL
+	db 1, LEER
+	db 1, FURY_ATTACK
+	db 7, LEER
+	db 13, FURY_ATTACK
+	db 26, PURSUIT
+	db 32, MIRROR_MOVE
+	db 40, DRILL_PECK
+	db 47, AGILITY
+	db 0 ; no more level-up moves
+Persian_AlolaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, GROWL
@@ -368,6 +411,41 @@ RotomEvosAttacks:
 	db 1, QUICK_ATTACK
 	db 1, THUNDERBOLT
 	db 0 ; no more level-up moves
+Rotom_FanEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, THUNDERSHOCK
+	db 1, TAIL_WHIP
+	db 1, QUICK_ATTACK
+	db 1, THUNDERBOLT
+	db 0 ; no more level-up moves
+Rotom_FrostEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, THUNDERSHOCK
+	db 1, TAIL_WHIP
+	db 1, QUICK_ATTACK
+	db 1, THUNDERBOLT
+	db 0 ; no more level-up moves
+Rotom_HeatEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, THUNDERSHOCK
+	db 1, TAIL_WHIP
+	db 1, QUICK_ATTACK
+	db 1, THUNDERBOLT
+	db 0 ; no more level-up moves
+Rotom_MowEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, THUNDERSHOCK
+	db 1, TAIL_WHIP
+	db 1, QUICK_ATTACK
+	db 1, THUNDERBOLT
+	db 0 ; no more level-up moves
+Rotom_WashEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, THUNDERSHOCK
+	db 1, TAIL_WHIP
+	db 1, QUICK_ATTACK
+	db 1, THUNDERBOLT
+	db 0 ; no more level-up moves
 
 ChinglingEvosAttacks:
 	db EVOLVE_LEVEL, 22, CHIMECHO
@@ -410,6 +488,18 @@ EspurrEvosAttacks:
 	db 0 ; no more level-up moves
 
 Meowstic_MEvosAttacks:
+	db EVOLVE_ITEM, MOON_STONE, TIMBURR
+	db 0 ; no more evolutions
+	db 1, GROWL
+	db 1, TACKLE
+	db 8, SCRATCH
+	db 12, DOUBLE_KICK
+	db 19, POISON_STING
+	db 27, TAIL_WHIP
+	db 36, BITE
+	db 46, FURY_SWIPES
+	db 0 ; no more level-up moves
+Meowstic_FEvosAttacks:
 	db EVOLVE_ITEM, MOON_STONE, TIMBURR
 	db 0 ; no more evolutions
 	db 1, GROWL
@@ -501,18 +591,17 @@ GrimerEvosAttacks:
 	db 31, FLAMETHROWER
 	db 37, FIRE_SPIN
 	db 0 ; no more level-up moves
-
-Vulpix_AlolaEvosAttacks:
+Grimer_AlolaEvosAttacks:
 	db EVOLVE_ITEM, FIRE_STONE, MUK
 	db 0 ; no more evolutions
-	db 1, POWDER_SNOW
+	db 1, EMBER
 	db 1, TAIL_WHIP
 	db 7, QUICK_ATTACK
 	db 13, ROAR
 	db 19, CONFUSE_RAY
 	db 25, SAFEGUARD
-	db 31, ICE_BEAM
-	db 37, BLIZZARD
+	db 31, FLAMETHROWER
+	db 37, FIRE_SPIN
 	db 0 ; no more level-up moves
 
 MukEvosAttacks:
@@ -523,7 +612,6 @@ MukEvosAttacks:
 	db 1, SAFEGUARD
 	db 43, FIRE_SPIN
 	db 0 ; no more level-up moves
-
 Muk_AlolaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POWDER_SNOW
@@ -534,6 +622,19 @@ Muk_AlolaEvosAttacks:
 	db 0 ; no more level-up moves
 
 Nidoran_MEvosAttacks:
+	db EVOLVE_ITEM, MOON_STONE, NIDORINO
+	db 0 ; no more evolutions
+	db 1, SING
+	db 4, DEFENSE_CURL
+	db 9, TACKLE
+	db 14, DISABLE
+	db 19, ROLLOUT
+	db 24, DOUBLESLAP
+	db 29, REST
+	db 34, BODY_SLAM
+	db 39, DOUBLE_EDGE
+	db 0 ; no more level-up moves
+Nidoran_FEvosAttacks:
 	db EVOLVE_ITEM, MOON_STONE, NIDORINO
 	db 0 ; no more evolutions
 	db 1, SING
@@ -815,8 +916,28 @@ SandshrewEvosAttacks:
 	db 1, FLAME_WHEEL
 	db 50, EXTREMESPEED
 	db 0 ; no more level-up moves
+Sandshrew_AlolaEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, ROAR
+	db 1, LEER
+	db 1, TAKE_DOWN
+	db 1, FLAME_WHEEL
+	db 50, EXTREMESPEED
+	db 0 ; no more level-up moves
 
 SandslashEvosAttacks:
+	db EVOLVE_LEVEL, 25, CUTIEFLY
+	db 0 ; no more evolutions
+	db 1, BUBBLE
+	db 7, HYPNOSIS
+	db 13, WATER_GUN
+	db 19, DOUBLESLAP
+	db 25, RAIN_DANCE
+	db 31, BODY_SLAM
+	db 37, BELLY_DRUM
+	db 43, HYDRO_PUMP
+	db 0 ; no more level-up moves
+Sandslash_AlolaEvosAttacks:
 	db EVOLVE_LEVEL, 25, CUTIEFLY
 	db 0 ; no more evolutions
 	db 1, BUBBLE
@@ -1173,6 +1294,19 @@ BewearEvosAttacks:
 	db 0 ; no more level-up moves
 
 GirafarigEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, PECK
+	db 1, GROWL
+	db 1, PURSUIT
+	db 1, FURY_ATTACK
+	db 9, PURSUIT
+	db 13, FURY_ATTACK
+	db 21, TRI_ATTACK
+	db 25, RAGE
+	db 38, DRILL_PECK
+	db 47, AGILITY
+	db 0 ; no more level-up moves
+Girafarig_BetaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, GROWL
@@ -2092,7 +2226,7 @@ LucarioEvosAttacks:
 	db 50, ANCIENTPOWER
 	db 0 ; no more level-up moves
 
-ChikoritaEvosAttacks:
+MedititeEvosAttacks:
 	db EVOLVE_LEVEL, 16, MEDICHAM
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -2552,8 +2686,27 @@ VulpixEvosAttacks:
 	db 37, FAINT_ATTACK
 	db 46, SLAM
 	db 0 ; no more level-up moves
+Vulpix_AlolaEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, ROCK_THROW
+	db 1, MIMIC
+	db 10, FLAIL
+	db 19, LOW_KICK
+	db 28, ROCK_SLIDE
+	db 37, FAINT_ATTACK
+	db 46, SLAM
+	db 0 ; no more level-up moves
 
 NinetalesEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, WATER_GUN
+	db 1, HYPNOSIS
+	db 1, DOUBLESLAP
+	db 1, PERISH_SONG
+	db 35, PERISH_SONG
+	db 51, SWAGGER
+	db 0 ; no more level-up moves
+Ninetales_AlolaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
 	db 1, HYPNOSIS
@@ -3388,6 +3541,19 @@ MagearnaEvosAttacks:
 	db 0 ; no more level-up moves
 
 ShayminEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, AEROBLAST
+	db 11, SAFEGUARD
+	db 22, GUST
+	db 33, RECOVER
+	db 44, HYDRO_PUMP
+	db 55, RAIN_DANCE
+	db 66, SWIFT
+	db 77, WHIRLWIND
+	db 88, ANCIENTPOWER
+	db 99, FUTURE_SIGHT
+	db 0 ; no more level-up moves
+Shaymin_SkyEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, AEROBLAST
 	db 11, SAFEGUARD

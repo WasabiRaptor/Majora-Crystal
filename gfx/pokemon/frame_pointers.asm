@@ -150,7 +150,7 @@ FramesPointers:
 	dw HitmontopFrames
 	dw RioluFrames
 	dw LucarioFrames
-	dw ChikoritaFrames
+	dw MedititeFrames
 	dw MedichamFrames
 	dw SnoverFrames
 	dw AbomasnowFrames

@@ -489,7 +489,7 @@ HitmonchanEggMoves:
 	db SUPERSONIC
 	db -1 ; end
 
-ChikoritaEggMoves:
+MedititeEggMoves:
 	db VINE_WHIP
 	db LEECH_SEED
 	db COUNTER

@@ -151,7 +151,7 @@ PokedexDataPointerTable:
 	dw HitmontopPokedexEntry
 	dw RioluPokedexEntry
 	dw LucarioPokedexEntry
-	dw ChikoritaPokedexEntry
+	dw MedititePokedexEntry
 	dw MedichamPokedexEntry
 	dw SnoverPokedexEntry
 	dw AbomasnowPokedexEntry

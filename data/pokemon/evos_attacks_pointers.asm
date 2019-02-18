@@ -152,7 +152,7 @@ EvosAttacksPointers::
 	dw HitmontopEvosAttacks
 	dw RioluEvosAttacks
 	dw LucarioEvosAttacks
-	dw ChikoritaEvosAttacks
+	dw MedititeEvosAttacks
 	dw MedichamEvosAttacks
 	dw SnoverEvosAttacks
 	dw AbomasnowEvosAttacks

@@ -304,8 +304,8 @@ PokemonPicPointers::
 	dba RioluBackpic
 	dba LucarioFrontpic
 	dba LucarioBackpic
-	dba ChikoritaFrontpic
-	dba ChikoritaBackpic
+	dba MedititeFrontpic
+	dba MedititeBackpic
 	dba MedichamFrontpic
 	dba MedichamBackpic
 	dba SnoverFrontpic

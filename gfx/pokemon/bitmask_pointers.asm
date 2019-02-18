@@ -150,7 +150,7 @@ BitmasksPointers:
 	dw HitmontopBitmasks
 	dw RioluBitmasks
 	dw LucarioBitmasks
-	dw ChikoritaBitmasks
+	dw MedititeBitmasks
 	dw MedichamBitmasks
 	dw SnoverBitmasks
 	dw AbomasnowBitmasks

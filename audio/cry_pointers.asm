@@ -48,7 +48,7 @@ Cries:
 	dba Cry_Larvitar
 	dba Cry_Boldore
 	dba Cry_Abomasnow
-	dba Cry_Chikorita
+	dba Cry_Meditite
 	dba Cry_Shuckle
 	dba Cry_Snowrunt
 	dba Cry_Deino

@@ -150,7 +150,7 @@ AnimationPointers:
 	dw HitmontopAnimation
 	dw RioluAnimation
 	dw LucarioAnimation
-	dw ChikoritaAnimation
+	dw MedititeAnimation
 	dw MedichamAnimation
 	dw SnoverAnimation
 	dw AbomasnowAnimation

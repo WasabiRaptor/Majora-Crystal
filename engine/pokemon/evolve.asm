@@ -416,16 +416,14 @@ Text_WhatEvolving:
 	db "@"
 
 LearnLevelMoves:
-	ld hl, wTempMonDVs
 	ld a, [wTempSpecies]
 	ld [wCurPartySpecies], a
-	cp VULPIX
-	jr z, .vulpix
-	cp NINETALES
-	jr z, .ninetales
-
-	ld hl, EvosAttacksPointers
-.got_pointers
+	
+	call GetRelevantEvosAttacksPointers
+	ld a, [wCurPartySpecies]
+	jr nc, .notvariant
+	ld a, [wAltForm]
+.notvariant
 	dec a
 	ld b, 0
 	ld c, a
@@ -486,32 +484,19 @@ LearnLevelMoves:
 	ld [wTempSpecies], a
 	ret
 
-.vulpix
-	predef GetFormData
-	ld hl, VulpixEvosAttacksPointers
-	jr .got_pointers
-
-.ninetales
-	predef GetFormData
-	ld hl, NinetalesEvosAttacksPointers
-	jr .got_pointers
-
 FillMoves:
 ; Fill in moves at de for wCurPartySpecies at wCurPartyLevel
 
 	push hl
 	push de
 	push bc
-	ld b, 0
 
+	call GetRelevantEvosAttacksPointers
 	ld a, [wCurPartySpecies]
-	cp VULPIX
-	jr z, .vulpix
-	cp NINETALES
-	jr z, .ninetales
-
-	ld hl, EvosAttacksPointers
-.got_pointers
+	jr nc, .notvariant
+	ld a, [wAltForm]
+.notvariant
+	ld b, 0
 	dec a
 	add a
 	rl b
@@ -525,17 +510,6 @@ FillMoves:
 	and a
 	jr nz, .GoToAttacks
 	jr .GetLevel
-
-.vulpix
-	ld a, [wAltForm]
-	ld hl, VulpixEvosAttacksPointers
-	jr .got_pointers
-
-.ninetales
-	ld a, [wAltForm]
-	ld hl, NinetalesEvosAttacksPointers
-	jr .got_pointers
-
 
 .NextMove:
 	pop de
@@ -688,3 +662,20 @@ GetPreEvolution:
 	ld [wCurPartySpecies], a
 	scf
 	ret
+
+GetRelevantEvosAttacksPointers:
+; given species in a, return *PicPointers in hl and BANK(*PicPointers) in d
+; returns c for variants, nc for normal species
+	ld hl, .AltFormEvosAttacksPointerTable
+	ld de, 4
+	call IsInArray
+	inc hl
+	ld a, [hli]
+	ld d, a
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ret
+
+.AltFormEvosAttacksPointerTable:
+INCLUDE "data/pokemon/alt_form_evos_attacks_pointer_table.asm"

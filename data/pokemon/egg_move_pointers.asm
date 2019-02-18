@@ -154,7 +154,7 @@ endc
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw ChikoritaEggMoves
+	dw MedititeEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw AbomasnowEggMoves

@@ -150,7 +150,7 @@ AnimationIdlePointers:
 	dw HitmontopAnimationIdle
 	dw RioluAnimationIdle
 	dw LucarioAnimationIdle
-	dw ChikoritaAnimationIdle
+	dw MedititeAnimationIdle
 	dw MedichamAnimationIdle
 	dw SnoverAnimationIdle
 	dw AbomasnowAnimationIdle
