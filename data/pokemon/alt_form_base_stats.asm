@@ -1,7 +1,7 @@
 LycanrocBaseData::
 	INCLUDE "data/pokemon/base_stats/lycanroc_midday.asm"
-	INCLUDE "data/pokemon/base_stats/lycanroc_midnight.asm"
 	INCLUDE "data/pokemon/base_stats/lycanroc_dusk.asm"
+	INCLUDE "data/pokemon/base_stats/lycanroc_midnight.asm"
 	INCLUDE "data/pokemon/base_stats/lycanroc_dawn.asm"
 
 MeowthBaseData::
