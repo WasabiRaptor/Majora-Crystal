@@ -1,5 +1,5 @@
 	db "WING FISH@" ; species name
-	dw 104, 154 ; height, width
+	dw 104, 154 ; height, weight
 
 	db   "It absorbs sun-"
 	next "light with the"
