@@ -1,5 +1,5 @@
 	db "BELL@" ; species name
-	dw 008, 13 ; height, weight
+	dw 8, 13 ; height, weight
 
 	db   "It emits high-"
 	next "frequency cries"

@@ -1,5 +1,5 @@
 	db "EON@" ; species name
-	dw 607, 13230 ; height, weight
+	dw 607, 1323 ; height, weight
 
 	db   "It understands hu-"
 	next "man speech and is"

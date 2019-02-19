@@ -1,5 +1,5 @@
 	db "EON@" ; species name
-	dw 407, 8820 ; height, weight
+	dw 407, 882 ; height, weight
 
 	db   "It communicates"
 	next "using telepathy."

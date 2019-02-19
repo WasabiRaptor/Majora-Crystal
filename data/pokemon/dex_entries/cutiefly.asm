@@ -1,5 +1,5 @@
 	db "BEE FLY@" ; species name
-	dw 01, 04 ; height, weight
+	dw 4, 4 ; height, weight
 
 	db   "Groups of Cutiefly"
 	next "flutter above the"

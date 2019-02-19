@@ -1,5 +1,5 @@
 	db "BEE FLY@" ; species name
-	dw 01, 11 ; height, weight
+	dw 8, 11 ; height, weight
 
 	db   "Some of Ribombee's"
 	next "pollen puffs are"
