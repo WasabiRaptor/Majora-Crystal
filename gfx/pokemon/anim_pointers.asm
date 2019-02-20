@@ -75,7 +75,7 @@ AnimationPointers:
 	dw CottoneeAnimation
 	dw WhimsicottAnimation
 	dw FoongusAnimation
-	dw AmoongusAnimation
+	dw AmoongussAnimation
 	dw PhantumpAnimation
 	dw TrevanantAnimation
 	dw BonslyAnimation

@@ -75,7 +75,7 @@ AnimationIdlePointers:
 	dw CottoneeAnimationIdle
 	dw WhimsicottAnimationIdle
 	dw FoongusAnimationIdle
-	dw AmoongusAnimationIdle
+	dw AmoongussAnimationIdle
 	dw PhantumpAnimationIdle
 	dw TrevanantAnimationIdle
 	dw BonslyAnimationIdle

@@ -75,7 +75,7 @@ BitmasksPointers:
 	dw CottoneeBitmasks
 	dw WhimsicottBitmasks
 	dw FoongusBitmasks
-	dw AmoongusBitmasks
+	dw AmoongussBitmasks
 	dw PhantumpBitmasks
 	dw TrevanantBitmasks
 	dw BonslyBitmasks

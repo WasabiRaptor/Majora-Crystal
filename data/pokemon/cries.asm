@@ -81,7 +81,7 @@ PokemonCries::
 	mon_cry CRY_LEDIAN,      $0f0,  $090 ; COTTONEE
 	mon_cry CRY_LEDIAN,      $000,  $100 ; WHIMSICOTT
 	mon_cry CRY_FOONGUS,       $0e0,  $0c0 ; FOONGUS
-	mon_cry CRY_QUILLADIN,  $000,  $100 ; AMOONGUS
+	mon_cry CRY_QUILLADIN,  $000,  $100 ; AMOONGUSS
 	mon_cry CRY_QUILLADIN,  $020,  $140 ; PHANTUMP
 	mon_cry CRY_TREVANANT,    $000,  $100 ; TREVANANT
 	mon_cry CRY_LUXRAY,   $000,  $100 ; BONSLY

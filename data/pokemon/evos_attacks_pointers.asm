@@ -77,7 +77,7 @@ EvosAttacksPointers::
 	dw CottoneeEvosAttacks
 	dw WhimsicottEvosAttacks
 	dw FoongusEvosAttacks
-	dw AmoongusEvosAttacks
+	dw AmoongussEvosAttacks
 	dw PhantumpEvosAttacks
 	dw TrevanantEvosAttacks
 	dw BonslyEvosAttacks

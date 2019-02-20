@@ -154,8 +154,8 @@ PokemonPicPointers::
 	dba WhimsicottBackpic
 	dba FoongusFrontpic
 	dba FoongusBackpic
-	dba AmoongusFrontpic
-	dba AmoongusBackpic
+	dba AmoongussFrontpic
+	dba AmoongussBackpic
 	dba PhantumpFrontpic
 	dba PhantumpBackpic
 	dba TrevanantFrontpic

@@ -75,7 +75,7 @@ EggMovePointers::
 	dw CottoneeEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw AmoongusEggMoves
+	dw AmoongussEggMoves
 	dw NoEggMoves
 	dw TrevanantEggMoves
 	dw NoEggMoves

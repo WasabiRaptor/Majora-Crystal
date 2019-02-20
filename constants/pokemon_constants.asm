@@ -94,7 +94,7 @@
 	const COTTONEE    	; 4a
 	const WHIMSICOTT   	; 4b
 	const FOONGUS      	; 4c
-	const AMOONGUS     	; 4d
+	const AMOONGUSS     	; 4d
 	const PHANTUMP   	; 4e
 	const TREVANANT   	; 4f
 	const BONSLY    	; 50

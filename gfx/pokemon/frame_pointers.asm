@@ -75,7 +75,7 @@ FramesPointers:
 	dw CottoneeFrames
 	dw WhimsicottFrames
 	dw FoongusFrames
-	dw AmoongusFrames
+	dw AmoongussFrames
 	dw PhantumpFrames
 	dw TrevanantFrames
 	dw BonslyFrames

@@ -76,7 +76,7 @@ PokedexDataPointerTable:
 	dw CottoneePokedexEntry
 	dw WhimsicottPokedexEntry
 	dw FoongusPokedexEntry
-	dw AmoongusPokedexEntry
+	dw AmoongussPokedexEntry
 	dw PhantumpPokedexEntry
 	dw TrevanantPokedexEntry
 	dw BonslyPokedexEntry

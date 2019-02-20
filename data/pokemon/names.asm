@@ -75,7 +75,7 @@ PokemonNames::
 	db "COTTONEE@@@"
 	db "WHIMSICOTT@@"
 	db "FOONGUS@@@@@"
-	db "AMOONGUS@@@@"
+	db "AMOONGUSS@@@@"
 	db "PHANTUMP@@"
 	db "TREVANANT@@"
 	db "BONSLY@@@"

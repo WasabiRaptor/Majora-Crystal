@@ -1172,7 +1172,7 @@ FoongusEvosAttacks:
 	db 48, EXPLOSION
 	db 0 ; no more level-up moves
 
-AmoongusEvosAttacks:
+AmoongussEvosAttacks:
 	db EVOLVE_LEVEL, 40, PHANTUMP
 	db 0 ; no more evolutions
 	db 1, TACKLE

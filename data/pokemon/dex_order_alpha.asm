@@ -6,7 +6,7 @@ AlphabeticalPokedexOrder:
 	db AEGISLASH
 	db ALTARIA
 	db AMAURA
-	db AMOONGUS
+	db AMOONGUSS
 	db AMPHAROS
 	db ANORITH
 	db ARAQUANID

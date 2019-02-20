@@ -77,7 +77,7 @@ KantoMonSpecials:
 	db  30 ; COTTONEE
 	db  45 ; WHIMSICOTT
 	db  55 ; FOONGUS
-	db  65 ; AMOONGUS
+	db  65 ; AMOONGUSS
 	db  80 ; PHANTUMP
 	db  40 ; TREVANANT
 	db  80 ; BONSLY
