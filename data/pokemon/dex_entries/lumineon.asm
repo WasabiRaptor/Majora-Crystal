@@ -1,10 +1,10 @@
 	db "NEON@" ; species name
 	dw 311, 529 ; height, weight
 
-	db   "It lives at the"
-	next "bottom of the sea."
-	next "It searches the"
+	db   "It crawls along"
+	next "the seafloor using"
+	next "its long front"
 
-	page "seabed for its"
-	next "favorite food-"
-	next "Starmie.@"
+	page "fins like legs. It"
+	next "competes for food"
+	next "with Lanturn.@"     
