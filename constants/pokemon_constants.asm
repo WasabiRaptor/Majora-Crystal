@@ -360,3 +360,8 @@ NUM_SAWSBUCK EQU const_value + -1 ;4
 	const TYPE_FULL
 	const TYPE_NULL
 NUM_SILVALLY EQU const_value + -1 ;2
+
+	const_def 1
+	const SHIELD_AEGISLASH
+	const BLADE_AEGISLASH
+NUM_AEGISLASH EQU const_value + -1 ; 2
