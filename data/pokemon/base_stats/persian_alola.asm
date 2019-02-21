@@ -1,17 +1,17 @@
-	db LYCANROC 
+	db PERSIAN
 
-	db  85, 115,  75,  82,  55,  75
-    evs  0,   2,   0,   0,   0,   0
+	db  65,  60,  60, 115,  75,  65
+    evs  0,   0,   0,   2,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db ROCK, ROCK ; type
+	db DARK, DARK ; type
 	db 90 ; catch rate
-	db 170 ; base exp
+	db 154 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/lycanroc_midnight/front.dimensions" 
-	db NUM_LYCANROC, MIDNIGHT ;total form differences, which form this is
+	INCBIN "gfx/pokemon/persian_alola/front.dimensions"
+	db NUM_REGIONAL, ALOLAN ;total form differences, which form this is
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_FIELD, EGG_FIELD ; egg groups

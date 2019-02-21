@@ -1,6 +1,6 @@
 	db LYCANROC 
 
-	db  85, 115,  75,  82,  55,  75
+	db  85, 117,  75,  80,  55,  75
     evs  0,   2,   0,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
@@ -10,8 +10,8 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/lycanroc_midnight/front.dimensions" 
-	db NUM_LYCANROC, MIDNIGHT ;total form differences, which form this is
+	INCBIN "gfx/pokemon/lycanroc_dawn/front.dimensions" 
+	db NUM_LYCANROC, DAWN ;total form differences, which form this is
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_FIELD, EGG_FIELD ; egg groups
