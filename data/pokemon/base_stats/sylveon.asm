@@ -9,7 +9,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F12_5 ; gender ratio
 	db 35 ; step cycles to hatch
-	INCBIN "gfx/pokemon/eevee/front.dimensions" ; TEMP
+	INCBIN "gfx/pokemon/sylveon/front.dimensions"
 	db 0, 0 ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate

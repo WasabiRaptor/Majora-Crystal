@@ -11,7 +11,7 @@
 	db GENDER_F75 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/vulpix/front.dimensions"
-	db 2, 1 ;total form differences, which form this is
+	db NUM_REGIONAL, KANTONIAN ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_FIELD, EGG_FIELD ; egg groups
