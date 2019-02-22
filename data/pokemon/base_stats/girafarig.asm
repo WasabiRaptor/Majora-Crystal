@@ -11,7 +11,7 @@
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/girafarig/front.dimensions"
-	db 0, 0 ;form differences
+	db NUM_BETA, DEFAULT_FORM ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_FIELD, EGG_FIELD ; egg groups
