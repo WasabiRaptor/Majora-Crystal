@@ -6,7 +6,7 @@
 
 	db WATER, ELECTRIC ; type
 	db 75 ; catch rate
-	db 156 ; base exp
+	db 161 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch

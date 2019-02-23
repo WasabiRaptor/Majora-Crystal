@@ -6,7 +6,7 @@
 
 	db DARK, FIRE ; type
 	db 45 ; catch rate
-	db 204 ; base exp
+	db 175 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch

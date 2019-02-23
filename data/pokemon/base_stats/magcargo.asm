@@ -1,12 +1,12 @@
 	db MAGCARGO ; 219
 
-	db  50,  50, 120,  30,  80,  80
+	db  60,  50, 120,  30,  90,  80
     evs  0,   0,   2,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, ROCK ; type
 	db 75 ; catch rate
-	db 154 ; base exp
+	db 151 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch

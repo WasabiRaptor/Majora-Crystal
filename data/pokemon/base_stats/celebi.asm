@@ -4,9 +4,9 @@
 	evs  3,   0,   0,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db FAIRY, GRASS ; type
+	db PSYCHIC, GRASS ; type
 	db 45 ; catch rate
-	db 64 ; base exp
+	db 270 ; base exp
 	db NO_ITEM, MIRACLEBERRY ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 120 ; step cycles to hatch

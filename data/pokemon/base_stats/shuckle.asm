@@ -6,7 +6,7 @@
 
 	db BUG, ROCK ; type
 	db 190 ; catch rate
-	db 80 ; base exp
+	db 177 ; base exp
 	db BERRY, BERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch

@@ -6,7 +6,7 @@
 
 	db GROUND, GROUND ; type
 	db 90 ; catch rate
-	db 163 ; base exp
+	db 158 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch

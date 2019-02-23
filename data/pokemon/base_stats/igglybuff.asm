@@ -6,7 +6,7 @@
 
 	db NORMAL, FAIRY ; type
 	db 170 ; catch rate
-	db 39 ; base exp
+	db 42 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F75 ; gender ratio
 	db 10 ; step cycles to hatch

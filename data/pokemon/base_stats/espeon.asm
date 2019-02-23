@@ -6,7 +6,7 @@
 
 	db PSYCHIC, PSYCHIC ; type
 	db 45 ; catch rate
-	db 197 ; base exp
+	db 184 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F12_5 ; gender ratio
 	db 35 ; step cycles to hatch
