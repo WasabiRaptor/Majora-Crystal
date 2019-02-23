@@ -76,7 +76,7 @@ GetRelevantBaseData:
 	call IsInArray
 	inc hl
 	ld a, [hli]
-	rst bankswitch
+	rst Bankswitch
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
