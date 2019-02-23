@@ -6944,6 +6944,23 @@ GiveExperiencePoints:
 	ld hl, MON_EVS
 	add hl, bc
 	push bc
+
+;get total EVS
+	ld d, 6 ;six EVs
+.ev_total_loop
+	ld a, [hli]
+	;add a to bc
+	add c
+	ld c, a
+	adc b
+	sub c
+	ld b, a
+	cp MAX_EVS_TOTAL - $ff
+	jr nc, .evs_done ;don't add anymore evs if greater than the const for max which is set to 510
+	dec d
+	jr nz, .ev_total_loop
+	;after totaling all 6 evs if it not too much then go on to add more
+
 	ld a, [wEnemyMonSpecies]
 	ld [wCurSpecies], a
 	ld hl, wEnemyMonDVs
