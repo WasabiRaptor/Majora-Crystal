@@ -408,7 +408,7 @@ KRIS EQU __enum__
 	const JILL
 	const MARY
 	const KATIE
-	const DAWN
+	const DAWN_TRAINER
 	const TARA
 	const NICOLE
 	const LORI
