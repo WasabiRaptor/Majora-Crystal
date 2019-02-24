@@ -474,11 +474,6 @@ INCLUDE "engine/battle/used_move_text.asm"
 INCLUDE "engine/gfx/load_overworld_font.asm"
 
 
-SECTION "Mobile 42", ROMX
-
-;INCLUDE "mobile/mobile_42.asm"
-
-
 SECTION "Intro Logo", ROMX
 
 IntroLogoGFX:
@@ -496,20 +491,10 @@ INCLUDE "engine/movie/title.asm"
 ;INCLUDE "mobile/mobile_46.asm"
 
 
-SECTION "Battle Tower", ROMX
-
-;INCLUDE "engine/events/battle_tower/trainer_text.asm"
-
-
 SECTION "bank5B", ROMX
 
 ;INCLUDE "mobile/mobile_5b.asm"
 INCLUDE "engine/link/link_trade.asm"
-
-
-SECTION "Mobile 5C", ROMX
-
-;INCLUDE "mobile/mobile_5c.asm"
 
 
 SECTION "Crystal Phone Text 2", ROMX
@@ -520,16 +505,6 @@ INCLUDE "data/phone/text/extra2.asm"
 SECTION "UpdateBattleHUDs", ROMX
 
 INCLUDE "engine/battle/update_battle_huds.asm"
-
-
-SECTION "Mobile 5E", ROMX
-
-;INCLUDE "mobile/mobile_5e.asm"
-
-
-SECTION "Mobile 5F", ROMX
-
-;INCLUDE "mobile/mobile_5f.asm"
 
 
 SECTION "Phone Text 2", ROMX
@@ -586,31 +561,9 @@ INCBIN "gfx/pokegear/pokegear.2bpp.lz"
 INCLUDE "engine/pokemon/european_mail.asm"
 
 
-SECTION "Battle Tower Text", ROMX
-
-;INCLUDE "data/battle_tower/trainer_text.asm"
-
-
-SECTION "Battle Tower Trainer Data", ROMX
-
-;INCLUDE "data/battle_tower/unknown.asm"
-
-
-SECTION "Mobile News Data", ROMX
-
-;INCLUDE "mobile/news/news.asm"
-
-
 SECTION "Crystal Events", ROMX
 
 ;INCLUDE "engine/events/battle_tower/load_trainer.asm"
 INCLUDE "engine/events/odd_egg.asm"
 
 
-SECTION "Mobile Stadium 2", ROMX
-
-;if DEF(_CRYSTAL11)
-;INCBIN "mobile/stadium/stadium2_2.bin"
-;else
-;INCBIN "mobile/stadium/stadium2_1.bin"
-;endc

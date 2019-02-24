@@ -93,7 +93,7 @@ PokemonCries::
 	mon_cry CRY_HERACROSS,        $088,  $140 ; HERACROSS
 	mon_cry CRY_HERACROSS,        $023,  $17f ; LEDYBA
 	mon_cry CRY_LEDIAN,      $000,  $100 ; LEDIAN
-	mon_cry CRY_MUK,         $0ef,  $17f ; JOLTIK
+	mon_cry CRY_LEDIAN,         $0ef,  $17f ; JOLTIK
 	mon_cry CRY_PERSIAN,      $000,  $100 ; GALVANTULA
 	mon_cry CRY_PERSIAN,      $06f,  $160 ; PINECO
 	mon_cry CRY_METAPOD,     $000,  $100 ; FORRETRESS
