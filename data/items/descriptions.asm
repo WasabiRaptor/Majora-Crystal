@@ -102,7 +102,7 @@ ItemDescriptions:
 	dw TeruSama7Desc
 	dw PnkApricornDesc
 	dw BlackGlassesDesc
-	dw TrevanantTailDesc
+	dw TrevenantTailDesc
 	dw PinkBowDesc
 	dw StickDesc
 	dw SmokeBallDesc
@@ -652,7 +652,7 @@ BlackGlassesDesc:
 	db   "Powers up dark-"
 	next "type moves. (HOLD)@"
 
-TrevanantTailDesc:
+TrevenantTailDesc:
 	db   "Very tasty. Sell"
 	next "high.@"
 

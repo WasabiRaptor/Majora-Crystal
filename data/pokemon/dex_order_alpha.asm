@@ -56,7 +56,7 @@ AlphabeticalPokedexOrder:
 	db DITTO
 	db DOUBLADE
 	db DRAMPA
-	db DRILLBUR
+	db DRILBUR
 	db DRUDDIGON
 	db DURANT
 	db DUSCLOPS

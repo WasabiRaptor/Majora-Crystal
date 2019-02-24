@@ -83,7 +83,7 @@ PokemonCries::
 	mon_cry CRY_FOONGUS,       $0e0,  $0c0 ; FOONGUS
 	mon_cry CRY_QUILLADIN,  $000,  $100 ; AMOONGUSS
 	mon_cry CRY_QUILLADIN,  $020,  $140 ; PHANTUMP
-	mon_cry CRY_TREVANANT,    $000,  $100 ; TREVANANT
+	mon_cry CRY_TREVENANT,    $000,  $100 ; TREVENANT
 	mon_cry CRY_LUXRAY,   $000,  $100 ; BONSLY
 	mon_cry CRY_METAPOD,     $080,  $0e0 ; SUDOWOODO
 	mon_cry CRY_METAPOD,     $020,  $140 ; PASSIMIAN
@@ -179,7 +179,7 @@ PokemonCries::
 	mon_cry CRY_KOMMO_O,       $000,  $140 ; KOMMO_O
 	mon_cry CRY_DEINO,      $061,  $091 ; DEINO
 	mon_cry CRY_MEDITITE,   $0e8,  $0e8 ; ZWEILOUS
-	mon_cry CRY_HEIDREIGON,      $010,  $100 ; HEIDREIGON
+	mon_cry CRY_HYDREIGON,      $010,  $100 ; HYDREIGON
 	mon_cry CRY_CYNDAQUIL,     $03b,  $038 ; CYNDAQUIL
 	mon_cry CRY_QUILAVA,       -$067,  $100 ; QUILAVA
 	mon_cry CRY_QUILAVA,       -$0a7,  $168 ; TYPHLOSION
@@ -211,7 +211,7 @@ PokemonCries::
 	mon_cry CRY_BOLDORE,    $080,  $100 ; SNEASEL
 	mon_cry CRY_BOLDORE,    $000,  $180 ; WEAVILE
 	mon_cry CRY_CRYOGONAL,   $1c4,  $100 ; CRYOGONAL
-	mon_cry CRY_SNOWRUNT,     -$102,  $100 ; SNOWRUNT
+	mon_cry CRY_SNORUNT,     -$102,  $100 ; SNORUNT
 	mon_cry CRY_FERROTHORN,  $0ef,  $0f7 ; GLALIE
 	mon_cry CRY_CRYOGONAL,   $112,  $0e8 ; FROSSLASS
 	mon_cry CRY_CRYOGONAL,   $000,  $180 ; SWINUB
@@ -221,7 +221,7 @@ PokemonCries::
 	mon_cry CRY_INCINEROAR,    $035,  $0e0 ; NATU
 	mon_cry CRY_HEATMOR,      $053,  $0af ; XATU
 	mon_cry CRY_SIGILYPH,   $7a2,  $06e ; SIGILYPH
-	mon_cry CRY_SIGILYPH,   $640,  $0d8 ; DRILLBUR
+	mon_cry CRY_SIGILYPH,   $640,  $0d8 ; DRILBUR
 	mon_cry CRY_EXCADRILL,     -$1d8,  $140 ; EXCADRILL
 	mon_cry CRY_BALTOY,   -$20d,  $1c0 ; BALTOY
 	mon_cry CRY_ABOMASNOW,   $1fe,  $140 ; CLAYDOL
@@ -245,7 +245,7 @@ PokemonCries::
 	mon_cry CRY_BRAIXEN,      $068,  $100 ; DUSKNOIR
 	mon_cry CRY_FLETCHINDER,   -$2d8,  $0b4 ; ARTICUNO
 	mon_cry CRY_SIGILYPH,   $176,  $03a ; ZAPDOS
-	mon_cry CRY_SNOWRUNT,     -$1cd,  $1a0 ; MOLTRES
+	mon_cry CRY_SNORUNT,     -$1cd,  $1a0 ; MOLTRES
 	mon_cry CRY_BOLDORE,    $293,  $140 ; SUICUNE
 	mon_cry CRY_RAIKOU,      $22e,  $120 ; RAIKOU
 	mon_cry CRY_ENTEI,       $000,  $1a0 ; ENTEI

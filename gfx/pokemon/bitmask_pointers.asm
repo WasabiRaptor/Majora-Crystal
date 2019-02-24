@@ -77,7 +77,7 @@ BitmasksPointers:
 	dw FoongusBitmasks
 	dw AmoongussBitmasks
 	dw PhantumpBitmasks
-	dw TrevanantBitmasks
+	dw TrevenantBitmasks
 	dw BonslyBitmasks
 	dw SudowoodoBitmasks
 	dw PassimianBitmasks
@@ -173,7 +173,7 @@ BitmasksPointers:
 	dw Kommo_oBitmasks
 	dw DeinoBitmasks
 	dw ZweilousBitmasks
-	dw HeidreigonBitmasks
+	dw HydreigonBitmasks
 	dw CyndaquilBitmasks
 	dw QuilavaBitmasks
 	dw TyphlosionBitmasks
@@ -205,7 +205,7 @@ BitmasksPointers:
 	dw SneaselBitmasks
 	dw WeavileBitmasks
 	dw CryogonalBitmasks
-	dw SnowruntBitmasks
+	dw SnoruntBitmasks
 	dw GlalieBitmasks
 	dw FrosslassBitmasks
 	dw SwinubBitmasks
@@ -215,7 +215,7 @@ BitmasksPointers:
 	dw NatuBitmasks
 	dw XatuBitmasks
 	dw SigilyphBitmasks
-	dw DrillburBitmasks
+	dw DrilburBitmasks
 	dw ExcadrillBitmasks
 	dw BaltoyBitmasks
 	dw ClaydolBitmasks

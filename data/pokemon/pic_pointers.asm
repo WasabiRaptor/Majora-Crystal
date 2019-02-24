@@ -158,8 +158,8 @@ PokemonPicPointers::
 	dba AmoongussBackpic
 	dba PhantumpFrontpic
 	dba PhantumpBackpic
-	dba TrevanantFrontpic
-	dba TrevanantBackpic
+	dba TrevenantFrontpic
+	dba TrevenantBackpic
 	dba BonslyFrontpic
 	dba BonslyBackpic
 	dba SudowoodoFrontpic
@@ -350,8 +350,8 @@ PokemonPicPointers::
 	dba DeinoBackpic
 	dba ZweilousFrontpic
 	dba ZweilousBackpic
-	dba HeidreigonFrontpic
-	dba HeidreigonBackpic
+	dba HydreigonFrontpic
+	dba HydreigonBackpic
 	dba CyndaquilFrontpic
 	dba CyndaquilBackpic
 	dba QuilavaFrontpic
@@ -414,8 +414,8 @@ PokemonPicPointers::
 	dba WeavileBackpic
 	dba CryogonalFrontpic
 	dba CryogonalBackpic
-	dba SnowruntFrontpic
-	dba SnowruntBackpic
+	dba SnoruntFrontpic
+	dba SnoruntBackpic
 	dba GlalieFrontpic
 	dba GlalieBackpic
 	dba FrosslassFrontpic
@@ -434,8 +434,8 @@ PokemonPicPointers::
 	dba XatuBackpic
 	dba SigilyphFrontpic
 	dba SigilyphBackpic
-	dba DrillburFrontpic
-	dba DrillburBackpic
+	dba DrilburFrontpic
+	dba DrilburBackpic
 	dba ExcadrillFrontpic
 	dba ExcadrillBackpic
 	dba BaltoyFrontpic

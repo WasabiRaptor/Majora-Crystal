@@ -3,9 +3,9 @@ Cry_Braixen:
 	musicheader 1, 6, Cry_Braixen_Ch6
 	musicheader 1, 8, Cry_Braixen_Ch8
 
-Cry_Heidreigon:
-	musicheader 2, 5, Cry_Heidreigon_Ch5
-	musicheader 1, 6, Cry_Heidreigon_Ch6
+Cry_Hydreigon:
+	musicheader 2, 5, Cry_Hydreigon_Ch5
+	musicheader 1, 6, Cry_Hydreigon_Ch6
 
 Cry_Cyndaquil:
 	musicheader 2, 5, Cry_Cyndaquil_Ch5
@@ -49,9 +49,9 @@ Cry_Meditite:
 	musicheader 1, 6, Cry_Meditite_Ch6
 	musicheader 1, 8, Cry_Meditite_Ch8
 
-Cry_Snowrunt:
-	musicheader 2, 5, Cry_Snowrunt_Ch5
-	musicheader 1, 8, Cry_Snowrunt_Ch8
+Cry_Snorunt:
+	musicheader 2, 5, Cry_Snorunt_Ch5
+	musicheader 1, 8, Cry_Snorunt_Ch8
 
 Cry_Aurorus:
 	musicheader 3, 5, Cry_Aurorus_Ch5
@@ -315,9 +315,9 @@ Cry_Braixen_Ch8:
 	noise __, 11, $62, $6c
 	endchannel
 
-Cry_Heidreigon_Ch5:
+Cry_Hydreigon_Ch5:
 	tone $0002
-Cry_Heidreigon_Ch6:
+Cry_Hydreigon_Ch6:
 Cry_Cyndaquil_branch_f3022:
 	sound_duty 2, 0, 1, 1
 	sound __,  5, $f1, $0796
@@ -448,7 +448,7 @@ Cry_Litten_Ch5:
 Cry_Litten_Ch6:
 	sound_duty 1, 0, 0, 0
 Cry_Litten_branch_f3145:
-Cry_Snowrunt_branch_f3145:
+Cry_Snorunt_branch_f3145:
 	sound __,  5, $3a, $073d
 	sound __,  7, $f8, $0762
 	sound __,  7, $f8, $0760
@@ -471,7 +471,7 @@ Cry_Abomasnow_Ch6:
 	endchannel
 
 Cry_Abomasnow_Ch8:
-Cry_Snowrunt_Ch8:
+Cry_Snorunt_Ch8:
 	noise __,  9, $3f, $52
 	noise C#,  1, $93, $4f
 	endchannel
@@ -492,9 +492,9 @@ Cry_Meditite_Ch8:
 	noise __,  9, $94, $3
 	endchannel
 
-Cry_Snowrunt_Ch5:
+Cry_Snorunt_Ch5:
 	sound_duty 2, 0, 2, 2
-	jumpchannel Cry_Snowrunt_branch_f3145
+	jumpchannel Cry_Snorunt_branch_f3145
 
 Cry_Aurorus_Ch5:
 	dutycycle $1
@@ -837,10 +837,10 @@ Cry_Espurr:
 	musicheader 1, 6, Cry_Espurr_Ch6
 	musicheader 1, 8, Cry_Espurr_Ch8
 
-Cry_Trevanant:
-	musicheader 3, 5, Cry_Trevanant_Ch5
-	musicheader 1, 6, Cry_Trevanant_Ch6
-	musicheader 1, 8, Cry_Trevanant_Ch8
+Cry_Trevenant:
+	musicheader 3, 5, Cry_Trevenant_Ch5
+	musicheader 1, 6, Cry_Trevenant_Ch6
+	musicheader 1, 8, Cry_Trevenant_Ch8
 
 Cry_Goodra:
 	musicheader 3, 5, Cry_Goodra_Ch5
@@ -1444,19 +1444,19 @@ Cry_Heracross_Ch6:
 Cry_Heracross_Ch8:
 	endchannel
 
-Cry_Trevanant_Ch5:
+Cry_Trevenant_Ch5:
 	sound_duty 0, 0, 0, 0
 	sound __,  9, $f5, $0480
 	sound __,  3, $e1, $05e0
 	sound __,  9, $d1, $05dc
 	endchannel
 
-Cry_Trevanant_Ch6:
+Cry_Trevenant_Ch6:
 	sound_duty 1, 1, 2, 2
 	sound __,  8, $95, $0441
 	sound __,  3, $81, $0521
 	sound __,  9, $61, $051a
-Cry_Trevanant_Ch8:
+Cry_Trevenant_Ch8:
 	endchannel
 
 Cry_Scizor_Ch5:

@@ -36,6 +36,6 @@ IconPointers:
 	dw CelebiIcon
 	dw ShayminIcon
 	dw AnorithIcon
-	dw TrevanantIcon
+	dw TrevenantIcon
 	dw VulpixIcon
 	dw BigmonIcon

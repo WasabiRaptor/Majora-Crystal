@@ -167,7 +167,7 @@ MartEcruteak:
 MartMahogany1:
 	db 4 ; # items
 	db TINYMUSHROOM
-	db TREVANANTTAIL
+	db TREVENANTTAIL
 	db POKE_BALL
 	db POTION
 	db -1 ; end

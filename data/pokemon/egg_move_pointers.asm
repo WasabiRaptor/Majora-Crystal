@@ -77,7 +77,7 @@ EggMovePointers::
 	dw NoEggMoves
 	dw AmoongussEggMoves
 	dw NoEggMoves
-	dw TrevanantEggMoves
+	dw TrevenantEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
@@ -177,7 +177,7 @@ endc
 	dw Kommo_oEggMoves
 	dw DeinoEggMoves
 	dw ZweilousEggMoves
-	dw HeidreigonEggMoves
+	dw HydreigonEggMoves
 	dw NoEggMoves
 	dw QuilavaEggMoves
 	dw NoEggMoves
@@ -209,7 +209,7 @@ endc
 	dw SneaselEggMoves
 	dw NoEggMoves
 	dw CryogonalEggMoves
-	dw SnowruntEggMoves
+	dw SnoruntEggMoves
 	dw NoEggMoves
 	dw FrosslassEggMoves
 	dw NoEggMoves

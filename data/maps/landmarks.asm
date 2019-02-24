@@ -19,7 +19,7 @@ Landmarks:
 	landmark  84, 124, UnionCaveName
 	landmark  82, 124, Route33Name
 	landmark  68, 124, AzaleaTownName
-	landmark  70, 122, TrevanantWellName
+	landmark  70, 122, TrevenantWellName
 	landmark  52, 120, IlexForestName
 	landmark  52, 112, Route34Name
 	landmark  52,  92, GoldenrodCityName
@@ -118,7 +118,7 @@ SilverCaveName:      db "SILVER CAVE@"
 SproutTowerName:     db "SPROUT¯TOWER@"
 RuinsOfAlphName:     db "RUINS¯OF ALPH@"
 UnionCaveName:       db "UNION CAVE@"
-TrevanantWellName:    db "TREVANANT¯WELL@"
+TrevenantWellName:    db "TREVENANT¯WELL@"
 RadioTowerName:      db "RADIO TOWER@"
 PowerPlantName:      db "POWER PLANT@"
 NationalParkName:    db "NATIONAL¯PARK@"

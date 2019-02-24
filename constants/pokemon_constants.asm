@@ -96,7 +96,7 @@
 	const FOONGUS      	; 4c
 	const AMOONGUSS     	; 4d
 	const PHANTUMP   	; 4e
-	const TREVANANT   	; 4f
+	const TREVENANT   	; 4f
 	const BONSLY    	; 50
 	const SUDOWOODO  	; 51
 	const PASSIMIAN   	; 52
@@ -194,7 +194,7 @@ JOHTO_POKEMON EQU const_value
 	const KOMMO_O       ; ac
 	const DEINO         ; ad
 	const ZWEILOUS  	; ae
-	const HEIDREIGON    ; af
+	const HYDREIGON    ; af
 	const CYNDAQUIL    	; b0	
 	const QUILAVA       ; b1
 	const TYPHLOSION    ; b2
@@ -226,7 +226,7 @@ JOHTO_POKEMON EQU const_value
 	const SNEASEL       ; cc
 	const WEAVILE       ; cd
 	const CRYOGONAL     ; ce
-	const SNOWRUNT      ; cf
+	const SNORUNT      ; cf
 	const GLALIE        ; d0
 	const FROSSLASS     ; d1
 	const SWINUB        ; d2
@@ -236,7 +236,7 @@ JOHTO_POKEMON EQU const_value
 	const NATU          ; d6
 	const XATU          ; d7
 	const SIGILYPH      ; d8
-	const DRILLBUR      ; d9
+	const DRILBUR      ; d9
 	const EXCADRILL     ; da
 	const BALTOY        ; db
 	const CLAYDOL       ; dc

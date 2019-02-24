@@ -78,7 +78,7 @@ PokedexDataPointerTable:
 	dw FoongusPokedexEntry
 	dw AmoongussPokedexEntry
 	dw PhantumpPokedexEntry
-	dw TrevanantPokedexEntry
+	dw TrevenantPokedexEntry
 	dw BonslyPokedexEntry
 	dw SudowoodoPokedexEntry
 	dw PassimianPokedexEntry
@@ -174,7 +174,7 @@ PokedexDataPointerTable:
 	dw Kommo_oPokedexEntry
 	dw DeinoPokedexEntry
 	dw ZweilousPokedexEntry
-	dw HeidreigonPokedexEntry
+	dw HydreigonPokedexEntry
 	dw CyndaquilPokedexEntry
 	dw QuilavaPokedexEntry
 	dw TyphlosionPokedexEntry
@@ -206,7 +206,7 @@ PokedexDataPointerTable:
 	dw SneaselPokedexEntry
 	dw WeavilePokedexEntry
 	dw CryogonalPokedexEntry
-	dw SnowruntPokedexEntry
+	dw SnoruntPokedexEntry
 	dw GlaliePokedexEntry
 	dw FrosslassPokedexEntry
 	dw SwinubPokedexEntry
@@ -216,7 +216,7 @@ PokedexDataPointerTable:
 	dw NatuPokedexEntry
 	dw XatuPokedexEntry
 	dw SigilyphPokedexEntry
-	dw DrillburPokedexEntry
+	dw DrilburPokedexEntry
 	dw ExcadrillPokedexEntry
 	dw BaltoyPokedexEntry
 	dw ClaydolPokedexEntry

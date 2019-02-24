@@ -4,7 +4,7 @@
 ; gen 1
 	const CRY_GURDURR
 	const CRY_ESPURR
-	const CRY_TREVANANT
+	const CRY_TREVENANT
 	const CRY_GOODRA
 	const CRY_CHARMANDER
 	const CRY_GRIMER
@@ -44,7 +44,7 @@
 ; gen 2
 	const CRY_BRAIXEN
 	const CRY_AXEW
-	const CRY_HEIDREIGON
+	const CRY_HYDREIGON
 	const CRY_AURORUS
 	const CRY_RAIKOU
 	const CRY_LITTEN
@@ -55,7 +55,7 @@
 	const CRY_ABOMASNOW
 	const CRY_MEDITITE
 	const CRY_SHUCKLE
-	const CRY_SNOWRUNT
+	const CRY_SNORUNT
 	const CRY_DEINO
 	const CRY_EXCADRILL
 	const CRY_NOIVERN

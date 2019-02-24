@@ -36,7 +36,7 @@
 	const ICON_HO_OH
 	const ICON_LUGIA
 	const ICON_ANORITH
-	const ICON_TREVANANT
+	const ICON_TREVENANT
 	const ICON_SUDOWOODO
 	const ICON_BIGMON
 

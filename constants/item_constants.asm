@@ -108,7 +108,7 @@
 	const ITEM_64      ; 64
 	const PNK_APRICORN ; 65
 	const BLACKGLASSES ; 66
-	const TREVANANTTAIL ; 67
+	const TREVENANTTAIL ; 67
 	const PINK_BOW     ; 68
 	const STICK        ; 69
 	const SMOKE_BALL   ; 6a

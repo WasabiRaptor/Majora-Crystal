@@ -258,7 +258,7 @@ AmoongussEggMoves:
 	db QUICK_ATTACK
 	db -1 ; end
 
-TrevanantEggMoves:
+TrevenantEggMoves:
 	db SAFEGUARD
 	db BELLY_DRUM
 	db FUTURE_SIGHT
@@ -580,7 +580,7 @@ ZweilousEggMoves:
 	db FAINT_ATTACK
 	db -1 ; end
 
-HeidreigonEggMoves:
+HydreigonEggMoves:
 	db PRESENT
 	db MIRROR_MOVE
 	db PECK
@@ -692,7 +692,7 @@ CryogonalEggMoves:
 	db RAGE
 	db -1 ; end
 
-SnowruntEggMoves:
+SnoruntEggMoves:
 	db METAL_CLAW
 	db WING_ATTACK
 	db RAZOR_WIND

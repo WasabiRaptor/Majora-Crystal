@@ -77,7 +77,7 @@ AnimationPointers:
 	dw FoongusAnimation
 	dw AmoongussAnimation
 	dw PhantumpAnimation
-	dw TrevanantAnimation
+	dw TrevenantAnimation
 	dw BonslyAnimation
 	dw SudowoodoAnimation
 	dw PassimianAnimation
@@ -173,7 +173,7 @@ AnimationPointers:
 	dw Kommo_oAnimation
 	dw DeinoAnimation
 	dw ZweilousAnimation
-	dw HeidreigonAnimation
+	dw HydreigonAnimation
 	dw CyndaquilAnimation
 	dw QuilavaAnimation
 	dw TyphlosionAnimation
@@ -205,7 +205,7 @@ AnimationPointers:
 	dw SneaselAnimation
 	dw WeavileAnimation
 	dw CryogonalAnimation
-	dw SnowruntAnimation
+	dw SnoruntAnimation
 	dw GlalieAnimation
 	dw FrosslassAnimation
 	dw SwinubAnimation
@@ -215,7 +215,7 @@ AnimationPointers:
 	dw NatuAnimation
 	dw XatuAnimation
 	dw SigilyphAnimation
-	dw DrillburAnimation
+	dw DrilburAnimation
 	dw ExcadrillAnimation
 	dw BaltoyAnimation
 	dw ClaydolAnimation

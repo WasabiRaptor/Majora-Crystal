@@ -17,7 +17,7 @@ prob_total = 0
 ; Smoochum
 	prob 14
 	prob 2
-; Magby
+; Zapdos
 	prob 10
 	prob 2
 ; Elekid

@@ -101,37 +101,37 @@ ElmCheckMasterBall:
 ElmCheckEverstone:
 	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
 	iftrue ElmScript_CallYou
-	checkevent EVENT_SHOWED_HEIDREIGON_TO_ELM
+	checkevent EVENT_SHOWED_HYDREIGON_TO_ELM
 	iftrue ElmGiveEverstoneScript
-	checkevent EVENT_TOLD_ELM_ABOUT_HEIDREIGON_OVER_THE_PHONE
-	iffalse ElmCheckHeidreigonEgg
-	writebyte HEIDREIGON
+	checkevent EVENT_TOLD_ELM_ABOUT_HYDREIGON_OVER_THE_PHONE
+	iffalse ElmCheckHydreigonEgg
+	writebyte HYDREIGON
 	special FindPartyMonThatSpeciesYourTrainerID
-	iftrue ShowElmHeidreigonScript
+	iftrue ShowElmHydreigonScript
 	writebyte CYNDAQUIL
 	special FindPartyMonThatSpeciesYourTrainerID
-	iftrue ShowElmHeidreigonScript
+	iftrue ShowElmHydreigonScript
 	writetext ElmThoughtEggHatchedText
 	waitbutton
 	closetext
 	end
 
 ElmEggHatchedScript:
-	writebyte HEIDREIGON
+	writebyte HYDREIGON
 	special FindPartyMonThatSpeciesYourTrainerID
-	iftrue ShowElmHeidreigonScript
+	iftrue ShowElmHydreigonScript
 	writebyte CYNDAQUIL
 	special FindPartyMonThatSpeciesYourTrainerID
-	iftrue ShowElmHeidreigonScript
+	iftrue ShowElmHydreigonScript
 	jump ElmCheckGotEggAgain
 
-ElmCheckHeidreigonEgg:
-	checkevent EVENT_GOT_HEIDREIGON_EGG_FROM_ELMS_AIDE
+ElmCheckHydreigonEgg:
+	checkevent EVENT_GOT_HYDREIGON_EGG_FROM_ELMS_AIDE
 	iffalse ElmCheckGotEggAgain
-	checkevent EVENT_HEIDREIGON_HATCHED
+	checkevent EVENT_HYDREIGON_HATCHED
 	iftrue ElmEggHatchedScript
 ElmCheckGotEggAgain:
-	checkevent EVENT_GOT_HEIDREIGON_EGG_FROM_ELMS_AIDE ; why are we checking it again?
+	checkevent EVENT_GOT_HYDREIGON_EGG_FROM_ELMS_AIDE ; why are we checking it again?
 	iftrue ElmWaitingEggHatchScript
 	checkflag ENGINE_ZEPHYRBADGE
 	iftrue ElmAideHasEggScript
@@ -363,16 +363,16 @@ ElmWaitingEggHatchScript:
 	closetext
 	end
 
-ShowElmHeidreigonScript:
-	writetext ShowElmHeidreigonText1
+ShowElmHydreigonScript:
+	writetext ShowElmHydreigonText1
 	waitbutton
 	closetext
 	showemote EMOTE_SHOCK, ELMSLAB_ELM, 15
-	setevent EVENT_SHOWED_HEIDREIGON_TO_ELM
+	setevent EVENT_SHOWED_HYDREIGON_TO_ELM
 	opentext
-	writetext ShowElmHeidreigonText2
+	writetext ShowElmHydreigonText2
 	buttonsound
-	writetext ShowElmHeidreigonText3
+	writetext ShowElmHydreigonText3
 	buttonsound
 ElmGiveEverstoneScript:
 	writetext ElmGiveEverstoneText1
@@ -512,7 +512,7 @@ AideScript_ReceiveTheBalls:
 ElmsAideScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_HEIDREIGON_EGG_FROM_ELMS_AIDE
+	checkevent EVENT_GOT_HYDREIGON_EGG_FROM_ELMS_AIDE
 	iftrue AideScript_AfterTheft
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	iftrue AideScript_ExplainBalls
@@ -1069,17 +1069,17 @@ ElmThoughtEggHatchedText:
 	line "#MON?"
 	done
 
-ShowElmHeidreigonText1:
+ShowElmHydreigonText1:
 	text "ELM: <PLAY_G>, you"
 	line "look great!"
 	done
 
-ShowElmHeidreigonText2:
+ShowElmHydreigonText2:
 	text "What?"
 	line "That #MON!?!"
 	done
 
-ShowElmHeidreigonText3:
+ShowElmHydreigonText3:
 	text "The EGG hatched!"
 	line "So, #MON are"
 	cont "born from EGGS…"

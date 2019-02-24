@@ -10,7 +10,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 120 ; step cycles to hatch
-	INCBIN "gfx/pokemon/shaymin-sky/front.dimensions"
+	INCBIN "gfx/pokemon/shaymin_sky/front.dimensions"
 	db NUM_SHAYMIN, SKY_SHAYMIN ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_SLOW ; growth rate

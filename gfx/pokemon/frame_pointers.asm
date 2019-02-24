@@ -77,7 +77,7 @@ FramesPointers:
 	dw FoongusFrames
 	dw AmoongussFrames
 	dw PhantumpFrames
-	dw TrevanantFrames
+	dw TrevenantFrames
 	dw BonslyFrames
 	dw SudowoodoFrames
 	dw PassimianFrames
@@ -173,7 +173,7 @@ FramesPointers:
 	dw Kommo_oFrames
 	dw DeinoFrames
 	dw ZweilousFrames
-	dw HeidreigonFrames
+	dw HydreigonFrames
 	dw CyndaquilFrames
 	dw QuilavaFrames
 	dw TyphlosionFrames
@@ -205,7 +205,7 @@ FramesPointers:
 	dw SneaselFrames
 	dw WeavileFrames
 	dw CryogonalFrames
-	dw SnowruntFrames
+	dw SnoruntFrames
 	dw GlalieFrames
 	dw FrosslassFrames
 	dw SwinubFrames
@@ -215,7 +215,7 @@ FramesPointers:
 	dw NatuFrames
 	dw XatuFrames
 	dw SigilyphFrames
-	dw DrillburFrames
+	dw DrilburFrames
 	dw ExcadrillFrames
 	dw BaltoyFrames
 	dw ClaydolFrames

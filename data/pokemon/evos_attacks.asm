@@ -1203,7 +1203,7 @@ PhantumpEvosAttacks:
 	db 61, FIRE_BLAST
 	db 0 ; no more level-up moves
 
-TrevanantEvosAttacks:
+TrevenantEvosAttacks:
 	db EVOLVE_LEVEL, 37, BONSLY
 	db EVOLVE_TRADE, KINGS_ROCK, BOLDORE
 	db 0 ; no more evolutions
@@ -2553,7 +2553,7 @@ ZweilousEvosAttacks:
 	db 14, SWEET_KISS
 	db 0 ; no more level-up moves
 
-HeidreigonEvosAttacks:
+HydreigonEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, CYNDAQUIL
 	db 0 ; no more evolutions
 	db 1, GROWL
@@ -2979,7 +2979,7 @@ CryogonalEvosAttacks:
 	db 38, TAKE_DOWN
 	db 0 ; no more level-up moves
 
-SnowruntEvosAttacks:
+SnoruntEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 6, SAND_ATTACK
@@ -3101,7 +3101,7 @@ endc
 	db 0 ; no more level-up moves
 
 SigilyphEvosAttacks:
-	db EVOLVE_LEVEL, 30, DRILLBUR
+	db EVOLVE_LEVEL, 30, DRILBUR
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
@@ -3114,7 +3114,7 @@ SigilyphEvosAttacks:
 	db 50, THRASH
 	db 0 ; no more level-up moves
 
-DrillburEvosAttacks:
+DrilburEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER

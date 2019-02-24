@@ -79,7 +79,7 @@ EvosAttacksPointers::
 	dw FoongusEvosAttacks
 	dw AmoongussEvosAttacks
 	dw PhantumpEvosAttacks
-	dw TrevanantEvosAttacks
+	dw TrevenantEvosAttacks
 	dw BonslyEvosAttacks
 	dw SudowoodoEvosAttacks
 	dw PassimianEvosAttacks
@@ -175,7 +175,7 @@ EvosAttacksPointers::
 	dw Kommo_oEvosAttacks
 	dw DeinoEvosAttacks
 	dw ZweilousEvosAttacks
-	dw HeidreigonEvosAttacks
+	dw HydreigonEvosAttacks
 	dw CyndaquilEvosAttacks
 	dw QuilavaEvosAttacks
 	dw TyphlosionEvosAttacks
@@ -207,7 +207,7 @@ EvosAttacksPointers::
 	dw SneaselEvosAttacks
 	dw WeavileEvosAttacks
 	dw CryogonalEvosAttacks
-	dw SnowruntEvosAttacks
+	dw SnoruntEvosAttacks
 	dw GlalieEvosAttacks
 	dw FrosslassEvosAttacks
 	dw SwinubEvosAttacks
@@ -217,7 +217,7 @@ EvosAttacksPointers::
 	dw NatuEvosAttacks
 	dw XatuEvosAttacks
 	dw SigilyphEvosAttacks
-	dw DrillburEvosAttacks
+	dw DrilburEvosAttacks
 	dw ExcadrillEvosAttacks
 	dw BaltoyEvosAttacks
 	dw ClaydolEvosAttacks

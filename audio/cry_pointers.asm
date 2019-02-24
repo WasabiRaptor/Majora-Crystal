@@ -1,7 +1,7 @@
 Cries:
 	dba Cry_Gurdurr
 	dba Cry_Espurr
-	dba Cry_Trevanant
+	dba Cry_Trevenant
 	dba Cry_Goodra
 	dba Cry_Flareon
 	dba Cry_Ledian
@@ -39,7 +39,7 @@ Cries:
 	dba Cry_Quilladin
 	dba Cry_Braixen
 	dba Cry_Axew
-	dba Cry_Heidreigon
+	dba Cry_Hydreigon
 	dba Cry_Aurorus
 	dba Cry_Raikou
 	dba Cry_Litten
@@ -50,7 +50,7 @@ Cries:
 	dba Cry_Abomasnow
 	dba Cry_Meditite
 	dba Cry_Shuckle
-	dba Cry_Snowrunt
+	dba Cry_Snorunt
 	dba Cry_Deino
 	dba Cry_Excadrill
 	dba Cry_Noivern

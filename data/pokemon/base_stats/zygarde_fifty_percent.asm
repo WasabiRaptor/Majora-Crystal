@@ -10,7 +10,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 120 ; step cycles to hatch
-	INCBIN "gfx/pokemon/zygarde/front.dimensions"
+	INCBIN "gfx/pokemon/zygarde_fifty_percent/front.dimensions"
 	db NUM_ZYGARDE, FIFTY_PERCENT ;form differences
 	db 0, 0	;abilities
 	db GROWTH_SLOW ; growth rate

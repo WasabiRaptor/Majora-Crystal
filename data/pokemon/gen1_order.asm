@@ -35,7 +35,7 @@ Pokered_MonIndices:
 	db SCYTHER
 	db PERSIAN
 	db MAGNETON
-	db TREVANANT
+	db TREVENANT
 	db FLOETTE
 	db WHIMSICOTT
 	db GOOMY
@@ -60,7 +60,7 @@ Pokered_MonIndices:
 	db MIENFOO
 	db AZUMARILL
 	db SIGILYPH ; MISSINGNO.
-	db DRILLBUR ; MISSINGNO.
+	db DRILBUR ; MISSINGNO.
 	db EXCADRILL ; MISSINGNO.
 	db STUFFUL
 	db SWABLU
@@ -213,7 +213,7 @@ Pokered_MonIndices:
 	db KOMMO_O
 	db DEINO
 	db ZWEILOUS
-	db HEIDREIGON
+	db HYDREIGON
 	db CYNDAQUIL
 	db QUILAVA
 	db TYPHLOSION
@@ -245,7 +245,7 @@ Pokered_MonIndices:
 	db SNEASEL
 	db WEAVILE
 	db CRYOGONAL
-	db SNOWRUNT
+	db SNORUNT
 	db GLALIE
 	db FROSSLASS
 	db SWINUB

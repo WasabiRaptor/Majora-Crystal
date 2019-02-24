@@ -79,7 +79,7 @@ KantoMonSpecials:
 	db  55 ; FOONGUS
 	db  65 ; AMOONGUSS
 	db  80 ; PHANTUMP
-	db  40 ; TREVANANT
+	db  40 ; TREVENANT
 	db  80 ; BONSLY
 	db  95 ; SUDOWOODO
 	db 120 ; PASSIMIAN
