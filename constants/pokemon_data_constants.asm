@@ -212,4 +212,3 @@ PP_MASK    EQU %00111111
 
 ; significant EV values
 MAX_EV EQU 252
-MAX_EVS_TOTAL EQU 510
