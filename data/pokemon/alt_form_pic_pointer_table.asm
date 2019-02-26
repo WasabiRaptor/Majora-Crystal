@@ -11,7 +11,7 @@
     dbba SANDSLASH, SandslashPicPointers
     dbba SAWSBUCK,  SawsbuckPicPointers
     dbba GIRAFARIG, GirafarigPicPointers
-    dbba VULPIX,    VulpixkPicPointers
+    dbba VULPIX,    VulpixPicPointers
     dbba NINETALES, NinetalesPicPointers
     dbba UNOWN,     UnownPicPointers
     dbba AEGISLASH, AegislashPicPointers
@@ -20,4 +20,4 @@
     dbba ENTEI,     EnteiPicPointers
     dbba SHAYMIN,   ShayminPicPointers
     dbba ZYGARDE,   ZygardePicPointers
-	dbba -1,        PicPointers
+	dbba -1,        PokemonPicPointers

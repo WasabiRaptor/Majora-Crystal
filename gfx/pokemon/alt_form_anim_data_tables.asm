@@ -47,27 +47,27 @@ AltFormAnimPointerTable:
 	dbbww -1,           BANK(PicAnimations), AnimationPointers, AnimationIdlePointers
 
 AltFormFramesPointerTable:
-	dbbba LYCANROC,     BANK(LycanrocsFrames), LycanrocFramesPointers
-    dbbba MEOWTH,       BANK(MeowthsFrames), MeowthFramesPointers
-    dbbba PERSIAN,      BANK(PersiansFrames), PersianFramesPointers
-    dbbba GRIMER,       BANK(GrimersFrames), GrimerFramesPointers
-    dbbba MUK,          BANK(MuksFrames), MukFramesPointers
-    dbbba ROTOM,        BANK(RotomsFrames), RotomFramesPointers
-    dbbba MEOWSTIC,     BANK(MeowsticsFrames), MeowsticFramesPointers
-    dbbba NIDORAN,      BANK(NidoransFrames), NidoranFramesPointers
-    dbbba SANDSHREW,    BANK(SandshrewsFrames), SandshrewFramesPointers
-    dbbba SANDSLASH,    BANK(SandslashsFrames), SandslashFramesPointers
-    dbbba SAWSBUCK,     BANK(SawsbucksFrames), SawsbuckFramesPointers
-    dbbba GIRAFARIG,    BANK(GirafarigsFrames), GirafarigFramesPointers
-    dbbba VULPIX,       BANK(VulpixsFrames), VulpixFramesPointers
-    dbbba NINETALES,    BANK(NinetalessFrames), NinetalesFramesPointers
-    dbbba UNOWN,        BANK(UnownsFrames), UnownFramesPointers
-    dbbba AEGISLASH,    BANK(AegislashsFrames), AegislashFramesPointers
-    dbbba SUICUNE,      BANK(SuicunesFrames), SuicuneFramesPointers
-    dbbba RAIKOU,       BANK(RaikousFrames), RaikouFramesPointers
-    dbbba ENTEI,        BANK(EnteisFrames), EnteiFramesPointers
-    dbbba SHAYMIN,      BANK(ShayminsFrames), ShayminFramesPointers
-    dbbba ZYGARDE,      BANK(ZygardesFrames), ZygardeFramesPointers
+	dbbba LYCANROC,     BANK(LycanrocFrames), LycanrocFramesPointers
+    dbbba MEOWTH,       BANK(MeowthFrames), MeowthFramesPointers
+    dbbba PERSIAN,      BANK(PersianFrames), PersianFramesPointers
+    dbbba GRIMER,       BANK(GrimerFrames), GrimerFramesPointers
+    dbbba MUK,          BANK(MukFrames), MukFramesPointers
+    dbbba ROTOM,        BANK(RotomFrames), RotomFramesPointers
+    dbbba MEOWSTIC,     BANK(Meowstic_MFrames), MeowsticFramesPointers
+    dbbba NIDORAN,      BANK(Nidoran_MFrames), NidoranFramesPointers
+    dbbba SANDSHREW,    BANK(SandshrewFrames), SandshrewFramesPointers
+    dbbba SANDSLASH,    BANK(SandslashFrames), SandslashFramesPointers
+    dbbba SAWSBUCK,     BANK(SawsbuckFrames), SawsbuckFramesPointers
+    dbbba GIRAFARIG,    BANK(GirafarigFrames), GirafarigFramesPointers
+    dbbba VULPIX,       BANK(VulpixFrames), VulpixFramesPointers
+    dbbba NINETALES,    BANK(NinetalesFrames), NinetalesFramesPointers
+    dbbba UNOWN,        BANK(UnownAFrames), UnownFramesPointers
+    dbbba AEGISLASH,    BANK(AegislashFrames), AegislashFramesPointers
+    dbbba SUICUNE,      BANK(SuicuneFrames), SuicuneFramesPointers
+    dbbba RAIKOU,       BANK(RaikouFrames), RaikouFramesPointers
+    dbbba ENTEI,        BANK(EnteiFrames), EnteiFramesPointers
+    dbbba SHAYMIN,      BANK(ShayminFrames), ShayminFramesPointers
+    dbbba ZYGARDE,      BANK(ZygardeFrames), ZygardeFramesPointers
 	dbbba -1, BANK(KantoFrames), FramesPointers
 
 AltFormBitmasksPointerTable:

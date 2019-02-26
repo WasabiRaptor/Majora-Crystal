@@ -16,7 +16,7 @@ GiveDratini:
 .CheckForDratini:
 ; start at the end of the party and search backwards for a Dratini
 	ld a, [hl]
-	cp DRATINI
+	cp DEINO
 	jr z, .GiveMoveset
 	ld a, l
 	sub e

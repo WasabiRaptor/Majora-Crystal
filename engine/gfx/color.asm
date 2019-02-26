@@ -1,5 +1,36 @@
 INCLUDE "engine/gfx/sgb_layouts.asm"
 
+INCLUDE "gfx/sgb/blk_packets.asm"
+INCLUDE "gfx/sgb/pal_packets.asm"
+INCLUDE "data/sgb_ctrl_packets.asm"
+
+PredefPals:
+INCLUDE "gfx/sgb/predef.pal"
+
+SGBBorderMap:
+; interleaved tile ids and palette ids
+INCBIN "gfx/sgb/sgb_border.bin"
+
+SGBBorderPalettes:
+INCLUDE "gfx/sgb/sgb_border.pal"
+
+SGBBorder:
+INCBIN "gfx/sgb/sgb_border.2bpp"
+
+HPBarPals:
+INCLUDE "gfx/battle/hp_bar.pal"
+
+ExpBarPalette:
+INCLUDE "gfx/battle/exp_bar.pal"
+
+INCLUDE "data/pokemon/palettes.asm"
+
+INCLUDE "data/pokemon/alt_form_palettes.asm"
+
+INCLUDE "data/trainers/palettes.asm"
+
+INCLUDE "data/portraits/portrait_palettes.asm"
+
 SHINY_ATK_BIT EQU 5
 SHINY_DEF_VAL EQU 10
 SHINY_SPD_VAL EQU 10
@@ -1016,36 +1047,6 @@ SGBDelayCycles:
 	jr nz, .wait
 	ret
 
-INCLUDE "gfx/sgb/blk_packets.asm"
-INCLUDE "gfx/sgb/pal_packets.asm"
-INCLUDE "data/sgb_ctrl_packets.asm"
-
-PredefPals:
-INCLUDE "gfx/sgb/predef.pal"
-
-SGBBorderMap:
-; interleaved tile ids and palette ids
-INCBIN "gfx/sgb/sgb_border.bin"
-
-SGBBorderPalettes:
-INCLUDE "gfx/sgb/sgb_border.pal"
-
-SGBBorder:
-INCBIN "gfx/sgb/sgb_border.2bpp"
-
-HPBarPals:
-INCLUDE "gfx/battle/hp_bar.pal"
-
-ExpBarPalette:
-INCLUDE "gfx/battle/exp_bar.pal"
-
-INCLUDE "data/pokemon/palettes.asm"
-
-INCLUDE "data/pokemon/alt_form_palettes.asm"
-
-INCLUDE "data/trainers/palettes.asm"
-
-INCLUDE "data/portraits/portrait_palettes.asm"
 
 LoadMapPals:
 	farcall LoadSpecialMapPalette

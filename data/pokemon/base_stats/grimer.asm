@@ -11,7 +11,7 @@
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/grimer/front.dimensions"
-	db NUM_REGIONAL, KANTONAIN ;form differences
+	db NUM_REGIONAL, KANTONIAN ;form differences
 	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_AMORPHOUS, EGG_AMORPHOUS ; egg groups

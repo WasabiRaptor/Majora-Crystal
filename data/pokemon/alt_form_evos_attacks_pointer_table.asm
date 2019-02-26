@@ -9,7 +9,7 @@
     dbba SANDSHREW, SandshrewEvosAttacksPointers
     dbba SANDSLASH, SandslashEvosAttacksPointers
     dbba GIRAFARIG, GirafarigEvosAttacksPointers
-    dbba VULPIX,    VulpixkEvosAttacksPointers
+    dbba VULPIX,    VulpixEvosAttacksPointers
     dbba NINETALES, NinetalesEvosAttacksPointers
     dbba SHAYMIN,   ShayminEvosAttacksPointers
 	dbba -1,        EvosAttacksPointers

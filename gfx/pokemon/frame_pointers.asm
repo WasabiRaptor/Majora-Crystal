@@ -211,7 +211,7 @@ FramesPointers:
 	dw SwinubFrames
 	dw PiloswineFrames
 	dw MamoswineFrames
-	dw UnownFrames
+	dw UnownAFrames
 	dw NatuFrames
 	dw XatuFrames
 	dw SigilyphFrames

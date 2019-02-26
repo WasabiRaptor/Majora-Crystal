@@ -113,4 +113,4 @@ ShayminAnimationIdlePointers:
 ZygardeAnimationIdlePointers:
 	dw Zygarde_Ten_PercentAnimationIdle
 	dw ZygardeAnimationIdle
-	dw Zygarde_Complete
+	dw Zygarde_CompleteAnimationIdle

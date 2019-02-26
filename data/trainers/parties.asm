@@ -1179,7 +1179,7 @@ PokemaniacGroup:
 
 	; POKEMANIAC (4)
 	db "SHANE@", TRAINERTYPE_NORMAL
-	db 16, MEOWSTIC_M
+	db 16, MEOWSTIC
 	db 16, CONKELDURR
 	db -1 ; end
 
@@ -2822,7 +2822,7 @@ PicnickerGroup:
 	; PICNICKER (11)
 	db "LIZ@", TRAINERTYPE_NORMAL
 	db 15, QUILLADIN
-	db 15, MEOWSTIC_M
+	db 15, MEOWSTIC
 	db -1 ; end
 
 	; PICNICKER (12)
@@ -2840,7 +2840,7 @@ PicnickerGroup:
 
 	; PICNICKER (14)
 	db "EDNA@", TRAINERTYPE_NORMAL
-	db 30, MEOWSTIC_M
+	db 30, MEOWSTIC
 	db 34, ROTOM
 	db -1 ; end
 

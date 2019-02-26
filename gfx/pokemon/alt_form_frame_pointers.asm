@@ -113,4 +113,4 @@ ShayminFramesPointers:
 ZygardeFramesPointers:
 	dw Zygarde_Ten_PercentFrames
 	dw ZygardeFrames
-	dw Zygarde_Complete
+	dw Zygarde_CompleteFrames

@@ -113,4 +113,4 @@ ShayminAnimationPointers:
 ZygardeAnimationPointers:
 	dw Zygarde_Ten_PercentAnimation
 	dw ZygardeAnimation
-	dw Zygarde_Complete
+	dw Zygarde_CompleteAnimation

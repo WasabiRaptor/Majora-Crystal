@@ -96,7 +96,7 @@ NewPokedexOrder:
 	db SNEASEL
 	db WEAVILE
 	db ESPURR
-	db MEOWSTIC_M
+	db MEOWSTIC
 	db TIMBURR
 	db GURDURR
 	db CONKELDURR

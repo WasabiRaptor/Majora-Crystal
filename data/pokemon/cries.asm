@@ -34,7 +34,7 @@ PokemonCries::
 	mon_cry CRY_GURDURR,   $020,  $0c0 ; CHINGLING
 	mon_cry CRY_GURDURR,   $0ff,  $17f ; CHIMECHO
 	mon_cry CRY_ESPURR,   $000,  $100 ; ESPURR
-	mon_cry CRY_ESPURR,   $02c,  $160 ; MEOWSTIC_M
+	mon_cry CRY_ESPURR,   $02c,  $160 ; MEOWSTIC
 	mon_cry CRY_TIMBURR,   $000,  $100 ; TIMBURR
 	mon_cry CRY_GURDURR,   $000,  $100 ; GURDURR
 	mon_cry CRY_GURDURR,   $02c,  $140 ; CONKELDURR

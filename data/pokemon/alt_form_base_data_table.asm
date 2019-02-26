@@ -8,7 +8,7 @@
     dbba SANDSHREW, SandshrewBaseData
     dbba SANDSLASH, SandslashBaseData
     dbba GIRAFARIG, GirafarigBaseData
-    dbba VULPIX,    VulpixkBaseData
+    dbba VULPIX,    VulpixBaseData
     dbba NINETALES, NinetalesBaseData
     dbba AEGISLASH, AegislashBaseData
     dbba SUICUNE,   SuicuneBaseData

@@ -211,7 +211,7 @@ BitmasksPointers:
 	dw SwinubBitmasks
 	dw PiloswineBitmasks
 	dw MamoswineBitmasks
-	dw UnownBitmasks
+	dw UnownABitmasks
 	dw NatuBitmasks
 	dw XatuBitmasks
 	dw SigilyphBitmasks

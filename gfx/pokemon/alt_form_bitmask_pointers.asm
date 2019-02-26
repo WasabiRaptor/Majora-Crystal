@@ -113,4 +113,4 @@ ShayminBitmasksPointers:
 ZygardeBitmasksPointers:
 	dw Zygarde_Ten_PercentBitmasks
 	dw ZygardeBitmasks
-	dw Zygarde_Complete
+	dw Zygarde_CompleteBitmasks

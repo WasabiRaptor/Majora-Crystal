@@ -85,7 +85,7 @@ Function818fd:
 	ret
 
 Function81911:
-	ld hl, TrainerPalettes
+;	ld hl, TrainerPalettes
 	ld de, wOverworldMapBlocks
 	ld c, NUM_TRAINER_CLASSES
 .asm_81919

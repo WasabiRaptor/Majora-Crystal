@@ -30,7 +30,7 @@ KantoMonSpecials:
 	db  30 ; CHINGLING
 	db  55 ; CHIMECHO
 	db  40 ; ESPURR
-	db  55 ; MEOWSTIC_M
+	db  55 ; MEOWSTIC
 	db  75 ; TIMBURR
 	db  40 ; GURDURR
 	db  55 ; CONKELDURR

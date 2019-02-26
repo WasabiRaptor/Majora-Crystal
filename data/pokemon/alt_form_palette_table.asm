@@ -8,12 +8,12 @@
     dbba NIDORAN,   NidoranPalettes
     dbba SANDSHREW, SandshrewPalettes
     dbba SANDSLASH, SandslashPalette
-    ;dbba FLABEBE,   FlabebePalette
-    ;dbba FLOETTE,   FloettePalette
-    ;dbba FLORGES,   FlorgesPalette
+    dbba FLABEBE,   FlabebePalette
+    dbba FLOETTE,   FloettePalette
+    dbba FLORGES,   FlorgesPalette
     dbba DEERLING,  DeerlingPalettes
     dbba SAWSBUCK,  SawsbuckPalettes
-    dbba VULPIX,    VulpixkPalettes
+    dbba VULPIX,    VulpixPalettes
     dbba NINETALES, NinetalesPalettes
     dbba SUICUNE,   SuicunePalettes
     dbba RAIKOU,    RaikouPalettes

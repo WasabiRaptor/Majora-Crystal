@@ -475,7 +475,7 @@ ChimechoEvosAttacks:
 	db 0 ; no more level-up moves
 
 EspurrEvosAttacks:
-	db EVOLVE_LEVEL, 16, MEOWSTIC_M
+	db EVOLVE_LEVEL, 16, MEOWSTIC
 	db 0 ; no more evolutions
 	db 1, GROWL
 	db 1, TACKLE

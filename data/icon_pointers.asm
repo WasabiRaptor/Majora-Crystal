@@ -4,12 +4,12 @@ IconPointers:
 	dw SandslashIcon
 	dw Nidoran_MIcon
 	dw MienfooIcon
-	dw PikachuIcon
+	;dw PikachuIcon
 	dw GengarIcon
 	dw FishIcon
 	dw BirdIcon
 	dw MonsterIcon
-	dw ClefairyIcon
+	;dw ClefairyIcon
 	dw NidoqueenIcon
 	dw BugIcon
 	dw GhostIcon

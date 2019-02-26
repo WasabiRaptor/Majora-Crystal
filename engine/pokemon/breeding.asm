@@ -463,7 +463,7 @@ GetEggMove:
 	
 .vulpix_eggmoves
 	predef GetFormData
-	ld hl, VulpixEggMovePointers
+	;ld hl, VulpixEggMovePointers
 	jr .got_eggmove_pointers
 
 .vulpix_evosattacks

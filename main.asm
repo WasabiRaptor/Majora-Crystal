@@ -564,4 +564,5 @@ INCLUDE "engine/events/odd_egg.asm"
 
 
 SECTION "color", ROMX
+
 INCLUDE "engine/gfx/color.asm"

@@ -211,7 +211,7 @@ AnimationIdlePointers:
 	dw SwinubAnimationIdle
 	dw PiloswineAnimationIdle
 	dw MamoswineAnimationIdle
-	dw UnownAnimationIdle
+	dw UnownAAnimationIdle
 	dw NatuAnimationIdle
 	dw XatuAnimationIdle
 	dw SigilyphAnimationIdle

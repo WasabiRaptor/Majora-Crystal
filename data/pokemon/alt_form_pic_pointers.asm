@@ -32,7 +32,7 @@ MukPicPointers::
 	dba Muk_AlolaFrontpic
 	dba Muk_AlolaBackpic
 
-RotomPicPointers
+RotomPicPointers::
 	dba RotomFrontpic
 	dba RotomBackpic
 	dba Rotom_FanFrontpic

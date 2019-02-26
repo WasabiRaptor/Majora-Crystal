@@ -98,7 +98,7 @@ LoadMonAnimation: ; d00a3
 	ld [wPokeAnimSpecies], a
 
 	ld a, $1
-	ld hl, wMonAltForm
+	ld hl, wAltForm
 	call GetFarWRAMByte
 	ld [wPokeAnimAltForm], a
 
@@ -248,7 +248,7 @@ PokeAnim_Finish: ; d0171
 
 PokeAnim_Cry: ; d017a
 	ld a, [wPokeAnimSpecies]
-	call _PlayCry
+	call _PlayMonCry
 	ld a, [wPokeAnimSceneIndex]
 	inc a
 	ld [wPokeAnimSceneIndex], a
@@ -257,7 +257,7 @@ PokeAnim_Cry: ; d017a
 
 PokeAnim_CryNoWait: ; d0188
 	ld a, [wPokeAnimSpecies]
-	call PlayCry2
+	call PlayMonCry2
 	ld a, [wPokeAnimSceneIndex]
 	inc a
 	ld [wPokeAnimSceneIndex], a
@@ -395,7 +395,7 @@ PokeAnim_GetDuration: ; d02ae
 	ld b, $0
 	ld hl, 0
 	ld a, [wPokeAnimSpeed]
-	rst AddNTimes
+	call AddNTimes
 	ld a, h
 	swap a
 	and $f0
@@ -485,7 +485,7 @@ PokeAnim_CopyBitmaskToBuffer: ; d033b
 	ld h, [hl]
 	ld l, a
 	ld a, [wPokeAnimCurBitmask]
-	rst AddNTimes
+	call AddNTimes
 	pop bc
 	ld de, wPokeAnimBitmaskBuffer
 	ld a, [wPokeAnimBitmaskBank]
@@ -591,7 +591,7 @@ PokeAnim_ConvertAndApplyBitmask: ; d036b
 	call .GetStartCoord
 	ld a, [wPokeAnimBitmaskCurRow]
 	ld bc, SCREEN_WIDTH
-	rst AddNTimes
+	call AddNTimes
 	ld a, [wBoxAlignment]
 	and a
 	jr nz, .go

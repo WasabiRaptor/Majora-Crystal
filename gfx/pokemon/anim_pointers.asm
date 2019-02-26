@@ -211,7 +211,7 @@ AnimationPointers:
 	dw SwinubAnimation
 	dw PiloswineAnimation
 	dw MamoswineAnimation
-	dw UnownAnimation
+	dw UnownAAnimation
 	dw NatuAnimation
 	dw XatuAnimation
 	dw SigilyphAnimation

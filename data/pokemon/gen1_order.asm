@@ -166,7 +166,7 @@ Pokered_MonIndices:
 	db PORYGON2
 	db PORYGONZ
 	db CONKELDURR
-	db MEOWSTIC_M
+	db MEOWSTIC
 	db COTTONEE
 	db MILOTIC
 	db LANTURN

@@ -107,7 +107,7 @@ AlphabeticalPokedexOrder:
 	db HAKAMO_O
 	db HAUNTER
 	db HAWLUCHA
-	db HAXOROUS
+	db HAXORUS
 	db HEATMOR
 	db HERACROSS
 	db HITMONCHAN
@@ -159,7 +159,7 @@ AlphabeticalPokedexOrder:
 	db MARILL
 	db MEDICHAM
 	db MEDITITE
-	db MEOWSTIC_M
+	db MEOWSTIC
 	db MEOWTH
 	db MEW
 	db MEWTWO
@@ -202,7 +202,7 @@ AlphabeticalPokedexOrder:
 	;Q
 	db QUILAVA
 	db QUILLADIN
-	db QUILFISH
+	db QWILFISH
 	;R
 	db RAIKOU
 	db RIBOMBEE
@@ -225,7 +225,7 @@ AlphabeticalPokedexOrder:
 	db SHAYMIN
 	db SHIINOTIC
 	db SHINX
-	db SHROMISH
+	db SHROOMISH
 	db SHUCKLE
 	db SIGILYPH
 	db SILVALLY
@@ -272,7 +272,7 @@ AlphabeticalPokedexOrder:
 	;Y
 	db YAMASK
 	db YANMA
-	db YANNMEGA
+	db YANMEGA
 	;Z
 	db ZANGOOSE
 	db ZAPDOS

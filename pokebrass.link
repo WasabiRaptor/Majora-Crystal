@@ -38,76 +38,8 @@ ROMX $04
 	"bank4"
 ROMX $05
 	"bank5"
-ROMX $09
-	"bank9"
-ROMX $0a
-	"bankA"
-ROMX $0b
-	"bankB"
-ROMX $0d
-	"Effect Commands"
-ROMX $0e
-	"Enemy Trainers"
-ROMX $0f
-	"Battle Core"
-ROMX $10
-	"bank10"
-ROMX $11
-	"bank11"
-ROMX $12
-	"Crystal Features 1"
-ROMX $13
-	"bank13"
-ROMX $14
-	"bank14"
-ROMX $20
-	"bank20"
-ROMX $21
-	"bank21"
-ROMX $22
-	"Crystal Features 2"
-ROMX $23
-	"bank23"
-ROMX $24
-	"bank24"
-ROMX $25
-	"Maps"
-	"Events"
-ROMX $2e
-	"bank2E"
-ROMX $32
-	"bank32"
-ROMX $33
-	"Move Animations"
-ROMX $36
-	"Font Inversed"
-ROMX $38
-	"bank38"
-ROMX $39
-	"bank39"
-ROMX $3a
-	"Audio"
-ROMX $3e
-	"bank3E"
-ROMX $3f
-	"bank3F"
-ROMX $41
-	"bank41"
-ROMX $42
-	"Intro Logo"
-	"Credits"
-ROMX $43
-	"Title"
-ROMX $5b
-	"bank5B"
-ROMX $5e
-	"UpdateBattleHUDs"
-	"Crystal Sound Effects"
-ROMX $77
-	"bank77"
-	"bank77_2"
-ROMX $7e
-	"Crystal Events"
+ROMX $07
+	"color"
 WRAM0
 	"Stack"
 	"Audio RAM"

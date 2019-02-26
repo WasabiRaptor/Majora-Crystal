@@ -47,7 +47,7 @@
 	const CHINGLING  	; 1b
 	const CHIMECHO  	; 1c
 	const ESPURR  		; 1d
-	const MEOWSTIC_M   	; 1e alt forms alt palettes
+	const MEOWSTIC   	; 1e alt forms alt palettes
 	const TIMBURR  		; 1f
 	const GURDURR  		; 20
 	const CONKELDURR   	; 21
