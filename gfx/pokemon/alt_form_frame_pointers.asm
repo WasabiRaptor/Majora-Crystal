@@ -1,7 +1,7 @@
 LycanrocFramesPointers:
 	dw LycanrocFrames
-	dw Lycanroc_MidnightFrames
 	dw Lycanroc_DuskFrames
+	dw Lycanroc_MidnightFrames
 	dw Lycanroc_DawnFrames
 
 MeowthFramesPointers:

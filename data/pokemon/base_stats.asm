@@ -50,7 +50,6 @@ INCLUDE "data/pokemon/base_stats/zorua.asm"
 INCLUDE "data/pokemon/base_stats/zoroark.asm"
 INCLUDE "data/pokemon/base_stats/rockruff.asm"
 INCLUDE "data/pokemon/base_stats/lycanroc_midday.asm"
-
 INCLUDE "data/pokemon/base_stats/mimikyu.asm"
 INCLUDE "data/pokemon/base_stats/magnemite.asm"
 INCLUDE "data/pokemon/base_stats/magneton.asm"

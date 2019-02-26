@@ -1,7 +1,7 @@
 LycanrocAnimationIdlePointers:
 	dw LycanrocAnimationIdle
-	dw Lycanroc_MidnightAnimationIdle
 	dw Lycanroc_DuskAnimationIdle
+	dw Lycanroc_MidnightAnimationIdle
 	dw Lycanroc_DawnAnimationIdle
 
 MeowthAnimationIdlePointers:

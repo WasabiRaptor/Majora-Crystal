@@ -6,7 +6,7 @@
 
 	db GRASS, GRASS ; type
 	db 45 ; catch rate
-	db 270 ; base exp
+	db 255 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 120 ; step cycles to hatch

@@ -23,7 +23,7 @@ SECTION "bank2", ROMX
 INCLUDE "engine/overworld/player_object.asm"
 INCLUDE "engine/math/sine.asm"
 INCLUDE "engine/predef.asm"
-INCLUDE "engine/gfx/color.asm"
+
 
 
 SECTION "bank3", ROMX
@@ -241,27 +241,16 @@ INCLUDE "engine/events/poke_seer.asm"
 SECTION "bank14", ROMX
 
 INCLUDE "engine/pokemon/party_menu.asm"
-INCLUDE "engine/events/sweet_scent.asm"
-INCLUDE "engine/events/squirtbottle.asm"
-INCLUDE "engine/events/card_key.asm"
-INCLUDE "engine/events/basement_key.asm"
-INCLUDE "engine/events/sacred_ash.asm"
 INCLUDE "engine/pokemon/tempmon.asm"
 INCLUDE "engine/pokemon/types.asm"
 INCLUDE "engine/pokemon/categories.asm"
 INCLUDE "engine/pokemon/mon_stats.asm"
-INCLUDE "engine/link/init_list.asm"
 INCLUDE "engine/pokemon/experience.asm"
 INCLUDE "engine/pokemon/switchpartymons.asm"
-INCLUDE "engine/gfx/load_pics.asm"
 INCLUDE "engine/pokemon/move_mon_wo_mail.asm"
 INCLUDE "data/pokemon/base_stats.asm"
 INCLUDE "data/pokemon/alt_form_base_stats.asm"
 INCLUDE "data/pokemon/names.asm"
-
-UnknownEggPic::
-; Another egg pic. This is shifted up a few pixels.
-INCBIN "gfx/unknown/unknown_egg.2bpp.lz"
 
 
 SECTION "Crystal Phone Text", ROMX
@@ -276,6 +265,13 @@ INCLUDE "engine/events/engine_flags.asm"
 INCLUDE "engine/overworld/variables.asm"
 INCLUDE "data/text/battle.asm"
 INCLUDE "engine/menus/debug.asm"
+INCLUDE "engine/events/squirtbottle.asm"
+INCLUDE "engine/events/card_key.asm"
+INCLUDE "engine/events/basement_key.asm"
+INCLUDE "engine/events/sweet_scent.asm"
+INCLUDE "engine/events/sacred_ash.asm"
+INCLUDE "engine/link/init_list.asm"
+INCLUDE "engine/gfx/load_pics.asm"
 
 
 SECTION "bank21", ROMX
@@ -567,3 +563,5 @@ SECTION "Crystal Events", ROMX
 INCLUDE "engine/events/odd_egg.asm"
 
 
+SECTION "color", ROMX
+INCLUDE "engine/gfx/color.asm"

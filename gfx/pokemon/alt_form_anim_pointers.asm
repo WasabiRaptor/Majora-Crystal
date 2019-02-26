@@ -1,7 +1,7 @@
 LycanrocAnimationPointers:
 	dw LycanrocAnimation
-	dw Lycanroc_MidnightAnimation
 	dw Lycanroc_DuskAnimation
+	dw Lycanroc_MidnightAnimation
 	dw Lycanroc_DawnAnimation
 
 MeowthAnimationPointers:

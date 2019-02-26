@@ -1,7 +1,7 @@
 LycanrocBitmasksPointers:
 	dw LycanrocBitmasks
-	dw Lycanroc_MidnightBitmasks
 	dw Lycanroc_DuskBitmasks
+	dw Lycanroc_MidnightBitmasks
 	dw Lycanroc_DawnBitmasks
 
 MeowthBitmasksPointers:
