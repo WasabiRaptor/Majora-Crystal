@@ -157,8 +157,6 @@ Init::
 
 	call DelayFrame
 
-	predef InitSGBBorder ; SGB init
-
 	call MapSetup_Sound_Off
 	xor a
 	ld [wMapMusic], a

@@ -664,7 +664,7 @@ GetPreEvolution:
 	ret
 
 GetRelevantEvosAttacksPointers:
-; given species in a, return *PicPointers in hl and BANK(*PicPointers) in d
+; given species in a, return *EvosAttacksPointers in hl and BANK(*EvosAttacksPointers) in d
 ; returns c for variants, nc for normal species
 	ld hl, .AltFormEvosAttacksPointerTable
 	ld de, 4

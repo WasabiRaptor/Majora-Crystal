@@ -746,6 +746,12 @@ CelebiNeutralPortrait:  INCBIN "gfx/portraits/Celebi_neutral.2bpp.lz"
 
 
 SECTION "Pics 21", ROMX
+CarbinkFrontpic:      INCBIN "gfx/pokemon/carbink/front.animated.2bpp.lz"
+CarbinkBackpic:       INCBIN "gfx/pokemon/carbink/back.2bpp.lz"
+
+Girafarig_BetaFrontpic:      INCBIN "gfx/pokemon/girafarig_beta/front.animated.2bpp.lz"
+Girafarig_BetaBackpic:       INCBIN "gfx/pokemon/girafarig_beta/back.2bpp.lz"
+
 HydreigonFrontpic:      INCBIN "gfx/pokemon/hydreigon/front.animated.2bpp.lz"
 HydreigonBackpic:       INCBIN "gfx/pokemon/hydreigon/back.2bpp.lz"
 

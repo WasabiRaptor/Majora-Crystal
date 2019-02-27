@@ -215,4 +215,4 @@ GetSGBLayout::
 	ret z
 
 .sgb
-	predef_jump LoadSGBLayout
+	predef_jump LoadSGBLayoutCGB

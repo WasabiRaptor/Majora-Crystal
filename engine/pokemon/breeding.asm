@@ -436,18 +436,19 @@ InitEggMoves:
 GetEggMove:
 	push bc
 	ld hl, wEggMonDVs
+	predef GetFormData
 	ld a, [wEggMonSpecies]
-	cp VULPIX
-	jr z, .vulpix_eggmoves
-
-	ld hl, EggMovePointers
-.got_eggmove_pointers
+	call GetRelevantEggMovePointers
+	ld a, [wEggMonSpecies]
+	jr nc, .notvariant
+	ld a, [wAltForm]
+.notvariant
 	dec a
 	ld c, a
 	ld b, 0
 	add hl, bc
 	add hl, bc
-	ld a, BANK(EggMovePointers)
+	ld a, d
 	call GetFarHalfword
 .loop
 	ld a, BANK("Egg Moves")
@@ -461,16 +462,6 @@ GetEggMove:
 	inc hl
 	jr .loop
 	
-.vulpix_eggmoves
-	predef GetFormData
-	;ld hl, VulpixEggMovePointers
-	jr .got_eggmove_pointers
-
-.vulpix_evosattacks
-	predef GetFormData
-	ld hl, VulpixEvosAttacksPointers
-	jr .got_evosattacks_pointers
-
 .reached_end
 	call GetBreedmonMovePointer
 	ld b, NUM_MOVES
@@ -485,18 +476,19 @@ GetEggMove:
 
 .found_eggmove
 	ld hl, wEggMonDVs
+	predef GetFormData
 	ld a, [wEggMonSpecies]
-	cp VULPIX
-	jr z, .vulpix_evosattacks
-
-	ld hl, EvosAttacksPointers
-.got_evosattacks_pointers
+	call GetRelevantEvosAttacksPointers
+	ld a, [wEggMonSpecies]
+	jr nc, .notvariant2
+	ld a, [wAltForm]
+.notvariant2
 	dec a
 	ld c, a
 	ld b, 0
 	add hl, bc
 	add hl, bc
-	ld a, BANK(EvosAttacksPointers)
+	ld a, d
 	call GetFarHalfword
 .loop3
 	ld a, BANK("Evolutions and Attacks")
@@ -984,3 +976,20 @@ DayCareMonCompatibilityText:
 	; It shows interest in @ .
 	text_jump UnknownText_0x1c0ec6
 	db "@"
+
+GetRelevantEggMovePointers:
+; given species in a, return *EggMovePointers in hl and BANK(*EggMovePointers) in d
+; returns c for variants, nc for normal species
+	ld hl, .AltFormEggMovesPointerTable
+	ld de, 4
+	call IsInArray
+	inc hl
+	ld a, [hli]
+	ld d, a
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ret
+
+.AltFormEggMovesPointerTable:
+INCLUDE "data/pokemon/alt_form_egg_move_pointer_table.asm"

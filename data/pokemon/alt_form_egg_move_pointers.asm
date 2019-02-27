@@ -2,14 +2,6 @@ MeowthEggMovesPointers::
 	dw MeowthEggMoves
 	dw Meowth_AlolaEggMoves
 
-RotomEggMovesPointers::
-	dw RotomEggMoves
-	dw Rotom_FanEggMoves
-	dw Rotom_FrostEggMoves
-	dw Rotom_HeatEggMoves
-	dw Rotom_MowEggMoves
-	dw Rotom_WashEggMoves
-
 GrimerEggMovesPointers::
 	dw GrimerEggMoves
 	dw Grimer_AlolaEggMoves

@@ -1,11 +1,6 @@
 ; Replaces the functionality of sgb.asm to work with CGB hardware.
 
-CheckCGB:
-	ldh a, [hCGB]
-	and a
-	ret
-
-LoadSGBLayoutCGB:
+LoadSGBLayoutCGB::
 	ld a, b
 	cp SCGB_RAM
 	jr nz, .not_ram
@@ -37,17 +32,14 @@ LoadSGBLayoutCGB:
 	dw _CGB_Pokedex
 	dw _CGB_SlotMachine
 	dw _CGB06
-	dw _CGB_GSIntro
 	dw _CGB_Diploma
 	dw _CGB_MapPals
 	dw _CGB_PartyMenu
 	dw _CGB_Evolution
-	dw _CGB_GSTitleScreen
 	dw _CGB0d
 	dw _CGB_MoveList
 	dw _CGB_BetaPikachuMinigame
 	dw _CGB_PokedexSearchOption
-	dw _CGB11
 	dw _CGB_Pokepic
 	dw _CGB13
 	dw _CGB_PackPals
@@ -61,6 +53,11 @@ LoadSGBLayoutCGB:
 	dw _CGB_TrainerOrMonFrontpicPals
 	dw _CGB_MysteryGift
 	dw _CGB1e
+
+CheckCGB:
+	ldh a, [hCGB]
+	and a
+	ret
 
 _CGB_BattleGrayscale:
 	ld hl, PalPacket_BattleGrayscale + 1
@@ -436,84 +433,6 @@ _CGB06:
 	ldh [hCGBPalUpdate], a
 	ret
 
-_CGB_GSIntro:
-	ld b, 0
-	ld hl, .Jumptable
-	add hl, bc
-	add hl, bc
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	jp hl
-
-.Jumptable:
-	dw .ShellderLaprasScene
-	dw .Nidoran_MPikachuScene
-	dw .StartersUmbreonScene
-
-.ShellderLaprasScene:
-	ld hl, .ShellderLaprasBGPalette
-	ld de, wBGPals1
-	call LoadHLPaletteIntoDE
-	ld hl, .ShellderLaprasOBPals
-	ld de, wOBPals1
-	ld bc, 2 palettes
-	ld a, BANK(wOBPals1)
-	call FarCopyWRAM
-	call WipeAttrMap
-	ret
-
-.ShellderLaprasBGPalette:
-	RGB 19, 31, 19
-	RGB 18, 23, 31
-	RGB 11, 21, 28
-	RGB 04, 16, 24
-
-.ShellderLaprasOBPals:
-	RGB 29, 29, 29
-	RGB 20, 19, 20
-	RGB 19, 06, 04
-	RGB 03, 04, 06
-
-	RGB 31, 31, 31
-	RGB 31, 31, 31
-	RGB 31, 00, 00
-	RGB 03, 04, 06
-
-.Nidoran_MPikachuScene:
-	ld de, wBGPals1
-	ld a, PREDEFPAL_GS_INTRO_NIDORAN_PIKACHU_BG
-	call GetPredefPal
-	call LoadHLPaletteIntoDE
-
-	ld de, wOBPals1
-	ld a, PREDEFPAL_GS_INTRO_NIDORAN_PIKACHU_OB
-	call GetPredefPal
-	call LoadHLPaletteIntoDE
-	call WipeAttrMap
-	ret
-
-.StartersUmbreonScene:
-	ld hl, PalPacket_Pack + 1
-	call CopyFourPalettes
-	ld de, wOBPals1
-	ld a, PREDEFPAL_GS_INTRO_STARTERS_TRANSITION
-	call GetPredefPal
-	call LoadHLPaletteIntoDE
-	call WipeAttrMap
-	ret
-
-_CGB11:
-	ld hl, BetaPokerPals
-	ld de, wBGPals1
-	ld bc, 5 palettes
-	ld a, BANK(wBGPals1)
-	call FarCopyWRAM
-	call ApplyPals
-	call WipeAttrMap
-	call ApplyAttrMap
-	ret
-
 _CGB_Diploma:
 	ld hl, DiplomaPalettes
 	ld de, wBGPals1
@@ -573,24 +492,6 @@ _CGB_Evolution:
 .got_palette
 	call WipeAttrMap
 	call ApplyAttrMap
-	call ApplyPals
-	ld a, $1
-	ldh [hCGBPalUpdate], a
-	ret
-
-_CGB_GSTitleScreen:
-	ld hl, UnusedGSTitleBGPals
-	ld de, wBGPals1
-	ld bc, 5 palettes
-	ld a, BANK(wBGPals1)
-	call FarCopyWRAM
-	ld hl, UnusedGSTitleOBPals
-	ld de, wOBPals1
-	ld bc, 2 palettes
-	ld a, BANK(wOBPals1)
-	call FarCopyWRAM
-	ld a, SCGB_DIPLOMA
-	ld [wSGBPredef], a
 	call ApplyPals
 	ld a, $1
 	ldh [hCGBPalUpdate], a
