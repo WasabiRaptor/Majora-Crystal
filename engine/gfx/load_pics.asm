@@ -8,10 +8,15 @@ GetFormData::
 	add hl, bc
 	ld a, [hl]
 	ld [wAltForm], a
+	and a
 	ld bc, 2
 	add hl, bc
 	pop bc
+	ret z
+	ld a, KANTONIAN
+	ld [wAltForm], a
 	ret
+
 
 .unown
 ; Return Unown letter in wAltForm based on DVs at hl
