@@ -15,6 +15,7 @@ GetFormData::
 	ret z
 	ld a, KANTONIAN
 	ld [wAltForm], a
+	ld a, [wCurPartySpecies]
 	ret
 
 
