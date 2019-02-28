@@ -428,7 +428,7 @@ LoadTrainerClassPaletteAsNthBGPal:
 
 LoadMonPaletteAsNthBGPal:
 	ld a, [wCurPartySpecies]
-	call _GetMonPalettePointer
+	call GetMonPalettePointer
 	ld a, e
 	bit 7, a
 	jr z, got_palette_pointer_8bd7
@@ -460,10 +460,9 @@ GetFrontpicPalettePointer:
 	and a
 	jp nz, GetMonNormalOrShinyPalettePointer
 	ld a, [wTrainerClass]
-
-GetMonPalettePointer:
-	call _GetMonPalettePointer
+	call GetTrainerPalettePointer
 	ret
+
 GetBattlemonBackpicPalettePointer:
 	push de
 	farcall GetPartyMonDVs
@@ -576,7 +575,7 @@ CGB_ApplyPartyMenuHPPals:
 	call FillBoxCGB
 	ret
 
-_GetMonPalettePointer:
+GetMonPalettePointer:
 	push de
 	call GetRelevantPallete
 	pop de 
@@ -595,7 +594,7 @@ _GetMonPalettePointer:
 
 GetMonNormalOrShinyPalettePointer:
 	push bc
-	call _GetMonPalettePointer
+	call GetMonPalettePointer
 	pop bc
 	push hl
 	call CheckShininess
