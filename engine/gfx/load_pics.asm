@@ -7,15 +7,14 @@ GetFormData::
 	ld bc, -2
 	add hl, bc
 	ld a, [hl]
-	ld [wAltForm], a
 	and a
+	jr nz, .next
+	ld a, 1
+.next
+	ld [wAltForm], a
 	ld bc, 2
 	add hl, bc
 	pop bc
-	ret z
-	ld a, KANTONIAN
-	ld [wAltForm], a
-	ld a, [wCurPartySpecies]
 	ret
 
 
