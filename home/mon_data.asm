@@ -10,14 +10,15 @@ GetBaseData::
 	ld a, [wCurSpecies]
 	cp EGG
 	jr z, .egg
-	ld bc, BASE_DATA_SIZE
-	push bc
+	push de
 	call GetRelevantBaseData
-	pop bc
+	pop de
+	ld bc, BASE_DATA_SIZE
 	ld a, [wCurSpecies]
 	jr nc, .notaltform
 	ld a, [wAltForm]
 .notaltform
+	dec a
 	call AddNTimes
 	ld de, wCurBaseData
 	ld bc, BASE_DATA_SIZE

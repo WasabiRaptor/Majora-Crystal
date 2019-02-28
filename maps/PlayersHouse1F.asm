@@ -35,6 +35,8 @@ MeetMomRightScript:
 MeetMomScript:
 	opentext
 	givepoke ZORUA, 5, BERRY ; TEMP
+	givepoke NINETALES, 5, BERRY ; TEMP
+
 	;writetext ElmsLookingForYouText
 	;buttonsound
 	stringtotext GearName, MEM_BUFFER_1
@@ -82,16 +84,14 @@ PlayersHouse1FReceiveItemStd:
 	end
 
 MakePartyMon1Alolan:
-	ld a, ALOLAN
+	ld a, [wPartyMon1Form]
+	inc a
 	ld [wPartyMon1Form], a
 	ret
 
 MomScript:
 	opentext
-	callasm MakePartyMon1Alolan
-	pokepic ARAQUANID
-	waitbutton
-	givepoke ARAQUANID, 5
+	givepoke LYCANROC, 5
 	closetext
 	end
 
@@ -149,11 +149,10 @@ NeighborScript:
 	portrait ZYGARDE_NEUTRAL
 	writetext LookAtMeText
 	waitbutton
-	portrait ZYGARDE_ANGRY
-	writetext UrDeadText
-	waitbutton
 	closetext
+	callasm MakePartyMon1Alolan
 	end
+	
 	checktime MORN
 	iftrue .MornScript
 	checktime DAY

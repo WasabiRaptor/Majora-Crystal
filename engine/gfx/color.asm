@@ -576,18 +576,21 @@ CGB_ApplyPartyMenuHPPals:
 	call FillBoxCGB
 	ret
 
-_GetMonPalettePointer:	
+_GetMonPalettePointer:
+	push de
 	call GetRelevantPallete
+	pop de 
 	jr nc, .notvariant
 	ld a, [wAltForm]
-	dec a
 .notvariant
+	dec a
 	ld l, a
 	ld h, $0
 	add hl, hl
 	add hl, hl
 	add hl, hl
 	add hl, bc
+	inc a
 	ret
 
 GetMonNormalOrShinyPalettePointer:
@@ -733,17 +736,17 @@ INCLUDE "gfx/pokegear/pokegear_f.pal"
 PartyMenuBGPalette:
 INCLUDE "gfx/stats/party_menu_bg.pal"
 
-GetRelevantPallete::
+GetRelevantPallete:
 ; given species in a, return *Palette in bc
 	ld hl, .AltFormPaletteTable
 	ld de, 4
 	call IsInArray
-	ld d, a
+	ld d, c
 	inc hl
 	inc hl
 	ld a, [hli]
-	ld b, [hl]
 	ld c, a
+	ld b, [hl]
 	ld a, d
 	ret
 

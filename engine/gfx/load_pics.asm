@@ -1,11 +1,16 @@
 GetFormData::
 	ld a, [wCurPartySpecies]
-	cp VULPIX
-	jr z, .regional
-	cp NINETALES
-	jr z, .regional
 	cp UNOWN
 	jr z, .unown
+	;for form differences not based on DVs
+	push bc
+	ld bc, -2
+	add hl, bc
+	ld a, [hl]
+	ld [wAltForm], a
+	ld bc, 2
+	add hl, bc
+	pop bc
 	ret
 
 .unown
@@ -57,31 +62,6 @@ GetFormData::
 	inc a
 	ld [wAltForm], a
 	ret
-
-.regional
-;I need something here to decide if a pokemon is Kantonian or Alolan, then have a mirror of it in the wild pokemon generation to force that on certain routes or in certain battle types
-
-	push bc
-	ld bc, -2
-	add hl, bc
-	ld a, [hl]
-	cp ALOLAN
-	ld bc, 2
-	add hl, bc
-	pop bc
-
-	jr z, .alolan
-
-	ld a, KANTONIAN
-	jr .done
-
-.alolan
-	ld a, ALOLAN
-.done
-	ld [wAltForm], a
-	ret
-
-
 
 GetMonFrontpic:
 	ld a, [wCurPartySpecies]

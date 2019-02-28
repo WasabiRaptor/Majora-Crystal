@@ -1,3 +1,4 @@
+
     dbba LYCANROC,  LycanrocBaseData
     dbba MEOWTH,    MeowthBaseData  
     dbba PERSIAN,   PersianBaseData   

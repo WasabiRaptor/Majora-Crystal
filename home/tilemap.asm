@@ -205,14 +205,4 @@ GetMemSGBLayout::
 	ld b, SCGB_RAM
 GetSGBLayout::
 ; load sgb packets unless dmg
-
-	ldh a, [hCGB]
-	and a
-	jr nz, .sgb
-
-	ldh a, [hSGB]
-	and a
-	ret z
-
-.sgb
 	predef_jump LoadSGBLayoutCGB

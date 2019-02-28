@@ -5,13 +5,6 @@ PokemonPalettes:
 ; only the middle two colors are included, not black or white.
 ; Shiny palettes are defined directly, not generated.
 
-; 000
-	RGB 30, 22, 17
-	RGB 16, 14, 19
-; 000 shiny
-	RGB 30, 22, 17
-	RGB 16, 14, 19
-
 INCBIN "gfx/pokemon/eevee/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/eevee/shiny.pal"
 INCBIN "gfx/pokemon/vaporeon/front.gbcpal", middle_colors
@@ -521,10 +514,3 @@ INCLUDE "gfx/pokemon/mewtwo/shiny.pal"
 INCBIN "gfx/pokemon/egg/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/egg/shiny.pal"
 
-
-; 255
-	RGB 23, 23, 23
-	RGB 17, 17, 17
-; 255 shiny
-	RGB 23, 23, 23
-	RGB 17, 17, 17

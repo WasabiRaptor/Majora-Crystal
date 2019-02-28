@@ -68,7 +68,7 @@ AltFormFramesPointerTable:
     dbbba ENTEI,        BANK(EnteiFrames), EnteiFramesPointers
     dbbba SHAYMIN,      BANK(ShayminFrames), ShayminFramesPointers
     dbbba ZYGARDE,      BANK(ZygardeFrames), ZygardeFramesPointers
-	dbbba -1, BANK(KantoFrames), FramesPointers
+	dbbba -1,           BANK(KantoFrames), FramesPointers
 
 AltFormBitmasksPointerTable:
 	dbba LYCANROC,      LycanrocBitmasksPointers
