@@ -22,7 +22,7 @@ GetBaseData::
 	rst AddNTimes
 	ld de, wCurBaseData
 	ld bc, BASE_DATA_SIZE
-	call CopyBytes
+	rst CopyBytes
 	jr .end	
 
 .egg
@@ -46,7 +46,7 @@ GetCurNick::
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMonNicknames
 
-GetNick::
+GetNick:: ; 38a2
 ; Get nickname a from list hl.
 
 	push hl
@@ -57,14 +57,13 @@ GetNick::
 
 	push de
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	pop de
-
-	callfar CorrectNickErrors
 
 	pop bc
 	pop hl
 	ret
+; 38bb
 
 GetRelevantBaseData:
 ; given species in a, return *BaseData in hl and BANK(*BaseData) bankswitch the bank

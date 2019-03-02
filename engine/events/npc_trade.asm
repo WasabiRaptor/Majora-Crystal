@@ -292,7 +292,7 @@ GetTradeMonName:
 
 CopyTradeName:
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 Trade_CopyTwoBytes:

@@ -2,11 +2,11 @@
 
 Predef_LoadCGBLayout::
 	ld a, b
-	cp SCGB_RAM
+	cp CGB_RAM
 	jr nz, .not_ram
 	ld a, [wSGBPredef]
 .not_ram
-	cp SCGB_PARTY_MENU_HP_PALS
+	cp CGB_PARTY_MENU_HP_PALS
 	jp z, CGB_ApplyPartyMenuHPPals
 	call ResetBGPals
 	ld l, a
@@ -105,7 +105,7 @@ _CGB_BattleColors:
 	call LoadPalette_White_Col1_Col2_Black ; PAL_BATTLE_OB_ENEMY
 	pop hl
 	call LoadPalette_White_Col1_Col2_Black ; PAL_BATTLE_OB_PLAYER
-	ld a, SCGB_BATTLE_COLORS
+	ld a, CGB_BATTLE_COLORS
 	ld [wSGBPredef], a
 	call ApplyPals
 _CGB_FinishBattleScreenLayout:
@@ -416,7 +416,7 @@ _CGB_SlotMachine:
 	ret
 
 _CGB06:
-	ld hl, PalPacket_SCGB_06 + 1
+	ld hl, PalPacket_CGB_06 + 1
 	call CopyFourPalettes
 	call WipeAttrMap
 	ld de, wOBPals1
@@ -448,7 +448,7 @@ _CGB_Diploma:
 
 _CGB_MapPals:
 	call LoadMapPals
-	ld a, SCGB_MAPPALS
+	ld a, CGB_MAPPALS
 	ld [wSGBPredef], a
 	ret
 
@@ -770,7 +770,7 @@ _CGB_Pokepic:
 	ret
 
 _CGB13:
-	ld hl, PalPacket_SCGB_13 + 1
+	ld hl, PalPacket_CGB_13 + 1
 	call CopyFourPalettes
 	call WipeAttrMap
 	hlcoord 0, 4, wAttrMap

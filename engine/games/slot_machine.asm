@@ -106,7 +106,7 @@ _SlotMachine:
 	ld bc, vBGMap1 - vBGMap0
 	ld a, " "
 	call ByteFill
-	ld b, SCGB_SLOT_MACHINE
+	ld b, CGB_SLOT_MACHINE
 	call GetCGBLayout
 	callfar ClearSpriteAnims
 	ld hl, wSlots
@@ -133,7 +133,7 @@ _SlotMachine:
 	ld hl, SlotsTilemap
 	decoord 0, 0
 	ld bc, SCREEN_WIDTH * 12
-	call CopyBytes
+	rst CopyBytes
 
 	ld hl, rLCDC
 	set rLCDC_SPRITE_SIZE, [hl] ; 8x16
@@ -1688,7 +1688,7 @@ Slots_AskBet:
 	call WaitSFX
 	ld de, SFX_PAY_DAY
 	call PlaySFX
-	ld hl, .Text_Start
+	ld hl, .text_start
 	call PrintText
 	and a
 	ret
@@ -1698,7 +1698,7 @@ Slots_AskBet:
 	text_jump UnknownText_0x1c5049
 	db "@"
 
-.Text_Start:
+.text_start:
 	; Start!
 	text_jump UnknownText_0x1c505e
 	db "@"
@@ -1810,7 +1810,7 @@ Slots_PayoutText:
 	add hl, de
 	ld de, wStringBuffer2
 	ld bc, 4
-	call CopyBytes
+	rst CopyBytes
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a

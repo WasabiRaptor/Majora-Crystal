@@ -202,7 +202,7 @@ GetHallOfFameParty:
 	ld bc, MON_NAME_LENGTH
 	rst AddNTimes
 	ld bc, MON_NAME_LENGTH - 1
-	call CopyBytes
+	rst CopyBytes
 
 	pop bc
 	inc c
@@ -253,7 +253,7 @@ AnimateHOFMonEntrance:
 	call WaitBGMap
 	xor a
 	ldh [hBGMapMode], a
-	ld b, SCGB_PLAYER_OR_MON_FRONTPIC_PALS
+	ld b, CGB_PLAYER_OR_MON_FRONTPIC_PALS
 	call GetCGBLayout
 	call SetPalettes
 	call HOF_SlideBackpic
@@ -385,7 +385,7 @@ _HallOfFamePC:
 	ld de, .EmptyString
 	call PlaceString
 	call WaitBGMap
-	ld b, SCGB_PLAYER_OR_MON_FRONTPIC_PALS
+	ld b, CGB_PLAYER_OR_MON_FRONTPIC_PALS
 	call GetCGBLayout
 	call SetPalettes
 	decoord 6, 5
@@ -417,7 +417,7 @@ LoadHOFTeam:
 	jr z, .absent
 	ld de, wHallOfFameTemp
 	ld bc, wHallOfFameTempEnd - wHallOfFameTemp + 1
-	call CopyBytes
+	rst CopyBytes
 	call CloseSRAM
 	and a
 	ret
@@ -446,7 +446,7 @@ DisplayHOFMon:
 	ld [wTempMonLevel], a
 	ld de, wStringBuffer2
 	ld bc, MON_NAME_LENGTH - 1
-	call CopyBytes
+	rst CopyBytes
 	ld a, "@"
 	ld [wStringBuffer2 + 10], a
 	hlcoord 0, 0
@@ -535,7 +535,7 @@ HOF_AnimatePlayerPic:
 	xor a
 	ldh [hBGMapMode], a
 	ld [wCurPartySpecies], a
-	ld b, SCGB_PLAYER_OR_MON_FRONTPIC_PALS
+	ld b, CGB_PLAYER_OR_MON_FRONTPIC_PALS
 	call GetCGBLayout
 	call SetPalettes
 	call HOF_SlideBackpic

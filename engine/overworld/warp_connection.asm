@@ -309,7 +309,7 @@ LoadGraphics:
 	ret
 
 LoadMapPalettes:
-	ld b, SCGB_MAPPALS
+	ld b, CGB_MAPPALS
 	jp GetCGBLayout
 
 RefreshMapSprites:

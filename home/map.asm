@@ -1429,7 +1429,7 @@ LoadTilesetGFX::
 	ld hl, wDecompressScratch
 	ld de, vTiles2
 	ld bc, $7f tiles
-	call CopyBytes
+	rst CopyBytes
 
 	ldh a, [rVBK]
 	push af
@@ -1439,7 +1439,7 @@ LoadTilesetGFX::
 	ld hl, wDecompressScratch + $80 tiles
  	ld de, vTiles2
 	ld bc, $80 tiles
- 	call CopyBytes
+ 	rst CopyBytes
 
 	pop af
 	ldh [rVBK], a
@@ -1902,7 +1902,7 @@ CheckIfFacingTileCoordIsBGEvent::
 	pop hl
 	ld de, wCurBGEventYCoord
 	ld bc, 5 ; BG event event length
-	call CopyBytes
+	rst CopyBytes
 	scf
 	ret
 
@@ -1974,7 +1974,7 @@ CheckCurrentMapCoordEvents::
 	pop hl
 	ld de, wCurCoordEventSceneID
 	ld bc, 8 ; coord event size
-	call CopyBytes
+	rst CopyBytes
 	scf
 	ret
 
@@ -2002,7 +2002,7 @@ ExitAllMenus::
 	call UpdateSprites
 	call ret_d90
 FinishExitMenu::
-	ld b, SCGB_MAPPALS
+	ld b, CGB_MAPPALS
 	call GetCGBLayout
 	farcall LoadOW_BGPal7
 	call WaitBGMap2
@@ -2024,7 +2024,7 @@ ReturnToMapWithSpeechTextbox::
 	set 0, [hl]
 	call UpdateSprites
 	call WaitBGMap2
-	ld b, SCGB_MAPPALS
+	ld b, CGB_MAPPALS
 	call GetCGBLayout
 	farcall LoadOW_BGPal7
 	call UpdateTimePals
@@ -2162,7 +2162,7 @@ CopyMapPartial::
 	call GetMapPointer
 	ld de, wMapPartial
 	ld bc, wMapPartialEnd - wMapPartial
-	call CopyBytes
+	rst CopyBytes
 
 	pop af
 	rst Bankswitch

@@ -139,13 +139,13 @@ GetCaughtName:
 	rst AddNTimes
 	ld de, wSeerNickname
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 UnknownCaughtData:
 	ld hl, .unknown
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 .unknown
@@ -158,7 +158,7 @@ GetCaughtOT:
 	rst AddNTimes
 	ld de, wSeerOTName
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 ; this routine is useless in Western localizations
 	ld hl, .male

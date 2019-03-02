@@ -1,6 +1,6 @@
 GetMysteryGift_MobileAdapterLayout:
 	ld a, b
-	cp SCGB_RAM
+	cp CGB_RAM
 	jr nz, .not_ram
 	ld a, [wSGBPredef]
 .not_ram

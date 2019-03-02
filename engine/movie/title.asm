@@ -44,12 +44,12 @@ _TitleScreen:
 	ld hl, TitlePalette1
 	ld de, wBGPals1
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 
 	ld hl, TitlePalette1
 	ld de, wBGPals2
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 
 	pop af
 	ldh [rSVBK], a
@@ -214,72 +214,72 @@ choosetwinkle:
 	ld hl, TitleStarsPalette1
 	ld de, wBGPals1
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 
 	ld hl, TitleStarsPalette1
 	ld de, wBGPals2
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 .StarsPalette2
 	ld hl, TitleStarsPalette2
 	ld de, wBGPals1
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 
 	ld hl, TitleStarsPalette2
 	ld de, wBGPals2
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 .StarsPalette3
 	ld hl, TitleStarsPalette3
 	ld de, wBGPals1
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 
 	ld hl, TitleStarsPalette3
 	ld de, wBGPals2
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 .StarsPalette4
 	ld hl, TitleStarsPalette4
 	ld de, wBGPals1
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 
 	ld hl, TitleStarsPalette4
 	ld de, wBGPals2
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 .StarsPalette5
 	ld hl, TitleStarsPalette5
 	ld de, wBGPals1
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 
 	ld hl, TitleStarsPalette5
 	ld de, wBGPals2
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 .StarsPalette6
 	ld hl, TitleStarsPalette6
 	ld de, wBGPals1
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 
 	ld hl, TitleStarsPalette6
 	ld de, wBGPals2
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 TitleBackgroundGFX:

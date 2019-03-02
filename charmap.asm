@@ -2,39 +2,74 @@
 
 ; Control characters (see home/text.asm)
 
-	charmap "<NULL>",    $00
-	charmap "<PLAY_G>",  $14 ; "<PLAYER>くん" or "<PLAYER>ちゃん"; same as "<PLAYER>" in English
-	charmap "<MOBILE>",  $15
-	charmap "<CR>",      $16
-	charmap "¯",         $1f ; soft linebreak
-	charmap "<LF>",      $22
-	charmap "<POKE>",    $24 ; "<PO><KE>"
-	charmap "%",         $25 ; soft linebreak in landmark names
-	charmap "<RED>",     $38 ; wRedsName
-	charmap "<GREEN>",   $39 ; wGreensName
-	charmap "<ENEMY>",   $3f
-	charmap "<MOM>",     $49 ; wMomsName
-	charmap "<PKMN>",    $4a ; "<PK><MN>"
-	charmap "<_CONT>",   $4b ; implements "<CONT>"
-	charmap "<SCROLL>",  $4c
-	charmap "<NEXT>",    $4e
-	charmap "<LINE>",    $4f
-	charmap "@",         $50 ; string terminator
-	charmap "<PARA>",    $51
-	charmap "<PLAYER>",  $52 ; wPlayerName
-	charmap "<RIVAL>",   $53 ; wRivalName
-	charmap "#",         $54 ; "POKé"
-	charmap "<CONT>",    $55
-	charmap "<……>",      $56 ; "……"
-	charmap "<DONE>",    $57
-	charmap "<PROMPT>",  $58
-	charmap "<TARGET>",  $59
-	charmap "<USER>",    $5a
-	charmap "<PC>",      $5b ; "PC"
-	charmap "<TM>",      $5c ; "TM"
-	charmap "<TRAINER>", $5d ; "TRAINER"
-	charmap "<ROCKET>",  $5e ; "ROCKET"
-	charmap "<DEXEND>",  $5f
+	charmap "<START>",  $00
+	charmap "<RAM>",    $01
+	charmap "<BCD>",    $02
+	charmap "<MOVE>",   $03
+	charmap "<BOX>",    $04
+	charmap "<LOW>",    $05
+	charmap "<WAIT>",   $06
+	charmap "<SCROLL>", $07
+	charmap "<ASM>",    $08
+	charmap "<NUM>",    $09
+	charmap "<EXIT>",   $0a
+	charmap "<DEX2>",   $0b
+	charmap "<DOTS>",   $0c
+	charmap "<LINK>",   $0d
+	charmap "<DEX1>",   $0e
+	charmap "<ITEM>",   $0f
+	charmap "<CAUGHT>", $10
+	charmap "<DEX3>",   $11
+	charmap "<BEEP>",   $12
+	charmap "<SLOTS>",  $13
+	charmap "<BUFFER>", $14
+	charmap "<DAY>",    $15
+	charmap "<FAR>",    $16
+
+	charmap "¯",        $1f
+	charmap "<LNBRK>",  $22
+	charmap "<NEXT>",   $25
+
+	charmap "le",       $2c
+	charmap "ng",       $2d
+	charmap "te",       $2e
+	charmap "as",       $2f
+	charmap "or",       $30
+	charmap "ou",       $31
+	charmap "re",       $32
+	charmap "in",       $33
+	charmap "er",       $34
+	charmap "on",       $35
+	charmap "th",       $36
+	charmap "and",      $37
+	charmap "have",     $38
+	charmap "that",     $39
+	charmap "for",      $3a
+	charmap "with",     $3b
+	charmap "an",       $3c
+	charmap "ing",      $3d
+
+	charmap "<_CONT>",  $4b
+	charmap "<SCRL2>",  $4c
+	charmap "<NL>",     $4e
+	charmap "<LINE>",   $4f
+
+	charmap "@",        $50
+	charmap "<PARA>",   $51
+	charmap "<PLAYER>", $52
+	charmap "<RIVAL>",  $53
+	charmap "#",        $54
+	charmap "<CONT>",   $55
+	charmap "<DONE>",   $57
+	charmap "<PROMPT>", $58
+	charmap "<TARGET>", $59
+	charmap "<USER>",   $5a
+	charmap "<ENEMY>",  $5b
+
+	charmap "the",      $5c
+	charmap "you",      $5d
+	charmap "#mon",     $5e
+	charmap "to",       $5f
 
 ; Actual characters (from gfx/font/font_battle_extra.png)
 
@@ -71,6 +106,8 @@
 	charmap "N",         $8d
 	charmap "O",         $8e
 	charmap "P",         $8f
+	charmap "<BOLDP>",   $8f
+
 	charmap "Q",         $90
 	charmap "R",         $91
 	charmap "S",         $92
@@ -143,6 +180,7 @@
 	charmap "■",         $d7
 	charmap "▲",         $d8
 	charmap "☎",         $d9
+	charmap "<_>",       $d9
 	charmap "<COLON>",   $dc ; colon with tinier dots than ":"
 	charmap "“",         $dd ; opening quote
 	charmap "”",         $de ; closing quote
@@ -152,6 +190,8 @@
 	charmap "<PK>",      $e1
 	charmap "<MN>",      $e2
 	charmap "-",         $e3
+	charmap "<—>",       $e3
+
 
 	charmap "<PO>",      $e4
 	charmap "<KE>",      $e5
@@ -169,7 +209,6 @@
 	charmap "▶",         $ed
 	charmap "▼",         $ee
 	charmap "♂",         $ef
-	charmap "<MALE>",    $ef
 	
 	charmap "¥",         $f0
 	charmap "×",         $f1
@@ -177,7 +216,6 @@
 	charmap "/",         $f3
 	charmap ",",         $f4
 	charmap "♀",         $f5
-	charmap "<FEMALE>",  $f5
 
 	charmap "0",         $f6
 	charmap "1",         $f7
@@ -190,20 +228,31 @@
 	charmap "8",         $fe
 	charmap "9",         $ff
 
-; Japanese control characters (see home/text.asm)
+BATTLEEXTRA_GFX_START EQU $5f
 
-	charmap "<JP_18>",   $18 ; "ノ゛"? (ungrammatical)
-	charmap "<NI>",      $1d ; "に　"
-	charmap "<TTE>",     $1e ; "って"
-	charmap "<WO>",      $1f ; "を　"
-	charmap "<TA!>",     $22 ; "た！"
-	charmap "<KOUGEKI>", $23 ; "こうげき"
-	charmap "<WA>",      $24 ; "は　"
-	charmap "<NO>",      $25 ; "の　"
-	charmap "<ROUTE>",   $35 ; "ばん　どうろ"
-	charmap "<WATASHI>", $36 ; "わたし"
-	charmap "<KOKO_WA>", $37 ; "ここは"
-	charmap "<GA>",      $4a ; "が　"
+	charmap "<BALL>",   $5f
+	charmap "<MALE>",   $60
+	charmap "<FEMALE>", $61
+	charmap "<STAR>",   $62
+
+	charmap "<HP1>",    $63
+	charmap "<HP2>",    $64
+	charmap "<NOHP>",   $65
+	charmap "<FULLHP>", $6d
+	charmap "<HPEND>",  $6e
+
+	charmap "_",        $6f
+	charmap "◢",        $70
+	charmap "—",        $71
+	charmap "◣",        $72
+
+	charmap "<XP1>",    $73
+	charmap "<XP2>",    $74
+	charmap "<NOXP>",   $75
+	charmap "<FULLXP>", $7d
+	charmap "<XPEND>",  $7e
+
+	charmap "<NONO>",   $f2 ; overwrites <PHONE> in battle
 
 ; Japanese kana, for those bits of text that were not translated to English
 

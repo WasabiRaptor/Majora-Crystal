@@ -5,7 +5,7 @@ MainMenu:
 	xor a
 	ld [wDisableTextAcceleration], a
 	call Function49ed0
-	ld b, SCGB_DIPLOMA
+	ld b, CGB_DIPLOMA
 	call GetCGBLayout
 	call SetPalettes
 	ld hl, wGameTimerPause

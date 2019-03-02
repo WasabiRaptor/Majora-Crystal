@@ -49,7 +49,8 @@ NUM_LEVEL_STATS EQU const_value
 	const MOVE_ACC    ; 4
 	const MOVE_PP     ; 5
 	const MOVE_CHANCE ; 6
-MOVE_LENGTH EQU const_value
+	const MOVE_CATEGORY
+	const MOVE_LENGTH
 
 ; stat constants
 ; indexes for:
@@ -254,8 +255,7 @@ SUBSTATUS_CURLED EQU 0
 	const BATTLEACTION_A
 	const BATTLEACTION_B
 	const BATTLEACTION_C
-	const BATTLEACTION_D
-	const BATTLEACTION_E
+	const BATTLEACTION_STRUGGLE
 	const BATTLEACTION_FORFEIT
 
 ; wBattlePlayerAction

@@ -62,7 +62,7 @@ _DepositPKMN:
 	call PCMonInfo
 	ld a, $ff
 	ld [wCurPartySpecies], a
-	ld a, SCGB_BILLS_PC
+	ld a, CGB_BILLS_PC
 	call BillsPC_ApplyPalettes
 	call WaitBGMap
 	call BillsPC_UpdateSelectionCursor
@@ -117,7 +117,7 @@ _DepositPKMN:
 	call ClearSprites
 	call BillsPC_GetSelectedPokemonSpecies
 	ld [wCurPartySpecies], a
-	ld a, SCGB_BILLS_PC
+	ld a, CGB_BILLS_PC
 	call BillsPC_ApplyPalettes
 	ld de, PCString_WhatsUp
 	call BillsPC_PlaceString
@@ -176,7 +176,7 @@ BillsPCDepositFuncStats:
 	call PCMonInfo
 	call BillsPC_GetSelectedPokemonSpecies
 	ld [wCurPartySpecies], a
-	ld a, SCGB_BILLS_PC
+	ld a, CGB_BILLS_PC
 	call BillsPC_ApplyPalettes
 	ret
 
@@ -305,7 +305,7 @@ _WithdrawPKMN:
 	call PCMonInfo
 	ld a, $ff
 	ld [wCurPartySpecies], a
-	ld a, SCGB_BILLS_PC
+	ld a, CGB_BILLS_PC
 	call BillsPC_ApplyPalettes
 	call WaitBGMap
 	call BillsPC_UpdateSelectionCursor
@@ -359,7 +359,7 @@ _WithdrawPKMN:
 	call ClearSprites
 	call BillsPC_GetSelectedPokemonSpecies
 	ld [wCurPartySpecies], a
-	ld a, SCGB_BILLS_PC
+	ld a, CGB_BILLS_PC
 	call BillsPC_ApplyPalettes
 	ld de, PCString_WhatsUp
 	call BillsPC_PlaceString
@@ -417,7 +417,7 @@ BillsPC_Withdraw:
 	call PCMonInfo
 	call BillsPC_GetSelectedPokemonSpecies
 	ld [wCurPartySpecies], a
-	ld a, SCGB_BILLS_PC
+	ld a, CGB_BILLS_PC
 	call BillsPC_ApplyPalettes
 	ret
 
@@ -546,7 +546,7 @@ _MovePKMNWithoutMail:
 	call PCMonInfo
 	ld a, $ff
 	ld [wCurPartySpecies], a
-	ld a, SCGB_BILLS_PC
+	ld a, CGB_BILLS_PC
 	call BillsPC_ApplyPalettes
 	call WaitBGMap
 	call BillsPC_UpdateSelectionCursor
@@ -610,7 +610,7 @@ _MovePKMNWithoutMail:
 	call ClearSprites
 	call BillsPC_GetSelectedPokemonSpecies
 	ld [wCurPartySpecies], a
-	ld a, SCGB_BILLS_PC
+	ld a, CGB_BILLS_PC
 	call BillsPC_ApplyPalettes
 	ld de, PCString_WhatsUp
 	call BillsPC_PlaceString
@@ -664,7 +664,7 @@ _MovePKMNWithoutMail:
 	call PCMonInfo
 	call BillsPC_GetSelectedPokemonSpecies
 	ld [wCurPartySpecies], a
-	ld a, SCGB_BILLS_PC
+	ld a, CGB_BILLS_PC
 	call BillsPC_ApplyPalettes
 	ret
 
@@ -1285,7 +1285,7 @@ BillsPC_RefreshTextboxes:
 	rst AddNTimes
 	ld de, wStringBuffer1
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	call CloseSRAM
 	pop hl
 	ld de, wStringBuffer1
@@ -1311,7 +1311,7 @@ BillsPC_RefreshTextboxes:
 	rst AddNTimes
 	ld de, wStringBuffer1
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	pop hl
 	ld de, wStringBuffer1
 	call PlaceString
@@ -1337,7 +1337,7 @@ BillsPC_RefreshTextboxes:
 	rst AddNTimes
 	ld de, wStringBuffer1
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	call CloseSRAM
 	pop hl
 	ld de, wStringBuffer1
@@ -1688,7 +1688,7 @@ BillsPC_CopyMon:
 	rst AddNTimes
 	ld de, wBufferMon
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	call CloseSRAM
 	farcall CalcBufferMonStats
 	ret
@@ -1706,7 +1706,7 @@ BillsPC_CopyMon:
 	rst AddNTimes
 	ld de, wBufferMon
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 .box
@@ -2086,7 +2086,7 @@ CopyNicknameToTemp:
 	rst AddNTimes
 	ld de, wBufferMonNick
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 CopyOTNameToTemp:
@@ -2095,14 +2095,14 @@ CopyOTNameToTemp:
 	rst AddNTimes
 	ld de, wBufferMonOT
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 CopyMonToTemp:
 	ld a, [wCurPartyMon]
 	rst AddNTimes
 	ld de, wBufferMon
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 GetBoxPointer:
@@ -2167,7 +2167,7 @@ BillsPC_InitGFX:
 	ld hl, PCMailGFX
 	ld de, vTiles2 tile $5c
 	ld bc, 4 tiles
-	call CopyBytes
+	rst CopyBytes
 	ld hl, PCSelectLZ
 	ld de, vTiles0 tile $00
 	call Decompress

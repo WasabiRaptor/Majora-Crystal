@@ -1,4 +1,4 @@
-CopyBytes::
+_CopyBytes::
 ; copy bc bytes from hl to de
 	inc b ; we bail the moment b hits 0, so include the last run
 	inc c ; same thing; include last byte
@@ -98,7 +98,7 @@ FarCopyWRAM::
 	ldh a, [hBuffer]
 	ldh [rSVBK], a
 
-	call CopyBytes
+	rst CopyBytes
 
 	pop af
 	ldh [rSVBK], a

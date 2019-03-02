@@ -77,7 +77,7 @@ _PlayerDecorationMenu:
 	ld hl, wStringBuffer2
 	ld de, wd002
 	ld bc, ITEM_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 .ClearStringBuffer2:

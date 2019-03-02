@@ -566,7 +566,7 @@ GiveItem:
 	ld hl, wStringBuffer1
 	ld de, wMonOrItemNameBuffer
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	call TryGiveItemToPartymon
 	pop af
 	ld [wPackJumptableIndex], a
@@ -1415,7 +1415,7 @@ ClearPocketList:
 
 Pack_InitColors:
 	call WaitBGMap
-	ld b, SCGB_PACKPALS
+	ld b, CGB_PACKPALS
 	call GetCGBLayout
 	call SetPalettes
 	call DelayFrame

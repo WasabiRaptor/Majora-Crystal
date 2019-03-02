@@ -150,11 +150,11 @@ Function8197c:
 	ld hl, DebugColorTestGFX + 1 tiles
 	ld de, vTiles2 tile DEBUGTEST_UP_ARROW
 	ld bc, 22 tiles
-	call CopyBytes
+	rst CopyBytes
 	ld hl, DebugColorTestGFX
 	ld de, vTiles0
 	ld bc, 1 tiles
-	call CopyBytes
+	rst CopyBytes
 	call LoadStandardFont
 	ld hl, vTiles1
 	lb bc, 8, 0
@@ -179,7 +179,7 @@ Function819a7:
 	ld hl, Palette_DebugBG
 	ld de, wBGPals2
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld a, 1 << rBGPI_AUTO_INCREMENT
 	ldh [rBGPI], a
 	ld hl, Palette_DebugBG
@@ -415,7 +415,7 @@ Function81bf4:
 	add hl, de
 	ld de, wc608
 	ld bc, 4
-	call CopyBytes
+	rst CopyBytes
 	xor a
 	ld [wcf64], a
 	ld [wcf65], a
@@ -852,7 +852,7 @@ Function81eca:
 	ld d, h
 	ld hl, wc608
 	ld bc, 4
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 Function81ee3:
@@ -1140,7 +1140,7 @@ Function8220f:
 	add hl, de
 	ld de, wc608
 	ld bc, 8
-	call CopyBytes
+	rst CopyBytes
 	ld de, wc608
 	call Function81ea5
 	pop af
@@ -1187,7 +1187,7 @@ Function82236:
 	rst AddNTimes
 	ld de, wc608
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	ld a, $2
@@ -1218,7 +1218,7 @@ Function822a3:
 	ld d, h
 	ld hl, wc608
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 	hlcoord 1, 0
 	ld de, wc608
 	call Function81ca7

@@ -249,7 +249,7 @@ Pokedex_InitMainScreen:
 	call Pokedex_ResetBGMapMode
 	ld a, -1
 	ld [wCurPartySpecies], a
-	ld a, SCGB_POKEDEX
+	ld a, CGB_POKEDEX
 	call Pokedex_GetCGBLayout
 	call Pokedex_UpdateCursorOAM
 	farcall DrawPokedexListWindow
@@ -342,7 +342,7 @@ Pokedex_InitDexEntryScreen:
 	ldh [hWX], a
 	call Pokedex_GetSelectedMon
 	ld [wCurPartySpecies], a
-	ld a, SCGB_POKEDEX
+	ld a, CGB_POKEDEX
 	call Pokedex_GetCGBLayout
 	ld a, [wCurPartySpecies]
 	call PlayMonCry
@@ -411,7 +411,7 @@ Pokedex_ReinitDexEntryScreen:
 	call WaitBGMap
 	call Pokedex_GetSelectedMon
 	ld [wCurPartySpecies], a
-	ld a, SCGB_POKEDEX
+	ld a, CGB_POKEDEX
 	call Pokedex_GetCGBLayout
 	ld a, [wCurPartySpecies]
 	call PlayMonCry
@@ -459,7 +459,7 @@ DexEntryScreen_MenuActionJumptable:
 	call WaitBGMap
 	call Pokedex_GetSelectedMon
 	ld [wCurPartySpecies], a
-	ld a, SCGB_POKEDEX
+	ld a, CGB_POKEDEX
 	call Pokedex_GetCGBLayout
 	ret
 
@@ -513,7 +513,7 @@ Pokedex_InitOptionScreen:
 	ld [wDexArrowCursorPosIndex], a
 	call Pokedex_DisplayModeDescription
 	call WaitBGMap
-	ld a, SCGB_POKEDEX_SEARCH_OPTION
+	ld a, CGB_POKEDEX_SEARCH_OPTION
 	call Pokedex_GetCGBLayout
 	call Pokedex_IncrementDexPointer
 	ret
@@ -621,7 +621,7 @@ Pokedex_InitSearchScreen:
 	ld [wDexSearchSlowpokeFrame], a
 	farcall DoDexSearchSlowpokeFrame
 	call WaitBGMap
-	ld a, SCGB_POKEDEX_SEARCH_OPTION
+	ld a, CGB_POKEDEX_SEARCH_OPTION
 	call Pokedex_GetCGBLayout
 	call Pokedex_IncrementDexPointer
 	ret
@@ -740,7 +740,7 @@ Pokedex_InitSearchResultsScreen:
 	call Pokedex_UpdateSearchResultsCursorOAM
 	ld a, -1
 	ld [wCurPartySpecies], a
-	ld a, SCGB_POKEDEX
+	ld a, CGB_POKEDEX
 	call Pokedex_GetCGBLayout
 	call Pokedex_IncrementDexPointer
 	ret
@@ -800,7 +800,7 @@ Pokedex_InitUnownMode:
 	call Pokedex_UnownModePlaceCursor
 	farcall PrintUnownWord
 	call WaitBGMap
-	ld a, SCGB_POKEDEX_UNOWN_MODE
+	ld a, CGB_POKEDEX_UNOWN_MODE
 	call Pokedex_GetCGBLayout
 	call Pokedex_IncrementDexPointer
 	ret
@@ -2526,7 +2526,7 @@ _NewPokedexEntry:
 	call GetBaseData
 	ld de, vTiles2
 	predef GetMonFrontpic
-	ld a, SCGB_POKEDEX
+	ld a, CGB_POKEDEX
 	call Pokedex_GetCGBLayout
 	ld a, [wCurPartySpecies]
 	call PlayMonCry

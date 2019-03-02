@@ -3,7 +3,7 @@ MoveTutor:
 	call ClearBGPalettes
 	call ClearScreen
 	call DelayFrame
-	ld b, SCGB_PACKPALS
+	ld b, CGB_PACKPALS
 	call GetCGBLayout
 	xor a
 	ld [wItemAttributeParamBuffer], a

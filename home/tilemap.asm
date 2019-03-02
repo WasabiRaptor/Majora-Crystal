@@ -202,7 +202,7 @@ ClearPalettes::
 	ret
 
 GetMemCGBLayout::
-	ld b, SCGB_RAM
+	ld b, CGB_RAM
 GetCGBLayout::
 ; load sgb packets unless dmg
 	predef_jump Predef_LoadCGBLayout

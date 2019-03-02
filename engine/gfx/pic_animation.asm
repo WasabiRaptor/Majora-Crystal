@@ -144,7 +144,7 @@ SetUpPokeAnim: ; d00b4
 ; d00da
 
 PokeAnim_SetupCommands: ; d00da
-setup_command: macro
+setup_command: MACRO
 \1_: dw \1
 endm
 	setup_command PokeAnim_Finish

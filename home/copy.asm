@@ -141,7 +141,7 @@ FarCopyBytes::
 	ldh a, [hBuffer]
 	rst Bankswitch
 
-	call CopyBytes
+	rst CopyBytes
 
 	pop af
 	rst Bankswitch

@@ -7,7 +7,7 @@ DoPlayerTurn:
 
 	jr DoTurn
 
-DoEnemyTurn:
+DoEnemyTurn: ; 3400a
 	call SetEnemyTurn
 
 	ld a, [wLinkMode]
@@ -15,13 +15,13 @@ DoEnemyTurn:
 	jr z, DoTurn
 
 	ld a, [wBattleAction]
-	cp BATTLEACTION_E
+	cp BATTLEACTION_STRUGGLE
 	jr z, DoTurn
 	cp BATTLEACTION_SWITCH1
 	ret nc
 
 	; fallthrough
-
+; 3401d
 DoTurn:
 ; Read in and execute the user's move effects for this turn.
 
@@ -5483,7 +5483,7 @@ BattleCommand_HeldFlinch:
 
 	call GetUserItem
 	ld a, b
-	cp HELD_FLINCH
+	cp HELD_FLINCH_UP
 	ret nz
 
 	call CheckSubstituteOpp

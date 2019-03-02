@@ -321,7 +321,7 @@ HatchEggs:
 	ld d, h
 	ld e, l
 	ld hl, wPlayerName
-	call CopyBytes
+	rst CopyBytes
 	ld hl, .Text_HatchEgg
 	call PrintText
 	ld a, [wCurPartyMon]
@@ -352,7 +352,7 @@ HatchEggs:
 .nonickname
 	ld hl, wStringBuffer1
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 .next
 	ld hl, wCurPartyMon
@@ -791,7 +791,7 @@ EggHatch_AnimationSequence:
 
 Hatch_LoadFrontpicPal:
 	ld [wPlayerHPPal], a
-	ld b, SCGB_EVOLUTION
+	ld b, CGB_EVOLUTION
 	ld c, $0
 	jp GetCGBLayout
 
@@ -931,7 +931,7 @@ DayCareMonCompatibilityText:
 	push bc
 	ld de, wStringBuffer1
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	call CheckBreedmonCompatibility
 	pop bc
 	ld a, [wBreedingCompatibility]

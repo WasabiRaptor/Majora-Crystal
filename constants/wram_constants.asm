@@ -13,6 +13,19 @@ AUTO_INPUT EQU $ff
 	const DEXMODE_ABC
 	const DEXMODE_UNOWN
 
+; Text box flags
+; TODO: add the other bits used
+NO_LINE_SPACING EQU 2
+
+; wOptions1: text autoscroll.
+; CheckAutoscroll relies on exact bit usage and order
+AUTOSCROLL_MASK  EQU %1100
+AUTOSCROLL_NONE  EQU %0000
+AUTOSCROLL_START EQU %0100
+AUTOSCROLL_AANDB EQU %1000
+AUTOSCROLL_AORB  EQU %1100
+
+TURNING_SPEED_MASK EQU %10000
 ; wMonType:: ; cf5f
 	const_def
 	const PARTYMON   ; 0

@@ -20,7 +20,7 @@ NUM_SPRITEDATA_FIELDS EQU const_value
 	const PAL_OW_BLUE   ; 1
 	const PAL_OW_GREEN  ; 2
 	const PAL_OW_BROWN  ; 3
-	const PAL_OW_PINK   ; 4
+	const PAL_OW_PURPLE ; 4
 	const PAL_OW_SILVER ; 5
 	const PAL_OW_TREE   ; 6
 	const PAL_OW_ROCK   ; 7
@@ -36,3 +36,9 @@ NUM_SPRITEDATA_FIELDS EQU const_value
 	const PAL_NPC_SILVER ; d
 	const PAL_NPC_TREE   ; e
 	const PAL_NPC_ROCK   ; f
+
+; for party menu icons
+	const_def PAL_OW_SILVER
+	const PAL_OW_GRAY   ; 5
+	const PAL_OW_PINK   ; 6
+	const PAL_OW_TEAL   ; 7

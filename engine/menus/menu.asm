@@ -212,6 +212,7 @@ Init2DMenuCursorPosition:
 
 _StaticMenuJoypad::
 	call Place2DMenuCursor
+DoMenuJoypadLoop::
 _ScrollingMenuJoypad::
 	ld hl, w2DMenuFlags2
 	res 7, [hl]

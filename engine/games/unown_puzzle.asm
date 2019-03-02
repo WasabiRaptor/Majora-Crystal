@@ -21,7 +21,7 @@ _UnownPuzzle:
 	ld hl, UnownPuzzleCursorGFX
 	ld de, vTiles0 tile $e0
 	ld bc, 4 tiles
-	call CopyBytes
+	rst CopyBytes
 	ld hl, UnownPuzzleStartCancelLZ
 	ld de, vTiles0 tile $ed
 	call Decompress
@@ -48,7 +48,7 @@ _UnownPuzzle:
 	ld a, %10010011
 	ldh [rLCDC], a
 	call WaitBGMap
-	ld b, SCGB_UNOWN_PUZZLE
+	ld b, CGB_UNOWN_PUZZLE
 	call GetCGBLayout
 	ld a, $e4
 	call DmgToCgbBGPals

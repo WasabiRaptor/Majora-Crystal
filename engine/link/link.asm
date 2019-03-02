@@ -157,7 +157,7 @@ Gen2ToGen2LinkComms:
 	dec hl
 	ld de, wcb84
 	ld bc, $190 ; 400
-	call CopyBytes
+	rst CopyBytes
 	ld hl, wcb84
 	ld bc, $c6 ; 198
 .loop4
@@ -192,7 +192,7 @@ Gen2ToGen2LinkComms:
 .copy_mail_loop
 	push bc
 	ld bc, MAIL_MSG_LENGTH + 1
-	call CopyBytes
+	rst CopyBytes
 	ld a, LOW(MAIL_STRUCT_LENGTH - (MAIL_MSG_LENGTH + 1))
 	add e
 	ld e, a
@@ -213,7 +213,7 @@ Gen2ToGen2LinkComms:
 	adc d
 	ld d, a
 	ld bc, MAIL_STRUCT_LENGTH - (MAIL_MSG_LENGTH + 1)
-	call CopyBytes
+	rst CopyBytes
 	pop bc
 	dec b
 	jr nz, .copy_author_loop
@@ -253,16 +253,16 @@ Gen2ToGen2LinkComms:
 	ld hl, wLinkPlayerName
 	ld de, wOTPlayerName
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld de, wOTPartyCount
 	ld bc, 1 + PARTY_LENGTH + 1
-	call CopyBytes
+	rst CopyBytes
 	ld de, wOTPlayerID
 	ld bc, 2
-	call CopyBytes
+	rst CopyBytes
 	ld de, wOTPartyMons
 	ld bc, wOTPartyDataEnd - wOTPartyMons
-	call CopyBytes
+	rst CopyBytes
 	ld a, LOW(wOTPartyMonOT)
 	ld [wUnusedD102], a
 	ld a, HIGH(wOTPartyMonOT)
@@ -289,7 +289,7 @@ Gen2ToGen2LinkComms:
 	ld hl, wOTPlayerName
 	ld de, wOTClassName
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	call ReturnToMapFromSubmenu
 
 	; LET'S DO THIS
@@ -357,7 +357,7 @@ LinkTimeout:
 	call PlaceHLTextAtBC
 	call RotateThreePalettesRight
 	call ClearScreen
-	ld b, SCGB_DIPLOMA
+	ld b, CGB_DIPLOMA
 	call GetCGBLayout
 	call WaitBGMap2
 	ret
@@ -498,22 +498,22 @@ Link_PrepPartyData_Gen2:
 	jr nz, .loop1
 	ld hl, wPlayerName
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld hl, wPartyCount
 	ld bc, 1 + PARTY_LENGTH + 1
-	call CopyBytes
+	rst CopyBytes
 	ld hl, wPlayerID
 	ld bc, 2
-	call CopyBytes
+	rst CopyBytes
 	ld hl, wPartyMon1Species
 	ld bc, PARTY_LENGTH * PARTYMON_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld hl, wPartyMonOT
 	ld bc, PARTY_LENGTH * NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld hl, wPartyMonNicknames
 	ld bc, PARTY_LENGTH * MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 ; Okay, we did all that.  Now, are we in the trade center?
 	ld a, [wLinkMode]
@@ -533,7 +533,7 @@ Link_PrepPartyData_Gen2:
 .loop2
 	push bc
 	ld bc, MAIL_MSG_LENGTH + 1
-	call CopyBytes
+	rst CopyBytes
 	ld bc, sPartyMon1MailEnd - sPartyMon1MailAuthor
 	add hl, bc
 	pop bc
@@ -547,7 +547,7 @@ Link_PrepPartyData_Gen2:
 	ld bc, MAIL_MSG_LENGTH + 1
 	add hl, bc
 	ld bc, sPartyMon1MailEnd - sPartyMon1MailAuthor
-	call CopyBytes
+	rst CopyBytes
 	pop bc
 	dec b
 	jr nz, .loop3
@@ -1069,7 +1069,7 @@ Function28ade:
 Function28b22:
 	call RotateThreePalettesRight
 	call ClearScreen
-	ld b, SCGB_DIPLOMA
+	ld b, CGB_DIPLOMA
 	call GetCGBLayout
 	call WaitBGMap2
 	xor a
@@ -1127,7 +1127,7 @@ LinkTrade:
 	ld hl, wStringBuffer1
 	ld de, wd004
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld a, [wd003]
 	ld hl, wOTPartySpecies
 	ld c, a
@@ -1226,7 +1226,7 @@ LinkTrade:
 	jr z, .asm_28ca6
 	push bc
 	ld bc, MAIL_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	pop bc
 	jr .asm_28c96
 
@@ -1243,12 +1243,12 @@ LinkTrade:
 	rst AddNTimes
 	pop de
 	ld bc, MAIL_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	call CloseSRAM
 	ld hl, wPlayerName
 	ld de, wPlayerTrademonSenderName
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld a, [wd002]
 	ld hl, wPartySpecies
 	ld b, 0
@@ -1262,7 +1262,7 @@ LinkTrade:
 	call SkipNames
 	ld de, wPlayerTrademonOTName
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld hl, wPartyMon1ID
 	ld a, [wd002]
 	call GetPartyLocation
@@ -1288,7 +1288,7 @@ LinkTrade:
 	ld hl, wOTPlayerName
 	ld de, wOTTrademonSenderName
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld a, [wd003]
 	ld hl, wOTPartySpecies
 	ld b, 0
@@ -1301,7 +1301,7 @@ LinkTrade:
 	call SkipNames
 	ld de, wOTTrademonOTName
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld hl, wOTPartyMon1ID
 	ld a, [wd003]
 	call GetPartyLocation
@@ -1352,7 +1352,7 @@ LinkTrade:
 	call DelayFrames
 	call ClearTileMap
 	call LoadFontsBattleExtra
-	ld b, SCGB_DIPLOMA
+	ld b, CGB_DIPLOMA
 	call GetCGBLayout
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
@@ -1378,7 +1378,7 @@ LinkTrade:
 	call GetPartyLocation
 	ld de, wTempMonSpecies
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	predef AddTempmonToParty
 	ld a, [wPartyCount]
 	dec a

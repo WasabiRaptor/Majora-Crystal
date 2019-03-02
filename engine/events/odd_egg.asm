@@ -44,7 +44,7 @@ _GiveOddEgg:
 
 	ld de, wOddEggSpecies
 	ld bc, PARTYMON_STRUCT_LENGTH + 2 * MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 	ld a, EGG_TICKET
 	ld [wCurItem], a
@@ -74,7 +74,7 @@ _GiveOddEgg:
 	ld hl, .Odd
 	ld de, wTempOddEggNickname
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 	; load pointer to wTempOddEggNickname in wMobileMonOTNamePointerBuffer
 	ld a, LOW(wTempOddEggNickname)

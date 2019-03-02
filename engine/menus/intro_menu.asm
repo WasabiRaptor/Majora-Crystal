@@ -301,7 +301,7 @@ InitializeNPCNames:
 
 .Copy:
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 .Rival:  db "???@"
@@ -715,7 +715,7 @@ OakSpeech:
 	ld [wTrainerClass], a
 	call Intro_PrepTrainerPic
 
-	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	ld b, CGB_TRAINER_OR_MON_FRONTPIC_PALS
 	call GetCGBLayout
 	call Intro_RotatePalettesLeftFrontpic
 
@@ -736,7 +736,7 @@ OakSpeech:
 	ld [wTempMonDVs], a
 	ld [wTempMonDVs + 1], a
 
-	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	ld b, CGB_TRAINER_OR_MON_FRONTPIC_PALS
 	call GetCGBLayout
 	call Intro_WipeInFrontpic
 
@@ -753,7 +753,7 @@ OakSpeech:
 	ld [wTrainerClass], a
 	call Intro_PrepTrainerPic
 
-	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	ld b, CGB_TRAINER_OR_MON_FRONTPIC_PALS
 	call GetCGBLayout
 	call Intro_RotatePalettesLeftFrontpic
 
@@ -766,7 +766,7 @@ OakSpeech:
 	ld [wCurPartySpecies], a
 	farcall DrawIntroPlayerPic
 
-	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	ld b, CGB_TRAINER_OR_MON_FRONTPIC_PALS
 	call GetCGBLayout
 	call Intro_RotatePalettesLeftFrontpic
 
@@ -836,7 +836,7 @@ NamePlayer:
 	ld [wCurPartySpecies], a
 	farcall DrawIntroPlayerPic
 
-	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	ld b, CGB_TRAINER_OR_MON_FRONTPIC_PALS
 	call GetCGBLayout
 	call RotateThreePalettesLeft
 
@@ -1053,7 +1053,7 @@ StartTitleScreen:
 	ldh [hWX], a
 	ld a, $90
 	ldh [hWY], a
-	ld b, SCGB_DIPLOMA
+	ld b, CGB_DIPLOMA
 	call GetCGBLayout
 	call UpdateTimePals
 	ld a, [wIntroSceneFrameCounter]
