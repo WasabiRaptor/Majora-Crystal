@@ -32,7 +32,7 @@ _OptionsMenu:
 	inc a
 	ldh [hBGMapMode], a
 	call WaitBGMap
-	ld b, CGB_DIPLOMA
+	ld b, SCGB_DIPLOMA
 	call GetCGBLayout
 	call SetPalettes
 

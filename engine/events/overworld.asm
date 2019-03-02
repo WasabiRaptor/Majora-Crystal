@@ -768,7 +768,7 @@ dig_incave
 	ld hl, wDigWarpNumber
 	ld de, wNextWarp
 	ld bc, 3
-	rst CopyBytes
+	call CopyBytes
 	call GetPartyNick
 	ld a, [wBuffer2]
 	cp $2

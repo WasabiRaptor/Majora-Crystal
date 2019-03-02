@@ -126,4 +126,5 @@ LoadStatsScreenPageTilesGFX:
 	ld de, StatsScreenPageTilesGFX
 	ld hl, vTiles2 tile $31
 	lb bc, BANK(StatsScreenPageTilesGFX), 17
-	jp Get2bpp_2
+	call Get2bpp_2
+	ret

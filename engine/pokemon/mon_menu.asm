@@ -218,7 +218,7 @@ GiveTakePartyMonItem:
 	ld hl, wStringBuffer1
 	ld de, wMonOrItemNameBuffer
 	ld bc, MON_NAME_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	ld a, [wMenuCursorY]
 	cp 1
 	jr nz, .take
@@ -452,10 +452,10 @@ ComposeMailMessage:
 	ld hl, wPlayerName
 	ld de, wTempMailAuthor
 	ld bc, NAME_LENGTH - 1
-	rst CopyBytes
+	call CopyBytes
 	ld hl, wPlayerID
 	ld bc, 2
-	rst CopyBytes
+	call CopyBytes
 	ld a, [wCurPartySpecies]
 	ld [de], a
 	inc de
@@ -471,7 +471,7 @@ ComposeMailMessage:
 	ld bc, MAIL_STRUCT_LENGTH
 	ld a, BANK(sPartyMail)
 	call GetSRAMBank
-	rst CopyBytes
+	call CopyBytes
 	call CloseSRAM
 	ret
 
@@ -800,455 +800,265 @@ MonMenu_SweetScent:
 	ld a, $2
 	ret
 
-
-	const_def
-	const MOVESCREEN_NORMAL
-	const MOVESCREEN_DELETER
-	const MOVESCREEN_NEWMOVE
-	const MOVESCREEN_REMINDER
-
 ChooseMoveToDelete:
-	ld hl, wOptions1
+	ld hl, wOptions
 	ld a, [hl]
 	push af
 	set NO_TEXT_SCROLL, [hl]
 	call LoadFontsBattleExtra
-	ld a, MOVESCREEN_DELETER
-	ld [wMoveScreenMode], a
-	call MoveScreenLoop
+	call .ChooseMoveToDelete
 	pop bc
-	push af
 	ld a, b
-	ld [wOptions1], a
+	ld [wOptions], a
+	push af
 	call ClearBGPalettes
 	pop af
 	ret
 
-ChooseMoveToForget:
-	ld hl, wOptions1
-	ld a, [hl]
-	push af
-	set NO_TEXT_SCROLL, [hl]
-	call LoadTileMapToTempTileMap
-	call LoadFontsBattleExtra
-	ld a, MOVESCREEN_NEWMOVE
-	ld [wMoveScreenMode], a
-	call MoveScreenLoop
-	pop bc
-	push af
-	ld a, b
-	ld [wOptions1], a
-	call ClearBGPalettes
-	ld a, [wBattleMode]
+.ChooseMoveToDelete
+	call SetUpMoveScreenBG
+	ld de, DeleteMoveScreenAttrs
+	call SetMenuAttributes
+	call SetUpMoveList
+	ld hl, w2DMenuFlags1
+	set 6, [hl]
+	jr .enter_loop
+
+.loop
+	call ScrollingMenuJoypad
+	bit B_BUTTON_F, a
+	jp nz, .b_button
+	bit A_BUTTON_F, a
+	jp nz, .a_button
+
+.enter_loop
+	call PrepareToPlaceMoveData
+	call PlaceMoveData
+	jp .loop
+
+.a_button
 	and a
-	jr z, .tm_tutor
+	jr .finish
 
-	; Level up in battle
-	call ClearTileMap
+.b_button
+	scf
+
+.finish
+	push af
+	xor a
+	ld [wSwitchMon], a
+	ld hl, w2DMenuFlags1
+	res 6, [hl]
 	call ClearSprites
-	call ClearPalettes
-	call DelayFrame
-	call UpdateSprites
-	farcall FinishBattleAnim
-	farcall _LoadBattleFontsHPBar
-	farcall GetMonBackpic
-	call LoadTempTileMapToTileMap
-	jr .done
-
-.tm_tutor
-	farcall LoadPartyMenuGFX
-	farcall InitPartyMenuWithCancel
-	farcall InitPartyMenuGFX
-	farcall WritePartyMenuTilemap
-	farcall PrintPartyMenuText
-	call SpeechTextBox
-.done
-	call WaitBGMap
-	call SetPalettes
-	call DelayFrame
+	call ClearTileMap
 	pop af
 	ret
 
-ChooseMoveToRelearn:
-	ld hl, wOptions1
-	ld a, [hl]
-	push af
-	set NO_TEXT_SCROLL, [hl]
-	call LoadFontsBattleExtra
-	ld a, MOVESCREEN_REMINDER
-	ld [wMoveScreenMode], a
-	call MoveScreenLoop
-	pop bc
-	push af
-	ld a, b
-	ld [wOptions1], a
-	jr c, .no_moves
-	call ClearBGPalettes
-	ld a, [wCurPartyMon]
-	push af
-	farcall LoadPartyMenuGFX
-	farcall InitPartyMenuWithCancel
-	farcall InitPartyMenuGFX
-	farcall WritePartyMenuTilemap
-	farcall PrintPartyMenuText
-	pop af
-	ld [wCurPartyMon], a
-	pop af
-	push af
-	call nz, SpeechTextBox
-	call WaitBGMap
-	call SetPalettes
-	call DelayFrame
-.no_moves
-	pop af
-	ret
+DeleteMoveScreenAttrs:
+	db 3, 1
+	db 3, 1
+	db $40, $00
+	dn 2, 0
+	db D_UP | D_DOWN | A_BUTTON | B_BUTTON
 
-ManagePokemonMoves: ; 12fba
+ManagePokemonMoves:
 	ld a, [wCurPartySpecies]
 	cp EGG
 	jr z, .egg
-	ld hl, wOptions1
+	ld hl, wOptions
 	ld a, [hl]
 	push af
 	set NO_TEXT_SCROLL, [hl]
-	xor a
-	ld [wMoveScreenMode], a
 	call MoveScreenLoop
 	pop af
-	ld [wOptions1], a
+	ld [wOptions], a
 	call ClearBGPalettes
 
 .egg
-	xor a
+	ld a, $0
 	ret
-; 12fd5
 
 MoveScreenLoop:
-; Returns:
-; a = >0: f = nc|nz; selected move (index in wMoveScreenSelectedMove)
-; a =  0: f = nc|z;  user pressed B
-;         f = c;     no options existed, move screen was aborted early
-	xor a
-	ld [wMoveScreenSelectedMove], a
-	ld [wMenuCursorY], a
-	ld [wMoveScreenOffset], a
-	ld [wMoveScreenNumMoves], a
-
-	; Zero the first 4 moves to avoid oddities if we have less than 4 total
-	ld hl, wMoveScreenMoves
-	ld b, NUM_MOVES
-	xor a
-.zero_movescreenmoves
-	ld [hli], a
-	dec b
-	jr nz, .zero_movescreenmoves
-	ld a, [wMoveScreenMode]
-	cp MOVESCREEN_REMINDER
-	jr z, .movecopy_reminder
-
-	; Copy over moves from the party struct
-	ld bc, NUM_MOVES
-	ld a, MON_MOVES
-	call GetPartyParamLocation
-	ld de, wMoveScreenMoves
-.movecopy_loop
-	ld a, [hli]
-	and a
-	jr z, .movecopy_done
-	ld [de], a
-	inc de
-	inc b
-	dec c
-	jr nz, .movecopy_loop
-
-.movecopy_done
-	; If we're learning a new move, append the move to the move list buffer
-	ld a, [wMoveScreenMode]
-	cp MOVESCREEN_NEWMOVE
-	jr nz, .newmove_done
-	ld a, [wPutativeTMHMMove]
-	ld [de], a
-	inc b
-	jr .newmove_done
-
-.movecopy_reminder
-	call GetForgottenMoves
-	ld b, c
-.newmove_done
-	ld a, b
-	ld [wMoveScreenNumMoves], a
-	sub 1
-	ret c ; no moves
-
-	; Initialize the interface
+	ld a, [wCurPartyMon]
+	inc a
+	ld [wPartyMenuCursor], a
 	call SetUpMoveScreenBG
-	call MoveScreen_ListMoves
-	jr .loop
-.outer_loop
-	call MoveScreen_ListMovesFast
-.pressed_start
-	ld c, 5
-	call DelayFrames
+	call Function132d3
+	ld de, MoveScreenAttributes
+	call SetMenuAttributes
 .loop
-	farcall PlaySpriteAnimationsAndDelayFrame
-	call JoyTextDelay
+	call SetUpMoveList
+	ld hl, w2DMenuFlags1
+	set 6, [hl]
+	jr .skip_joy
 
-	; allow d-pad to be held, but not a/b/start/select
-	ld a, [hJoyPressed]
-	and BUTTONS
+.joy_loop
+	call ScrollingMenuJoypad
+	bit 1, a
+	jp nz, .b_button
+	bit 0, a
+	jp nz, .a_button
+	bit 4, a
+	jp nz, .d_right
+	bit 5, a
+	jp nz, .d_left
+
+.skip_joy
+	call PrepareToPlaceMoveData
+	ld a, [wMoveSwapBuffer]
+	and a
+	jr nz, .moving_move
+	call PlaceMoveData
+	jp .joy_loop
+
+.moving_move
+	ld a, " "
+	hlcoord 1, 11
+	ld bc, 5
+	call ByteFill
+	hlcoord 1, 12
+	lb bc, 5, SCREEN_WIDTH - 2
+	call ClearBox
+	hlcoord 1, 12
+	ld de, String_MoveWhere
+	call PlaceString
+	jp .joy_loop
+.b_button
+	call PlayClickSFX
+	call WaitSFX
+	ld a, [wMoveSwapBuffer]
+	and a
+	jp z, .exit
+
+	ld a, [wMoveSwapBuffer]
+	ld [wMenuCursorY], a
+	xor a
+	ld [wMoveSwapBuffer], a
+	hlcoord 1, 2
+	lb bc, 8, SCREEN_WIDTH - 2
+	call ClearBox
+	jp .loop
+
+.d_right
+	ld a, [wMoveSwapBuffer]
+	and a
+	jp nz, .joy_loop
+
+	ld a, [wCurPartyMon]
 	ld b, a
-	ld a, [hJoyDown]
-	and D_PAD
-	or b
-	rrca
-	jr c, .pressed_a
-	rrca
-	jr c, .pressed_b
-	rrca
-	jr c, .pressed_select
-	rrca
-	jr c, .pressed_start
-	rrca
-	jr c, .pressed_right
-	rrca
-	jp c, .pressed_left
-	rrca
-	jp c, .pressed_up
-	rrca
-	jp c, .pressed_down
-	jr .loop
-.pressed_a
-	ld a, [wMoveScreenMode]
-	and a ; cp MOVESCREEN_NORMAL
-	jr z, .swap_move
-	ld de, SFX_READ_TEXT_2
-	call PlaySFX
-	ld a, [wMenuCursorY]
-	ld c, a
-	ld a, [wMoveScreenOffset]
-	add c
+	push bc
+	call .cycle_right
+	pop bc
+	ld a, [wCurPartyMon]
+	cp b
+	jp z, .joy_loop
+	jp MoveScreenLoop
+
+.d_left
+	ld a, [wMoveSwapBuffer]
+	and a
+	jp nz, .joy_loop
+	ld a, [wCurPartyMon]
+	ld b, a
+	push bc
+	call .cycle_left
+	pop bc
+	ld a, [wCurPartyMon]
+	cp b
+	jp z, .joy_loop
+	jp MoveScreenLoop
+
+.cycle_right
+	ld a, [wCurPartyMon]
+	inc a
+	ld [wCurPartyMon], a
 	ld c, a
 	ld b, 0
-	ld hl, wMoveScreenMoves
+	ld hl, wPartySpecies
 	add hl, bc
-	ld a, [wMoveScreenMode]
-	cp MOVESCREEN_NEWMOVE
 	ld a, [hl]
-	ld [wMoveScreenSelectedMove], a
-	jr nz, .ok
-	push bc
-	call IsHMMove
-	pop bc
-	ld a, c
-	jr nc, .ok
-	cp 4 ; selected new move
-	jr z, .ok
-	ld hl, Text_CantForgetHM
-	call PrintTextNoBox
-	jr .outer_loop
-.ok
-	inc a
-	ret
-.pressed_b
-	ld de, SFX_READ_TEXT_2
-	call PlaySFX
-	ld a, [wMoveSwapBuffer]
+	cp -1
+	jr z, .cycle_left
+	cp EGG
+	ret nz
+	jr .cycle_right
+
+.cycle_left
+	ld a, [wCurPartyMon]
 	and a
 	ret z
-	xor a
-	ld [wMoveSwapBuffer], a
-	jp .outer_loop
-.pressed_select
-	ld a, [wMoveScreenMode]
+.cycle_left_loop
+	ld a, [wCurPartyMon]
+	dec a
+	ld [wCurPartyMon], a
+	ld c, a
+	ld b, 0
+	ld hl, wPartySpecies
+	add hl, bc
+	ld a, [hl]
+	cp EGG
+	ret nz
+	ld a, [wCurPartyMon]
 	and a
-	jp nz, .loop
-.swap_move
-	; check if we are in swap mode
+	jr z, .cycle_right
+	jr .cycle_left_loop
+
+.a_button
+	call PlayClickSFX
+	call WaitSFX
 	ld a, [wMoveSwapBuffer]
 	and a
-	jp nz, .perform_swap
+	jr nz, .place_move
 	ld a, [wMenuCursorY]
-	inc a
 	ld [wMoveSwapBuffer], a
-	jp .outer_loop
-.pressed_right
-	ld a, [wMoveScreenMode]
-	and a
-	jr z, .species_right
-	ld a, [wMenuCursorY]
-	cp 3
-	jp z, .far_down
-	ld a, [wMoveScreenNumMoves]
-	dec a
-	cp 4
-	jp c, .update_screen_cursor
-	ld a, 3
-	jp .update_screen_cursor
-.species_right
-	ld a, [wPartyCount]
-	ld d, a
-	ld a, [wCurPartyMon]
-	dec d
-	cp d
-	jp z, .loop
-.loop_right
-	inc a
-	ld d, a
+	call PlaceHollowCursor
+	jp .moving_move
+
+.place_move
+	ld hl, wPartyMon1Moves
 	ld bc, PARTYMON_STRUCT_LENGTH
-	ld hl, wPartyMon1IsEgg
-	rst AddNTimes
-	ld a, [hl]
-	and IS_EGG_MASK
-	ld a, d
-	jr nz, .loop_right_invalid
-	ld hl, wPartyMon1Species
-	rst AddNTimes
-	ld a, [hl]
-	call IsAPokemon
-	ld a, d
-	jr c, .loop_right_invalid
-	ld [wCurPartyMon], a
-	jp MoveScreenLoop
-.loop_right_invalid
-	ld a, [wPartyCount]
-	dec a
-	cp d
-	ld a, d
-	jp z, .loop
-	jr .loop_right
-.pressed_left
-	ld a, [wMoveScreenMode]
-	and a
-	jp z, .species_left
-	ld a, [wMenuCursorY]
-	and a
-	jr z, .far_up
-	xor a
-	jr .update_screen_cursor
-.species_left
 	ld a, [wCurPartyMon]
-	and a
-	jp z, .loop
-.loop_left
-	dec a
-	ld d, a
-	ld bc, PARTYMON_STRUCT_LENGTH
-	ld hl, wPartyMon1IsEgg
 	rst AddNTimes
-	ld a, [hl]
-	and IS_EGG_MASK
-	ld a, d
-	jr nz, .loop_left_invalid
-	ld hl, wPartyMon1Species
-	rst AddNTimes
-	ld a, [hl]
-	call IsAPokemon
-	ld a, d
-	jr c, .loop_left_invalid
-	ld [wCurPartyMon], a
-	jp MoveScreenLoop
-.loop_left_invalid
-	and a
-	jp z, .loop
-	jr .loop_left
-.pressed_up
-	ld a, [wMenuCursorY]
-	and a
-	jr z, .scroll_up
-	dec a
-	jr .update_screen_cursor
-.pressed_down
-	ld a, [wMoveScreenNumMoves]
-	ld b, a
-	ld a, [wMenuCursorY]
-	cp 3
-	jr z, .scroll_down
-	inc a
-	cp b
-	jp nc, .outer_loop ; less than 4 moves
-.update_screen_cursor
-	ld [wMenuCursorY], a
-	jp .outer_loop
-.far_up
-	ld a, [wMoveScreenOffset]
-	sub 4
-	jr nc, .update_screen_offset
-	xor a
-	jr .update_screen_offset
-.scroll_up
-	ld a, [wMoveScreenOffset]
-	and a
-	jp z, .outer_loop
-	dec a
-	jr .update_screen_offset
-.far_down
-	ld a, [wMoveScreenNumMoves]
-	sub 4
-	ld b, a
-	ld a, [wMoveScreenOffset]
-	add 4
-	cp b
-	jr c, .update_screen_offset
-	ld a, b
-	jr .update_screen_offset
-.scroll_down
-	ld a, [wMoveScreenNumMoves]
-	ld b, a
-	ld a, [wMoveScreenOffset]
-	add 4
-	sub b
-	jp nc, .outer_loop
-	ld a, [wMoveScreenOffset]
-	inc a
-.update_screen_offset
-	ld [wMoveScreenOffset], a
-	call MoveScreen_ListMoves
-	jp .loop
-
-.perform_swap
-	ld a, [wBattleMode]
-	and a
-	jr z, .regular_swap_move
-
-	; If we're transformed, the Moves screen shows our original moveset.
-	; So swapping in the moves screen swap our original moves, while
-	; swapping in the battle interface swaps our temporary moves.
-	ld a, [wPlayerSubStatus2]
-	bit SUBSTATUS_TRANSFORMED, a
-	jr nz, .regular_swap_move
-	ld a, [wMenuCursorY]
-	inc a
-	ld [wMenuCursorY], a
-	farcall SwapBattleMoves
-	jr .finish_swap
-
-.regular_swap_move
-	ld a, MON_MOVES
-	call GetPartyParamLocation
-	call .swap_location
-	ld a, MON_PP
-	call GetPartyParamLocation
-	call .swap_location
-
-.finish_swap
-	ld hl, wMoveScreenMoves
-	call .swap_location
-	ld de, SFX_SWITCH_POKEMON
-	call PlaySFX
-	call WaitSFX
-	ld de, SFX_SWITCH_POKEMON
-	call PlaySFX
-	call WaitSFX
-	xor a
-	ld [wMoveSwapBuffer], a
-	call MoveScreen_ListMoves
-	jp .loop
-
-.swap_location
-	ld a, [wMenuCursorY]
-	ld b, 0
-	ld c, a
 	push hl
+	call .copy_move
+	pop hl
+	ld bc, $15
+	add hl, bc
+	call .copy_move
+	ld a, [wBattleMode]
+	jr z, .swap_moves
+	ld hl, wBattleMonMoves
+	ld bc, $20
+	ld a, [wCurPartyMon]
+	rst AddNTimes
+	push hl
+	call .copy_move
+	pop hl
+	ld bc, 6
+	add hl, bc
+	call .copy_move
+
+.swap_moves
+	ld de, SFX_SWITCH_POKEMON
+	call PlaySFX
+	call WaitSFX
+	ld de, SFX_SWITCH_POKEMON
+	call PlaySFX
+	call WaitSFX
+	hlcoord 1, 2
+	lb bc, 8, 18
+	call ClearBox
+	hlcoord 10, 10
+	lb bc, 1, 9
+	call ClearBox
+	jp .loop
+
+.copy_move
+	push hl
+	ld a, [wMenuCursorY]
+	dec a
+	ld c, a
+	ld b, $0
 	add hl, bc
 	ld d, h
 	ld e, l
@@ -1256,6 +1066,7 @@ MoveScreenLoop:
 	ld a, [wMoveSwapBuffer]
 	dec a
 	ld c, a
+	ld b, $0
 	add hl, bc
 	ld a, [de]
 	ld b, [hl]
@@ -1264,111 +1075,30 @@ MoveScreenLoop:
 	ld [de], a
 	ret
 
-GetForgottenMoves::
-; retrieve a list of a mon's forgotten moves, excluding ones beyond level
-; and moves the mon already knows
-	ld a, MON_LEVEL
-	call GetPartyParamLocation
-	ld a, [hl]
-	ld [wCurPartyLevel], a
-	ld a, MON_SPECIES
-	call GetPartyParamLocation
-	ld a, [hl]
-	ld d, a
-	push de
-	call GetRelevantEvosAttacksPointers
-	pop de
-	ld a, d
-	jr nc, .notvariant
-	ld a, [wAltForm]
-.notvariant
-	dec a
-	ld b, 0
-	ld c, a
-	add hl, bc
-	add hl, bc
-	push de
-	ld a, d
-	pop de
-	call GetFarHalfword
-.skip_evos
-	ld a, BANK("Evolutions and Attacks")
-	call GetFarByte
-	inc hl
-	and a
-	jr nz, .skip_evos
+.exit
+	xor a
+	ld [wMoveSwapBuffer], a
+	ld hl, w2DMenuFlags1
+	res 6, [hl]
+	call ClearSprites
+	jp ClearTileMap
 
-	ld de, wMoveScreenMoves
-	ld c, a
-	ld a, [wCurPartyLevel]
-	ld b, a
-	ld b, 100 ; Gen VII behaviour
-	inc b ; so that we can use jr nc
-.loop
-	ld a, BANK("Evolutions and Attacks")
-	call GetFarByte
-	inc hl
-	and a
-	ret z
-	cp b
-	ret nc
-	ld a, BANK("Evolutions and Attacks")
-	call GetFarByte
-	inc hl
+MoveScreenAttributes:
+	db 3, 1
+	db 3, 1
+	db $40, $00
+	dn 2, 0
+	db D_UP | D_DOWN | D_LEFT | D_RIGHT | A_BUTTON | B_BUTTON
 
-	; exclude moves the user already knows
-	push hl
-	push bc
-	ld b, a
-	ld a, MON_MOVES
-	call GetPartyParamLocation
-	ld c, NUM_MOVES
-	ld a, b
-	call .move_exists
-	jr z, .already_knows_move
-	pop bc
-	push bc
-	jr .move_ok
-	ld b, 0
-	ld hl, wMoveScreenMoves
-	call .move_exists
-	jr z, .already_knows_move
-.move_ok
-	pop bc
-	pop hl
-	ld [de], a
-	inc de
-	inc c
-	jr .loop
-.already_knows_move
-	pop bc
-	pop hl
-	jr .loop
+String_MoveWhere:
+	db "Where?@"
 
-.move_exists
-	ld b, a
-.move_exists_loop
-	ld a, [hli]
-	cp b
-	ret z
-	dec c
-	jr nz, .move_exists_loop
-	inc c ; ret nz
-	ld a, b
-	ret
-
-String_MoveSwap: ; 1316b
-	db "Switch with?@"
-; 13172
-
-SetUpMoveScreenBG: ; 13172
+SetUpMoveScreenBG:
 	call ClearBGPalettes
 	call ClearTileMap
 	call ClearSprites
 	xor a
 	ldh [hBGMapMode], a
-	ld b, CGB_PARTY_MENU
-	call GetCGBLayout
 	farcall LoadStatsScreenPageTilesGFX
 	farcall ClearSpriteAnims2
 	ld a, [wCurPartyMon]
@@ -1378,12 +1108,15 @@ SetUpMoveScreenBG: ; 13172
 	add hl, de
 	ld a, [hl]
 	ld [wTempIconSpecies], a
-	farcall LoadMoveMenuMonIcon
+	ld e, MONICON_MOVES
+	farcall LoadMenuMonIcon
 	hlcoord 0, 1
-	lb bc, 9, 18
+	ld b, 9
+	ld c, 18
 	call TextBox
 	hlcoord 0, 11
-	lb bc, 5, 18
+	ld b, 5
+	ld c, 18
 	call TextBox
 	hlcoord 2, 0
 	lb bc, 2, 3
@@ -1401,283 +1134,175 @@ SetUpMoveScreenBG: ; 13172
 	call PrintLevel
 	ld hl, wPlayerHPPal
 	call SetHPPal
-	call SetPalettes
+	ld b, SCGB_MOVE_LIST
+	call GetCGBLayout
 	hlcoord 16, 0
 	lb bc, 1, 3
 	jp ClearBox
-; 131ef
 
-MoveScreen_ListMoves:
-	ld c, 2
-	call DelayFrames
-	hlcoord 1, 2
-	lb bc, 14, 18
-	call ClearBox
+SetUpMoveList:
 	xor a
-	ld [hBGMapMode], a
-	ld hl, wMoveScreenMoves
-	ld b, a
-	ld a, [wMoveScreenOffset]
-	ld c, a
-	add hl, bc
+	ldh [hBGMapMode], a
+	ld [wMoveSwapBuffer], a
+	ld [wMonType], a
+	predef CopyMonToTempMon
+	ld hl, wTempMonMoves
 	ld de, wListMoves_MoveIndicesBuffer
 	ld bc, NUM_MOVES
-	rst CopyBytes
-	ld a, SCREEN_WIDTH * 2 ; move list spacing
+	call CopyBytes
+	ld a, SCREEN_WIDTH * 2
 	ld [wBuffer1], a
 	hlcoord 2, 3
 	predef ListMoves
-
-	; Get PP -- either current PP, or default PP for the move
-	ld hl, wListMoves_MoveIndicesBuffer
-	ld de, wTempMonMoves
-	ld bc, NUM_MOVES
-	rst CopyBytes
-
-	; Get default PP for moves
-	ld c, NUM_MOVES
-	ld hl, wTempMonMoves
-	ld de, wTempMonPP
-.defaultpp_loop
-	ld a, [hli]
-	push hl
-	push bc
-	ld hl, Moves + MOVE_PP
-	ld bc, MOVE_LENGTH
-	dec a
-	rst AddNTimes
-	ld a, BANK(Moves)
-	call GetFarByte
-	ld [de], a
-	inc de
-	pop bc
-	pop hl
-	dec c
-	jr nz, .defaultpp_loop
-
-	; Get current PP for current moves
-	ld a, [wMoveScreenMode]
-	cp MOVESCREEN_REMINDER
-	jr z, .got_pp
-	ld a, MON_PP
-	call GetPartyParamLocation
-	ld c, NUM_MOVES
-	ld de, wTempMonPP
-	ld a, [wMoveScreenOffset]
-.currentpp_loop
-	and a
-	jr z, .currentpp_ok
-	dec a
-	jr .currentpp_next
-.currentpp_ok
-	push af
-	ld a, [hl]
-	ld [de], a
-	inc de
-	pop af
-.currentpp_next
-	inc hl
-	dec c
-	jr nz, .currentpp_loop
-
-.got_pp
-	; Now we have things set up correctly
 	hlcoord 10, 4
 	predef ListMovePP
-	hlcoord 1, 12, wAttrMap
-	ld bc, 6
-	xor a
-	call ByteFill
-
-	farcall ApplyAttrMap
-
-MoveScreen_ListMovesFast:
+	call WaitBGMap
+	call SetPalettes
+	ld a, [wNumMoves]
+	inc a
+	ld [w2DMenuNumRows], a
 	hlcoord 0, 11
-	lb bc, 5, 18
-	call TextBox
-	ld hl, wTempMonMoves
+	ld b, 5
+	ld c, 18
+	jp TextBox
+
+PrepareToPlaceMoveData:
+	ld hl, wPartyMon1Moves
+	ld bc, PARTYMON_STRUCT_LENGTH
+	ld a, [wCurPartyMon]
+	rst AddNTimes
 	ld a, [wMenuCursorY]
+	dec a
 	ld c, a
-	ld b, 0
+	ld b, $0
 	add hl, bc
 	ld a, [hl]
-	ld [wCurMove], a
-
-	hlcoord 1, 1 ; 2 below topmost position
-	ld bc, SCREEN_WIDTH * 2
-	ld a, [wMoveSwapBuffer]
-	ld d, a
-	ld a, [wMenuCursorY]
-	inc a
-	ld e, a
-	xor a
-.cursor_loop
-	inc a
-	add hl, bc
-	ld [hl], " "
-	cp d
-	jr nz, .not_selected_swap
-	ld [hl], "▷"
-.not_selected_swap
-	cp e
-	jr nz, .not_selected
-	ld [hl], "▶"
-.not_selected
-	cp NUM_MOVES
-	jr nz, .cursor_loop
-	ld a, [wMoveScreenOffset]
-	and a
-	jr z, .skip_up
-	hlcoord 18, 2
-	ld a, "▲"
-	ld [hl], a
-.skip_up
-	ld a, [wMoveScreenOffset]
-	ld b, a
-	ld a, [wMoveScreenNumMoves]
-	sub b
-	sub 5
-	jr c, .skip_down
-	hlcoord 18, 10
-	ld a, "▼"
-	ld [hl], a
-.skip_down
-	jp PlaceMoveData
+	ld [wCurSpecies], a
+	hlcoord 1, 12
+	lb bc, 5, 18
+	jp ClearBox
 
 PlaceMoveData:
-	ld a, [wMoveSwapBuffer]
-	and a
-	jr z, .not_swapping
-	hlcoord 1, 14
-	ld de, String_MoveSwap
-	call PlaceString
-	ld a, $1
-	ld [hBGMapMode], a
-	ret
-
-.not_swapping
 	xor a
-	ld [hBGMapMode], a
-
-	hlcoord 10, 12
-	ld de, String_PowAcc
+	ldh [hBGMapMode], a
+	hlcoord 0, 10
+	ld de, String_MoveType_Top
 	call PlaceString
-
-	ld a, [wCurMove]
-	dec a
-	ld hl, Moves + MOVE_CATEGORY
-	ld bc, MOVE_LENGTH
-	rst AddNTimes
-	ld a, BANK(Moves)
-	call GetFarByte
+	hlcoord 0, 11
+	ld de, String_MoveType_Bottom
+	call PlaceString
+	hlcoord 12, 12
+	ld de, String_MoveAtk
+	call PlaceString
+	ld a, [wCurSpecies]
 	ld b, a
-	push bc
-	ld hl, CategoryIconGFX
-	ld bc, 2 tiles
-	rst AddNTimes
-	ld d, h
-	ld e, l
-	ld hl, vTiles2 tile $59
-	lb bc, BANK(CategoryIconGFX), 2
-	call Request2bpp
+	farcall GetMoveCategoryName
+	hlcoord 1, 11
+	ld de, wStringBuffer1
+	call PlaceString
+	ld a, [wCurSpecies]
+	ld b, a
 	hlcoord 1, 12
-	ld [hl], $59
+	ld [hl], "/"
 	inc hl
-	ld [hl], $5a
-
-	ld a, [wCurMove]
-	dec a
-	ld hl, Moves + MOVE_TYPE
-	ld bc, MOVE_LENGTH
-	rst AddNTimes
-	ld a, BANK(Moves)
-	call GetFarByte
-	pop bc
-	ld c, a
-	ld de, wUnknBGPals palette 0 + 2
-	push af
-	farcall LoadCategoryAndTypePals
-	call SetPalettes
-
-	pop af
-	ld hl, TypeIconGFX
-	ld bc, 4 * LEN_1BPP_TILE
-	rst AddNTimes
-	ld d, h
-	ld e, l
-	ld hl, vTiles2 tile $5b
-	lb bc, BANK(TypeIconGFX), 4
-	call Request1bpp
-	hlcoord 3, 12
-	ld [hl], $5b
-	inc hl
-	ld [hl], $5c
-	inc hl
-	ld [hl], $5d
-	inc hl
-	ld [hl], $5e
-
-	ld a, [wCurMove]
+	predef PrintMoveType
+	ld a, [wCurSpecies]
 	dec a
 	ld hl, Moves + MOVE_POWER
 	ld bc, MOVE_LENGTH
 	rst AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-	hlcoord 10, 12
+	hlcoord 16, 12
 	cp 2
 	jr c, .no_power
-	ld [wd265], a
-	ld de, wd265
-	lb bc, 1, 3
-	call PrintNum
-	jr .place_accuracy
-.no_power
-	ld de, String_na
-	call PlaceString
-
-.place_accuracy
-	ld a, [wCurMove]
-	dec a
-	ld hl, Moves + MOVE_ACC
-	ld bc, MOVE_LENGTH
-	rst AddNTimes
-	; convert internal accuracy representation to a number
-	; between 0-100
-	ld a, BANK(Moves)
-	call GetFarByte
-	ld [hMultiplicand], a
-	ld a, 100
-	ld [hMultiplier], a
-	call Multiply
-	ld a, [hProduct]
-	; don't increase a for 0% moves
-	and a
-	jr z, .no_inc
-	inc a
-.no_inc
-	hlcoord 15, 12
-	cp 2
-	jr c, .no_acc
-	ld [wd265], a
-	ld de, wd265
+	ld [wDeciramBuffer], a
+	ld de, wDeciramBuffer
 	lb bc, 1, 3
 	call PrintNum
 	jr .description
-.no_acc
-	ld de, String_na
+
+.no_power
+	ld de, String_MoveNoPower
 	call PlaceString
 
 .description
 	hlcoord 1, 14
 	predef PrintMoveDesc
 	ld a, $1
-	ld [hBGMapMode], a
+	ldh [hBGMapMode], a
 	ret
-; 132ba
 
-String_na: ; 132cf
+String_MoveType_Top:
+	db "┌────────┐@"
+String_MoveType_Bottom:
+	db "│        └@"
+String_MoveAtk:
+	db "ATK/@"
+String_MoveNoPower:
 	db "---@"
 
-String_PowAcc:
-	db "   <BOLDP>/   %@"
+Function132d3:
+	call Function132da
+	call Function132fe
+	ret
+
+Function132da:
+	ld a, [wCurPartyMon]
+	and a
+	ret z
+	ld c, a
+	ld e, a
+	ld d, 0
+	ld hl, wPartyCount
+	add hl, de
+.loop
+	ld a, [hl]
+	and a
+	jr z, .prev
+	cp EGG
+	jr z, .prev
+	cp NUM_POKEMON + 1
+	jr c, .legal
+
+.prev
+	dec hl
+	dec c
+	jr nz, .loop
+	ret
+
+.legal
+	hlcoord 16, 0
+	ld [hl], "◀"
+	ret
+
+Function132fe:
+	ld a, [wCurPartyMon]
+	inc a
+	ld c, a
+	ld a, [wPartyCount]
+	cp c
+	ret z
+	ld e, c
+	ld d, 0
+	ld hl, wPartySpecies
+	add hl, de
+.loop
+	ld a, [hl]
+	cp -1
+	ret z
+	and a
+	jr z, .next
+	cp EGG
+	jr z, .next
+	cp NUM_POKEMON + 1
+	jr c, .legal
+
+.next
+	inc hl
+	jr .loop
+
+.legal
+	hlcoord 18, 0
+	ld [hl], "▶"
+	ret

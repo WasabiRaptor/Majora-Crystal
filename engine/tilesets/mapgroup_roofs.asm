@@ -12,7 +12,7 @@ LoadMapGroupRoof::
 	rst AddNTimes
 	ld de, vTiles2 tile $0a
 	ld bc, 9 tiles
-	rst CopyBytes
+	call CopyBytes
 	ret
 
 INCLUDE "data/maps/roofs.asm"

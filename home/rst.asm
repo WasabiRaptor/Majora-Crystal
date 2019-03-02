@@ -19,7 +19,7 @@ SECTION "rst18", ROM0
 	rst $38
 
 SECTION "rst20", ROM0
-	jp _CopyBytes
+	rst $38
 
 SECTION "rst28", ROM0 ; rst JumpTable
 	push de

@@ -118,7 +118,7 @@ ReadTrainerPartyPieces:
 	ld e, l
 	ld hl, wStringBuffer2
 	ld bc, MON_NAME_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	pop hl
 
 	pop de
@@ -351,7 +351,7 @@ CopyTrainerName:
 	ld de, wStringBuffer1
 	push de
 	ld bc, NAME_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	pop de
 	ret
 

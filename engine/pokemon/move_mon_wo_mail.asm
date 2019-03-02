@@ -27,11 +27,11 @@ InsertPokemonIntoBox:
 	ld hl, wBufferMonMoves
 	ld de, wTempMonMoves
 	ld bc, NUM_MOVES
-	rst CopyBytes
+	call CopyBytes
 	ld hl, wBufferMonPP
 	ld de, wTempMonPP
 	ld bc, NUM_MOVES
-	rst CopyBytes
+	call CopyBytes
 	ld a, [wCurPartyMon]
 	ld b, a
 	farcall RestorePPOfDepositedPokemon
@@ -104,7 +104,7 @@ InsertDataIntoBoxOrParty:
 	push hl
 	push de
 	push bc
-	rst CopyBytes
+	call CopyBytes
 	pop bc
 	pop de
 	pop hl
@@ -129,5 +129,5 @@ InsertDataIntoBoxOrParty:
 	ld d, h
 	ld e, l
 	pop hl
-	rst CopyBytes
+	call CopyBytes
 	ret

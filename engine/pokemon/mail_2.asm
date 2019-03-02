@@ -681,12 +681,12 @@ MailGFX_PlaceMessage:
 	ld de, wTempMail
 	ld a, BANK(sPartyMail)
 	call GetSRAMBank
-	rst CopyBytes
+	call CopyBytes
 	call CloseSRAM
 	ld hl, wTempMailAuthor
 	ld de, wMonOrItemNameBuffer
 	ld bc, NAME_LENGTH - 1
-	rst CopyBytes
+	call CopyBytes
 	ld a, "@"
 	ld [wTempMailAuthor], a
 	ld [wMonOrItemNameBuffer + NAME_LENGTH - 1], a

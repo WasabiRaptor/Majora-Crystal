@@ -4,7 +4,7 @@ PrintPage1:
 	hlcoord 0, 0
 	decoord 0, 0, wPrinterTileMapBuffer
 	ld bc, 17 * SCREEN_WIDTH
-	rst CopyBytes
+	call CopyBytes
 	hlcoord 17, 1, wPrinterTileMapBuffer
 	ld a, $62
 	ld [hli], a
@@ -224,7 +224,7 @@ PrintPartyMonPage1:
 	hlcoord 0, 0
 	call _PrepMonFrontpic
 	call WaitBGMap
-	ld b, CGB_STATS_SCREEN_HP_PALS
+	ld b, SCGB_STATS_SCREEN_HP_PALS
 	call GetCGBLayout
 	call SetPalettes
 	ret
@@ -246,7 +246,7 @@ PrintPartyMonPage2:
 	ld bc, SCREEN_WIDTH
 	decoord 0, 0
 	hlcoord 0, 1
-	rst CopyBytes
+	call CopyBytes
 	hlcoord 7, 0
 	ld a, [wTempMonMoves + 1]
 	call Function1dc51a
@@ -275,7 +275,7 @@ PrintPartyMonPage2:
 	ld de, wTempMonSpeed
 	call .PrintTempMonStats
 	call WaitBGMap
-	ld b, CGB_STATS_SCREEN_HP_PALS
+	ld b, SCGB_STATS_SCREEN_HP_PALS
 	call GetCGBLayout
 	call SetPalettes
 	ret

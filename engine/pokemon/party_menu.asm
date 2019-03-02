@@ -18,7 +18,7 @@ SelectTradeOrDayCareMon:
 	call ClearBGPalettes
 	call InitPartyMenuLayout
 	call WaitBGMap
-	ld b, CGB_PARTY_MENU
+	ld b, SCGB_PARTY_MENU
 	call GetCGBLayout
 	call SetPalettes
 	call DelayFrame
@@ -492,60 +492,82 @@ PlacePartyMonGender: ; 502b1
 	jp GetCGBLayout
 ; 502ee
 
-PlacePartyMonRemindable: ; 501e0
+PlacePartyMonMobileBattleSelection:
 	ld a, [wPartyCount]
 	and a
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 12, 2
+	hlcoord 12, 1
 .loop
 	push bc
 	push hl
-	call PartyMenuCheckEgg
-	jr z, .next
-	push hl
-	ld hl, wPartySpecies
-	ld e, b
-	ld d, 0
-	add hl, de
-	ld a, [hl]
-	ld [wCurPartySpecies], a
-	farcall GetForgottenMoves
-	pop hl
-	call .PlaceAbleNotAble
+	ld de, .String_Sanka_Shinai
 	call PlaceString
-
-.next
 	pop hl
-	ld de, SCREEN_WIDTH * 2
+	ld de, 2 * SCREEN_WIDTH
 	add hl, de
 	pop bc
 	inc b
 	dec c
 	jr nz, .loop
-	ret
-; 50215
-
-.PlaceAbleNotAble: ; 50215
-	ld a, c
+	ld a, l
+	ld e, MON_NAME_LENGTH
+	sub e
+	ld l, a
+	ld a, h
+	sbc $0
+	ld h, a
+	ld de, .String_Kettei_Yameru
+	call PlaceString
+	ld b, $3
+	ld c, $0
+	ld hl, wd002
+	ld a, [hl]
+.loop2
+	push hl
+	push bc
+	hlcoord 12, 1
+.loop3
 	and a
-	jr nz, .able
-	ld de, .string_not_able
-	ret
+	jr z, .done
+	ld de, 2 * SCREEN_WIDTH
+	add hl, de
+	dec a
+	jr .loop3
 
-.able
-	ld de, .string_able
-	ret
-; 50221
+.done
+	ld de, .String_Banme
+	push hl
+	call PlaceString
+	pop hl
+	pop bc
+	push bc
+	push hl
+	ld a, c
+	ld hl, .Strings_1_2_3
+	call GetNthString
+	ld d, h
+	ld e, l
+	pop hl
+	call PlaceString
+	pop bc
+	pop hl
+	inc hl
+	ld a, [hl]
+	inc c
+	dec b
+	ret z
+	jr .loop2
 
-.string_able ; 50221
-	db "Able@"
-; 50226
-
-.string_not_able ; 50226
-	db "Not able@"
-; 5022f
+.String_Banme:
+	db "　ばんめ　　@" ; Place
+.String_Sanka_Shinai:
+	db "さんかしない@" ; Cancel
+.String_Kettei_Yameru:
+	db "けってい　　やめる@" ; Quit
+.Strings_1_2_3:
+	db "１@", "２@", "３@" ; 1st, 2nd, 3rd
 
 PartyMenuCheckEgg: ; 50389
 	ld a, wPartySpecies % $100

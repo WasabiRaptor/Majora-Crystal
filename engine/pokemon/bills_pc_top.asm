@@ -247,6 +247,6 @@ CopyBoxmonToTempMon:
 	ld bc, BOXMON_STRUCT_LENGTH
 	ld a, BANK(sBoxMon1Species)
 	call GetSRAMBank
-	rst CopyBytes
+	call CopyBytes
 	call CloseSRAM
 	ret

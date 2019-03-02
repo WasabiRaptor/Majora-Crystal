@@ -29,7 +29,7 @@ BattleCommand_BatonPass:
 	hlcoord 1, 0
 	lb bc, 4, 10
 	call ClearBox
-	ld b, CGB_BATTLE_COLORS
+	ld b, SCGB_BATTLE_COLORS
 	call GetCGBLayout
 	call SetPalettes
 	call BatonPass_LinkPlayerSwitch

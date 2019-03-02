@@ -68,7 +68,7 @@ ItemEffects:
 	dw XItemEffect         ; X_SPECIAL
 	dw CoinCaseEffect      ; COIN_CASE
 	dw ItemfinderEffect    ; ITEMFINDER
-	dw NoEffect            ; POKE_FLUTE
+	dw PokeFluteEffect     ; POKE_FLUTE
 	dw NoEffect            ; EXP_SHARE
 	dw OldRodEffect        ; OLD_ROD
 	dw GoodRodEffect       ; GOOD_ROD
@@ -465,12 +465,12 @@ PokeBallEffect:
 	ld hl, wWildMonMoves
 	ld de, wEnemyMonMoves
 	ld bc, NUM_MOVES
-	rst CopyBytes
+	call CopyBytes
 
 	ld hl, wWildMonPP
 	ld de, wEnemyMonPP
 	ld bc, NUM_MOVES
-	rst CopyBytes
+	call CopyBytes
 
 .Transformed:
 	ld a, [wEnemyMonSpecies]
@@ -631,7 +631,7 @@ PokeBallEffect:
 	ld hl, wMonOrItemNameBuffer
 	ld de, sBoxMonNicknames
 	ld bc, MON_NAME_LENGTH
-	rst CopyBytes
+	call CopyBytes
 
 	ld hl, sBoxMonNicknames
 	ld de, wStringBuffer1
@@ -646,7 +646,7 @@ PokeBallEffect:
 	ld hl, sBoxMonNicknames
 	ld de, wMonOrItemNameBuffer
 	ld bc, MON_NAME_LENGTH
-	rst CopyBytes
+	call CopyBytes
 
 	call CloseSRAM
 
@@ -1175,7 +1175,7 @@ VitaminEffect:
 	ld l, a
 	ld de, wStringBuffer2
 	ld bc, ITEM_NAME_LENGTH
-	rst CopyBytes
+	call CopyBytes
 
 	call Play_SFX_FULL_HEAL
 
@@ -2154,6 +2154,97 @@ XItemEffect:
 	ret
 
 INCLUDE "data/items/x_stats.asm"
+
+PokeFluteEffect:
+	ld a, [wBattleMode]
+	and a
+	jr nz, .dummy
+.dummy
+
+	xor a
+	ld [wd002], a
+
+	ld b, $ff ^ SLP
+
+	ld hl, wPartyMon1Status
+	call .CureSleep
+
+	ld a, [wBattleMode]
+	cp WILD_BATTLE
+	jr z, .skip_otrainer
+	ld hl, wOTPartyMon1Status
+	call .CureSleep
+.skip_otrainer
+
+	ld hl, wBattleMonStatus
+	ld a, [hl]
+	and b
+	ld [hl], a
+	ld hl, wEnemyMonStatus
+	ld a, [hl]
+	and b
+	ld [hl], a
+
+	ld a, [wd002]
+	and a
+	ld hl, .CatchyTune
+	jp z, PrintText
+	ld hl, .PlayedTheFlute
+	call PrintText
+
+	ld a, [wLowHealthAlarm]
+	and 1 << DANGER_ON_F
+	jr nz, .dummy2
+.dummy2
+	ld hl, .AllSleepingMonWokeUp
+	jp PrintText
+
+.CureSleep:
+	ld de, PARTYMON_STRUCT_LENGTH
+	ld c, PARTY_LENGTH
+
+.loop
+	ld a, [hl]
+	push af
+	and SLP
+	jr z, .not_asleep
+	ld a, 1
+	ld [wd002], a
+.not_asleep
+	pop af
+	and b
+	ld [hl], a
+	add hl, de
+	dec c
+	jr nz, .loop
+	ret
+
+.CatchyTune:
+	; Played the # FLUTE. Now, that's a catchy tune!
+	text_jump UnknownText_0x1c5bf9
+	db "@"
+
+.AllSleepingMonWokeUp:
+	; All sleeping #MON woke up.
+	text_jump UnknownText_0x1c5c28
+	db "@"
+
+.PlayedTheFlute:
+	; played the # FLUTE.@ @
+	text_jump UnknownText_0x1c5c44
+	start_asm
+	ld a, [wBattleMode]
+	and a
+	jr nz, .battle
+
+	push de
+	ld de, SFX_POKEFLUTE
+	call WaitPlaySFX
+	call WaitSFX
+	pop de
+
+.battle
+	jp PokeFluteTerminatorCharacter
 
 BlueCardEffect:
 	ld hl, .bluecardtext

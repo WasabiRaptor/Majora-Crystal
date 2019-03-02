@@ -151,7 +151,7 @@ EvolutionAnimation:
 	ret
 
 .GetCGBLayout:
-	ld b, CGB_EVOLUTION
+	ld b, SCGB_EVOLUTION
 	jp GetCGBLayout
 
 .PlaceFrontpic:

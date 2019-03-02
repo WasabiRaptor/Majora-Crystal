@@ -126,7 +126,7 @@ BattleCommand_BeatUp:
 	ld bc, NAME_LENGTH
 	rst AddNTimes
 	ld de, wStringBuffer1
-	rst CopyBytes
+	call CopyBytes
 
 .got_enemy_nick
 	ld a, MON_HP

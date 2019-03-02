@@ -359,7 +359,7 @@ CopyPlayerObjectTemplate::
 	inc de
 	pop hl
 	ld bc, OBJECT_LENGTH - 1
-	rst CopyBytes
+	call CopyBytes
 	ret
 
 LoadMovementDataPointer::

@@ -521,7 +521,7 @@ GetCreditsPalette:
 	adc HIGH(wBGPals1)
 	ld d, a
 	ld bc, 24
-	rst CopyBytes
+	call CopyBytes
 
 	pop hl
 	pop af
@@ -531,7 +531,7 @@ GetCreditsPalette:
 	adc HIGH(wBGPals2)
 	ld d, a
 	ld bc, 24
-	rst CopyBytes
+	call CopyBytes
 	ret
 
 CreditsPalettes:

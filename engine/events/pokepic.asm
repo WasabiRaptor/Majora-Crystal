@@ -4,7 +4,7 @@ Pokepic::
 	call MenuBox
 	call UpdateSprites
 	call ApplyTilemap
-	ld b, CGB_POKEPIC
+	ld b, SCGB_POKEPIC
 	call GetCGBLayout
 	xor a
 	ldh [hBGMapMode], a

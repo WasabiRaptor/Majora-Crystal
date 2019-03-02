@@ -99,7 +99,7 @@ PokeGear:
 	ld [wPokegearRadioChannelAddr + 1], a
 	call Pokegear_InitJumptableIndices
 	call InitPokegearTilemap
-	ld b, CGB_POKEGEAR_PALS
+	ld b, SCGB_POKEGEAR_PALS
 	call GetCGBLayout
 	call SetPalettes
 	ldh a, [hCGB]
@@ -158,7 +158,7 @@ Pokegear_LoadGFX:
 	ld hl, FastShipGFX
 	ld de, vTiles0 tile $10
 	ld bc, 8 tiles
-	rst CopyBytes
+	call CopyBytes
 	ret
 
 FastShipGFX:
@@ -1813,7 +1813,7 @@ _TownMap:
 	ld [wTownMapCursorObjectPointer], a
 	ld a, b
 	ld [wTownMapCursorObjectPointer + 1], a
-	ld b, CGB_POKEGEAR_PALS
+	ld b, SCGB_POKEGEAR_PALS
 	call GetCGBLayout
 	call SetPalettes
 	ldh a, [hCGB]
@@ -2051,7 +2051,7 @@ _FlyMap:
 	call Request1bpp
 	call FlyMap
 	call ret_91c8f
-	ld b, CGB_POKEGEAR_PALS
+	ld b, SCGB_POKEGEAR_PALS
 	call GetCGBLayout
 	call SetPalettes
 .loop
@@ -2384,7 +2384,7 @@ Pokedex_GetArea:
 	call TownMapPals
 	hlbgcoord 0, 0
 	call TownMapBGUpdate
-	ld b, CGB_POKEGEAR_PALS
+	ld b, SCGB_POKEGEAR_PALS
 	call GetCGBLayout
 	call SetPalettes
 	xor a
@@ -2467,7 +2467,7 @@ Pokedex_GetArea:
 	hlcoord 0, 0
 	ld de, wVirtualOAM
 	ld bc, wVirtualOAMEnd - wVirtualOAM
-	rst CopyBytes
+	call CopyBytes
 	ret
 
 .PlaceString_MonsNest:
@@ -2529,7 +2529,7 @@ Pokedex_GetArea:
 	ld hl, wVirtualOAM
 	decoord 0, 0
 	ld bc, wVirtualOAMEnd - wVirtualOAM
-	rst CopyBytes
+	call CopyBytes
 	ret
 
 .HideNestsShowPlayer:
@@ -2727,9 +2727,8 @@ TownMapPals:
 INCLUDE "gfx/pokegear/town_map_palette_map.asm"
 
 TownMapMon:
-; Draw the FlyMon icon at town map location in
+; Draw the FlyMon icon at town map location
 
-	farcall LoadFlyMonColor
 ; Get FlyMon species
 	ld a, [wCurPartyMon]
 	ld hl, wPartySpecies
@@ -2739,15 +2738,15 @@ TownMapMon:
 	ld a, [hl]
 	ld [wTempIconSpecies], a
 ; Get FlyMon icon
-	ld e, 8 ; starting tile in VRAM
-	farcall PokegearFlyMap_GetMonIcon
+	ld e, $08 ; starting tile in VRAM
+	farcall GetSpeciesIcon
 ; Animation/palette
 	depixel 0, 0
 	ld a, SPRITE_ANIM_INDEX_PARTY_MON
 	call _InitSpriteAnimStruct
 	ld hl, SPRITEANIMSTRUCT_TILE_ID
 	add hl, bc
-	ld [hl], $8
+	ld [hl], $08
 	ld hl, SPRITEANIMSTRUCT_ANIM_SEQ_ID
 	add hl, bc
 	ld [hl], SPRITE_ANIM_SEQ_NULL

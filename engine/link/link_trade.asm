@@ -12,7 +12,7 @@ Function16d42e:
 	ld hl, Tilemap_MobileTradeBorderFullscreen
 	decoord 0, 0
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	rst CopyBytes
+	call CopyBytes
 	ret
 
 Function16d43b:
@@ -22,7 +22,7 @@ Function16d43b:
 	call ClearSprites
 	farcall __LoadTradeScreenBorder ; useless to farcall
 	farcall Function16d42e ; useless to farcall
-	ld b, CGB_DIPLOMA
+	ld b, SCGB_DIPLOMA
 	call GetCGBLayout
 	call SetPalettes
 	call WaitBGMap
@@ -142,11 +142,11 @@ Function16d6ae:
 	ld hl, Tilemap_CableTradeBorderTop
 	decoord 0, 0
 	ld bc, 2 * SCREEN_WIDTH
-	rst CopyBytes
+	call CopyBytes
 	ld hl, Tilemap_CableTradeBorderBottom
 	decoord 0, 16
 	ld bc, 2 * SCREEN_WIDTH
-	rst CopyBytes
+	call CopyBytes
 	ret
 
 LinkTextbox:

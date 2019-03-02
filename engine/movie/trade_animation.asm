@@ -376,7 +376,7 @@ TradeAnim_InitTubeAnim:
 	ld [hl], b
 
 	call WaitBGMap
-	ld b, CGB_TRADE_TUBE
+	ld b, SCGB_TRADE_TUBE
 	call GetCGBLayout
 	ld a, %11100100 ; 3,2,1,0
 	call DmgToCgbBGPals
@@ -637,7 +637,7 @@ TradeAnim_EnterLinkTube1:
 	lb bc, 3, 12
 	call TradeAnim_CopyBoxFromDEtoHL
 	call WaitBGMap
-	ld b, CGB_TRADE_TUBE
+	ld b, SCGB_TRADE_TUBE
 	call GetCGBLayout
 	ld a, %11100100 ; 3,2,1,0
 	call DmgToCgbBGPals
@@ -768,7 +768,7 @@ TradeAnim_ShowGivemonData:
 	ld [wTempMonDVs], a
 	ld a, [wPlayerTrademonDVs + 1]
 	ld [wTempMonDVs + 1], a
-	ld b, CGB_PLAYER_OR_MON_FRONTPIC_PALS
+	ld b, SCGB_PLAYER_OR_MON_FRONTPIC_PALS
 	call GetCGBLayout
 	ld a, %11100100 ; 3,2,1,0
 	call DmgToCgbBGPals
@@ -793,7 +793,7 @@ TradeAnim_ShowGetmonData:
 	ld [wTempMonDVs], a
 	ld a, [wOTTrademonDVs + 1]
 	ld [wTempMonDVs + 1], a
-	ld b, CGB_PLAYER_OR_MON_FRONTPIC_PALS
+	ld b, SCGB_PLAYER_OR_MON_FRONTPIC_PALS
 	call GetCGBLayout
 	ld a, %11100100 ; 3,2,1,0
 	call DmgToCgbBGPals
@@ -825,7 +825,7 @@ TradeAnim_GetNickname:
 	ld hl, wStringBuffer1
 	pop de
 	ld bc, NAME_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	ret
 
 TradeAnim_ShowGivemonFrontpic:
@@ -1328,11 +1328,11 @@ LinkTradeAnim_LoadTradePlayerNames:
 	push de
 	ld de, wLinkPlayer1Name
 	ld bc, NAME_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	pop hl
 	ld de, wLinkPlayer2Name
 	ld bc, NAME_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	ret
 
 LinkTradeAnim_LoadTradeMonSpecies:
@@ -1371,9 +1371,10 @@ LoadTradeBallAndCableGFX:
 	ld [hl], $62
 	ret
 
-LoadTradeBubbleGFX: ; 2985a
+LoadTradeBubbleGFX:
 	call DelayFrame
-	farcall LoadTradeAnimationMonIcon
+	ld e, MONICON_TRADE
+	callfar LoadMenuMonIcon
 	ld de, TradeBubbleGFX
 	ld hl, vTiles0 tile $72
 	lb bc, BANK(TradeBubbleGFX), 4
@@ -1383,7 +1384,6 @@ LoadTradeBubbleGFX: ; 2985a
 	ld [hli], a
 	ld [hl], $62
 	ret
-; 29879
 
 TradeAnim_WaitAnim:
 	ld hl, wFrameCounter

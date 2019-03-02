@@ -273,7 +273,7 @@ endr
 	ld hl, wStringBuffer1
 	ld de, wMonOrItemNameBuffer
 	ld bc, MON_NAME_LENGTH
-	rst CopyBytes
+	call CopyBytes
 
 	; Now that we've chosen our wild Pokemon,
 	; let's recover the map index info and get its name.
@@ -812,7 +812,7 @@ CopyDexEntryPart1:
 	ld bc, SCREEN_WIDTH - 1
 	call FarCopyBytes
 	ld hl, wPokedexShowPointerAddr
-	ld [hl], "<START>"
+	ld [hl], TX_START
 	inc hl
 	ld [hl], "<LINE>"
 	inc hl
@@ -820,7 +820,9 @@ CopyDexEntryPart1:
 	ld a, [hli]
 	cp "@"
 	ret z
-	cp "<NL>"
+	cp "<NEXT>"
+	ret z
+	cp "<DEXEND>"
 	ret z
 	jr .loop
 
@@ -832,7 +834,9 @@ CopyDexEntryPart2:
 	inc hl
 	cp "@"
 	jr z, .okay
-	cp "<NL>"
+	cp "<NEXT>"
+	jr z, .okay
+	cp "<DEXEND>"
 	jr nz, .loop
 .okay
 	ld a, l

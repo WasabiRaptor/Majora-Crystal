@@ -14,7 +14,7 @@ PlaceDiplomaOnScreen:
 	ld hl, DiplomaPage1Tilemap
 	decoord 0, 0
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	rst CopyBytes
+	call CopyBytes
 	ld de, .Player
 	hlcoord 2, 5
 	call PlaceString
@@ -29,7 +29,7 @@ PlaceDiplomaOnScreen:
 	call PlaceString
 	call EnableLCD
 	call WaitBGMap
-	ld b, CGB_DIPLOMA
+	ld b, SCGB_DIPLOMA
 	call GetCGBLayout
 	call SetPalettes
 	call DelayFrame
@@ -57,7 +57,7 @@ PrintDiplomaPage2:
 	ld hl, DiplomaPage2Tilemap
 	decoord 0, 0
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	rst CopyBytes
+	call CopyBytes
 	ld de, .GameFreak
 	hlcoord 8, 0
 	call PlaceString

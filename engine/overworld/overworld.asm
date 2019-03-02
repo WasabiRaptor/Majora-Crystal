@@ -280,7 +280,7 @@ _DoesSpriteHaveFacings::
 	and a
 	ret
 
-_GetSpritePalette:: ; 142c4
+_GetSpritePalette::
 	ld a, c
 	call GetMonSprite
 	jr c, .is_pokemon
@@ -295,39 +295,9 @@ _GetSpritePalette:: ; 142c4
 	ret
 
 .is_pokemon
-	ld a, [wMapGroup]
-	;cp GROUP_KRISS_HOUSE_2F
-	jr nz, .not_doll
-	ld a, [wMapNumber]
-	;cp MAP_KRISS_HOUSE_2F
-	jr nz, .not_doll
-	farcall GetMonIconPalette
+	xor a
 	ld c, a
 	ret
-
-.not_doll
-	;cp GROUP_ROUTE_34
-	jr nz, .not_daycare
-	ld a, [wMapNumber]
-	;cp MAP_ROUTE_34
-	jr nz, .not_daycare
-	farcall GetMonIconPalette
-	cp PAL_OW_GRAY
-	ld c, PAL_OW_ROCK
-	ret z
-	cp PAL_OW_PINK
-	ld c, PAL_OW_RED
-	ret z
-	cp PAL_OW_TEAL
-	ld c, PAL_OW_GREEN
-	ret z
-	ld c, a
-	ret
-
-.not_daycare
-	ld c, PAL_OW_RED
-	ret
-; 142db
 
 LoadAndSortSprites:
 	call LoadSpriteGFX

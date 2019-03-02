@@ -43,7 +43,7 @@ End a text box.
 Prompt the player to end a text box (initiating some other event).
 
 
-## `$01`: <code>text_ram <i>address</i></code>
+## `$01`: <code>text_from_ram <i>address</i></code>
 
 Write text from a RAM address.
 

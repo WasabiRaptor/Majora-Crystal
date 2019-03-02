@@ -295,42 +295,6 @@ ResetBGPals:
 	pop af
 	ret
 
-LoadBattleCategoryAndTypePals:
-	ld a, [wPlayerMoveStruct + MOVE_CATEGORY]
-	ld b, a
-	ld a, [wPlayerMoveStruct + MOVE_TYPE]
-	ld c, a
-	ld de, wBGPals1 palette PAL_BATTLE_BG_TYPE_CAT + 2
-LoadCategoryAndTypePals:
-	ld hl, CategoryIconPals
-	ld a, b
-	add a
-	add a
-	push bc
-	ld c, a
-	ld b, 0
-	add hl, bc
-	ld bc, 4
-	ld a, $5
-	push de
-	call FarCopyWRAM
-	pop de
-
-	ld hl, TypeIconPals
-	pop bc
-	ld a, c
-	add a
-	ld c, a
-	ld b, 0
-	add hl, bc
-	inc de
-	inc de
-	inc de
-	inc de
-	ld bc, 2
-	ld a, $5
-	jp FarCopyWRAM
-
 LoadStatsScreenPals:
 	call CheckCGB
 	ret z
@@ -584,7 +548,7 @@ FillBoxCGB:
 	jr nz, .row
 	ret
 
-; CGB layout for CGB_PARTY_MENU_HP_PALS
+; CGB layout for SCGB_PARTY_MENU_HP_PALS
 CGB_ApplyPartyMenuHPPals:
 	ld hl, wHPPals
 	ld a, [wHPPalIndex]

@@ -74,7 +74,7 @@ _NameRater:
 	ld d, h
 	ld hl, wStringBuffer2
 	ld bc, MON_NAME_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	ld hl, NameRaterEvenBetterText
 
 .samename

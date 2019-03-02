@@ -230,7 +230,7 @@ StatsScreen_CopyToTempMon:
 	ld hl, wBufferMon
 	ld de, wTempMon
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	jr .done
 
 .breedmon
@@ -422,7 +422,7 @@ StatsScreen_InitUpperHalf:
 	farcall ComputeHPBarPixels
 	ld hl, wCurHPPal
 	call SetHPPal
-	ld b, CGB_STATS_SCREEN_HP_PALS
+	ld b, SCGB_STATS_SCREEN_HP_PALS
 	call GetCGBLayout
 	call DelayFrame
 	ret
@@ -470,65 +470,38 @@ StatsScreen_PlaceShinyIcon:
 	ld [hl], "⁂"
 	ret
 
-StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
-	ld a, [wCurPartySpecies]
-	ld [wd265], a
+StatsScreen_LoadGFX:
+	ld a, [wBaseDexNo]
+	ld [wTempSpecies], a
 	ld [wCurSpecies], a
 	xor a
-	ld [hBGMapMode], a
+	ldh [hBGMapMode], a
 	call .ClearBox
-	call .LoadPokeBall
 	call .PageTilemap
 	call .LoadPals
 	ld hl, wcf64
 	bit 4, [hl]
 	jr nz, .place_frontpic
-	jp SetPalettes
+	call SetPalettes
+	ret
 
 .place_frontpic
-	jp StatsScreen_PlaceFrontpic
+	call StatsScreen_PlaceFrontpic
+	ret
 
-.ClearBox: ; 4dfda (13:5fda)
+.ClearBox:
 	ld a, [wcf64]
-	and $3
+	maskbits NUM_STAT_PAGES
 	ld c, a
 	call StatsScreen_LoadPageIndicators
 	hlcoord 0, 8
 	lb bc, 10, 20
-	jp ClearBox
-
-.LoadPokeBall:
-	; draw border
-	hlcoord 8, 5
-	ld [hl], $32 ; top
-	hlcoord 7, 6
-	ld [hl], $33 ; left
-	hlcoord 9, 6
-	ld [hl], $34 ; right
-	hlcoord 8, 7
-	ld [hl], $35 ; bottom
-	; get index for center graphics
-	; CaughtBallsGFX + [wTempMonCaughtBall] tiles
-	ld hl, CaughtBallsGFX
-	ld bc, 1 tiles
-	ld a, [wTempMonCaughtBall]
-	and CAUGHTBALL_MASK
-	rst AddNTimes
-	; load center graphics
-	ld d, h
-	ld e, l
-	ld hl, vTiles2 tile $3e
-	lb bc, BANK(CaughtBallsGFX), 1
-	call Request2bpp
-	; draw center
-	hlcoord 8, 6
-	ld a, $3e ; center
-	ld [hl], a
+	call ClearBox
 	ret
 
-.LoadPals: ; 4dfed (13:5fed)
+.LoadPals:
 	ld a, [wcf64]
-	and $3
+	maskbits NUM_STAT_PAGES
 	ld c, a
 	farcall LoadStatsScreenPals
 	call DelayFrame
@@ -536,22 +509,28 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	set 5, [hl]
 	ret
 
-.PageTilemap: ; 4e002 (13:6002)
+.PageTilemap:
 	ld a, [wcf64]
-	and $3
+	maskbits NUM_STAT_PAGES
+	dec a
 	ld hl, .Jumptable
 	rst JumpTable
 	ret
 
-.Jumptable: ; 4e00d (13:600d)
+.Jumptable:
+; entries correspond to *_PAGE constants
 	dw .PinkPage
 	dw .GreenPage
 	dw .BluePage
-	dw .OrangePage
 
-.PinkPage: ; 4e013 (13:6013)
-	ld de, .Status_Type
+.PinkPage:
 	hlcoord 0, 9
+	ld b, $0
+	predef DrawPlayerHP
+	hlcoord 8, 9
+	ld [hl], $41 ; right HP/exp bar end cap
+	ld de, .Status_Type
+	hlcoord 0, 12
 	call PlaceString
 	ld a, [wTempMonPokerusStatus]
 	ld b, a
@@ -561,12 +540,12 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	and $f0
 	jr z, .NotImmuneToPkrs
 	hlcoord 8, 8
-	ld [hl], "."
+	ld [hl], "." ; Pokérus immunity dot
 .NotImmuneToPkrs:
 	ld a, [wMonType]
 	cp BOXMON
 	jr z, .StatusOK
-	hlcoord 5, 10
+	hlcoord 6, 13
 	push hl
 	ld de, wTempMonStatus
 	predef PlaceStatusString
@@ -575,16 +554,15 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	jr .StatusOK
 .HasPokerus:
 	ld de, .PkrsStr
-	hlcoord 1, 10
+	hlcoord 1, 13
 	call PlaceString
 	jr .done_status
 .StatusOK:
 	ld de, .OK_str
 	call PlaceString
 .done_status
-	hlcoord 1, 12
+	hlcoord 1, 15
 	predef PrintMonTypes
-	call .PlaceOTInfo
 	hlcoord 9, 8
 	ld de, SCREEN_WIDTH
 	ld b, 10
@@ -614,20 +592,18 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	ld de, .ToStr
 	hlcoord 14, 14
 	call PlaceString
-	hlcoord 12, 16
+	hlcoord 11, 16
 	ld a, [wTempMonLevel]
 	ld b, a
 	ld de, wTempMonExp + 2
 	predef FillInExpBar
 	hlcoord 10, 16
-	ld [hl], "<XP1>"
-	inc hl
-	ld [hl], "<XP2>"
+	ld [hl], $40 ; left exp bar end cap
 	hlcoord 19, 16
-	ld [hl], "<XPEND>" ; exp bar end cap
+	ld [hl], $41 ; right exp bar end cap
 	ret
 
-.PrintNextLevel: ; 4e0d3 (13:60d3)
+.PrintNextLevel:
 	ld a, [wTempMonLevel]
 	push af
 	cp MAX_LEVEL
@@ -640,7 +616,7 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	ld [wTempMonLevel], a
 	ret
 
-.CalcExpToNextLevel: ; 4e0e7 (13:60e7)
+.CalcExpToNextLevel:
 	ld a, [wTempMonLevel]
 	cp MAX_LEVEL
 	jr z, .AlreadyAtMaxLevel
@@ -649,15 +625,15 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	farcall CalcExpAtLevel
 	ld hl, wTempMonExp + 2
 	ld hl, wTempMonExp + 2
-	ld a, [hQuotient + 2]
+	ldh a, [hQuotient + 3]
 	sub [hl]
 	dec hl
 	ld [wBuffer3], a
-	ld a, [hQuotient + 1]
+	ldh a, [hQuotient + 2]
 	sbc [hl]
 	dec hl
 	ld [wBuffer2], a
-	ld a, [hQuotient]
+	ldh a, [hQuotient + 1]
 	sbc [hl]
 	ld [wBuffer1], a
 	ret
@@ -669,72 +645,27 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	ld [hli], a
 	ld [hl], a
 	ret
-; 4e119 (13:6119)
 
-.PlaceOTInfo: ; 4e1cc (13:61cc)
-	ld de, .OT_ID_str
-	hlcoord 0, 14
-	call PlaceString
-	hlcoord 3, 16
-	lb bc, PRINTNUM_LEADINGZEROS | 2, 5
-	ld de, wTempMonID
-	call PrintNum
-	ld hl, .OTNamePointers
-	call GetNicknamePointer
-	call CopyNickname
-	hlcoord 1, 15
-	call PlaceString
-	ld a, [wTempMonCaughtGender]
-	and FEMALE
-	jr z, .male
-	ld a, "♀"
-	jr .got_gender
-.male
-	ld a, "♂"
-.got_gender
-	hlcoord 8, 15
-	ld [hl], a
-	ret
-; 4e216 (13:6216)
+.Status_Type:
+	db   "STATUS/"
+	next "TYPE/@"
 
-.OTNamePointers: ; 4e216
-	dw wPartyMonOT
-	dw wOTPartyMonOT
-	dw sBoxMonOT
-	dw wBufferMonOT
-; 4e21e
+.OK_str:
+	db "OK @"
 
-.Status_Type: ; 4e119
-	db   "Status/"
-	next "Type/@"
-; 4e127
+.ExpPointStr:
+	db "EXP POINTS@"
 
-.OK_str: ; 4e127
-	db " OK@"
-; 4e12b
+.LevelUpStr:
+	db "LEVEL UP@"
 
-.OT_ID_str: ; 4e222 / 4e21e
-	db   "OT/"
-	next "<ID>№.@"
-; 4e226
+.ToStr:
+	db "TO@"
 
-.ExpPointStr: ; 4e12b
-	db "Exp.Points@"
-; 4e136
+.PkrsStr:
+	db "#RUS@"
 
-.LevelUpStr: ; 4e136
-	db "Level Up@"
-; 4e13f
-
-.ToStr: ; 4e13f
-	db "to@"
-; 4e142
-
-.PkrsStr: ; 4e142
-	db "#rus@"
-; 4e147
-
-.GreenPage: ; 4e147 (13:6147)
+.GreenPage:
 	ld de, .Item
 	hlcoord 0, 8
 	call PlaceString
@@ -747,7 +678,7 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	ld hl, wTempMonMoves
 	ld de, wListMoves_MoveIndicesBuffer
 	ld bc, NUM_MOVES
-	rst CopyBytes
+	call CopyBytes
 	hlcoord 8, 10
 	ld a, SCREEN_WIDTH * 2
 	ld [wBuffer1], a
@@ -758,32 +689,28 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	predef ListMovePP
 	ret
 
-.GetItemName: ; 4e189 (13:6189)
+.GetItemName:
 	ld de, .ThreeDashes
 	ld a, [wTempMonItem]
 	and a
 	ret z
-	ld [wd265], a
-	jp GetItemName
-; 4e1a0 (13:61a0)
+	ld b, a
+	ld a, b
+	ld [wNamedObjectIndexBuffer], a
+	call GetItemName
+	ret
 
-.Item: ; 4e1a0
-	db "Item@"
-; 4e1a5
+.Item:
+	db "ITEM@"
 
-.ThreeDashes: ; 4e1a5
+.ThreeDashes:
 	db "---@"
-; 4e1a9
 
-.Move: ; 4e1a9
-	db "Moves@"
-; 4e1ae
+.Move:
+	db "MOVE@"
 
-.BluePage: ; 4e1ae (13:61ae)
-	hlcoord 0, 9
-	predef DrawPlayerHP
-	call .PlaceNatureInfo
-	call TN_PrintCharacteristics
+.BluePage:
+	call .PlaceOTInfo
 	hlcoord 10, 8
 	ld de, SCREEN_WIDTH
 	ld b, 10
@@ -798,227 +725,49 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	predef PrintTempMonStats
 	ret
 
-.PlaceNatureInfo:
-	ld de, .NatureString
+.PlaceOTInfo:
+	ld de, IDNoString
+	hlcoord 0, 9
+	call PlaceString
+	ld de, OTString
 	hlcoord 0, 12
 	call PlaceString
-	ld a, [wTempMonNature]
-	ld b, a
-	farcall GetNature
-	hlcoord 1, 13
-	predef PrintNature
+	hlcoord 2, 10
+	lb bc, PRINTNUM_LEADINGZEROS | 2, 5
+	ld de, wTempMonID
+	call PrintNum
+	ld hl, .OTNamePointers
+	call GetNicknamePointer
+	call CopyNickname
+	farcall CorrectNickErrors
+	hlcoord 2, 13
+	call PlaceString
+	ld a, [wTempMonCaughtGender]
+	and a
+	jr z, .done
+	cp $7f
+	jr z, .done
+	and $80
+	ld a, "♂"
+	jr z, .got_gender
+	ld a, "♀"
+.got_gender
+	hlcoord 9, 13
+	ld [hl], a
+.done
 	ret
 
-.NatureString:
-	db "Nature/@"
+.OTNamePointers:
+	dw wPartyMonOT
+	dw wOTPartyMonOT
+	dw sBoxMonOT
+	dw wBufferMonOT
 
-.OrangePage:
-	farjp OrangePage_
+IDNoString:
+	db "<ID>№.@"
 
-
-; Fourth stats page code by TPP Anniversary Crystal 251
-; Ported by FredrIQ
-OrangePage_:
-	call TN_PrintToD
-	call TN_PrintLocation
-	call TN_PrintLV
-	hlcoord 0, 11
-	ld de, .horizontal_divider
-	call PlaceString
-	hlcoord 1, 12
-	ld de, .ability
-	call PlaceString
-	ld a, [wTempMonAbility]
-	ld b, a
-	ld a, [wTempMonSpecies]
-	ld c, a
-	farcall GetAbility
-	; PlaceString as used in PrintAbility doesn't preserve any register, so push it.
-	push bc
-	predef PrintAbility
-	pop bc
-	predef PrintAbilityDescription
-	ret
-
-.horizontal_divider
-	db "____________________@"
-.ability
-	db "Ability/@"
-
-TN_PrintToD
-	ld de, .caughtat
-	hlcoord 1, 8
-	call PlaceString
-	ld a, [wTempMonCaughtTime]
-	and CAUGHTTIME_MASK
-	ld de, .unknown
-	jr z, .print
-	rlca
-	rlca
-	rlca
-	cp 2
-	ld de, .morn
-	jr c, .print
-	ld de, .day
-	jr z, .print
-	ld de, .nite
-.print
-	hlcoord 3, 9
-	jp PlaceString
-
-.caughtat
-	db "Met/@"
-
-.morn
-	db "Morn@"
-
-.day
-	db "Day@"
-
-.nite
-	db "Nite@"
-
-.unknown
-	db "???@"
-
-TN_PrintLocation:
-	ld a, [wTempMonCaughtLocation]
-	and a
-	ret z
-	ld de, .event
-	cp $ff
-	jr z, .print
-	ld e, a
-	farcall GetLandmarkName
-	ld de, wStringBuffer1
-.print
-	hlcoord 3, 10
-	jp PlaceString
-
-.event
-	db "Event #mon@"
-
-TN_PrintLV:
-	ld a, [wTempMonCaughtLevel]
-	hlcoord 8, 9
-	and a
-	jr z, .unknown
-	cp 1
-	jr z, .hatched
-	ld [wBuffer2], a
-	ld de, .str_atlv
-	call PlaceString
-	ld de, wBuffer2
-	lb bc, PRINTNUM_RIGHTALIGN | 1, 3
-	hlcoord 12, 9
-	jp PrintNum
-.hatched
-	ld de, .str_hatched
-	jp PlaceString
-.unknown
-	ld de, .str_unknown
-	jp PlaceString
-
-.str_atlv
-	db "at <LV>@"
-
-.str_hatched
-	db "from Egg@"
-
-.str_unknown
-	db "by trade@"
-
-TN_PrintCharacteristics:
-	; b = value of best DV, c = index of best DV
-	ld hl, wTempMonDVs
-	; Atk
-	ld c, 1
-	ld a, [hl]
-	and $f
-	ld b, a
-	; HP
-	ld a, [hli]
-	swap a
-	and $f
-	cp b
-	jr z, .atk_beats_hp ; tie
-	jr c, .atk_beats_hp
-	ld c, 0
-	ld b, a
-.atk_beats_hp
-	; Spd
-	ld a, [hl]
-	and $f
-	cp b
-	jr z, .last_beats_spd ; tie
-	jr c, .last_beats_spd
-	ld c, 5
-	ld b, a
-.last_beats_spd
-	; Def
-	ld a, [hli]
-	swap a
-	and $f
-	cp b
-	jr z, .last_beats_def ; tie
-	jr c, .last_beats_def
-	ld c, 2
-	ld b, a
-.last_beats_def
-	; SDf
-	ld a, [hl]
-	and $f
-	cp b
-	jr z, .last_beats_sdf ; tie
-	jr c, .last_beats_sdf
-	ld c, 4
-	ld b, a
-.last_beats_sdf
-	; SAt
-	ld a, [hl]
-	swap a
-	and $f
-	cp b
-	jr z, .last_beats_sat ; tie
-	jr c, .last_beats_sat
-	ld c, 3
-	ld b, a
-.last_beats_sat
-
-; DVs are 0-15, but Gen 3+ IVs are 0-31.
-; Stats are calculated so that a DV of N acts like an IV of 2*N+1.
-; To keep characteristics consistent with the apparent IV values,
-; this conversion is actually done.
-	ld a, b
-	add b
-	inc a
-	ld b, a
-
-	; a = 5 * c + b % 5
-	ld a, b
-.mod_5
-	cp 5
-	jr c, .modded_5
-	sub 5
-	jr .mod_5
-.modded_5
-	ld b, a
-	ld a, 5
-	call SimpleMultiply
-	add b
-
-	ld l, a
-	ld h, 0
-	ld bc, Characteristics
-	add hl, hl
-	add hl, bc
-	ld a, [hli]
-	ld d, [hl]
-	ld e, a
-	hlcoord 0, 15
-	jp PlaceString
-
-INCLUDE "data/characteristics.asm"
+OTString:
+	db "OT/@"
 
 StatsScreen_PlaceFrontpic:
 	ld hl, wTempMonDVs
@@ -1050,12 +799,18 @@ StatsScreen_PlaceFrontpic:
 	ld hl, wcf64
 	set 5, [hl]
 	ld a, [wCurPartySpecies]
+	cp VULPIX
+	jr z, .vulpix
+	cp NINETALES
+	jr z, .ninetales
 	cp UNOWN
 	jr z, .unown
 	hlcoord 0, 0
 	call PrepMonFrontpic
 	ret	
 
+.vulpix	
+.ninetales
 .unown
 	xor a
 	ld [wBoxAlignment], a
@@ -1136,10 +891,12 @@ StatsScreen_GetAnimationParam:
 
 .Tempmon:
 	ld bc, wTempMonSpecies
-.CheckEggFaintedFrzSlp: ; 4e2f2 (13:62f2)
-	ld a, [wTempMonIsEgg]
-	bit MON_IS_EGG_F, a
-	jr nz, .egg
+	jr .CheckEggFaintedFrzSlp ; utterly pointless
+
+.CheckEggFaintedFrzSlp:
+	ld a, [wCurPartySpecies]
+	cp EGG
+	jr z, .egg
 	call CheckFaintedFrzSlp
 	jr c, .FaintedFrzSlp
 .egg
@@ -1179,16 +936,28 @@ StatsScreen_LoadTextBoxSpaceGFX:
 	pop hl
 	ret
 
-EggStatsScreen: ; 4e33a
+EggStatsScreen:
 	xor a
-	ld [hBGMapMode], a
+	ldh [hBGMapMode], a
 	ld hl, wCurHPPal
 	call SetHPPal
-	ld b, CGB_STATS_SCREEN_HP_PALS
+	ld b, SCGB_STATS_SCREEN_HP_PALS
 	call GetCGBLayout
 	call StatsScreen_PlaceHorizontalDivider
 	ld de, EggString
 	hlcoord 8, 1
+	call PlaceString
+	ld de, IDNoString
+	hlcoord 8, 3
+	call PlaceString
+	ld de, OTString
+	hlcoord 8, 5
+	call PlaceString
+	ld de, FiveQMarkString
+	hlcoord 11, 3
+	call PlaceString
+	ld de, FiveQMarkString
+	hlcoord 11, 5
 	call PlaceString
 	ld a, [wTempMonHappiness] ; egg status
 	ld de, EggSoonString
@@ -1217,36 +986,35 @@ EggStatsScreen: ; 4e33a
 	cp 6
 	ret nc
 	ld de, SFX_2_BOOPS
-	jp PlaySFX
-; 0x4e3c0
+	call PlaySFX
+	ret
 
-EggString: ; 4e3c0
-	db   "Egg"
-	next "OT/?????"
-	next "<ID>№.?????@"
+EggString:
+	db "EGG@"
 
-EggSoonString: ; 0x4e3ca
+FiveQMarkString:
+	db "?????@"
+
+EggSoonString:
 	db   "It's making sounds"
 	next "inside. It's going"
 	next "to hatch soon!@"
 
-EggCloseString: ; 0x4e3fd
+EggCloseString:
 	db   "It moves around"
 	next "inside sometimes."
 	next "It must be close"
 	next "to hatching.@"
 
-EggMoreTimeString: ; 0x4e43d
+EggMoreTimeString:
 	db   "Wonder what's"
 	next "inside? It needs"
 	next "more time, though.@"
 
-EggALotMoreTimeString: ; 0x4e46e
-	db   "This Egg needs a"
+EggALotMoreTimeString:
+	db   "This EGG needs a"
 	next "lot more time to"
 	next "hatch.@"
-; 0x4e497
-
 
 StatsScreen_AnimateEgg:
 	call StatsScreen_GetAnimationParam
@@ -1275,34 +1043,25 @@ StatsScreen_AnimateEgg:
 	set 6, [hl]
 	ret
 
-StatsScreen_LoadPageIndicators: ; 4e4cd (13:64cd)
-	hlcoord 11, 5
-	ld a, $36
-	call .load_square
+StatsScreen_LoadPageIndicators:
 	hlcoord 13, 5
-	ld a, $36
+	ld a, $36 ; first of 4 small square tiles
 	call .load_square
 	hlcoord 15, 5
-	ld a, $36
+	ld a, $36 ; " " " "
 	call .load_square
 	hlcoord 17, 5
-	ld a, $36
+	ld a, $36 ; " " " "
 	call .load_square
 	ld a, c
-	and a
-	jr z, .zero
-	cp $2
-	ld a, $3a
-	hlcoord 13, 5
+	cp GREEN_PAGE
+	ld a, $3a ; first of 4 large square tiles
+	hlcoord 13, 5 ; PINK_PAGE (< GREEN_PAGE)
 	jr c, .load_square
-	hlcoord 15, 5
+	hlcoord 15, 5 ; GREEN_PAGE (= GREEN_PAGE)
 	jr z, .load_square
-	hlcoord 17, 5
-	jr .load_square
-.zero
-	ld a, $3a
-	hlcoord 11, 5
-.load_square ; 4e4f7 (13:64f7)
+	hlcoord 17, 5 ; BLUE_PAGE (> GREEN_PAGE)
+.load_square
 	push bc
 	ld [hli], a
 	inc a
@@ -1316,26 +1075,29 @@ StatsScreen_LoadPageIndicators: ; 4e4cd (13:64cd)
 	pop bc
 	ret
 
-CopyNickname: ; 4e505 (13:6505)
+CopyNickname:
 	ld de, wStringBuffer1
-	ld bc, PKMN_NAME_LENGTH
+	ld bc, MON_NAME_LENGTH
+	jr .okay ; utterly pointless
+.okay
 	ld a, [wMonType]
 	cp BOXMON
 	jr nz, .partymon
 	ld a, BANK(sBoxMonNicknames)
 	call GetSRAMBank
 	push de
-	rst CopyBytes
+	call CopyBytes
 	pop de
-	jp CloseSRAM
+	call CloseSRAM
+	ret
 
 .partymon
 	push de
-	rst CopyBytes
+	call CopyBytes
 	pop de
 	ret
 
-GetNicknamePointer: ; 4e528 (13:6528)
+GetNicknamePointer:
 	ld a, [wMonType]
 	add a
 	ld c, a
@@ -1345,12 +1107,12 @@ GetNicknamePointer: ; 4e528 (13:6528)
 	ld h, [hl]
 	ld l, a
 	ld a, [wMonType]
-	cp BREEDMON
+	cp TEMPMON
 	ret z
 	ld a, [wCurPartyMon]
 	jp SkipNames
 
-CheckFaintedFrzSlp: ; 4e53f
+CheckFaintedFrzSlp:
 	ld hl, MON_HP
 	add hl, bc
 	ld a, [hli]
@@ -1359,7 +1121,7 @@ CheckFaintedFrzSlp: ; 4e53f
 	ld hl, MON_STATUS
 	add hl, bc
 	ld a, [hl]
-	and (1 << FRZ) | SLP
+	and 1 << FRZ | SLP
 	jr nz, .fainted_frz_slp
 	and a
 	ret
@@ -1367,7 +1129,3 @@ CheckFaintedFrzSlp: ; 4e53f
 .fainted_frz_slp
 	scf
 	ret
-; 4e554
-
-CaughtBallsGFX:
-INCBIN "gfx/stats/balls.2bpp"

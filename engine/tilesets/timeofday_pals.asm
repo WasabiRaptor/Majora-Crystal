@@ -65,7 +65,7 @@ _TimeOfDayPals::
 	ldh [rSVBK], a
 
 ; update sgb pals
-	ld b, CGB_MAPPALS
+	ld b, SCGB_MAPPALS
 	call GetCGBLayout
 
 ; restore bg palette 7

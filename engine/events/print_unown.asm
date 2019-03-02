@@ -62,7 +62,7 @@ _UnownPrinter:
 	ld [wTempMonDVs], a
 	ld [wTempMonDVs + 1], a
 
-	ld b, CGB_TRAINER_OR_MON_FRONTPIC_PALS
+	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
 	call GetCGBLayout
 	call SetPalettes
 

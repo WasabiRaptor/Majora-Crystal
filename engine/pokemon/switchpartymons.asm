@@ -67,7 +67,7 @@ _SwitchPartyMons:
 	push hl
 	ld de, wd002
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	ld a, [wBuffer3]
 	ld hl, wPartyMon1
 	ld bc, PARTYMON_STRUCT_LENGTH
@@ -75,11 +75,11 @@ _SwitchPartyMons:
 	pop de
 	push hl
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	pop de
 	ld hl, wd002
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	ld a, [wBuffer2]
 	ld hl, wPartyMonOT
 	call SkipNames
@@ -117,7 +117,7 @@ _SwitchPartyMons:
 	ld bc, MAIL_STRUCT_LENGTH
 	ld a, BANK(sPartyMail)
 	call GetSRAMBank
-	rst CopyBytes
+	call CopyBytes
 	ld hl, sPartyMail
 	ld a, [wBuffer3]
 	ld bc, MAIL_STRUCT_LENGTH
@@ -125,11 +125,11 @@ _SwitchPartyMons:
 	pop de
 	push hl
 	ld bc, MAIL_STRUCT_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	pop de
 	ld hl, wd002
 	ld bc, MAIL_STRUCT_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	call CloseSRAM
 	pop bc
 	pop de
@@ -141,5 +141,5 @@ _SwitchPartyMons:
 
 .CopyName:
 	ld bc, NAME_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	ret

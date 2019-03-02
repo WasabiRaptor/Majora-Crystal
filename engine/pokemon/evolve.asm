@@ -291,7 +291,7 @@ EvolveAfterBattle_MasterLoop:
 
 	ld hl, wTempMonSpecies
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst CopyBytes
+	call CopyBytes
 
 	ld a, [wCurSpecies]
 	ld [wTempSpecies], a

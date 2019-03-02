@@ -27,7 +27,7 @@ DoMysteryGift:
 	call ClearTileMap
 	call EnableLCD
 	call WaitBGMap
-	ld b, CGB_DIPLOMA
+	ld b, SCGB_DIPLOMA
 	call GetCGBLayout
 	call SetPalettes
 	pop de
@@ -78,7 +78,7 @@ DoMysteryGift:
 	ld l, e
 	ld de, wStringBuffer1
 	ld bc, ITEM_NAME_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	ld hl, .Text_SentToHome ; sent decoration to home
 	jr .PrintTextAndExit
 
@@ -213,13 +213,13 @@ DoMysteryGift:
 	ld hl, wMysteryGiftPartnerName
 	ld de, sMysteryGiftPartnerName
 	ld bc, NAME_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	ld a, $1
 	ld [de], a
 	inc de
 	ld hl, wMysteryGiftTrainerData
 	ld bc, (1 + 1 + NUM_MOVES) * PARTY_LENGTH + 2
-	rst CopyBytes
+	call CopyBytes
 	jp CloseSRAM
 
 Function104a95:
@@ -404,7 +404,7 @@ Function104bd0:
 	ld hl, wMysteryGiftTrainerData
 	ld de, wMysteryGiftPartnerData
 	ld bc, wMysteryGiftPartnerDataEnd - wMysteryGiftPartnerData
-	rst CopyBytes
+	call CopyBytes
 	ld a, [wMysteryGiftTrainerData]
 	cp $3
 	jr nc, .quit
@@ -1234,7 +1234,7 @@ StagePartyDataForMysteryGift:
 	add hl, bc
 	push bc
 	ld bc, NUM_MOVES
-	rst CopyBytes
+	call CopyBytes
 	pop bc
 	pop hl
 .next
@@ -1338,7 +1338,7 @@ InitMysteryGiftLayout:
 	ld [hl], $41
 	call EnableLCD
 	call WaitBGMap
-	ld b, CGB_MYSTERY_GIFT
+	ld b, SCGB_MYSTERY_GIFT
 	call GetCGBLayout
 	call SetPalettes
 	ret
@@ -1507,7 +1507,7 @@ Function105777:
 	call ClearTileMap
 	call EnableLCD
 	call WaitBGMap
-	ld b, CGB_DIPLOMA
+	ld b, SCGB_DIPLOMA
 	call GetCGBLayout
 	call SetPalettes
 	ret
@@ -1518,13 +1518,13 @@ Function10578c:
 	call GetSRAMBank
 	ld hl, sPlayerData + wPlayerName - wPlayerData
 	ld bc, NAME_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	ld hl, sPlayerData + wPlayerID - wPlayerData
 	ld bc, 2
-	rst CopyBytes
+	call CopyBytes
 	ld hl, sPlayerData + wSecretID - wPlayerData
 	ld bc, 2
-	rst CopyBytes
+	call CopyBytes
 	call CloseSRAM
 	ld a, BANK(sCrystalData)
 	call GetSRAMBank
@@ -1535,10 +1535,10 @@ Function10578c:
 	call GetSRAMBank
 	ld hl, $a603 ; address of MBC30 bank
 	ld bc, $8
-	rst CopyBytes
+	call CopyBytes
 	ld hl, $a007 ; address of MBC30 bank
 	ld bc, $c
-	rst CopyBytes
+	call CopyBytes
 	call CloseSRAM
 	ret
 
@@ -1629,7 +1629,7 @@ Function1057d7:
 	ld de, wVirtualOAMSprite00
 	ld hl, .OAM_data
 	ld bc, 16 * SPRITEOAMSTRUCT_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	call EnableLCD
 	call WaitBGMap
 	ld b, $2

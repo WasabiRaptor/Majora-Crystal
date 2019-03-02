@@ -17,17 +17,17 @@ UnusedTitleScreen:
 	ld hl, UnusedTitleBG_GFX
 	ld de, vTiles2
 	ld bc, vBGMap0 - vTiles2
-	rst CopyBytes
+	call CopyBytes
 
 	ld hl, UnusedTitleBG_GFX + $80 tiles
 	ld de, vTiles1
 	ld bc, vTiles2 - vTiles1
-	rst CopyBytes
+	call CopyBytes
 
 	ld hl, UnusedTitleFG_GFX
 	ld de, vTiles0
 	ld bc, vTiles1 - vTiles0
-	rst CopyBytes
+	call CopyBytes
 
 	ld hl, UnusedTitleBG_Tilemap
 	debgcoord 0, 0
@@ -50,7 +50,7 @@ UnusedTitleScreen:
 	ld hl, UnusedTitleFG_OAM
 	ld de, wVirtualOAMSprite00
 	ld bc, SPRITEOAMSTRUCT_LENGTH * NUM_SPRITE_OAM_STRUCTS
-	rst CopyBytes
+	call CopyBytes
 
 	call EnableLCD
 	ldh a, [rLCDC]
@@ -68,22 +68,22 @@ UnusedTitleScreen:
 	ld hl, UnusedTitleBG_Palettes
 	ld de, wBGPals1
 	ld bc, 8 palettes
-	rst CopyBytes
+	call CopyBytes
 
 	ld hl, UnusedTitleFG_Palettes
 	ld de, wOBPals1
 	ld bc, 8 palettes
-	rst CopyBytes
+	call CopyBytes
 
 	ld hl, UnusedTitleBG_Palettes
 	ld de, wBGPals2
 	ld bc, 8 palettes
-	rst CopyBytes
+	call CopyBytes
 
 	ld hl, UnusedTitleFG_Palettes
 	ld de, wOBPals2
 	ld bc, 8 palettes
-	rst CopyBytes
+	call CopyBytes
 
 	pop af
 	ldh [rSVBK], a

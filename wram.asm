@@ -522,7 +522,6 @@ wEnemySubStatus5:: ; c671
 ; see wPlayerSubStatus5
 	db
 
-wPlayerAbility:: db
 wPlayerRolloutCount:: db ; c672
 wPlayerConfuseCount:: db ; c673
 wPlayerToxicCount:: db ; c674
@@ -532,7 +531,6 @@ wPlayerPerishCount:: db ; c677
 wPlayerFuryCutterCount:: db ; c678
 wPlayerProtectCount:: db ; c679
 
-wEnemyAbility:: db
 wEnemyRolloutCount:: db ; c67a
 wEnemyConfuseCount:: db ; c67b
 wEnemyToxicCount:: db ; c67c
@@ -550,38 +548,7 @@ wBattleAnimParam::
 wKickCounter::
 wPresentPower::
 	db ; c689
-
-wBattleScriptBuffer:: ds 12 ; c68a
-
-wPartyBackupItems::
-; Back up of party items before a battle. Modified in-battle for consumed/harvested.
-; Berries and items stolen from wild Pokémon since those changes are retained.
-	ds PARTY_LENGTH
-
-wPartyUsedItems::
-; For the benefit of Pickup/Harvest
-	ds PARTY_LENGTH
-
-wOTPartyUsedItems::
-; See PartyUsedItems
-	ds PARTY_LENGTH
-
-; What move was selected last.
-; Used for Choice locking and the Metronome item
-wPlayerSelectedMove:: db
-wEnemySelectedMove:: db
-
-; How much the Metronome item is boosted. (Counts even if you don't have the item.)
-wPlayerMetronomeCount:: db
-wEnemyMetronomeCount:: db
-
-; Stores enemy struct data temporarily when checking non-current mons
-wAITempAbility:: db
-wAITempItem:: db
-
-wEnemyBackupSpecies:: db
-
-	ds 15
+wBattleScriptBuffer:: ds 40 ; c68a
 
 wBattleScriptBufferAddress:: dw ; c6b2
 
@@ -1223,12 +1190,77 @@ wMobileInactivityTimerSeconds:: db ; secs
 wMobileInactivityTimerFrames:: db ; frames
 wcd47:: ds 1
 
-wMoveScreenMode:: ds 1 ; normal, learning, reminder, deletion
-wMoveScreenSelectedMove:: ds 1 ; move index
-wMoveScreenOffset:: ds 1 ; offset from top of the list in view
-wMoveScreenNumMoves:: ds 1 ; amount of moves in the list
-wMoveScreenMoves:: ds 76
+	ds 1
 
+wBTTempOTSprite::
+wcd49:: db
+
+wcd4a:: ds 1
+wcd4b:: ds 1
+
+wUnusedEZChatCursorXCoord::
+wcd4c:: db
+wUnusedEZChatCursorYCoord::
+wcd4d:: db
+
+wcd4e:: ds 1
+wcd4f:: ds 1
+wcd50:: ds 1
+wcd51:: ds 1
+wcd52:: ds 1
+
+wMobileOpponentBattleMessage:: ; ds 12
+wcd53:: ds 1
+wcd54:: ds 1
+wcd55:: ds 1
+wcd56:: ds 1
+wcd57:: ds 1
+wcd58:: ds 1
+wcd59:: ds 1
+wcd5a:: ds 1
+wcd5b:: ds 1
+wcd5c:: ds 1
+wcd5d:: ds 1
+wcd5e:: ds 1
+wcd5f:: ds 1
+wcd60:: ds 2
+wcd62:: ds 1
+wcd63:: ds 1
+wcd64:: ds 1
+wcd65:: ds 1
+wcd66:: ds 1
+wcd67:: ds 1
+wcd68:: ds 1
+wcd69:: ds 1
+wcd6a:: ds 1
+wcd6b:: ds 1
+wcd6c:: ds 1
+wcd6d:: ds 1
+wcd6e:: ds 1
+wcd6f:: ds 2
+wcd71:: ds 1
+wcd72:: ds 1
+wcd73:: ds 1
+wcd74:: ds 1
+
+wOTMonSelection:: ds 2 ; ds BATTLETOWER_PARTY_LENGTH
+wcd77:: ds 1
+
+wMobileCrashCheckPointer:: dw
+wcd7a:: ds 2
+wcd7c:: ds 3
+wcd7f:: ds 1
+wcd80:: ds 1
+wcd81:: ds 1
+wcd82:: ds 1
+wcd83:: ds 1
+wcd84:: ds 1
+wcd85:: ds 4
+wcd89:: ds 1
+wcd8a:: ds 1
+wcd8b:: ds 1
+wcd8c:: ds 1
+wcd8d:: ds 11
 ENDU ; cd98
 
 wSGBPredef:: db ; cd98
@@ -1278,7 +1310,6 @@ wcf5d:: dw
 
 wMonType:: db ; cf5f
 
-wCurMove::
 wCurSpecies:: db ; cf60
 
 wNamedObjectTypeBuffer:: db
@@ -1509,7 +1540,7 @@ wOBP1:: db
 wNumHits:: db
 
 	ds 1
-wOptions1::
+
 wOptions:: ; cfcc
 ; bit 0-2: number of frames to delay when printing text
 ;   fast 1; mid 3; slow 5
@@ -1639,7 +1670,9 @@ NEXTU ; d002
 ; movement buffer data
 wMovementBufferCount:: db
 wMovementBufferObject:: db
-wMovementBuffer:: ds 58
+wUnusedMovementBufferBank:: db
+wUnusedMovementBufferPointer:: dw
+wMovementBuffer:: ds 55
 
 NEXTU ; d002
 ; box printing
@@ -1657,7 +1690,11 @@ wTrainerHUDTiles:: ds 4
 
 NEXTU ; d002
 ; mobile participant nicknames
-	ds 22
+	ds 4
+wMobileParticipant1Nickname:: ds NAME_LENGTH_JAPANESE
+wMobileParticipant2Nickname:: ds NAME_LENGTH_JAPANESE
+wMobileParticipant3Nickname:: ds NAME_LENGTH_JAPANESE
+
 NEXTU ; d002
 ; earthquake data buffer
 wEarthquakeMovementDataBuffer:: ds 5
@@ -1679,7 +1716,34 @@ wd003:: db
 wd004:: db
 
 ; mobile?
-	ds 49
+	ds 1
+wd006:: ds 2
+wd008:: ds 2
+	ds 2
+wd00c:: ds 1
+wd00d:: ds 1
+	ds 1
+wd00f:: ds 1
+wd010:: ds 1
+wd011:: ds 1
+wd012:: ds 1
+wd013:: ds 1
+wd014:: ds 2
+	ds 1
+wd017:: ds 1
+wd018:: ds 1
+wd019:: ds 1
+	ds 19
+wd02d:: ds 1
+wd02e:: ds 1
+wd02f:: ds 1
+wd030:: ds 1
+wd031:: ds 1
+wd032:: ds 1
+wd033:: ds 1
+wd034:: ds 2
+wd036:: ds 2
+	ds 6
 
 UNION ; d03e
 ; engine buffers
@@ -2957,13 +3021,9 @@ SECTION "GBC Video", WRAMX
 
 ; eight 4-color palettes each
 wGBCPalettes:: ; used only for BANK(wGBCPalettes)
-wUnknBGPals::
 wBGPals1:: ds 8 palettes ; d000
-wUnknOBPals::
 wOBPals1:: ds 8 palettes ; d040
-wBGPals::
 wBGPals2:: ds 8 palettes ; d080
-wOBPals::
 wOBPals2:: ds 8 palettes ; d0c0
 
 wLYOverrides:: ds SCREEN_HEIGHT_PX ; d100

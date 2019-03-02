@@ -102,7 +102,7 @@ DrawPlayerHUDBorder:
 	ld hl, .tiles
 	ld de, wTrainerHUDTiles
 	ld bc, .tiles_end - .tiles
-	rst CopyBytes
+	call CopyBytes
 	hlcoord 18, 10
 	ld de, -1 ; start on right
 	jr PlaceHUDBorderTiles
@@ -118,7 +118,7 @@ DrawPlayerPartyIconHUDBorder:
 	ld hl, .tiles
 	ld de, wTrainerHUDTiles
 	ld bc, .tiles_end - .tiles
-	rst CopyBytes
+	call CopyBytes
 	hlcoord 18, 10
 	ld de, -1 ; start on right
 	jr PlaceHUDBorderTiles
@@ -134,7 +134,7 @@ DrawEnemyHUDBorder:
 	ld hl, .tiles
 	ld de, wTrainerHUDTiles
 	ld bc, .tiles_end - .tiles
-	rst CopyBytes
+	call CopyBytes
 	hlcoord 1, 2
 	ld de, 1 ; start on left
 	call PlaceHUDBorderTiles
@@ -249,7 +249,7 @@ _ShowLinkBattleParticipants:
 	ld [hli], a
 	ld [hl], "S"
 	farcall LinkBattle_TrainerHuds ; no need to farcall
-	ld b, CGB_DIPLOMA
+	ld b, SCGB_DIPLOMA
 	call GetCGBLayout
 	call SetPalettes
 	ld a, $e4
