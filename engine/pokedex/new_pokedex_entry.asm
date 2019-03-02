@@ -46,6 +46,6 @@ NewPokedexEntry:
 	ld a, [hl]
 	ld [wTempMonDVs + 1], a
 	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
-	call GetSGBLayout
+	call GetCGBLayout
 	call SetPalettes
 	ret

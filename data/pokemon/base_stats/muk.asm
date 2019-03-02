@@ -12,7 +12,8 @@
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/muk/front.dimensions"
 	db NUM_REGIONAL, KANTONIAN ;form differences
-	db 0, 0	;abilities
+	db 0, 0	; abilities
+	db 0 	; hidden ability
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_AMORPHOUS, EGG_AMORPHOUS ; egg groups
 

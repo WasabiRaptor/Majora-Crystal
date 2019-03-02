@@ -12,7 +12,8 @@
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/gurdurr/front.dimensions"
 	db 0, 0 ;total form differences, which form this is
-	db 0, 0	;abilities
+	db 0, 0	; abilities
+	db 0 	; hidden ability
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_HUMAN_LIKE, EGG_HUMAN_LIKE ; egg groups
 

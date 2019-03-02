@@ -30,7 +30,7 @@ BattleCommand_BatonPass:
 	lb bc, 4, 10
 	call ClearBox
 	ld b, SCGB_BATTLE_COLORS
-	call GetSGBLayout
+	call GetCGBLayout
 	call SetPalettes
 	call BatonPass_LinkPlayerSwitch
 

@@ -1,7 +1,7 @@
 _DeleteSaveData:
 	farcall BlankScreen
 	ld b, SCGB_DIPLOMA
-	call GetSGBLayout
+	call GetCGBLayout
 	call LoadStandardFont
 	call LoadFontsExtra
 	ld de, MUSIC_MAIN_MENU

@@ -75,7 +75,7 @@ DisplayCaughtContestMonStats:
 
 	call WaitBGMap
 	ld b, SCGB_DIPLOMA
-	call GetSGBLayout
+	call GetCGBLayout
 	call SetPalettes
 	ret
 

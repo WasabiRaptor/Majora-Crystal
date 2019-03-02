@@ -19,7 +19,7 @@ _FindPartyMonThatSpeciesYourTrainerID:
 	ld a, c
 	ld hl, wPartyMon1ID
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	ld a, [wPlayerID]
 	cp [hl]
 	jr nz, .nope
@@ -47,7 +47,7 @@ FindAtLeastThatHappy:
 	push hl
 	push bc
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	pop bc
 	ld a, b
 	cp [hl]
@@ -79,7 +79,7 @@ FindAboveLevel:
 	push hl
 	push bc
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	pop bc
 	ld a, b
 	cp [hl]

@@ -52,7 +52,7 @@ GetTrainerAttributes:
 	dec a
 	ld hl, TrainerClassAttributes + TRNATTR_ITEM1
 	ld bc, NUM_TRAINER_ATTRIBUTES
-	call AddNTimes
+	rst AddNTimes
 	ld de, wEnemyTrainerItem1
 	ld a, [hli]
 	ld [de], a

@@ -4,7 +4,7 @@ MoveTutor:
 	call ClearScreen
 	call DelayFrame
 	ld b, SCGB_PACKPALS
-	call GetSGBLayout
+	call GetCGBLayout
 	xor a
 	ld [wItemAttributeParamBuffer], a
 	call .GetMoveTutorMove

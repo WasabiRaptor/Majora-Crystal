@@ -87,7 +87,7 @@ InsertDataIntoBoxOrParty:
 	push bc
 	ld a, [wNextBoxOrPartyIndex]
 	dec a
-	call AddNTimes
+	rst AddNTimes
 	push hl
 	add hl, bc
 	ld d, h
@@ -125,7 +125,7 @@ InsertDataIntoBoxOrParty:
 	pop bc
 	pop hl
 	ld a, [wCurPartyMon]
-	call AddNTimes
+	rst AddNTimes
 	ld d, h
 	ld e, l
 	pop hl

@@ -265,7 +265,7 @@ ChooseWildEncounter:
 	inc hl
 	ld a, [wTimeOfDay]
 	ld bc, NUM_GRASSMON * 2
-	call AddNTimes
+	rst AddNTimes
 	ld de, GrassMonProbTable
 
 .watermon
@@ -542,7 +542,7 @@ CheckEncounterRoamMon:
 	ld c, a
 	ld b, 0
 	ld a, 7 ; length of the roam_struct
-	call AddNTimes
+	rst AddNTimes
 	ld a, d
 	cp [hl]
 	jr nz, .DontEncounterRoamMon
@@ -783,7 +783,7 @@ RandomUnseenWildMon:
 	add hl, bc
 	ld a, [wTimeOfDay]
 	ld bc, NUM_GRASSMON * 2
-	call AddNTimes
+	rst AddNTimes
 .randloop1
 	call Random
 	and %11

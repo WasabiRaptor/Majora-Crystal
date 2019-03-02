@@ -301,13 +301,11 @@ LinkReceptionistScript_TimeCapsule:
 	iftrue Script_TimeCapsuleClosed
 	checkflag ENGINE_TIME_CAPSULE
 	iftrue Script_TimeCapsuleClosed
-	special SetBitsForTimeCapsuleRequest
 	faceplayer
 	opentext
 	writetext Text_TimeCapsuleReceptionistIntro
 	yesorno
 	iffalse .Cancel
-	special CheckTimeCapsuleCompatibility
 	ifequal $1, .MonTooNew
 	ifequal $2, .MonMoveTooNew
 	ifequal $3, .MonHasMail
@@ -331,7 +329,6 @@ LinkReceptionistScript_TimeCapsule:
 	end
 
 .OK:
-	special EnterTimeCapsule
 	writetext Text_PleaseComeIn2
 	waitbutton
 	closetext

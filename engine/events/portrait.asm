@@ -28,7 +28,7 @@ Portrait::
 	ld d, BANK(PortraitPicPointers)	
 	dec a
 	ld bc, 3
-	call AddNTimes
+	rst AddNTimes
 	ld a, d
 	call GetFarByte
 	push af
@@ -74,7 +74,7 @@ ClosePortrait::
 	call CopyMenuHeader
 	call ClearMenuBoxInterior
 	call WaitBGMap
-	call GetMemSGBLayout
+	call GetMemCGBLayout
 	xor a
 	ldh [hBGMapMode], a
 	call OverworldTextModeSwitch

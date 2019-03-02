@@ -12,7 +12,8 @@
 	db 120 ; step cycles to hatch
 	INCBIN "gfx/pokemon/silvally-null/front.dimensions"
 	db NUM_SILVALLY, TYPE_NULL ;form differences
-	db 0, 0	;abilities
+	db 0, 0	; abilities
+	db 0 	; hidden ability
 	db GROWTH_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

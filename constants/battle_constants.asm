@@ -97,6 +97,16 @@ SPDSPCDV_SHINY EQU $AA
 	const BATTLETYPE_CELEBI
 	const BATTLETYPE_SUICUNE
 
+; attack failure modes, higher gives priority
+; TODO: complete this functionality
+	const_def 1
+	const ATKFAIL_MISSED  ; "<USER>'s attack missed!"
+	const ATKFAIL_PROTECT ; "<TARGET> is protecting itself!"
+	const ATKFAIL_ABILITY ; ability immunity, might have side effects
+	const ATKFAIL_GENERIC ; "But it failed!"
+	const ATKFAIL_IMMUNE  ; "It doesn't affect <TARGET>!"
+	const ATKFAIL_CUSTOM  ; custom message
+
 ; BattleVarPairs indexes (see home/battle.asm)
 	const_def
 	const BATTLE_VARS_SUBSTATUS1
@@ -109,6 +119,8 @@ SPDSPCDV_SHINY EQU $AA
 	const BATTLE_VARS_SUBSTATUS3_OPP
 	const BATTLE_VARS_SUBSTATUS4_OPP
 	const BATTLE_VARS_SUBSTATUS5_OPP
+	const BATTLE_VARS_ABILITY
+	const BATTLE_VARS_ABILITY_OPP
 	const BATTLE_VARS_STATUS
 	const BATTLE_VARS_STATUS_OPP
 	const BATTLE_VARS_MOVE_ANIM
@@ -133,6 +145,8 @@ SPDSPCDV_SHINY EQU $AA
 	const ENEMY_SUBSTATUS_4
 	const PLAYER_SUBSTATUS_5
 	const ENEMY_SUBSTATUS_5
+	const PLAYER_ABILITY
+	const ENEMY_ABILITY
 	const PLAYER_STATUS
 	const ENEMY_STATUS
 	const PLAYER_MOVE_ANIMATION

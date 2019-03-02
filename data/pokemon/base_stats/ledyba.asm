@@ -12,7 +12,8 @@
 	db 15 ; step cycles to hatch
 	INCBIN "gfx/pokemon/ledyba/front.dimensions"
 	db 0, 0 ;form differences
-	db 0, 0	;abilities
+	db 0, 0	; abilities
+	db 0 	; hidden ability
 	db GROWTH_FAST ; growth rate
 	dn EGG_BUG, EGG_BUG ; egg groups
 

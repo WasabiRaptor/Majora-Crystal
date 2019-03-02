@@ -551,7 +551,7 @@ FillBoxCGB:
 ; CGB layout for SCGB_PARTY_MENU_HP_PALS
 CGB_ApplyPartyMenuHPPals:
 	ld hl, wHPPals
-	ld a, [wSGBPals]
+	ld a, [wHPPalIndex]
 	ld e, a
 	ld d, $0
 	add hl, de
@@ -562,7 +562,7 @@ CGB_ApplyPartyMenuHPPals:
 	ld e, a
 	hlcoord 11, 2, wAttrMap
 	ld bc, 2 * SCREEN_WIDTH
-	ld a, [wSGBPals]
+	ld a, [wHPPalIndex]
 .loop
 	and a
 	jr z, .done
@@ -675,7 +675,7 @@ LoadMapPals:
 	maskbits NUM_DAYTIMES
 	ld bc, 8 palettes
 	ld hl, MapObjectPals
-	call AddNTimes
+	rst AddNTimes
 	ld de, wOBPals1
 	ld bc, 8 palettes
 	ld a, BANK(wOBPals1)

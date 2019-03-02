@@ -49,7 +49,7 @@ _UnownPuzzle:
 	ldh [rLCDC], a
 	call WaitBGMap
 	ld b, SCGB_UNOWN_PUZZLE
-	call GetSGBLayout
+	call GetCGBLayout
 	ld a, $e4
 	call DmgToCgbBGPals
 	ld a, $24

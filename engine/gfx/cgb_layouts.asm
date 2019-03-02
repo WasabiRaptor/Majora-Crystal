@@ -1,6 +1,6 @@
 ; Replaces the functionality of sgb.asm to work with CGB hardware.
 
-LoadSGBLayoutCGB::
+Predef_LoadCGBLayout::
 	ld a, b
 	cp SCGB_RAM
 	jr nz, .not_ram
@@ -475,7 +475,7 @@ _CGB_Evolution:
 	ld hl, wPartyMon1DVs
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld a, [wCurPartyMon]
-	call AddNTimes
+	rst AddNTimes
 	predef GetFormData
 	ld a, [wCurPartySpecies]
 	ld c, l

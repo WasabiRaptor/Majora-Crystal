@@ -466,7 +466,7 @@ Function81c33:
 	ret
 
 .asm_81c69
-	ld hl, wSGBPals
+	ld hl, wHPPalIndex
 	ld a, 1
 	ld [hli], a
 	ld a, LOW(PALRGB_WHITE)
@@ -485,7 +485,7 @@ Function81c33:
 	ld [hli], a
 	ld [hli], a
 	ld [hl], a
-	ld hl, wSGBPals
+	ld hl, wHPPalIndex
 	call Function81f0c
 	hlcoord 10, 2
 	ld de, wc608
@@ -977,7 +977,7 @@ Function81f5e:
 	dec a
 	hlcoord 1, 11
 	ld bc, 2 * SCREEN_WIDTH
-	call AddNTimes
+	rst AddNTimes
 	ld [hl], $ed
 
 .asm_81f8d
@@ -1184,7 +1184,7 @@ Function82236:
 	ld hl, wBGPals2
 	ld a, [wcf64]
 	ld bc, 1 palettes
-	call AddNTimes
+	rst AddNTimes
 	ld de, wc608
 	ld bc, 1 palettes
 	call CopyBytes
@@ -1213,7 +1213,7 @@ Function822a3:
 	ld hl, wBGPals2
 	ld a, [wcf64]
 	ld bc, 1 palettes
-	call AddNTimes
+	rst AddNTimes
 	ld e, l
 	ld d, h
 	ld hl, wc608

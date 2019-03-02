@@ -2,10 +2,6 @@
 FALSE EQU 0
 TRUE  EQU 1
 
-; genders
-MALE   EQU 0
-FEMALE EQU 1
-
 ; FlagAction arguments (see home/flag.asm)
 RESET_FLAG EQU 0
 SET_FLAG   EQU 1

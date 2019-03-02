@@ -307,7 +307,7 @@ ParseCredits:
 ; Print strings spaced every two lines.
 	call .get
 	ld bc, 20 * 2
-	call AddNTimes
+	rst AddNTimes
 	call PlaceString
 	jr .loop
 

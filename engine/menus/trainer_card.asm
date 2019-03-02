@@ -67,7 +67,7 @@ TrainerCard:
 	call EnableLCD
 	call WaitBGMap
 	ld b, SCGB_TRAINER_CARD
-	call GetSGBLayout
+	call GetCGBLayout
 	call SetPalettes
 	call WaitBGMap
 	ld hl, wJumptableIndex

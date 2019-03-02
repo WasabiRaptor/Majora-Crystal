@@ -19,7 +19,7 @@ GetBaseData::
 	ld a, [wAltForm]
 .notaltform
 	dec a
-	call AddNTimes
+	rst AddNTimes
 	ld de, wCurBaseData
 	ld bc, BASE_DATA_SIZE
 	call CopyBytes

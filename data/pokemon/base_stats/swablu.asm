@@ -12,7 +12,8 @@
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/swablu/front.dimensions"
 	db 0, 0 ;form differences
-	db 0, 0	;abilities
+	db 0, 0	; abilities
+	db 0 	; hidden ability
 	db GROWTH_ERRATIC ; growth rate
 	dn EGG_FLYING, EGG_DRAGON ; egg groups
 

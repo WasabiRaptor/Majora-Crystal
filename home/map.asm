@@ -418,7 +418,7 @@ CopyWarpData::
 	ld a, c
 	dec a
 	ld bc, 5 ; warp size
-	call AddNTimes
+	rst AddNTimes
 	ld bc, 2 ; warp number
 	add hl, bc
 	ld a, [hli]
@@ -591,7 +591,7 @@ ReadMapSceneScripts::
 	ret z
 
 	ld bc, 4 ; scene_script size
-	call AddNTimes
+	rst AddNTimes
 	ret
 
 ReadMapCallbacks::
@@ -607,7 +607,7 @@ ReadMapCallbacks::
 	ret z
 
 	ld bc, 3
-	call AddNTimes
+	rst AddNTimes
 	ret
 
 ReadWarps::
@@ -622,7 +622,7 @@ ReadWarps::
 	and a
 	ret z
 	ld bc, 5
-	call AddNTimes
+	rst AddNTimes
 	ret
 
 ReadCoordEvents::
@@ -639,7 +639,7 @@ ReadCoordEvents::
 	ret z
 
 	ld bc, 8
-	call AddNTimes
+	rst AddNTimes
 	ret
 
 ReadBGEvents::
@@ -656,7 +656,7 @@ ReadBGEvents::
 	ret z
 
 	ld bc, 5
-	call AddNTimes
+	rst AddNTimes
 	ret
 
 ReadObjectEvents::
@@ -764,7 +764,7 @@ RestoreFacingAfterWarp::
 	ld c, a
 	ld b, 0
 	ld a, 5
-	call AddNTimes
+	rst AddNTimes
 	ld a, [hli]
 	ld [wYCoord], a
 	ld a, [hli]
@@ -2003,7 +2003,7 @@ ExitAllMenus::
 	call ret_d90
 FinishExitMenu::
 	ld b, SCGB_MAPPALS
-	call GetSGBLayout
+	call GetCGBLayout
 	farcall LoadOW_BGPal7
 	call WaitBGMap2
 	farcall FadeInPalettes
@@ -2025,7 +2025,7 @@ ReturnToMapWithSpeechTextbox::
 	call UpdateSprites
 	call WaitBGMap2
 	ld b, SCGB_MAPPALS
-	call GetSGBLayout
+	call GetCGBLayout
 	farcall LoadOW_BGPal7
 	call UpdateTimePals
 	call DelayFrame
@@ -2091,7 +2091,7 @@ GetAnyMapPointer::
 	dec c
 	ld b, 0
 	ld a, 9
-	call AddNTimes
+	rst AddNTimes
 	ret
 
 GetMapField::
@@ -2264,6 +2264,23 @@ GetWorldMapLocation::
 	pop de
 	pop hl
 	ret
+	
+GetCurrentLandmark::
+	ld a, [wMapGroup]
+	ld b, a
+	ld a, [wMapNumber]
+	ld c, a
+	call GetWorldMapLocation
+	and a ; cp SPECIAL_MAP
+	ret nz
+
+; In a special map, get the backup map group / map id
+GetBackupLandmark::
+	ld a, [wBackupMapGroup]
+	ld b, a
+	ld a, [wBackupMapNumber]
+	ld c, a
+	jp GetWorldMapLocation
 
 GetMapMusic::
 	push hl
@@ -2353,7 +2370,7 @@ LoadTileset::
 	ld hl, Tilesets
 	ld bc, wTilesetEnd - wTileset
 	ld a, [wMapTileset]
-	call AddNTimes
+	rst AddNTimes
 
 	ld de, wTilesetBank
 	ld bc, wTilesetEnd - wTileset

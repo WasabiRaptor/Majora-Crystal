@@ -1881,7 +1881,7 @@ ConvertMemToText:
 CopyConvertedText:
 	ld hl, wStringBuffer3
 	ld bc, wStringBuffer4 - wStringBuffer3
-	call AddNTimes
+	rst AddNTimes
 	call CopyName2
 	ret
 

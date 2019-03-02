@@ -12,7 +12,8 @@
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/feebas/front.dimensions"
 	db 0, 0 ;form differences
-	db 0, 0	;abilities
+	db 0, 0	; abilities
+	db 0 	; hidden ability
 	db GROWTH_ERRATIC ; growth rate
 	dn EGG_DRAGON, EGG_WATER_1 ; egg groups 
 

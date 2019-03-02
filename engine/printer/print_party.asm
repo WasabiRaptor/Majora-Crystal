@@ -225,7 +225,7 @@ PrintPartyMonPage1:
 	call _PrepMonFrontpic
 	call WaitBGMap
 	ld b, SCGB_STATS_SCREEN_HP_PALS
-	call GetSGBLayout
+	call GetCGBLayout
 	call SetPalettes
 	ret
 
@@ -266,17 +266,17 @@ PrintPartyMonPage2:
 	ld de, wTempMonDefense
 	call .PrintTempMonStats
 	hlcoord 16, 11
-	ld de, wTempMonSpclAtk
+	ld de, wTempMonSpAtk
 	call .PrintTempMonStats
 	hlcoord 16, 13
-	ld de, wTempMonSpclDef
+	ld de, wTempMonSpDef
 	call .PrintTempMonStats
 	hlcoord 16, 15
 	ld de, wTempMonSpeed
 	call .PrintTempMonStats
 	call WaitBGMap
 	ld b, SCGB_STATS_SCREEN_HP_PALS
-	call GetSGBLayout
+	call GetCGBLayout
 	call SetPalettes
 	ret
 
@@ -288,7 +288,7 @@ PrintPartyMonPage2:
 Function1dc50e:
 	ld bc, NAME_LENGTH
 	ld a, [wCurPartyMon]
-	call AddNTimes
+	rst AddNTimes
 	ld e, l
 	ld d, h
 	ret

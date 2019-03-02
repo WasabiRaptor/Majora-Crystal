@@ -94,7 +94,7 @@ AnimateHallOfFame:
 	jr nc, .done
 	ld hl, wHallOfFameTempMon1
 	ld bc, wHallOfFameTempMon1End - wHallOfFameTempMon1
-	call AddNTimes
+	rst AddNTimes
 	ld a, [hl]
 	cp -1
 	jr z, .done
@@ -161,7 +161,7 @@ GetHallOfFameParty:
 	ld a, c
 	ld hl, wPartyMons
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	ld c, l
 	ld b, h
 
@@ -200,7 +200,7 @@ GetHallOfFameParty:
 	ld a, c
 	ld hl, wPartyMonNicknames
 	ld bc, MON_NAME_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	ld bc, MON_NAME_LENGTH - 1
 	call CopyBytes
 
@@ -254,7 +254,7 @@ AnimateHOFMonEntrance:
 	xor a
 	ldh [hBGMapMode], a
 	ld b, SCGB_PLAYER_OR_MON_FRONTPIC_PALS
-	call GetSGBLayout
+	call GetCGBLayout
 	call SetPalettes
 	call HOF_SlideBackpic
 	xor a
@@ -348,7 +348,7 @@ _HallOfFamePC:
 	jr nc, .fail
 	ld hl, wHallOfFameTempMon1
 	ld bc, wHallOfFameTempMon1End - wHallOfFameTempMon1
-	call AddNTimes
+	rst AddNTimes
 	ld a, [hl]
 	cp -1
 	jr nz, .okay
@@ -386,7 +386,7 @@ _HallOfFamePC:
 	call PlaceString
 	call WaitBGMap
 	ld b, SCGB_PLAYER_OR_MON_FRONTPIC_PALS
-	call GetSGBLayout
+	call GetCGBLayout
 	call SetPalettes
 	decoord 6, 5
 	ld c, ANIM_MON_HOF
@@ -409,7 +409,7 @@ LoadHOFTeam:
 	jr nc, .invalid
 	ld hl, sHallOfFame
 	ld bc, wHallOfFameTempEnd - wHallOfFameTemp + 1
-	call AddNTimes
+	rst AddNTimes
 	ld a, BANK(sHallOfFame)
 	call GetSRAMBank
 	ld a, [hl]
@@ -536,7 +536,7 @@ HOF_AnimatePlayerPic:
 	ldh [hBGMapMode], a
 	ld [wCurPartySpecies], a
 	ld b, SCGB_PLAYER_OR_MON_FRONTPIC_PALS
-	call GetSGBLayout
+	call GetCGBLayout
 	call SetPalettes
 	call HOF_SlideBackpic
 	xor a

@@ -522,9 +522,4 @@ InterpretBattleMenu::
 	ld a, [wMenuCursorBuffer]
 	ret
 
-InterpretMobileMenu::
-	ldh a, [hROMBank]
-	ld [wMenuData_2DMenuItemStringsBank], a
-	farcall _InterpretMobileMenu
-	ld a, [wMenuCursorBuffer]
-	ret
+

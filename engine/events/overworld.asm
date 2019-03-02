@@ -85,7 +85,7 @@ CheckPartyMove:
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld hl, wPartyMon1Moves
 	ld a, e
-	call AddNTimes
+	rst AddNTimes
 	ld b, NUM_MOVES
 .check
 	ld a, [hli]

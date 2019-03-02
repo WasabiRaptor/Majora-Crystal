@@ -41,7 +41,7 @@ LoadFrame:
 	maskbits NUM_FRAMES
 	ld bc, 10 * LEN_1BPP_TILE
 	ld hl, Frames
-	call AddNTimes
+	rst AddNTimes
 	ld d, h
 	ld e, l
 	ld hl, vTiles0 tile "┌" ; $ba
@@ -51,7 +51,7 @@ LoadFrame:
 	maskbits NUM_FRAMES
 	ld bc, 10 * LEN_1BPP_TILE
 	ld hl, Frames
-	call AddNTimes
+	rst AddNTimes
 	ld bc, 6 * LEN_1BPP_TILE
 	add hl, bc
 	ld d, h
@@ -63,7 +63,7 @@ LoadFrame:
 	maskbits NUM_FRAMES
 	ld bc, 10 * LEN_1BPP_TILE
 	ld hl, Frames
-	call AddNTimes
+	rst AddNTimes
 	ld bc, 8 * LEN_1BPP_TILE
 	add hl, bc
 	ld d, h

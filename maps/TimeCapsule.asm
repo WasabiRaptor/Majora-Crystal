@@ -35,7 +35,6 @@ TimeCapsule_MapScripts:
 	end
 
 TimeCapsuleConsoleScript:
-	special TimeCapsule
 	newloadmap MAPSETUP_LINKRETURN
 	end
 

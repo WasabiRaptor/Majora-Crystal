@@ -828,7 +828,7 @@ GetMoveEffect:
 	dec a
 	ld hl, Moves + MOVE_EFFECT
 	ld bc, MOVE_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
 	ld b, a
@@ -2668,7 +2668,7 @@ ForcePlayerMonChoice:
 	call ExitMenu
 	call LoadTileMapToTempTileMap
 	call WaitBGMap
-	call GetMemSGBLayout
+	call GetMemCGBLayout
 	call SetPalettes
 	xor a
 	ld c, a
@@ -2687,7 +2687,7 @@ ForcePlayerMonChoice:
 	call DelayFrame
 	call _LoadHPBar
 	call CloseWindow
-	call GetMemSGBLayout
+	call GetMemCGBLayout
 	call SetPalettes
 	call SendOutMonText
 	call NewBattleMonStatus
@@ -2857,7 +2857,7 @@ LostBattle:
 
 ; Greyscale
 	ld b, SCGB_BATTLE_GRAYSCALE
-	call GetSGBLayout
+	call GetCGBLayout
 	call SetPalettes
 	jr .end
 
@@ -3165,7 +3165,7 @@ LookUpTheEffectivenessOfEveryMove:
 	dec a
 	ld hl, Moves
 	ld bc, MOVE_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	ld de, wEnemyMoveStruct
 	ld a, BANK(Moves)
 	call FarCopyBytes
@@ -3197,7 +3197,7 @@ IsThePlayerMonTypesEffectiveAgainstOTMon:
 	dec a
 	ld hl, BaseData + BASE_TYPES
 	ld bc, BASE_DATA_SIZE
-	call AddNTimes
+	rst AddNTimes
 	ld de, wEnemyMonType
 	ld bc, BASE_CATCH_RATE - BASE_TYPES
 	ld a, BANK(BaseData)
@@ -4963,7 +4963,7 @@ BattleMenuPKMN_Loop:
 	call _LoadHPBar
 	call CloseWindow
 	call LoadTileMapToTempTileMap
-	call GetMemSGBLayout
+	call GetMemCGBLayout
 	call SetPalettes
 	jp BattleMenu
 
@@ -5043,7 +5043,7 @@ TryPlayerSwitch:
 	call ClearSprites
 	call _LoadHPBar
 	call CloseWindow
-	call GetMemSGBLayout
+	call GetMemCGBLayout
 	call SetPalettes
 	ld a, [wCurPartyMon]
 	ld [wCurBattleMon], a
@@ -5297,7 +5297,7 @@ MoveSelectionScreen:
 	hlcoord 5, 13
 	ld bc, SCREEN_WIDTH
 	dec a
-	call AddNTimes
+	rst AddNTimes
 	ld [hl], "▷"
 
 .interpret_joypad
@@ -6343,7 +6343,7 @@ LoadEnemyMon:
 	ld a, [wCurPartyMon]
 	ld hl, wOTPartyMonNicknames
 	ld bc, MON_NAME_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	jr .got_nickname
 .no_nickname
 	call GetPokemonName
@@ -6891,7 +6891,7 @@ FinishBattleAnim:
 	push de
 	push hl
 	ld b, SCGB_BATTLE_COLORS
-	call GetSGBLayout
+	call GetCGBLayout
 	call SetPalettes
 	call DelayFrame
 	pop hl
@@ -7970,7 +7970,7 @@ BattleIntro:
 	call InitEnemy
 	call BackUpBGMap2
 	ld b, SCGB_BATTLE_GRAYSCALE
-	call GetSGBLayout
+	call GetCGBLayout
 	ld hl, rLCDC
 	res rLCDC_WINDOW_TILEMAP, [hl] ; select 9800-9BFF
 	call InitBattleDisplay
@@ -8276,7 +8276,7 @@ _DisplayLinkRecord:
 	call ByteFill
 	call WaitBGMap2
 	ld b, SCGB_DIPLOMA
-	call GetSGBLayout
+	call GetCGBLayout
 	call SetPalettes
 	ld c, 8
 	call DelayFrames
@@ -8671,7 +8671,7 @@ AddLastMobileBattleToLinkRecord:
 	ld a, b
 	ld bc, 18
 	ld hl, sLinkBattleRecord
-	call AddNTimes
+	rst AddNTimes
 	push hl
 	ld de, wd002
 	ld bc, 18
@@ -8682,7 +8682,7 @@ AddLastMobileBattleToLinkRecord:
 	ld a, c
 	ld bc, 18
 	ld hl, sLinkBattleRecord
-	call AddNTimes
+	rst AddNTimes
 	pop de
 	push hl
 	ld bc, 18
@@ -8755,7 +8755,7 @@ InitBattleDisplay:
 	call WaitBGMap
 	call HideSprites
 	ld b, SCGB_BATTLE_COLORS
-	call GetSGBLayout
+	call GetCGBLayout
 	call SetPalettes
 	ld a, $90
 	ldh [hWY], a

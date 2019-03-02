@@ -237,7 +237,7 @@ HatchEggs:
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMon1Species
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	ld a, [hl]
 	ld [wCurPartySpecies], a
 	dec a
@@ -265,13 +265,13 @@ HatchEggs:
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMon1DVs
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	predef GetFormData              ;since forms shouldn't change the egg group I don't think I need this 
 	call GetBaseData
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMon1
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	push hl
 	ld bc, MON_MAXHP
 	add hl, bc
@@ -317,7 +317,7 @@ HatchEggs:
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMonOT
 	ld bc, NAME_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	ld d, h
 	ld e, l
 	ld hl, wPlayerName
@@ -327,7 +327,7 @@ HatchEggs:
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMonNicknames
 	ld bc, MON_NAME_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	ld d, h
 	ld e, l
 	push de
@@ -793,7 +793,7 @@ Hatch_LoadFrontpicPal:
 	ld [wPlayerHPPal], a
 	ld b, SCGB_EVOLUTION
 	ld c, $0
-	jp GetSGBLayout
+	jp GetCGBLayout
 
 EggHatch_CrackShell:
 	ld a, [wFrameCounter]

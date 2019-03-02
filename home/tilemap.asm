@@ -201,8 +201,8 @@ ClearPalettes::
 	ldh [hCGBPalUpdate], a
 	ret
 
-GetMemSGBLayout::
+GetMemCGBLayout::
 	ld b, SCGB_RAM
-GetSGBLayout::
+GetCGBLayout::
 ; load sgb packets unless dmg
-	predef_jump LoadSGBLayoutCGB
+	predef_jump Predef_LoadCGBLayout

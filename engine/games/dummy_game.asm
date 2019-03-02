@@ -9,7 +9,7 @@ _DummyGame:
 .LoadGFXAndPals:
 	call DisableLCD
 	ld b, SCGB_DIPLOMA
-	call GetSGBLayout
+	call GetCGBLayout
 	callfar ClearSpriteAnims
 	ld hl, LZ_e2221
 	ld de, vTiles2 tile $00

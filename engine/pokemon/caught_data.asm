@@ -23,7 +23,7 @@ CheckPartyFullAfterContest:
 	ld a, [wPartyCount]
 	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	ld d, h
 	ld e, l
 	ld hl, wContestMon
@@ -69,19 +69,18 @@ CheckPartyFullAfterContest:
 	call GetPartyLocation
 	ld a, [hl]
 	ld [wCurPartyLevel], a
+	ld a, PARK_BALL
+	ld [wCurItem], a
 	call SetCaughtData
 	ld a, [wPartyCount]
 	dec a
 	ld hl, wPartyMon1CaughtLocation
 	call GetPartyLocation
-	ld a, [hl]
-	and CAUGHT_GENDER_MASK
-	ld b, 13 ; was NATIONAL_PARK seemed important for math and the constant maybe shouldn't be there? idk
-	or b
+	ld a, 13 ;national park
 	ld [hl], a
 	xor a
 	ld [wContestMon], a
-	and a ; BUGCONTEST_CAUGHT_MON
+	and a
 	ld [wScriptVar], a
 	ret
 
@@ -134,15 +133,12 @@ CheckPartyFullAfterContest:
 	ld a, BANK(sBoxMon1CaughtLocation)
 	call GetSRAMBank
 	ld hl, sBoxMon1CaughtLocation
-	ld a, [hl]
-	and CAUGHT_GENDER_MASK
-	ld b, 13 ; was NATIONAL_PARK
-	or b
+	ld a, 13; was national park
 	ld [hl], a
 	call CloseSRAM
 	xor a
 	ld [wContestMon], a
-	ld a, BUGCONTEST_BOXED_MON
+	ld a, $1
 	ld [wScriptVar], a
 	ret
 
@@ -167,35 +163,34 @@ SetCaughtData:
 	ld hl, wPartyMon1CaughtLevel
 	call GetPartyLocation
 SetBoxmonOrEggmonCaughtData:
+; CaughtGender
+	ld a, [wPlayerGender]
+	and a
+	jr z, .male
+	ld a, FEMALE
+	jr .ok
+.male
+	ld a, MALE
+.ok
+	ld b, a
+	; CaughtTime
 	ld a, [wTimeOfDay]
 	inc a
 	rrca
 	rrca
+	rrca
+	or b
 	ld b, a
-	ld a, [wCurPartyLevel]
+	; CaughtBall
+	ld a, [wCurItem]
+	and CAUGHTBALL_MASK
 	or b
 	ld [hli], a
-	ld a, [wMapGroup]
-	ld b, a
-	ld a, [wMapNumber]
-	ld c, a
-	cp MAP_POKECENTER_2F
-	jr nz, .NotPokecenter2F
-	ld a, b
-	cp GROUP_POKECENTER_2F
-	jr nz, .NotPokecenter2F
-
-	ld a, [wBackupMapGroup]
-	ld b, a
-	ld a, [wBackupMapNumber]
-	ld c, a
-
-.NotPokecenter2F:
-	call GetWorldMapLocation
-	ld b, a
-	ld a, [wPlayerGender]
-	rrca ; shift bit 0 (PLAYERGENDER_FEMALE_F) to bit 7 (CAUGHT_GENDER_MASK)
-	or b
+	; CaughtLevel
+	ld a, [wCurPartyLevel]
+	ld [hli], a
+	; CaughtLocation
+	call GetCurrentLandmark
 	ld [hl], a
 	ret
 

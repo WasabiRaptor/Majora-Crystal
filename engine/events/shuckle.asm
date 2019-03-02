@@ -25,14 +25,14 @@ GiveShuckle:
 	push af
 	push bc
 	ld hl, wPartyMon1Item
-	call AddNTimes
+	rst AddNTimes
 	ld [hl], BERRY
 	pop bc
 	pop af
 
 ; OT ID.
 	ld hl, wPartyMon1ID
-	call AddNTimes
+	rst AddNTimes
 	ld a, HIGH(MANIA_OT_ID)
 	ld [hli], a
 	ld [hl], LOW(MANIA_OT_ID)
@@ -81,7 +81,7 @@ ReturnShuckle:
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMon1ID
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
+	rst AddNTimes
 
 ; OT ID
 	ld a, [hli]
@@ -112,7 +112,7 @@ ReturnShuckle:
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMon1Happiness
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	ld a, [hl]
 	cp 150
 	ld a, SHUCKIE_HAPPY

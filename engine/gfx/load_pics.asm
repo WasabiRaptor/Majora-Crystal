@@ -4,7 +4,7 @@ GetFormData::
 	jr z, .unown
 	;for form differences not based on DVs
 	push bc
-	ld bc, -2
+	ld bc,  MON_FORM - MON_DVS
 	add hl, bc
 	ld a, [hl]
 	and a
@@ -12,7 +12,7 @@ GetFormData::
 	ld a, 1
 .next
 	ld [wAltForm], a
-	ld bc, 2
+	ld bc, MON_DVS - MON_FORM
 	add hl, bc
 	pop bc
 	ret
@@ -144,7 +144,7 @@ GetFrontpicPointer:
 .notvariant
 	dec a
 	ld bc, 6
-	call AddNTimes
+	rst AddNTimes
 	ld a, d
 	call GetFarByte
 	push af
@@ -263,7 +263,7 @@ GetMonBackpic:
 .notvariant
 	dec a
 	ld bc, 6
-	call AddNTimes
+	rst AddNTimes
 	ld bc, 3
 	add hl, bc
 	ld a, d
@@ -293,7 +293,7 @@ Function511ec:
 	ld hl, PokemonPicPointers
 	dec a
 	ld bc, 6
-	call AddNTimes
+	rst AddNTimes
 	ld a, BANK(PokemonPicPointers)
 	call GetFarByte
 	push af
@@ -318,7 +318,7 @@ GetTrainerPic:
 	ld a, [wTrainerClass]
 	dec a
 	ld bc, 3
-	call AddNTimes
+	rst AddNTimes
 	ldh a, [rSVBK]
 	push af
 	ld a, BANK(wDecompressScratch)

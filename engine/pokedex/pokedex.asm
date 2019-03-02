@@ -250,7 +250,7 @@ Pokedex_InitMainScreen:
 	ld a, -1
 	ld [wCurPartySpecies], a
 	ld a, SCGB_POKEDEX
-	call Pokedex_GetSGBLayout
+	call Pokedex_GetCGBLayout
 	call Pokedex_UpdateCursorOAM
 	farcall DrawPokedexListWindow
 	hlcoord 0, 17
@@ -343,7 +343,7 @@ Pokedex_InitDexEntryScreen:
 	call Pokedex_GetSelectedMon
 	ld [wCurPartySpecies], a
 	ld a, SCGB_POKEDEX
-	call Pokedex_GetSGBLayout
+	call Pokedex_GetCGBLayout
 	ld a, [wCurPartySpecies]
 	call PlayMonCry
 	call Pokedex_IncrementDexPointer
@@ -412,7 +412,7 @@ Pokedex_ReinitDexEntryScreen:
 	call Pokedex_GetSelectedMon
 	ld [wCurPartySpecies], a
 	ld a, SCGB_POKEDEX
-	call Pokedex_GetSGBLayout
+	call Pokedex_GetCGBLayout
 	ld a, [wCurPartySpecies]
 	call PlayMonCry
 	ld hl, wJumptableIndex
@@ -460,7 +460,7 @@ DexEntryScreen_MenuActionJumptable:
 	call Pokedex_GetSelectedMon
 	ld [wCurPartySpecies], a
 	ld a, SCGB_POKEDEX
-	call Pokedex_GetSGBLayout
+	call Pokedex_GetCGBLayout
 	ret
 
 .Cry:
@@ -514,7 +514,7 @@ Pokedex_InitOptionScreen:
 	call Pokedex_DisplayModeDescription
 	call WaitBGMap
 	ld a, SCGB_POKEDEX_SEARCH_OPTION
-	call Pokedex_GetSGBLayout
+	call Pokedex_GetCGBLayout
 	call Pokedex_IncrementDexPointer
 	ret
 
@@ -622,7 +622,7 @@ Pokedex_InitSearchScreen:
 	farcall DoDexSearchSlowpokeFrame
 	call WaitBGMap
 	ld a, SCGB_POKEDEX_SEARCH_OPTION
-	call Pokedex_GetSGBLayout
+	call Pokedex_GetCGBLayout
 	call Pokedex_IncrementDexPointer
 	ret
 
@@ -741,7 +741,7 @@ Pokedex_InitSearchResultsScreen:
 	ld a, -1
 	ld [wCurPartySpecies], a
 	ld a, SCGB_POKEDEX
-	call Pokedex_GetSGBLayout
+	call Pokedex_GetCGBLayout
 	call Pokedex_IncrementDexPointer
 	ret
 
@@ -801,7 +801,7 @@ Pokedex_InitUnownMode:
 	farcall PrintUnownWord
 	call WaitBGMap
 	ld a, SCGB_POKEDEX_UNOWN_MODE
-	call Pokedex_GetSGBLayout
+	call Pokedex_GetCGBLayout
 	call Pokedex_IncrementDexPointer
 	ret
 
@@ -2137,7 +2137,7 @@ Pokedex_PutScrollbarOAM:
 	jr z, .max
 	ld hl, 0
 	ld bc, 121 ; max y - min y
-	call AddNTimes
+	rst AddNTimes
 	ld e, l
 	ld d, h
 	ld b, 0
@@ -2321,9 +2321,9 @@ Pokedex_ApplyPrintPals:
 	call DelayFrame
 	ret
 
-Pokedex_GetSGBLayout:
+Pokedex_GetCGBLayout:
 	ld b, a
-	call GetSGBLayout
+	call GetCGBLayout
 
 Pokedex_ApplyUsualPals:
 ; This applies the palettes used for most Pokédex screens.
@@ -2527,7 +2527,7 @@ _NewPokedexEntry:
 	ld de, vTiles2
 	predef GetMonFrontpic
 	ld a, SCGB_POKEDEX
-	call Pokedex_GetSGBLayout
+	call Pokedex_GetCGBLayout
 	ld a, [wCurPartySpecies]
 	call PlayMonCry
 	ret

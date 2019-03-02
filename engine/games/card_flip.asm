@@ -169,7 +169,7 @@ _CardFlip:
 	hlcoord 9, 0
 	ld bc, SCREEN_WIDTH
 	ld a, [wCardFlipNumCardsPlayed]
-	call AddNTimes
+	rst AddNTimes
 	ld [hl], CARDFLIP_LIGHT_ON
 	ld a, $1
 	ldh [hBGMapMode], a
@@ -372,7 +372,7 @@ CollapseCursorPosition:
 	ld hl, 0
 	ld bc, 6
 	ld a, [wCardFlipCursorY]
-	call AddNTimes
+	rst AddNTimes
 	ld b, $0
 	ld a, [wCardFlipCursorX]
 	ld c, a

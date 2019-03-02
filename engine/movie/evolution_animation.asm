@@ -51,7 +51,7 @@ EvolutionAnimation:
 	ld [wPlayerHPPal], a
 
 	ld c, $0
-	call .GetSGBLayout
+	call .GetCGBLayout
 	ld a, [wEvolutionOldSpecies]
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
@@ -89,7 +89,7 @@ EvolutionAnimation:
 	call DelayFrames
 
 	ld c, $1
-	call .GetSGBLayout
+	call .GetCGBLayout
 	call .AnimationSequence
 	jr c, .cancel_evo
 
@@ -103,7 +103,7 @@ EvolutionAnimation:
 	ld [wPlayerHPPal], a
 
 	ld c, $0
-	call .GetSGBLayout
+	call .GetCGBLayout
 	call .PlayEvolvedSFX
 	farcall ClearSpriteAnims
 	call .check_statused
@@ -140,7 +140,7 @@ EvolutionAnimation:
 	ld [wPlayerHPPal], a
 
 	ld c, $0
-	call .GetSGBLayout
+	call .GetCGBLayout
 	call .PlayEvolvedSFX
 	farcall ClearSpriteAnims
 	call .check_statused
@@ -150,9 +150,9 @@ EvolutionAnimation:
 	call PlayMonCry
 	ret
 
-.GetSGBLayout:
+.GetCGBLayout:
 	ld b, SCGB_EVOLUTION
-	jp GetSGBLayout
+	jp GetCGBLayout
 
 .PlaceFrontpic:
 	ld hl, wPartyMon1DVs

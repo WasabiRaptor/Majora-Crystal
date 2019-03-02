@@ -12,7 +12,8 @@
 	db 80 ; step cycles to hatch
 	INCBIN "gfx/pokemon/suicune/front.dimensions"
 	db NUM_BETA, DEFAULT_FORM ;form differences
-	db 0, 0	;abilities
+	db 0, 0	; abilities
+	db 0 	; hidden ability
 	db GROWTH_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

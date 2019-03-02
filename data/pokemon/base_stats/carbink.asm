@@ -12,7 +12,8 @@
 	db 25 ; step cycles to hatch
 	INCBIN "gfx/pokemon/carbink/front.dimensions"
 	db 0, 0 ;form differences
-	db 0, 0	;abilities
+	db 0, 0	; abilities
+	db 0 	; hidden ability
 	db GROWTH_SLOW ; growth rate
 	dn EGG_FAIRY, EGG_MINERAL ; egg groups
 

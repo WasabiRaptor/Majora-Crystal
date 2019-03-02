@@ -37,7 +37,8 @@ OddEgg1:
 	dt 125 ; Exp
 	db 0, 0, 0, 0, 0, 0 ; EVs
 	db 0, 0 ;form differences
-	db 0, 0	;abilities
+	db 0, 0	; abilities
+	db 0 	; hidden ability
 	dn 0, 0, 0, 0 ; DVs
 	db 30, 20, 10, 0 ; PP
 	db 20 ; Happiness

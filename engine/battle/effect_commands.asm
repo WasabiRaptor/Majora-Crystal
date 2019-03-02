@@ -2618,7 +2618,7 @@ PlayerAttackDamage:
 	jr .thickclub
 
 .special
-	ld hl, wEnemyMonSpclDef
+	ld hl, wEnemyMonSpDef
 	ld a, [hli]
 	ld b, a
 	ld c, [hl]
@@ -2630,7 +2630,7 @@ PlayerAttackDamage:
 	rl b
 
 .specialcrit
-	ld hl, wBattleMonSpclAtk
+	ld hl, wBattleMonSpAtk
 	call CheckDamageStatsCritical
 	jr c, .lightball
 
@@ -2867,7 +2867,7 @@ EnemyAttackDamage:
 	jr .thickclub
 
 .Special:
-	ld hl, wBattleMonSpclDef
+	ld hl, wBattleMonSpDef
 	ld a, [hli]
 	ld b, a
 	ld c, [hl]
@@ -2879,7 +2879,7 @@ EnemyAttackDamage:
 	rl b
 
 .specialcrit
-	ld hl, wEnemyMonSpclAtk
+	ld hl, wEnemyMonSpAtk
 	call CheckDamageStatsCritical
 	jr c, .lightball
 	ld hl, wPlayerSpDef
@@ -5268,7 +5268,7 @@ CheckPlayerHasMonToSwitchTo:
 
 	ld a, e
 	ld hl, wPartyMon1HP
-	call AddNTimes
+	rst AddNTimes
 	ld a, [hli]
 	or [hl]
 	jr nz, .not_fainted
@@ -6724,7 +6724,7 @@ GetItemHeldEffect:
 	ld c, a
 	ld b, 0
 	ld a, ITEMATTR_STRUCT_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	ld a, BANK(ItemAttributes)
 	call GetFarHalfword
 	ld b, l
@@ -6881,7 +6881,7 @@ GetMoveAttr:
 ; Assuming hl = Moves + x, return attribute x of move a.
 	push bc
 	ld bc, MOVE_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	call GetMoveByte
 	pop bc
 	ret
@@ -6890,7 +6890,7 @@ GetMoveData:
 ; Copy move struct a to de.
 	ld hl, Moves
 	ld bc, MOVE_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	ld a, BANK(Moves)
 	jp FarCopyBytes
 

@@ -11,6 +11,9 @@ SECTION "rst10", ROM0 ; rst Bankswitch
 	ldh [hROMBank], a
 	ld [MBC5RomBank], a
 	ret
+	
+SECTION "rst18", ROM0
+	jp _AddNTimes
 
 SECTION "rst18", ROM0
 	rst $38
