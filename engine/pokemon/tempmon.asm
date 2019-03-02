@@ -24,7 +24,7 @@ CopyMonToTempMon:
 
 .copywholestruct
 	ld a, [wCurPartyMon]
-	rst AddNTimes
+	call AddNTimes
 	ld de, wTempMon
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call CopyBytes

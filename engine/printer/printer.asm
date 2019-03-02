@@ -613,7 +613,7 @@ PrintPCBox_Page1:
 	ld a, [wWhichBoxToPrint]
 	ld bc, BOX_NAME_LENGTH
 	ld hl, wBoxNames
-	rst AddNTimes
+	call AddNTimes
 	ld d, h
 	ld e, l
 	hlcoord 6, 5
@@ -741,7 +741,7 @@ Printer_PrintBoxListSegment:
 	add hl, bc
 	ld bc, MON_NAME_LENGTH
 	ld a, [wWhichBoxMonToPrint]
-	rst AddNTimes
+	call AddNTimes
 	ld e, l
 	ld d, h
 	pop hl
@@ -761,7 +761,7 @@ Printer_PrintBoxListSegment:
 	add hl, bc
 	ld bc, BOXMON_STRUCT_LENGTH
 	ld a, [wWhichBoxMonToPrint]
-	rst AddNTimes
+	call AddNTimes
 	ld a, [hl]
 	pop hl
 	call PrintLevel_Force3Digits
@@ -793,7 +793,7 @@ Printer_GetMonGender:
 	add hl, bc
 	ld bc, BOXMON_STRUCT_LENGTH
 	ld a, [wWhichBoxMonToPrint]
-	rst AddNTimes
+	call AddNTimes
 	ld de, wTempMonDVs
 	ld a, [hli]
 	ld [de], a

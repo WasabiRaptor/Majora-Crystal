@@ -12,8 +12,7 @@
 	db 120 ; step cycles to hatch
 	INCBIN "gfx/pokemon/shaymin/front.dimensions"
 	db NUM_SHAYMIN, LAND_SHAYMIN ;form differences
-	db 0, 0	; abilities
-	db 0 	; hidden ability
+	db 0, 0	;abilities
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

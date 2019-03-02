@@ -12,8 +12,7 @@
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/girafarig_beta/front.dimensions"
 	db NUM_BETA, BETA ;form differences
-	db 0, 0	; abilities
-	db 0 	; hidden ability
+	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_FIELD, EGG_FIELD ; egg groups
 

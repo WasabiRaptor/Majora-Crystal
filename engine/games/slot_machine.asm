@@ -107,7 +107,7 @@ _SlotMachine:
 	ld a, " "
 	call ByteFill
 	ld b, SCGB_SLOT_MACHINE
-	call GetCGBLayout
+	call GetSGBLayout
 	callfar ClearSpriteAnims
 	ld hl, wSlots
 	ld bc, wSlotsDataEnd - wSlots

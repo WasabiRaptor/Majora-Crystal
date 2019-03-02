@@ -250,7 +250,7 @@ _ShowLinkBattleParticipants:
 	ld [hl], "S"
 	farcall LinkBattle_TrainerHuds ; no need to farcall
 	ld b, SCGB_DIPLOMA
-	call GetCGBLayout
+	call GetSGBLayout
 	call SetPalettes
 	ld a, $e4
 	ldh [rOBP0], a

@@ -7,7 +7,7 @@ npctrade: MACRO
 ENDM
 
 NPCTrades:
-; entries correspond to TRADE_* constants
+; entries correspond to NPCTRADE_* constants
 	npctrade TRADE_DIALOGSET_COLLECTOR, FLABEBE,       IGGLYBUFF,     "MUSCLE@@@@@", $37, $66, GOLD_BERRY,   37460, "MIKE@@@@@@@", TRADE_GENDER_EITHER
 	npctrade TRADE_DIALOGSET_COLLECTOR, CHESPIN, SCYTHER,       "ROCKY@@@@@@", $96, $66, BITTER_BERRY, 48926, "KYLE@@@@@@@", TRADE_GENDER_EITHER
 	npctrade TRADE_DIALOGSET_HAPPY,     WHIRLIPEDE,     MORELULL,    "VOLTY@@@@@@", $98, $88, PRZCUREBERRY, 29189, "TIM@@@@@@@@", TRADE_GENDER_EITHER

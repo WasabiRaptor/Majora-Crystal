@@ -312,9 +312,9 @@ ContestScore:
 	call .AddContestStat
 	ld a, [wContestMonSpeed   + 1]
 	call .AddContestStat
-	ld a, [wContestMonSpAtk + 1]
+	ld a, [wContestMonSpclAtk + 1]
 	call .AddContestStat
-	ld a, [wContestMonSpDef + 1]
+	ld a, [wContestMonSpclDef + 1]
 	call .AddContestStat
 
 	; DVs

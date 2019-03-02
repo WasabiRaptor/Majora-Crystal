@@ -242,7 +242,7 @@ CopyBoxmonToTempMon:
 	ld a, [wCurPartyMon]
 	ld hl, sBoxMon1Species
 	ld bc, BOXMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld de, wTempMonSpecies
 	ld bc, BOXMON_STRUCT_LENGTH
 	ld a, BANK(sBoxMon1Species)

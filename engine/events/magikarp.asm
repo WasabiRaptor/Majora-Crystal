@@ -15,7 +15,7 @@ CheckMagikarpLength:
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMon1Species
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	push hl
 	ld bc, MON_DVS
 	add hl, bc

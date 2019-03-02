@@ -124,7 +124,7 @@ BattleCommand_BeatUp:
 	ld a, [wd002]
 	ld hl, wOTPartyMonNicknames
 	ld bc, NAME_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld de, wStringBuffer1
 	call CopyBytes
 

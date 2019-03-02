@@ -533,7 +533,7 @@ GetItemAttr:
 	dec a
 	ld c, a
 	ld a, ITEMATTR_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld a, BANK(ItemAttributes)
 	call GetFarByte
 

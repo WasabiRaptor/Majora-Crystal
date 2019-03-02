@@ -12,8 +12,7 @@
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/flabebe/front.dimensions" ; TEMP
 	db 0, 0 ;form differences
-	db 0, 0	; abilities
-	db 0 	; hidden ability
+	db 0, 0	;abilities
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_FIELD, EGG_FIELD ; egg groups
 

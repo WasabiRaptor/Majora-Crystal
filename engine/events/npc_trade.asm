@@ -1,31 +1,35 @@
-NPCTrade:: ; fcba8
+NPCTrade::
 	ld a, e
 	ld [wJumptableIndex], a
 	call Trade_GetDialog
 	ld b, CHECK_FLAG
 	call TradeFlagAction
-	ld a, TRADE_AFTER
+	ld a, TRADE_DIALOG_AFTER
 	jr nz, .done
 
-	ld a, TRADE_INTRO
+	ld a, TRADE_DIALOG_INTRO
 	call PrintTradeText
 
 	call YesNoBox
-	ld a, TRADE_CANCEL
+	ld a, TRADE_DIALOG_CANCEL
 	jr c, .done
 
 ; Select givemon from party
-	ld b, 6
+	ld b, PARTYMENUACTION_GIVE_MON
 	farcall SelectTradeOrDayCareMon
-	ld a, TRADE_CANCEL
+	ld a, TRADE_DIALOG_CANCEL
 	jr c, .done
 
-	ld e, TRADE_GIVEMON
+	ld e, NPCTRADE_GIVEMON
 	call GetTradeAttribute
 	ld a, [wCurPartySpecies]
 	cp [hl]
-	ld a, TRADE_WRONG
+	ld a, TRADE_DIALOG_WRONG
 	jr nz, .done
+
+	call CheckTradeGender
+	ld a, TRADE_DIALOG_WRONG
+	jr c, .done
 
 	ld b, SET_FLAG
 	call TradeFlagAction
@@ -42,11 +46,11 @@ NPCTrade:: ; fcba8
 
 	call RestartMapMusic
 
-	ld a, TRADE_COMPLETE
+	ld a, TRADE_DIALOG_COMPLETE
 
 .done
-	jp PrintTradeText
-; fcc07
+	call PrintTradeText
+	ret
 
 .TradeAnimation:
 	call DisableSpriteUpdates
@@ -62,6 +66,34 @@ NPCTrade:: ; fcba8
 	call ReturnToMapWithSpeechTextbox
 	ret
 
+CheckTradeGender:
+	xor a
+	ld [wMonType], a
+
+	ld e, NPCTRADE_GENDER
+	call GetTradeAttribute
+	ld a, [hl]
+	and a ; TRADE_GENDER_EITHER
+	jr z, .matching
+	cp TRADE_GENDER_MALE
+	jr z, .check_male
+	; TRADE_GENDER_FEMALE
+	farcall GetGender
+	jr nz, .not_matching
+	jr .matching
+
+.check_male
+	farcall GetGender
+	jr z, .not_matching
+
+.matching
+	and a
+	ret
+
+.not_matching
+	scf
+	ret
+
 TradeFlagAction:
 	ld hl, wTradeFlags
 	ld a, [wJumptableIndex]
@@ -72,19 +104,19 @@ TradeFlagAction:
 	ret
 
 Trade_GetDialog:
-	ld e, TRADE_DIALOG
+	ld e, NPCTRADE_DIALOG
 	call GetTradeAttribute
 	ld a, [hl]
 	ld [wcf64], a
 	ret
 
-DoNPCTrade: ; fcc63
-	ld e, TRADE_GIVEMON
+DoNPCTrade:
+	ld e, NPCTRADE_GIVEMON
 	call GetTradeAttribute
 	ld a, [hl]
 	ld [wPlayerTrademonSpecies], a
 
-	ld e, TRADE_GETMON
+	ld e, NPCTRADE_GETMON
 	call GetTradeAttribute
 	ld a, [hl]
 	ld [wOTTrademonSpecies], a
@@ -119,12 +151,6 @@ DoNPCTrade: ; fcc63
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call Trade_GetAttributeOfCurrentPartymon
 	ld de, wPlayerTrademonDVs
-	call Trade_CopyThreeBytes
-
-	ld hl, wPartyMon1Personality
-	ld bc, PARTYMON_STRUCT_LENGTH
-	call Trade_GetAttributeOfCurrentPartymon
-	ld de, wPlayerTrademonPersonality
 	call Trade_CopyTwoBytes
 
 	ld hl, wPartyMon1Species
@@ -136,7 +162,14 @@ DoNPCTrade: ; fcc63
 	ld a, c
 	ld [wPlayerTrademonCaughtData], a
 
-	xor a
+	ld e, NPCTRADE_DIALOG
+	call GetTradeAttribute
+	ld a, [hl]
+	cp TRADE_DIALOGSET_GIRL
+	ld a, CAUGHT_BY_GIRL
+	jr c, .okay
+	ld a, CAUGHT_BY_BOY
+.okay
 	ld [wOTTrademonCaughtData], a
 
 	ld hl, wPartyMon1Level
@@ -147,26 +180,22 @@ DoNPCTrade: ; fcc63
 	ld a, [wOTTrademonSpecies]
 	ld [wCurPartySpecies], a
 	xor a
-	ld [wMonType], a
-	ld [wPokemonWithdrawDepositParameter], a
-	farcall RemoveMonFromPartyOrBox
+	ld [wMonType], a ; PARTYMON
+	ld [wPokemonWithdrawDepositParameter], a ; REMOVE_PARTY
+	callfar RemoveMonFromPartyOrBox
 	predef TryAddMonToParty
 
-	ld e, TRADE_DIALOG
+	ld e, NPCTRADE_DIALOG
 	call GetTradeAttribute
 	ld a, [hl]
-	cp 3
-	ld b, MALE
-	jr c, .male2
-	ld b, FEMALE
-.male2
-	ld e, TRADE_BALL
-	call GetTradeAttribute
-	ld a, [hl]
-	ld c, a
+	cp TRADE_DIALOG_COMPLETE
+	ld b, RESET_FLAG
+	jr c, .incomplete
+	ld b, SET_FLAG
+.incomplete
 	farcall SetGiftPartyMonCaughtData
 
-	ld e, TRADE_NICK
+	ld e, NPCTRADE_NICK
 	call GetTradeAttribute
 	ld de, wOTTrademonNickname
 	call CopyTradeName
@@ -177,7 +206,7 @@ DoNPCTrade: ; fcc63
 	ld hl, wOTTrademonNickname
 	call CopyTradeName
 
-	ld e, TRADE_OT_NAME
+	ld e, NPCTRADE_OT_NAME
 	call GetTradeAttribute
 	push hl
 	ld de, wOTTrademonOTName
@@ -192,29 +221,18 @@ DoNPCTrade: ; fcc63
 	ld hl, wOTTrademonOTName
 	call CopyTradeName
 
-	ld e, TRADE_DVS
+	ld e, NPCTRADE_DVS
 	call GetTradeAttribute
 	ld de, wOTTrademonDVs
-	call Trade_CopyThreeBytes
+	call Trade_CopyTwoBytes
 
 	ld hl, wPartyMon1DVs
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call Trade_GetAttributeOfLastPartymon
 	ld hl, wOTTrademonDVs
-	call Trade_CopyThreeBytes
-
-	ld e, TRADE_PERSONALITY
-	call GetTradeAttribute
-	ld de, wOTTrademonPersonality
 	call Trade_CopyTwoBytes
 
-	ld hl, wPartyMon1Personality
-	ld bc, PARTYMON_STRUCT_LENGTH
-	call Trade_GetAttributeOfLastPartymon
-	ld hl, wOTTrademonPersonality
-	call Trade_CopyTwoBytes
-
-	ld e, TRADE_OT_ID
+	ld e, NPCTRADE_OT_ID
 	call GetTradeAttribute
 	ld de, wOTTrademonID + 1
 	call Trade_CopyTwoBytesReverseEndian
@@ -225,7 +243,7 @@ DoNPCTrade: ; fcc63
 	ld hl, wOTTrademonID
 	call Trade_CopyTwoBytes
 
-	ld e, TRADE_ITEM
+	ld e, NPCTRADE_ITEM
 	call GetTradeAttribute
 	push hl
 	ld hl, wPartyMon1Item
@@ -252,7 +270,6 @@ DoNPCTrade: ; fcc63
 	pop bc
 	pop af
 	ret
-; fcdc2
 
 GetTradeAttribute:
 	ld d, 0
@@ -271,13 +288,13 @@ GetTradeAttribute:
 
 Trade_GetAttributeOfCurrentPartymon:
 	ld a, [wCurPartyMon]
-	rst AddNTimes
+	call AddNTimes
 	ret
 
 Trade_GetAttributeOfLastPartymon:
 	ld a, [wPartyCount]
 	dec a
-	rst AddNTimes
+	call AddNTimes
 	ld e, l
 	ld d, h
 	ret
@@ -311,19 +328,8 @@ Trade_CopyTwoBytesReverseEndian:
 	ld [de], a
 	ret
 
-Trade_CopyThreeBytes:
-	ld a, [hli]
-	ld [de], a
-	inc de
-	ld a, [hli]
-	ld [de], a
-	inc de
-	ld a, [hl]
-	ld [de], a
-	ret
-
-GetTradeMonNames: ; fce1b
-	ld e, TRADE_GETMON
+GetTradeMonNames:
+	ld e, NPCTRADE_GETMON
 	call GetTradeAttribute
 	ld a, [hl]
 	call GetTradeMonName
@@ -331,7 +337,7 @@ GetTradeMonNames: ; fce1b
 	ld de, wStringBuffer2
 	call CopyTradeName
 
-	ld e, TRADE_GIVEMON
+	ld e, NPCTRADE_GIVEMON
 	call GetTradeAttribute
 	ld a, [hl]
 	call GetTradeMonName
@@ -345,9 +351,23 @@ GetTradeMonNames: ; fce1b
 	cp "@"
 	jr nz, .loop
 
+	dec hl
+	push hl
+	ld e, NPCTRADE_GENDER
+	call GetTradeAttribute
+	ld a, [hl]
+	pop hl
+	and a ; TRADE_GENDER_EITHER
+	ret z
+	cp TRADE_GENDER_MALE
+	ld a, "♂"
+	jr z, .done
+	; TRADE_GENDER_FEMALE
+	ld a, "♀"
+.done
+	ld [hli], a
 	ld [hl], "@"
 	ret
-; fce58
 
 INCLUDE "data/events/npc_trades.asm"
 
@@ -357,7 +377,7 @@ PrintTradeText:
 	pop af
 	ld bc, 2 * 4
 	ld hl, TradeTexts
-	rst AddNTimes
+	call AddNTimes
 	ld a, [wcf64]
 	ld c, a
 	add hl, bc

@@ -21,6 +21,40 @@ _InterpretBattleMenu::
 	call Get2DMenuSelection
 	ret
 
+_InterpretMobileMenu::
+	ld hl, CopyMenuData
+	ld a, [wMenuData_2DMenuItemStringsBank]
+	rst FarCall
+
+	call Draw2DMenu
+	farcall MobileTextBorder
+	call UpdateSprites
+	call ApplyTilemap
+	call Init2DMenuCursorPosition
+	ld hl, w2DMenuFlags1
+	set 7, [hl]
+.loop
+	call DelayFrame
+	;farcall Function10032e
+	ld a, [wcd2b]
+	and a
+	jr nz, .quit
+	call MobileMenuJoypad
+	ld a, [wMenuJoypadFilter]
+	and c
+	jr z, .loop
+	call Mobile_GetMenuSelection
+	ret
+
+.quit
+	ld a, [w2DMenuNumCols]
+	ld c, a
+	ld a, [w2DMenuNumRows]
+	call SimpleMultiply
+	ld [wMenuCursorBuffer], a
+	and a
+	ret
+
 Draw2DMenu:
 	xor a
 	ldh [hBGMapMode], a
@@ -220,6 +254,22 @@ _ScrollingMenuJoypad::
 	call MenuJoypadLoop
 	pop af
 	ldh [hBGMapMode], a
+	ret
+
+MobileMenuJoypad:
+	ld hl, w2DMenuFlags2
+	res 7, [hl]
+	ldh a, [hBGMapMode]
+	push af
+	call Move2DMenuCursor
+	call Do2DMenuRTCJoypad
+	jr nc, .skip_joypad
+	call _2DMenuInterpretJoypad
+.skip_joypad
+	pop af
+	ldh [hBGMapMode], a
+	call GetMenuJoypad
+	ld c, a
 	ret
 
 MenuJoypadLoop:
@@ -436,7 +486,7 @@ Place2DMenuCursor:
 
 .got_row
 	ld c, SCREEN_WIDTH
-	rst AddNTimes
+	call AddNTimes
 	ld a, [w2DMenuCursorOffsets]
 	and $f
 	ld c, a

@@ -205,7 +205,7 @@ ItemSwitch_GetNthItem:
 	ld l, a
 	inc hl
 	pop af
-	rst AddNTimes
+	call AddNTimes
 	ret
 
 Function24a6c:
@@ -218,7 +218,7 @@ Function24a6c:
 	cpl
 .dont_negate
 	ld hl, 0
-	rst AddNTimes
+	call AddNTimes
 	ld b, h
 	ld c, l
 	pop hl

@@ -15,7 +15,9 @@ BASE_ITEMS       EQUS "(wBaseItems - wCurBaseData)"
 BASE_ITEM_1      EQUS "(wBaseItem1 - wCurBaseData)"
 BASE_ITEM_2      EQUS "(wBaseItem2 - wCurBaseData)"
 BASE_GENDER      EQUS "(wBaseGender - wCurBaseData)"
+BASE_UNKNOWN_1   EQUS "(wBaseUnknown1 - wCurBaseData)"
 BASE_EGG_STEPS   EQUS "(wBaseEggSteps - wCurBaseData)"
+BASE_UNKNOWN_2   EQUS "(wBaseUnknown2 - wCurBaseData)"
 BASE_PIC_SIZE    EQUS "(wBasePicSize - wCurBaseData)"
 BASE_PADDING     EQUS "(wBasePadding - wCurBaseData)"
 BASE_GROWTH_RATE EQUS "(wBaseGrowthRate - wCurBaseData)"
@@ -76,25 +78,16 @@ MON_HP_EV              EQUS "(wPartyMon1HPEV - wPartyMon1)"
 MON_ATK_EV             EQUS "(wPartyMon1AtkEV - wPartyMon1)"
 MON_DEF_EV             EQUS "(wPartyMon1DefEV - wPartyMon1)"
 MON_SPD_EV             EQUS "(wPartyMon1SpdEV - wPartyMon1)"
-MON_SAT_EV             EQUS "(wPartyMon1SpAtkEV - wPartyMon1)"
-MON_SDF_EV             EQUS "(wPartyMon1SpDefEV - wPartyMon1)"
+MON_SAT_EV             EQUS "(wPartyMon1SpclAtkEV - wPartyMon1)"
+MON_SDF_EV             EQUS "(wPartyMon1SpclDefEV - wPartyMon1)"
 MON_DVS                EQUS "(wPartyMon1DVs - wPartyMon1)"
-MON_PERSONALITY        EQUS "(wPartyMon1Personality - wPartyMon1)"
-MON_SHINY              EQUS "(wPartyMon1Shiny - wPartyMon1)"
-MON_ABILITY            EQUS "(wPartyMon1Ability - wPartyMon1)"
-MON_NATURE             EQUS "(wPartyMon1Nature - wPartyMon1)"
-MON_GENDER             EQUS "(wPartyMon1Gender - wPartyMon1)"
-MON_IS_EGG             EQUS "(wPartyMon1IsEgg - wPartyMon1)"
-MON_IS_DEAD            EQUS "(wPartyMon1IsDead - wPartyMon1)"
-MON_FORM               EQUS "(wPartyMon1Form - wPartyMon1)"
 MON_PP                 EQUS "(wPartyMon1PP - wPartyMon1)"
 MON_HAPPINESS          EQUS "(wPartyMon1Happiness - wPartyMon1)"
 MON_PKRUS              EQUS "(wPartyMon1PokerusStatus - wPartyMon1)"
 MON_CAUGHTDATA         EQUS "(wPartyMon1CaughtData - wPartyMon1)"
-MON_CAUGHTGENDER       EQUS "(wPartyMon1CaughtGender - wPartyMon1)"
-MON_CAUGHTTIME         EQUS "(wPartyMon1CaughtTime - wPartyMon1)"
-MON_CAUGHTBALL         EQUS "(wPartyMon1CaughtBall - wPartyMon1)"
 MON_CAUGHTLEVEL        EQUS "(wPartyMon1CaughtLevel - wPartyMon1)"
+MON_CAUGHTTIME         EQUS "(wPartyMon1CaughtTime - wPartyMon1)"
+MON_CAUGHTGENDER       EQUS "(wPartyMon1CaughtGender - wPartyMon1)"
 MON_CAUGHTLOCATION     EQUS "(wPartyMon1CaughtLocation - wPartyMon1)"
 MON_LEVEL              EQUS "(wPartyMon1Level - wPartyMon1)"
 MON_STATUS             EQUS "(wPartyMon1Status - wPartyMon1)"
@@ -103,33 +96,23 @@ MON_MAXHP              EQUS "(wPartyMon1MaxHP - wPartyMon1)"
 MON_ATK                EQUS "(wPartyMon1Attack - wPartyMon1)"
 MON_DEF                EQUS "(wPartyMon1Defense - wPartyMon1)"
 MON_SPD                EQUS "(wPartyMon1Speed - wPartyMon1)"
-MON_SAT                EQUS "(wPartyMon1SpAtk - wPartyMon1)"
-MON_SDF                EQUS "(wPartyMon1SpDef - wPartyMon1)"
+MON_SAT                EQUS "(wPartyMon1SpclAtk - wPartyMon1)"
+MON_SDF                EQUS "(wPartyMon1SpclDef - wPartyMon1)"
 BOXMON_STRUCT_LENGTH   EQUS "(wPartyMon1End - wPartyMon1)"
 PARTYMON_STRUCT_LENGTH EQUS "(wPartyMon1StatsEnd - wPartyMon1)"
+REDMON_STRUCT_LENGTH EQU 44
 
-; apply to MON_FORM
-SHINY_MASK   EQU %10000000
-ABILITY_MASK EQU %01100000
-NATURE_MASK  EQU %00011111
+; caught data
 
-GENDER_MASK  EQU %10000000
-IS_EGG_MASK  EQU %01000000
-IS_DEAD_MASK EQU %00100000
-FORM_MASK    EQU %00011111
+CAUGHT_TIME_MASK  EQU %11000000
+CAUGHT_LEVEL_MASK EQU %00111111
 
-MON_SHINY_F  EQU 7
-MON_GENDER_F EQU 7
-MON_IS_EGG_F EQU 6
+CAUGHT_GENDER_MASK   EQU %10000000
+CAUGHT_LOCATION_MASK EQU %01111111
 
-; apply to MON_CAUGHTDATA
-CAUGHTGENDER_MASK EQU %10000000
-CAUGHTTIME_MASK   EQU %01100000
-CAUGHTBALL_MASK   EQU %00011111
-
-; gender values
-MALE   EQU %00000000
-FEMALE EQU %10000000
+CAUGHT_BY_UNKNOWN EQU 0
+CAUGHT_BY_GIRL    EQU 1
+CAUGHT_BY_BOY     EQU 2
 
 CAUGHT_EGG_LEVEL EQU 1
 

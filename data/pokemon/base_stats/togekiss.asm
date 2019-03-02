@@ -12,8 +12,7 @@
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/togekiss/front.dimensions"
 	db 0, 0 ;total form differences, which form this is
-	db 0, 0	; abilities
-	db 0 	; hidden ability
+	db 0, 0	;abilities
 	db GROWTH_FAST ; growth rate
 	dn EGG_FAIRY, EGG_FLYING ; egg groups
 

@@ -23,7 +23,7 @@ Function16d43b:
 	farcall __LoadTradeScreenBorder ; useless to farcall
 	farcall Function16d42e ; useless to farcall
 	ld b, SCGB_DIPLOMA
-	call GetCGBLayout
+	call GetSGBLayout
 	call SetPalettes
 	call WaitBGMap
 	call JoyWaitAorB
@@ -289,7 +289,7 @@ LinkTradeMenu:
 
 .skip
 	ld c, SCREEN_WIDTH
-	rst AddNTimes
+	call AddNTimes
 	ld a, [w2DMenuCursorOffsets]
 	and $f
 	ld c, a

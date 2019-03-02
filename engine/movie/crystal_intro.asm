@@ -14,7 +14,7 @@ Copyright_GFPresents:
 	ldh [hWY], a
 	call WaitBGMap
 	ld b, SCGB_GAMEFREAK_LOGO
-	call GetCGBLayout
+	call GetSGBLayout
 	call SetPalettes
 	ld c, 10
 	call DelayFrames

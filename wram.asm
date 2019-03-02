@@ -976,6 +976,16 @@ wLinkPartyEnd::     db ; older code doesn't check PartyCount
 
 UNION ; c813
 ; time capsule party data
+wTimeCapsulePlayerData::
+wTimeCapsulePartyMon1:: red_party_struct wTimeCapsulePartyMon1
+wTimeCapsulePartyMon2:: red_party_struct wTimeCapsulePartyMon2
+wTimeCapsulePartyMon3:: red_party_struct wTimeCapsulePartyMon3
+wTimeCapsulePartyMon4:: red_party_struct wTimeCapsulePartyMon4
+wTimeCapsulePartyMon5:: red_party_struct wTimeCapsulePartyMon5
+wTimeCapsulePartyMon6:: red_party_struct wTimeCapsulePartyMon6
+wTimeCapsulePartyMonOTNames:: ds PARTY_LENGTH * NAME_LENGTH
+wTimeCapsulePartyMonNicks:: ds PARTY_LENGTH * MON_NAME_LENGTH
+wTimeCapsulePlayerDataEnd::
 
 NEXTU ; c813
 ; link player data
@@ -1269,10 +1279,11 @@ wPlayerHPPal:: db ; cd99
 wEnemyHPPal:: db ; cd9a
 
 wHPPals:: ds PARTY_LENGTH
-wCurHPPal:: ds 1
-wHPPalIndex:: ds 1
+wCurHPPal:: db
 
-	ds 51
+	ds 7
+
+wSGBPals:: ds 48 ; cda9
 
 wAttrMap:: ; cdd9
 ; 20x18 grid of bg tile attributes for 8x8 tiles
@@ -2171,7 +2182,6 @@ wBaseEggSteps:: db ; d245
 wBasePicSize:: db ; d247
 wBaseForms:: ds 2 ; d248
 wBaseAbilities:: ds 2 ; d24a
-wBaseHiddenAbility:: db
 wBaseGrowthRate:: db ; d24c
 wBaseEggGroups:: db ; d24d
 wBaseTMHM:: flag_array NUM_TM_HM_TUTOR ; d24e

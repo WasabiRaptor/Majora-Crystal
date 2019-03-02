@@ -50,7 +50,7 @@ PrintMoveType:
 	dec a
 	ld bc, MOVE_LENGTH
 	ld hl, Moves
-	rst AddNTimes
+	call AddNTimes
 	ld de, wStringBuffer1
 	ld a, BANK(Moves)
 	call FarCopyBytes

@@ -12,8 +12,7 @@
 	db 10 ; step cycles to hatch
 	INCBIN "gfx/pokemon/wigglytuff/front.dimensions"
 	db 0, 0 ;form differences
-	db 0, 0	; abilities
-	db 0 	; hidden ability
+	db 0, 0	;abilities
 	db GROWTH_FAST ; growth rate
 	dn EGG_FAIRY, EGG_FAIRY ; egg groups
 

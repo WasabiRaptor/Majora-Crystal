@@ -12,8 +12,7 @@
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/nidorino/front.dimensions"
 	db 0, 0 ;form differences
-	db 0, 0	; abilities
-	db 0 	; hidden ability
+	db 0, 0	;abilities
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_MONSTER, EGG_FIELD ; egg groups
 

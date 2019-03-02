@@ -33,7 +33,7 @@ GiveDratini:
 	ld a, [wScriptVar]
 	ld hl, .Movesets
 	ld bc, .Moveset1 - .Moveset0
-	rst AddNTimes
+	call AddNTimes
 
 	; get address of mon's first move
 	pop de
@@ -53,7 +53,7 @@ GiveDratini:
 	dec a
 	ld hl, Moves + MOVE_PP
 	ld bc, MOVE_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
 

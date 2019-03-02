@@ -122,8 +122,11 @@ ReadCaughtData:
 	ld [wSeerAction], a
 
 .traded
+	call GetCaughtLevel
 	call GetCaughtOT
 	call GetCaughtName
+	call GetCaughtTime
+	call GetCaughtLocation
 	and a
 	ret
 
@@ -136,11 +139,71 @@ GetCaughtName:
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMonNicknames
 	ld bc, MON_NAME_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld de, wSeerNickname
 	ld bc, MON_NAME_LENGTH
 	call CopyBytes
 	ret
+
+GetCaughtLevel:
+	ld a, "@"
+	ld hl, wSeerCaughtLevelString
+	ld bc, 4
+	call ByteFill
+
+	; caught level
+	; Limited to between 1 and 63 since it's a 6-bit quantity.
+	ld a, [wSeerCaughtData]
+	and CAUGHT_LEVEL_MASK
+	jr z, .unknown
+	cp CAUGHT_EGG_LEVEL ; egg marker value
+	jr nz, .print
+	ld a, EGG_LEVEL ; egg hatch level
+
+.print
+	ld [wSeerCaughtLevel], a
+	ld hl, wSeerCaughtLevelString
+	ld de, wSeerCaughtLevel
+	lb bc, PRINTNUM_RIGHTALIGN | 1, 3
+	call PrintNum
+	ret
+
+.unknown
+	ld de, wSeerCaughtLevelString
+	ld hl, .unknown_level
+	ld bc, 4
+	call CopyBytes
+	ret
+
+.unknown_level
+	db "???@"
+
+GetCaughtTime:
+	ld a, [wSeerCaughtData]
+	and CAUGHT_TIME_MASK
+	jr z, .none
+
+	rlca
+	rlca
+	dec a
+	ld hl, .times
+	call GetNthString
+	ld d, h
+	ld e, l
+	ld hl, wSeerTimeOfDay
+	call CopyName2
+	and a
+	ret
+
+.none
+	ld de, wSeerTimeOfDay
+	call UnknownCaughtData
+	ret
+
+.times
+	db "Morning@"
+	db "Day@"
+	db "Night@"
 
 UnknownCaughtData:
 	ld hl, .unknown
@@ -151,11 +214,44 @@ UnknownCaughtData:
 .unknown
 	db "Unknown@"
 
+GetCaughtLocation:
+	ld a, [wSeerCaughtGender]
+	and CAUGHT_LOCATION_MASK
+	jr z, .Unknown
+	cp EVENT_LOCATION
+	jr z, .event
+	cp GIFT_LOCATION
+	jr z, .fail
+	ld e, a
+	farcall GetLandmarkName
+	ld hl, wStringBuffer1
+	ld de, wSeerCaughtLocation
+	ld bc, 17
+	call CopyBytes
+	and a
+	ret
+
+.Unknown:
+	ld de, wSeerCaughtLocation
+	jp UnknownCaughtData
+
+.event
+	ld a, SEERACTION_LEVEL_ONLY
+	ld [wSeerAction], a
+	scf
+	ret
+
+.fail
+	ld a, SEERACTION_CANT_TELL_2
+	ld [wSeerAction], a
+	scf
+	ret
+
 GetCaughtOT:
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMonOT
 	ld bc, NAME_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld de, wSeerOTName
 	ld bc, NAME_LENGTH
 	call CopyBytes
@@ -305,7 +401,21 @@ GetCaughtGender:
 	add hl, bc
 
 	ld a, [hl]
-	and CAUGHTGENDER_MASK
-	rl a
-	ld c, a
+	and CAUGHT_LOCATION_MASK
+	jr z, .genderless
+	cp EVENT_LOCATION
+	jr z, .genderless
+
+	ld a, [hl]
+	and CAUGHT_GENDER_MASK
+	jr nz, .male
+	ld c, CAUGHT_BY_GIRL
+	ret
+
+.male
+	ld c, CAUGHT_BY_BOY
+	ret
+
+.genderless
+	ld c, CAUGHT_BY_UNKNOWN
 	ret

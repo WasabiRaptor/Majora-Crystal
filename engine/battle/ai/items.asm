@@ -28,7 +28,7 @@ AI_SwitchOrTryItem:
 	ld a, [wTrainerClass]
 	dec a
 	ld bc, NUM_TRAINER_ATTRIBUTES
-	rst AddNTimes
+	call AddNTimes
 .ok
 	bit SWITCH_OFTEN_F, [hl]
 	jp nz, SwitchOften
@@ -169,7 +169,7 @@ AI_TryItem:
 	dec a
 	ld hl, TrainerClassAttributes + TRNATTR_AI_ITEM_SWITCH
 	ld bc, NUM_TRAINER_ATTRIBUTES
-	rst AddNTimes
+	call AddNTimes
 	ld b, h
 	ld c, l
 	ld hl, AI_Items
@@ -254,7 +254,7 @@ AI_TryItem:
 
 	ld a, [wCurOTMon]
 	ld hl, wOTPartyMon1Level
-	rst AddNTimes
+	call AddNTimes
 	ld a, [hl]
 	cp e
 	jr nc, .yes
@@ -678,7 +678,7 @@ AI_Switch:
 	ld a, [wCurOTMon]
 	ld hl, wOTPartyMon1Status
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld d, h
 	ld e, l
 	ld hl, wEnemyMonStatus
@@ -721,7 +721,7 @@ AI_HealStatus:
 	ld a, [wCurOTMon]
 	ld hl, wOTPartyMon1Status
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	xor a
 	ld [hl], a
 	ld [wEnemyMonStatus], a

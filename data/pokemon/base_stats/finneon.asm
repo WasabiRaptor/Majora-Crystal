@@ -12,8 +12,7 @@
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/finneon/front.dimensions"
 	db 0, 0 ;form differences
-	db 0, 0	; abilities
-	db 0 	; hidden ability
+	db 0, 0	;abilities
 	db GROWTH_ERRATIC ; growth rate
 	dn EGG_WATER_2, EGG_WATER_2 ; egg groups 
 

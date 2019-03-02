@@ -12,8 +12,7 @@
 	db 15 ; step cycles to hatch
 	INCBIN "gfx/pokemon/breloom/front.dimensions"
 	db 0, 0 ;form differences
-	db 0, 0	; abilities
-	db 0 	; hidden ability
+	db 0, 0	;abilities
 	db GROWTH_FLUCTUATING ; growth rate
 	dn EGG_FAIRY, EGG_GRASS ; egg groups
 

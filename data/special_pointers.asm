@@ -19,8 +19,12 @@ SpecialsPointers::
 	add_special CloseLink
 	add_special WaitForOtherPlayerToExit ; $8
 	add_special SetBitsForBattleRequest
+	add_special SetBitsForTimeCapsuleRequest
+	add_special CheckTimeCapsuleCompatibility
+	add_special EnterTimeCapsule
 	add_special TradeCenter
 	add_special Colosseum
+	add_special TimeCapsule
 	add_special CableClubCheckWhichChris ; $10
 	add_special CheckMysteryGift
 	add_special GetMysteryGiftItem

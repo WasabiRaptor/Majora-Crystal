@@ -13,7 +13,6 @@
 	INCBIN "gfx/pokemon/leafeon/front.dimensions" 
 	db 0, 0 ; form differences
 	db 0, 0	; abilities
-	db 0 	; hidden ability
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_FIELD, EGG_FIELD ; egg groups
 

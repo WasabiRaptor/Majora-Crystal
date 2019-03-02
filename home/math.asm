@@ -1,19 +1,11 @@
-_AddNTimes:: ; 0x30fe
-; Add bc * a to hl. Don't optimize this for space.
+AddNTimes::
+; Add bc * a to hl.
 	and a
 	ret z
-
-	push bc
 .loop
-	rra ; and a from below and above resets carry
-	jr nc, .noadd
 	add hl, bc
-.noadd
-	sla c
-	rl b
-	and a
+	dec a
 	jr nz, .loop
-	pop bc
 	ret
 
 SimpleMultiply::

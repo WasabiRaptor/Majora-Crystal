@@ -169,15 +169,12 @@
 	charmap "▶",         $ed
 	charmap "▼",         $ee
 	charmap "♂",         $ef
-	charmap "<MALE>",    $ef
-	
 	charmap "¥",         $f0
 	charmap "×",         $f1
 	charmap "…",         $f2 ; ellipsis
 	charmap "/",         $f3
 	charmap ",",         $f4
 	charmap "♀",         $f5
-	charmap "<FEMALE>",  $f5
 
 	charmap "0",         $f6
 	charmap "1",         $f7

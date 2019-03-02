@@ -16,7 +16,7 @@ BlindingFlash:
 	farcall ReplaceTimeOfDayPals
 	farcall UpdateTimeOfDayPal
 	ld b, SCGB_MAPPALS
-	call GetCGBLayout
+	call GetSGBLayout
 	farcall LoadOW_BGPal7
 	farcall FadeInPalettes
 	ret

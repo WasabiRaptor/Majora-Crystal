@@ -98,9 +98,9 @@ PrintTempMonStats:
 	call .PrintStat
 	ld de, wTempMonDefense
 	call .PrintStat
-	ld de, wTempMonSpAtk
+	ld de, wTempMonSpclAtk
 	call .PrintStat
-	ld de, wTempMonSpDef
+	ld de, wTempMonSpclDef
 	call .PrintStat
 	ld de, wTempMonSpeed
 	jp PrintNum
@@ -167,7 +167,7 @@ GetGender:
 .PartyMon:
 .sBoxMon
 	ld a, [wCurPartyMon]
-	rst AddNTimes
+	call AddNTimes
 
 .DVs:
 ; sBoxMon data is read directly from SRAM.
@@ -200,7 +200,7 @@ GetGender:
 	dec a
 	ld hl, BaseData + BASE_GENDER
 	ld bc, BASE_DATA_SIZE
-	rst AddNTimes
+	call AddNTimes
 	pop bc
 
 	ld a, BANK(BaseData)

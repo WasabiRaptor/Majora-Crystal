@@ -53,7 +53,7 @@ PredefPointers::
 	add_predef PrintMonTypes
 	add_predef GetFormData
 	add_predef DummyPredef2F
-	add_predef Predef_LoadCGBLayout
+	add_predef LoadSGBLayoutCGB
 	add_predef Pokedex_GetArea
 	add_predef DoBattleTransition
 	add_predef PlayBattleAnim

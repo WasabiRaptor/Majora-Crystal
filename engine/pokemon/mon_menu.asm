@@ -174,7 +174,7 @@ SwitchPartyMons:
 	ld bc, SCREEN_WIDTH * 2
 	ld a, [wSwitchMon]
 	dec a
-	rst AddNTimes
+	call AddNTimes
 	ld [hl], "▷"
 	call WaitBGMap
 	call SetPalettes
@@ -464,7 +464,7 @@ ComposeMailMessage:
 	ld a, [wCurPartyMon]
 	ld hl, sPartyMail
 	ld bc, MAIL_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld d, h
 	ld e, l
 	ld hl, wTempMail
@@ -1018,7 +1018,7 @@ MoveScreenLoop:
 	ld hl, wPartyMon1Moves
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld a, [wCurPartyMon]
-	rst AddNTimes
+	call AddNTimes
 	push hl
 	call .copy_move
 	pop hl
@@ -1030,7 +1030,7 @@ MoveScreenLoop:
 	ld hl, wBattleMonMoves
 	ld bc, $20
 	ld a, [wCurPartyMon]
-	rst AddNTimes
+	call AddNTimes
 	push hl
 	call .copy_move
 	pop hl
@@ -1135,7 +1135,7 @@ SetUpMoveScreenBG:
 	ld hl, wPlayerHPPal
 	call SetHPPal
 	ld b, SCGB_MOVE_LIST
-	call GetCGBLayout
+	call GetSGBLayout
 	hlcoord 16, 0
 	lb bc, 1, 3
 	jp ClearBox
@@ -1170,7 +1170,7 @@ PrepareToPlaceMoveData:
 	ld hl, wPartyMon1Moves
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld a, [wCurPartyMon]
-	rst AddNTimes
+	call AddNTimes
 	ld a, [wMenuCursorY]
 	dec a
 	ld c, a
@@ -1210,7 +1210,7 @@ PlaceMoveData:
 	dec a
 	ld hl, Moves + MOVE_POWER
 	ld bc, MOVE_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
 	hlcoord 16, 12

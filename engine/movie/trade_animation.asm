@@ -377,7 +377,7 @@ TradeAnim_InitTubeAnim:
 
 	call WaitBGMap
 	ld b, SCGB_TRADE_TUBE
-	call GetCGBLayout
+	call GetSGBLayout
 	ld a, %11100100 ; 3,2,1,0
 	call DmgToCgbBGPals
 	ld a, %11010000
@@ -638,7 +638,7 @@ TradeAnim_EnterLinkTube1:
 	call TradeAnim_CopyBoxFromDEtoHL
 	call WaitBGMap
 	ld b, SCGB_TRADE_TUBE
-	call GetCGBLayout
+	call GetSGBLayout
 	ld a, %11100100 ; 3,2,1,0
 	call DmgToCgbBGPals
 	lb de, %11100100, %11100100 ; 3,2,1,0, 3,2,1,0
@@ -769,7 +769,7 @@ TradeAnim_ShowGivemonData:
 	ld a, [wPlayerTrademonDVs + 1]
 	ld [wTempMonDVs + 1], a
 	ld b, SCGB_PLAYER_OR_MON_FRONTPIC_PALS
-	call GetCGBLayout
+	call GetSGBLayout
 	ld a, %11100100 ; 3,2,1,0
 	call DmgToCgbBGPals
 	call TradeAnim_ShowGivemonFrontpic
@@ -794,7 +794,7 @@ TradeAnim_ShowGetmonData:
 	ld a, [wOTTrademonDVs + 1]
 	ld [wTempMonDVs + 1], a
 	ld b, SCGB_PLAYER_OR_MON_FRONTPIC_PALS
-	call GetCGBLayout
+	call GetSGBLayout
 	ld a, %11100100 ; 3,2,1,0
 	call DmgToCgbBGPals
 	call TradeAnim_ShowGetmonFrontpic

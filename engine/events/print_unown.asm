@@ -63,7 +63,7 @@ _UnownPrinter:
 	ld [wTempMonDVs + 1], a
 
 	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
-	call GetCGBLayout
+	call GetSGBLayout
 	call SetPalettes
 
 .joy_loop

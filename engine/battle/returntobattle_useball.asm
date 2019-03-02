@@ -12,7 +12,7 @@ _ReturnToBattle_UseBall:
 .continue
 	farcall GetEnemyMonFrontpic
 	farcall _LoadBattleFontsHPBar
-	call GetMemCGBLayout
+	call GetMemSGBLayout
 	call CloseWindow
 	call LoadStandardMenuHeader
 	call WaitBGMap

@@ -28,7 +28,7 @@ DoMysteryGift:
 	call EnableLCD
 	call WaitBGMap
 	ld b, SCGB_DIPLOMA
-	call GetCGBLayout
+	call GetSGBLayout
 	call SetPalettes
 	pop de
 	hlcoord 2, 8
@@ -1339,7 +1339,7 @@ InitMysteryGiftLayout:
 	call EnableLCD
 	call WaitBGMap
 	ld b, SCGB_MYSTERY_GIFT
-	call GetCGBLayout
+	call GetSGBLayout
 	call SetPalettes
 	ret
 
@@ -1508,7 +1508,7 @@ Function105777:
 	call EnableLCD
 	call WaitBGMap
 	ld b, SCGB_DIPLOMA
-	call GetCGBLayout
+	call GetSGBLayout
 	call SetPalettes
 	ret
 

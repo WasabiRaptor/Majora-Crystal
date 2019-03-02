@@ -12,8 +12,7 @@
 	db 80 ; step cycles to hatch
 	INCBIN "gfx/pokemon/articuno/front.dimensions"
 	db 0, 0 ;form differences
-	db 0, 0	; abilities
-	db 0 	; hidden ability
+	db 0, 0	;abilities
 	db GROWTH_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

@@ -12,8 +12,7 @@
 	db 120 ; step cycles to hatch
 	INCBIN "gfx/pokemon/zygarde_ten_percent/front.dimensions"
 	db NUM_ZYGARDE, TEN_PERCENT ;form differences
-	db 0, 0	; abilities
-	db 0 	; hidden ability
+	db 0, 0	;abilities
 	db GROWTH_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

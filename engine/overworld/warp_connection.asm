@@ -310,7 +310,7 @@ LoadGraphics:
 
 LoadMapPalettes:
 	ld b, SCGB_MAPPALS
-	jp GetCGBLayout
+	jp GetSGBLayout
 
 RefreshMapSprites:
 	call ClearSprites
@@ -420,7 +420,7 @@ GetCoordOfUpperLeftCorner::
 	srl a
 
 .resume2
-	rst AddNTimes
+	call AddNTimes
 	ld a, l
 	ld [wOverworldMapAnchor], a
 	ld a, h

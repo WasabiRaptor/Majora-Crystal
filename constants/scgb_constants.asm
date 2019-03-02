@@ -1,4 +1,4 @@
-; GetCGBLayout arguments (see engine/gfx/cgb_layouts.asm and engine/gfx/sgb_layouts.asm)
+; GetSGBLayout arguments (see engine/gfx/cgb_layouts.asm and engine/gfx/sgb_layouts.asm)
 	const_def
 	const SCGB_BATTLE_GRAYSCALE
 	const SCGB_BATTLE_COLORS

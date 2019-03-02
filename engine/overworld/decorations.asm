@@ -418,7 +418,7 @@ PopulateDecoCategoryMenu:
 GetDecorationData:
 	ld hl, DecorationAttributes
 	ld bc, 6
-	rst AddNTimes
+	call AddNTimes
 	ret
 
 GetDecorationName:

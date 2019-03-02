@@ -1,40 +1,35 @@
 ; WritePartyMenuTilemap.Jumptable indexes (see engine/party_menu.asm)
 	const_def
-	const PLACE_PARTYMON_NICKNAMES
-	const PLACE_PARTYMON_HP_BAR
-	const PLACE_PARTYMON_HP_DIGITS
-	const PLACE_PARTYMON_LEVEL
-	const PLACE_PARTYMON_STATUS
-	const PLACE_PARTYMON_TMHM
-	const PLACE_PARTYMON_EVO
-	const PLACE_PARTYMON_GENDER
-	const PLACE_PARTYMON_RELEARNER
+	const PARTYMENUQUALITY_NICKNAMES
+	const PARTYMENUQUALITY_HP_BAR
+	const PARTYMENUQUALITY_HP_DIGITS
+	const PARTYMENUQUALITY_LEVEL
+	const PARTYMENUQUALITY_STATUS
+	const PARTYMENUQUALITY_TMHM_COMPAT
+	const PARTYMENUQUALITY_EVO_STONE_COMPAT
+	const PARTYMENUQUALITY_GENDER
 
-PartyMenuQualityPointers: ; 503b2
-; entries correspond to PARTYMENUACTION_* constants
-	dw .Default
-	dw .Default
-	dw .Default
-	dw .TMHM
-	dw .Default
-	dw .EvoStone
-	dw .Gender
-	dw .Gender
-	dw .Default
-	dw .Reminder
-; 503c6
-
-placepartymon: macro
+partymenuqualities: MACRO
 rept _NARG
-	db PLACE_PARTYMON_\1
-shift
+	db PARTYMENUQUALITY_\1
+	shift
 endr
-	db -1
-endm
+	db -1 ; end
+ENDM
 
-.Default:
-.Gender:   placepartymon NICKNAMES, HP_BAR, HP_DIGITS, LEVEL, GENDER, STATUS
-.TMHM:     placepartymon NICKNAMES, TMHM,              LEVEL, GENDER, STATUS
-.EvoStone: placepartymon NICKNAMES, EVO,               LEVEL, GENDER, STATUS
-.Reminder: placepartymon NICKNAMES, RELEARNER,         LEVEL, GENDER, STATUS
-; 503e0
+PartyMenuQualityPointers:
+; entries correspond to PARTYMENUACTION_* constants
+	dw .Default  ; PARTYMENUACTION_CHOOSE_POKEMON
+	dw .Default  ; PARTYMENUACTION_HEALING_ITEM
+	dw .Default  ; PARTYMENUACTION_SWITCH
+	dw .TMHM     ; PARTYMENUACTION_TEACH_TMHM
+	dw .Default  ; PARTYMENUACTION_MOVE
+	dw .EvoStone ; PARTYMENUACTION_EVO_STONE
+	dw .Gender   ; PARTYMENUACTION_GIVE_MON
+	dw .Gender   ; PARTYMENUACTION_GIVE_MON_FEMALE
+	dw .Default  ; PARTYMENUACTION_GIVE_ITEM
+
+.Default:  partymenuqualities NICKNAMES, HP_BAR, HP_DIGITS, LEVEL, STATUS
+.TMHM:     partymenuqualities NICKNAMES, TMHM_COMPAT,       LEVEL, STATUS
+.EvoStone: partymenuqualities NICKNAMES, EVO_STONE_COMPAT,  LEVEL, STATUS
+.Gender:   partymenuqualities NICKNAMES, GENDER,            LEVEL, STATUS

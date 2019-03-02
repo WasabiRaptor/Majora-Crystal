@@ -716,7 +716,7 @@ OakSpeech:
 	call Intro_PrepTrainerPic
 
 	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
-	call GetCGBLayout
+	call GetSGBLayout
 	call Intro_RotatePalettesLeftFrontpic
 
 	ld hl, OakText1
@@ -737,7 +737,7 @@ OakSpeech:
 	ld [wTempMonDVs + 1], a
 
 	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
-	call GetCGBLayout
+	call GetSGBLayout
 	call Intro_WipeInFrontpic
 
 	ld hl, OakText2
@@ -754,7 +754,7 @@ OakSpeech:
 	call Intro_PrepTrainerPic
 
 	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
-	call GetCGBLayout
+	call GetSGBLayout
 	call Intro_RotatePalettesLeftFrontpic
 
 	ld hl, OakText5
@@ -767,7 +767,7 @@ OakSpeech:
 	farcall DrawIntroPlayerPic
 
 	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
-	call GetCGBLayout
+	call GetSGBLayout
 	call Intro_RotatePalettesLeftFrontpic
 
 	ld hl, OakText6
@@ -837,7 +837,7 @@ NamePlayer:
 	farcall DrawIntroPlayerPic
 
 	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
-	call GetCGBLayout
+	call GetSGBLayout
 	call RotateThreePalettesLeft
 
 	ld hl, wPlayerName
@@ -1054,7 +1054,7 @@ StartTitleScreen:
 	ld a, $90
 	ldh [hWY], a
 	ld b, SCGB_DIPLOMA
-	call GetCGBLayout
+	call GetSGBLayout
 	call UpdateTimePals
 	ld a, [wIntroSceneFrameCounter]
 	cp $5

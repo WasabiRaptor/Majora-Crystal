@@ -12,8 +12,7 @@
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/seviper/front.dimensions"
 	db 0, 0 ;total form differences, which form this is
-	db 0, 0	; abilities
-	db 0 	; hidden ability
+	db 0, 0	;abilities
 	db GROWTH_FLUCTUATING ; growth rate
 	dn EGG_DRAGON, EGG_FIELD ; egg groups
 

@@ -423,7 +423,7 @@ StatsScreen_InitUpperHalf:
 	ld hl, wCurHPPal
 	call SetHPPal
 	ld b, SCGB_STATS_SCREEN_HP_PALS
-	call GetCGBLayout
+	call GetSGBLayout
 	call DelayFrame
 	ret
 
@@ -695,6 +695,7 @@ StatsScreen_LoadGFX:
 	and a
 	ret z
 	ld b, a
+	farcall TimeCapsule_ReplaceTeruSama
 	ld a, b
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
@@ -865,7 +866,7 @@ StatsScreen_GetAnimationParam:
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMon1
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld b, h
 	ld c, l
 	jr .CheckEggFaintedFrzSlp
@@ -878,7 +879,7 @@ StatsScreen_GetAnimationParam:
 	ld hl, sBoxMons
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld a, [wCurPartyMon]
-	rst AddNTimes
+	call AddNTimes
 	ld b, h
 	ld c, l
 	ld a, BANK(sBoxMons)
@@ -942,7 +943,7 @@ EggStatsScreen:
 	ld hl, wCurHPPal
 	call SetHPPal
 	ld b, SCGB_STATS_SCREEN_HP_PALS
-	call GetCGBLayout
+	call GetSGBLayout
 	call StatsScreen_PlaceHorizontalDivider
 	ld de, EggString
 	hlcoord 8, 1

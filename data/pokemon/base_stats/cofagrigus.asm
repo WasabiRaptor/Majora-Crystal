@@ -12,8 +12,7 @@
 	db 25 ; step cycles to hatch
 	INCBIN "gfx/pokemon/cofagrigus/front.dimensions"
 	db 0, 0 ;form differences
-	db 0, 0	; abilities
-	db 0 	; hidden ability
+	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_AMORPHOUS, EGG_MINERAL ; egg groups
 

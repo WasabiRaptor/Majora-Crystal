@@ -75,7 +75,7 @@ TryAddMonToParty:
 	ldh a, [hMoveMon]
 	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 GeneratePartyMonStats:
 ; wBattleMode specifies whether it's a wild mon or not.
 ; wMonType specifies whether it's an opposing mon or not.
@@ -353,7 +353,7 @@ endr
 	ld a, [wPartyCount]
 	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	predef GetFormData
 	callfar UpdateUnownDex
 
@@ -374,7 +374,7 @@ FillPP:
 	push bc
 	ld hl, Moves
 	ld bc, MOVE_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld de, wStringBuffer1
 	ld a, BANK(Moves)
 	call FarCopyBytes
@@ -411,7 +411,7 @@ AddTempmonToParty:
 	ld a, [wPartyCount]
 	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld e, l
 	ld d, h
 	ld hl, wTempMonSpecies
@@ -451,7 +451,7 @@ AddTempmonToParty:
 	ld a, [wPartyCount]
 	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld [hl], BASE_HAPPINESS
 .egg
 
@@ -462,7 +462,7 @@ AddTempmonToParty:
 	ld a, [wPartyCount]
 	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	predef GetFormData
 	callfar UpdateUnownDex
 	ld a, [wFirstUnownSeen]
@@ -534,7 +534,7 @@ SendGetMonIntoFromBox:
 
 .okay2
 	dec a ; wPartyCount - 1
-	rst AddNTimes
+	call AddNTimes
 
 .breedmon
 	push hl
@@ -553,7 +553,7 @@ SendGetMonIntoFromBox:
 
 .okay3
 	ld a, [wCurPartyMon]
-	rst AddNTimes
+	call AddNTimes
 
 .okay4
 	ld bc, BOXMON_STRUCT_LENGTH
@@ -710,7 +710,7 @@ RestorePPOfDepositedPokemon:
 	ld a, b
 	ld hl, sBoxMons
 	ld bc, BOXMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld b, h
 	ld c, l
 	ld hl, MON_PP
@@ -871,7 +871,7 @@ RetrieveBreedmon:
 	ld a, [wPartyCount]
 	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld d, h
 	ld e, l
 	ld a, $1
@@ -901,7 +901,7 @@ GetLastPartyMon:
 	dec a
 	ld hl, wPartyMon1Species
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld d, h
 	ld e, l
 	ret
@@ -932,7 +932,7 @@ DepositBreedmon:
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMon1Species
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld bc, BOXMON_STRUCT_LENGTH
 	jp CopyBytes
 
@@ -1086,7 +1086,7 @@ ShiftBoxMon:
 	ret c
 
 	push hl
-	rst AddNTimes
+	call AddNTimes
 	dec hl
 	ld e, l
 	ld d, h
@@ -1094,14 +1094,14 @@ ShiftBoxMon:
 
 	ld a, [sBoxCount]
 	dec a
-	rst AddNTimes
+	call AddNTimes
 	dec hl
 
 	push hl
 	ld a, [sBoxCount]
 	dec a
 	ld hl, 0
-	rst AddNTimes
+	call AddNTimes
 	ld c, l
 	ld b, h
 	pop hl
@@ -1173,7 +1173,7 @@ GiveEgg::
 	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld hl, wPartyMon1Species
-	rst AddNTimes
+	call AddNTimes
 	ld a, [wCurPartySpecies]
 	ld [hl], a
 	ld hl, wPartyCount
@@ -1193,7 +1193,7 @@ GiveEgg::
 	dec a
 	ld hl, wPartyMon1Happiness
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld a, [wDebugFlags]
 	bit DEBUG_FIELD_F, a
 	ld a, 1
@@ -1206,7 +1206,7 @@ GiveEgg::
 	dec a
 	ld hl, wPartyMon1HP
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	xor a
 	ld [hli], a
 	ld [hl], a
@@ -1286,7 +1286,7 @@ RemoveMonFromPartyOrBox:
 	ld bc, BOXMON_STRUCT_LENGTH
 .party4
 	ld a, [wCurPartyMon]
-	rst AddNTimes
+	call AddNTimes
 	ld d, h
 	ld e, l
 	ld a, [wPokemonWithdrawDepositParameter]
@@ -1312,7 +1312,7 @@ RemoveMonFromPartyOrBox:
 .party6
 	ld bc, MON_NAME_LENGTH
 	ld a, [wCurPartyMon]
-	rst AddNTimes
+	call AddNTimes
 	ld d, h
 	ld e, l
 	ld bc, MON_NAME_LENGTH
@@ -1343,7 +1343,7 @@ RemoveMonFromPartyOrBox:
 	; Shift our mail messages up.
 	ld hl, sPartyMail
 	ld bc, MAIL_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	push hl
 	add hl, bc
 	pop de
@@ -1626,7 +1626,7 @@ GivePoke::
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMon1Item
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld a, [wCurItem]
 	ld [hl], a
 	jr .done
@@ -1710,7 +1710,7 @@ GivePoke::
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMon1ID
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld a, HIGH(01001)
 	ld [hli], a
 	ld [hl], LOW(01001)

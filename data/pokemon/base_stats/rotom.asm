@@ -12,8 +12,7 @@
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/rotom/front.dimensions"
 	db NUM_ROTOM, DEFAULT_FORM ;total form differences, which form this is
-	db 0, 0	; abilities
-	db 0 	; hidden ability
+	db 0, 0	;abilities
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_AMORPHOUS, EGG_AMORPHOUS ; egg groups
 

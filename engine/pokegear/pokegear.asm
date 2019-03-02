@@ -100,7 +100,7 @@ PokeGear:
 	call Pokegear_InitJumptableIndices
 	call InitPokegearTilemap
 	ld b, SCGB_POKEGEAR_PALS
-	call GetCGBLayout
+	call GetSGBLayout
 	call SetPalettes
 	ldh a, [hCGB]
 	and a
@@ -883,7 +883,7 @@ PokegearPhone_Joypad:
 	hlcoord 1, 4
 	ld a, [wPokegearPhoneCursorPosition]
 	ld bc, 20 * 2
-	rst AddNTimes
+	call AddNTimes
 	ld [hl], "▷"
 	call PokegearPhoneContactSubmenu
 	jr c, .quit_submenu
@@ -1028,7 +1028,7 @@ PokegearPhone_UpdateCursor:
 	hlcoord 1, 4
 	ld a, [wPokegearPhoneCursorPosition]
 	ld bc, 2 * SCREEN_WIDTH
-	rst AddNTimes
+	call AddNTimes
 	ld [hl], "▶"
 	ret
 
@@ -1060,7 +1060,7 @@ PokegearPhone_UpdateDisplayList:
 	hlcoord 2, 4
 	ld a, [wPokegearPhoneLoadNameBuffer]
 	ld bc, 2 * SCREEN_WIDTH
-	rst AddNTimes
+	call AddNTimes
 	ld d, h
 	ld e, l
 	pop af
@@ -1257,7 +1257,7 @@ PokegearPhoneContactSubmenu:
 	pop hl
 	ld a, [wPokegearPhoneSubmenuCursor]
 	ld bc, SCREEN_WIDTH  * 2
-	rst AddNTimes
+	call AddNTimes
 	ld [hl], "▶"
 	pop de
 	ret
@@ -1814,7 +1814,7 @@ _TownMap:
 	ld a, b
 	ld [wTownMapCursorObjectPointer + 1], a
 	ld b, SCGB_POKEGEAR_PALS
-	call GetCGBLayout
+	call GetSGBLayout
 	call SetPalettes
 	ldh a, [hCGB]
 	and a
@@ -2052,7 +2052,7 @@ _FlyMap:
 	call FlyMap
 	call ret_91c8f
 	ld b, SCGB_POKEGEAR_PALS
-	call GetCGBLayout
+	call GetSGBLayout
 	call SetPalettes
 .loop
 	call JoyTextDelay
@@ -2385,7 +2385,7 @@ Pokedex_GetArea:
 	hlbgcoord 0, 0
 	call TownMapBGUpdate
 	ld b, SCGB_POKEGEAR_PALS
-	call GetCGBLayout
+	call GetSGBLayout
 	call SetPalettes
 	xor a
 	ldh [hBGMapMode], a

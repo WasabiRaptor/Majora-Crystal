@@ -33,7 +33,7 @@ _OptionsMenu:
 	ldh [hBGMapMode], a
 	call WaitBGMap
 	ld b, SCGB_DIPLOMA
-	call GetCGBLayout
+	call GetSGBLayout
 	call SetPalettes
 
 .joypad_loop
@@ -585,6 +585,6 @@ Options_UpdateCursorPosition:
 	hlcoord 1, 2
 	ld bc, 2 * SCREEN_WIDTH
 	ld a, [wJumptableIndex]
-	rst AddNTimes
+	call AddNTimes
 	ld [hl], "▶"
 	ret

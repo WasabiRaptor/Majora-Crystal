@@ -113,7 +113,7 @@ ReadTrainerPartyPieces:
 	dec a
 	ld hl, wOTPartyMonNicknames
 	ld bc, MON_NAME_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld d, h
 	ld e, l
 	ld hl, wStringBuffer2
@@ -221,7 +221,7 @@ ReadTrainerPartyPieces:
 	dec a
 	ld hl, Moves + MOVE_PP
 	ld bc, MOVE_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
 	pop bc

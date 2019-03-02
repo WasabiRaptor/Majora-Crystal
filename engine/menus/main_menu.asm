@@ -6,7 +6,7 @@ MainMenu:
 	ld [wDisableTextAcceleration], a
 	call Function49ed0
 	ld b, SCGB_DIPLOMA
-	call GetCGBLayout
+	call GetSGBLayout
 	call SetPalettes
 	ld hl, wGameTimerPause
 	res GAMETIMERPAUSE_TIMER_PAUSED_F, [hl]

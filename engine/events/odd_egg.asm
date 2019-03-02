@@ -40,7 +40,7 @@ _GiveOddEgg:
 
 	ld hl, OddEggs
 	ld a, OddEgg1End - OddEgg1
-	rst AddNTimes
+	call AddNTimes
 
 	ld de, wOddEggSpecies
 	ld bc, PARTYMON_STRUCT_LENGTH + 2 * MON_NAME_LENGTH

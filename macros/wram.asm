@@ -15,25 +15,19 @@ box_struct: MACRO
 \1AtkEV::          db
 \1DefEV::          db
 \1SpdEV::          db
-\1SpAtkEV::        db
-\1SpDefEV::        db
-\1DVs::            dw
-\1Personality::
-\1Shiny::
-\1Ability::
-\1Nature::         db
-\1Gender::
-\1IsEgg::
-\1IsDead::
+\1SpclAtkEV::      db
+\1SpclDefEV::      db
+\1Padding::		   ds 2
 \1Form::           db
+\1Ability::		   db
+\1DVs::            dw
 \1PP::             ds NUM_MOVES
 \1Happiness::      db
 \1PokerusStatus::  db
 \1CaughtData::
 \1CaughtTime::
-\1CaughtGender::
-\1CaughtBall::     db
 \1CaughtLevel::    db
+\1CaughtGender::
 \1CaughtLocation:: db
 \1Level::          db
 \1End::
@@ -42,50 +36,72 @@ ENDM
 party_struct: MACRO
 	box_struct \1
 \1Status::         db
+\1Unused::         db
 \1HP::             dw
 \1MaxHP::          dw
 \1Stats:: ; big endian
 \1Attack::         dw
 \1Defense::        dw
 \1Speed::          dw
-\1SpAtk::          dw
-\1SpDef::          dw
+\1SpclAtk::        dw
+\1SpclDef::        dw
 \1StatsEnd::
 ENDM
 
+red_box_struct: MACRO
+\1Species::    db
+\1HP::         dw
+\1BoxLevel::   db
+\1Status::     db
+\1Type::
+\1Type1::      db
+\1Type2::      db
+\1CatchRate::  db
+\1Moves::      ds NUM_MOVES
+\1OTID::       dw
+\1Exp::        ds 3
+\1HPExp::      dw
+\1AttackExp::  dw
+\1DefenseExp:: dw
+\1SpeedExp::   dw
+\1SpecialExp:: dw
+\1DVs::        dw
+\1PP::         ds NUM_MOVES
+ENDM
+
+red_party_struct: MACRO
+	red_box_struct \1
+\1Level::      db
+\1Stats::
+\1MaxHP::      dw
+\1Attack::     dw
+\1Defense::    dw
+\1Speed::      dw
+\1Special::    dw
+ENDM
+
 battle_struct: MACRO
-\1Species::   		db
-\1Item::      		db
-\1Moves::     		ds NUM_MOVES
+\1Species::   db
+\1Item::      db
+\1Moves::     ds NUM_MOVES
 \1MovesEnd::
-\1DVs::
-\1HPAtkDV::        	db
-\1DefSpdDV::       	db
-\1SpAtkSpDefDV::    db
-\1Personality::
-\1Shiny::
-\1Ability::
-\1Nature::         	db
-\1Gender::
-\1IsEgg::
-\1IsDead::
-\1Form::           	db
-\1PP::        		ds NUM_MOVES
-\1Happiness:: 		db
-\1Level::     		db
-\1Status::    		db
-\1HP::        		dw
-\1MaxHP::     		dw
+\1DVs::       dw
+\1PP::        ds NUM_MOVES
+\1Happiness:: db
+\1Level::     db
+\1Status::    ds 2
+\1HP::        dw
+\1MaxHP::     dw
 \1Stats:: ; big endian
-\1Attack::    		dw
-\1Defense::   		dw
-\1Speed::     		dw
-\1SpAtk::   		dw
-\1SpDef::   		dw
+\1Attack::    dw
+\1Defense::   dw
+\1Speed::     dw
+\1SpclAtk::   dw
+\1SpclDef::   dw
 \1StatsEnd::
 \1Type::
-\1Type1::     		db
-\1Type2::     		db
+\1Type1::     db
+\1Type2::     db
 \1StructEnd::
 ENDM
 
@@ -158,6 +174,22 @@ channel_struct: MACRO
                       ds 1
 ENDM
 
+;battle_tower_struct: MACRO
+;\1Name:: ds NAME_LENGTH + -1
+;\1TrainerClass:: ds 1
+;\1Mon1:: party_struct \1Mon1
+;\1Mon1Name:: ds MON_NAME_LENGTH
+;\1Mon1NameEnd::
+;\1Mon2:: party_struct \1Mon2
+;\1Mon2Name:: ds MON_NAME_LENGTH
+;\1Mon2NameEnd::
+;\1Mon3:: party_struct \1Mon3
+;\1Mon3Name:: ds MON_NAME_LENGTH
+;\1Mon3NameEnd::
+;\1TrainerData:: ds BATTLETOWER_TRAINERDATALENGTH
+;\1TrainerEnd::
+;ENDM
+
 mailmsg: MACRO
 \1Message::    ds MAIL_MSG_LENGTH
 \1MessageEnd:: ds 1
@@ -213,25 +245,14 @@ link_battle_record: MACRO
 ENDM
 
 trademon: MACRO
-\1Species:: ds 1 ; wc6d0 | wc702
+\1Species::     db ; wc6d0 | wc702
 \1SpeciesName:: ds MON_NAME_LENGTH ; wc6d1 | wc703
-\1Nickname:: ds MON_NAME_LENGTH ; wc6dc | wc70e
-\1SenderName:: ds NAME_LENGTH ; wc6e7 | wc719
-\1OTName:: ds NAME_LENGTH ; wc6f2 | wc724
-\1DVs:: ; wc6fd | wc72f
-\1HPAtkDV:: ds 1
-\1DefSpdDV:: ds 1
-\1SatSdfDV:: ds 1
-\1Personality::
-\1Shiny::
-\1Ability::
-\1Nature:: ds 1
-\1Gender::
-\1IsEgg::
-\1IsDead::
-\1Form:: ds 1
-\1ID:: ds 2 ; wc6ff | wc731
-\1CaughtData:: ds 1 ; wc701 | wc733
+\1Nickname::    ds MON_NAME_LENGTH ; wc6dc | wc70e
+\1SenderName::  ds NAME_LENGTH ; wc6e7 | wc719
+\1OTName::      ds NAME_LENGTH ; wc6f2 | wc724
+\1DVs::         dw ; wc6fd | wc72f
+\1ID::          dw ; wc6ff | wc731
+\1CaughtData::  db ; wc701 | wc733
 \1End::
 ENDM
 
