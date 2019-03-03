@@ -19,357 +19,294 @@ INCLUDE "data/pokemon/evos_attacks_pointers.asm"
 INCLUDE "data/pokemon/alt_form_evos_attacks_pointers.asm"
 
 EeveeEvosAttacks:
-	db EVOLVE_ITEM, THUNDERSTONE, JOLTEON
-	db EVOLVE_ITEM, WATER_STONE, VAPOREON
-	db EVOLVE_ITEM, FIRE_STONE, FLAREON
-	db EVOLVE_ITEM, SHINY_STONE, SYLVEON
-	db EVOLVE_LOCATION, ILEX_FOREST, LEAFEON
-	db EVOLVE_LOCATION, ICE_PATH, GLACEON
-	db EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON
-	db EVOLVE_HAPPINESS, TR_NITE, UMBREON
+	db EVOLVE_LEVEL, 16, VAPOREON
 	db 0 ; no more evolutions
-	db 1, GROWL
 	db 1, TACKLE
-	db 1, LEER ; Tail Whip → similar move
-	db 5, MUD_SLAP ; Sand Attack → similar move
-	db 9, DOUBLE_KICK ; Baby-Doll Eyes → Let's Go move
-	db 10, SWIFT
-	db 13, QUICK_ATTACK
-	db 17, BITE
-	db 20, HEAL_BELL ; Refresh → HGSS tutor move
-	db 23, THIEF ; Covet → TM move
-	db 25, TAKE_DOWN
-	db 29, CHARM
-	db 33, BATON_PASS
-	db 37, DOUBLE_EDGE
-	db 41, GROWTH ; Last Resort → event move
-	db 45, REVERSAL ; Trump Card → new move
+	db 4, GROWL
+	db 7, LEECH_SEED
+	db 10, VINE_WHIP
+	db 15, POISONPOWDER
+	db 15, SLEEP_POWDER
+	db 20, RAZOR_LEAF
+	db 25, SWEET_SCENT
+	db 32, GROWTH
+	db 39, SYNTHESIS
+	db 46, SOLARBEAM
 	db 0 ; no more level-up moves
 
 VaporeonEvosAttacks:
+	db EVOLVE_LEVEL, 32, JOLTEON
 	db 0 ; no more evolutions
-	db 1, GROWL
 	db 1, TACKLE
-	db 1, LEER ; Tail Whip → similar move
-	db 1, WATER_GUN ; evolution move
-	db 5, MUD_SLAP ; Sand Attack → similar move
-	db 9, DOUBLE_KICK ; Baby-Doll Eyes → Let's Go move
-	db 13, QUICK_ATTACK
-	db 17, WATER_PULSE
-	db 20, AURORA_BEAM
-	db 25, RECOVER ; Aqua Ring → similar move
-	db 29, BARRIER ; Acid Armor → similar move
-	db 33, HAZE
-	db 37, SCALD ; Muddy Water → TM move
-	db 41, DOUBLE_EDGE ; Last Resort → tutor move
-	db 45, HYDRO_PUMP
+	db 1, GROWL
+	db 1, LEECH_SEED
+	db 4, GROWL
+	db 7, LEECH_SEED
+	db 10, VINE_WHIP
+	db 15, POISONPOWDER
+	db 15, SLEEP_POWDER
+	db 22, RAZOR_LEAF
+	db 29, SWEET_SCENT
+	db 38, GROWTH
+	db 47, SYNTHESIS
+	db 56, SOLARBEAM
 	db 0 ; no more level-up moves
 
 JolteonEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, GROWL
 	db 1, TACKLE
-	db 1, LEER ; Tail Whip → similar move
-	db 1, THUNDERSHOCK ; evolution move
-	db 5, MUD_SLAP ; Sand Attack → similar move
-	db 9, DOUBLE_KICK ; Baby-Doll Eyes → Let's Go move
-	db 13, QUICK_ATTACK
-	db 17, DOUBLE_KICK
-	db 20, LIGHT_SCREEN ; Thunder Fang → TM move
-	db 25, PIN_MISSILE
-	db 29, AGILITY
-	db 33, THUNDER_WAVE
-	db 37, THUNDERBOLT ; Discharge → TM move
-	db 41, DOUBLE_EDGE ; Last Resort → tutor move
-	db 45, THUNDER
+	db 1, GROWL
+	db 1, LEECH_SEED
+	db 1, VINE_WHIP
+	db 4, GROWL
+	db 7, LEECH_SEED
+	db 10, VINE_WHIP
+	db 15, POISONPOWDER
+	db 15, SLEEP_POWDER
+	db 22, RAZOR_LEAF
+	db 29, SWEET_SCENT
+	db 41, GROWTH
+	db 53, SYNTHESIS
+	db 65, SOLARBEAM
 	db 0 ; no more level-up moves
 
 FlareonEvosAttacks:
+	db EVOLVE_LEVEL, 16, ESPEON
 	db 0 ; no more evolutions
+	db 1, SCRATCH
 	db 1, GROWL
-	db 1, TACKLE
-	db 1, LEER ; Tail Whip → similar move
-	db 1, EMBER ; evolution move
-	db 5, MUD_SLAP ; Sand Attack → similar move
-	db 9, DOUBLE_KICK ; Baby-Doll Eyes → Let's Go move
-	db 13, QUICK_ATTACK
-	db 17, BITE
-	db 20, FLAME_WHEEL ; Fire Fang → new move
-	db 25, FIRE_SPIN
-	db 29, SCARY_FACE
-	db 33, SMOKESCREEN ; Smog → new move
-	db 37, FLAMETHROWER ; Lava Plume → new move
-	db 41, DOUBLE_EDGE ; Last Resort → tutor move
-	db 45, FLARE_BLITZ
+	db 7, EMBER
+	db 13, SMOKESCREEN
+	db 19, RAGE
+	db 25, SCARY_FACE
+	db 31, FLAMETHROWER
+	db 37, SLASH
+	db 43, DRAGON_RAGE
+	db 49, FIRE_SPIN
 	db 0 ; no more level-up moves
 
 EspeonEvosAttacks:
+	db EVOLVE_LEVEL, 36, UMBREON
 	db 0 ; no more evolutions
+	db 1, SCRATCH
 	db 1, GROWL
-	db 1, TACKLE
-	db 1, LEER ; Tail Whip → similar move
-	db 1, CONFUSION ; evolution move
-	db 5, MUD_SLAP ; Sand Attack → similar move
-	db 9, DOUBLE_KICK ; Baby-Doll Eyes → Let's Go move
-	db 13, QUICK_ATTACK
-	db 17, SWIFT
-	db 20, PSYBEAM
-	db 25, FUTURE_SIGHT
-	db 29, REFLECT ; Psych Up → event move
-	db 33, HEALINGLIGHT ; Morning Sun → similar move
-	db 37, PSYCHIC_M
-	db 41, DOUBLE_EDGE ; Last Resort → tutor move
-	db 45, POWER_GEM ; Power Swap → new move
+	db 1, EMBER
+	db 7, EMBER
+	db 13, SMOKESCREEN
+	db 20, RAGE
+	db 27, SCARY_FACE
+	db 34, FLAMETHROWER
+	db 41, SLASH
+	db 48, DRAGON_RAGE
+	db 55, FIRE_SPIN
 	db 0 ; no more level-up moves
 
 UmbreonEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, SCRATCH
 	db 1, GROWL
-	db 1, TACKLE
-	db 1, LEER ; Tail Whip → similar move
-	db 1, PURSUIT ; evolution move
-	db 5, MUD_SLAP ; Sand Attack → similar move
-	db 9, DOUBLE_KICK ; Baby-Doll Eyes → Let's Go move
-	db 13, QUICK_ATTACK
-	db 17, CONFUSE_RAY
-	db 20, FEINT_ATTACK
-	db 25, TOXIC ; Assurance → TM move
-	db 29, SCREECH
-	db 33, HEALINGLIGHT ; Moonlight → similar move
-	db 37, SUCKER_PUNCH ; Mean Look → tutor move
-	db 41, DOUBLE_EDGE ; Last Resort → tutor move
-	db 45, MEAN_LOOK ; Guard Swap → Mean Look
+	db 1, EMBER
+	db 1, SMOKESCREEN
+	db 7, EMBER
+	db 13, SMOKESCREEN
+	db 20, RAGE
+	db 27, SCARY_FACE
+	db 34, FLAMETHROWER
+	db 36, WING_ATTACK
+	db 44, SLASH
+	db 54, DRAGON_RAGE
+	db 64, FIRE_SPIN
 	db 0 ; no more level-up moves
 
 LeafeonEvosAttacks:
+	db EVOLVE_LEVEL, 16, GLACEON
 	db 0 ; no more evolutions
-	db 1, GROWL
 	db 1, TACKLE
-	db 1, LEER ; Tail Whip → similar move
-	db 1, RAZOR_LEAF ; evolution move
-	db 5, MUD_SLAP ; Sand Attack → similar move
-	db 9, DOUBLE_KICK ; Baby-Doll Eyes → Let's Go move
-	db 13, QUICK_ATTACK
-	db 17, BITE ; Grass Whistle → new move
-	db 20, ENERGY_BALL ; Magical Leaf → TM move
-	db 25, GIGA_DRAIN
-	db 29, SWORDS_DANCE
-	db 33, HEALINGLIGHT ; Synthesis → similar move
-	db 37, SEED_BOMB ; Sunny Day → tutor move
-	db 41, DOUBLE_EDGE ; Last Resort → tutor move
-	db 45, SUNNY_DAY ; Leaf Blade → Sunny Day
+	db 4, TAIL_WHIP
+	db 7, BUBBLE
+	db 10, WITHDRAW
+	db 13, WATER_GUN
+	db 18, BITE
+	db 23, RAPID_SPIN
+	db 28, PROTECT
+	db 33, RAIN_DANCE
+	db 40, SKULL_BASH
+	db 47, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 GlaceonEvosAttacks:
+	db EVOLVE_LEVEL, 36, SYLVEON
 	db 0 ; no more evolutions
-	db 1, GROWL
 	db 1, TACKLE
-	db 1, LEER ; Tail Whip → similar move
-	db 1, ICY_WIND ; evolution move
-	db 5, MUD_SLAP ; Sand Attack → similar move
-	db 9, DOUBLE_KICK ; Baby-Doll Eyes → Let's Go move
-	db 13, QUICK_ATTACK
-	db 17, BITE
-	db 20, ICE_SHARD ; Ice Fang → Ice Shard
-	db 25, HAIL ; Ice Shard → Hail
-	db 29, BARRIER
-	db 33, MIRROR_COAT
-	db 37, ICE_BEAM ; Hail → TM move
-	db 41, DOUBLE_EDGE ; Last Resort → tutor move
-	db 45, BLIZZARD
+	db 1, TAIL_WHIP
+	db 1, BUBBLE
+	db 4, TAIL_WHIP
+	db 7, BUBBLE
+	db 10, WITHDRAW
+	db 13, WATER_GUN
+	db 19, BITE
+	db 25, RAPID_SPIN
+	db 31, PROTECT
+	db 37, RAIN_DANCE
+	db 45, SKULL_BASH
+	db 53, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 SylveonEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, GROWL
 	db 1, TACKLE
-	db 1, LEER ; Tail Whip → similar move
-	db 1, DISARM_VOICE ; evolution move
-	db 5, MUD_SLAP ; Sand Attack → similar move
-	db 9, DOUBLE_KICK ; Baby-Doll Eyes → Let's Go move
-	db 13, QUICK_ATTACK
-	db 17, SWIFT
-	db 20, DRAIN_KISS
-	db 25, SKILL_SWAP
-	db 29, HEAL_BELL ; Misty Terrain → HGSS tutor move
-	db 33, LIGHT_SCREEN
-	db 37, MOONBLAST
-	db 41, DOUBLE_EDGE ; Last Resort → tutor move
-	db 45, PLAY_ROUGH ; Psych Up → new move
+	db 1, TAIL_WHIP
+	db 1, BUBBLE
+	db 1, WITHDRAW
+	db 4, TAIL_WHIP
+	db 7, BUBBLE
+	db 10, WITHDRAW
+	db 13, WATER_GUN
+	db 19, BITE
+	db 25, RAPID_SPIN
+	db 31, PROTECT
+	db 42, RAIN_DANCE
+	db 55, SKULL_BASH
+	db 68, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 ZoruaEvosAttacks:
 	db EVOLVE_LEVEL, 7, ZOROARK
 	db 0 ; no more evolutions
 	db 1, TACKLE
+	db 1, STRING_SHOT
 	db 0 ; no more level-up moves
 
 ZoroarkEvosAttacks:
 	db EVOLVE_LEVEL, 10, ROCKRUFF
 	db 0 ; no more evolutions
-	db 1, TACKLE
+	db 1, HARDEN
+	db 7, HARDEN
 	db 0 ; no more level-up moves
 
 RockruffEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
+	db 1, CONFUSION
+	db 10, CONFUSION
+	db 13, POISONPOWDER
+	db 14, STUN_SPORE
+	db 15, SLEEP_POWDER
+	db 18, SUPERSONIC
+	db 23, WHIRLWIND
+	db 28, GUST
+	db 34, PSYBEAM
+	db 40, SAFEGUARD
 	db 0 ; no more level-up moves
 
 LycanrocEvosAttacks:
 	db EVOLVE_LEVEL, 7, MIMIKYU
 	db 0 ; no more evolutions
-	db 1, TACKLE
+	db 1, POISON_STING
+	db 1, STRING_SHOT
 	db 0 ; no more level-up moves
 Lycanroc_MidnightEvosAttacks:
 	db EVOLVE_LEVEL, 7, MIMIKYU
 	db 0 ; no more evolutions
-	db 1, TACKLE
+	db 1, POISON_STING
+	db 1, STRING_SHOT
 	db 0 ; no more level-up moves
 Lycanroc_DuskEvosAttacks:
 	db EVOLVE_LEVEL, 7, MIMIKYU
 	db 0 ; no more evolutions
-	db 1, TACKLE
+	db 1, POISON_STING
+	db 1, STRING_SHOT
 	db 0 ; no more level-up moves
 Lycanroc_DawnEvosAttacks:
 	db EVOLVE_LEVEL, 7, MIMIKYU
 	db 0 ; no more evolutions
-	db 1, TACKLE
+	db 1, POISON_STING
+	db 1, STRING_SHOT
 	db 0 ; no more level-up moves
 
 MimikyuEvosAttacks:
 	db EVOLVE_LEVEL, 10, MAGNEMITE
 	db 0 ; no more evolutions
-	db 1, TACKLE
+	db 1, HARDEN
+	db 7, HARDEN
 	db 0 ; no more level-up moves
 
 MagnemiteEvosAttacks:
-	db EVOLVE_LEVEL, 30, MAGNETON
 	db 0 ; no more evolutions
-	db 1, SUPERSONIC
-	db 1, TACKLE
-	db 5, THUNDERSHOCK
-	db 7, THUNDER_WAVE
-	db 11, QUICK_ATTACK ; Magnet Bomb → TCG move
-	db 13, LIGHT_SCREEN
-	db 17, SONIC_BOOM
-	db 19, SPARK
-	db 23, SWIFT ; Mirror Shot → TM move
-	db 25, SELFDESTRUCT ; Metal Sound → TCG move
-	db 29, THUNDERBOLT ; Electro Ball → TM move
-	db 31, FLASH_CANNON
-	db 35, SCREECH
-	db 37, HIDDEN_POWER ; Discharge → TM move
-	db 41, AGILITY ; Lock-On → event move
-	db 43, GYRO_BALL ; Magnet Rise → Gyro Ball
-	db 47, THUNDER ; Gyro Ball → TM move
-	db 49, ZAP_CANNON
+	db 1, FURY_ATTACK
+	db 10, FURY_ATTACK
+	db 15, FOCUS_ENERGY
+	db 20, TWINEEDLE
+	db 25, RAGE
+	db 30, PURSUIT
+	db 35, PIN_MISSILE
+	db 40, AGILITY
 	db 0 ; no more level-up moves
 
 MagnetonEvosAttacks:
-	db EVOLVE_LOCATION, MAGNET_TUNNEL, MAGNEZONE
+	db EVOLVE_LEVEL, 18, MAGNEZONE
 	db 0 ; no more evolutions
-	db 1, TRI_ATTACK ; evolution move
-	db 1, SUPERSONIC
 	db 1, TACKLE
-	db 5, THUNDERSHOCK
-	db 7, THUNDER_WAVE
-	db 11, QUICK_ATTACK ; Magnet Bomb → TCG move
-	db 13, LIGHT_SCREEN
-	db 17, SONIC_BOOM
-	db 19, SPARK
-	db 23, SWIFT ; Mirror Shot → TM move
-	db 25, SELFDESTRUCT ; Metal Sound → TCG move
-	db 29, THUNDERBOLT ; Electro Ball → TM move
-	db 33, FLASH_CANNON
-	db 39, SCREECH
-	db 43, HIDDEN_POWER ; Discharge → TM move
-	db 49, AGILITY ; Lock-On → event move
-	db 53, GYRO_BALL ; Magnet Rise → Gyro Ball
-	db 59, THUNDER ; Gyro Ball → TM move
-	db 63, ZAP_CANNON
+	db 5, SAND_ATTACK
+	db 9, GUST
+	db 15, QUICK_ATTACK
+	db 21, WHIRLWIND
+	db 29, WING_ATTACK
+	db 37, AGILITY
+	db 47, MIRROR_MOVE
 	db 0 ; no more level-up moves
 
 MagnezoneEvosAttacks:
+	db EVOLVE_LEVEL, 36, PORYGON
 	db 0 ; no more evolutions
-	db 1, TRI_ATTACK ; evolution move
-	db 1, MIRROR_COAT
-	db 1, BARRIER
-	db 1, SUPERSONIC
 	db 1, TACKLE
-	db 5, THUNDERSHOCK
-	db 7, THUNDER_WAVE
-	db 11, QUICK_ATTACK ; Magnet Bomb → TCG move
-	db 13, LIGHT_SCREEN
-	db 17, SONIC_BOOM
-	db 19, SPARK
-	db 23, SWIFT ; Mirror Shot → TM move
-	db 25, SELFDESTRUCT ; Metal Sound → TCG move
-	db 29, THUNDERBOLT ; Electro Ball → TM move
-	db 33, FLASH_CANNON
-	db 39, SCREECH
-	db 43, HIDDEN_POWER ; Discharge → TM move
-	db 49, AGILITY ; Lock-On → event move
-	db 53, GYRO_BALL ; Magnet Rise → Gyro Ball
-	db 59, THUNDER ; Gyro Ball → TM move
-	db 63, ZAP_CANNON
+	db 1, SAND_ATTACK
+	db 1, GUST
+	db 5, SAND_ATTACK
+	db 9, GUST
+	db 15, QUICK_ATTACK
+	db 23, WHIRLWIND
+	db 33, WING_ATTACK
+	db 43, AGILITY
+	db 55, MIRROR_MOVE
 	db 0 ; no more level-up moves
 
 PorygonEvosAttacks:
-	db EVOLVE_HOLDING, UP_GRADE, PORYGON2
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, CONVERSION
-	db 1, TELEPORT ; Sharpen → RBY TM move
-	db 7, PSYBEAM
-	db 12, AGILITY
-	db 18, RECOVER
-	db 23, GROWTH ; Magnet Rise → new move
-	db 29, ICE_BEAM ; Signal Beam → TM move
-	db 34, BARRIER ; Recycle → event move
-	db 40, THUNDERBOLT ; Discharge → TM move
-	db 45, MIRROR_COAT ; Lock-On → new move
-	db 50, TRI_ATTACK
-	db 56, MIRROR_COAT ; Magic Coat → new move
-	db 62, ZAP_CANNON
+	db 1, SAND_ATTACK
+	db 1, GUST
+	db 1, QUICK_ATTACK
+	db 5, SAND_ATTACK
+	db 9, GUST
+	db 15, QUICK_ATTACK
+	db 23, WHIRLWIND
+	db 33, WING_ATTACK
+	db 46, AGILITY
+	db 61, MIRROR_MOVE
 	db 0 ; no more level-up moves
 
 Porygon2EvosAttacks:
-	db EVOLVE_HOLDING, DUBIOUS_DISC, PORYGON_Z
+	db EVOLVE_LEVEL, 20, PORYGONZ
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, CONVERSION
-	db 1, DEFENSE_CURL
-	db 7, PSYBEAM
-	db 12, AGILITY
-	db 18, RECOVER
-	db 23, GROWTH ; Magnet Rise → new move
-	db 29, ICE_BEAM ; Signal Beam → TM move
-	db 34, BARRIER ; Recycle → event move
-	db 40, THUNDERBOLT ; Discharge → TM move
-	db 45, MIRROR_COAT ; Lock-On → new move
-	db 50, TRI_ATTACK
-	db 56, MIRROR_COAT ; Magic Coat → new move
-	db 62, ZAP_CANNON
-	db 67, HYPER_BEAM
+	db 1, TAIL_WHIP
+	db 7, QUICK_ATTACK
+	db 13, HYPER_FANG
+	db 20, FOCUS_ENERGY
+	db 27, PURSUIT
+	db 34, SUPER_FANG
 	db 0 ; no more level-up moves
 
 PorygonZEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, CONVERSION
-	db 1, NASTY_PLOT ; evolution move
-	db 7, PSYBEAM
-	db 12, AGILITY
-	db 18, RECOVER
-	db 23, GROWTH ; Magnet Rise → new move
-	db 29, ICE_BEAM ; Signal Beam → TM move
-	db 34, PAIN_SPLIT ; Embargo → HGSS tutor move
-	db 40, THUNDERBOLT ; Discharge → TM move
-	db 45, MIRROR_COAT ; Lock-On → new move
-	db 50, TRI_ATTACK
-	db 56, MIRROR_COAT ; Magic Coat → new move
-	db 62, ZAP_CANNON
-	db 67, HYPER_BEAM
+	db 1, TAIL_WHIP
+	db 1, QUICK_ATTACK
+	db 7, QUICK_ATTACK
+	db 13, HYPER_FANG
+	db 20, SCARY_FACE
+	db 30, PURSUIT
+	db 40, SUPER_FANG
 	db 0 ; no more level-up moves
 
 MeowthEvosAttacks:
