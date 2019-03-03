@@ -1,8 +1,9 @@
-Music_LookSage:
+Music_LookSage: ; ee35e
 	musicheader 2, 1, Music_LookSage_Ch1
 	musicheader 1, 3, Music_LookSage_Ch3
+; ee364
 
-Music_LookSage_Ch1:
+Music_LookSage_Ch1: ; ee364
 	tempo 144
 	stereopanning $f
 	volume $77
@@ -28,7 +29,7 @@ Music_LookSage_Ch1:
 	note F_, 2
 	intensity $93
 	note F_, 2
-Music_LookSage_branch_ee38e:
+Music_LookSage_branch_ee38e: ; ee38e
 	intensity $b3
 	note D_, 2
 	intensity $93
@@ -100,8 +101,9 @@ Music_LookSage_branch_ee38e:
 	note B_, 2
 	callchannel Music_LookSage_branch_ee3fa
 	loopchannel 0, Music_LookSage_branch_ee38e
+; ee3fa
 
-Music_LookSage_branch_ee3fa:
+Music_LookSage_branch_ee3fa: ; ee3fa
 	intensity $b3
 	octave 2
 	note E_, 2
@@ -120,8 +122,9 @@ Music_LookSage_branch_ee3fa:
 	intensity $93
 	note A_, 2
 	endchannel
+; ee414
 
-Music_LookSage_Ch3:
+Music_LookSage_Ch3: ; ee414
 	stereopanning $f0
 	vibrato $16, $23
 	notetype $c, $10
@@ -141,7 +144,7 @@ Music_LookSage_Ch3:
 	note E_, 14
 	note G_, 1
 	note G#, 1
-Music_LookSage_branch_ee430:
+Music_LookSage_branch_ee430: ; ee430
 	note A_, 12
 	note B_, 4
 	note D_, 9
@@ -176,3 +179,4 @@ Music_LookSage_branch_ee430:
 	note G_, 1
 	note G#, 1
 	loopchannel 0, Music_LookSage_branch_ee430
+; ee45f

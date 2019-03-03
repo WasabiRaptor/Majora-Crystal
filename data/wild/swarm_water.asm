@@ -1,6 +1,4 @@
-; Pokémon swarms in water
-
-SwarmWaterWildMons:
+; swarms in water
 
 	; No swarms encountered while surfing in Crystal
 

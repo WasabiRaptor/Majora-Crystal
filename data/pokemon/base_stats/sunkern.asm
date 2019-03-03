@@ -1,21 +1,23 @@
-	db SUNKERN ; 191
-
 	db  30,  30,  30,  30,  30,  30
-    evs  0,   0,   0,   0,   1,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db GRASS, GRASS ; type
+	db GRASS, GRASS
 	db 235 ; catch rate
 	db 52 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F50 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/sunkern/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_PLANT, EGG_PLANT ; egg groups
+	db NO_ITEM ; item 1
+	db NO_ITEM ; item 2
+	dn FEMALE_50, 3 ; gender, step cycles to hatch
+	dn 5, 5 ; frontpic dimensions
+	db CHLOROPHYLL ; ability 1
+	db SOLAR_POWER ; ability 2
+	db EARLY_BIRD ; hidden ability
+	db MEDIUM_SLOW ; growth rate
+	dn PLANT, PLANT ; egg groups
 
-	; tm/hm learnset
-	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SWEET_SCENT, SNORE, PROTECT, GIGA_DRAIN, ENDURE, FRUSTRATION, SOLARBEAM, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, REST, ATTRACT, CUT, FLASH
+	; ev_yield
+	ev_yield   0,   0,   0,   0,   1,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, LIGHT_SCREEN, PROTECT, GIGA_DRAIN, SAFEGUARD, SOLAR_BEAM, RETURN, DOUBLE_TEAM, SLUDGE_BOMB, SUBSTITUTE, FACADE, REST, ATTRACT, ENERGY_BALL, ENDURE, FLASH, SWORDS_DANCE, CUT, DEFENSE_CURL, DOUBLE_EDGE, EARTH_POWER, ROLLOUT, SEED_BOMB, SLEEP_TALK, SWAGGER
 	; end

@@ -1,21 +1,23 @@
-	db GROWLITHE ; 058
-
 	db  55,  70,  45,  60,  70,  50
-    evs  0,   1,   0,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db FIRE, FIRE ; type
+	db FIRE, FIRE
 	db 190 ; catch rate
 	db 91 ; base exp
-	db BURNT_BERRY, BURNT_BERRY ; items
-	db GENDER_F25 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/growlithe/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_SLOW ; growth rate
-	dn EGG_GROUND, EGG_GROUND ; egg groups
+	db ASPEAR_BERRY ; item 1
+	db ASPEAR_BERRY ; item 2
+	dn FEMALE_25, 3 ; gender, step cycles to hatch
+	dn 5, 5 ; frontpic dimensions
+	db INTIMIDATE ; ability 1
+	db FLASH_FIRE ; ability 2
+	db JUSTIFIED ; hidden ability
+	db SLOW ; growth rate
+	dn FIELD, FIELD ; egg groups
 
-	; tm/hm learnset
-	tmhm HEADBUTT, CURSE, ROAR, TOXIC, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, ENDURE, FRUSTRATION, IRON_TAIL, DRAGONBREATH, RETURN, DIG, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, FIRE_BLAST, SWIFT, REST, ATTRACT, FLAMETHROWER
+	; ev_yield
+	ev_yield   0,   1,   0,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, ROAR, TOXIC, HIDDEN_POWER, SUNNY_DAY, PROTECT, SAFEGUARD, IRON_TAIL, RETURN, DIG, DOUBLE_TEAM, FLAMETHROWER, FIRE_BLAST, SWIFT, AERIAL_ACE, SUBSTITUTE, FACADE, WILD_CHARGE, REST, ATTRACT, THIEF, ROCK_SMASH, ENDURE, WILL_O_WISP, STRENGTH, BODY_SLAM, DOUBLE_EDGE, HEADBUTT, SLEEP_TALK, SWAGGER
 	; end

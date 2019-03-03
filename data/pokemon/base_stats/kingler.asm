@@ -1,21 +1,23 @@
-	db KINGLER ; 099
-
 	db  55, 130, 115,  75,  50,  50
-    evs  0,   2,   0,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db WATER, WATER ; type
+	db WATER, WATER
 	db 60 ; catch rate
 	db 206 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F50 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/kingler/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_WATER_3, EGG_WATER_3 ; egg groups
+	db NO_ITEM ; item 1
+	db NO_ITEM ; item 2
+	dn FEMALE_50, 3 ; gender, step cycles to hatch
+	dn 7, 7 ; frontpic dimensions
+	db HYPER_CUTTER ; ability 1
+	db SHELL_ARMOR ; ability 2
+	db SHEER_FORCE ; hidden ability
+	db MEDIUM_FAST ; growth rate
+	dn INVERTEBRATE, INVERTEBRATE ; egg groups
 
-	; tm/hm learnset
-	tmhm CURSE, TOXIC, ROCK_SMASH, HIDDEN_POWER, SNORE, BLIZZARD, HYPER_BEAM, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, REST, ATTRACT, THIEF, FURY_CUTTER, CUT, SURF, STRENGTH, WHIRLPOOL, ICE_BEAM
+	; ev_yield
+	ev_yield   0,   2,   0,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, TOXIC, HAIL, HIDDEN_POWER, HONE_CLAWS, ICE_BEAM, BLIZZARD, HYPER_BEAM, PROTECT, RAIN_DANCE, RETURN, DIG, DOUBLE_TEAM, SUBSTITUTE, FACADE, REST, ATTRACT, THIEF, ROCK_SLIDE, ROCK_SMASH, FALSE_SWIPE, SCALD, X_SCISSOR, ENDURE, WATER_PULSE, SHADOW_CLAW, GIGA_IMPACT, SWORDS_DANCE, CUT, SURF, STRENGTH, WHIRLPOOL, BODY_SLAM, DOUBLE_EDGE, ICY_WIND, KNOCK_OFF, SLEEP_TALK, SWAGGER
 	; end

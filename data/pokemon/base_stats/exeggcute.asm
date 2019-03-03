@@ -1,21 +1,23 @@
-	db EXEGGCUTE ; 102
-
 	db  60,  40,  80,  40,  60,  45
-    evs  0,   0,   1,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db GRASS, PSYCHIC ; type
+	db GRASS, PSYCHIC
 	db 90 ; catch rate
 	db 98 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F50 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/exeggcute/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_SLOW ; growth rate
-	dn EGG_PLANT, EGG_PLANT ; egg groups
+	db NO_ITEM ; item 1
+	db NO_ITEM ; item 2
+	dn FEMALE_50, 3 ; gender, step cycles to hatch
+	dn 7, 7 ; frontpic dimensions
+	db CHLOROPHYLL ; ability 1
+	db CHLOROPHYLL ; ability 2
+	db HARVEST ; hidden ability
+	db SLOW ; growth rate
+	dn PLANT, PLANT ; egg groups
 
-	; tm/hm learnset
-	tmhm CURSE, ROLLOUT, TOXIC, PSYCH_UP, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, GIGA_DRAIN, ENDURE, FRUSTRATION, SOLARBEAM, RETURN, PSYCHIC_M, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, DREAM_EATER, REST, ATTRACT, THIEF, NIGHTMARE, STRENGTH, FLASH
+	; ev_yield
+	ev_yield   0,   0,   1,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, LIGHT_SCREEN, PROTECT, GIGA_DRAIN, SOLAR_BEAM, RETURN, PSYCHIC, DOUBLE_TEAM, REFLECT, SLUDGE_BOMB, SUBSTITUTE, FACADE, REST, ATTRACT, THIEF, ENERGY_BALL, ENDURE, EXPLOSION, FLASH, SWORDS_DANCE, STRENGTH, DOUBLE_EDGE, DREAM_EATER, ROLLOUT, SEED_BOMB, SKILL_SWAP, SLEEP_TALK, SWAGGER
 	; end

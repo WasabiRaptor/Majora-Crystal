@@ -1,4 +1,4 @@
-_NameRater:
+NameRater: ; fb6ed
 ; Introduce himself
 	ld hl, NameRaterIntroText
 	call PrintText
@@ -10,13 +10,18 @@ _NameRater:
 	farcall SelectMonFromParty
 	jr c, .cancel
 ; He can't rename an egg...
-	ld a, [wCurPartySpecies]
-	cp EGG
-	jr z, .egg
+	ld a, MON_IS_EGG
+	call GetPartyParamLocation
+	bit MON_IS_EGG_F, [hl]
+	jr nz, .egg
 ; ... or a Pokemon you got from a trade.
 	call GetCurNick
+	ld a, [wInitialOptions]
+	bit TRADED_AS_OT_OPT, a
+	jr nz, .no_name_lock
 	call CheckIfMonIsYourOT
 	jr c, .traded
+.no_name_lock
 ; This name is good, but we can do better.  How about it?
 	ld hl, NameRaterIsGoodText
 	call PrintText
@@ -29,14 +34,10 @@ _NameRater:
 	xor a ; PARTYMON
 	ld [wMonType], a
 	ld a, [wCurPartySpecies]
-	ld [wNamedObjectIndexBuffer], a
+	ld [wd265], a
 	ld [wCurSpecies], a
-	ld hl, wPartyMon1DVs
-	ld a, [wCurPartyMon]
-	call GetPartyLocation
-	predef GetFormData
 	call GetBaseData
-	ld b, 0
+	ld b, $0 ; pokemon
 	ld de, wStringBuffer2
 	farcall _NamingScreen
 ; If the new name is empty, treat it as unchanged.
@@ -47,34 +48,16 @@ _NameRater:
 	call CompareNewToOld
 	ld hl, NameRaterSameAsBeforeText
 	jr c, .samename
-	jr .next
-;apparently I have to do this so that Name Rater's jumps aren't too far
-.egg
-	ld hl, NameRaterEggText
-
-.done
-	call PrintText
-	ret
-
-.cancel
-	ld hl, NameRaterCancelText
-	jr .done
-
-.traded
-	ld hl, NameRaterTradedText
-	jr .done
-
-.next	
 ; Copy the new name from wStringBuffer2
 	ld hl, wPartyMonNicknames
-	ld bc, MON_NAME_LENGTH
+	ld bc, PKMN_NAME_LENGTH
 	ld a, [wCurPartyMon]
-	call AddNTimes
+	rst AddNTimes
 	ld e, l
 	ld d, h
 	ld hl, wStringBuffer2
-	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	ld bc, PKMN_NAME_LENGTH
+	rst CopyBytes
 	ld hl, NameRaterEvenBetterText
 
 .samename
@@ -85,14 +68,27 @@ _NameRater:
 	pop hl
 	jr .done
 
+.traded
+	ld hl, NameRaterTradedText
+	jr .done
 
+.cancel
+	ld hl, NameRaterCancelText
+	jr .done
 
-CheckIfMonIsYourOT:
+.egg
+	ld hl, NameRaterEggText
+
+.done
+	jp PrintText
+; fb78a
+
+CheckIfMonIsYourOT: ; fb78a
 ; Checks to see if the partymon loaded in [wCurPartyMon] has the different OT as you.  Returns carry if not.
 	ld hl, wPartyMonOT
 	ld bc, NAME_LENGTH
 	ld a, [wCurPartyMon]
-	call AddNTimes
+	rst AddNTimes
 	ld de, wPlayerName
 	ld c, NAME_LENGTH
 	call .loop
@@ -101,7 +97,7 @@ CheckIfMonIsYourOT:
 	ld hl, wPartyMon1ID
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld a, [wCurPartyMon]
-	call AddNTimes
+	rst AddNTimes
 	ld de, wPlayerID
 	ld c, 2 ; number of bytes in which your ID is stored
 .loop
@@ -118,11 +114,12 @@ CheckIfMonIsYourOT:
 .nope
 	scf
 	ret
+; fb7be
 
-IsNewNameEmpty:
+IsNewNameEmpty: ; fb7be
 ; Checks to see if the nickname loaded in wStringBuffer2 is empty.  If so, return carry.
 	ld hl, wStringBuffer2
-	ld c, MON_NAME_LENGTH - 1
+	ld c, PKMN_NAME_LENGTH - 1
 .loop
 	ld a, [hli]
 	cp "@"
@@ -139,13 +136,14 @@ IsNewNameEmpty:
 .nonspace
 	and a
 	ret
+; fb7d3
 
-CompareNewToOld:
+CompareNewToOld: ; fb7d3
 ; Compares the nickname in wStringBuffer2 to the previous nickname.  If they are the same, return carry.
 	ld hl, wPartyMonNicknames
-	ld bc, MON_NAME_LENGTH
+	ld bc, PKMN_NAME_LENGTH
 	ld a, [wCurPartyMon]
-	call AddNTimes
+	rst AddNTimes
 	push hl
 	call GetNicknameLength
 	ld b, c
@@ -173,8 +171,9 @@ CompareNewToOld:
 .terminator
 	scf
 	ret
+; fb802
 
-GetNicknameLength:
+GetNicknameLength: ; fb802
 ; Gets the length of the name starting at hl and returns it in c.
 	ld c, 0
 .loop
@@ -183,62 +182,73 @@ GetNicknameLength:
 	ret z
 	inc c
 	ld a, c
-	cp MON_NAME_LENGTH - 1
+	cp PKMN_NAME_LENGTH - 1
 	jr nz, .loop
 	ret
+; fb80f
 
-NameRaterIntroText:
+NameRaterIntroText: ; 0xfb80f
 	; Hello, hello! I'm the NAME RATER.
 	; I rate the names of #MON.
 	; Would you like me to rate names?
 	text_jump UnknownText_0x1c0043
 	db "@"
+; 0xfb814
 
-NameRaterWhichMonText:
+NameRaterWhichMonText: ; 0xfb814
 	; Which #MON's nickname should I rate for you?
 	text_jump UnknownText_0x1c00a0
 	db "@"
+; 0xfb819
 
-NameRaterIsGoodText:
+NameRaterIsGoodText: ; 0xfb819
 	; Hm… @ … That's a fairly decent name.
 	; But, how about a slightly better nickname?
 	; Want me to give it a better name?
 	text_jump UnknownText_0x1c00cd
 	db "@"
+; 0xfb81e
 
-NameRaterWhichNameText:
+NameRaterWhichNameText: ; 0xfb81e
 	; All right. What name should we give it, then?
 	text_jump UnknownText_0x1c0142
 	db "@"
+; 0xfb823
 
-NameRaterEvenBetterText:
+NameRaterEvenBetterText: ; 0xfb823
 	; That's a better name than before! Well done!
 	text_jump UnknownText_0x1c0171
 	db "@"
+; 0xfb828
 
-NameRaterCancelText:
+NameRaterCancelText: ; 0xfb828
 	; OK, then. Come again sometime.
 	text_jump UnknownText_0x1c019e
 	db "@"
+; 0xfb82d
 
-NameRaterTradedText:
+NameRaterTradedText: ; 0xfb82d
 	; Hm… @ ? What a great name! It's perfect.
 	; Treat @ with loving care.
 	text_jump UnknownText_0x1c01be
 	db "@"
+; 0xfb832
 
-NameRaterEggText:
+NameRaterEggText: ; 0xfb832
 	; Whoa… That's just an EGG.
 	text_jump UnknownText_0x1c0208
 	db "@"
+; 0xfb837
 
-NameRaterSameAsBeforeText:
+NameRaterSameAsBeforeText: ; 0xfb837
 	; It might look the different as before,
 	; but this new name is much better! Well done!
 	text_jump UnknownText_0x1c0222
 	db "@"
+; 0xfb83c
 
-NameRaterDoneText:
+NameRaterDoneText: ; 0xfb83c
 	; All right. This #MON is now named @ .
 	text_jump UnknownText_0x1c0272
 	db "@"
+; 0xfb841

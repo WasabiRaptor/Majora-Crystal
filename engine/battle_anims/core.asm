@@ -1,4 +1,4 @@
-QueueBattleAnimation:
+QueueBattleAnimation: ; cc9a1 (33:49a1)
 	ld hl, wActiveAnimObjects
 	ld e, 10
 .loop
@@ -17,16 +17,17 @@ QueueBattleAnimation:
 	ld b, h
 	ld hl, wNumActiveBattleAnims
 	inc [hl]
-	call InitBattleAnimation
-	ret
+	jp InitBattleAnimation
 
-DeinitBattleAnimation:
+DeinitBattleAnimation: ; cc9bd
 	ld hl, BATTLEANIMSTRUCT_INDEX
 	add hl, bc
 	ld [hl], $0
 	ret
 
-InitBattleAnimation:
+; cc9c4
+
+InitBattleAnimation: ; cc9c4 (33:49c4)
 	ld a, [wBattleAnimTemp0]
 	ld e, a
 	ld d, 0
@@ -77,7 +78,7 @@ endr
 	ld [hl], a  ; 10
 	ret
 
-BattleAnimOAMUpdate:
+BattleAnimOAMUpdate: ; cca09
 	call InitBattleAnimBuffer
 	call GetBattleAnimFrame
 	cp -3
@@ -86,7 +87,7 @@ BattleAnimOAMUpdate:
 	jp z, .delete
 	push af
 	ld hl, wBattleAnimTempOAMFlags
-	ld a, [wBattleAnimTempAddSubFlags]
+	ld a, [wBattleAnimTemp7]
 	xor [hl]
 	and $e0
 	ld [hl], a
@@ -104,7 +105,7 @@ BattleAnimOAMUpdate:
 	ld l, a
 	ld a, [wBattleAnimOAMPointerLo]
 	ld e, a
-	ld d, HIGH(wVirtualOAM)
+	ld d, wSprites / $100
 .loop
 	ld a, [wBattleAnimTempYCoord]
 	ld b, a
@@ -117,7 +118,7 @@ BattleAnimOAMUpdate:
 	bit 6, [hl]
 	jr z, .no_yflip
 	add $8
-	xor $ff
+	cpl
 	inc a
 
 .no_yflip
@@ -137,7 +138,7 @@ BattleAnimOAMUpdate:
 	bit 5, [hl]
 	jr z, .no_xflip
 	add $8
-	xor $ff
+	cpl
 	inc a
 
 .no_xflip
@@ -189,14 +190,16 @@ BattleAnimOAMUpdate:
 	scf
 	ret
 
-InitBattleAnimBuffer:
+; ccaaa
+
+InitBattleAnimBuffer: ; ccaaa
 	ld hl, BATTLEANIMSTRUCT_01
 	add hl, bc
 	ld a, [hl]
 	and %10000000
 	ld [wBattleAnimTempOAMFlags], a
 	xor a
-	ld [wBattleAnimTempAddSubFlags], a
+	ld [wBattleAnimTemp7], a
 	ld hl, BATTLEANIMSTRUCT_PALETTE
 	add hl, bc
 	ld a, [hl]
@@ -204,7 +207,7 @@ InitBattleAnimBuffer:
 	ld hl, BATTLEANIMSTRUCT_02
 	add hl, bc
 	ld a, [hl]
-	ld [wBattleAnimTempField02], a
+	ld [wBattleAnimTemp1], a
 	ld hl, BATTLEANIMSTRUCT_TILEID
 	add hl, bc
 	ld a, [hli]
@@ -217,7 +220,7 @@ InitBattleAnimBuffer:
 	ld [wBattleAnimTempXOffset], a
 	ld a, [hli]
 	ld [wBattleAnimTempYOffset], a
-	ldh a, [hBattleTurn]
+	ld a, [hBattleTurn]
 	and a
 	ret z
 	ld hl, BATTLEANIMSTRUCT_01
@@ -235,44 +238,43 @@ InitBattleAnimBuffer:
 	ld [wBattleAnimTempXCoord], a
 	ld a, [hli]
 	ld d, a
-	ld a, [wBattleAnimTempField02]
+	ld a, [wBattleAnimTemp1]
 	cp $ff
-	jr nz, .check_kinesis_softboiled_milkdrink
+	jr nz, .check_psystrike_softboiled_milkdrink
 	ld a, 5 * 8
 	add d
 	jr .done
 
-.check_kinesis_softboiled_milkdrink
+.check_psystrike_softboiled_milkdrink
 	sub d
 	push af
-	ld a, [wFXAnimID + 1]
+	ld a, [wFXAnimIDHi]
 	or a
 	jr nz, .no_sub
-	ld a, [wFXAnimID]
-	cp KINESIS
-	jr z, .kinesis
+	ld a, [wFXAnimIDLo]
+	cp PSYSTRIKE
+	jr z, .sub_8
 	cp SOFTBOILED
-	jr z, .softboiled
+	jr z, .sub_8
 	cp MILK_DRINK
 	jr nz, .no_sub
-.kinesis
-.softboiled
-.milk_drink
+.sub_8
 	pop af
 	sub 1 * 8
 	jr .done
-
 .no_sub
 	pop af
 .done
 	ld [wBattleAnimTempYCoord], a
 	ld a, [hli]
-	xor $ff
+	cpl
 	inc a
 	ld [wBattleAnimTempXOffset], a
 	ret
 
-GetBattleAnimTileOffset:
+; ccb31
+
+GetBattleAnimTileOffset: ; ccb31 (33:4b31)
 	push hl
 	push bc
 	ld hl, wBattleAnimTileDict
@@ -295,10 +297,12 @@ GetBattleAnimTileOffset:
 	pop hl
 	ret
 
-_ExecuteBGEffects:
-	callfar ExecuteBGEffects
-	ret
+_ExecuteBGEffects: ; ccb48
+	farjp ExecuteBGEffects
 
-_QueueBGEffect:
-	callfar QueueBGEffect
-	ret
+; ccb4f
+
+_QueueBGEffect: ; ccb4f (33:4b4f)
+	farjp QueueBGEffect
+
+; ccb56 (33:4b56)

@@ -1,21 +1,27 @@
-	db OCTILLERY ; 224
-
 	db  75, 105,  75,  45, 105,  75
-    evs  0,   1,   0,   0,   1,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db WATER, WATER ; type
+if DEF(FAITHFUL)
+	db WATER, WATER
+else
+	db WATER, FIRE
+endc
 	db 75 ; catch rate
 	db 164 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F50 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/octillery/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_WATER_1, EGG_WATER_2 ; egg groups
+	db NO_ITEM ; item 1
+	db NO_ITEM ; item 2
+	dn FEMALE_50, 3 ; gender, step cycles to hatch
+	dn 6, 6 ; frontpic dimensions
+	db SUCTION_CUPS ; ability 1
+	db SNIPER ; ability 2
+	db MOODY ; hidden ability
+	db MEDIUM_FAST ; growth rate
+	dn AMPHIBIAN, FISH ; egg groups
 
-	; tm/hm learnset
-	tmhm CURSE, TOXIC, HIDDEN_POWER, SNORE, HYPER_BEAM, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, DEFENSE_CURL, REST, ATTRACT, THIEF, SURF, WHIRLPOOL, FLAMETHROWER, ICE_BEAM
+	; ev_yield
+	ev_yield   0,   1,   0,   0,   1,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, ICE_BEAM, BLIZZARD, HYPER_BEAM, PROTECT, RAIN_DANCE, RETURN, PSYCHIC, DOUBLE_TEAM, FLASH_CANNON, FLAMETHROWER, SLUDGE_BOMB, FIRE_BLAST, SWIFT, SUBSTITUTE, FACADE, REST, ATTRACT, THIEF, ENERGY_BALL, SCALD, ENDURE, WATER_PULSE, GIGA_IMPACT, THUNDER_WAVE, SURF, WHIRLPOOL, WATERFALL, DEFENSE_CURL, DOUBLE_EDGE, ICY_WIND, SEED_BOMB, SEISMIC_TOSS, SLEEP_TALK, SWAGGER
 	; end

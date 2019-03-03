@@ -1,9 +1,6 @@
-; Every Pokémon sorted alphabetically by name.
-
 AlphabeticalPokedexOrder:
 	db ABRA
 	db AERODACTYL
-	db AIPOM
 	db ALAKAZAM
 	db AMPHAROS
 	db ARBOK
@@ -29,14 +26,12 @@ AlphabeticalPokedexOrder:
 	db CHINCHOU
 	db CLEFABLE
 	db CLEFAIRY
-	db CLEFFA
 	db CLOYSTER
 	db CORSOLA
 	db CROBAT
 	db CROCONAW
 	db CUBONE
 	db CYNDAQUIL
-	db DELIBIRD
 	db DEWGONG
 	db DIGLETT
 	db DITTO
@@ -52,6 +47,7 @@ AlphabeticalPokedexOrder:
 	db EEVEE
 	db EKANS
 	db ELECTABUZZ
+	db ELECTIVIRE
 	db ELECTRODE
 	db ELEKID
 	db ENTEI
@@ -59,7 +55,6 @@ AlphabeticalPokedexOrder:
 	db EXEGGCUTE
 	db EXEGGUTOR
 	db FARFETCH_D
-	db FEAROW
 	db FERALIGATR
 	db FLAAFFY
 	db FLAREON
@@ -69,11 +64,11 @@ AlphabeticalPokedexOrder:
 	db GENGAR
 	db GEODUDE
 	db GIRAFARIG
-	db GLAZEON
+	db GLACEON
 	db GLIGAR
+	db GLISCOR
 	db GLOOM
 	db GOLBAT
-	db GOLDEEN
 	db GOLDUCK
 	db GOLEM
 	db GRANBULL
@@ -87,17 +82,15 @@ AlphabeticalPokedexOrder:
 	db HITMONLEE
 	db HITMONTOP
 	db HO_OH
+	db HONCHKROW
 	db HOOTHOOT
-	db HOPPIP
 	db HORSEA
 	db HOUNDOOM
 	db HOUNDOUR
 	db HYPNO
-	db IGGLYBUFF
 	db IVYSAUR
 	db JIGGLYPUFF
 	db JOLTEON
-	db JUMPLUFF
 	db JYNX
 	db KABUTO
 	db KABUTOPS
@@ -111,9 +104,9 @@ AlphabeticalPokedexOrder:
 	db LANTURN
 	db LAPRAS
 	db LARVITAR
+	db LEAFEON
 	db LEDIAN
 	db LEDYBA
-	db LICKITUNG
 	db LUGIA
 	db MACHAMP
 	db MACHOKE
@@ -122,8 +115,11 @@ AlphabeticalPokedexOrder:
 	db MAGCARGO
 	db MAGIKARP
 	db MAGMAR
+	db MAGMORTAR
 	db MAGNEMITE
 	db MAGNETON
+	db MAGNEZONE
+	db MAMOSWINE
 	db MANKEY
 	db MANTINE
 	db MAREEP
@@ -136,9 +132,11 @@ AlphabeticalPokedexOrder:
 	db MEWTWO
 	db MILTANK
 	db MISDREAVUS
+	db MISMAGIUS
 	db MOLTRES
 	db MR__MIME
 	db MUK
+	db MUNCHLAX
 	db MURKROW
 	db NATU
 	db NIDOKING
@@ -172,6 +170,7 @@ AlphabeticalPokedexOrder:
 	db POLIWRATH
 	db PONYTA
 	db PORYGON
+	db PORYGON_Z
 	db PORYGON2
 	db PRIMEAPE
 	db PSYDUCK
@@ -187,45 +186,42 @@ AlphabeticalPokedexOrder:
 	db REMORAID
 	db RHYDON
 	db RHYHORN
+	db RHYPERIOR
 	db SANDSHREW
 	db SANDSLASH
 	db SCIZOR
 	db SCYTHER
 	db SEADRA
-	db SEAKING
 	db SEEL
 	db SENTRET
 	db SHELLDER
-	db SHUCKLE
 	db SKARMORY
-	db SKIPLOOM
 	db SLOWBRO
 	db SLOWKING
 	db SLOWPOKE
 	db SLUGMA
 	db SMEARGLE
-	db SMOOCHUM
 	db SNEASEL
 	db SNORLAX
 	db SNUBBULL
-	db SPEAROW
 	db SPINARAK
 	db SQUIRTLE
-	db STANTLER
 	db STARMIE
 	db STARYU
 	db STEELIX
-	db SUBSTITUTEMON
 	db SUDOWOODO
 	db SUICUNE
 	db SUNFLORA
 	db SUNKERN
 	db SWINUB
+	db SYLVEON
 	db TANGELA
+	db TANGROWTH
 	db TAUROS
 	db TEDDIURSA
 	db TENTACOOL
 	db TENTACRUEL
+	db TOGEKISS
 	db TOGEPI
 	db TOGETIC
 	db TOTODILE
@@ -244,6 +240,7 @@ AlphabeticalPokedexOrder:
 	db VOLTORB
 	db VULPIX
 	db WARTORTLE
+	db WEAVILE
 	db WEEDLE
 	db WEEPINBELL
 	db WEEZING
@@ -252,5 +249,6 @@ AlphabeticalPokedexOrder:
 	db WOOPER
 	db XATU
 	db YANMA
+	db YANMEGA
 	db ZAPDOS
 	db ZUBAT

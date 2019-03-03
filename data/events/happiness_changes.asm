@@ -1,5 +1,4 @@
 HappinessChanges:
-; entries correspond to HAPPINESS_* constants
 ; change if happiness < 100, change if happiness < 200, change otherwise
 	db  +5,  +3,  +2 ; Gained a level
 	db  +5,  +3,  +2 ; Vitamin
@@ -20,3 +19,5 @@ HappinessChanges:
 	db -15, -15, -20 ; Used Revival Herb (bitter)
 	db  +3,  +3,  +1 ; Grooming
 	db +10,  +6,  +4 ; Gained a level in the place where it was caught
+	db  +5,  +3,  +2 ; Took a photograph
+	db  +5,  +3,  +2 ; Received a blessing

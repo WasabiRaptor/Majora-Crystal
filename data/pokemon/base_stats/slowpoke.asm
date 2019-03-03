@@ -1,21 +1,23 @@
-	db SLOWPOKE ; 079
-
 	db  90,  65,  65,  15,  40,  40
-    evs  1,   0,   0,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db WATER, PSYCHIC ; type
+	db WATER, PSYCHIC
 	db 190 ; catch rate
 	db 99 ; base exp
-	db NO_ITEM, KINGS_ROCK ; items
-	db GENDER_F50 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/slowpoke/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_MONSTER, EGG_WATER_1 ; egg groups
+	db NO_ITEM ; item 1
+	db KINGS_ROCK ; item 2
+	dn FEMALE_50, 3 ; gender, step cycles to hatch
+	dn 5, 5 ; frontpic dimensions
+	db OBLIVIOUS ; ability 1
+	db OWN_TEMPO ; ability 2
+	db REGENERATOR ; hidden ability
+	db MEDIUM_FAST ; growth rate
+	dn MONSTER, AMPHIBIAN ; egg groups
 
-	; tm/hm learnset
-	tmhm HEADBUTT, CURSE, TOXIC, ZAP_CANNON, PSYCH_UP, HIDDEN_POWER, SUNNY_DAY, SNORE, BLIZZARD, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, IRON_TAIL, EARTHQUAKE, RETURN, DIG, PSYCHIC_M, SHADOW_BALL, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, FIRE_BLAST, SWIFT, DREAM_EATER, REST, ATTRACT, NIGHTMARE, SURF, STRENGTH, FLASH, FLAMETHROWER, ICE_BEAM
+	; ev_yield
+	ev_yield   1,   0,   0,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, CALM_MIND, TOXIC, HAIL, HIDDEN_POWER, SUNNY_DAY, ICE_BEAM, BLIZZARD, LIGHT_SCREEN, PROTECT, RAIN_DANCE, SAFEGUARD, BULLDOZE, IRON_TAIL, EARTHQUAKE, RETURN, DIG, PSYCHIC, SHADOW_BALL, DOUBLE_TEAM, FLAMETHROWER, FIRE_BLAST, SWIFT, SUBSTITUTE, FACADE, REST, ATTRACT, SCALD, ENDURE, WATER_PULSE, FLASH, THUNDER_WAVE, SURF, STRENGTH, WHIRLPOOL, AQUA_TAIL, BODY_SLAM, DOUBLE_EDGE, DREAM_EATER, HEADBUTT, ICY_WIND, PAY_DAY, SKILL_SWAP, SLEEP_TALK, SWAGGER, TRICK, ZAP_CANNON, ZEN_HEADBUTT
 	; end

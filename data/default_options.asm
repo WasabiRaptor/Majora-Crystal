@@ -1,18 +1,12 @@
 DefaultOptions:
-; wOptions: med text speed
-	db TEXT_DELAY_MED
-; wSaveFileExists: no
-	db FALSE
-; wTextBoxFrame: frame 1
-	db FRAME_1
-; wTextBoxFlags: use text speed
-	db 1 << FAST_TEXT_DELAY_F
-; wGBPrinter: normal brightness
-	db GBPRINTER_NORMAL
-; wOptions2: menu account on
-	db 1 << MENU_ACCOUNT
-; Clock format: 12 hours
-	db 0 << CLOCK_FORMAT
-
-	db $00
-	db $00
+	db %11000001 ; Options1: fast text speed, stereo sound, battle scene on
+	db $00       ; wSaveFileExists: no
+	db $00       ; TextBoxFrame: frame 0
+	db $01       ; TextBoxFlags: ?
+	db $0        ; ???
+	db %00000000 ; Options2: default typeface, running shoes off, 12-hour clock,
+	             ;           imperial units, battle style set
+	db %00000111 ; InitialOptions: natures on, abilities on, color variation on,
+	             ;                 perfect IVs off, traded as OT off,
+	             ;                 nuzlocke mode off
+	db $0        ; ???

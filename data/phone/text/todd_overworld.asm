@@ -1,8 +1,8 @@
 ToddAskNumber1Text:
 	text "From here, I can"
-	line "see GOLDENROD's"
+	line "see Goldenrod's"
 
-	para "DEPT.STORE. They"
+	para "Dept.Store. They"
 	line "have bargain sales"
 
 	para "up on the rooftop"
@@ -24,8 +24,8 @@ ToddAskNumber2Text:
 	done
 
 ToddNumberAcceptedText:
-	text "I check GOLDENROD"
-	line "DEPT.STORE every"
+	text "I check Goldenrod"
+	line "Dept.Store every"
 
 	para "day, so I know"
 	line "when there's a"
@@ -54,15 +54,5 @@ ToddRematchText:
 	line "I even cut back my"
 
 	para "shopping to raise"
-	line "my #MON better!"
-	done
-
-UnusedText_0xa43ca:
-; This is unused; Todd says this during the department store sale,
-; but this is a duplicate of the actual string in the Route 34 scripts.
-	text "Shopping under the"
-	line "sky!"
-
-	para "It feels so nice"
-	line "up on a rooftop."
+	line "my #mon better!"
 	done

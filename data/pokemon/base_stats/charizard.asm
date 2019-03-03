@@ -1,21 +1,31 @@
-	db CHARIZARD ; 006
-
 	db  78,  84,  78, 100, 109,  85
-    evs  0,   0,   0,   0,   3,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db FIRE, FLYING ; type
+if DEF(FAITHFUL)
+	db FIRE, FLYING
+else
+	db FIRE, DRAGON
+endc
 	db 45 ; catch rate
 	db 209 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F12_5 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/charizard/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_MONSTER, EGG_DRAGON ; egg groups
+	db NO_ITEM ; item 1
+	db NO_ITEM ; item 2
+	dn FEMALE_12_5, 3 ; gender, step cycles to hatch
+	dn 7, 7 ; frontpic dimensions
+	db BLAZE ; ability 1
+if DEF(FAITHFUL)
+	db BLAZE ; ability 2
+else
+	db LEVITATE ; ability 2
+endc
+	db SOLAR_POWER ; hidden ability
+	db MEDIUM_SLOW ; growth rate
+	dn MONSTER, REPTILE ; egg groups
 
-	; tm/hm learnset
-	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, ROAR, TOXIC, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, ENDURE, FRUSTRATION, IRON_TAIL, DRAGONBREATH, EARTHQUAKE, RETURN, DIG, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SANDSTORM, FIRE_BLAST, SWIFT, DEFENSE_CURL, REST, ATTRACT, STEEL_WING, FIRE_PUNCH, FURY_CUTTER, CUT, FLY, STRENGTH, FLAMETHROWER
+	; ev_yield
+	ev_yield   0,   0,   0,   0,   3,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm DYNAMICPUNCH, DRAGON_CLAW, CURSE, ROAR, TOXIC, HIDDEN_POWER, SUNNY_DAY, HONE_CLAWS, HYPER_BEAM, PROTECT, BULLDOZE, SOLAR_BEAM, IRON_TAIL, EARTHQUAKE, RETURN, DIG, ROOST, DOUBLE_TEAM, FLAMETHROWER, SANDSTORM, FIRE_BLAST, SWIFT, AERIAL_ACE, SUBSTITUTE, FACADE, REST, ATTRACT, STEEL_WING, ROCK_SLIDE, ROCK_SMASH, FOCUS_BLAST, ENDURE, DRAGON_PULSE, WILL_O_WISP, SHADOW_CLAW, GIGA_IMPACT, SWORDS_DANCE, CUT, FLY, STRENGTH, BODY_SLAM, COUNTER, DEFENSE_CURL, DOUBLE_EDGE, FIRE_PUNCH, HEADBUTT, SEISMIC_TOSS, SLEEP_TALK, SWAGGER, THUNDERPUNCH
 	; end

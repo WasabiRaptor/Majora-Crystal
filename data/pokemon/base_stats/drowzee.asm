@@ -1,21 +1,23 @@
-	db DROWZEE ; 096
-
 	db  60,  48,  45,  42,  43,  90
-    evs  0,   0,   0,   0,   0,   1
 	;   hp  atk  def  spd  sat  sdf
 
-	db PSYCHIC, PSYCHIC ; type
+	db PSYCHIC, PSYCHIC
 	db 190 ; catch rate
 	db 102 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F50 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/drowzee/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
+	db NO_ITEM ; item 1
+	db NO_ITEM ; item 2
+	dn FEMALE_50, 3 ; gender, step cycles to hatch
+	dn 6, 6 ; frontpic dimensions
+	db INSOMNIA ; ability 1
+	db FOREWARN ; ability 2
+	db INNER_FOCUS ; hidden ability
+	db MEDIUM_FAST ; growth rate
+	dn HUMANSHAPE, HUMANSHAPE ; egg groups
 
-	; tm/hm learnset
-	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, TOXIC, ZAP_CANNON, PSYCH_UP, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, RETURN, PSYCHIC_M, SHADOW_BALL, DOUBLE_TEAM, ICE_PUNCH, SWAGGER, SLEEP_TALK, THUNDERPUNCH, DREAM_EATER, REST, ATTRACT, FIRE_PUNCH, NIGHTMARE, FLASH
+	; ev_yield
+	ev_yield   0,   0,   0,   0,   0,   1
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm DYNAMICPUNCH, CURSE, CALM_MIND, TOXIC, HIDDEN_POWER, SUNNY_DAY, LIGHT_SCREEN, PROTECT, RAIN_DANCE, SAFEGUARD, RETURN, PSYCHIC, SHADOW_BALL, DOUBLE_TEAM, REFLECT, SUBSTITUTE, FACADE, REST, ATTRACT, THIEF, DAZZLINGLEAM, ROCK_SMASH, ENDURE, DRAIN_PUNCH, FLASH, THUNDER_WAVE, BODY_SLAM, COUNTER, DOUBLE_EDGE, DREAM_EATER, FIRE_PUNCH, HEADBUTT, ICE_PUNCH, SEISMIC_TOSS, SKILL_SWAP, SLEEP_TALK, SWAGGER, THUNDERPUNCH, TRICK, ZAP_CANNON, ZEN_HEADBUTT
 	; end

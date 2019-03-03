@@ -1,41 +1,8 @@
-; person constants
+; script vars
 PLAYER      EQU  0
 LAST_TALKED EQU -2
 
-; memory constants
-	const_def
-	const MEM_BUFFER_0 ; use wStringBuffer3
-	const MEM_BUFFER_1 ; use wStringBuffer4
-	const MEM_BUFFER_2 ; use wStringBuffer5
-NUM_MEM_BUFFERS EQU const_value
 
-; checkmoney/takemoney accounts
-	const_def
-	const YOUR_MONEY ; 0
-	const MOMS_MONEY ; 1
-
-; checkmoney/checkcoins return values
-	const_def
-	const HAVE_MORE   ; 0
-	const HAVE_AMOUNT ; 1
-	const HAVE_LESS   ; 2
-
-; checkpokemail return values
-	const_def
-	const POKEMAIL_WRONG_MAIL ; 0
-	const POKEMAIL_CORRECT    ; 1
-	const POKEMAIL_REFUSED    ; 2
-	const POKEMAIL_NO_MAIL    ; 3
-	const POKEMAIL_LAST_MON   ; 4
-
-; askforphonenumber return values
-	const_def
-	const PHONE_CONTACT_GOT     ; 0
-	const PHONE_CONTACTS_FULL   ; 1
-	const PHONE_CONTACT_REFUSED ; 2
-
-; writecode/checkcode arguments
-; _GetVarAction.VarActionTable indexes (see engine/overworld/variables.asm)
 	const_def
 	const VAR_STRINGBUFFER2    ; 00
 	const VAR_PARTYCOUNT       ; 01
@@ -64,14 +31,17 @@ NUM_MEM_BUFFERS EQU const_value
 	const VAR_BLUECARDBALANCE  ; 18
 	const VAR_BUENASPASSWORD   ; 19
 	const VAR_KENJI_BREAK      ; 1a
-NUM_VARS EQU const_value       ; 1b
+	const VAR_BATTLEPOINTS     ; 1b
+	const VAR_PKMN_JOURNALS    ; 1c
+	const VAR_TRAINER_STARS    ; 1d
+NUM_VARS EQU const_value       ; 1e
 
-; variable action types
 RETVAR_STRBUF2 EQU (0 << 6)
 RETVAR_ADDR_DE EQU (1 << 6)
 RETVAR_EXECUTE EQU (2 << 6)
 
-; PlayerEventScriptPointers indexes (see engine/overworld/events.asm)
+
+; see engine/events.asm:PlayerEventScriptPointers
 	const_def -1
 	const PLAYEREVENT_MAPSCRIPT
 	const PLAYEREVENT_NONE
@@ -84,72 +54,65 @@ RETVAR_EXECUTE EQU (2 << 6)
 	const PLAYEREVENT_WHITEOUT
 	const PLAYEREVENT_HATCH
 	const PLAYEREVENT_JOYCHANGEFACING
+	const PLAYEREVENT_TMHMBALL
 NUM_PLAYER_EVENTS EQU const_value
 
-; bg_event types
-; TryBGEvent arguments (see engine/overworld/events.asm)
-	const_def
-	const BGEVENT_READ
-	const BGEVENT_UP
-	const BGEVENT_DOWN
-	const BGEVENT_RIGHT
-	const BGEVENT_LEFT
-	const BGEVENT_IFSET
-	const BGEVENT_IFNOTSET
-	const BGEVENT_ITEM
-	const BGEVENT_COPY
 
-; object_event types
-; TryObjectEvent arguments (see engine/overworld/events.asm)
+; see engine/events.asm:TryReadSign.signs
 	const_def
-	const OBJECTTYPE_SCRIPT
-	const OBJECTTYPE_ITEMBALL
-	const OBJECTTYPE_TRAINER
-	const OBJECTTYPE_3
-	const OBJECTTYPE_4
-	const OBJECTTYPE_5
-	const OBJECTTYPE_6
+	const SIGNPOST_READ
+	const SIGNPOST_UP
+	const SIGNPOST_DOWN
+	const SIGNPOST_RIGHT
+	const SIGNPOST_LEFT
+	const SIGNPOST_IFSET
+	const SIGNPOST_IFNOTSET
+	const SIGNPOST_JUMPTEXT
+	const SIGNPOST_JUMPSTD
+	const SIGNPOST_GROTTOITEM
+; SIGNPOST_ITEM has to be the last signpost type, since hidden item signposts
+; use type SIGNPOST_ITEM + (item id) to save space.
+; Note that this requires SIGNPOST_ITEM + (item id) <= $ff, so currently most
+; of the mail items cannot be hidden.
+SIGNPOST_ITEM EQU const_value
 
-; command queue members
-CMDQUEUE_TYPE  EQU 0
-CMDQUEUE_ADDR  EQU 1
-CMDQUEUE_03    EQU 3
-CMDQUEUE_04    EQU 4
-CMDQUEUE_05    EQU 5
+; see engine/events.asm:TryObjectEvent.pointers
+	const_def
+	const PERSONTYPE_SCRIPT         ; 0
+	const PERSONTYPE_POKEBALL       ; 1
+	const PERSONTYPE_TRAINER        ; 2
+	const PERSONTYPE_GENERICTRAINER ; 3
+	const PERSONTYPE_POKEMON        ; 4
+	const PERSONTYPE_COMMAND        ; 5
+NUM_PERSONTYPES EQU const_value
+
+
 CMDQUEUE_ENTRY_SIZE EQU 6
 CMDQUEUE_CAPACITY EQU 4
+CMDQUEUE_ADDR EQU 1 ; offsets 0, 3, 4, and 5 are unused
+CMDQUEUE_STONETABLE EQU 2 ; types 0, 1, 3, and 4 are unused
 
-; HandleQueuedCommand.Jumptable indexes (see engine/overworld/events.asm)
+
+; elevator floors
 	const_def
-	const CMDQUEUE_NULL
-	const CMDQUEUE_NULL2
-	const CMDQUEUE_STONETABLE
-	const CMDQUEUE_TYPE3
-	const CMDQUEUE_TYPE4
-NUM_CMDQUEUE_TYPES EQU const_value
+	const _B4F
+	const _B3F
+	const _B2F
+	const _B1F
+	const _1F
+	const _2F
+	const _3F
+	const _4F
+	const _5F
+	const _6F
+	const _7F
+	const _8F
+	const _9F
+	const _10F
+	const _11F
+	const _ROOF
 
-; elevfloor macro values
-; ElevatorFloorNames indexes (see data/events/elevator_floors.asm)
-	const_def
-	const FLOOR_B4F
-	const FLOOR_B3F
-	const FLOOR_B2F
-	const FLOOR_B1F
-	const FLOOR_1F
-	const FLOOR_2F
-	const FLOOR_3F
-	const FLOOR_4F
-	const FLOOR_5F
-	const FLOOR_6F
-	const FLOOR_7F
-	const FLOOR_8F
-	const FLOOR_9F
-	const FLOOR_10F
-	const FLOOR_11F
-	const FLOOR_ROOF
-
-; showemote arguments
-; Emotes indexes (see data/sprites/emotes.asm)
+; see engine/overworld.asm:EmotesPointers
 	const_def
 	const EMOTE_SHOCK ; 0
 	const EMOTE_QUESTION ; 1
@@ -162,52 +125,77 @@ NUM_CMDQUEUE_TYPES EQU const_value
 	const EMOTE_SHADOW ; 8
 	const EMOTE_ROD ; 9
 	const EMOTE_BOULDER_DUST ; 10
-	const EMOTE_GRASS_RUSTLE ; 11
+	const EMOTE_SHAKING_GRASS ; 11
+	const EMOTE_PUDDLE_SPLASH ; 12
 EMOTE_MEM EQU -1
 
-; fruittree arguments
-; FruitTreeItems indexes (see data/items/fruit_trees.asm)
+; fruit trees
+; see engine/events/fruit_trees.asm
 	const_def 1
-	const FRUITTREE_ROUTE_29      ; 01
-	const FRUITTREE_ROUTE_30_1    ; 02
-	const FRUITTREE_ROUTE_38      ; 03
-	const FRUITTREE_ROUTE_46_1    ; 04
-	const FRUITTREE_ROUTE_30_2    ; 05
-	const FRUITTREE_ROUTE_33      ; 06
-	const FRUITTREE_ROUTE_31      ; 07
-	const FRUITTREE_ROUTE_43      ; 08
-	const FRUITTREE_VIOLET_CITY   ; 09
-	const FRUITTREE_ROUTE_46_2    ; 0a
-	const FRUITTREE_ROUTE_35      ; 0b
-	const FRUITTREE_ROUTE_45      ; 0c
-	const FRUITTREE_ROUTE_36      ; 0d
-	const FRUITTREE_ROUTE_26      ; 0e
-	const FRUITTREE_ROUTE_39      ; 0f
-	const FRUITTREE_ROUTE_44      ; 10
-	const FRUITTREE_ROUTE_37_1    ; 11
-	const FRUITTREE_ROUTE_37_2    ; 12
-	const FRUITTREE_ROUTE_37_3    ; 13
-	const FRUITTREE_AZALEA_TOWN   ; 14
-	const FRUITTREE_ROUTE_42_1    ; 15
-	const FRUITTREE_ROUTE_42_2    ; 16
-	const FRUITTREE_ROUTE_42_3    ; 17
-	const FRUITTREE_ROUTE_11      ; 18
-	const FRUITTREE_ROUTE_2       ; 19
-	const FRUITTREE_ROUTE_1       ; 1a
-	const FRUITTREE_ROUTE_8       ; 1b
-	const FRUITTREE_PEWTER_CITY_1 ; 1c
-	const FRUITTREE_PEWTER_CITY_2 ; 1d
-	const FRUITTREE_FUCHSIA_CITY  ; 1e
-NUM_FRUIT_TREES EQU const_value + -1
+	const FRUITTREE_ROUTE_29        ; 01
+	const FRUITTREE_ROUTE_30_1      ; 02
+	const FRUITTREE_ROUTE_30_2      ; 03
+	const FRUITTREE_ROUTE_31        ; 04
+	const FRUITTREE_VIOLET_CITY     ; 05
+	const FRUITTREE_ROUTE_32_COAST  ; 06
+	const FRUITTREE_ROUTE_33        ; 07
+	const FRUITTREE_AZALEA_TOWN     ; 08
+	const FRUITTREE_ROUTE_35        ; 09
+	const FRUITTREE_ROUTE_36        ; 0a
+	const FRUITTREE_ROUTE_37_1      ; 0b
+	const FRUITTREE_ROUTE_37_2      ; 0c
+	const FRUITTREE_ROUTE_37_3      ; 0d
+	const FRUITTREE_ROUTE_38        ; 0e
+	const FRUITTREE_ROUTE_39        ; 0f
+	const FRUITTREE_ROUTE_42_1      ; 10
+	const FRUITTREE_ROUTE_42_2      ; 11
+	const FRUITTREE_ROUTE_42_3      ; 12
+	const FRUITTREE_ROUTE_43        ; 13
+	const FRUITTREE_ROUTE_44        ; 14
+	const FRUITTREE_ROUTE_45        ; 15
+	const FRUITTREE_ROUTE_46_1      ; 16
+	const FRUITTREE_ROUTE_46_2      ; 17
+	const FRUITTREE_ROUTE_27        ; 18
+	const FRUITTREE_ROUTE_26        ; 19
+	const FRUITTREE_ROUTE_8         ; 1a
+	const FRUITTREE_ROUTE_11        ; 1b
+	const FRUITTREE_FUCHSIA_CITY    ; 1c
+	const FRUITTREE_PEWTER_CITY_1   ; 1d
+	const FRUITTREE_PEWTER_CITY_2   ; 1e
+	const FRUITTREE_ROUTE_2         ; 1f
+	const FRUITTREE_ROUTE_1         ; 20
+	const FRUITTREE_LUCKY_ISLAND    ; 21
+	const FRUITTREE_SHAMOUTI_ISLAND ; 22
+	const FRUITTREE_ROUTE_49        ; 23
+NUM_FRUIT_TREES EQU const_value +- 1
 
-; describedecoration arguments
-; DescribeDecoration.JumpTable indexes (see engine/overworld/decorations.asm)
-	const_def
-	const DECODESC_POSTER     ; 0
-	const DECODESC_LEFT_DOLL  ; 1
-	const DECODESC_RIGHT_DOLL ; 2
-	const DECODESC_BIG_DOLL   ; 3
-	const DECODESC_CONSOLE    ; 4
+; hidden grottoes
+; see engine/hidden_grottoes.asm:HiddenGrottoData
+	const_def 1
+	const HIDDENGROTTO_ROUTE_32           ; 01
+	const HIDDENGROTTO_ILEX_FOREST        ; 02
+	const HIDDENGROTTO_ROUTE_35           ; 03
+	const HIDDENGROTTO_LAKE_OF_RAGE       ; 04
+	const HIDDENGROTTO_05                 ; 05
+	const HIDDENGROTTO_06                 ; 06
+	const HIDDENGROTTO_07                 ; 07
+	const HIDDENGROTTO_08                 ; 08
+	const HIDDENGROTTO_09                 ; 09
+	const HIDDENGROTTO_0A                 ; 0a
+	const HIDDENGROTTO_0B                 ; 0b
+	const HIDDENGROTTO_0C                 ; 0c
+	const HIDDENGROTTO_0D                 ; 0d
+	const HIDDENGROTTO_0E                 ; 0e
+	const HIDDENGROTTO_0F                 ; 0f
+	const HIDDENGROTTO_10                 ; 10
+	const HIDDENGROTTO_11                 ; 11
+	const HIDDENGROTTO_12                 ; 12
+	const HIDDENGROTTO_13                 ; 13
+	const HIDDENGROTTO_14                 ; 14
+	const HIDDENGROTTO_15                 ; 15
+	const HIDDENGROTTO_16                 ; 16
+	const HIDDENGROTTO_17                 ; 17
+NUM_HIDDEN_GROTTOES EQU const_value +- 1
 
 ; swarm arguments
 ; StoreSwarmMapIndices arguments
@@ -215,65 +203,20 @@ NUM_FRUIT_TREES EQU const_value + -1
 	const SWARM_DUNSPARCE ; 0
 	const SWARM_YANMA     ; 1
 
+
 ; ActivateFishingSwarm writebyte arguments
 	const_def
 	const FISHSWARM_NONE     ; 0
 	const FISHSWARM_QWILFISH ; 1
 	const FISHSWARM_REMORAID ; 2
 
-; SpecialGameboyCheck return values
+; paintings
 	const_def
-	const GBCHECK_GB  ; 0
-	const GBCHECK_SGB ; 1
-	const GBCHECK_CGB ; 2
-
-; CheckMagikarpLength return values
-	const_def
-	const MAGIKARPLENGTH_NOT_MAGIKARP ; 0
-	const MAGIKARPLENGTH_REFUSED      ; 1
-	const MAGIKARPLENGTH_TOO_SHORT    ; 2
-	const MAGIKARPLENGTH_BEAT_RECORD  ; 3
-
-; SpecialReturnShuckle return values
-	const_def
-	const SHUCKIE_WRONG_MON ; 0
-	const SHUCKIE_REFUSED   ; 1
-	const SHUCKIE_RETURNED  ; 2
-	const SHUCKIE_HAPPY     ; 3
-	const SHUCKIE_FAINTED   ; 4
-
-; CheckPartyFullAfterContest return values
-	const_def
-	const BUGCONTEST_CAUGHT_MON ; 0
-	const BUGCONTEST_BOXED_MON  ; 1
-	const BUGCONTEST_NO_CATCH   ; 2
-
-; HealMachineAnim writebyte arguments
-; HealMachineAnim.Pointers indexes (see engine/events/heal_machine_anim.asm)
-	const_def
-	const HEALMACHINE_POKECENTER   ; 0
-	const HEALMACHINE_ELMS_LAB     ; 1
-	const HEALMACHINE_HALL_OF_FAME ; 2
-
-; UnownPuzzle writebyte arguments
-; LoadUnownPuzzlePiecesGFX.LZPointers indexes (see engine/games/unown_puzzle.asm)
-	const_def
-	const UNOWNPUZZLE_KABUTO     ; 0
-	const UNOWNPUZZLE_OMANYTE    ; 1
-	const UNOWNPUZZLE_AERODACTYL ; 2
-	const UNOWNPUZZLE_HO_OH      ; 3
-NUM_UNOWN_PUZZLES EQU const_value
-
-; DisplayUnownWords writebyte arguments
-; UnownWalls and MenuHeaders_UnownWalls indexes (see data/events/unown_walls.asm)
-	const_def
-	const UNOWNWORDS_ESCAPE ; 0
-	const UNOWNWORDS_LIGHT  ; 1
-	const UNOWNWORDS_WATER  ; 2
-	const UNOWNWORDS_HO_OH  ; 3
-
-; MoveTutor writebyte arguments
-	const_def 1
-	const MOVETUTOR_FLAMETHROWER ; 1
-	const MOVETUTOR_THUNDERBOLT  ; 2
-	const MOVETUTOR_ICE_BEAM     ; 3
+	const HO_OH_PAINTING
+	const LUGIA_PAINTING
+	const BELL_TOWER_PAINTING
+	const KABUTO_PUZZLE
+	const OMANYTE_PUZZLE
+	const AERODACTYL_PUZZLE
+	const HO_OH_PUZZLE
+NUM_PAINTINGS EQU const_value

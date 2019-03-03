@@ -1,58 +1,53 @@
 TreeMons:
-; entries correspond to TREEMON_SET_* constants
-	dw TreeMonSet_City
-	dw TreeMonSet_Canyon
-	dw TreeMonSet_Town
-	dw TreeMonSet_Route
-	dw TreeMonSet_Kanto
-	dw TreeMonSet_Lake
-	dw TreeMonSet_Forest
-	dw TreeMonSet_Rock
-	dw TreeMonSet_City
+	dw TreeMons1
+	dw TreeMons1
+	dw TreeMons2
+	dw TreeMons3
+	dw TreeMons4
+	dw TreeMons5
+	dw TreeMons6
+	dw RockMons
+	dw TreeMons1
 
-; Two tables each (common, rare).
+; Two tables each (normal, rare).
 ; Structure:
 ;	db  %, species, level
 
-TreeMonSet_City:
-TreeMonSet_Canyon:
-; common
-	db 50, SPEAROW,    10
-	db 15, SPEAROW,    10
-	db 15, SPEAROW,    10
-	db 10, AIPOM,      10
-	db  5, AIPOM,      10
-	db  5, AIPOM,      10
+TreeMons1:
+	db 50, PIDGEY,     10
+	db 15, PIDGEY,     10
+	db 15, PIDGEY,     10
+	db 10, PIDGEY,     10
+	db  5, MEOWTH,     10
+	db  5, MEOWTH,     10
 	db -1
-; rare
-	db 50, SPEAROW,    10
+	; rare
+	db 50, PIDGEY,     10
 	db 15, HERACROSS,  10
 	db 15, HERACROSS,  10
-	db 10, AIPOM,      10
-	db  5, AIPOM,      10
-	db  5, AIPOM,      10
+	db 10, PIDGEY,     10
+	db  5, MEOWTH,     10
+	db  5, MEOWTH,     10
 	db -1
 
-TreeMonSet_Town:
-; common
-	db 50, SPEAROW,    10
+TreeMons2:
+	db 50, PIDGEY,     10
 	db 15, EKANS,      10
-	db 15, SPEAROW,    10
-	db 10, AIPOM,      10
-	db  5, AIPOM,      10
-	db  5, AIPOM,      10
+	db 15, EKANS,      10
+	db 10, PIDGEY,     10
+	db  5, MEOWTH,     10
+	db  5, MEOWTH,     10
 	db -1
-; rare
-	db 50, SPEAROW,    10
+	; rare
+	db 50, PIDGEY,     10
 	db 15, HERACROSS,  10
 	db 15, HERACROSS,  10
-	db 10, AIPOM,      10
-	db  5, AIPOM,      10
-	db  5, AIPOM,      10
+	db 10, PIDGEY,     10
+	db  5, MEOWTH,     10
+	db  5, MEOWTH,     10
 	db -1
 
-TreeMonSet_Route:
-; common
+TreeMons3:
 	db 50, HOOTHOOT,   10
 	db 15, SPINARAK,   10
 	db 15, LEDYBA,     10
@@ -60,17 +55,16 @@ TreeMonSet_Route:
 	db  5, EXEGGCUTE,  10
 	db  5, EXEGGCUTE,  10
 	db -1
-; rare
-	db 50, HOOTHOOT,   10
-	db 15, PINECO,     10
-	db 15, PINECO,     10
+	; rare
+	db 40, MURKROW,    10
+	db 20, PINECO,     10
+	db 20, PINECO,     10
 	db 10, EXEGGCUTE,  10
 	db  5, EXEGGCUTE,  10
 	db  5, EXEGGCUTE,  10
 	db -1
 
-TreeMonSet_Kanto:
-; common
+TreeMons4:
 	db 50, HOOTHOOT,   10
 	db 15, EKANS,      10
 	db 15, HOOTHOOT,   10
@@ -78,17 +72,16 @@ TreeMonSet_Kanto:
 	db  5, EXEGGCUTE,  10
 	db  5, EXEGGCUTE,  10
 	db -1
-; rare
-	db 50, HOOTHOOT,   10
-	db 15, PINECO,     10
-	db 15, PINECO,     10
+	; rare
+	db 40, MURKROW,    10
+	db 20, PINECO,     10
+	db 20, PINECO,     10
 	db 10, EXEGGCUTE,  10
 	db  5, EXEGGCUTE,  10
 	db  5, EXEGGCUTE,  10
 	db -1
 
-TreeMonSet_Lake:
-; common
+TreeMons5:
 	db 50, HOOTHOOT,   10
 	db 15, VENONAT,    10
 	db 15, HOOTHOOT,   10
@@ -96,7 +89,7 @@ TreeMonSet_Lake:
 	db  5, EXEGGCUTE,  10
 	db  5, EXEGGCUTE,  10
 	db -1
-; rare
+	; rare
 	db 50, HOOTHOOT,   10
 	db 15, PINECO,     10
 	db 15, PINECO,     10
@@ -105,8 +98,7 @@ TreeMonSet_Lake:
 	db  5, EXEGGCUTE,  10
 	db -1
 
-TreeMonSet_Forest:
-; common
+TreeMons6:
 	db 50, HOOTHOOT,   10
 	db 15, PINECO,     10
 	db 15, PINECO,     10
@@ -114,7 +106,7 @@ TreeMonSet_Forest:
 	db  5, BUTTERFREE, 10
 	db  5, BEEDRILL,   10
 	db -1
-; rare
+	; rare
 	db 50, HOOTHOOT,   10
 	db 15, CATERPIE,   10
 	db 15, WEEDLE,     10
@@ -123,7 +115,7 @@ TreeMonSet_Forest:
 	db  5, KAKUNA,     10
 	db -1
 
-TreeMonSet_Rock:
-	db 90, KRABBY,     15
-	db 10, SHUCKLE,    15
+RockMons:
+	db 70, KRABBY,     15
+	db 30, GEODUDE,    15
 	db -1

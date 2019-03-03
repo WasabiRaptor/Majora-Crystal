@@ -1,4 +1,4 @@
-CheckMagikarpLength:
+Special_CheckMagikarpLength: ; fbb32
 	; Returns 3 if you select a Magikarp that beats the previous record.
 	; Returns 2 if you select a Magikarp, but the current record is longer.
 	; Returns 1 if you press B in the Pokemon selection menu.
@@ -15,7 +15,7 @@ CheckMagikarpLength:
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMon1Species
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	push hl
 	ld bc, MON_DVS
 	add hl, bc
@@ -32,15 +32,15 @@ CheckMagikarpLength:
 	call PrintText
 
 	; Did we beat the record?
-	ld hl, wMagikarpLength
-	ld de, wBestMagikarpLengthFeet
+	ld hl, wMagikarpLengthMm
+	ld de, wBestMagikarpLengthMm
 	ld c, 2
-	call CompareBytes
+	call StringCmp
 	jr nc, .not_long_enough
 
 	; NEW RECORD!!! Let's save that.
-	ld hl, wMagikarpLength
-	ld de, wBestMagikarpLengthFeet
+	ld hl, wMagikarpLengthMm
+	ld de, wBestMagikarpLengthMm
 	ld a, [hli]
 	ld [de], a
 	inc de
@@ -50,48 +50,129 @@ CheckMagikarpLength:
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMonOT
 	call SkipNames
-	call CopyBytes
-	ld a, MAGIKARPLENGTH_BEAT_RECORD
+	rst CopyBytes
+	ld a, 3
 	ld [wScriptVar], a
 	ret
 
 .not_long_enough
-	ld a, MAGIKARPLENGTH_TOO_SHORT
+	ld a, 2
 	ld [wScriptVar], a
 	ret
 
 .declined
-	ld a, MAGIKARPLENGTH_REFUSED
+	ld a, 1
 	ld [wScriptVar], a
 	ret
 
 .not_magikarp
-	xor a ; MAGIKARPLENGTH_NOT_MAGIKARP
+	xor a
 	ld [wScriptVar], a
 	ret
+; fbba9
 
-.MeasureItText:
+.MeasureItText: ; 0xfbba9
 	; Let me measure that MAGIKARP. …Hm, it measures @ .
 	text_jump UnknownText_0x1c1203
 	db "@"
+; 0xfbbae
 
-PrintMagikarpLength:
+PrintMagikarpLength: ; fbbdb
+	ld a, [wOptions2]
+	bit POKEDEX_UNITS, a
+	jr z, .imperial
 	ld hl, wStringBuffer1
-	ld de, wMagikarpLength
-	lb bc, PRINTNUM_RIGHTALIGN | 1, 2
+	ld de, wMagikarpLengthMm
+	lb bc, PRINTNUM_LEFTALIGN | 2, 4
+	call PrintNum
+	dec hl
+	ld a, [hl]
+	ld [hl], "."
+	inc hl
+	ld [hl], a
+	inc hl
+	ld [hl], "c"
+	inc hl
+	ld [hl], "m"
+	inc hl
+	ld [hl], "@"
+	ret
+
+.imperial
+	ld a, [wMagikarpLengthMmHi]
+	ld b, a
+	ld a, [wMagikarpLengthMmLo]
+	ld c, a
+	ld de, 2580 ; (1/25.4) << 16
+	xor a
+	ld [hTmpd], a
+	ld [hTmpe], a
+	ld hl, 0
+	ld a, 16
+	ld [hProduct], a
+.loop
+	sla l
+	rl h
+	ld a, [hTmpe]
+	rla
+	ld [hTmpe], a
+	ld a, [hTmpd]
+	rla
+	ld [hTmpd], a
+	sla e
+	rl d
+	jr nc, .noadd
+	add hl, bc
+	ld a, [hTmpe]
+	adc 0
+	ld [hTmpe], a
+	ld a, [hTmpd]
+	adc 0
+	ld [hTmpd], a
+.noadd
+	ld a, [hProduct]
+	dec a
+	ld [hProduct], a
+	jr nz, .loop
+	ld a, [hTmpd]
+	ld h, a
+	ld a, [hTmpe]
+	ld l, a
+	ld bc, -12
+	ld e, 0
+.inchloop
+	ld a, h
+	and a
+	jr nz, .inchloop2
+	ld a, l
+	cp 12
+	jr c, .inchdone
+.inchloop2
+	add hl, bc
+	inc e
+	jr .inchloop
+.inchdone
+	ld a, e
+	ld [wMagikarpLengthMmHi], a
+	ld a, l
+	ld [wMagikarpLengthMmLo], a
+	ld hl, wStringBuffer1
+	ld de, wMagikarpLengthMmHi
+	lb bc, PRINTNUM_LEFTALIGN | 1, 2
 	call PrintNum
 	ld [hl], "′"
 	inc hl
-	ld de, wMagikarpLength + 1
-	lb bc, PRINTNUM_RIGHTALIGN | 1, 2
+	ld de, wMagikarpLengthMmLo
+	lb bc, PRINTNUM_LEFTALIGN | 1, 2
 	call PrintNum
 	ld [hl], "″"
 	inc hl
 	ld [hl], "@"
 	ret
+; fbbfc
 
-CalcMagikarpLength:
-; Return Magikarp's length (in feet and inches) at wMagikarpLength (big endian).
+CalcMagikarpLength: ; fbbfc
+; Return Magikarp's length (in mm) at wMagikarpLengthMm (big endian).
 ;
 ; input:
 ;   de: wEnemyMonDVs
@@ -108,9 +189,9 @@ CalcMagikarpLength:
 
 ; bc = rrc(dv[0]) ++ rrc(dv[1]) ^ rrc(id)
 
-; if bc < 10:    [wMagikarpLength] = c + 190
-; if bc ≥ $ff00: [wMagikarpLength] = c + 1370
-; else:          [wMagikarpLength] = z * 100 + (bc - x) / y
+; if bc < 10:    [wMagikarpLengthMm] = c + 190
+; if bc ≥ $ff00: [wMagikarpLengthMm] = c + 1370
+; else:          [wMagikarpLengthMm] = z × 100 + (bc − x) / y
 
 ; X, Y, and Z depend on the value of b as follows:
 
@@ -126,6 +207,7 @@ CalcMagikarpLength:
 ; if b = 244-251:  x = 64710,  y =  20,  z = 12
 ; if b = 252-253:  x = 65210,  y =   5,  z = 13
 ; if b = 254:      x = 65410,  y =   2,  z = 14
+
 
 	; bc = rrc(dv[0]) ++ rrc(dv[1]) ^ rrc(id)
 
@@ -173,7 +255,7 @@ CalcMagikarpLength:
 
 	ld hl, MagikarpLengths
 	ld a, 2
-	ld [wTempByteValue], a
+	ld [wd265], a
 
 .read
 	ld a, [hli]
@@ -186,39 +268,39 @@ CalcMagikarpLength:
 	; c = (bc - de) / [hl]
 	call .BCMinusDE
 	ld a, b
-	ldh [hDividend + 0], a
+	ld [hDividend + 0], a
 	ld a, c
-	ldh [hDividend + 1], a
+	ld [hDividend + 1], a
 	ld a, [hl]
-	ldh [hDivisor], a
+	ld [hDivisor], a
 	ld b, 2
 	call Divide
-	ldh a, [hQuotient + 3]
+	ld a, [hQuotient + 2]
 	ld c, a
 
 	; de = c + 100 × (2 + i)
 	xor a
-	ldh [hMultiplicand + 0], a
-	ldh [hMultiplicand + 1], a
+	ld [hMultiplicand + 0], a
+	ld [hMultiplicand + 1], a
 	ld a, 100
-	ldh [hMultiplicand + 2], a
-	ld a, [wTempByteValue]
-	ldh [hMultiplier], a
+	ld [hMultiplicand + 2], a
+	ld a, [wd265]
+	ld [hMultiplier], a
 	call Multiply
 	ld b, 0
-	ldh a, [hProduct + 3]
+	ld a, [hProduct + 3]
 	add c
 	ld e, a
-	ldh a, [hProduct + 2]
+	ld a, [hProduct + 2]
 	adc b
 	ld d, a
 	jr .done
 
 .next
 	inc hl ; align to next triplet
-	ld a, [wTempByteValue]
+	ld a, [wd265]
 	inc a
-	ld [wTempByteValue], a
+	ld [wd265], a
 	cp 16
 	jr c, .read
 
@@ -229,53 +311,53 @@ CalcMagikarpLength:
 	ld e, l
 
 .done
-	; convert from mm to feet and inches
-	; in = mm / 25.4
-	; ft = in / 12
 
-	; hl = de × 10
-	ld h, d
-	ld l, e
-	add hl, hl
-	add hl, hl
-	add hl, de
-	add hl, hl
+;	; hl = de × 10
+;	ld h, d
+;	ld l, e
+;rept 2
+;	add hl, hl
+;endr
+;	add hl, de
+;	add hl, hl
+;
+;	; hl = hl / 254
+;	ld de, -254
+;	ld a, -1
+;.div_254
+;	inc a
+;	add hl, de
+;	jr c, .div_254
+;
+;	; d, e = hl / 12, hl % 12
+;	ld d, 0
+;.mod_12
+;	cp 12
+;	jr c, .ok
+;	sub 12
+;	inc d
+;	jr .mod_12
+;.ok
+;	ld e, a
 
-	; hl = hl / 254
-	ld de, -254
-	ld a, -1
-.div_254
-	inc a
-	add hl, de
-	jr c, .div_254
-
-	; d, e = hl / 12, hl % 12
-	ld d, 0
-.mod_12
-	cp 12
-	jr c, .ok
-	sub 12
-	inc d
-	jr .mod_12
-.ok
-	ld e, a
-
-	ld hl, wMagikarpLength
-	ld [hl], d ; ft
+	ld hl, wMagikarpLengthMm
+	ld [hl], d
 	inc hl
-	ld [hl], e ; in
+	ld [hl], e
 	ret
+; fbc9a
 
-.BCLessThanDE:
-; Intention: Return bc < de.
+.BCLessThanDE: ; fbc9a
+; return bc < de
 	ld a, b
 	cp d
 	ret c
 	ld a, c
 	cp e
 	ret
+; fbca1
 
-.BCMinusDE:
+.BCMinusDE: ; fbca1
 ; bc -= de
 	ld a, c
 	sub e
@@ -284,20 +366,23 @@ CalcMagikarpLength:
 	sbc d
 	ld b, a
 	ret
+; fbca8
 
 INCLUDE "data/events/magikarp_lengths.asm"
 
-MagikarpHouseSign:
-	ld a, [wBestMagikarpLengthFeet]
-	ld [wMagikarpLength], a
-	ld a, [wBestMagikarpLengthInches]
-	ld [wMagikarpLength + 1], a
+
+Special_MagikarpHouseSign: ; fbcd2
+	ld a, [wBestMagikarpLengthMmHi]
+	ld [wMagikarpLengthMmHi], a
+	ld a, [wBestMagikarpLengthMmLo]
+	ld [wMagikarpLengthMmLo], a
 	call PrintMagikarpLength
 	ld hl, .CurrentRecordtext
-	call PrintText
-	ret
+	jp PrintText
+; fbce8
 
-.CurrentRecordtext:
+.CurrentRecordtext: ; 0xfbce8
 	; "CURRENT RECORD"
 	text_jump UnknownText_0x1c123a
 	db "@"
+; 0xfbced

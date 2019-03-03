@@ -4,34 +4,63 @@ SECTION "rst0", ROM0
 	di
 	jp Start
 
-SECTION "rst8", ROM0 ; rst FarCall
-	jp FarCall_hl
+DisappearUser::
+	farjp _DisappearUser
 
-SECTION "rst10", ROM0 ; rst Bankswitch
-	ldh [hROMBank], a
-	ld [MBC5RomBank], a
+SECTION "rst8", ROM0
+	jp RstFarCall
+
+IsAPokemon::
+; Return carry if species a is not a Pokemon.
+; Since every ID other than $0 and $ff is valid, we can simplify this function.
+	inc a
+	cp $2 ; sets carry for $0 (inc'ed to $1) and $ff (inc'ed to $0)
+	dec a
+	ret
+
+SECTION "rst10", ROM0
+	ld [hROMBank], a
+	ld [MBC3RomBank], a
 	ret
 
 SECTION "rst18", ROM0
-	rst $38
+	jp _AddNTimes
+
+_de_::
+	push de
+	ret
+
+FarCopyWRAM::
+	call StackCallInWRAMBankA
 
 SECTION "rst20", ROM0
-	rst $38
+	jp _CopyBytes
 
-SECTION "rst28", ROM0 ; rst JumpTable
-	push de
-	ld e, a
-	ld d, 0
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	pop de
+BattleRandom::
+; Handles all RNG calls in the battle engine, allowing
+; link battles to remain in sync using a shared PRNG.
+	farjp _BattleRandom
+
+_hl_::
 	jp hl
 
-; SECTION "rst30", ROM0
-; rst30 is midst rst28
+SECTION "rst28", ROM0
+	jp _Jumptable
+
+DoItemEffect::
+	farjp _DoItemEffect
+
+SECTION "rst30", ROM0
+	jp _Predef
+
+PushWindow::
+	farjp _PushWindow
 
 SECTION "rst38", ROM0
 	rst $38
+
+ExitMenu::
+	push af
+	farcall _ExitMenu
+	pop af
+	ret

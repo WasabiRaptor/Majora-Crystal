@@ -1,21 +1,23 @@
-	db UNOWN ; 201
-
 	db  48,  72,  48,  48,  72,  48
-    evs  0,   1,   0,   0,   1,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db PSYCHIC, PSYCHIC ; type
+	db PSYCHIC, PSYCHIC
 	db 225 ; catch rate
 	db 61 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_UNKNOWN ; gender ratio
-	db 40 ; step cycles to hatch
-	INCBIN "gfx/pokemon/unown_a/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_NONE, EGG_NONE ; egg groups
+	db NO_ITEM ; item 1
+	db NO_ITEM ; item 2
+	dn GENDERLESS, 7 ; gender, step cycles to hatch
+	dn 5, 5 ; frontpic dimensions
+	db LEVITATE ; ability 1
+	db LEVITATE ; ability 2
+	db LEVITATE ; hidden ability
+	db MEDIUM_FAST ; growth rate
+	dn NO_EGGS, NO_EGGS ; egg groups
 
-	; tm/hm learnset
-	tmhm
+	; ev_yield
+	ev_yield   0,   1,   0,   0,   1,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm HIDDEN_POWER
 	; end

@@ -1,187 +1,850 @@
-INCLUDE "data/moves/effects_pointers.asm"
-
-MoveEffects: ; used only for BANK(MoveEffects)
+MoveEffects:
 
 NormalHit:
+AerialAce:
+Aeroblast:
+AquaJet:
+AquaTail:
+AuraSphere:
+BulletPunch:
+Crabhammer:
+CrossChop:
+Cut:
+Dazzlingleam:
+DragonClaw:
+DrillPeck:
+Extremespeed:
+FeintAttack:
+HiJumpKick:
+HornAttack:
+HydroPump:
+HyperVoice:
+IceShard:
+KarateChop:
+MachPunch:
+Megahorn:
+MegaKick:
+NightSlash:
+Peck:
+PowerGem:
+PowerWhip:
+Psystrike:
+QuickAttack:
+RazorLeaf:
+RockThrow:
+Scratch:
+SeedBomb:
+ShadowClaw:
+Slash:
+StoneEdge:
+Strength:
+Surf:
+Swift:
+Tackle:
+VineWhip:
+WaterGun:
+WingAttack:
+XScissor:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
 	damagestats
 	damagecalc
 	stab
 	damagevariation
 	checkhit
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
-	kingsrock
+	pickpocket
 	endmove
 
-DoSleep:
+SuckerPunch:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
+	suckerpunch
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
 	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	pickpocket
+	endmove
+
+LeechHit:
+Absorb:
+MegaDrain:
+LeechLife:
+GigaDrain:
+DrainKiss:
+DrainPunch:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	draintarget
+	checkdestinybond
+	buildopponentrage
+	pickpocket
+	endmove
+
+UTurn:
+VoltSwitch:
+SwitchHit:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	pickpocket
+	switchout
+	endmove
+
+
+MultiHit:
+Bonemerang:
+CometPunch:
+DoubleKick:
+DoubleSlap:
+PinMissile:
+IcicleSpear:
+RockBlast:
+FuryStrikes:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	startloop
+	lowersub
+	checkhit
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	clearmissdamage
+	hittargetnosub
+	failuretext
+	checkfaint
+	criticaltext
+	cleartext
+	supereffectivelooptext
+	checkdestinybond
+	buildopponentrage
+	endloop
+	pickpocket
+	raisesub
+	endmove
+
+RecoilHit:
+DoubleEdge:
+Struggle:
+TakeDown:
+WildCharge:
+BraveBird:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	recoil
+	checkdestinybond
+	buildopponentrage
+	pickpocket
+	endmove
+
+FlinchHit:
+AirSlash:
+Astonish:
+Bite:
+DarkPulse:
+Extrasensory:
+Headbutt:
+HyperFang:
+IcicleCrash:
+IronHead:
+RockSlide:
+Waterfall:
+ZenHeadbutt:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	flinchtarget
+	pickpocket
+	endmove
+
+PoisonHit:
+PoisonSting:
+SludgeBomb:
+PoisonJab:
+GunkShot:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	poisontarget
+	pickpocket
+	endmove
+
+BurnHit:
+Ember:
+FirePunch:
+Flamethrower:
+FireBlast:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	burntarget
+	pickpocket
+	endmove
+
+ParalyzeHit:
+Lick:
+Thundershock:
+Spark:
+Thunderpunch:
+Dragonbreath:
+Thunderbolt:
+ZapCannon:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	paralyzetarget
+	pickpocket
+	endmove
+
+BodySlam:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	doubleminimizedamage
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	paralyzetarget
+	pickpocket
+	endmove
+
+SleepHit:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	sleeptarget
+	pickpocket
+	endmove
+
+FreezeHit:
+IcePunch:
+IceBeam:
+Blizzard:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	freezetarget
+	pickpocket
+	endmove
+
+ConfuseHit:
+Confusion:
+DizzyPunch:
+Psybeam:
+Dynamicpunch:
+WaterPulse:
+Hurricane:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	confusetarget
+	pickpocket
+	endmove
+
+AttackUpHit:
+MetalClaw:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	attackup
+	statupmessage
+	pickpocket
+	endmove
+
+DefenseUpHit:
+SteelWing:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	defenseup
+	statupmessage
+	pickpocket
+	endmove
+
+AllUpHit:
+Ancientpower:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	allstatsup
+	pickpocket
+	endmove
+
+AttackDownHit:
+AuroraBeam:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	attackdown
+	statdownmessage
+	pickpocket
+	endmove
+
+DefenseDownHit:
+Crunch:
+IronTail:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	defensedown
+	statdownmessage
+	pickpocket
+	endmove
+
+BrickBreak:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	resettypematchup
+	brickbreak
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	defensedown
+	statdownmessage
+	pickpocket
+	endmove
+
+SpeedDownHit:
+IcyWind:
+BubbleBeam:
+Bulldoze:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	speeddown
+	statdownmessage
+	pickpocket
+	endmove
+
+SpecialAttackDownHit:
+Moonblast:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	specialattackdown
+	statdownmessage
+	pickpocket
+	endmove
+
+SpecialDefenseDownHit:
+Acid:
+BugBuzz:
+EarthPower:
+EnergyBall:
+FlashCannon:
+FocusBlast:
+PsychicM:
+ShadowBall:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	specialdefensedown
+	statdownmessage
+	pickpocket
+	endmove
+
+AccuracyDownHit:
+MudSlap:
+Octazooka:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	accuracydown
+	statdownmessage
+	pickpocket
+	endmove
+
+EvasionDownHit:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	evasiondown
+	statdownmessage
+	pickpocket
+	endmove
+
+CloseCombat:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	closecombat
+	checkdestinybond
+	buildopponentrage
+	pickpocket
+	endmove
+
+StaticDamage:
+Sonicboom:
+DragonRage:
+NightShade:
+SeismicToss:
+SuperFang:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	constantdamage
+	checkhit
+	resettypematchup
+	hittarget
+	failuretext
+	checkfaint
+	checkdestinybond
+	buildopponentrage
+	pickpocket
+	endmove
+
+DoPoison:
+Poisonpowder:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	checkpowder
+	checkhit
+	bounceback
+	stab
+	checksafeguard
+	poison
+	endmove
+
+Toxic:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	checkhit
+	bounceback
+	stab
+	checksafeguard
+	toxic
+	endmove
+
+DoBurn:
+WillOWisp:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	checkhit
+	bounceback
+	stab
+	checksafeguard
+	burn
+	endmove
+
+DoParalyze:
+StunSpore:
+ThunderWave:
+Glare:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	checkpowder
+	checkhit
+	bounceback
+	checksafeguard
+	paralyze
+	endmove
+
+DoSleep:
+SleepPowder:
+Hypnosis:
+Sing:
+Spore:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	checkpowder
+	checkhit
+	bounceback
 	checksafeguard
 	sleeptarget
 	endmove
 
-PoisonHit:
+DoFreeze:
 	checkobedience
 	usedmovetext
 	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
+	pressure
 	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	poisontarget
-	endmove
-
-LeechHit:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	draintarget
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
-
-BurnHit:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	burntarget
-	endmove
-
-FreezeHit:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
+	bounceback
+	checksafeguard
 	freezetarget
 	endmove
 
-ParalyzeHit:
+DoConfuse:
+Supersonic:
+ConfuseRay:
+SweetKiss:
 	checkobedience
 	usedmovetext
 	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
+	pressure
 	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	paralyzetarget
-	endmove
-
-Selfdestruct:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	selfdestruct
-	moveanimnosub
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
-
-DreamEater:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	eatdream
-	checkfaint
-	buildopponentrage
-	endmove
-
-MirrorMove:
-	checkobedience
-	usedmovetext
-	doturn
-	mirrormove
+	bounceback
+	checksafeguard
+	confuse
 	endmove
 
 AttackUp:
@@ -257,6 +920,7 @@ AccuracyUp:
 	endmove
 
 EvasionUp:
+DoubleTeam:
 	checkobedience
 	usedmovetext
 	doturn
@@ -269,7 +933,16 @@ EvasionUp:
 	statupfailtext
 	endmove
 
+CriticalUp:
+FocusEnergy:
+	checkobedience
+	usedmovetext
+	doturn
+	focusenergy
+	endmove
+
 AttackUp2:
+SwordsDance:
 	checkobedience
 	usedmovetext
 	doturn
@@ -282,6 +955,7 @@ AttackUp2:
 	endmove
 
 DefenseUp2:
+Barrier:
 	checkobedience
 	usedmovetext
 	doturn
@@ -294,6 +968,7 @@ DefenseUp2:
 	endmove
 
 SpeedUp2:
+Agility:
 	checkobedience
 	usedmovetext
 	doturn
@@ -306,6 +981,7 @@ SpeedUp2:
 	endmove
 
 SpecialAttackUp2:
+NastyPlot:
 	checkobedience
 	usedmovetext
 	doturn
@@ -318,6 +994,7 @@ SpecialAttackUp2:
 	endmove
 
 SpecialDefenseUp2:
+Amnesia:
 	checkobedience
 	usedmovetext
 	doturn
@@ -342,6 +1019,7 @@ AccuracyUp2:
 	endmove
 
 EvasionUp2:
+Minimize:
 	checkobedience
 	usedmovetext
 	doturn
@@ -353,11 +1031,49 @@ EvasionUp2:
 	statupfailtext
 	endmove
 
-AttackDown:
+BulkUp:
 	checkobedience
 	usedmovetext
 	doturn
+	bulkup
+	endmove
+
+CalmMind:
+	checkobedience
+	usedmovetext
+	doturn
+	calmmind
+	endmove
+
+Growth:
+	checkobedience
+	usedmovetext
+	doturn
+	growth
+	endmove
+
+DragonDance:
+	checkobedience
+	usedmovetext
+	doturn
+	dragondance
+	endmove
+
+HoneClaws:
+	checkobedience
+	usedmovetext
+	doturn
+	honeclaws
+	endmove
+
+AttackDown:
+Growl:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
 	checkhit
+	bounceback
 	attackdown
 	lowersub
 	statdownanim
@@ -367,10 +1083,13 @@ AttackDown:
 	endmove
 
 DefenseDown:
+Leer:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	defensedown
 	lowersub
 	statdownanim
@@ -380,10 +1099,13 @@ DefenseDown:
 	endmove
 
 SpeedDown:
+StringShot:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	speeddown
 	lowersub
 	statdownanim
@@ -396,7 +1118,9 @@ SpecialAttackDown:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	specialattackdown
 	lowersub
 	statdownanim
@@ -409,7 +1133,9 @@ SpecialDefenseDown:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	specialdefensedown
 	lowersub
 	statdownanim
@@ -419,10 +1145,14 @@ SpecialDefenseDown:
 	endmove
 
 AccuracyDown:
+Smokescreen:
+Flash:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	accuracydown
 	lowersub
 	statdownanim
@@ -435,7 +1165,9 @@ EvasionDown:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	evasiondown
 	lowersub
 	statdownanim
@@ -445,10 +1177,13 @@ EvasionDown:
 	endmove
 
 AttackDown2:
+Charm:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	attackdown2
 	lowersub
 	statdownanim
@@ -458,10 +1193,13 @@ AttackDown2:
 	endmove
 
 DefenseDown2:
+Screech:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	defensedown2
 	lowersub
 	statdownanim
@@ -471,10 +1209,13 @@ DefenseDown2:
 	endmove
 
 SpeedDown2:
+ScaryFace:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	speeddown2
 	lowersub
 	statdownanim
@@ -487,7 +1228,9 @@ SpecialAttackDown2:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	specialattackdown2
 	lowersub
 	statdownanim
@@ -500,7 +1243,9 @@ SpecialDefenseDown2:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	specialdefensedown2
 	lowersub
 	statdownanim
@@ -513,7 +1258,9 @@ AccuracyDown2:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	accuracydown2
 	lowersub
 	statdownanim
@@ -526,7 +1273,9 @@ EvasionDown2:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	evasiondown2
 	lowersub
 	statdownanim
@@ -535,280 +1284,57 @@ EvasionDown2:
 	statdownfailtext
 	endmove
 
-AttackDownHit:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	attackdown
-	statdownmessage
-	endmove
-
-DefenseDownHit:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	defensedown
-	statdownmessage
-	endmove
-
-SpeedDownHit:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	speeddown
-	statdownmessage
-	endmove
-
-SpecialAttackDownHit:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	specialattackdown
-	statdownmessage
-	endmove
-
-SpecialDefenseDownHit:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	specialdefensedown
-	statdownmessage
-	endmove
-
-AccuracyDownHit:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	accuracydown
-	statdownmessage
-	endmove
-
-EvasionDownHit:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	evasiondown
-	statdownmessage
-	endmove
-
-DefenseUpHit:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	defenseup
-	statupmessage
-	endmove
-
-AttackUpHit:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	attackup
-	statupmessage
-	endmove
-
-AllUpHit:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	allstatsup
-	endmove
-
-PayDay:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	payday
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
-
-Conversion:
-	checkobedience
-	usedmovetext
-	doturn
-	conversion
-	endmove
-
 ResetStats:
+Haze:
 	checkobedience
 	usedmovetext
 	doturn
 	resetstats
 	endmove
 
-Bide:
-	storeenergy
+Safeguard:
 	checkobedience
-	doturn
 	usedmovetext
-	unleashenergy
-	resettypematchup
-	checkhit
-	moveanim
-	bidefailtext
-	applydamage
-	checkfaint
-	buildopponentrage
-	kingsrock
+	doturn
+	safeguard
+	endmove
+
+Screen:
+Reflect:
+LightScreen:
+	checkobedience
+	usedmovetext
+	doturn
+	screen
+	endmove
+
+Heal:
+Recover:
+Softboiled:
+Rest:
+MilkDrink:
+	checkobedience
+	usedmovetext
+	doturn
+	heal
+	endmove
+
+Roost:
+	checkobedience
+	usedmovetext
+	doturn
+	heal
+	roost
 	endmove
 
 Rampage:
+Thrash:
+PetalDance:
+Outrage:
 	checkrampage
 	checkobedience
 	doturn
+	pressure
 	rampage
 	usedmovetext
 	checkhit
@@ -818,264 +1344,216 @@ Rampage:
 	stab
 	damagevariation
 	clearmissdamage
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
-	kingsrock
+	pickpocket
 	endmove
 
-ForceSwitch:
+Trap:
+Wrap:
+Bind:
+FireSpin:
+Whirlpool:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	clearmissdamage
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	traptarget
+	pickpocket
+	endmove
+
+Selfdestruct:
+Explosion:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	selfdestruct
+	hittargetnosub
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	endmove
+
+DreamEater:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	eatdream
+	checkdestinybond
+	buildopponentrage
+	pickpocket
+	endmove
+
+Roar:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	checkhit
+	bounceback
 	forceswitch
 	endmove
 
-MultiHit:
+SkillSwap:
 	checkobedience
 	usedmovetext
 	doturn
-	startloop
-	lowersub
-	checkhit
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	clearmissdamage
-	moveanimnosub
-	failuretext
-	applydamage
-	criticaltext
-	cleartext
-	supereffectivelooptext
-	checkfaint
-	buildopponentrage
-	endloop
-	raisesub
-	kingsrock
+	pressure
+	skillswap
 	endmove
 
-PoisonMultiHit:
+Trick:
 	checkobedience
 	usedmovetext
 	doturn
-	startloop
-	lowersub
+	pressure
 	checkhit
-	effectchance
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	clearmissdamage
-	moveanimnosub
-	failuretext
-	applydamage
-	criticaltext
-	cleartext
-	supereffectivelooptext
-	checkfaint
-	buildopponentrage
-	endloop
-	raisesub
-	kingsrock
-	poisontarget
+	trick
 	endmove
 
-FlinchHit:
+Conversion:
 	checkobedience
 	usedmovetext
 	doturn
+	conversion
+	endmove
+
+PayDay:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
 	critical
 	damagestats
 	damagecalc
 	stab
 	damagevariation
 	checkhit
-	effectchance
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	payday
+	checkdestinybond
 	buildopponentrage
-	flinchtarget
+	pickpocket
 	endmove
 
-OHKOHit:
+KnockOff:
 	checkobedience
 	usedmovetext
 	doturn
-	stab
-	ohko
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	endmove
-
-RecoilHit:
-	checkobedience
-	usedmovetext
-	doturn
+	pressure
 	critical
 	damagestats
 	damagecalc
 	stab
 	damagevariation
 	checkhit
-	moveanim
+	conditionalboost
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	recoil
-	checkfaint
+	knockoff
+	checkdestinybond
 	buildopponentrage
-	kingsrock
+	pickpocket
 	endmove
 
-Mist:
+BugBite:
 	checkobedience
 	usedmovetext
 	doturn
-	mist
-	endmove
-
-FocusEnergy:
-	checkobedience
-	usedmovetext
-	doturn
-	focusenergy
-	endmove
-
-DoConfuse:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	checksafeguard
-	confuse
-	endmove
-
-ConfuseHit:
-	checkobedience
-	usedmovetext
-	doturn
+	pressure
 	critical
 	damagestats
 	damagecalc
 	stab
 	damagevariation
 	checkhit
-	effectchance
-	moveanim
+	conditionalboost
+	hittarget
 	failuretext
-	applydamage
+	bugbite ; before checkfaint to steal HP berries before they take effect
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
-	confusetarget
-	endmove
-
-Heal:
-	checkobedience
-	usedmovetext
-	doturn
-	heal
-	endmove
-
-Transform:
-	checkobedience
-	usedmovetext
-	doturn
-	transform
-	endmove
-
-LightScreen:
-Reflect:
-	checkobedience
-	usedmovetext
-	doturn
-	screen
 	endmove
 
 TriAttack:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
 	damagestats
 	damagecalc
 	stab
 	damagevariation
 	checkhit
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
 	tristatuschance
+	pickpocket
 	endmove
 
-Toxic:
-DoPoison:
+Transform:
 	checkobedience
 	usedmovetext
 	doturn
-	checkhit
-	stab
-	checksafeguard
-	poison
-	endmove
-
-DoParalyze:
-	checkobedience
-	usedmovetext
-	doturn
-	stab
-	checkhit
-	checksafeguard
-	paralyze
-	endmove
-
-SkyAttack:
-	checkcharge
-	checkobedience
-	doturn
-	charge
-	usedmovetext
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	flinchtarget
-	kingsrock
+	pressure
+	transform
 	endmove
 
 Substitute:
@@ -1086,53 +1564,48 @@ Substitute:
 	endmove
 
 HyperBeam:
+GigaImpact:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
 	damagestats
 	damagecalc
 	stab
 	damagevariation
 	checkhit
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
 	rechargenextturn
-	checkfaint
+	checkdestinybond
 	buildopponentrage
+	pickpocket
 	endmove
 
 Rage:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
 	damagestats
 	damagecalc
 	stab
 	checkhit
-	ragedamage
 	damagevariation
-	moveanim
+	hittarget
 	failuretext
 	rage
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
-	kingsrock
-	endmove
-
-Mimic:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	mimic
+	pickpocket
 	endmove
 
 Metronome:
@@ -1146,7 +1619,9 @@ LeechSeed:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	leechseed
 	endmove
 
@@ -1161,107 +1636,10 @@ Disable:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	disable
-	endmove
-
-RazorWind:
-	checkcharge
-	checkobedience
-	doturn
-	charge
-	usedmovetext
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
-
-Fly:
-	checkcharge
-	checkobedience
-	doturn
-	charge
-	usedmovetext
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	moveanimnosub
-	raisesub
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
-
-TrapTarget:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	clearmissdamage
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	traptarget
-	endmove
-
-SuperFang:
-Psywave:
-StaticDamage:
-	checkobedience
-	usedmovetext
-	doturn
-	constantdamage
-	checkhit
-	resettypematchup
-	moveanim
-	failuretext
-	applydamage
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
-
-Reversal:
-	checkobedience
-	usedmovetext
-	doturn
-	constantdamage
-	stab
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
 	endmove
 
 Counter:
@@ -1269,19 +1647,20 @@ Counter:
 	usedmovetext
 	doturn
 	counter
-	moveanim
+	hittarget
 	failuretext
-	applydamage
 	checkfaint
+	checkdestinybond
 	buildopponentrage
-	kingsrock
 	endmove
 
 Encore:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	encore
 	endmove
 
@@ -1289,61 +1668,17 @@ PainSplit:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
 	painsplit
-	endmove
-
-Snore:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	snore
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	flinchtarget
-	kingsrock
-	endmove
-
-Conversion2:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	conversion2
-	endmove
-
-LockOn:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	lockon
 	endmove
 
 Sketch:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	sketch
-	endmove
-
-DefrostOpponent:
-	checkobedience
-	usedmovetext
-	doturn
-	defrostopponent
 	endmove
 
 SleepTalk:
@@ -1357,21 +1692,32 @@ DestinyBond:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	destinybond
 	endmove
 
-Spite:
+Reversal:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
+	constantdamage
+	stab
 	checkhit
-	spite
+	hittarget
+	failuretext
+	checkfaint
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	pickpocket
 	endmove
 
 FalseSwipe:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
 	damagestats
 	damagecalc
@@ -1379,14 +1725,14 @@ FalseSwipe:
 	damagevariation
 	falseswipe
 	checkhit
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
-	kingsrock
+	pickpocket
 	endmove
 
 HealBell:
@@ -1400,6 +1746,7 @@ TripleKick:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	startloop
 	lowersub
 	checkhit
@@ -1410,76 +1757,75 @@ TripleKick:
 	stab
 	damagevariation
 	clearmissdamage
-	moveanimnosub
+	hittargetnosub
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	cleartext
 	supereffectivelooptext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
 	kickcounter
 	endloop
 	raisesub
-	kingsrock
+	pickpocket
 	endmove
 
 Thief:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
+	effectchance
 	damagestats
 	damagecalc
 	stab
 	damagevariation
 	checkhit
-	effectchance
-	moveanim
+	; Yes, thief is 100% but this makes Sheer Force and Substitute be handled correctly
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
 	thief
-	checkfaint
+	checkdestinybond
 	buildopponentrage
-	kingsrock
+	pickpocket
 	endmove
 
 MeanLook:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
+	bounceback
 	arenatrap
-	endmove
-
-Nightmare:
-	checkobedience
-	usedmovetext
-	doturn
-	nightmare
 	endmove
 
 FlameWheel:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
+	effectchance
 	damagestats
 	damagecalc
 	stab
 	damagevariation
 	checkhit
-	effectchance
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
 	defrost
-	checkfaint
+	checkdestinybond
 	buildopponentrage
 	burntarget
+	pickpocket
 	endmove
 
 Curse:
@@ -1500,14 +1846,27 @@ Spikes:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
+	bounceback
 	spikes
+	endmove
+
+ToxicSpikes:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	bounceback
+	toxicspikes
 	endmove
 
 Foresight:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	foresight
 	endmove
 
@@ -1525,6 +1884,13 @@ Sandstorm:
 	startsandstorm
 	endmove
 
+Hail:
+	checkobedience
+	usedmovetext
+	doturn
+	starthail
+	endmove
+
 Endure:
 	checkobedience
 	usedmovetext
@@ -1536,6 +1902,7 @@ Rollout:
 	checkcurl
 	checkobedience
 	doturn
+	pressure
 	usedmovetext
 	critical
 	damagestats
@@ -1544,21 +1911,23 @@ Rollout:
 	checkhit
 	rolloutpower
 	damagevariation
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
-	kingsrock
+	pickpocket
 	endmove
 
 Swagger:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	switchturn
 	attackup2
 	switchturn
@@ -1572,32 +1941,40 @@ Swagger:
 	confusetarget
 	endmove
 
-FuryCutter:
+Avalanche:
+Acrobatics:
+Facade:
+Hex:
+Venoshock:
+ConditionalBoostHit:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
 	damagestats
 	damagecalc
 	stab
 	checkhit
-	furycutter
+	conditionalboost
 	damagevariation
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
-	kingsrock
+	pickpocket
 	endmove
 
 Attract:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	checkhit
+	bounceback
 	attract
 	endmove
 
@@ -1605,6 +1982,7 @@ Return:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
 	damagestats
 	happinesspower
@@ -1612,91 +1990,45 @@ Return:
 	stab
 	damagevariation
 	checkhit
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
-	kingsrock
-	endmove
-
-Present:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	critical
-	damagestats
-	present
-	damagecalc
-	stab
-	damagevariation
-	clearmissdamage
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
-
-Frustration:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	frustrationpower
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
-
-Safeguard:
-	checkobedience
-	usedmovetext
-	doturn
-	safeguard
+	pickpocket
 	endmove
 
 SacredFire:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
+	effectchance
 	damagestats
 	damagecalc
 	stab
 	damagevariation
 	checkhit
-	effectchance
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
 	defrost
-	checkfaint
+	checkdestinybond
 	buildopponentrage
 	burntarget
+	pickpocket
 	endmove
 
 Magnitude:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
 	damagestats
 	getmagnitude
@@ -1705,14 +2037,58 @@ Magnitude:
 	damagevariation
 	checkhit
 	doubleundergrounddamage
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
-	kingsrock
+	pickpocket
+	endmove
+
+GyroBall:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	damagestats
+	gyroball
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	pickpocket
+	endmove
+
+LowKick:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	damagestats
+	lowkick
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	pickpocket
 	endmove
 
 BatonPass:
@@ -1726,6 +2102,7 @@ Pursuit:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
 	damagestats
 	damagecalc
@@ -1733,76 +2110,64 @@ Pursuit:
 	damagevariation
 	pursuit
 	checkhit
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
-	kingsrock
+	pickpocket
 	endmove
 
 RapidSpin:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
 	damagestats
 	damagecalc
 	stab
 	damagevariation
 	checkhit
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
 	clearhazards
-	checkfaint
+	checkdestinybond
 	buildopponentrage
-	kingsrock
+	pickpocket
 	endmove
 
-MorningSun:
+HealingLight:
 	checkobedience
 	usedmovetext
 	doturn
-	healmorn
-	endmove
-
-Synthesis:
-	checkobedience
-	usedmovetext
-	doturn
-	healday
-	endmove
-
-Moonlight:
-	checkobedience
-	usedmovetext
-	doturn
-	healnite
+	healweather
 	endmove
 
 HiddenPower:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
 	hiddenpower
 	damagecalc
 	stab
 	damagevariation
 	checkhit
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
-	kingsrock
+	pickpocket
 	endmove
 
 RainDance:
@@ -1819,16 +2184,6 @@ SunnyDay:
 	startsun
 	endmove
 
-FakeOut:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	fakeout
-	moveanim
-	failuretext
-	endmove
-
 BellyDrum:
 	checkobedience
 	usedmovetext
@@ -1836,92 +2191,39 @@ BellyDrum:
 	bellydrum
 	endmove
 
-PsychUp:
-	checkobedience
-	usedmovetext
-	doturn
-	psychup
-	endmove
-
 MirrorCoat:
 	checkobedience
 	usedmovetext
 	doturn
 	mirrorcoat
-	moveanim
+	hittarget
 	failuretext
-	applydamage
 	checkfaint
+	checkdestinybond
 	buildopponentrage
-	kingsrock
-	endmove
-
-SkullBash:
-	checkcharge
-	checkobedience
-	doturn
-	charge
-	usedmovetext
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endturn
-	defenseup
-	statupmessage
-	endmove
-
-Twister:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	doubleflyingdamage
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	flinchtarget
 	endmove
 
 Earthquake:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
+	effectchance
 	damagestats
 	damagecalc
 	stab
 	damagevariation
 	doubleundergrounddamage
 	checkhit
-	effectchance
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
+	pickpocket
 	endmove
 
 FutureSight:
@@ -1929,15 +2231,16 @@ FutureSight:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	damagestats
 	damagecalc
 	futuresight
 	damagevariation ; skip here if last turn
 	checkhit
-	moveanimnosub
+	hittargetnosub
 	failuretext
-	applydamage
 	checkfaint
+	checkdestinybond
 	buildopponentrage
 	endmove
 
@@ -1945,6 +2248,7 @@ Gust:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
 	damagestats
 	damagecalc
@@ -1952,41 +2256,45 @@ Gust:
 	damagevariation
 	doubleflyingdamage
 	checkhit
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
+	pickpocket
 	endmove
 
 Stomp:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
+	effectchance
 	damagestats
 	damagecalc
 	stab
 	damagevariation
 	doubleminimizedamage
 	checkhit
-	effectchance
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
 	flinchtarget
+	pickpocket
 	endmove
 
-Solarbeam:
+SolarBeam:
 	checkcharge
 	checkobedience
 	doturn
+	pressure
 	skipsuncharge
 	charge
 	usedmovetext
@@ -1996,36 +2304,38 @@ Solarbeam:
 	stab
 	damagevariation
 	checkhit
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
-	kingsrock
+	pickpocket
 	endmove
 
 Thunder:
 	checkobedience
 	usedmovetext
 	doturn
+	pressure
 	critical
+	effectchance
 	damagestats
 	damagecalc
 	thunderaccuracy
 	checkhit
-	effectchance
 	stab
 	damagevariation
-	moveanim
+	hittarget
 	failuretext
-	applydamage
+	checkfaint
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
 	buildopponentrage
 	paralyzetarget
+	pickpocket
 	endmove
 
 Teleport:
@@ -2035,31 +2345,29 @@ Teleport:
 	teleport
 	endmove
 
-BeatUp:
+Fly:
+Dig:
+	checkcharge
 	checkobedience
-	usedmovetext
-	movedelay
 	doturn
-	startloop
-	lowersub
-	checkhit
+	pressure
+	charge
+	usedmovetext
 	critical
-	beatup
+	damagestats
 	damagecalc
+	stab
 	damagevariation
-	clearmissdamage
-	moveanimnosub
-	failuretext
-	applydamage
-	criticaltext
-	cleartext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	endloop
-	beatupfailtext
+	checkhit
+	hittargetnosub
 	raisesub
-	kingsrock
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	pickpocket
 	endmove
 
 DefenseCurl:
@@ -2073,4 +2381,29 @@ DefenseCurl:
 	raisesub
 	statupmessage
 	statupfailtext
+	endmove
+
+FlareBlitz:
+	checkobedience
+	usedmovetext
+	doturn
+	pressure
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	recoil
+	defrost
+	checkdestinybond
+	buildopponentrage
+	burntarget
+	pickpocket
 	endmove

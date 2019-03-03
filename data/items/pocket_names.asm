@@ -1,11 +1,20 @@
 ItemPocketNames:
-; entries correspond to item type constants
 	dw .Item
-	dw .Key
+	dw .Medicine
 	dw .Ball
-	dw .TM
+	dw .TM ; impossible
+	dw .Berry
+	dw .Key
 
-.Item: db "ITEM POCKET@"
-.Key:  db "KEY POCKET@"
-.Ball: db "BALL POCKET@"
-.TM:   db "TM POCKET@"
+.Item:
+	db "Item Pocket@"
+.Medicine:
+	db "Med.Pocket@"
+.Ball:
+	db "Ball Pocket@"
+.TM:
+	db "TM Pocket@"
+.Berry:
+	db "Berry Pocket@"
+.Key:
+	db "Key Pocket@"

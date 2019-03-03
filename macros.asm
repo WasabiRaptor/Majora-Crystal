@@ -16,4 +16,6 @@ INCLUDE "macros/scripts/battle_anims.asm"
 INCLUDE "macros/scripts/trade_anims.asm"
 INCLUDE "macros/scripts/gfx_anims.asm"
 
-INCLUDE "macros/legacy.asm"
+if DEF(MONOCHROME)
+INCLUDE "macros/monochrome.asm"
+endc

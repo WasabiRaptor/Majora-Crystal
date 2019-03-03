@@ -1,11 +1,12 @@
-Music_TitleScreen:
+Music_TitleScreen: ; eb808
 	musicheader 4, 1, Music_TitleScreen_Ch1
 	musicheader 1, 2, Music_TitleScreen_Ch2
 	musicheader 1, 3, Music_TitleScreen_Ch3
 	musicheader 1, 4, Music_TitleScreen_Ch4
+; eb814
 
-Music_TitleScreen_Ch1:
-	tempo 234
+Music_TitleScreen_Ch1: ; eb814
+	tempo 134
 	volume $77
 	dutycycle $3
 	tone $0002
@@ -158,7 +159,7 @@ Music_TitleScreen_Ch1:
 	octave 3
 	note D_, 3
 	note G_, 3
-	tempo 236
+	tempo 136
 	notetype $8, $b4
 	note F_, 3
 	note A_, 3
@@ -166,7 +167,7 @@ Music_TitleScreen_Ch1:
 	octave 4
 	note C_, 3
 	note F_, 3
-	tempo 238
+	tempo 138
 	notetype $8, $b4
 	note D_, 9
 	note C_, 9
@@ -191,9 +192,9 @@ Music_TitleScreen_Ch1:
 	note G_, 12
 	octave 4
 	note C_, 6
-	tempo 236
+	tempo 136
 	note C#, 6
-	tempo 234
+	tempo 134
 	callchannel Music_TitleScreen_branch_eb96d
 	octave 4
 	note C_, 4
@@ -271,11 +272,12 @@ Music_TitleScreen_Ch1:
 	note G_, 1
 	note __, 11
 	endchannel
+; eb96d
 
-Music_TitleScreen_branch_eb96d:
+Music_TitleScreen_branch_eb96d: ; eb96d
 	notetype $c, $c3
 	note D_, 1
-Music_TitleScreen_branch_eb971:
+Music_TitleScreen_branch_eb971: ; eb971
 	note __, 1
 	octave 2
 	note D_, 1
@@ -290,8 +292,9 @@ Music_TitleScreen_branch_eb971:
 	note A_, 1
 	notetype $8, $b7
 	endchannel
+; eb984
 
-Music_TitleScreen_Ch2:
+Music_TitleScreen_Ch2: ; eb984
 	dutycycle $3
 	vibrato $14, $12
 	notetype $c, $c7
@@ -553,11 +556,12 @@ Music_TitleScreen_Ch2:
 	note G_, 1
 	note __, 11
 	endchannel
+; ebae7
 
-Music_TitleScreen_branch_ebae7:
+Music_TitleScreen_branch_ebae7: ; ebae7
 	notetype $c, $b2
 	note D_, 1
-Music_TitleScreen_branch_ebaeb:
+Music_TitleScreen_branch_ebaeb: ; ebaeb
 	octave 3
 	note A_, 1
 	octave 4
@@ -575,8 +579,9 @@ Music_TitleScreen_branch_ebaeb:
 	note C_, 4
 	note C_, 4
 	endchannel
+; ebb01
 
-Music_TitleScreen_Ch3:
+Music_TitleScreen_Ch3: ; ebb01
 	stereopanning $f
 	vibrato $10, $14
 	tone $0001
@@ -891,8 +896,9 @@ Music_TitleScreen_Ch3:
 	note G_, 1
 	note __, 11
 	endchannel
+; ebc5c
 
-Music_TitleScreen_Ch4:
+Music_TitleScreen_Ch4: ; ebc5c
 	togglenoise $5
 	stereopanning $f0
 	notetype $c
@@ -1075,7 +1081,7 @@ Music_TitleScreen_Ch4:
 	note C#, 1
 	notetype $c
 	note G#, 16
-Music_TitleScreen_branch_ebd40:
+Music_TitleScreen_branch_ebd40: ; ebd40
 	note __, 16
 	loopchannel 6, Music_TitleScreen_branch_ebd40
 	note __, 12
@@ -1123,8 +1129,9 @@ Music_TitleScreen_branch_ebd40:
 	note C_, 4
 	note B_, 4
 	endchannel
+; ebd77
 
-Music_TitleScreen_branch_ebd77:
+Music_TitleScreen_branch_ebd77: ; ebd77
 	note C_, 2
 	note D#, 2
 	note C_, 2
@@ -1135,8 +1142,9 @@ Music_TitleScreen_branch_ebd77:
 	note C_, 2
 	note D#, 2
 	endchannel
+; ebd81
 
-Music_TitleScreen_branch_ebd81:
+Music_TitleScreen_branch_ebd81: ; ebd81
 	note C_, 2
 	note D#, 2
 	note C_, 2
@@ -1147,15 +1155,17 @@ Music_TitleScreen_branch_ebd81:
 	note C_, 2
 	note D#, 2
 	endchannel
+; ebd8b
 
-Music_TitleScreen_branch_ebd8b:
+Music_TitleScreen_branch_ebd8b: ; ebd8b
 	note C_, 2
 	note C_, 1
 	note C_, 1
 	loopchannel 4, Music_TitleScreen_branch_ebd8b
 	endchannel
+; ebd93
 
-Music_TitleScreen_branch_ebd93:
+Music_TitleScreen_branch_ebd93: ; ebd93
 	note C_, 2
 	note C_, 1
 	note C_, 1
@@ -1166,3 +1176,4 @@ Music_TitleScreen_branch_ebd93:
 	note C_, 4
 	note C_, 4
 	endchannel
+; ebd9e

@@ -1,9 +1,4 @@
-; battle commands are defined in engine/battle/effect_commands.asm
-
-	dw 0 ; padding
-
 BattleCommandPointers:
-; entries correspond to macros/scripts/battle_commands.asm
 	dw BattleCommand_CheckTurn
 	dw BattleCommand_CheckObedience
 	dw BattleCommand_UsedMoveText
@@ -14,14 +9,14 @@ BattleCommandPointers:
 	dw BattleCommand_DamageVariation
 	dw BattleCommand_CheckHit
 	dw BattleCommand_LowerSub
-	dw BattleCommand_MoveAnimNoSub
+	dw BattleCommand_HitTargetNoSub
 	dw BattleCommand_RaiseSub
 	dw BattleCommand_FailureText
-	dw BattleCommand_ApplyDamage
+	dw BattleCommand_CheckFaint
 	dw BattleCommand_CriticalText
 	dw BattleCommand_SuperEffectiveText
-	dw BattleCommand_CheckFaint
-	dw BattleCommand_BuildOpponentRage
+	dw BattleCommand_PostFaintEffects
+	dw BattleCommand_PostHitEffects
 	dw BattleCommand_PoisonTarget
 	dw BattleCommand_SleepTarget
 	dw BattleCommand_DrainTarget
@@ -29,21 +24,16 @@ BattleCommandPointers:
 	dw BattleCommand_BurnTarget
 	dw BattleCommand_FreezeTarget
 	dw BattleCommand_ParalyzeTarget
-	dw BattleCommand_Selfdestruct
-	dw BattleCommand_MirrorMove
+	dw BattleCommand_SelfDestruct
 	dw BattleCommand_StatUp
 	dw BattleCommand_StatDown
 	dw BattleCommand_PayDay
 	dw BattleCommand_Conversion
 	dw BattleCommand_ResetStats
-	dw BattleCommand_StoreEnergy
-	dw BattleCommand_UnleashEnergy
 	dw BattleCommand_ForceSwitch
 	dw BattleCommand_EndLoop
 	dw BattleCommand_FlinchTarget
-	dw BattleCommand_OHKO
 	dw BattleCommand_Recoil
-	dw BattleCommand_Mist
 	dw BattleCommand_FocusEnergy
 	dw BattleCommand_Confuse
 	dw BattleCommand_ConfuseTarget
@@ -54,7 +44,6 @@ BattleCommandPointers:
 	dw BattleCommand_Paralyze
 	dw BattleCommand_Substitute
 	dw BattleCommand_RechargeNextTurn
-	dw BattleCommand_Mimic
 	dw BattleCommand_Metronome
 	dw BattleCommand_LeechSeed
 	dw BattleCommand_Splash
@@ -63,29 +52,23 @@ BattleCommandPointers:
 	dw BattleCommand_Charge
 	dw BattleCommand_CheckCharge
 	dw BattleCommand_TrapTarget
-	dw BattleCommand3c
+	dw BattleCommand_Growth
 	dw BattleCommand_Rampage
 	dw BattleCommand_CheckRampage
 	dw BattleCommand_ConstantDamage
 	dw BattleCommand_Counter
 	dw BattleCommand_Encore
 	dw BattleCommand_PainSplit
-	dw BattleCommand_Snore
-	dw BattleCommand_Conversion2
-	dw BattleCommand_LockOn
 	dw BattleCommand_Sketch
-	dw BattleCommand_DefrostOpponent
 	dw BattleCommand_SleepTalk
 	dw BattleCommand_DestinyBond
-	dw BattleCommand_Spite
 	dw BattleCommand_FalseSwipe
 	dw BattleCommand_HealBell
-	dw BattleCommand_HeldFlinch
+	dw BattleCommand_Pressure
 	dw BattleCommand_TripleKick
 	dw BattleCommand_KickCounter
 	dw BattleCommand_Thief
 	dw BattleCommand_ArenaTrap
-	dw BattleCommand_Nightmare
 	dw BattleCommand_Defrost
 	dw BattleCommand_Curse
 	dw BattleCommand_Protect
@@ -93,25 +76,22 @@ BattleCommandPointers:
 	dw BattleCommand_Foresight
 	dw BattleCommand_PerishSong
 	dw BattleCommand_StartSandstorm
+	dw BattleCommand_StartHail
 	dw BattleCommand_Endure
 	dw BattleCommand_CheckCurl
 	dw BattleCommand_RolloutPower
-	dw BattleCommand5d
-	dw BattleCommand_FuryCutter
+	dw BattleCommand_BulkUp
+	dw BattleCommand_ConditionalBoost
 	dw BattleCommand_Attract
 	dw BattleCommand_HappinessPower
-	dw BattleCommand_Present
 	dw BattleCommand_DamageCalc
-	dw BattleCommand_FrustrationPower
 	dw BattleCommand_Safeguard
 	dw BattleCommand_CheckSafeguard
 	dw BattleCommand_GetMagnitude
 	dw BattleCommand_BatonPass
 	dw BattleCommand_Pursuit
 	dw BattleCommand_ClearHazards
-	dw BattleCommand_HealMorn
-	dw BattleCommand_HealDay
-	dw BattleCommand_HealNite
+	dw BattleCommand_HealWeather
 	dw BattleCommand_HiddenPower
 	dw BattleCommand_StartRain
 	dw BattleCommand_StartSun
@@ -151,9 +131,7 @@ BattleCommandPointers:
 	dw BattleCommand_StatDownAnim
 	dw BattleCommand_StatUpAnim
 	dw BattleCommand_SwitchTurn
-	dw BattleCommand_FakeOut
 	dw BattleCommand_BellyDrum
-	dw BattleCommand_PsychUp
 	dw BattleCommand_Rage
 	dw BattleCommand_DoubleFlyingDamage
 	dw BattleCommand_DoubleUndergroundDamage
@@ -164,18 +142,35 @@ BattleCommandPointers:
 	dw BattleCommand_SkipSunCharge
 	dw BattleCommand_ThunderAccuracy
 	dw BattleCommand_Teleport
-	dw BattleCommand_BeatUp
+	dw BattleCommand_SwitchOut
 	dw BattleCommand_RageDamage
 	dw BattleCommand_ResetTypeMatchup
 	dw BattleCommand_AllStatsUp
-	dw BattleCommand_BideFailText
+	dw BattleCommand_CalmMind
 	dw BattleCommand_RaiseSubNoAnim
 	dw BattleCommand_LowerSubNoAnim
-	dw BattleCommand_BeatUpFailText
+	dw BattleCommand_DragonDance
+	dw BattleCommand_HoneClaws
 	dw BattleCommand_ClearMissDamage
 	dw BattleCommand_MoveDelay
-	dw BattleCommand_MoveAnim
+	dw BattleCommand_HitTarget
 	dw BattleCommand_TriStatusChance
 	dw BattleCommand_SuperEffectiveLoopText
 	dw BattleCommand_StartLoop
 	dw BattleCommand_Curl
+	dw BattleCommand_Burn
+	dw BattleCommand_BounceBack
+	dw BattleCommand_Pickpocket
+	dw BattleCommand_SuckerPunch
+	dw BattleCommand_ToxicSpikes
+	dw BattleCommand_Roost
+	dw BattleCommand_CloseCombat
+	dw BattleCommand_SkillSwap
+	dw BattleCommand_Trick
+	dw BattleCommand_KnockOff
+	dw BattleCommand_BugBite
+	dw BattleCommand_Toxic
+	dw BattleCommand_GyroBall
+	dw BattleCommand_CheckPowder
+	dw BattleCommand_LowKick
+	dw BattleCommand_BrickBreak

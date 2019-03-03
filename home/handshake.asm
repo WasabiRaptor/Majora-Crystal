@@ -1,9 +1,4 @@
-PrinterReceive::
-	homecall _PrinterReceive
-
-	ret
-
-AskSerial::
+AskSerial:: ; 2063
 ; send out a handshake while serial int is off
 	ld a, [wPrinterConnectionOpen]
 	bit 0, a
@@ -24,19 +19,20 @@ AskSerial::
 	xor a
 	ld [hl], a
 
-	ld a, 12
+	ld a, $c
 	ld [wPrinterOpcode], a
 
 ; handshake
 	ld a, $88
-	ldh [rSB], a
+	ld [rSB], a
 
 ; switch to internal clock
-	ld a, %00000001
-	ldh [rSC], a
+	ld a, $1
+	ld [rSC], a
 
 ; start transfer
-	ld a, %10000001
-	ldh [rSC], a
+	ld a, START_TRANSFER_INTERNAL_CLOCK
+	ld [rSC], a
 
 	ret
+; 208a

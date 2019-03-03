@@ -1,21 +1,28 @@
-	db ELEKID ; 239
-
+if DEF(FAITHFUL)
 	db  45,  63,  37,  95,  65,  55
-    evs  0,   0,   0,   1,   0,   0
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  50,  63,  37, 100,  65,  55
+	;   hp  atk  def  spd  sat  sdf
+endc
 
-	db ELECTRIC, ELECTRIC ; type
+	db ELECTRIC, ELECTRIC
 	db 45 ; catch rate
 	db 106 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F25 ; gender ratio
-	db 25 ; step cycles to hatch
-	INCBIN "gfx/pokemon/elekid/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_NONE, EGG_NONE ; egg groups
+	db SITRUS_BERRY ; item 1
+	db ELECTIRIZER ; item 2
+	dn FEMALE_25, 4 ; gender, step cycles to hatch
+	dn 6, 6 ; frontpic dimensions
+	db STATIC ; ability 1
+	db STATIC ; ability 2
+	db VITAL_SPIRIT ; hidden ability
+	db MEDIUM_FAST ; growth rate
+	dn NO_EGGS, NO_EGGS ; egg groups
 
-	; tm/hm learnset
-	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, TOXIC, ZAP_CANNON, HIDDEN_POWER, SNORE, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, THUNDER, RETURN, PSYCHIC_M, MUD_SLAP, DOUBLE_TEAM, ICE_PUNCH, SWAGGER, SLEEP_TALK, SWIFT, THUNDERPUNCH, REST, ATTRACT, THIEF, FIRE_PUNCH, FLASH, THUNDERBOLT
+	; ev_yield
+	ev_yield   0,   0,   0,   1,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm DYNAMICPUNCH, CURSE, TOXIC, BULK_UP, HIDDEN_POWER, LIGHT_SCREEN, PROTECT, RAIN_DANCE, THUNDERBOLT, THUNDER, RETURN, PSYCHIC, DOUBLE_TEAM, SWIFT, SUBSTITUTE, FACADE, WILD_CHARGE, REST, ATTRACT, THIEF, ROCK_SMASH, ENDURE, FLASH, VOLT_SWITCH, THUNDER_WAVE, BODY_SLAM, COUNTER, DOUBLE_EDGE, FIRE_PUNCH, HEADBUTT, ICE_PUNCH, SEISMIC_TOSS, SLEEP_TALK, SWAGGER, THUNDERPUNCH, ZAP_CANNON
 	; end

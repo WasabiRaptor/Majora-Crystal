@@ -1,21 +1,23 @@
-	db GOLEM ; 076
-
-	db  80, 110, 130,  45,  55,  65
-    evs  0,   0,   3,   0,   0,   0
+	db  80, 120, 130,  45,  55,  65
 	;   hp  atk  def  spd  sat  sdf
 
-	db ROCK, GROUND ; type
+	db ROCK, GROUND
 	db 45 ; catch rate
 	db 177 ; base exp
-	db NO_ITEM, EVERSTONE ; items
-	db GENDER_F50 ; gender ratio
-	db 15 ; step cycles to hatch
-	INCBIN "gfx/pokemon/golem/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_MINERAL, EGG_MINERAL ; egg groups
+	db NO_ITEM ; item 1
+	db EVERSTONE ; item 2
+	dn FEMALE_50, 2 ; gender, step cycles to hatch
+	dn 6, 6 ; frontpic dimensions
+	db ROCK_HEAD ; ability 1
+	db STURDY ; ability 2
+	db SAND_VEIL ; hidden ability
+	db MEDIUM_SLOW ; growth rate
+	dn INANIMATE, INANIMATE ; egg groups
 
-	; tm/hm learnset
-	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, ROLLOUT, ROAR, TOXIC, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, ENDURE, FRUSTRATION, EARTHQUAKE, RETURN, DIG, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SANDSTORM, FIRE_BLAST, DEFENSE_CURL, REST, ATTRACT, FIRE_PUNCH, FURY_CUTTER, STRENGTH, FLAMETHROWER
+	; ev_yield
+	ev_yield   0,   0,   3,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm DYNAMICPUNCH, CURSE, ROAR, TOXIC, HIDDEN_POWER, SUNNY_DAY, HYPER_BEAM, PROTECT, BULLDOZE, EARTHQUAKE, RETURN, DIG, DOUBLE_TEAM, FLAMETHROWER, SANDSTORM, FIRE_BLAST, SUBSTITUTE, FACADE, REST, ATTRACT, ROCK_SLIDE, ROCK_SMASH, FOCUS_BLAST, ENDURE, EXPLOSION, GIGA_IMPACT, STONE_EDGE, GYRO_BALL, STRENGTH, BODY_SLAM, COUNTER, DEFENSE_CURL, DOUBLE_EDGE, EARTH_POWER, FIRE_PUNCH, HEADBUTT, IRON_HEAD, ROLLOUT, SEISMIC_TOSS, SLEEP_TALK, SUCKER_PUNCH, SWAGGER, THUNDERPUNCH
 	; end

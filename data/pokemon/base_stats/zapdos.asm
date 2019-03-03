@@ -1,21 +1,27 @@
-	db ZAPDOS ; 145
-
 	db  90,  90,  85, 100, 125,  90
-    evs  0,   0,   0,   0,   3,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db ELECTRIC, FLYING ; type
+	db ELECTRIC, FLYING
 	db 3 ; catch rate
 	db 216 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_UNKNOWN ; gender ratio
-	db 80 ; step cycles to hatch
-	INCBIN "gfx/pokemon/zapdos/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_SLOW ; growth rate
-	dn EGG_NONE, EGG_NONE ; egg groups
+	db LUM_BERRY ; item 1
+	db LUM_BERRY ; item 2
+	dn GENDERLESS, 15 ; gender, step cycles to hatch
+	dn 7, 7 ; frontpic dimensions
+	db PRESSURE ; ability 1
+if DEF(FAITHFUL)
+	db PRESSURE ; ability 2
+else
+	db DRIZZLE ; ability 2
+endc
+	db STATIC ; hidden ability
+	db SLOW ; growth rate
+	dn NO_EGGS, NO_EGGS ; egg groups
 
-	; tm/hm learnset
-	tmhm CURSE, ROAR, TOXIC, ZAP_CANNON, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, THUNDER, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SANDSTORM, SWIFT, REST, STEEL_WING, FLY, FLASH, THUNDERBOLT
+	; ev_yield
+	ev_yield   0,   0,   0,   0,   3,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, ROAR, TOXIC, HIDDEN_POWER, SUNNY_DAY, HYPER_BEAM, LIGHT_SCREEN, PROTECT, RAIN_DANCE, THUNDERBOLT, THUNDER, RETURN, ROOST, DOUBLE_TEAM, SANDSTORM, SWIFT, AERIAL_ACE, SUBSTITUTE, FACADE, WILD_CHARGE, REST, STEEL_WING, ROCK_SMASH, ENDURE, GIGA_IMPACT, U_TURN, FLASH, VOLT_SWITCH, THUNDER_WAVE, FLY, DOUBLE_EDGE, SLEEP_TALK, SWAGGER, ZAP_CANNON
 	; end

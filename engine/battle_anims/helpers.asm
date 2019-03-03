@@ -1,4 +1,4 @@
-ReinitBattleAnimFrameset:
+ReinitBattleAnimFrameset: ; ce7bf (33:67bf)
 	ld hl, BATTLEANIMSTRUCT_FRAMESET_ID
 	add hl, bc
 	ld [hl], a
@@ -10,7 +10,7 @@ ReinitBattleAnimFrameset:
 	ld [hl], -1
 	ret
 
-GetBattleAnimFrame:
+GetBattleAnimFrame: ; ce7d1
 .loop
 	ld hl, BATTLEANIMSTRUCT_DURATION
 	add hl, bc
@@ -29,11 +29,10 @@ GetBattleAnimFrame:
 	inc [hl]
 	call .GetPointer
 	ld a, [hli]
-	cp dorestart_command
+	cp -2
 	jr z, .restart
-	cp endanim_command
+	cp -1
 	jr z, .repeat_last
-
 	push af
 	ld a, [hl]
 	push hl
@@ -42,11 +41,12 @@ GetBattleAnimFrame:
 	add hl, bc
 	ld [hl], a
 	pop hl
+
 .okay
 	ld a, [hl]
 	and $c0
 	srl a
-	ld [wBattleAnimTempAddSubFlags], a
+	ld [wBattleAnimTemp7], a
 	pop af
 	ret
 
@@ -72,7 +72,9 @@ GetBattleAnimFrame:
 	ld [hl], a
 	jr .loop
 
-.GetPointer:
+; ce823
+
+.GetPointer: ; ce823
 	ld hl, BATTLEANIMSTRUCT_FRAMESET_ID
 	add hl, bc
 	ld e, [hl]
@@ -91,7 +93,9 @@ GetBattleAnimFrame:
 	add hl, de
 	ret
 
-GetBattleAnimOAMPointer:
+; ce83c
+
+GetBattleAnimOAMPointer: ; ce83c
 	ld l, a
 	ld h, 0
 	ld de, BattleAnimOAMData
@@ -100,7 +104,9 @@ GetBattleAnimOAMPointer:
 	add hl, de
 	ret
 
-LoadBattleAnimObj:
+; ce846
+
+LoadBattleAnimObj: ; ce846 (33:6846)
 	push hl
 	ld l, a
 	ld h, 0
@@ -120,3 +126,5 @@ LoadBattleAnimObj:
 	call DecompressRequest2bpp
 	pop bc
 	ret
+
+; ce85e (33:685e)

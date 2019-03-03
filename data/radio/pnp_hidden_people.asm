@@ -2,9 +2,9 @@
 
 PnP_HiddenPeople:
 	db WILL
+	db KOGA
 	db BRUNO
 	db KAREN
-	db KOGA
 	db CHAMPION
 	; fallthrough
 PnP_HiddenPeople_BeatE4:
@@ -18,9 +18,15 @@ PnP_HiddenPeople_BeatE4:
 	db BLUE
 	; fallthrough
 PnP_HiddenPeople_BeatKanto:
+	db RIVAL0
 	db RIVAL1
-	db POKEMON_PROF
-	db CAL
 	db RIVAL2
+	db LYRA1
+	db LYRA2
+	db PROF_OAK
+	db PROF_ELM
+	db CAL
+	db CARRIE
 	db RED
+	db LEAF
 	db -1

@@ -1,21 +1,23 @@
-	db PORYGON2 ; 233
-
 	db  85,  80,  90,  60, 105,  95
-    evs  0,   0,   0,   0,   2,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, NORMAL ; type
+	db NORMAL, NORMAL
 	db 45 ; catch rate
 	db 180 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_UNKNOWN ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/porygon2/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_MINERAL, EGG_MINERAL ; egg groups
+	db NO_ITEM ; item 1
+	db UP_GRADE ; item 2
+	dn GENDERLESS, 3 ; gender, step cycles to hatch
+	dn 6, 6 ; frontpic dimensions
+	db TRACE ; ability 1
+	db DOWNLOAD ; ability 2
+	db ANALYTIC ; hidden ability
+	db MEDIUM_FAST ; growth rate
+	dn INANIMATE, INANIMATE ; egg groups
 
-	; tm/hm learnset
-	tmhm CURSE, TOXIC, ZAP_CANNON, PSYCH_UP, HIDDEN_POWER, SUNNY_DAY, SNORE, BLIZZARD, HYPER_BEAM, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, IRON_TAIL, THUNDER, RETURN, PSYCHIC_M, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, DEFENSE_CURL, DREAM_EATER, REST, THIEF, NIGHTMARE, FLASH, THUNDERBOLT, ICE_BEAM
+	; ev_yield
+	ev_yield   0,   0,   0,   0,   2,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, ICE_BEAM, BLIZZARD, HYPER_BEAM, PROTECT, RAIN_DANCE, SOLAR_BEAM, IRON_TAIL, THUNDERBOLT, THUNDER, RETURN, PSYCHIC, SHADOW_BALL, DOUBLE_TEAM, SWIFT, AERIAL_ACE, SUBSTITUTE, FACADE, REST, THIEF, ENDURE, GIGA_IMPACT, FLASH, THUNDER_WAVE, DEFENSE_CURL, DOUBLE_EDGE, DREAM_EATER, ICY_WIND, SLEEP_TALK, SWAGGER, TRICK, ZAP_CANNON, ZEN_HEADBUTT
 	; end

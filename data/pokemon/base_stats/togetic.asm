@@ -1,21 +1,23 @@
-	db TOGETIC ; 176
-
 	db  55,  40,  85,  40,  80, 105
-    evs  0,   0,   0,   0,   0,   2
 	;   hp  atk  def  spd  sat  sdf
 
-	db FAIRY, FLYING ; type
+	db FAIRY, FLYING
 	db 75 ; catch rate
 	db 114 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F12_5 ; gender ratio
-	db 10 ; step cycles to hatch
-	INCBIN "gfx/pokemon/togetic/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_FAST ; growth rate
-	dn EGG_FLYING, EGG_FAIRY ; egg groups
+	db NO_ITEM ; item 1
+	db NO_ITEM ; item 2
+	dn FEMALE_12_5, 1 ; gender, step cycles to hatch
+	dn 7, 7 ; frontpic dimensions
+	db HUSTLE ; ability 1
+	db SERENE_GRACE ; ability 2
+	db SUPER_LUCK ; hidden ability
+	db FAST ; growth rate
+	dn AVIAN, FAERY ; egg groups
 
-	; tm/hm learnset
-	tmhm HEADBUTT, CURSE, ROLLOUT, TOXIC, ZAP_CANNON, ROCK_SMASH, PSYCH_UP, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, SOLARBEAM, RETURN, PSYCHIC_M, SHADOW_BALL, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, FIRE_BLAST, SWIFT, DEFENSE_CURL, DREAM_EATER, REST, ATTRACT, STEEL_WING, FLY, FLASH, FLAMETHROWER
+	; ev_yield
+	ev_yield   0,   0,   0,   0,   0,   2
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, HYPER_BEAM, LIGHT_SCREEN, PROTECT, RAIN_DANCE, SAFEGUARD, SOLAR_BEAM, RETURN, PSYCHIC, SHADOW_BALL, ROOST, DOUBLE_TEAM, REFLECT, FLAMETHROWER, FIRE_BLAST, SWIFT, AERIAL_ACE, SUBSTITUTE, FACADE, REST, ATTRACT, STEEL_WING, DAZZLINGLEAM, ROCK_SMASH, ENDURE, DRAIN_PUNCH, WATER_PULSE, GIGA_IMPACT, FLASH, THUNDER_WAVE, FLY, BODY_SLAM, COUNTER, DEFENSE_CURL, DOUBLE_EDGE, DREAM_EATER, HEADBUTT, HYPER_VOICE, ROLLOUT, SEISMIC_TOSS, SLEEP_TALK, SWAGGER, TRICK, ZAP_CANNON, ZEN_HEADBUTT
 	; end

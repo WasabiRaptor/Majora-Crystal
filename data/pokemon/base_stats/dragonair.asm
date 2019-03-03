@@ -1,21 +1,23 @@
-	db DRAGONAIR ; 148
-
 	db  61,  84,  65,  70,  70,  70
-    evs  0,   2,   0,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db DRAGON, DRAGON ; type
+	db DRAGON, DRAGON
 	db 45 ; catch rate
 	db 144 ; base exp
-	db NO_ITEM, DRAGON_SCALE ; items
-	db GENDER_F50 ; gender ratio
-	db 40 ; step cycles to hatch
-	INCBIN "gfx/pokemon/dragonair/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_SLOW ; growth rate
-	dn EGG_WATER_1, EGG_DRAGON ; egg groups
+	db NO_ITEM ; item 1
+	db DRAGON_SCALE ; item 2
+	dn FEMALE_50, 7 ; gender, step cycles to hatch
+	dn 6, 6 ; frontpic dimensions
+	db SHED_SKIN ; ability 1
+	db SHED_SKIN ; ability 2
+	db MARVEL_SCALE ; hidden ability
+	db SLOW ; growth rate
+	dn AMPHIBIAN, REPTILE ; egg groups
 
-	; tm/hm learnset
-	tmhm HEADBUTT, CURSE, TOXIC, ZAP_CANNON, HIDDEN_POWER, SNORE, BLIZZARD, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, IRON_TAIL, DRAGONBREATH, THUNDER, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, FIRE_BLAST, SWIFT, REST, ATTRACT, SURF, WATERFALL, FLAMETHROWER, THUNDERBOLT, ICE_BEAM
+	; ev_yield
+	ev_yield   0,   2,   0,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, TOXIC, HAIL, HIDDEN_POWER, SUNNY_DAY, ICE_BEAM, BLIZZARD, HYPER_BEAM, LIGHT_SCREEN, PROTECT, RAIN_DANCE, SAFEGUARD, IRON_TAIL, THUNDERBOLT, THUNDER, RETURN, DOUBLE_TEAM, FLAMETHROWER, FIRE_BLAST, SWIFT, SUBSTITUTE, FACADE, REST, ATTRACT, ENDURE, DRAGON_PULSE, WATER_PULSE, THUNDER_WAVE, FLY, SURF, WHIRLPOOL, WATERFALL, AQUA_TAIL, BODY_SLAM, DOUBLE_EDGE, HEADBUTT, ICY_WIND, SLEEP_TALK, SWAGGER, ZAP_CANNON
 	; end

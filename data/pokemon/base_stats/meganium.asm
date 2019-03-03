@@ -1,21 +1,31 @@
-	db MEGANIUM ; 154
-
 	db  80,  82, 100,  80,  83, 100
-    evs  0,   0,   1,   0,   0,   2
 	;   hp  atk  def  spd  sat  sdf
 
-	db GRASS, GRASS ; type
+if DEF(FAITHFUL)
+	db GRASS, GRASS
+else
+	db GRASS, FAIRY
+endc
 	db 45 ; catch rate
 	db 208 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F12_5 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/meganium/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_MONSTER, EGG_PLANT ; egg groups
+	db NO_ITEM ; item 1
+	db NO_ITEM ; item 2
+	dn FEMALE_12_5, 3 ; gender, step cycles to hatch
+	dn 7, 7 ; frontpic dimensions
+	db OVERGROW ; ability 1
+if DEF(FAITHFUL)
+	db OVERGROW ; ability 2
+else
+	db NATURAL_CURE ; ability 2
+endc
+	db LEAF_GUARD ; hidden ability
+	db MEDIUM_SLOW ; growth rate
+	dn MONSTER, PLANT ; egg groups
 
-	; tm/hm learnset
-	tmhm HEADBUTT, CURSE, TOXIC, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SWEET_SCENT, SNORE, HYPER_BEAM, PROTECT, GIGA_DRAIN, ENDURE, FRUSTRATION, SOLARBEAM, IRON_TAIL, EARTHQUAKE, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK,  REST, ATTRACT, FURY_CUTTER, CUT, STRENGTH, FLASH
+	; ev_yield
+	ev_yield   0,   0,   1,   0,   0,   2
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, CALM_MIND, TOXIC, HIDDEN_POWER, SUNNY_DAY, HYPER_BEAM, LIGHT_SCREEN, PROTECT, GIGA_DRAIN, SAFEGUARD, BULLDOZE, SOLAR_BEAM, IRON_TAIL, EARTHQUAKE, RETURN, DOUBLE_TEAM, REFLECT, SUBSTITUTE, FACADE, REST, ATTRACT, DAZZLINGLEAM, ROCK_SMASH, ENERGY_BALL, ENDURE, GIGA_IMPACT, FLASH, SWORDS_DANCE, CUT, STRENGTH, BODY_SLAM, COUNTER, DOUBLE_EDGE, EARTH_POWER, HEADBUTT, SEED_BOMB, SLEEP_TALK, SWAGGER
 	; end

@@ -1,138 +1,109 @@
-text   EQUS "db TX_START,"    ; Start writing text.
-next   EQUS "db \"<NEXT>\","  ; Move a line down.
+text   EQUS "db \"<START>\"," ; Start writing text.
+next   EQUS "db \"<NL>\","    ; Move a line down.
+next1  EQUS "db \"<LNBRK>\"," ; Move a line down (without line spacing)
 line   EQUS "db \"<LINE>\","  ; Start writing at the bottom line.
-page   EQUS "db \"@\","       ; Start a new Pokédex page.
+page   EQUS "db \"@\","       ; Start a new Pokedex page.
 para   EQUS "db \"<PARA>\","  ; Start a new paragraph.
 cont   EQUS "db \"<CONT>\","  ; Scroll to the next line.
 done   EQUS "db \"<DONE>\""   ; End a text box.
 prompt EQUS "db \"<PROMPT>\"" ; Prompt the player to end a text box (initiating some other event).
 
-; TextCommands indexes (see home/text.asm)
-	enum_start
-
-	enum TX_START ; $00
-text_start: MACRO
-	db TX_START
-ENDM
-
-	enum TX_RAM ; $01
-text_from_ram: MACRO
-	db TX_RAM
+text_from_ram: macro
+	db "<RAM>"
 	dw \1
-ENDM
+endm
 
-	enum TX_BCD ; $02
-text_bcd: MACRO
-	db TX_BCD
+text_bcd: macro
+	db "<BCD>"
 	dw \1
 	db \2
-ENDM
+endm
 
-	enum TX_MOVE ; $03
-text_move: MACRO
-	db TX_MOVE
+text_move: macro
+	db "<MOVE>"
 	dw \1
-ENDM
+endm
 
-	enum TX_BOX ; $04
-text_box: MACRO
-	db TX_BOX
+text_box: macro
+	db "<BOX>"
 	dw \1
 	db \2, \3
 ENDM
 
-	enum TX_LOW ; $05
-text_low: MACRO
-	db TX_LOW
-ENDM
+text_low: macro
+	db "<LOW>"
+endm
 
-	enum TX_WAIT_BUTTON ; $06
-text_waitbutton: MACRO
-	db TX_WAIT_BUTTON
-ENDM
+text_waitbutton: macro
+	db "<WAIT>"
+endm
 
-	enum TX_SCROLL ; $07
-text_scroll: MACRO
-	db TX_SCROLL
-ENDM
+text_scroll: macro
+	db "<SCROLL>"
+endm
 
-	enum TX_START_ASM ; $08
-start_asm: MACRO
-	db TX_START_ASM
-ENDM
+start_asm: macro
+	db "<ASM>"
+endm
 
-	enum TX_NUM ; $09
-deciram: MACRO
-	db TX_NUM
+deciram: macro
+	db "<NUM>"
 	dw \1 ; address
 	dn \2, \3 ; bytes, digits
-ENDM
+endm
 
-	enum TX_EXIT ; $0a
-interpret_data: MACRO
-	db TX_EXIT
-ENDM
+interpret_data: macro
+	db "<EXIT>"
+endm
 
-	enum TX_SOUND_DEX_FANFARE_50_79 ; $0b
-sound_dex_fanfare_50_79: MACRO
-	db TX_SOUND_DEX_FANFARE_50_79
-ENDM
+sound_dex_fanfare_50_79: macro
+	db "<DEX2>"
+endm
 
-	enum TX_DOTS ; $0c
-limited_interpret_data: MACRO
-	db TX_DOTS
+limited_interpret_data: macro
+	db "<DOTS>"
 	db \1
-ENDM
+endm
 
-	enum TX_LINK_WAIT_BUTTON ; $0d
-link_wait_button: MACRO
-	db TX_LINK_WAIT_BUTTON
-ENDM
+link_wait_button: macro
+	db "<LINK>"
+endm
 
-	enum TX_SOUND_DEX_FANFARE_20_49 ; $0e
-sound_dex_fanfare_20_49: MACRO
-	db TX_SOUND_DEX_FANFARE_20_49
-ENDM
+sound_dex_fanfare_20_49: macro
+	db "<DEX1>"
+endm
 
-	enum TX_SOUND_ITEM ; $0f
-sound_item: MACRO
-	db TX_SOUND_ITEM
-ENDM
+sound_item: macro
+	db "<ITEM>"
+endm
 
-	enum TX_SOUND_CAUGHT_MON ; $10
-sound_caught_mon: MACRO
-	db TX_SOUND_CAUGHT_MON
-ENDM
+sound_caught_mon: macro
+	db "<CAUGHT>"
+endm
 
-	enum TX_SOUND_DEX_FANFARE_80_109 ; $11
-sound_dex_fanfare_80_109: MACRO
-	db TX_SOUND_DEX_FANFARE_80_109
-ENDM
+sound_dex_fanfare_80_109: macro
+	db "<DEX3>"
+endm
 
-	enum TX_SOUND_FANFARE ; $12
-sound_fanfare: MACRO
-	db TX_SOUND_FANFARE
-ENDM
+sound_fanfare: macro
+	db "<BEEP>"
+endm
 
-	enum TX_SOUND_SLOT_MACHINE_START ; $13
-sound_slot_machine_start: MACRO
-	db TX_SOUND_SLOT_MACHINE_START
-ENDM
+sound_slot_machine_start: macro
+	db "<SLOTS>"
+endm
 
-	enum TX_STRINGBUFFER ; $14
-text_buffer: MACRO
-	db TX_STRINGBUFFER
+text_buffer: macro
+	db "<BUFFER>"
 	db \1
-ENDM
+endm
 
-	enum TX_DAY ; $15
-current_day: MACRO
-	db TX_DAY
-ENDM
+current_day: macro
+	db "<DAY>"
+endm
 
-	enum TX_FAR ; $16
 text_jump: MACRO
-	db TX_FAR
+	db "<FAR>"
 	dw \1
 	db BANK(\1)
 ENDM

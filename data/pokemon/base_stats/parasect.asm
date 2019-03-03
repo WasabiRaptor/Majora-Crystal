@@ -1,21 +1,28 @@
-	db PARASECT ; 047
-
+if DEF(FAITHFUL)
 	db  60,  95,  80,  30,  60,  80
-    evs  0,   2,   1,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  60, 115, 100,  30,  60,  80
+	;   hp  atk  def  spd  sat  sdf
+endc
 
-	db BUG, GRASS ; type
+	db BUG, GRASS
 	db 75 ; catch rate
 	db 128 ; base exp
-	db TINYMUSHROOM, BIG_MUSHROOM ; items
-	db GENDER_F50 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/parasect/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_BUG, EGG_PLANT ; egg groups
+	db TINYMUSHROOM ; item 1
+	db BIG_MUSHROOM ; item 2
+	dn FEMALE_50, 3 ; gender, step cycles to hatch
+	dn 7, 7 ; frontpic dimensions
+	db EFFECT_SPORE ; ability 1
+	db DRY_SKIN ; ability 2
+	db DAMP ; hidden ability
+	db MEDIUM_FAST ; growth rate
+	dn INSECT, PLANT ; egg groups
 
-	; tm/hm learnset
-	tmhm CURSE, TOXIC, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SWEET_SCENT, SNORE, HYPER_BEAM, PROTECT, GIGA_DRAIN, ENDURE, FRUSTRATION, SOLARBEAM, RETURN, DIG, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, REST, ATTRACT, THIEF, FURY_CUTTER, CUT, FLASH
+	; ev_yield
+	ev_yield   0,   2,   1,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, HONE_CLAWS, HYPER_BEAM, LIGHT_SCREEN, PROTECT, GIGA_DRAIN, SOLAR_BEAM, RETURN, DIG, DOUBLE_TEAM, SLUDGE_BOMB, AERIAL_ACE, SUBSTITUTE, FACADE, REST, ATTRACT, THIEF, ROCK_SMASH, LEECH_LIFE, ENERGY_BALL, FALSE_SWIPE, X_SCISSOR, ENDURE, SHADOW_CLAW, GIGA_IMPACT, FLASH, SWORDS_DANCE, CUT, BODY_SLAM, COUNTER, DOUBLE_EDGE, DREAM_EATER, KNOCK_OFF, SEED_BOMB, SLEEP_TALK, SWAGGER
 	; end

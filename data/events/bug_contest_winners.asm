@@ -1,6 +1,5 @@
 BugContestantPointers:
-; there are NUM_BUG_CONTESTANTS + 1 entries
-	dw BugContestant_BugCatcherDon ; this reverts back to the player
+	dw BugContestant_BugCatcherDon ; This reverts back to the player
 	dw BugContestant_BugCatcherDon
 	dw BugContestant_BugCatcherEd
 	dw BugContestant_CooltrainerMNick
@@ -9,14 +8,8 @@ BugContestantPointers:
 	dw BugContestant_CamperBarry
 	dw BugContestant_PicnickerCindy
 	dw BugContestant_BugCatcherJosh
-	dw BugContestant_YoungsterSamuel
+	dw BugContestant_SchoolboyJohnny
 	dw BugContestant_SchoolboyKipp
-
-; contestant format:
-;   db class, id
-;   dbw 1st-place mon, score
-;   dbw 2nd-place mon, score
-;   dbw 3rd-place mon, score
 
 BugContestant_BugCatcherDon:
 	db BUG_CATCHER, DON
@@ -26,7 +19,7 @@ BugContestant_BugCatcherDon:
 
 BugContestant_BugCatcherEd:
 	db BUG_CATCHER, ED
-	dbw BUTTERFREE, 286
+	dbw YANMA,      286
 	dbw BUTTERFREE, 251
 	dbw CATERPIE,   237
 
@@ -38,12 +31,12 @@ BugContestant_CooltrainerMNick:
 
 BugContestant_PokefanMWilliam:
 	db POKEFANM, WILLIAM
-	dbw PINSIR,     332
+	dbw VENOMOTH,   332
 	dbw BUTTERFREE, 324
 	dbw VENONAT,    321
 
 BugContestant_BugCatcherBenny:
-	db BUG_CATCHER, BUG_CATCHER_BENNY
+	db BUG_CATCHER, BENNY
 	dbw BUTTERFREE, 318
 	dbw WEEDLE,     295
 	dbw CATERPIE,   285
@@ -66,8 +59,8 @@ BugContestant_BugCatcherJosh:
 	dbw BUTTERFREE, 292
 	dbw METAPOD,    282
 
-BugContestant_YoungsterSamuel:
-	db YOUNGSTER, SAMUEL
+BugContestant_SchoolboyJohnny:
+	db SCHOOLBOY, JOHNNY
 	dbw WEEDLE,     270
 	dbw PINSIR,     282
 	dbw CATERPIE,   251

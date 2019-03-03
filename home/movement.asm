@@ -1,24 +1,21 @@
-InitMovementBuffer::
-	ld [wMovementBufferObject], a
+InitMovementBuffer:: ; 1b1e
+	ld [wMovementBufferPerson], a
 	xor a
 	ld [wMovementBufferCount], a
-	ld a, $0 ; useless
-	ld [wUnusedMovementBufferBank], a
-	ld a, LOW(wMovementBuffer)
-	ld [wUnusedMovementBufferPointer], a
-	ld a, HIGH(wMovementBuffer)
-	ld [wUnusedMovementBufferPointer + 1], a
+	ld [wd004], a
 	ret
+; 1b35
 
-DecrementMovementBufferCount::
+DecrementMovementBufferCount:: ; 1b35
 	ld a, [wMovementBufferCount]
 	and a
 	ret z
 	dec a
 	ld [wMovementBufferCount], a
 	ret
+; 1b3f
 
-AppendToMovementBuffer::
+AppendToMovementBuffer:: ; 1b3f
 	push hl
 	push de
 	ld hl, wMovementBufferCount
@@ -31,8 +28,9 @@ AppendToMovementBuffer::
 	pop de
 	pop hl
 	ret
+; 1b50
 
-AppendToMovementBufferNTimes::
+AppendToMovementBufferNTimes:: ; 1b50
 	push af
 	ld a, c
 	and a
@@ -47,8 +45,9 @@ AppendToMovementBufferNTimes::
 	dec c
 	jr nz, .loop
 	ret
+; 1b5f
 
-ComputePathToWalkToPlayer::
+ComputePathToWalkToPlayer:: ; 1b5f
 	push af
 ; compare x coords, load left/right into h, and x distance into d
 	ld a, b
@@ -94,10 +93,10 @@ ComputePathToWalkToPlayer::
 	ld a, l
 	call .GetMovementData
 	ld c, e
-	call AppendToMovementBufferNTimes
-	ret
+	jp AppendToMovementBufferNTimes
+; 1b92
 
-.GetMovementData:
+.GetMovementData: ; 1b92
 	push de
 	push hl
 	ld l, b
@@ -113,80 +112,19 @@ ComputePathToWalkToPlayer::
 	pop hl
 	pop de
 	ret
+; 1ba5
 
 .MovementData:
-	slow_step DOWN
-	slow_step UP
-	slow_step LEFT
-	slow_step RIGHT
-	step DOWN
-	step UP
-	step LEFT
-	step RIGHT
-	big_step DOWN
-	big_step UP
-	big_step LEFT
-	big_step RIGHT
-
-SetMenuAttributes::
-	push hl
-	push bc
-	ld hl, w2DMenuCursorInitY
-	ld b, $8
-.loop
-	ld a, [de]
-	inc de
-	ld [hli], a
-	dec b
-	jr nz, .loop
-	ld a, $1
-	ld [hli], a
-	ld [hli], a
-	xor a
-	ld [hli], a
-	ld [hli], a
-	ld [hli], a
-	pop bc
-	pop hl
-	ret
-
-StaticMenuJoypad::
-	callfar _StaticMenuJoypad
-	call GetMenuJoypad
-	ret
-
-ScrollingMenuJoypad::
-	callfar _ScrollingMenuJoypad
-	call GetMenuJoypad
-	ret
-
-GetMenuJoypad::
-	push bc
-	push af
-	ldh a, [hJoyLast]
-	and D_PAD
-	ld b, a
-	ldh a, [hJoyPressed]
-	and BUTTONS
-	or b
-	ld b, a
-	pop af
-	ld a, b
-	pop bc
-	ret
-
-PlaceHollowCursor::
-	ld hl, wCursorCurrentTile
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	ld [hl], "▷"
-	ret
-
-HideCursor::
-	ld hl, wCursorCurrentTile
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	ld [hl], " "
-	ret
+	slow_step_down
+	slow_step_up
+	slow_step_left
+	slow_step_right
+	step_down
+	step_up
+	step_left
+	step_right
+	big_step_down
+	big_step_up
+	big_step_left
+	big_step_right
+; 1bb1

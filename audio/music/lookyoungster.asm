@@ -1,9 +1,10 @@
-Music_LookYoungster:
+Music_LookYoungster: ; f66c3
 	musicheader 3, 1, Music_LookYoungster_Ch1
 	musicheader 1, 2, Music_LookYoungster_Ch2
 	musicheader 1, 3, Music_LookYoungster_Ch3
+; f66cc
 
-Music_LookYoungster_Ch1:
+Music_LookYoungster_Ch1: ; f66cc
 	tempo 118
 	volume $77
 	stereopanning $f
@@ -24,7 +25,7 @@ Music_LookYoungster_Ch1:
 	note __, 2
 	note C_, 6
 	intensity $b3
-Music_LookYoungster_branch_f66ea:
+Music_LookYoungster_branch_f66ea: ; f66ea
 	note __, 2
 	octave 3
 	note G_, 1
@@ -58,10 +59,9 @@ Music_LookYoungster_branch_f66ea:
 	note __, 1
 	note __, 16
 	loopchannel 0, Music_LookYoungster_branch_f66ea
+; f670e
 
-	db $ff
-
-Music_LookYoungster_Ch2:
+Music_LookYoungster_Ch2: ; f670f
 	stereopanning $f0
 	vibrato $12, $26
 	dutycycle $1
@@ -82,7 +82,7 @@ Music_LookYoungster_Ch2:
 	note F_, 4
 	note __, 2
 	note F#, 6
-Music_LookYoungster_branch_f672f:
+Music_LookYoungster_branch_f672f: ; f672f
 	dutycycle $3
 	intensity $b3
 	note __, 2
@@ -156,10 +156,9 @@ Music_LookYoungster_branch_f672f:
 	note C_, 1
 	note __, 1
 	loopchannel 0, Music_LookYoungster_branch_f672f
+; f6783
 
-	db $ff
-
-Music_LookYoungster_Ch3:
+Music_LookYoungster_Ch3: ; f6784
 	stereopanning $ff
 	vibrato $2, $24
 	notetype $c, $25
@@ -195,7 +194,7 @@ Music_LookYoungster_Ch3:
 	note __, 2
 	note G#, 6
 	intensity $25
-Music_LookYoungster_branch_f67ae:
+Music_LookYoungster_branch_f67ae: ; f67ae
 	octave 2
 	note G_, 1
 	note __, 1
@@ -291,5 +290,4 @@ Music_LookYoungster_branch_f67ae:
 	note G#, 1
 	note __, 1
 	loopchannel 0, Music_LookYoungster_branch_f67ae
-
-	db $ff
+; f6810

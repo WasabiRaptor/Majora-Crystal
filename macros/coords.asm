@@ -18,7 +18,7 @@ debgcoord EQUS "bgcoord de,"
 bgcoord: MACRO
 ; register, x, y[, origin]
 	if _NARG < 4
-	ld \1, (\3) * BG_MAP_WIDTH + (\2) + vBGMap0
+	ld \1, (\3) * BG_MAP_WIDTH + (\2) + VBGMap0
 	else
 	ld \1, (\3) * BG_MAP_WIDTH + (\2) + \4
 	endc
@@ -26,11 +26,11 @@ ENDM
 
 dwcoord: MACRO
 ; x, y
-rept _NARG / 2
+	rept _NARG / 2
 	dw (\2) * SCREEN_WIDTH + (\1) + wTileMap
 	shift
 	shift
-endr
+	endr
 ENDM
 
 ldcoord_a: MACRO

@@ -1,21 +1,31 @@
-	db FERALIGATR ; 160
-
 	db  85, 105, 100,  78,  79,  83
-    evs  0,   2,   1,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db WATER, WATER ; type
+if DEF(FAITHFUL)
+	db WATER, WATER
+else
+	db WATER, DARK
+endc
 	db 45 ; catch rate
 	db 210 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F12_5 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/feraligatr/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_MONSTER, EGG_WATER_1 ; egg groups
+	db NO_ITEM ; item 1
+	db NO_ITEM ; item 2
+	dn FEMALE_12_5, 3 ; gender, step cycles to hatch
+	dn 7, 7 ; frontpic dimensions
+	db TORRENT ; ability 1
+if DEF(FAITHFUL)
+	db TORRENT ; ability 2
+else
+	db INTIMIDATE ; ability 2
+endc
+	db SHEER_FORCE ; hidden ability
+	db MEDIUM_SLOW ; growth rate
+	dn MONSTER, AMPHIBIAN ; egg groups
 
-	; tm/hm learnset
-	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, ROAR, TOXIC, ROCK_SMASH, HIDDEN_POWER, SNORE, BLIZZARD, HYPER_BEAM, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, IRON_TAIL, EARTHQUAKE, RETURN, DIG, MUD_SLAP, DOUBLE_TEAM, ICE_PUNCH, SWAGGER, SLEEP_TALK,  REST, ATTRACT, FURY_CUTTER, CUT, SURF, STRENGTH, WHIRLPOOL, ICE_BEAM
+	; ev_yield
+	ev_yield   0,   2,   1,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm DYNAMICPUNCH, DRAGON_CLAW, CURSE, ROAR, TOXIC, HAIL, HIDDEN_POWER, HONE_CLAWS, ICE_BEAM, BLIZZARD, HYPER_BEAM, PROTECT, RAIN_DANCE, BULLDOZE, IRON_TAIL, EARTHQUAKE, RETURN, DIG, DOUBLE_TEAM, AERIAL_ACE, SUBSTITUTE, FACADE, REST, ATTRACT, ROCK_SLIDE, ROCK_SMASH, FOCUS_BLAST, SCALD, ENDURE, DRAGON_PULSE, WATER_PULSE, SHADOW_CLAW, AVALANCHE, GIGA_IMPACT, SWORDS_DANCE, CUT, SURF, STRENGTH, WHIRLPOOL, WATERFALL, AQUA_TAIL, BODY_SLAM, COUNTER, DOUBLE_EDGE, HEADBUTT, ICE_PUNCH, ICY_WIND, SEISMIC_TOSS, SLEEP_TALK, SWAGGER
 	; end

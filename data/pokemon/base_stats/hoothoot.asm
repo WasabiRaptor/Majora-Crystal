@@ -1,21 +1,23 @@
-	db HOOTHOOT ; 163
-
 	db  60,  30,  30,  50,  36,  56
-    evs  1,   0,   0,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, FLYING ; type
+	db NORMAL, FLYING
 	db 255 ; catch rate
 	db 58 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F50 ; gender ratio
-	db 15 ; step cycles to hatch
-	INCBIN "gfx/pokemon/hoothoot/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_FLYING, EGG_FLYING ; egg groups
+	db NO_ITEM ; item 1
+	db NO_ITEM ; item 2
+	dn FEMALE_50, 2 ; gender, step cycles to hatch
+	dn 5, 5 ; frontpic dimensions
+	db INSOMNIA ; ability 1
+	db KEEN_EYE ; ability 2
+	db TINTED_LENS ; hidden ability
+	db MEDIUM_FAST ; growth rate
+	dn AVIAN, AVIAN ; egg groups
 
-	; tm/hm learnset
-	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, ENDURE, FRUSTRATION, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, DREAM_EATER,  REST, ATTRACT, THIEF, STEEL_WING, NIGHTMARE, FLY, FLASH
+	; ev_yield
+	ev_yield   1,   0,   0,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, CALM_MIND, TOXIC, HIDDEN_POWER, SUNNY_DAY, PROTECT, RAIN_DANCE, RETURN, PSYCHIC, SHADOW_BALL, ROOST, DOUBLE_TEAM, REFLECT, SWIFT, AERIAL_ACE, SUBSTITUTE, FACADE, REST, ATTRACT, THIEF, STEEL_WING, ENDURE, FLASH, FLY, DOUBLE_EDGE, DREAM_EATER, HYPER_VOICE, SLEEP_TALK, SWAGGER, ZEN_HEADBUTT
 	; end

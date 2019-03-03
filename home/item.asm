@@ -1,8 +1,4 @@
-DoItemEffect::
-	farcall _DoItemEffect
-	ret
-
-CheckTossableItem::
+CheckTossableItem:: ; 2f46
 	push hl
 	push de
 	push bc
@@ -11,12 +7,13 @@ CheckTossableItem::
 	pop de
 	pop hl
 	ret
+; 2f53
 
-TossItem::
+TossItem:: ; 2f53
 	push hl
 	push de
 	push bc
-	ldh a, [hROMBank]
+	ld a, [hROMBank]
 	push af
 	ld a, BANK(_TossItem)
 	rst Bankswitch
@@ -30,10 +27,11 @@ TossItem::
 	pop de
 	pop hl
 	ret
+; 2f66
 
-ReceiveItem::
+ReceiveItem:: ; 2f66
 	push bc
-	ldh a, [hROMBank]
+	ld a, [hROMBank]
 	push af
 	ld a, BANK(_ReceiveItem)
 	rst Bankswitch
@@ -49,12 +47,23 @@ ReceiveItem::
 	rst Bankswitch
 	pop bc
 	ret
+; 2f79
 
-CheckItem::
+ReceiveTMHM:: ; d3c4
+	ld a, [wCurTMHM]
+	ld e, a
+	ld d, 0
+	ld b, SET_FLAG
+	ld hl, wTMsHMs
+	call FlagAction
+	scf
+	ret
+
+CheckItem:: ; 2f79
 	push hl
 	push de
 	push bc
-	ldh a, [hROMBank]
+	ld a, [hROMBank]
 	push af
 	ld a, BANK(_CheckItem)
 	rst Bankswitch
@@ -67,4 +76,39 @@ CheckItem::
 	pop bc
 	pop de
 	pop hl
+	ret
+; 2f8c
+
+CheckTMHM:: ; d3fb
+	ld a, [wCurTMHM]
+	ld e, a
+	ld d, 0
+	ld b, CHECK_FLAG
+	ld hl, wTMsHMs
+	call FlagAction
+	ret z
+	scf
+	ret
+
+CountItem::
+	push bc
+	ld a, [hROMBank]
+	push af
+	ld a, BANK(_CountItem)
+	rst Bankswitch
+	push hl
+	push de
+
+	call _CountItem
+	ld a, b
+	ld [wBuffer1], a
+	ld a, c
+	ld [wBuffer2], a
+
+	pop de
+	pop hl
+	pop bc
+	ld a, b
+	rst Bankswitch
+	pop bc
 	ret

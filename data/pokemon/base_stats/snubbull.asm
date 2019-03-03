@@ -1,21 +1,23 @@
-	db SNUBBULL ; 209
-
 	db  60,  80,  50,  30,  40,  40
-    evs  0,   1,   0,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db FAIRY, FAIRY ; type
+	db FAIRY, FAIRY
 	db 190 ; catch rate
 	db 63 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F75 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/snubbull/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_FAST ; growth rate
-	dn EGG_GROUND, EGG_FAIRY ; egg groups
+	db NO_ITEM ; item 1
+	db NO_ITEM ; item 2
+	dn FEMALE_75, 3 ; gender, step cycles to hatch
+	dn 6, 6 ; frontpic dimensions
+	db INTIMIDATE ; ability 1
+	db RUN_AWAY ; ability 2
+	db RATTLED ; hidden ability
+	db FAST ; growth rate
+	dn FIELD, FAERY ; egg groups
 
-	; tm/hm learnset
-	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, ROAR, TOXIC, ZAP_CANNON, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, THUNDER, RETURN, SHADOW_BALL, MUD_SLAP, DOUBLE_TEAM, ICE_PUNCH, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, DEFENSE_CURL, THUNDERPUNCH, REST, ATTRACT, THIEF, FIRE_PUNCH, STRENGTH, THUNDERBOLT
+	; ev_yield
+	ev_yield   0,   1,   0,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm DYNAMICPUNCH, CURSE, ROAR, TOXIC, BULK_UP, HIDDEN_POWER, SUNNY_DAY, PROTECT, RAIN_DANCE, BULLDOZE, SOLAR_BEAM, THUNDERBOLT, THUNDER, EARTHQUAKE, RETURN, DIG, SHADOW_BALL, DOUBLE_TEAM, REFLECT, FLAMETHROWER, SLUDGE_BOMB, FIRE_BLAST, SUBSTITUTE, FACADE, WILD_CHARGE, REST, ATTRACT, THIEF, DAZZLINGLEAM, ROCK_SMASH, ENDURE, WATER_PULSE, THUNDER_WAVE, STRENGTH, BODY_SLAM, COUNTER, DEFENSE_CURL, DOUBLE_EDGE, FIRE_PUNCH, HEADBUTT, HYPER_VOICE, ICE_PUNCH, SEISMIC_TOSS, SLEEP_TALK, SWAGGER, THUNDERPUNCH, ZAP_CANNON
 	; end

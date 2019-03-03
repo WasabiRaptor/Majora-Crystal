@@ -1,1268 +1,1270 @@
-BattleAnimFrameData:
-; entries correspond to BATTLEANIMFRAMESET_* constants
-	dw .Frameset_00 ; BATTLEANIMFRAMESET_00
-	dw .Frameset_01 ; BATTLEANIMFRAMESET_01
-	dw .Frameset_02 ; BATTLEANIMFRAMESET_02
-	dw .Frameset_03 ; BATTLEANIMFRAMESET_03
-	dw .Frameset_04 ; BATTLEANIMFRAMESET_04
-	dw .Frameset_05 ; BATTLEANIMFRAMESET_05
-	dw .Frameset_06 ; BATTLEANIMFRAMESET_06
-	dw .Frameset_07 ; BATTLEANIMFRAMESET_07
-	dw .Frameset_08 ; BATTLEANIMFRAMESET_08
-	dw .Frameset_09 ; BATTLEANIMFRAMESET_09
-	dw .Frameset_0a ; BATTLEANIMFRAMESET_0A
-	dw .Frameset_0b ; BATTLEANIMFRAMESET_0B
-	dw .Frameset_0c ; BATTLEANIMFRAMESET_0C
-	dw .Frameset_0d ; BATTLEANIMFRAMESET_0D
-	dw .Frameset_0e ; BATTLEANIMFRAMESET_0E
-	dw .Frameset_0f ; BATTLEANIMFRAMESET_0F
-	dw .Frameset_10 ; BATTLEANIMFRAMESET_10
-	dw .Frameset_11 ; BATTLEANIMFRAMESET_11
-	dw .Frameset_12 ; BATTLEANIMFRAMESET_12
-	dw .Frameset_13 ; BATTLEANIMFRAMESET_13
-	dw .Frameset_14 ; BATTLEANIMFRAMESET_14
-	dw .Frameset_15 ; BATTLEANIMFRAMESET_15
-	dw .Frameset_16 ; BATTLEANIMFRAMESET_16
-	dw .Frameset_17 ; BATTLEANIMFRAMESET_17
-	dw .Frameset_18 ; BATTLEANIMFRAMESET_18
-	dw .Frameset_19 ; BATTLEANIMFRAMESET_19
-	dw .Frameset_1a ; BATTLEANIMFRAMESET_1A
-	dw .Frameset_1b ; BATTLEANIMFRAMESET_1B
-	dw .Frameset_1c ; BATTLEANIMFRAMESET_1C
-	dw .Frameset_1d ; BATTLEANIMFRAMESET_1D
-	dw .Frameset_1e ; BATTLEANIMFRAMESET_1E
-	dw .Frameset_1f ; BATTLEANIMFRAMESET_1F
-	dw .Frameset_20 ; BATTLEANIMFRAMESET_20
-	dw .Frameset_21 ; BATTLEANIMFRAMESET_21
-	dw .Frameset_22 ; BATTLEANIMFRAMESET_22
-	dw .Frameset_23 ; BATTLEANIMFRAMESET_23
-	dw .Frameset_24 ; BATTLEANIMFRAMESET_24
-	dw .Frameset_25 ; BATTLEANIMFRAMESET_25
-	dw .Frameset_26 ; BATTLEANIMFRAMESET_26
-	dw .Frameset_27 ; BATTLEANIMFRAMESET_27
-	dw .Frameset_28 ; BATTLEANIMFRAMESET_28
-	dw .Frameset_29 ; BATTLEANIMFRAMESET_29
-	dw .Frameset_2a ; BATTLEANIMFRAMESET_2A
-	dw .Frameset_2b ; BATTLEANIMFRAMESET_2B
-	dw .Frameset_2c ; BATTLEANIMFRAMESET_2C
-	dw .Frameset_2d ; BATTLEANIMFRAMESET_2D
-	dw .Frameset_2e ; BATTLEANIMFRAMESET_2E
-	dw .Frameset_2f ; BATTLEANIMFRAMESET_2F
-	dw .Frameset_30 ; BATTLEANIMFRAMESET_30
-	dw .Frameset_31 ; BATTLEANIMFRAMESET_31
-	dw .Frameset_32 ; BATTLEANIMFRAMESET_32
-	dw .Frameset_33 ; BATTLEANIMFRAMESET_33
-	dw .Frameset_34 ; BATTLEANIMFRAMESET_34
-	dw .Frameset_35 ; BATTLEANIMFRAMESET_35
-	dw .Frameset_36 ; BATTLEANIMFRAMESET_36
-	dw .Frameset_37 ; BATTLEANIMFRAMESET_37
-	dw .Frameset_38 ; BATTLEANIMFRAMESET_38
-	dw .Frameset_39 ; BATTLEANIMFRAMESET_39
-	dw .Frameset_3a ; BATTLEANIMFRAMESET_3A
-	dw .Frameset_3b ; BATTLEANIMFRAMESET_3B
-	dw .Frameset_3c ; BATTLEANIMFRAMESET_3C
-	dw .Frameset_3d ; BATTLEANIMFRAMESET_3D
-	dw .Frameset_3e ; BATTLEANIMFRAMESET_3E
-	dw .Frameset_3f ; BATTLEANIMFRAMESET_3F
-	dw .Frameset_40 ; BATTLEANIMFRAMESET_40
-	dw .Frameset_41 ; BATTLEANIMFRAMESET_41
-	dw .Frameset_42 ; BATTLEANIMFRAMESET_42
-	dw .Frameset_43 ; BATTLEANIMFRAMESET_43
-	dw .Frameset_44 ; BATTLEANIMFRAMESET_44
-	dw .Frameset_45 ; BATTLEANIMFRAMESET_45
-	dw .Frameset_46 ; BATTLEANIMFRAMESET_46
-	dw .Frameset_47 ; BATTLEANIMFRAMESET_47
-	dw .Frameset_48 ; BATTLEANIMFRAMESET_48
-	dw .Frameset_49 ; BATTLEANIMFRAMESET_49
-	dw .Frameset_4a ; BATTLEANIMFRAMESET_4A
-	dw .Frameset_4b ; BATTLEANIMFRAMESET_4B
-	dw .Frameset_4c ; BATTLEANIMFRAMESET_4C
-	dw .Frameset_4d ; BATTLEANIMFRAMESET_4D
-	dw .Frameset_4e ; BATTLEANIMFRAMESET_4E
-	dw .Frameset_4f ; BATTLEANIMFRAMESET_4F
-	dw .Frameset_50 ; BATTLEANIMFRAMESET_50
-	dw .Frameset_51 ; BATTLEANIMFRAMESET_51
-	dw .Frameset_52 ; BATTLEANIMFRAMESET_52
-	dw .Frameset_53 ; BATTLEANIMFRAMESET_53
-	dw .Frameset_54 ; BATTLEANIMFRAMESET_54
-	dw .Frameset_55 ; BATTLEANIMFRAMESET_55
-	dw .Frameset_56 ; BATTLEANIMFRAMESET_56
-	dw .Frameset_57 ; BATTLEANIMFRAMESET_57
-	dw .Frameset_58 ; BATTLEANIMFRAMESET_58
-	dw .Frameset_59 ; BATTLEANIMFRAMESET_59
-	dw .Frameset_5a ; BATTLEANIMFRAMESET_5A
-	dw .Frameset_5b ; BATTLEANIMFRAMESET_5B
-	dw .Frameset_5c ; BATTLEANIMFRAMESET_5C
-	dw .Frameset_5d ; BATTLEANIMFRAMESET_5D
-	dw .Frameset_5e ; BATTLEANIMFRAMESET_5E
-	dw .Frameset_5f ; BATTLEANIMFRAMESET_5F
-	dw .Frameset_60 ; BATTLEANIMFRAMESET_60
-	dw .Frameset_61 ; BATTLEANIMFRAMESET_61
-	dw .Frameset_62 ; BATTLEANIMFRAMESET_62
-	dw .Frameset_63 ; BATTLEANIMFRAMESET_63
-	dw .Frameset_64 ; BATTLEANIMFRAMESET_64
-	dw .Frameset_65 ; BATTLEANIMFRAMESET_65
-	dw .Frameset_66 ; BATTLEANIMFRAMESET_66
-	dw .Frameset_67 ; BATTLEANIMFRAMESET_67
-	dw .Frameset_68 ; BATTLEANIMFRAMESET_68
-	dw .Frameset_69 ; BATTLEANIMFRAMESET_69
-	dw .Frameset_6a ; BATTLEANIMFRAMESET_6A
-	dw .Frameset_6b ; BATTLEANIMFRAMESET_6B
-	dw .Frameset_6c ; BATTLEANIMFRAMESET_6C
-	dw .Frameset_6d ; BATTLEANIMFRAMESET_6D
-	dw .Frameset_6e ; BATTLEANIMFRAMESET_6E
-	dw .Frameset_6f ; BATTLEANIMFRAMESET_6F
-	dw .Frameset_70 ; BATTLEANIMFRAMESET_70
-	dw .Frameset_71 ; BATTLEANIMFRAMESET_71
-	dw .Frameset_72 ; BATTLEANIMFRAMESET_72
-	dw .Frameset_73 ; BATTLEANIMFRAMESET_73
-	dw .Frameset_74 ; BATTLEANIMFRAMESET_74
-	dw .Frameset_75 ; BATTLEANIMFRAMESET_75
-	dw .Frameset_76 ; BATTLEANIMFRAMESET_76
-	dw .Frameset_77 ; BATTLEANIMFRAMESET_77
-	dw .Frameset_78 ; BATTLEANIMFRAMESET_78
-	dw .Frameset_79 ; BATTLEANIMFRAMESET_79
-	dw .Frameset_7a ; BATTLEANIMFRAMESET_7A
-	dw .Frameset_7b ; BATTLEANIMFRAMESET_7B
-	dw .Frameset_7c ; BATTLEANIMFRAMESET_7C
-	dw .Frameset_7d ; BATTLEANIMFRAMESET_7D
-	dw .Frameset_7e ; BATTLEANIMFRAMESET_7E
-	dw .Frameset_7f ; BATTLEANIMFRAMESET_7F
-	dw .Frameset_80 ; BATTLEANIMFRAMESET_80
-	dw .Frameset_81 ; BATTLEANIMFRAMESET_81
-	dw .Frameset_82 ; BATTLEANIMFRAMESET_82
-	dw .Frameset_83 ; BATTLEANIMFRAMESET_83
-	dw .Frameset_84 ; BATTLEANIMFRAMESET_84
-	dw .Frameset_85 ; BATTLEANIMFRAMESET_85
-	dw .Frameset_86 ; BATTLEANIMFRAMESET_86
-	dw .Frameset_87 ; BATTLEANIMFRAMESET_87
-	dw .Frameset_88 ; BATTLEANIMFRAMESET_88
-	dw .Frameset_89 ; BATTLEANIMFRAMESET_89
-	dw .Frameset_8a ; BATTLEANIMFRAMESET_8A
-	dw .Frameset_8b ; BATTLEANIMFRAMESET_8B
-	dw .Frameset_8c ; BATTLEANIMFRAMESET_8C
-	dw .Frameset_8d ; BATTLEANIMFRAMESET_8D
-	dw .Frameset_8e ; BATTLEANIMFRAMESET_8E
-	dw .Frameset_8f ; BATTLEANIMFRAMESET_8F
-	dw .Frameset_90 ; BATTLEANIMFRAMESET_90
-	dw .Frameset_91 ; BATTLEANIMFRAMESET_91
-	dw .Frameset_92 ; BATTLEANIMFRAMESET_92
-	dw .Frameset_93 ; BATTLEANIMFRAMESET_93
-	dw .Frameset_94 ; BATTLEANIMFRAMESET_94
-	dw .Frameset_95 ; BATTLEANIMFRAMESET_95
-	dw .Frameset_96 ; BATTLEANIMFRAMESET_96
-	dw .Frameset_97 ; BATTLEANIMFRAMESET_97
-	dw .Frameset_98 ; BATTLEANIMFRAMESET_98
-	dw .Frameset_99 ; BATTLEANIMFRAMESET_99
-	dw .Frameset_9a ; BATTLEANIMFRAMESET_9A
-	dw .Frameset_9b ; BATTLEANIMFRAMESET_9B
-	dw .Frameset_9c ; BATTLEANIMFRAMESET_9C
-	dw .Frameset_9d ; BATTLEANIMFRAMESET_9D
-	dw .Frameset_9e ; BATTLEANIMFRAMESET_9E
-	dw .Frameset_9f ; BATTLEANIMFRAMESET_9F
-	dw .Frameset_a0 ; BATTLEANIMFRAMESET_A0
-	dw .Frameset_a1 ; BATTLEANIMFRAMESET_A1
-	dw .Frameset_a2 ; BATTLEANIMFRAMESET_A2
-	dw .Frameset_a3 ; BATTLEANIMFRAMESET_A3
-	dw .Frameset_a4 ; BATTLEANIMFRAMESET_A4
-	dw .Frameset_a5 ; BATTLEANIMFRAMESET_A5
-	dw .Frameset_a6 ; BATTLEANIMFRAMESET_A6
-	dw .Frameset_a7 ; BATTLEANIMFRAMESET_A7
-	dw .Frameset_a8 ; BATTLEANIMFRAMESET_A8
-	dw .Frameset_a9 ; BATTLEANIMFRAMESET_A9
-	dw .Frameset_aa ; BATTLEANIMFRAMESET_AA
-	dw .Frameset_ab ; BATTLEANIMFRAMESET_AB
-	dw .Frameset_ac ; BATTLEANIMFRAMESET_AC
-	dw .Frameset_ad ; BATTLEANIMFRAMESET_AD
-	dw .Frameset_ae ; BATTLEANIMFRAMESET_AE
-	dw .Frameset_af ; BATTLEANIMFRAMESET_AF
-	dw .Frameset_b0 ; BATTLEANIMFRAMESET_B0
-	dw .Frameset_b1 ; BATTLEANIMFRAMESET_B1
-	dw .Frameset_b2 ; BATTLEANIMFRAMESET_B2
-	dw .Frameset_b3 ; BATTLEANIMFRAMESET_B3
-	dw .Frameset_b4 ; BATTLEANIMFRAMESET_B4
-	dw .Frameset_b5 ; BATTLEANIMFRAMESET_B5
-	dw .Frameset_b6 ; BATTLEANIMFRAMESET_B6
-	dw .Frameset_b7 ; BATTLEANIMFRAMESET_B7
-	dw .Frameset_b8 ; BATTLEANIMFRAMESET_B8
+BattleAnimFrameData: ; ce85e
+	dw .Frameset_00 ; 00
+	dw .Frameset_01 ; 01
+	dw .Frameset_02 ; 02
+	dw .Frameset_03 ; 03
+	dw .Frameset_04 ; 04
+	dw .Frameset_05 ; 05
+	dw .Frameset_06 ; 06
+	dw .Frameset_07 ; 07
+	dw .Frameset_08 ; 08
+	dw .Frameset_09 ; 09
+	dw .Frameset_0a ; 0a
+	dw .Frameset_0b ; 0b
+	dw .Frameset_0c ; 0c
+	dw .Frameset_0d ; 0d
+	dw .Frameset_0e ; 0e
+	dw .Frameset_0f ; 0f
+	dw .Frameset_10 ; 10
+	dw .Frameset_11 ; 11
+	dw .Frameset_12 ; 12
+	dw .Frameset_13 ; 13
+	dw .Frameset_14 ; 14
+	dw .Frameset_15 ; 15
+	dw .Frameset_16 ; 16
+	dw .Frameset_17 ; 17
+	dw .Frameset_18 ; 18
+	dw .Frameset_19 ; 19
+	dw .Frameset_1a ; 1a
+	dw .Frameset_1b ; 1b
+	dw .Frameset_1c ; 1c
+	dw .Frameset_1d ; 1d
+	dw .Frameset_1e ; 1e
+	dw .Frameset_1f ; 1f
+	dw .Frameset_20 ; 20
+	dw .Frameset_21 ; 21
+	dw .Frameset_22 ; 22
+	dw .Frameset_23 ; 23
+	dw .Frameset_24 ; 24
+	dw .Frameset_25 ; 25
+	dw .Frameset_26 ; 26
+	dw .Frameset_27 ; 27
+	dw .Frameset_28 ; 28
+	dw .Frameset_29 ; 29
+	dw .Frameset_2a ; 2a
+	dw .Frameset_2b ; 2b
+	dw .Frameset_2c ; 2c
+	dw .Frameset_2d ; 2d
+	dw .Frameset_2e ; 2e
+	dw .Frameset_2f ; 2f
+	dw .Frameset_30 ; 30
+	dw .Frameset_31 ; 31
+	dw .Frameset_32 ; 32
+	dw .Frameset_33 ; 33
+	dw .Frameset_34 ; 34
+	dw .Frameset_35 ; 35
+	dw .Frameset_36 ; 36
+	dw .Frameset_37 ; 37
+	dw .Frameset_38 ; 38
+	dw .Frameset_39 ; 39
+	dw .Frameset_3a ; 3a
+	dw .Frameset_3b ; 3b
+	dw .Frameset_3c ; 3c
+	dw .Frameset_3d ; 3d
+	dw .Frameset_3e ; 3e
+	dw .Frameset_3f ; 3f
+	dw .Frameset_40 ; 40
+	dw .Frameset_41 ; 41
+	dw .Frameset_42 ; 42
+	dw .Frameset_43 ; 43
+	dw .Frameset_44 ; 44
+	dw .Frameset_45 ; 45
+	dw .Frameset_46 ; 46
+	dw .Frameset_47 ; 47
+	dw .Frameset_48 ; 48
+	dw .Frameset_49 ; 49
+	dw .Frameset_4a ; 4a
+	dw .Frameset_4b ; 4b
+	dw .Frameset_4c ; 4c
+	dw .Frameset_4d ; 4d
+	dw .Frameset_4e ; 4e
+	dw .Frameset_4f ; 4f
+	dw .Frameset_50 ; 50
+	dw .Frameset_51 ; 51
+	dw .Frameset_52 ; 52
+	dw .Frameset_53 ; 53
+	dw .Frameset_54 ; 54
+	dw .Frameset_55 ; 55
+	dw .Frameset_56 ; 56
+	dw .Frameset_57 ; 57
+	dw .Frameset_58 ; 58
+	dw .Frameset_59 ; 59
+	dw .Frameset_5a ; 5a
+	dw .Frameset_5b ; 5b
+	dw .Frameset_5c ; 5c
+	dw .Frameset_5d ; 5d
+	dw .Frameset_5e ; 5e
+	dw .Frameset_5f ; 5f
+	dw .Frameset_60 ; 60
+	dw .Frameset_61 ; 61
+	dw .Frameset_62 ; 62
+	dw .Frameset_63 ; 63
+	dw .Frameset_64 ; 64
+	dw .Frameset_65 ; 65
+	dw .Frameset_66 ; 66
+	dw .Frameset_67 ; 67
+	dw .Frameset_68 ; 68
+	dw .Frameset_69 ; 69
+	dw .Frameset_6a ; 6a
+	dw .Frameset_6b ; 6b
+	dw .Frameset_6c ; 6c
+	dw .Frameset_6d ; 6d
+	dw .Frameset_6e ; 6e
+	dw .Frameset_6f ; 6f
+	dw .Frameset_70 ; 70
+	dw .Frameset_71 ; 71
+	dw .Frameset_72 ; 72
+	dw .Frameset_73 ; 73
+	dw .Frameset_74 ; 74
+	dw .Frameset_75 ; 75
+	dw .Frameset_76 ; 76
+	dw .Frameset_77 ; 77
+	dw .Frameset_78 ; 78
+	dw .Frameset_79 ; 79
+	dw .Frameset_7a ; 7a
+	dw .Frameset_7b ; 7b
+	dw .Frameset_7c ; 7c
+	dw .Frameset_7d ; 7d
+	dw .Frameset_7e ; 7e
+	dw .Frameset_7f ; 7f
+	dw .Frameset_80 ; 80
+	dw .Frameset_81 ; 81
+	dw .Frameset_82 ; 82
+	dw .Frameset_83 ; 83
+	dw .Frameset_84 ; 84
+	dw .Frameset_85 ; 85
+	dw .Frameset_86 ; 86
+	dw .Frameset_87 ; 87
+	dw .Frameset_88 ; 88
+	dw .Frameset_89 ; 89
+	dw .Frameset_8a ; 8a
+	dw .Frameset_8b ; 8b
+	dw .Frameset_8c ; 8c
+	dw .Frameset_8d ; 8d
+	dw .Frameset_8e ; 8e
+	dw .Frameset_8f ; 8f
+	dw .Frameset_90 ; 90
+	dw .Frameset_91 ; 91
+	dw .Frameset_92 ; 92
+	dw .Frameset_93 ; 93
+	dw .Frameset_94 ; 94
+	dw .Frameset_95 ; 95
+	dw .Frameset_96 ; 96
+	dw .Frameset_97 ; 97
+	dw .Frameset_98 ; 98
+	dw .Frameset_99 ; 99
+	dw .Frameset_9a ; 9a
+	dw .Frameset_9b ; 9b
+	dw .Frameset_9c ; 9c
+	dw .Frameset_9d ; 9d
+	dw .Frameset_9e ; 9e
+	dw .Frameset_9f ; 9f
+	dw .Frameset_a0 ; a0
+	dw .Frameset_a1 ; a1
+	dw .Frameset_a2 ; a2
+	dw .Frameset_a3 ; a3
+	dw .Frameset_a4 ; a4
+	dw .Frameset_a5 ; a5
+	dw .Frameset_a6 ; a6
+	dw .Frameset_a7 ; a7
+	dw .Frameset_a8 ; a8
+	dw .Frameset_a9 ; a9
+	dw .Frameset_aa ; aa
+	dw .Frameset_ab ; ab
+	dw .Frameset_ac ; ac
+	dw .Frameset_ad ; ad
+	dw .Frameset_ae ; ae
+	dw .Frameset_af ; af
+	dw .Frameset_b0 ; b0
+	dw .Frameset_b1 ; b1
+	dw .Frameset_b2 ; b2
+	dw .Frameset_b3 ; b3
+	dw .Frameset_b4 ; b4
+	dw .Frameset_b5 ; b5
+	dw .Frameset_b6 ; b6
+	dw .Frameset_b7 ; b7
+	dw .Frameset_b8 ; b8
 
+     ; OAM index (see battle/objects/oam.asm), flip flags / duration
 .Frameset_00:
-	frame BATTLEANIMOAMSET_00,  6
-	delanim
+	db BATTLEANIMOAMSET_00, $06
+	db -4
 
 .Frameset_01:
-	frame BATTLEANIMOAMSET_01,  6
-	delanim
+	db BATTLEANIMOAMSET_01, $06
+	db -4
 
 .Frameset_02:
-	frame BATTLEANIMOAMSET_02,  6
-	delanim
+	db BATTLEANIMOAMSET_02, $06
+	db -4
 
 .Frameset_03:
-	frame BATTLEANIMOAMSET_03,  6
-	delanim
+	db BATTLEANIMOAMSET_03, $06
+	db -4
 
 .Frameset_04:
-	frame BATTLEANIMOAMSET_04,  6
-	delanim
+	db BATTLEANIMOAMSET_04, $06
+	db -4
 
 .Frameset_05:
-	frame BATTLEANIMOAMSET_05,  6
-	delanim
+	db BATTLEANIMOAMSET_05, $06
+	db -4
 
 .Frameset_06:
-	frame BATTLEANIMOAMSET_06,  6
-	delanim
+	db BATTLEANIMOAMSET_06, $06
+	db -4
 
 .Frameset_07:
-	frame BATTLEANIMOAMSET_03,  4
-	frame BATTLEANIMOAMSET_01,  1
-	frame BATTLEANIMOAMSET_03,  4
-	frame BATTLEANIMOAMSET_01,  1
-	frame BATTLEANIMOAMSET_03,  4
-	frame BATTLEANIMOAMSET_01,  1
-	frame BATTLEANIMOAMSET_03,  4
-	frame BATTLEANIMOAMSET_01,  1
-	delanim
+	db BATTLEANIMOAMSET_03, $04
+	db BATTLEANIMOAMSET_01, $01
+	db BATTLEANIMOAMSET_03, $04
+	db BATTLEANIMOAMSET_01, $01
+	db BATTLEANIMOAMSET_03, $04
+	db BATTLEANIMOAMSET_01, $01
+	db BATTLEANIMOAMSET_03, $04
+	db BATTLEANIMOAMSET_01, $01
+	db -4
 
 .Frameset_3e:
-	frame BATTLEANIMOAMSET_4B,  2
-	frame BATTLEANIMOAMSET_4C,  2
-	frame BATTLEANIMOAMSET_4D,  4
-	frame BATTLEANIMOAMSET_4E,  2
-	dorepeat 2
-	frame BATTLEANIMOAMSET_4E,  2
-	dorepeat 2
-	frame BATTLEANIMOAMSET_4E,  2
-	dorepeat 2
-	frame BATTLEANIMOAMSET_4E,  2
-	delanim
+	db BATTLEANIMOAMSET_4B, $02
+	db BATTLEANIMOAMSET_4C, $02
+	db BATTLEANIMOAMSET_4D, $04
+	db BATTLEANIMOAMSET_4E, $02
+	db -3, $02
+	db BATTLEANIMOAMSET_4E, $02
+	db -3, $02
+	db BATTLEANIMOAMSET_4E, $02
+	db -3, $02
+	db BATTLEANIMOAMSET_4E, $02
+	db -4
 
 .Frameset_3f:
-	frame BATTLEANIMOAMSET_4B,  2, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_4C,  2, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_4D,  4, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP
-	dorepeat 2
-	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP
-	dorepeat 2
-	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP
-	dorepeat 2
-	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP
-	delanim
+	db BATTLEANIMOAMSET_4B, $42
+	db BATTLEANIMOAMSET_4C, $42
+	db BATTLEANIMOAMSET_4D, $44
+	db BATTLEANIMOAMSET_4E, $42
+	db -3, $02
+	db BATTLEANIMOAMSET_4E, $42
+	db -3, $02
+	db BATTLEANIMOAMSET_4E, $42
+	db -3, $02
+	db BATTLEANIMOAMSET_4E, $42
+	db -4
 
 .Frameset_40:
-	frame BATTLEANIMOAMSET_4B,  2, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_4C,  2, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_4D,  4, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP, OAM_Y_FLIP
-	dorepeat 2
-	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP, OAM_Y_FLIP
-	dorepeat 2
-	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP, OAM_Y_FLIP
-	dorepeat 2
-	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP, OAM_Y_FLIP
-	delanim
+	db BATTLEANIMOAMSET_4B, $c2
+	db BATTLEANIMOAMSET_4C, $c2
+	db BATTLEANIMOAMSET_4D, $c4
+	db BATTLEANIMOAMSET_4E, $c2
+	db -3, $02
+	db BATTLEANIMOAMSET_4E, $c2
+	db -3, $02
+	db BATTLEANIMOAMSET_4E, $c2
+	db -3, $02
+	db BATTLEANIMOAMSET_4E, $c2
+	db -4
 
 .Frameset_41:
-	frame BATTLEANIMOAMSET_4B,  1
-	frame BATTLEANIMOAMSET_4C,  1
-	frame BATTLEANIMOAMSET_4D,  1
-	frame BATTLEANIMOAMSET_4F,  1
-	frame BATTLEANIMOAMSET_50,  1
-	frame BATTLEANIMOAMSET_51,  1
-	frame BATTLEANIMOAMSET_52,  2
-	dorepeat 2
-	frame BATTLEANIMOAMSET_52,  2
-	dorepeat 2
-	frame BATTLEANIMOAMSET_52,  2
-	dorepeat 2
-	frame BATTLEANIMOAMSET_52,  2
-	delanim
+	db BATTLEANIMOAMSET_4B, $01
+	db BATTLEANIMOAMSET_4C, $01
+	db BATTLEANIMOAMSET_4D, $01
+	db BATTLEANIMOAMSET_4F, $01
+	db BATTLEANIMOAMSET_50, $01
+	db BATTLEANIMOAMSET_51, $01
+	db BATTLEANIMOAMSET_52, $02
+	db -3, $02
+	db BATTLEANIMOAMSET_52, $02
+	db -3, $02
+	db BATTLEANIMOAMSET_52, $02
+	db -3, $02
+	db BATTLEANIMOAMSET_52, $02
+	db -4
 
 .Frameset_42:
-	frame BATTLEANIMOAMSET_4B,  1, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_4C,  1, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_4D,  1, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_4F,  1, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_50,  1, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_51,  1, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_52,  2, OAM_X_FLIP
-	dorepeat 2
-	frame BATTLEANIMOAMSET_52,  2, OAM_X_FLIP
-	dorepeat 2
-	frame BATTLEANIMOAMSET_52,  2, OAM_X_FLIP
-	dorepeat 2
-	frame BATTLEANIMOAMSET_52,  2, OAM_X_FLIP
-	delanim
+	db BATTLEANIMOAMSET_4B, $41
+	db BATTLEANIMOAMSET_4C, $41
+	db BATTLEANIMOAMSET_4D, $41
+	db BATTLEANIMOAMSET_4F, $41
+	db BATTLEANIMOAMSET_50, $41
+	db BATTLEANIMOAMSET_51, $41
+	db BATTLEANIMOAMSET_52, $42
+	db -3, $02
+	db BATTLEANIMOAMSET_52, $42
+	db -3, $02
+	db BATTLEANIMOAMSET_52, $42
+	db -3, $02
+	db BATTLEANIMOAMSET_52, $42
+	db -4
 
 .Frameset_08:
-	frame BATTLEANIMOAMSET_00,  3
-	frame BATTLEANIMOAMSET_07,  3
-	frame BATTLEANIMOAMSET_08,  3
-	frame BATTLEANIMOAMSET_09,  3
-	delanim
+	db BATTLEANIMOAMSET_00, $03
+	db BATTLEANIMOAMSET_07, $03
+	db BATTLEANIMOAMSET_08, $03
+	db BATTLEANIMOAMSET_09, $03
+	db -4
 
 .Frameset_09:
-	frame BATTLEANIMOAMSET_0A,  7
-	frame BATTLEANIMOAMSET_0B,  7
-	frame BATTLEANIMOAMSET_0A,  7
-	frame BATTLEANIMOAMSET_0B,  7, OAM_X_FLIP
-	dorestart
+	db BATTLEANIMOAMSET_0A, $07
+	db BATTLEANIMOAMSET_0B, $07
+	db BATTLEANIMOAMSET_0A, $07
+	db BATTLEANIMOAMSET_0B, $47
+	db -2
 
 .Frameset_0a:
-	frame BATTLEANIMOAMSET_0C,  8
-	endanim
+	db BATTLEANIMOAMSET_0C, $08
+	db -1
 
 .Frameset_0b:
-	frame BATTLEANIMOAMSET_0D,  8
-	endanim
+	db BATTLEANIMOAMSET_0D, $08
+	db -1
 
 .Frameset_0c:
-	frame BATTLEANIMOAMSET_0A,  8
-	endanim
+	db BATTLEANIMOAMSET_0A, $08
+	db -1
 
 .Frameset_0d:
-	frame BATTLEANIMOAMSET_0A,  7
-	frame BATTLEANIMOAMSET_0B,  7
-	frame BATTLEANIMOAMSET_0A,  7
-	frame BATTLEANIMOAMSET_0B,  7, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_0A,  7
-	endanim
+	db BATTLEANIMOAMSET_0A, $07
+	db BATTLEANIMOAMSET_0B, $07
+	db BATTLEANIMOAMSET_0A, $07
+	db BATTLEANIMOAMSET_0B, $47
+	db BATTLEANIMOAMSET_0A, $07
+	db -1
 
 .Frameset_0e:
-	frame BATTLEANIMOAMSET_0A,  8
-	endanim
+	db BATTLEANIMOAMSET_0A, $08
+	db -1
 
 .Frameset_0f:
-	frame BATTLEANIMOAMSET_0A,  4
-	frame BATTLEANIMOAMSET_0E,  4
-	dorestart
+	db BATTLEANIMOAMSET_0A, $04
+	db BATTLEANIMOAMSET_0E, $04
+	db -2
 
 .Frameset_10:
-	frame BATTLEANIMOAMSET_0F,  4
-	frame BATTLEANIMOAMSET_10,  4
-	dorestart
+	db BATTLEANIMOAMSET_0F, $04
+	db BATTLEANIMOAMSET_10, $04
+	db -2
 
 .Frameset_11:
-	frame BATTLEANIMOAMSET_10,  4
-	frame BATTLEANIMOAMSET_0F,  4
-	frame BATTLEANIMOAMSET_0E,  4
-	frame BATTLEANIMOAMSET_0A,  4
-	frame BATTLEANIMOAMSET_0E,  4
-	frame BATTLEANIMOAMSET_0A,  4
-	frame BATTLEANIMOAMSET_0E,  4
-	frame BATTLEANIMOAMSET_0A,  4
-	delanim
+	db BATTLEANIMOAMSET_10, $04
+	db BATTLEANIMOAMSET_0F, $04
+	db BATTLEANIMOAMSET_0E, $04
+	db BATTLEANIMOAMSET_0A, $04
+	db BATTLEANIMOAMSET_0E, $04
+	db BATTLEANIMOAMSET_0A, $04
+	db BATTLEANIMOAMSET_0E, $04
+	db BATTLEANIMOAMSET_0A, $04
+	db -4
 
 .Frameset_12:
-	frame BATTLEANIMOAMSET_10,  1
-	frame BATTLEANIMOAMSET_0F,  1
-	frame BATTLEANIMOAMSET_12,  1
-	frame BATTLEANIMOAMSET_11,  1
-	frame BATTLEANIMOAMSET_12,  1
-	frame BATTLEANIMOAMSET_0F,  1
-	dorestart
+	db BATTLEANIMOAMSET_10, $01
+	db BATTLEANIMOAMSET_0F, $01
+	db BATTLEANIMOAMSET_12, $01
+	db BATTLEANIMOAMSET_11, $01
+	db BATTLEANIMOAMSET_12, $01
+	db BATTLEANIMOAMSET_0F, $01
+	db -2
 
 .Frameset_13:
-	frame BATTLEANIMOAMSET_10,  3
-	frame BATTLEANIMOAMSET_0F,  3
-	frame BATTLEANIMOAMSET_12,  1
-	dorepeat 1
-	frame BATTLEANIMOAMSET_12,  1
-	dorepeat 1
-	frame BATTLEANIMOAMSET_12,  1
-	dorepeat 1
-	frame BATTLEANIMOAMSET_12,  1
-	dorepeat 1
-	frame BATTLEANIMOAMSET_12,  3
-	delanim
+	db BATTLEANIMOAMSET_10, $03
+	db BATTLEANIMOAMSET_0F, $03
+	db BATTLEANIMOAMSET_12, $01
+	db -3, $01
+	db BATTLEANIMOAMSET_12, $01
+	db -3, $01
+	db BATTLEANIMOAMSET_12, $01
+	db -3, $01
+	db BATTLEANIMOAMSET_12, $01
+	db -3, $01
+	db BATTLEANIMOAMSET_12, $03
+	db -4
 
 .Frameset_14:
-	frame BATTLEANIMOAMSET_13, 20
-	delanim
+	db BATTLEANIMOAMSET_13, $14
+	db -4
 
 .Frameset_15:
-	frame BATTLEANIMOAMSET_10,  1
-	frame BATTLEANIMOAMSET_0F,  1
-	dorestart
+	db BATTLEANIMOAMSET_10, $01
+	db BATTLEANIMOAMSET_0F, $01
+	db -2
 
 .Frameset_16:
-	frame BATTLEANIMOAMSET_14,  8
-	endanim
+	db BATTLEANIMOAMSET_14, $08
+	db -1
 
 .Frameset_17:
-	frame BATTLEANIMOAMSET_17,  4
-	frame BATTLEANIMOAMSET_16,  8
-	frame BATTLEANIMOAMSET_15,  8
-	frame BATTLEANIMOAMSET_16,  8
-	frame BATTLEANIMOAMSET_17,  4
-	frame BATTLEANIMOAMSET_17,  4
-	frame BATTLEANIMOAMSET_16,  8, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_15,  8, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_16,  8, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_17,  4
-	dorestart
+	db BATTLEANIMOAMSET_17, $04
+	db BATTLEANIMOAMSET_16, $08
+	db BATTLEANIMOAMSET_15, $08
+	db BATTLEANIMOAMSET_16, $08
+	db BATTLEANIMOAMSET_17, $04
+	db BATTLEANIMOAMSET_17, $04
+	db BATTLEANIMOAMSET_16, $48
+	db BATTLEANIMOAMSET_15, $48
+	db BATTLEANIMOAMSET_16, $48
+	db BATTLEANIMOAMSET_17, $04
+	db -2
 
 .Frameset_56:
-	frame BATTLEANIMOAMSET_69,  8
-	endanim
+	db BATTLEANIMOAMSET_69, $08
+	db -1
 
 .Frameset_57:
-	frame BATTLEANIMOAMSET_69, 32
-	frame BATTLEANIMOAMSET_6A,  4
-	frame BATTLEANIMOAMSET_6B,  4
-	frame BATTLEANIMOAMSET_6D,  4
-	frame BATTLEANIMOAMSET_6C,  4
-	endanim
+	db BATTLEANIMOAMSET_69, $20
+	db BATTLEANIMOAMSET_6A, $04
+	db BATTLEANIMOAMSET_6B, $04
+	db BATTLEANIMOAMSET_6D, $04
+	db BATTLEANIMOAMSET_6C, $04
+	db -1
 
 .Frameset_58:
-	frame BATTLEANIMOAMSET_6C,  8
-	frame BATTLEANIMOAMSET_6D,  8
-	dorestart
+	db BATTLEANIMOAMSET_6C, $08
+	db BATTLEANIMOAMSET_6D, $08
+	db -2
 
 .Frameset_18:
-	frame BATTLEANIMOAMSET_18,  4
-	frame BATTLEANIMOAMSET_19,  4
-	frame BATTLEANIMOAMSET_1A,  4
-	delanim
+	db BATTLEANIMOAMSET_18, $04
+	db BATTLEANIMOAMSET_19, $04
+	db BATTLEANIMOAMSET_1A, $04
+	db -4
 
 .Frameset_19:
-	frame BATTLEANIMOAMSET_1B,  8
-	endanim
+	db BATTLEANIMOAMSET_1B, $08
+	db -1
 
 .Frameset_1a:
-	frame BATTLEANIMOAMSET_0F,  8
-	endanim
+	db BATTLEANIMOAMSET_0F, $08
+	db -1
 
 .Frameset_1b:
-	frame BATTLEANIMOAMSET_1C,  8
-	endanim
+	db BATTLEANIMOAMSET_1C, $08
+	db -1
 
 .Frameset_1c:
-	frame BATTLEANIMOAMSET_0A,  8
-	delanim
+	db BATTLEANIMOAMSET_0A, $08
+	db -4
 
 .Frameset_1d:
-	frame BATTLEANIMOAMSET_1D,  8
-	endanim
+	db BATTLEANIMOAMSET_1D, $08
+	db -1
 
 .Frameset_1e:
-	frame BATTLEANIMOAMSET_17,  8
-	endanim
+	db BATTLEANIMOAMSET_17, $08
+	db -1
 
 .Frameset_1f:
-	frame BATTLEANIMOAMSET_0F,  3
-	frame BATTLEANIMOAMSET_10,  3
-	frame BATTLEANIMOAMSET_1E,  3
-	endanim
+	db BATTLEANIMOAMSET_0F, $03
+	db BATTLEANIMOAMSET_10, $03
+	db BATTLEANIMOAMSET_1E, $03
+	db -1
 
 .Frameset_20:
-	frame BATTLEANIMOAMSET_1F, 16
-	frame BATTLEANIMOAMSET_20,  3
-	delanim
+	db BATTLEANIMOAMSET_1F, $10
+	db BATTLEANIMOAMSET_20, $03
+	db -4
 
 .Frameset_21:
-	frame BATTLEANIMOAMSET_20,  8
-	endanim
+	db BATTLEANIMOAMSET_20, $08
+	db -1
 
 .Frameset_22:
-	frame BATTLEANIMOAMSET_20,  8
-	frame BATTLEANIMOAMSET_21,  8
-	frame BATTLEANIMOAMSET_1B,  8
-	frame BATTLEANIMOAMSET_21,  8
-	dorestart
+	db BATTLEANIMOAMSET_20, $08
+	db BATTLEANIMOAMSET_21, $08
+	db BATTLEANIMOAMSET_1B, $08
+	db BATTLEANIMOAMSET_21, $08
+	db -2
 
 .Frameset_23:
-	frame BATTLEANIMOAMSET_22,  8
-	endanim
+	db BATTLEANIMOAMSET_22, $08
+	db -1
 
 .Frameset_24:
-	frame BATTLEANIMOAMSET_1B,  8
-	endanim
+	db BATTLEANIMOAMSET_1B, $08
+	db -1
 
 .Frameset_25:
-	frame BATTLEANIMOAMSET_23,  8
-	endanim
+	db BATTLEANIMOAMSET_23, $08
+	db -1
 
 .Frameset_26:
-	frame BATTLEANIMOAMSET_24,  8
-	endanim
+	db BATTLEANIMOAMSET_24, $08
+	db -1
 
 .Frameset_27:
-	frame BATTLEANIMOAMSET_25,  8
-	endanim
+	db BATTLEANIMOAMSET_25, $08
+	db -1
 
 .Frameset_28:
-	frame BATTLEANIMOAMSET_26,  8
-	frame BATTLEANIMOAMSET_27,  8
-	endanim
+	db BATTLEANIMOAMSET_26, $08
+	db BATTLEANIMOAMSET_27, $08
+	db -1
 
 .Frameset_29:
-	frame BATTLEANIMOAMSET_28,  8
-	frame BATTLEANIMOAMSET_29,  8
-	delanim
+	db BATTLEANIMOAMSET_28, $08
+	db BATTLEANIMOAMSET_29, $08
+	db -4
 
 .Frameset_2a:
-	frame BATTLEANIMOAMSET_2A,  1
-	frame BATTLEANIMOAMSET_2B,  1
-	frame BATTLEANIMOAMSET_2C,  1
-	frame BATTLEANIMOAMSET_2D,  1
-	frame BATTLEANIMOAMSET_2E,  1
-	frame BATTLEANIMOAMSET_2D,  1
-	frame BATTLEANIMOAMSET_2C,  1
-	frame BATTLEANIMOAMSET_2B,  1
-	frame BATTLEANIMOAMSET_2A,  1
-	delanim
+	db BATTLEANIMOAMSET_2A, $01
+	db BATTLEANIMOAMSET_2B, $01
+	db BATTLEANIMOAMSET_2C, $01
+	db BATTLEANIMOAMSET_2D, $01
+	db BATTLEANIMOAMSET_2E, $01
+	db BATTLEANIMOAMSET_2D, $01
+	db BATTLEANIMOAMSET_2C, $01
+	db BATTLEANIMOAMSET_2B, $01
+	db BATTLEANIMOAMSET_2A, $01
+	db -4
 
 .Frameset_2b:
-	frame BATTLEANIMOAMSET_14,  1
-	frame BATTLEANIMOAMSET_15,  1
-	dorestart
+	db BATTLEANIMOAMSET_14, $01
+	db BATTLEANIMOAMSET_15, $01
+	db -2
 
 .Frameset_2c:
-	frame BATTLEANIMOAMSET_2F,  4
-	frame BATTLEANIMOAMSET_30, 40
-	delanim
+	db BATTLEANIMOAMSET_2F, $04
+	db BATTLEANIMOAMSET_30, $28
+	db -4
 
 .Frameset_2d:
-	frame BATTLEANIMOAMSET_31,  8
-	endanim
+	db BATTLEANIMOAMSET_31, $08
+	db -1
 
 .Frameset_2e:
-	frame BATTLEANIMOAMSET_32, 32
-	frame BATTLEANIMOAMSET_33, 32
-	frame BATTLEANIMOAMSET_34, 32
-	frame BATTLEANIMOAMSET_35, 32 ; fallthrough
+	db BATTLEANIMOAMSET_32, $20
+	db BATTLEANIMOAMSET_33, $20
+	db BATTLEANIMOAMSET_34, $20
+	db BATTLEANIMOAMSET_35, $20 ; fallthrough
 .Frameset_2f:
-	dorepeat 2
-	frame BATTLEANIMOAMSET_35,  4
-	dorepeat 2
-	frame BATTLEANIMOAMSET_35,  4
-	dorepeat 2
-	frame BATTLEANIMOAMSET_35,  4
-	dorepeat 2
-	frame BATTLEANIMOAMSET_35,  4
-	delanim
+	db -3, $02
+	db BATTLEANIMOAMSET_35, $04
+	db -3, $02
+	db BATTLEANIMOAMSET_35, $04
+	db -3, $02
+	db BATTLEANIMOAMSET_35, $04
+	db -3, $02
+	db BATTLEANIMOAMSET_35, $04
+	db -4
 
 .Frameset_30:
-	frame BATTLEANIMOAMSET_14,  4
-	frame BATTLEANIMOAMSET_15,  4
-	dorestart
+	db BATTLEANIMOAMSET_14, $04
+	db BATTLEANIMOAMSET_15, $04
+	db -2
 
 .Frameset_31:
-	frame BATTLEANIMOAMSET_36,  2
-	frame BATTLEANIMOAMSET_37,  2
-	frame BATTLEANIMOAMSET_38,  2
-	frame BATTLEANIMOAMSET_39, 32
-	delanim
+	db BATTLEANIMOAMSET_36, $02
+	db BATTLEANIMOAMSET_37, $02
+	db BATTLEANIMOAMSET_38, $02
+	db BATTLEANIMOAMSET_39, $20
+	db -4
 
 .Frameset_32:
-	frame BATTLEANIMOAMSET_3A,  2
-	frame BATTLEANIMOAMSET_3B,  2
-	frame BATTLEANIMOAMSET_3C,  2
-	frame BATTLEANIMOAMSET_3D, 32
-	delanim
+	db BATTLEANIMOAMSET_3A, $02
+	db BATTLEANIMOAMSET_3B, $02
+	db BATTLEANIMOAMSET_3C, $02
+	db BATTLEANIMOAMSET_3D, $20
+	db -4
 
 .Frameset_33:
-	frame BATTLEANIMOAMSET_3A,  2, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_3B,  2, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_3C,  2, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_3D, 32, OAM_X_FLIP
-	delanim
+	db BATTLEANIMOAMSET_3A, $42
+	db BATTLEANIMOAMSET_3B, $42
+	db BATTLEANIMOAMSET_3C, $42
+	db BATTLEANIMOAMSET_3D, $60
+	db -4
 
 .Frameset_34:
-	frame BATTLEANIMOAMSET_3E,  8
-	frame BATTLEANIMOAMSET_3F,  8
-	frame BATTLEANIMOAMSET_40,  8
-	endanim
+	db BATTLEANIMOAMSET_3E, $08
+	db BATTLEANIMOAMSET_3F, $08
+	db BATTLEANIMOAMSET_40, $08
+	db -1
 
 .Frameset_35:
-	frame BATTLEANIMOAMSET_40,  2
-	dorepeat 2
-	frame BATTLEANIMOAMSET_40,  2
-	dorepeat 2
-	frame BATTLEANIMOAMSET_41,  2
-	dorepeat 2
-	frame BATTLEANIMOAMSET_41,  2
-	dorepeat 2
-	dorestart
+	db BATTLEANIMOAMSET_40, $02
+	db -3, $02
+	db BATTLEANIMOAMSET_40, $02
+	db -3, $02
+	db BATTLEANIMOAMSET_41, $02
+	db -3, $02
+	db BATTLEANIMOAMSET_41, $02
+	db -3, $02
+	db -2
 
 .Frameset_36:
-	frame BATTLEANIMOAMSET_42,  2
-	frame BATTLEANIMOAMSET_43,  2
-	frame BATTLEANIMOAMSET_44,  2
-	frame BATTLEANIMOAMSET_45,  2
-	dorestart
+	db BATTLEANIMOAMSET_42, $02
+	db BATTLEANIMOAMSET_43, $02
+	db BATTLEANIMOAMSET_44, $02
+	db BATTLEANIMOAMSET_45, $02
+	db -2
 
 .Frameset_37:
-	frame BATTLEANIMOAMSET_19,  2
-	dorepeat 2
-	dorestart
+	db BATTLEANIMOAMSET_19, $02
+	db -3, $02
+	db -2
 
 .Frameset_38:
-	frame BATTLEANIMOAMSET_46,  4
-	frame BATTLEANIMOAMSET_47,  4
-	dorestart
+	db BATTLEANIMOAMSET_46, $04
+	db BATTLEANIMOAMSET_47, $04
+	db -2
 
 .Frameset_39:
-	frame BATTLEANIMOAMSET_18,  2
-	dorepeat 2
-	dorestart
+	db BATTLEANIMOAMSET_18, $02
+	db -3, $02
+	db -2
 
 .Frameset_3a:
-	frame BATTLEANIMOAMSET_48,  8
-	endanim
+	db BATTLEANIMOAMSET_48, $08
+	db -1
 
 .Frameset_3b:
-	frame BATTLEANIMOAMSET_48,  8, OAM_X_FLIP
-	endanim
+	db BATTLEANIMOAMSET_48, $48
+	db -1
 
 .Frameset_3c:
-	frame BATTLEANIMOAMSET_49,  8
-	endanim
+	db BATTLEANIMOAMSET_49, $08
+	db -1
 
 .Frameset_3d:
-	frame BATTLEANIMOAMSET_4A,  8
-	endanim
+	db BATTLEANIMOAMSET_4A, $08
+	db -1
 
 .Frameset_43:
-	frame BATTLEANIMOAMSET_20, 16
-	frame BATTLEANIMOAMSET_1F, 16
-	frame BATTLEANIMOAMSET_1E, 16
-	endanim
+	db BATTLEANIMOAMSET_20, $10
+	db BATTLEANIMOAMSET_1F, $10
+	db BATTLEANIMOAMSET_1E, $10
+	db -1
 
 .Frameset_4c:
-	frame BATTLEANIMOAMSET_20,  8
-	frame BATTLEANIMOAMSET_1F,  8
-	frame BATTLEANIMOAMSET_1E,  8
-	endanim
+	db BATTLEANIMOAMSET_20, $08
+	db BATTLEANIMOAMSET_1F, $08
+	db BATTLEANIMOAMSET_1E, $08
+	db -1
 
 .Frameset_44:
-	dorepeat 20
-	frame BATTLEANIMOAMSET_55, 40
-	frame BATTLEANIMOAMSET_54, 40
-	frame BATTLEANIMOAMSET_53, 20
-	dorepeat 4
-	frame BATTLEANIMOAMSET_53,  4
-	dorepeat 4
-	frame BATTLEANIMOAMSET_53,  4
-	dorepeat 4
-	frame BATTLEANIMOAMSET_53,  4
-	delanim
+	db -3, $14
+	db BATTLEANIMOAMSET_55, $28
+	db BATTLEANIMOAMSET_54, $28
+	db BATTLEANIMOAMSET_53, $14
+	db -3, $04
+	db BATTLEANIMOAMSET_53, $04
+	db -3, $04
+	db BATTLEANIMOAMSET_53, $04
+	db -3, $04
+	db BATTLEANIMOAMSET_53, $04
+	db -4
 
 .Frameset_7e:
-	frame BATTLEANIMOAMSET_1E,  8
-	frame BATTLEANIMOAMSET_1F,  8
-	frame BATTLEANIMOAMSET_20,  8
-	delanim
+	db BATTLEANIMOAMSET_1E, $08
+	db BATTLEANIMOAMSET_1F, $08
+	db BATTLEANIMOAMSET_20, $08
+	db -4
 
 .Frameset_45:
-	dorepeat 0
-	frame BATTLEANIMOAMSET_14,  0
-	frame BATTLEANIMOAMSET_15,  0
-	frame BATTLEANIMOAMSET_14,  0, OAM_X_FLIP
-	dorepeat 0
-	frame BATTLEANIMOAMSET_16,  0, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_15,  0
-	frame BATTLEANIMOAMSET_16,  0
-	dorestart
+	db -3, $00
+	db BATTLEANIMOAMSET_14, $00
+	db BATTLEANIMOAMSET_15, $00
+	db BATTLEANIMOAMSET_14, $40
+	db -3, $00
+	db BATTLEANIMOAMSET_16, $40
+	db BATTLEANIMOAMSET_15, $00
+	db BATTLEANIMOAMSET_16, $00
+	db -2
 
 .Frameset_46:
-	frame BATTLEANIMOAMSET_56,  2
-	frame BATTLEANIMOAMSET_57,  4
-	delanim
+	db BATTLEANIMOAMSET_56, $02
+	db BATTLEANIMOAMSET_57, $04
+	db -4
 
 .Frameset_47:
-	frame BATTLEANIMOAMSET_56,  2, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_57,  4, OAM_X_FLIP, OAM_Y_FLIP
-	delanim
+	db BATTLEANIMOAMSET_56, $c2
+	db BATTLEANIMOAMSET_57, $c4
+	db -4
 
 .Frameset_48:
-	frame BATTLEANIMOAMSET_56,  1
-	frame BATTLEANIMOAMSET_57,  1
-	frame BATTLEANIMOAMSET_58,  1
-	frame BATTLEANIMOAMSET_57,  1, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_58,  1, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_57,  2
-	delanim
+	db BATTLEANIMOAMSET_56, $01
+	db BATTLEANIMOAMSET_57, $01
+	db BATTLEANIMOAMSET_58, $01
+	db BATTLEANIMOAMSET_57, $c1
+	db BATTLEANIMOAMSET_58, $c1
+	db BATTLEANIMOAMSET_57, $02
+	db -4
 
 .Frameset_49:
-	frame BATTLEANIMOAMSET_56,  1, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_57,  1, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_58,  1, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_57,  1
-	frame BATTLEANIMOAMSET_58,  1
-	frame BATTLEANIMOAMSET_57,  2, OAM_X_FLIP, OAM_Y_FLIP
-	delanim
+	db BATTLEANIMOAMSET_56, $c1
+	db BATTLEANIMOAMSET_57, $c1
+	db BATTLEANIMOAMSET_58, $c1
+	db BATTLEANIMOAMSET_57, $01
+	db BATTLEANIMOAMSET_58, $01
+	db BATTLEANIMOAMSET_57, $c2
+	db -4
 
 .Frameset_4a:
-	frame BATTLEANIMOAMSET_57,  1, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_58,  1, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_57,  1
-	frame BATTLEANIMOAMSET_58,  1
-	dorestart
+	db BATTLEANIMOAMSET_57, $c1
+	db BATTLEANIMOAMSET_58, $c1
+	db BATTLEANIMOAMSET_57, $01
+	db BATTLEANIMOAMSET_58, $01
+	db -2
 
 .Frameset_4b:
-	frame BATTLEANIMOAMSET_59,  1
-	frame BATTLEANIMOAMSET_5A,  1
-	frame BATTLEANIMOAMSET_5B,  1
-	frame BATTLEANIMOAMSET_5C,  2
-	delanim
+	db BATTLEANIMOAMSET_59, $01
+	db BATTLEANIMOAMSET_5A, $01
+	db BATTLEANIMOAMSET_5B, $01
+	db BATTLEANIMOAMSET_5C, $02
+	db -4
 
 .Frameset_4d:
-	frame BATTLEANIMOAMSET_0A, 10
-	frame BATTLEANIMOAMSET_0B,  3, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_5D,  3, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_0B,  3, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_0A,  2, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_0B,  1, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_5D,  1
-	frame BATTLEANIMOAMSET_0B,  1
-	dorestart
+	db BATTLEANIMOAMSET_0A, $0a
+	db BATTLEANIMOAMSET_0B, $43
+	db BATTLEANIMOAMSET_5D, $43
+	db BATTLEANIMOAMSET_0B, $c3
+	db BATTLEANIMOAMSET_0A, $82
+	db BATTLEANIMOAMSET_0B, $81
+	db BATTLEANIMOAMSET_5D, $01
+	db BATTLEANIMOAMSET_0B, $01
+	db -2
 
 .Frameset_4e:
-	frame BATTLEANIMOAMSET_0A,  3
-	frame BATTLEANIMOAMSET_0B,  7, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_0A,  7
-	frame BATTLEANIMOAMSET_0B,  7
-	frame BATTLEANIMOAMSET_0A,  3
-	dorestart
+	db BATTLEANIMOAMSET_0A, $03
+	db BATTLEANIMOAMSET_0B, $47
+	db BATTLEANIMOAMSET_0A, $07
+	db BATTLEANIMOAMSET_0B, $07
+	db BATTLEANIMOAMSET_0A, $03
+	db -2
 
 .Frameset_4f:
-	frame BATTLEANIMOAMSET_5E, 32
-	frame BATTLEANIMOAMSET_5E, 32
-	delanim
+	db BATTLEANIMOAMSET_5E, $20
+	db BATTLEANIMOAMSET_5E, $20
+	db -4
 
 .Frameset_50:
-	frame BATTLEANIMOAMSET_5F, 32
-	frame BATTLEANIMOAMSET_5F, 32
-	delanim
+	db BATTLEANIMOAMSET_5F, $20
+	db BATTLEANIMOAMSET_5F, $20
+	db -4
 
 .Frameset_51:
-	frame BATTLEANIMOAMSET_60,  8
-	endanim
+	db BATTLEANIMOAMSET_60, $08
+	db -1
 
 .Frameset_52:
-	frame BATTLEANIMOAMSET_61,  1
-	frame BATTLEANIMOAMSET_62,  1
-	frame BATTLEANIMOAMSET_63,  1
-	endanim
+	db BATTLEANIMOAMSET_61, $01
+	db BATTLEANIMOAMSET_62, $01
+	db BATTLEANIMOAMSET_63, $01
+	db -1
 
 .Frameset_53:
-	frame BATTLEANIMOAMSET_63,  7
-	frame BATTLEANIMOAMSET_64,  7
-	dorestart
+	db BATTLEANIMOAMSET_63, $07
+	db BATTLEANIMOAMSET_64, $07
+	db -2
 
 .Frameset_54:
-	frame BATTLEANIMOAMSET_65,  1
-	frame BATTLEANIMOAMSET_66,  1
-	frame BATTLEANIMOAMSET_67,  1
-	endanim
+	db BATTLEANIMOAMSET_65, $01
+	db BATTLEANIMOAMSET_66, $01
+	db BATTLEANIMOAMSET_67, $01
+	db -1
 
 .Frameset_55:
-	frame BATTLEANIMOAMSET_67,  7
-	frame BATTLEANIMOAMSET_68,  7
-	dorestart
+	db BATTLEANIMOAMSET_67, $07
+	db BATTLEANIMOAMSET_68, $07
+	db -2
 
 .Frameset_59:
-	frame BATTLEANIMOAMSET_6E,  8
-	endanim
+	db BATTLEANIMOAMSET_6E, $08
+	db -1
 
 .Frameset_5a:
-	frame BATTLEANIMOAMSET_6F,  8
-	endanim
+	db BATTLEANIMOAMSET_6F, $08
+	db -1
 
 .Frameset_5b:
-	frame BATTLEANIMOAMSET_6E,  8, OAM_Y_FLIP
-	endanim
+	db BATTLEANIMOAMSET_6E, $88
+	db -1
 
 .Frameset_5c:
-	frame BATTLEANIMOAMSET_18,  4
-	frame BATTLEANIMOAMSET_70,  4
-	frame BATTLEANIMOAMSET_71,  4
-	frame BATTLEANIMOAMSET_72,  4
-	frame BATTLEANIMOAMSET_73,  4
-	delanim
+	db BATTLEANIMOAMSET_18, $04
+	db BATTLEANIMOAMSET_70, $04
+	db BATTLEANIMOAMSET_71, $04
+	db BATTLEANIMOAMSET_72, $04
+	db BATTLEANIMOAMSET_73, $04
+	db -4
 
 .Frameset_5d:
-	frame BATTLEANIMOAMSET_74,  4
-	frame BATTLEANIMOAMSET_75,  4
-	dorestart
+	db BATTLEANIMOAMSET_74, $04
+	db BATTLEANIMOAMSET_75, $04
+	db -2
 
 .Frameset_5e:
-	frame BATTLEANIMOAMSET_14,  8
-	endanim
+	db BATTLEANIMOAMSET_14, $08
+	db -1
 
 .Frameset_7a:
-	frame BATTLEANIMOAMSET_74,  3
-	frame BATTLEANIMOAMSET_14,  3
-	frame BATTLEANIMOAMSET_15,  3
-	frame BATTLEANIMOAMSET_14,  3
-	frame BATTLEANIMOAMSET_15,  3
-	delanim
+	db BATTLEANIMOAMSET_74, $03
+	db BATTLEANIMOAMSET_14, $03
+	db BATTLEANIMOAMSET_15, $03
+	db BATTLEANIMOAMSET_14, $03
+	db BATTLEANIMOAMSET_15, $03
+	db -4
 
 .Frameset_af:
-	frame BATTLEANIMOAMSET_14,  0
-	frame BATTLEANIMOAMSET_15,  0
-	frame BATTLEANIMOAMSET_14,  0
-	frame BATTLEANIMOAMSET_15,  0
-	frame BATTLEANIMOAMSET_74, 12
-	delanim
+	db BATTLEANIMOAMSET_14, $00
+	db BATTLEANIMOAMSET_15, $00
+	db BATTLEANIMOAMSET_14, $00
+	db BATTLEANIMOAMSET_15, $00
+	db BATTLEANIMOAMSET_74, $0c
+	db -4
 
 .Frameset_5f:
-	frame BATTLEANIMOAMSET_76,  8
-	endanim
+	db BATTLEANIMOAMSET_76, $08
+	db -1
 
 .Frameset_60:
-	frame BATTLEANIMOAMSET_77,  1
-	frame BATTLEANIMOAMSET_78,  1
-	frame BATTLEANIMOAMSET_79,  1
-	frame BATTLEANIMOAMSET_7A,  1
-	frame BATTLEANIMOAMSET_7B,  1
-	frame BATTLEANIMOAMSET_7C,  1
-	frame BATTLEANIMOAMSET_7D,  1
-	frame BATTLEANIMOAMSET_7C,  1, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_7B,  1, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_7A,  1, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_79,  1, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_78,  1, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_77,  1, OAM_X_FLIP, OAM_Y_FLIP
-	delanim
+	db BATTLEANIMOAMSET_77, $01
+	db BATTLEANIMOAMSET_78, $01
+	db BATTLEANIMOAMSET_79, $01
+	db BATTLEANIMOAMSET_7A, $01
+	db BATTLEANIMOAMSET_7B, $01
+	db BATTLEANIMOAMSET_7C, $01
+	db BATTLEANIMOAMSET_7D, $01
+	db BATTLEANIMOAMSET_7C, $c1
+	db BATTLEANIMOAMSET_7B, $c1
+	db BATTLEANIMOAMSET_7A, $c1
+	db BATTLEANIMOAMSET_79, $c1
+	db BATTLEANIMOAMSET_78, $c1
+	db BATTLEANIMOAMSET_77, $c1
+	db -4
 
 .Frameset_61:
-	frame BATTLEANIMOAMSET_1B,  4
-	frame BATTLEANIMOAMSET_7E,  4
-	dorestart
+	db BATTLEANIMOAMSET_1B, $04
+	db BATTLEANIMOAMSET_7E, $04
+	db -2
 
 .Frameset_62:
-	frame BATTLEANIMOAMSET_1B,  4, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_7E,  4, OAM_X_FLIP
-	dorestart
+	db BATTLEANIMOAMSET_1B, $44
+	db BATTLEANIMOAMSET_7E, $44
+	db -2
 
 .Frameset_63:
-	frame BATTLEANIMOAMSET_7F,  8
-	endanim
+	db BATTLEANIMOAMSET_7F, $08
+	db -1
 
 .Frameset_64:
-	frame BATTLEANIMOAMSET_25,  8
-	endanim
+	db BATTLEANIMOAMSET_25, $08
+	db -1
 
 .Frameset_65:
-	frame BATTLEANIMOAMSET_80,  8
-	endanim
+	db BATTLEANIMOAMSET_80, $08
+	db -1
 
 .Frameset_66:
-	frame BATTLEANIMOAMSET_83,  7
-	frame BATTLEANIMOAMSET_82,  7
-	frame BATTLEANIMOAMSET_81,  7
-	frame BATTLEANIMOAMSET_82,  7
-	frame BATTLEANIMOAMSET_83,  7
-	frame BATTLEANIMOAMSET_82,  7
-	frame BATTLEANIMOAMSET_81,  7
-	delanim
+	db BATTLEANIMOAMSET_83, $07
+	db BATTLEANIMOAMSET_82, $07
+	db BATTLEANIMOAMSET_81, $07
+	db BATTLEANIMOAMSET_82, $07
+	db BATTLEANIMOAMSET_83, $07
+	db BATTLEANIMOAMSET_82, $07
+	db BATTLEANIMOAMSET_81, $07
+	db -4
 
 .Frameset_67:
-	frame BATTLEANIMOAMSET_1B, 16
-	delanim
+	db BATTLEANIMOAMSET_1B, $10
+	db -4
 
 .Frameset_68:
-	dorepeat 15
-	frame BATTLEANIMOAMSET_84, 15
-	frame BATTLEANIMOAMSET_85, 15
-	frame BATTLEANIMOAMSET_29, 15
-	frame BATTLEANIMOAMSET_28, 15
-	frame BATTLEANIMOAMSET_86, 32
-	delanim
+	db -3, $0f
+	db BATTLEANIMOAMSET_84, $0f
+	db BATTLEANIMOAMSET_85, $0f
+	db BATTLEANIMOAMSET_29, $0f
+	db BATTLEANIMOAMSET_28, $0f
+	db BATTLEANIMOAMSET_86, $20
+	db -4
 
 .Frameset_69:
-	frame BATTLEANIMOAMSET_1B,  3
-	frame BATTLEANIMOAMSET_87,  3
-	frame BATTLEANIMOAMSET_88,  3
-	frame BATTLEANIMOAMSET_89,  3
-	delanim
+	db BATTLEANIMOAMSET_1B, $03
+	db BATTLEANIMOAMSET_87, $03
+	db BATTLEANIMOAMSET_88, $03
+	db BATTLEANIMOAMSET_89, $03
+	db -4
 
 .Frameset_6a:
-	frame BATTLEANIMOAMSET_8A,  2
-	frame BATTLEANIMOAMSET_8B,  2
-	frame BATTLEANIMOAMSET_8C,  2
-	frame BATTLEANIMOAMSET_8D,  2
-	delanim
+	db BATTLEANIMOAMSET_8A, $02
+	db BATTLEANIMOAMSET_8B, $02
+	db BATTLEANIMOAMSET_8C, $02
+	db BATTLEANIMOAMSET_8D, $02
+	db -4
 
 .Frameset_6b:
-	frame BATTLEANIMOAMSET_61,  2
-	frame BATTLEANIMOAMSET_62,  2
-	frame BATTLEANIMOAMSET_63,  2
-	endanim
+	db BATTLEANIMOAMSET_61, $02
+	db BATTLEANIMOAMSET_62, $02
+	db BATTLEANIMOAMSET_63, $02
+	db -1
 
 .Frameset_6c:
-	frame BATTLEANIMOAMSET_65,  2
-	frame BATTLEANIMOAMSET_66,  2
-	frame BATTLEANIMOAMSET_67,  2
-	endanim
+	db BATTLEANIMOAMSET_65, $02
+	db BATTLEANIMOAMSET_66, $02
+	db BATTLEANIMOAMSET_67, $02
+	db -1
 
 .Frameset_6d:
-	frame BATTLEANIMOAMSET_8E,  8
-	endanim
+	db BATTLEANIMOAMSET_8E, $08
+	db -1
 
 .Frameset_6e:
-	frame BATTLEANIMOAMSET_8E,  8, OAM_X_FLIP
-	endanim
+	db BATTLEANIMOAMSET_8E, $48
+	db -1
 
 .Frameset_6f:
-	frame BATTLEANIMOAMSET_8F, 16
-	frame BATTLEANIMOAMSET_90, 16
-	dorestart
+	db BATTLEANIMOAMSET_8F, $10
+	db BATTLEANIMOAMSET_90, $10
+	db -2
 
 .Frameset_70:
-	frame BATTLEANIMOAMSET_91, 16
-	frame BATTLEANIMOAMSET_92, 16
-	dorestart
+	db BATTLEANIMOAMSET_91, $10
+	db BATTLEANIMOAMSET_92, $10
+	db -2
 
 .Frameset_71:
-	frame BATTLEANIMOAMSET_93,  8
-	endanim
+	db BATTLEANIMOAMSET_93, $08
+	db -1
 
 .Frameset_72:
-	frame BATTLEANIMOAMSET_1E,  8
-	endanim
+	db BATTLEANIMOAMSET_1E, $08
+	db -1
 
 .Frameset_73:
-	frame BATTLEANIMOAMSET_1B,  7
-	frame BATTLEANIMOAMSET_94,  7
-	dorestart
+	db BATTLEANIMOAMSET_1B, $07
+	db BATTLEANIMOAMSET_94, $07
+	db -2
 
 .Frameset_74:
-	frame BATTLEANIMOAMSET_95,  8
-	endanim
+	db BATTLEANIMOAMSET_95, $08
+	db -1
 
 .Frameset_75:
-	frame BATTLEANIMOAMSET_96,  8
-	endanim
+	db BATTLEANIMOAMSET_96, $08
+	db -1
 
 .Frameset_76:
-	frame BATTLEANIMOAMSET_95,  8
-	endanim
+	db BATTLEANIMOAMSET_95, $08
+	db -1
 
 .Frameset_77:
-	frame BATTLEANIMOAMSET_97,  1
-	frame BATTLEANIMOAMSET_97,  1, OAM_X_FLIP
-	dorestart
+	db BATTLEANIMOAMSET_97, $01
+	db BATTLEANIMOAMSET_97, $41
+	db -2
 
 .Frameset_78:
-	frame BATTLEANIMOAMSET_98,  8
-	endanim
+	db BATTLEANIMOAMSET_98, $08
+	db -1
 
 .Frameset_79:
-	frame BATTLEANIMOAMSET_99, 32
-	frame BATTLEANIMOAMSET_99, 32
-	frame BATTLEANIMOAMSET_99, 32
-	frame BATTLEANIMOAMSET_99, 32
-	frame BATTLEANIMOAMSET_99, 32
-	frame BATTLEANIMOAMSET_9A,  8
-	endanim
+	db BATTLEANIMOAMSET_99, $20
+	db BATTLEANIMOAMSET_99, $20
+	db BATTLEANIMOAMSET_99, $20
+	db BATTLEANIMOAMSET_99, $20
+	db BATTLEANIMOAMSET_99, $20
+	db BATTLEANIMOAMSET_9A, $08
+	db -1
 
 .Frameset_7b:
-	frame BATTLEANIMOAMSET_9B,  8
-	endanim
+	db BATTLEANIMOAMSET_9B, $08
+	db -1
 
 .Frameset_7c:
-	frame BATTLEANIMOAMSET_9C,  2
-	frame BATTLEANIMOAMSET_9D,  2
-	frame BATTLEANIMOAMSET_9E,  8
-	dorepeat 2
-	frame BATTLEANIMOAMSET_9E,  2
-	dorepeat 2
-	frame BATTLEANIMOAMSET_9E,  2
-	dorepeat 2
-	frame BATTLEANIMOAMSET_9E,  2
-	delanim
+	db BATTLEANIMOAMSET_9C, $02
+	db BATTLEANIMOAMSET_9D, $02
+	db BATTLEANIMOAMSET_9E, $08
+	db -3, $02
+	db BATTLEANIMOAMSET_9E, $02
+	db -3, $02
+	db BATTLEANIMOAMSET_9E, $02
+	db -3, $02
+	db BATTLEANIMOAMSET_9E, $02
+	db -4
 
 .Frameset_7d:
-	frame BATTLEANIMOAMSET_9F,  8
-	endanim
+	db BATTLEANIMOAMSET_9F, $08
+	db -1
 
 .Frameset_7f:
-	frame BATTLEANIMOAMSET_0F,  8
-	endanim
+	db BATTLEANIMOAMSET_0F, $08
+	db -1
 
 .Frameset_80:
-	frame BATTLEANIMOAMSET_6B, 24
-	delanim
+	db BATTLEANIMOAMSET_6B, $18
+	db -4
 
 .Frameset_81:
-	frame BATTLEANIMOAMSET_A0,  1 ; fallthrough
+	db BATTLEANIMOAMSET_A0, $01 ; fallthrough
 .Frameset_82:
-	frame BATTLEANIMOAMSET_A1,  1 ; fallthrough
+	db BATTLEANIMOAMSET_A1, $01 ; fallthrough
 .Frameset_83:
-	frame BATTLEANIMOAMSET_A2,  1
-	delanim
+	db BATTLEANIMOAMSET_A2, $01
+	db -4
 
 .Frameset_84:
-	frame BATTLEANIMOAMSET_A3,  8
-	endanim
+	db BATTLEANIMOAMSET_A3, $08
+	db -1
 
 .Frameset_85:
-	frame BATTLEANIMOAMSET_A4,  4
-	frame BATTLEANIMOAMSET_A5,  4
-	frame BATTLEANIMOAMSET_A6,  4
-	frame BATTLEANIMOAMSET_A7,  4
-	frame BATTLEANIMOAMSET_A6,  4, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_A5,  4, OAM_X_FLIP
-	dorestart
+	db BATTLEANIMOAMSET_A4, $04
+	db BATTLEANIMOAMSET_A5, $04
+	db BATTLEANIMOAMSET_A6, $04
+	db BATTLEANIMOAMSET_A7, $04
+	db BATTLEANIMOAMSET_A6, $44
+	db BATTLEANIMOAMSET_A5, $44
+	db -2
 
 .Frameset_86:
-	frame BATTLEANIMOAMSET_A8,  4
-	frame BATTLEANIMOAMSET_A9,  4
-	frame BATTLEANIMOAMSET_AA,  4
-	frame BATTLEANIMOAMSET_AB,  4
-	frame BATTLEANIMOAMSET_AA,  4, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_A9,  4, OAM_X_FLIP
-	dorestart
+	db BATTLEANIMOAMSET_A8, $04
+	db BATTLEANIMOAMSET_A9, $04
+	db BATTLEANIMOAMSET_AA, $04
+	db BATTLEANIMOAMSET_AB, $04
+	db BATTLEANIMOAMSET_AA, $44
+	db BATTLEANIMOAMSET_A9, $44
+	db -2
 
 .Frameset_87:
-	frame BATTLEANIMOAMSET_1B,  8
-	endanim
+	db BATTLEANIMOAMSET_1B, $08
+	db -1
 
 .Frameset_88:
-	frame BATTLEANIMOAMSET_AC,  8
-	endanim
+	db BATTLEANIMOAMSET_AC, $08
+	db -1
 
 .Frameset_89:
-	frame BATTLEANIMOAMSET_AD,  8
-	endanim
+	db BATTLEANIMOAMSET_AD, $08
+	db -1
 
 .Frameset_8a:
-	frame BATTLEANIMOAMSET_AE,  8
-	endanim
+	db BATTLEANIMOAMSET_AE, $08
+	db -1
 
 .Frameset_8b:
-	frame BATTLEANIMOAMSET_AF,  8
-	endanim
+	db BATTLEANIMOAMSET_AF, $08
+	db -1
 
 .Frameset_8c:
-	frame BATTLEANIMOAMSET_B0, 32
-	delanim
+	db BATTLEANIMOAMSET_B0, $20
+	db -4
 
 .Frameset_8d:
-	frame BATTLEANIMOAMSET_B1,  7
-	frame BATTLEANIMOAMSET_B1,  7, OAM_X_FLIP
-	dorestart
+	db BATTLEANIMOAMSET_B1, $07
+	db BATTLEANIMOAMSET_B1, $47
+	db -2
 
 .Frameset_8e:
-	frame BATTLEANIMOAMSET_B2,  8
-	endanim
+	db BATTLEANIMOAMSET_B2, $08
+	db -1
 
 .Frameset_8f:
-	frame BATTLEANIMOAMSET_B3,  8
-	endanim
+	db BATTLEANIMOAMSET_B3, $08
+	db -1
 
 .Frameset_90:
-	frame BATTLEANIMOAMSET_B3,  8, OAM_X_FLIP
-	endanim
+	db BATTLEANIMOAMSET_B3, $48
+	db -1
 
 .Frameset_91:
-	frame BATTLEANIMOAMSET_B3,  8, OAM_Y_FLIP
-	endanim
+	db BATTLEANIMOAMSET_B3, $88
+	db -1
 
 .Frameset_92:
-	frame BATTLEANIMOAMSET_B3,  8, OAM_X_FLIP, OAM_Y_FLIP
-	endanim
+	db BATTLEANIMOAMSET_B3, $c8
+	db -1
 
 .Frameset_93:
-	frame BATTLEANIMOAMSET_B5,  8
-	endanim
+	db BATTLEANIMOAMSET_B5, $08
+	db -1
 
 .Frameset_94:
-	frame BATTLEANIMOAMSET_B5,  8, OAM_X_FLIP
-	endanim
+	db BATTLEANIMOAMSET_B5, $48
+	db -1
 
 .Frameset_95:
-	frame BATTLEANIMOAMSET_B5,  8, OAM_Y_FLIP
-	endanim
+	db BATTLEANIMOAMSET_B5, $88
+	db -1
 
 .Frameset_96:
-	frame BATTLEANIMOAMSET_B5,  8, OAM_X_FLIP, OAM_Y_FLIP
-	endanim
+	db BATTLEANIMOAMSET_B5, $c8
+	db -1
 
 .Frameset_97:
-	frame BATTLEANIMOAMSET_B4,  8
-	endanim
+	db BATTLEANIMOAMSET_B4, $08
+	db -1
 
 .Frameset_98:
-	frame BATTLEANIMOAMSET_6B,  8
-	endanim
+	db BATTLEANIMOAMSET_6B, $08
+	db -1
 
 .Frameset_99:
-	frame BATTLEANIMOAMSET_B6,  8
-	endanim
+	db BATTLEANIMOAMSET_B6, $08
+	db -1
 
 .Frameset_9a:
-	frame BATTLEANIMOAMSET_B7, 32
-	endanim
+	db BATTLEANIMOAMSET_B7, $20
+	db -1
 
 .Frameset_9b:
-	frame BATTLEANIMOAMSET_1B, 32
-	endanim
+	db BATTLEANIMOAMSET_1B, $20
+	db -1
 
 .Frameset_9c:
-	frame BATTLEANIMOAMSET_B8, 32
-	endanim
+	db BATTLEANIMOAMSET_B8, $20
+	db -1
 
 .Frameset_9d:
-	frame BATTLEANIMOAMSET_B8, 32, OAM_X_FLIP
-	endanim
+	db BATTLEANIMOAMSET_B8, $60
+	db -1
 
 .Frameset_9e:
-	frame BATTLEANIMOAMSET_B9, 32
-	endanim
+	db BATTLEANIMOAMSET_B9, $20
+	db -1
 
 .Frameset_9f:
-	frame BATTLEANIMOAMSET_BA, 32
-	endanim
+	db BATTLEANIMOAMSET_BA, $20
+	db -1
 
 .Frameset_a0:
-	frame BATTLEANIMOAMSET_BB, 32, OAM_X_FLIP
-	endanim
+	db BATTLEANIMOAMSET_BB, $60
+	db -1
 
 .Frameset_a1:
-	frame BATTLEANIMOAMSET_BB, 32
-	endanim
+	db BATTLEANIMOAMSET_BB, $20
+	db -1
 
 .Frameset_a2:
-	frame BATTLEANIMOAMSET_BC, 32
-	endanim
+	db BATTLEANIMOAMSET_BC, $20
+	db -1
 
 .Frameset_a3:
-	frame BATTLEANIMOAMSET_BD, 11
-	frame BATTLEANIMOAMSET_BE, 11
-	frame BATTLEANIMOAMSET_1B, 11
-	delanim
+	db BATTLEANIMOAMSET_BD, $0b
+	db BATTLEANIMOAMSET_BE, $0b
+	db BATTLEANIMOAMSET_1B, $0b
+	db -4
 
 .Frameset_a4:
-	frame BATTLEANIMOAMSET_BF,  4
-	frame BATTLEANIMOAMSET_C0,  4
-	frame BATTLEANIMOAMSET_C1,  4
-	delanim
+	db BATTLEANIMOAMSET_BF, $04
+	db BATTLEANIMOAMSET_C0, $04
+	db BATTLEANIMOAMSET_C1, $04
+	db -4
 
 .Frameset_a5:
-	frame BATTLEANIMOAMSET_C2, 32
-	frame BATTLEANIMOAMSET_C2, 32
-	delanim
+	db BATTLEANIMOAMSET_C2, $20
+	db BATTLEANIMOAMSET_C2, $20
+	db -4
 
 .Frameset_a6:
-	frame BATTLEANIMOAMSET_4B,  2
-	frame BATTLEANIMOAMSET_4C,  2
-	frame BATTLEANIMOAMSET_4D, 32
-	frame BATTLEANIMOAMSET_4D, 32
-	frame BATTLEANIMOAMSET_4D, 32
-	frame BATTLEANIMOAMSET_4F,  1
-	frame BATTLEANIMOAMSET_50,  1
-	frame BATTLEANIMOAMSET_51,  1
-	frame BATTLEANIMOAMSET_52,  2
-	dorepeat 2
-	frame BATTLEANIMOAMSET_52,  2
-	dorepeat 2
-	frame BATTLEANIMOAMSET_52,  2
-	dorepeat 2
-	frame BATTLEANIMOAMSET_52,  2
-	delanim
+	db BATTLEANIMOAMSET_4B, $02
+	db BATTLEANIMOAMSET_4C, $02
+	db BATTLEANIMOAMSET_4D, $20
+	db BATTLEANIMOAMSET_4D, $20
+	db BATTLEANIMOAMSET_4D, $20
+	db BATTLEANIMOAMSET_4F, $01
+	db BATTLEANIMOAMSET_50, $01
+	db BATTLEANIMOAMSET_51, $01
+	db BATTLEANIMOAMSET_52, $02
+	db -3, $02
+	db BATTLEANIMOAMSET_52, $02
+	db -3, $02
+	db BATTLEANIMOAMSET_52, $02
+	db -3, $02
+	db BATTLEANIMOAMSET_52, $02
+	db -4
 
 .Frameset_a7:
-	frame BATTLEANIMOAMSET_4B,  2, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_4C,  2, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_4D, 32, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_4D, 32, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_4D, 32, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_4F,  1, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_50,  1, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_51,  1, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_52,  2, OAM_X_FLIP, OAM_Y_FLIP
-	dorepeat 2
-	frame BATTLEANIMOAMSET_52,  2, OAM_X_FLIP, OAM_Y_FLIP
-	dorepeat 2
-	frame BATTLEANIMOAMSET_52,  2, OAM_X_FLIP, OAM_Y_FLIP
-	dorepeat 2
-	frame BATTLEANIMOAMSET_52,  2, OAM_X_FLIP, OAM_Y_FLIP
-	delanim
+	db BATTLEANIMOAMSET_4B, $c2
+	db BATTLEANIMOAMSET_4C, $c2
+	db BATTLEANIMOAMSET_4D, $e0
+	db BATTLEANIMOAMSET_4D, $e0
+	db BATTLEANIMOAMSET_4D, $e0
+	db BATTLEANIMOAMSET_4F, $c1
+	db BATTLEANIMOAMSET_50, $c1
+	db BATTLEANIMOAMSET_51, $c1
+	db BATTLEANIMOAMSET_52, $c2
+	db -3, $02
+	db BATTLEANIMOAMSET_52, $c2
+	db -3, $02
+	db BATTLEANIMOAMSET_52, $c2
+	db -3, $02
+	db BATTLEANIMOAMSET_52, $c2
+	db -4
 
 .Frameset_a8:
-	frame BATTLEANIMOAMSET_C3,  1
-	frame BATTLEANIMOAMSET_C3,  1, OAM_X_FLIP, OAM_Y_FLIP
-	dorestart
+	db BATTLEANIMOAMSET_C3, $01
+	db BATTLEANIMOAMSET_C3, $c1
+	db -2
 
 .Frameset_a9:
-	frame BATTLEANIMOAMSET_C4, 32
-	endanim
+	db BATTLEANIMOAMSET_C4, $20
+	db -1
 
 .Frameset_aa:
-	frame BATTLEANIMOAMSET_C5,  4
-	frame BATTLEANIMOAMSET_C6,  4
-	frame BATTLEANIMOAMSET_C7,  4
-	delanim
+	db BATTLEANIMOAMSET_C5, $04
+	db BATTLEANIMOAMSET_C6, $04
+	db BATTLEANIMOAMSET_C7, $04
+	db -4
 
 .Frameset_ab:
-	frame BATTLEANIMOAMSET_C8,  1
-	frame BATTLEANIMOAMSET_C8,  1, OAM_X_FLIP
-	dorestart
+	db BATTLEANIMOAMSET_C8, $01
+	db BATTLEANIMOAMSET_C8, $41
+	db -2
 
 .Frameset_ac:
-	frame BATTLEANIMOAMSET_C9,  3
-	frame BATTLEANIMOAMSET_05,  3
-	delanim
+	db BATTLEANIMOAMSET_C9, $03
+	db BATTLEANIMOAMSET_05, $03
+	db -4
 
 .Frameset_ad:
-	frame BATTLEANIMOAMSET_CA, 32
-	frame BATTLEANIMOAMSET_CB,  3
-	frame BATTLEANIMOAMSET_CA,  3
-	frame BATTLEANIMOAMSET_CB,  3
-	dorestart
+	db BATTLEANIMOAMSET_CA, $20
+	db BATTLEANIMOAMSET_CB, $03
+	db BATTLEANIMOAMSET_CA, $03
+	db BATTLEANIMOAMSET_CB, $03
+	db -2
 
 .Frameset_ae:
-	frame BATTLEANIMOAMSET_03, 32, OAM_Y_FLIP
-	endanim
+	db BATTLEANIMOAMSET_03, $a0
+	db -1
 
 .Frameset_b0:
-	frame BATTLEANIMOAMSET_CC, 32
-	endanim
+	db BATTLEANIMOAMSET_CC, $20
+	db -1
 
 .Frameset_b1:
-	frame BATTLEANIMOAMSET_7F,  2
-	frame BATTLEANIMOAMSET_25,  2
-	frame BATTLEANIMOAMSET_80,  2
-	frame BATTLEANIMOAMSET_25,  2
-	dorestart
+	db BATTLEANIMOAMSET_7F, $02
+	db BATTLEANIMOAMSET_25, $02
+	db BATTLEANIMOAMSET_80, $02
+	db BATTLEANIMOAMSET_25, $02
+	db -2
 
 .Frameset_b2:
-	frame BATTLEANIMOAMSET_CD,  4
-	frame BATTLEANIMOAMSET_CE,  4
-	frame BATTLEANIMOAMSET_CD,  4, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_CE,  4, OAM_X_FLIP, OAM_Y_FLIP
-	dorestart
+	db BATTLEANIMOAMSET_CD, $04
+	db BATTLEANIMOAMSET_CE, $04
+	db BATTLEANIMOAMSET_CD, $c4
+	db BATTLEANIMOAMSET_CE, $c4
+	db -2
 
 .Frameset_b3:
-	frame BATTLEANIMOAMSET_CF,  4
-	frame BATTLEANIMOAMSET_D0,  4
-	frame BATTLEANIMOAMSET_D1,  4
-	frame BATTLEANIMOAMSET_D2,  4
-	delanim
+	db BATTLEANIMOAMSET_CF, $04
+	db BATTLEANIMOAMSET_D0, $04
+	db BATTLEANIMOAMSET_D1, $04
+	db BATTLEANIMOAMSET_D2, $04
+	db -4
 
 .Frameset_b4:
-	frame BATTLEANIMOAMSET_D3, 32
-	endanim
+	db BATTLEANIMOAMSET_D3, $20
+	db -1
 
 .Frameset_b5:
-	frame BATTLEANIMOAMSET_D4,  8
-	endanim
+	db BATTLEANIMOAMSET_D4, $08
+	db -1
 
 .Frameset_b6:
-	frame BATTLEANIMOAMSET_D5,  8
-	endanim
+	db BATTLEANIMOAMSET_D5, $08
+	db -1
 
 .Frameset_b7:
-	frame BATTLEANIMOAMSET_D6,  8
-	endanim
+	db BATTLEANIMOAMSET_D6, $08
+	db -1
 
 .Frameset_b8:
-	frame BATTLEANIMOAMSET_D7,  8
-	endanim
+	db BATTLEANIMOAMSET_D7, $08
+	db -1
+
+; ceeae

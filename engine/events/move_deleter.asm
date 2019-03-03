@@ -7,28 +7,27 @@ MoveDeletion:
 	call PrintText
 	farcall SelectMonFromParty
 	jr c, .declined
-	ld a, [wCurPartySpecies]
-	cp EGG
-	jr z, .egg
-	ld a, [wCurPartyMon]
-	ld hl, wPartyMon1Moves + 1
-	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
+	ld a, MON_IS_EGG
+	call GetPartyParamLocation
+	bit MON_IS_EGG_F, [hl]
+	jr nz, .egg
+	ld a, MON_MOVES + 1
+	call GetPartyParamLocation
 	ld a, [hl]
 	and a
 	jr z, .onlyonemove
 	ld hl, .AskWhichMoveText
 	call PrintText
-	call LoadStandardMenuHeader
+	call LoadStandardMenuDataHeader
 	farcall ChooseMoveToDelete
 	push af
 	call ReturnToMapWithSpeechTextbox
 	pop af
-	jr c, .declined
-	ld a, [wMenuCursorY]
+	jr z, .declined
+	jr c, .declined ; no moves -- should never happen
 	push af
-	ld a, [wCurSpecies]
-	ld [wNamedObjectIndexBuffer], a
+	ld a, [wMoveScreenSelectedMove]
+	ld [wd265], a
 	call GetMoveName
 	ld hl, .ConfirmDeleteText
 	call PrintText
@@ -41,65 +40,69 @@ MoveDeletion:
 	call PlaySFX
 	call WaitSFX
 	ld hl, .MoveDeletedText
-	call PrintText
-	ret
+	jp PrintText
 
 .egg
 	ld hl, .EggText
-	call PrintText
-	ret
+	jp PrintText
 
 .declined
 	ld hl, .DeclinedDeletionText
-	call PrintText
-	ret
+	jp PrintText
 
 .onlyonemove
 	ld hl, .OnlyOneMoveText
-	call PrintText
-	ret
+	jp PrintText
 
-.OnlyOneMoveText:
+.OnlyOneMoveText: ; 0x2c5d1
 	; That #MON knows only one move.
 	text_jump UnknownText_0x1c5eba
 	db "@"
+; 0x2c5d6
 
-.ConfirmDeleteText:
+.ConfirmDeleteText: ; 0x2c5d6
 	; Oh, make it forget @ ?
 	text_jump UnknownText_0x1c5eda
 	db "@"
+; 0x2c5db
 
-.MoveDeletedText:
+.MoveDeletedText: ; 0x2c5db
 	; Done! Your #MON forgot the move.
 	text_jump UnknownText_0x1c5ef5
 	db "@"
+; 0x2c5e0
 
-.EggText:
+.EggText: ; 0x2c5e0
 	; An EGG doesn't know any moves!
 	text_jump UnknownText_0x1c5f17
 	db "@"
+; 0x2c5e5
 
-.DeclinedDeletionText:
+.DeclinedDeletionText: ; 0x2c5e5
 	; No? Come visit me again.
 	text_jump UnknownText_0x1c5f36
 	db "@"
+; 0x2c5ea
 
-.AskWhichMoveText:
+.AskWhichMoveText: ; 0x2c5ea
 	; Which move should it forget, then?
 	text_jump UnknownText_0x1c5f50
 	db "@"
+; 0x2c5ef
 
-.IntroText:
+.IntroText: ; 0x2c5ef
 	; Um… Oh, yes, I'm the MOVE DELETER. I can make #MON forget moves. Shall I make a #MON forget?
 	text_jump UnknownText_0x1c5f74
 	db "@"
+; 0x2c5f4
 
-.AskWhichMonText:
+.AskWhichMonText: ; 0x2c5f4
 	; Which #MON?
 	text_jump UnknownText_0x1c5fd1
 	db "@"
+; 0x2c5f9
 
-.DeleteMove:
+.DeleteMove: ; 2c5f9
 	ld a, b
 	push bc
 	dec a
@@ -109,7 +112,7 @@ MoveDeletion:
 	add hl, bc
 	ld a, [wCurPartyMon]
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	pop bc
 	push bc
 	inc b
@@ -138,7 +141,7 @@ MoveDeletion:
 	add hl, bc
 	ld a, [wCurPartyMon]
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	pop bc
 	inc b
 .loop2

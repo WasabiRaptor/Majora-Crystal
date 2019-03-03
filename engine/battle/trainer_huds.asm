@@ -1,20 +1,22 @@
-BattleStart_TrainerHuds:
+BattleStart_TrainerHuds: ; 2c000
 	ld a, $e4
-	ldh [rOBP0], a
+	ld [rOBP0], a
 	call LoadBallIconGFX
 	call ShowPlayerMonsRemaining
 	ld a, [wBattleMode]
 	dec a
 	ret z
 	jp ShowOTTrainerMonsRemaining
+; 2c012
 
-EnemySwitch_TrainerHud:
+EnemySwitch_TrainerHud: ; 2c012
 	ld a, $e4
-	ldh [rOBP0], a
+	ld [rOBP0], a
 	call LoadBallIconGFX
 	jp ShowOTTrainerMonsRemaining
+; 2c01c
 
-ShowPlayerMonsRemaining:
+ShowPlayerMonsRemaining: ; 2c01c
 	call DrawPlayerPartyIconHUDBorder
 	ld hl, wPartyMon1HP
 	ld de, wPartyCount
@@ -26,11 +28,12 @@ ShowPlayerMonsRemaining:
 	ld [hl], a
 	ld a, 8
 	ld [wPlaceBallsDirection], a
-	ld hl, wVirtualOAMSprite00
+	ld hl, wSprites
 	jp LoadTrainerHudOAM
+; 2c03a
 
-ShowOTTrainerMonsRemaining:
-	call DrawEnemyHUDBorder
+ShowOTTrainerMonsRemaining: ; 2c03a
+	call DrawEnemyPartyIconHUDBorder
 	ld hl, wOTPartyMon1HP
 	ld de, wOTPartyCount
 	call StageBallTilesData
@@ -41,10 +44,11 @@ ShowOTTrainerMonsRemaining:
 	ld [hl], 4 * 8
 	ld a, -8
 	ld [wPlaceBallsDirection], a
-	ld hl, wVirtualOAMSprite00 + PARTY_LENGTH * SPRITEOAMSTRUCT_LENGTH
+	ld hl, wSprites + PARTY_LENGTH * 4
 	jp LoadTrainerHudOAM
+; 2c059
 
-StageBallTilesData:
+StageBallTilesData: ; 2c059
 	ld a, [de]
 	push af
 	ld de, wBuffer1
@@ -65,8 +69,9 @@ StageBallTilesData:
 	dec a
 	jr nz, .loop2
 	ret
+; 2c075
 
-.GetHUDTile:
+.GetHUDTile: ; 2c075
 	ld a, [hli]
 	and a
 	jr nz, .got_hp
@@ -83,7 +88,7 @@ StageBallTilesData:
 	and a
 	ld b, $32 ; statused
 	jr nz, .load
-	dec b ; normal
+	dec b ; $31 ; normal
 	jr .load
 
 .fainted
@@ -97,85 +102,89 @@ StageBallTilesData:
 	ld bc, PARTYMON_STRUCT_LENGTH + MON_HP - MON_STATUS
 	add hl, bc
 	ret
+; 2c095
 
-DrawPlayerHUDBorder:
+DrawPlayerHUDBorder: ; 2c095
+	hlcoord 19, 11
+	ld [hl], "<XPEND>"
+	hlcoord 10, 11
+	ld [hl], "<XP1>"
+	inc hl
+	ld [hl], "<XP2>"
+	ret
+
+DrawPlayerPartyIconHUDBorder: ; 2c0ad
 	ld hl, .tiles
 	ld de, wTrainerHUDTiles
-	ld bc, .tiles_end - .tiles
-	call CopyBytes
-	hlcoord 18, 10
+	ld bc, 4
+	rst CopyBytes
+	hlcoord 19, 11
 	ld de, -1 ; start on right
 	jr PlaceHUDBorderTiles
 
 .tiles
-	db $73 ; right side
-	db $77 ; bottom right
-	db $6f ; bottom left
-	db $76 ; bottom side
-.tiles_end
+	db "—" ; past right
+	db "—" ; right end
+	db "—" ; bar
+	db "◢" ; left end
+; 2c0c5
 
-DrawPlayerPartyIconHUDBorder:
+DrawEnemyPartyIconHUDBorder:
 	ld hl, .tiles
 	ld de, wTrainerHUDTiles
-	ld bc, .tiles_end - .tiles
-	call CopyBytes
-	hlcoord 18, 10
-	ld de, -1 ; start on right
-	jr PlaceHUDBorderTiles
-
-.tiles
-	db $73 ; right side
-	db $5c ; bottom right
-	db $6f ; bottom left
-	db $76 ; bottom side
-.tiles_end
-
-DrawEnemyHUDBorder:
-	ld hl, .tiles
-	ld de, wTrainerHUDTiles
-	ld bc, .tiles_end - .tiles
-	call CopyBytes
-	hlcoord 1, 2
+	ld bc, 4
+	rst CopyBytes
+	hlcoord 0, 3
 	ld de, 1 ; start on left
 	call PlaceHUDBorderTiles
+	jr DrawEnemyHUDBorder
+
+.tiles
+	db "—" ; past left
+	db "—" ; left end
+	db "—" ; bar
+	db "◣" ; right end
+
+DrawEnemyHUDBorder: ; 2c0c5
 	ld a, [wBattleMode]
 	dec a
 	ret nz
+	call DoesNuzlockeModePreventCapture
+	jr c, .nuzlocke
 	ld a, [wTempEnemyMonSpecies]
 	dec a
 	call CheckCaughtMon
 	ret z
 	hlcoord 1, 1
-	ld [hl], $5d
+	ld [hl], "<BALL>"
 	ret
 
-.tiles
-	db $6d ; left side
-	db $74 ; bottom left
-	db $78 ; bottom right
-	db $76 ; bottom side
-.tiles_end
+.nuzlocke
+	hlcoord 1, 1
+	ld [hl], "<NONO>"
+	ret
+; 2c0f1
 
-PlaceHUDBorderTiles:
-	ld a, [wTrainerHUDTiles + 0]
+PlaceHUDBorderTiles: ; 2c0f1
+	ld a, [wTrainerHUDTiles]
 	ld [hl], a
-	ld bc, SCREEN_WIDTH
-	add hl, bc
-	ld a, [wTrainerHUDTiles + 1]
-	ld [hl], a
-	ld b, 8
+	ld b, $8
 .loop
 	add hl, de
-	ld a, [wTrainerHUDTiles + 3]
+	ld a, [wTrainerHUDTiles + 1]
 	ld [hl], a
 	dec b
 	jr nz, .loop
 	add hl, de
 	ld a, [wTrainerHUDTiles + 2]
 	ld [hl], a
+	add hl, de
+	ld a, [wTrainerHUDTiles + 3]
+	ld [hl], a
 	ret
+; 2c10d
 
-LinkBattle_TrainerHuds:
+LinkBattle_TrainerHuds: ; 2c10d
 	call LoadBallIconGFX
 	ld hl, wPartyMon1HP
 	ld de, wPartyCount
@@ -184,9 +193,9 @@ LinkBattle_TrainerHuds:
 	ld a, 10 * 8
 	ld [hli], a
 	ld [hl], 8 * 8
-	ld a, 8
+	ld a, $8
 	ld [wPlaceBallsDirection], a
-	ld hl, wVirtualOAMSprite00
+	ld hl, wSprites
 	call LoadTrainerHudOAM
 
 	ld hl, wOTPartyMon1HP
@@ -196,21 +205,21 @@ LinkBattle_TrainerHuds:
 	ld a, 10 * 8
 	ld [hli], a
 	ld [hl], 13 * 8
-	ld hl, wVirtualOAMSprite00 + PARTY_LENGTH * SPRITEOAMSTRUCT_LENGTH
-	jp LoadTrainerHudOAM
+	ld hl, wSprites + PARTY_LENGTH * 4
+	; fallthrough
 
-LoadTrainerHudOAM:
+LoadTrainerHudOAM: ; 2c143
 	ld de, wBuffer1
 	ld c, PARTY_LENGTH
 .loop
 	ld a, [wPlaceBallsY]
-	ld [hli], a ; y
+	ld [hli], a
 	ld a, [wPlaceBallsX]
-	ld [hli], a ; x
+	ld [hli], a
 	ld a, [de]
-	ld [hli], a ; tile id
+	ld [hli], a
 	ld a, PAL_BATTLE_OB_YELLOW
-	ld [hli], a ; attributes
+	ld [hli], a
 	ld a, [wPlaceBallsX]
 	ld b, a
 	ld a, [wPlaceBallsDirection]
@@ -220,23 +229,24 @@ LoadTrainerHudOAM:
 	dec c
 	jr nz, .loop
 	ret
+; 2c165
 
-LoadBallIconGFX:
+LoadBallIconGFX: ; 2c165
 	ld de, .gfx
-	ld hl, vTiles0 tile $31
+	ld hl, VTiles0 tile $31
 	lb bc, BANK(LoadBallIconGFX), 4
-	call Get2bpp_2
-	ret
+	jp Get2bpp
+; 2c172
 
-.gfx
+.gfx ; 2c172
 INCBIN "gfx/battle/balls.2bpp"
+; 2c1b2
 
-_ShowLinkBattleParticipants:
+_ShowLinkBattleParticipants: ; 2c1b2
 	call ClearBGPalettes
 	call LoadFontsExtra
 	hlcoord 2, 3
-	ld b, 9
-	ld c, 14
+	lb bc, 9, 14
 	call TextBox
 	hlcoord 4, 5
 	ld de, wPlayerName
@@ -248,10 +258,44 @@ _ShowLinkBattleParticipants:
 	ld a, "V"
 	ld [hli], a
 	ld [hl], "S"
-	farcall LinkBattle_TrainerHuds ; no need to farcall
-	ld b, SCGB_DIPLOMA
-	call GetSGBLayout
+	call LinkBattle_TrainerHuds
+	ld b, CGB_DIPLOMA
+	call GetCGBLayout
 	call SetPalettes
 	ld a, $e4
-	ldh [rOBP0], a
+	ld [rOBP0], a
+	ret
+; 2c1ef
+
+DoesNuzlockeModePreventCapture:
+	; Is nuzlocke mode on?
+	ld a, [wInitialOptions]
+	bit NUZLOCKE_MODE, a
+	jr z, .no
+
+	; Is enemy shiny?
+	farcall BattleCheckEnemyShininess
+	jr c, .no
+
+	; Is location already done?
+	ld a, [wMapGroup]
+	ld b, a
+	ld a, [wMapNumber]
+	ld c, a
+	call GetWorldMapLocation
+	ld c, a
+	ld hl, wNuzlockeLandmarkFlags
+	; Use landmark as index into flag array
+	ld b, CHECK_FLAG
+	ld d, $0
+	predef FlagPredef
+	ld a, c
+	and a
+	jr z, .no
+
+	scf
+	ret
+
+.no
+	xor a
 	ret

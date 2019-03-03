@@ -1,17 +1,32 @@
 npctrade: MACRO
-; dialog set, requested mon, offered mon, nickname, dvs, item, OT ID, OT name, gender requested
-	db \1, \2, \3, \4, \5, \6, \7
+	db \1, \2, \3, \4 ; dialog set, requested mon, offered mon, nickname
+	db \5, \6, \7 ; dvs
+	db \8, \9 ; personality
 	shift
-	dw \7
-	db \8, \9, 0
+	db \9 ; item
+	shift
+	db \9 ; ball
+	shift
+	dw \9 ; OT ID
+	shift
+	db \9, 0 ; OT name
 ENDM
 
 NPCTrades:
-; entries correspond to NPCTRADE_* constants
-	npctrade TRADE_DIALOGSET_COLLECTOR, ABRA,       MACHOP,     "MUSCLE@@@@@", $37, $66, GOLD_BERRY,   37460, "MIKE@@@@@@@", TRADE_GENDER_EITHER
-	npctrade TRADE_DIALOGSET_COLLECTOR, BELLSPROUT, ONIX,       "ROCKY@@@@@@", $96, $66, BITTER_BERRY, 48926, "KYLE@@@@@@@", TRADE_GENDER_EITHER
-	npctrade TRADE_DIALOGSET_HAPPY,     KRABBY,     VOLTORB,    "VOLTY@@@@@@", $98, $88, PRZCUREBERRY, 29189, "TIM@@@@@@@@", TRADE_GENDER_EITHER
-	npctrade TRADE_DIALOGSET_GIRL,      DRAGONAIR,  DODRIO,     "DORIS@@@@@@", $77, $66, SMOKE_BALL,   00283, "EMY@@@@@@@@", TRADE_GENDER_FEMALE
-	npctrade TRADE_DIALOGSET_NEWBIE,    HAUNTER,    XATU,       "PAUL@@@@@@@", $96, $86, MYSTERYBERRY, 15616, "CHRIS@@@@@@", TRADE_GENDER_EITHER
-	npctrade TRADE_DIALOGSET_GIRL,      CHANSEY,    AERODACTYL, "AEROY@@@@@@", $96, $66, GOLD_BERRY,   26491, "KIM@@@@@@@@", TRADE_GENDER_EITHER
-	npctrade TRADE_DIALOGSET_COLLECTOR, DUGTRIO,    MAGNETON,   "MAGGIE@@@@@", $96, $66, METAL_COAT,   50082, "FOREST@@@@@", TRADE_GENDER_EITHER
+; OT names have 3 characters less padding so the total struct is 31 bytes
+; TRADE_WITH_MIKE_FOR_MACHOP in Goldenrod City
+	npctrade 0, ABRA,       MACHOP,     "Muscle@@@@@", $EE, $EE, $EE, HIDDEN_ABILITY | ADAMANT, MALE,   LEVEL_BALL,   SITRUS_BERRY, 37460, "Mike@@@@"
+; TRADE_WITH_KYLE_FOR_VOLTORB in Violet City
+	npctrade 0, POLIWAG,    VOLTORB,    "Mimic@@@@@@", $EE, $EE, $EE, HIDDEN_ABILITY | HASTY,   MALE,   PREMIER_BALL, PERSIM_BERRY, 48926, "Kyle@@@@"
+; TRADE_WITH_TIM_FOR_KANGASKHAN in Olivine City
+	npctrade 1, STEELIX,    KANGASKHAN, "Joey@@@@@@@", $EE, $EE, $EE, HIDDEN_ABILITY | BRAVE,   MALE,   HEAVY_BALL,   SILK_SCARF,   29189, "Tim@@@@@"
+; TRADE_WITH_EMY_FOR_MR__MIME in Blackthorn City
+	npctrade 3, JYNX,       MR__MIME,   "Doris@@@@@@", $EE, $EE, $EE, HIDDEN_ABILITY | TIMID,   FEMALE, LOVE_BALL,    PINK_BOW,     00283, "Emy@@@@@"
+; TRADE_WITH_CHRIS_FOR_HERACROSS in Pewter City
+	npctrade 2, PINSIR,     HERACROSS,  "Paul@@@@@@@", $EE, $EE, $EE, HIDDEN_ABILITY | JOLLY,   MALE,   PARK_BALL,    SILVERPOWDER, 15616, "Chris@@@"
+; TRADE_WITH_KIM_FOR_CHANSEY in Route 14
+	npctrade 3, WOBBUFFET,  CHANSEY,    "Chance@@@@@", $EE, $EE, $EE, HIDDEN_ABILITY | CALM,    FEMALE, HEAL_BALL,    LUCKY_EGG,    26491, "Kim@@@@@"
+; TRADE_WITH_JACQUES_FOR_GRIMER in Goldenrod Harbor
+	npctrade 1, TENTACOOL,  GRIMER,     "Gail@@@@@@@", $EE, $EE, $EE, HIDDEN_ABILITY | CAREFUL, FEMALE, LURE_BALL,    EVIOLITE,     50082, "Jacques@"
+; TRADE_WITH_HARI_FOR_DODUO in Ecruteak City
+	npctrade 0, FARFETCH_D, DODUO,      "Clarence@@@", $EE, $EE, $EE, HIDDEN_ABILITY | HASTY,   MALE,   FAST_BALL,    GOLD_LEAF,    43972, "Hari@@@@"

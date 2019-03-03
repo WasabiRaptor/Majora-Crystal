@@ -1,21 +1,23 @@
-	db VENONAT ; 048
-
 	db  60,  55,  50,  45,  40,  55
-    evs  0,   0,   0,   0,   0,   1
 	;   hp  atk  def  spd  sat  sdf
 
-	db BUG, POISON ; type
+	db BUG, POISON
 	db 190 ; catch rate
 	db 75 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F50 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/venonat/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_BUG, EGG_BUG ; egg groups
+	db NO_ITEM ; item 1
+	db NO_ITEM ; item 2
+	dn FEMALE_50, 3 ; gender, step cycles to hatch
+	dn 5, 5 ; frontpic dimensions
+	db COMPOUND_EYES ; ability 1
+	db TINTED_LENS ; ability 2
+	db RUN_AWAY ; hidden ability
+	db MEDIUM_FAST ; growth rate
+	dn INSECT, INSECT ; egg groups
 
-	; tm/hm learnset
-	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SWEET_SCENT, SNORE, PROTECT, GIGA_DRAIN, ENDURE, FRUSTRATION, SOLARBEAM, RETURN, PSYCHIC_M, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, SWIFT, REST, ATTRACT, THIEF
+	; ev_yield
+	ev_yield   0,   0,   0,   0,   0,   1
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, PROTECT, GIGA_DRAIN, SOLAR_BEAM, RETURN, PSYCHIC, DOUBLE_TEAM, SLUDGE_BOMB, SWIFT, SUBSTITUTE, FACADE, REST, ATTRACT, THIEF, LEECH_LIFE, ENDURE, FLASH, DOUBLE_EDGE, SKILL_SWAP, SLEEP_TALK, SWAGGER, ZEN_HEADBUTT
 	; end

@@ -1,25 +1,27 @@
-; These lists determine the battle music and victory music, and whether to
-; award HAPPINESS_GYMBATTLE for winning.
-
-; Note: CHAMPION and RED are unused for battle music checks, since they are
-; accounted for prior to the list check.
-
-GymLeaders:
+BossTrainers:
+	db CHAMPION
+	db RED
+	db LEAF
+	db STEVEN
+	db CYNTHIA
+	db TOWERTYCOON
+	db VALERIE
+	db GIOVANNI
+	db LORELEI
+	db AGATHA
+	db WILL
+	db KOGA
+	db BRUNO
+	db KAREN
+JohtoGymLeaders:
 	db FALKNER
 	db WHITNEY
 	db BUGSY
 	db MORTY
-	db PRYCE
-	db JASMINE
 	db CHUCK
+	db JASMINE
+	db PRYCE
 	db CLAIR
-	db WILL
-	db BRUNO
-	db KAREN
-	db KOGA
-	db CHAMPION
-	db RED
-; fallthrough
 KantoGymLeaders:
 	db BROCK
 	db MISTY

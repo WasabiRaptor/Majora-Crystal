@@ -1,21 +1,23 @@
-	db ARBOK ; 024
-
-	db  60,  85,  69,  80,  65,  79
-    evs  0,   2,   0,   0,   0,   0
+	db  60,  95,  69,  80,  65,  79
 	;   hp  atk  def  spd  sat  sdf
 
-	db POISON, POISON ; type
+	db POISON, POISON
 	db 90 ; catch rate
 	db 147 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F50 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/arbok/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_GROUND, EGG_DRAGON ; egg groups
+	db NO_ITEM ; item 1
+	db POISON_BARB ; item 2
+	dn FEMALE_50, 3 ; gender, step cycles to hatch
+	dn 7, 7 ; frontpic dimensions
+	db INTIMIDATE ; ability 1
+	db SHED_SKIN ; ability 2
+	db UNNERVE ; hidden ability
+	db MEDIUM_FAST ; growth rate
+	dn FIELD, REPTILE ; egg groups
 
-	; tm/hm learnset
-	tmhm HEADBUTT, CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, GIGA_DRAIN, ENDURE, FRUSTRATION, EARTHQUAKE, RETURN, DIG, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, REST, ATTRACT, THIEF, STRENGTH
+	; ev_yield
+	ev_yield   0,   2,   0,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, TOXIC, BULK_UP, HIDDEN_POWER, SUNNY_DAY, HYPER_BEAM, PROTECT, RAIN_DANCE, GIGA_DRAIN, BULLDOZE, IRON_TAIL, EARTHQUAKE, RETURN, DIG, DOUBLE_TEAM, SLUDGE_BOMB, SUBSTITUTE, FACADE, REST, ATTRACT, THIEF, ROCK_SLIDE, LEECH_LIFE, DARK_PULSE, ENDURE, POISON_JAB, GIGA_IMPACT, STRENGTH, AQUA_TAIL, BODY_SLAM, DOUBLE_EDGE, HEADBUTT, SEED_BOMB, SLEEP_TALK, SWAGGER
 	; end

@@ -1,120 +1,49 @@
-; Functions to copy data from ROM.
+ReplaceKrisSprite:: ; e4a
+	farjp _ReplaceKrisSprite
+; e51
 
-Get2bpp_2::
-	ldh a, [rLCDC]
-	bit rLCDC_ENABLE, a
-	jp z, Copy2bpp
+LoadStandardOpaqueFont::
+	farjp _LoadStandardOpaqueFont
 
-	homecall _Get2bpp
+LoadStandardFont:: ; e51
+	farjp _LoadStandardFont
+; e58
 
-	ret
+LoadFontsBattleExtra:: ; e58
+	farjp _LoadFontsBattleExtra
+; e5f
 
-Get1bpp_2::
-	ldh a, [rLCDC]
-	bit rLCDC_ENABLE, a
-	jp z, Copy1bpp
+LoadFontsExtra:: ; e5f
+	farjp LoadFrame
+; e6c
 
-	homecall _Get1bpp
+ApplyTilemap::
+; Tell VBlank to update BG Map
+	ld a, 1
+	ld [hBGMapMode], a
+	ld a, [wSpriteUpdatesEnabled]
+	and a
+	ld b, 3
+	jr nz, SafeCopyTilemapAtOnce
+	ld b, 1 << 3 | 3
 
-	ret
+; fallthrough
+SafeCopyTilemapAtOnce::
+; copies the tile&attr map at once
+; without any tearing
+; input:
+; b: 0 = no palette copy
+;    1 = copy raw palettes
+;    2 = set palettes and copy
+;    3 = use whatever was in hCGBPalUpdate
+; bit 2: if set, clear hOAMUpdate
+; bit 3: if set, only update tilemap
+	farjp _SafeCopyTilemapAtOnce
 
-FarCopyBytesDouble_DoubleBankSwitch::
-	ldh [hBuffer], a
-	ldh a, [hROMBank]
-	push af
-	ldh a, [hBuffer]
-	rst Bankswitch
+CopyTilemapAtOnce::
+	farjp _CopyTilemapAtOnce
 
-	call FarCopyBytesDouble
-
-	pop af
-	rst Bankswitch
-	ret
-
-OldDMATransfer::
-	dec c
-	ldh a, [hBGMapMode]
-	push af
-	xor a
-	ldh [hBGMapMode], a
-	ldh a, [hROMBank]
-	push af
-	ld a, b
-	rst Bankswitch
-
-.loop
-; load the source and target MSB and LSB
-	ld a, d
-	ldh [rHDMA1], a ; source MSB
-	ld a, e
-	and $f0
-	ldh [rHDMA2], a ; source LSB
-	ld a, h
-	and $1f
-	ldh [rHDMA3], a ; target MSB
-	ld a, l
-	and $f0
-	ldh [rHDMA4], a ; target LSB
-; stop when c < 8
-	ld a, c
-	cp $8
-	jr c, .done
-; decrease c by 8
-	sub $8
-	ld c, a
-; DMA transfer state
-	ld a, $f
-	ldh [hDMATransfer], a
-	call DelayFrame
-; add $100 to hl and de
-	ld a, l
-	add LOW($100)
-	ld l, a
-	ld a, h
-	adc HIGH($100)
-	ld h, a
-	ld a, e
-	add LOW($100)
-	ld e, a
-	ld a, d
-	adc HIGH($100)
-	ld d, a
-	jr .loop
-
-.done
-	ld a, c
-	and $7f ; pretty silly, considering at most bits 0-2 would be set
-	ldh [hDMATransfer], a
-	call DelayFrame
-	pop af
-	rst Bankswitch
-
-	pop af
-	ldh [hBGMapMode], a
-	ret
-
-ReplaceKrisSprite::
-	farcall _ReplaceKrisSprite
-	ret
-
-LoadStandardFont::
-	farcall _LoadStandardFont
-	ret
-
-LoadFontsBattleExtra::
-	farcall _LoadFontsBattleExtra
-	ret
-
-LoadFontsExtra::
-	farcall _LoadFontsExtra1
-	farcall _LoadFontsExtra2
-	ret
-
-LoadFontsExtra2::
-	farcall _LoadFontsExtra2
-	ret
-
-DecompressRequest2bpp::
+DecompressRequest2bpp:: ; e73
 	push de
 	ld a, BANK(sScratch)
 	call GetSRAMBank
@@ -129,263 +58,343 @@ DecompressRequest2bpp::
 
 	ld de, sScratch
 	call Request2bpp
-	call CloseSRAM
-	ret
-
-FarCopyBytes::
-; copy bc bytes from a:hl to de
-
-	ldh [hBuffer], a
-	ldh a, [hROMBank]
-	push af
-	ldh a, [hBuffer]
-	rst Bankswitch
-
-	call CopyBytes
-
-	pop af
-	rst Bankswitch
-	ret
-
-FarCopyBytesDouble::
-; Copy bc bytes from a:hl to bc*2 bytes at de,
-; doubling each byte in the process.
-
-	ldh [hBuffer], a
-	ldh a, [hROMBank]
-	push af
-	ldh a, [hBuffer]
-	rst Bankswitch
-
-; switcheroo, de <> hl
-	ld a, h
-	ld h, d
-	ld d, a
-	ld a, l
-	ld l, e
-	ld e, a
-
-	inc b
-	inc c
-	jr .dec
-
-.loop
-	ld a, [de]
-	inc de
-	ld [hli], a
-	ld [hli], a
-.dec
-	dec c
-	jr nz, .loop
-	dec b
-	jr nz, .loop
-
-	pop af
-	rst Bankswitch
-	ret
-
-Request2bpp::
-; Load 2bpp at b:de to occupy c tiles of hl.
-	ldh a, [hBGMapMode]
-	push af
-	xor a
-	ldh [hBGMapMode], a
-
-	ldh a, [hROMBank]
-	push af
-	ld a, b
-	rst Bankswitch
-
-	ldh a, [hTilesPerCycle]
-	push af
-	ld a, $8
-	ldh [hTilesPerCycle], a
-
-	ld a, [wLinkMode]
-	cp LINK_MOBILE
-	jr nz, .NotMobile
-	ldh a, [hMobile]
-	and a
-	jr nz, .NotMobile
-	ld a, $6
-	ldh [hTilesPerCycle], a
-
-.NotMobile:
-	ld a, e
-	ld [wRequested2bppSource], a
-	ld a, d
-	ld [wRequested2bppSource + 1], a
-	ld a, l
-	ld [wRequested2bppDest], a
-	ld a, h
-	ld [wRequested2bppDest + 1], a
-.loop
-	ld a, c
-	ld hl, hTilesPerCycle
-	cp [hl]
-	jr nc, .iterate
-
-	ld [wRequested2bpp], a
-.wait
-	call DelayFrame
-	ld a, [wRequested2bpp]
-	and a
-	jr nz, .wait
-
-	pop af
-	ldh [hTilesPerCycle], a
-
-	pop af
-	rst Bankswitch
-
-	pop af
-	ldh [hBGMapMode], a
-	ret
-
-.iterate
-	ldh a, [hTilesPerCycle]
-	ld [wRequested2bpp], a
-
-.wait2
-	call DelayFrame
-	ld a, [wRequested2bpp]
-	and a
-	jr nz, .wait2
-
-	ld a, c
-	ld hl, hTilesPerCycle
-	sub [hl]
-	ld c, a
-	jr .loop
-
-Request1bpp::
-; Load 1bpp at b:de to occupy c tiles of hl.
-	ldh a, [hBGMapMode]
-	push af
-	xor a
-	ldh [hBGMapMode], a
-
-	ldh a, [hROMBank]
-	push af
-	ld a, b
-	rst Bankswitch
-
-	ldh a, [hTilesPerCycle]
-	push af
-
-	ld a, $8
-	ldh [hTilesPerCycle], a
-	ld a, [wLinkMode]
-	cp LINK_MOBILE
-	jr nz, .NotMobile
-	ldh a, [hMobile]
-	and a
-	jr nz, .NotMobile
-	ld a, $6
-	ldh [hTilesPerCycle], a
-
-.NotMobile:
-	ld a, e
-	ld [wRequested1bppSource], a
-	ld a, d
-	ld [wRequested1bppSource + 1], a
-	ld a, l
-	ld [wRequested1bppDest], a
-	ld a, h
-	ld [wRequested1bppDest + 1], a
-.loop
-	ld a, c
-	ld hl, hTilesPerCycle
-	cp [hl]
-	jr nc, .iterate
-
-	ld [wRequested1bpp], a
-.wait
-	call DelayFrame
-	ld a, [wRequested1bpp]
-	and a
-	jr nz, .wait
-
-	pop af
-	ldh [hTilesPerCycle], a
-
-	pop af
-	rst Bankswitch
-
-	pop af
-	ldh [hBGMapMode], a
-	ret
-
-.iterate
-	ldh a, [hTilesPerCycle]
-	ld [wRequested1bpp], a
-
-.wait2
-	call DelayFrame
-	ld a, [wRequested1bpp]
-	and a
-	jr nz, .wait2
-
-	ld a, c
-	ld hl, hTilesPerCycle
-	sub [hl]
-	ld c, a
-	jr .loop
+	jp CloseSRAM
+; e8d
 
 Get2bpp::
-	ldh a, [rLCDC]
-	bit rLCDC_ENABLE, a
+	ld a, [rLCDC]
+	bit 7, a ; lcd on?
 	jp nz, Request2bpp
 
 Copy2bpp::
 ; copy c 2bpp tiles from b:de to hl
+	call StackCallInBankB
 
-	push hl
+.Function:
+	call WriteVCopyRegistersToHRAM
+	ld b, c
+	jp _Serve2bppRequest
+
+Request2bpp:: ; eba
+; Load 2bpp at b:de to occupy c tiles of hl.
+	call StackCallInBankB
+
+.Function:
+	ld a, [hBGMapMode]
+	push af
+	xor a
+	ld [hBGMapMode], a
+
+	call WriteVCopyRegistersToHRAM
+	ld a, [rLY]
+	cp $88
+	jr c, .handleLoop
+; fallthrough to vblank copy handler if LY is too high
+.loop
+	ld a, [hTilesPerCycle]
+	sub $10
+	ld [hTilesPerCycle], a
+	jr c, .copyRemainingTilesAndExit
+	jr nz, .copySixteenTilesAndContinue
+.copyRemainingTilesAndExit
+	add $10
+	ld [hRequested2bpp], a
+	xor a
+	ld [hTilesPerCycle], a
+	call DelayFrame
+	ld a, [hRequested2bpp]
+	and a
+	jr z, .clearTileCountAndFinish
+.addUncopiedTilesToCount
+	ld b, a
+	ld a, [hTilesPerCycle]
+	add b
+	ld [hTilesPerCycle], a
+	xor a
+	ld [hRequested2bpp], a
+	jr .handleLoop
+.clearTileCountAndFinish
+	xor a
+	ld [hTilesPerCycle], a
+	jr .done
+.copySixteenTilesAndContinue
+	ld a, $10
+	ld [hRequested2bpp], a
+	call DelayFrame
+	ld a, [hRequested2bpp]
+	and a
+	jr nz, .addUncopiedTilesToCount
+.handleLoop
+	call HBlankCopy2bpp
+	jr c, .loop
+.done
+
+	pop af
+	ld [hBGMapMode], a
+	ret
+
+GetMaybeOpaque1bpp::
+	ld a, [rLCDC]
+	bit 7, a
+	jr nz, _Request1bpp
+	jr _Copy1bpp
+
+GetOpaque1bppSpaceTile::
+	ld de, TextBoxSpaceGFX
+GetOpaque1bppFontTile::
+; Two bytes in VRAM define eight pixels (2 bits/pixel)
+; Bits are paired from the bytes, e.g. %ABCDEFGH %abcdefgh defines pixels
+; %Aa, %Bb, %Cc, %Dd, %Ee, %Ff, %Gg, %Hh
+; %00 = white, %11 = black, %10 = light, %01 = dark
+	lb bc, BANK(FontTiles), 1
+GetOpaque1bpp::
+	ld a, [rLCDC]
+	bit 7, a ; lcd on?
+	jr nz, RequestOpaque1bpp
+CopyOpaque1bpp:
+	ld a, 1
+	ld [hRequestOpaque1bpp], a
+	jr _Copy1bpp
+
+Get1bpp:: ; f9d
+	ld a, [rLCDC]
+	bit 7, a ; lcd on?
+	jr nz, Request1bpp
+Copy1bpp::
+	xor a
+	ld [hRequestOpaque1bpp], a
+_Copy1bpp::
+; copy c 1bpp tiles from b:de to hl
+	call StackCallInBankB
+
+.Function:
+	call WriteVCopyRegistersToHRAM
+	ld b, c
+	jp _Serve1bppRequest
+
+RequestOpaque1bpp:
+	ld a, 1
+	ld [hRequestOpaque1bpp], a
+	jr _Request1bpp
+Request1bpp::
+	xor a
+	ld [hRequestOpaque1bpp], a
+_Request1bpp:
+; Load 1bpp at b:de to occupy c tiles of hl.
+	call StackCallInBankB
+
+.Function:
+	ld a, [hBGMapMode]
+	push af
+	xor a
+	ld [hBGMapMode], a
+
+	call WriteVCopyRegistersToHRAM
+	ld a, [rLY]
+	cp $88
+	jr c, .handleLoop
+.loop
+	ld a, [hTilesPerCycle]
+	sub 16
+	ld [hTilesPerCycle], a
+	jr c, .copyRemainingTilesAndExit
+	jr nz, .copySixteenTilesAndContinue
+.copyRemainingTilesAndExit
+	add 16
+	ld [hRequested1bpp], a
+	xor a
+	ld [hTilesPerCycle], a
+	call DelayFrame
+	ld a, [hRequested1bpp]
+	and a
+	jr z, .clearTileCountAndFinish
+.addUncopiedTilesToCount
+	ld b, a
+	ld a, [hTilesPerCycle]
+	add b
+	ld [hTilesPerCycle], a
+	xor a
+	ld [hRequested1bpp], a
+	jr .handleLoop
+.clearTileCountAndFinish
+	xor a
+	ld [hTilesPerCycle], a
+	jr .done
+.copySixteenTilesAndContinue
+	ld a, 16
+	ld [hRequested1bpp], a
+	call DelayFrame
+	ld a, [hRequested1bpp]
+	and a
+	jr nz, .addUncopiedTilesToCount
+.handleLoop
+	call HBlankCopy1bpp
+	jr c, .loop
+.done
+	pop af
+	ld [hBGMapMode], a
+	ret
+
+HBlankCopy1bpp:
+	di
+	ld [hSPBuffer], sp
+	ld hl, hRequestedVTileDest
+	ld a, [hli]
+	ld e, a
+	ld a, [hli]
+	ld d, a
+
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ld sp, hl
 	ld h, d
 	ld l, e
+	jr .innerLoop
+
+.outerLoop
+	ld a, [rLY]
+	cp $88
+	jr nc, ContinueHBlankCopy
+.innerLoop
+	pop bc
 	pop de
-
-; bank
+	ld a, [hRequestOpaque1bpp]
+	dec a
+	jr z, .waithblank2opaque
+.waithblank2
+	ld a, [rSTAT]
+	and 3
+	jr z, .waithblank2
+.waithblank
+	ld a, [rSTAT]
+	and 3
+	jr nz, .waithblank
+	ld a, c
+	ld [hli], a
+	ld [hli], a
 	ld a, b
-
-; bc = c * $10
-	push af
-	swap c
-	ld a, $f
-	and c
-	ld b, a
-	ld a, $f0
-	and c
-	ld c, a
-	pop af
-
-	jp FarCopyBytes
-
-Get1bpp::
-	ldh a, [rLCDC]
-	bit rLCDC_ENABLE, a
-	jp nz, Request1bpp
-
-Copy1bpp::
-; copy c 1bpp tiles from b:de to hl
-
-	push de
-	ld d, h
-	ld e, l
-
-; bank
+	ld [hli], a
+	ld [hli], a
+	ld a, e
+	ld [hli], a
+	ld [hli], a
+	ld a, d
+	ld [hli], a
+	ld [hli], a
+	rept 2
+	pop de
+	ld a, e
+	ld [hli], a
+	ld [hli], a
+	ld a, d
+	ld [hli], a
+	ld [hli], a
+	endr
+	ld a, [hTilesPerCycle]
+	dec a
+	ld [hTilesPerCycle], a
+	jr nz, .outerLoop
+	jr DoneHBlankCopy
+.waithblank2opaque
+	ld a, [rSTAT]
+	and 3
+	jr z, .waithblank2opaque
+.waithblankopaque
+	ld a, [rSTAT]
+	and 3
+	jr nz, .waithblankopaque
+	ld a, c
+	ld [hl], $ff
+	inc hl
+	ld [hli], a
 	ld a, b
+	ld [hl], $ff
+	inc hl
+	ld [hli], a
+	ld a, e
+	ld [hl], $ff
+	inc hl
+	ld [hli], a
+	ld a, d
+	ld [hl], $ff
+	inc hl
+	ld [hli], a
+	rept 2
+	pop de
+	ld a, e
+	ld [hl], $ff
+	inc hl
+	ld [hli], a
+	ld a, d
+	ld [hl], $ff
+	inc hl
+	ld [hli], a
+	endr
+	ld a, [hTilesPerCycle]
+	dec a
+	ld [hTilesPerCycle], a
+	jr nz, .outerLoop
+	jr DoneHBlankCopy
 
-; bc = c * $10 / 2
-	push af
-	ld h, 0
-	ld l, c
-	add hl, hl
-	add hl, hl
-	add hl, hl
-	ld b, h
-	ld c, l
-	pop af
+ContinueHBlankCopy:
+	ld [hRequestedVTileSource], sp
+	ld sp, hl
+	ld [hRequestedVTileDest], sp
+	scf
+DoneHBlankCopy:
+	ld a, [hSPBuffer]
+	ld l, a
+	ld a, [hSPBuffer + 1]
+	ld h, a
+	ld sp, hl
+	reti
 
-	pop hl
-	jp FarCopyBytesDouble
+WriteVCopyRegistersToHRAM:
+	ld a, e
+	ld [hRequestedVTileSource], a
+	ld a, d
+	ld [hRequestedVTileSource + 1], a
+	ld a, l
+	ld [hRequestedVTileDest], a
+	ld a, h
+	ld [hRequestedVTileDest + 1], a
+	ld a, c
+	ld [hTilesPerCycle], a
+	ret
+
+VRAMToVRAMCopy::
+	lb bc, %11, rSTAT & $ff ; predefine bitmask and rSTAT source for speed and size
+	jr .waitNoHBlank2
+.outerLoop2
+	ld a, [rLY]
+	cp $88
+	jp nc, ContinueHBlankCopy
+.waitNoHBlank2
+	ld a, [$ff00+c]
+	and b
+	jr z, .waitNoHBlank2
+.waitHBlank2
+	ld a, [$ff00+c]
+	and b
+	jr nz, .waitHBlank2
+	rept 7
+	pop de
+	ld a, e
+	ld [hli], a
+	ld a, d
+	ld [hli], a
+	endr
+	pop de
+	ld a, e
+	ld [hli], a
+	ld [hl], d
+	inc hl
+	ld a, l
+	and $f
+	jr nz, .waitNoHBlank2
+	ld a, [hTilesPerCycle]
+	dec a
+	ld [hTilesPerCycle], a
+	jr nz, .outerLoop2
+	jp DoneHBlankCopy

@@ -1,11 +1,10 @@
-Music_LavenderTown:
+Music_LavenderTown: ; ef72f
 	musicheader 3, 1, Music_LavenderTown_Ch1
 	musicheader 1, 2, Music_LavenderTown_Ch2
 	musicheader 1, 3, Music_LavenderTown_Ch3
+; ef738
 
-	db $3
-
-Music_LavenderTown_Ch1:
+Music_LavenderTown_Ch1: ; ef739
 	tempo 160
 	volume $77
 	stereopanning $f
@@ -16,7 +15,7 @@ Music_LavenderTown_Ch1:
 	note __, 16
 	note __, 16
 	note __, 16
-Music_LavenderTown_branch_ef74c:
+Music_LavenderTown_branch_ef74c: ; ef74c
 	callchannel Music_LavenderTown_branch_ef7fd
 	intensity $93
 	octave 5
@@ -102,7 +101,7 @@ Music_LavenderTown_branch_ef74c:
 	octave 3
 	note A_, 2
 	note F_, 2
-Music_LavenderTown_branch_ef7ca:
+Music_LavenderTown_branch_ef7ca: ; ef7ca
 	octave 3
 	note C_, 2
 	note E_, 2
@@ -148,8 +147,9 @@ Music_LavenderTown_branch_ef7ca:
 	note B_, 8
 	note B_, 8
 	loopchannel 0, Music_LavenderTown_branch_ef74c
+; ef7fd
 
-Music_LavenderTown_branch_ef7fd:
+Music_LavenderTown_branch_ef7fd: ; ef7fd
 	intensity $83
 	octave 5
 	note C_, 2
@@ -240,8 +240,9 @@ Music_LavenderTown_branch_ef7fd:
 	intensity $43
 	note F_, 2
 	endchannel
+; ef87f
 
-Music_LavenderTown_branch_ef87f:
+Music_LavenderTown_branch_ef87f: ; ef87f
 	intensity $93
 	octave 5
 	note G_, 2
@@ -260,12 +261,13 @@ Music_LavenderTown_branch_ef87f:
 	intensity $43
 	note G_, 2
 	endchannel
+; ef899
 
-Music_LavenderTown_Ch2:
+Music_LavenderTown_Ch2: ; ef899
 	dutycycle $1
 	vibrato $8, $24
 	stereopanning $ff
-Music_LavenderTown_branch_ef8a0:
+Music_LavenderTown_branch_ef8a0: ; ef8a0
 	notetype $c, $a3
 	octave 5
 	note C_, 2
@@ -301,7 +303,7 @@ Music_LavenderTown_branch_ef8a0:
 	note D_, 2
 	intensity $63
 	note D_, 2
-Music_LavenderTown_branch_ef8d7:
+Music_LavenderTown_branch_ef8d7: ; ef8d7
 	intensity $b5
 	callchannel Music_LavenderTown_branch_ef915
 	octave 2
@@ -354,8 +356,9 @@ Music_LavenderTown_branch_ef8d7:
 	note F_, 1
 	note G_, 6
 	loopchannel 0, Music_LavenderTown_branch_ef8d7
+; ef915
 
-Music_LavenderTown_branch_ef915:
+Music_LavenderTown_branch_ef915: ; ef915
 	octave 2
 	note C_, 4
 	note G_, 4
@@ -385,8 +388,9 @@ Music_LavenderTown_branch_ef915:
 	note A_, 4
 	note C_, 4
 	endchannel
+; ef932
 
-Music_LavenderTown_Ch3:
+Music_LavenderTown_Ch3: ; ef932
 	vibrato $12, $24
 	notetype $c, $13
 	stereopanning $f0
@@ -397,7 +401,7 @@ Music_LavenderTown_Ch3:
 	octave 5
 	note E_, 4
 	note F_, 4
-Music_LavenderTown_branch_ef941:
+Music_LavenderTown_branch_ef941: ; ef941
 	intensity $12
 	octave 5
 	note G_, 4
@@ -512,3 +516,4 @@ Music_LavenderTown_branch_ef941:
 	note E_, 2
 	note F_, 2
 	loopchannel 0, Music_LavenderTown_branch_ef941
+; ef9bc

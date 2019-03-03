@@ -1,7 +1,4 @@
-; Pics are defined in gfx/pics.asm
-
-PokemonPicPointers::
-; entries correspond to Pokémon species, two apiece
+PicPointers::
 	dba BulbasaurFrontpic
 	dba BulbasaurBackpic
 	dba IvysaurFrontpic
@@ -42,16 +39,21 @@ PokemonPicPointers::
 	dba RattataBackpic
 	dba RaticateFrontpic
 	dba RaticateBackpic
-	dba SpearowFrontpic
-	dba SpearowBackpic
-	dba FearowFrontpic
-	dba FearowBackpic
+	dba MarillFrontpic
+	dba MarillBackpic
+	dba AzumarillFrontpic
+	dba AzumarillBackpic
 	dba EkansFrontpic
 	dba EkansBackpic
-	dba ArbokFrontpic
-	dba ArbokBackpic
-	dba PikachuFrontpic
-	dba PikachuBackpic
+
+	; see ArbokPicPointers
+	dbw -1, -1
+	dbw -1, -1
+
+	; see PikachuPicPointers
+	dbw -1, -1
+	dbw -1, -1
+
 	dba RaichuFrontpic
 	dba RaichuBackpic
 	dba SandshrewFrontpic
@@ -74,14 +76,10 @@ PokemonPicPointers::
 	dba ClefairyBackpic
 	dba ClefableFrontpic
 	dba ClefableBackpic
-
-	;Vulpix and Nineteales now have their own table, like Unown so that they may have alternate forms
-	dbw -1, -1
-	dbw -1, -1
-
-	dbw -1, -1
-	dbw -1, -1
-
+	dba VulpixFrontpic
+	dba VulpixBackpic
+	dba NinetalesFrontpic
+	dba NinetalesBackpic
 	dba JigglypuffFrontpic
 	dba JigglypuffBackpic
 	dba WigglytuffFrontpic
@@ -220,8 +218,6 @@ PokemonPicPointers::
 	dba HitmonleeBackpic
 	dba HitmonchanFrontpic
 	dba HitmonchanBackpic
-	dba LickitungFrontpic
-	dba LickitungBackpic
 	dba KoffingFrontpic
 	dba KoffingBackpic
 	dba WeezingFrontpic
@@ -240,10 +236,12 @@ PokemonPicPointers::
 	dba HorseaBackpic
 	dba SeadraFrontpic
 	dba SeadraBackpic
-	dba GoldeenFrontpic
-	dba GoldeenBackpic
-	dba SeakingFrontpic
-	dba SeakingBackpic
+	dba TogepiFrontpic
+	dba TogepiBackpic
+	dba TogeticFrontpic
+	dba TogeticBackpic
+	dba TogekissFrontpic
+	dba TogekissBackpic
 	dba StaryuFrontpic
 	dba StaryuBackpic
 	dba StarmieFrontpic
@@ -262,10 +260,15 @@ PokemonPicPointers::
 	dba PinsirBackpic
 	dba TaurosFrontpic
 	dba TaurosBackpic
-	dba MagikarpFrontpic
-	dba MagikarpBackpic
-	dba GyaradosFrontpic
-	dba GyaradosBackpic
+
+	; see MagikarpPicPointers
+	dbw -1, -1
+	dbw -1, -1
+
+	; see GyaradosPicPointers
+	dbw -1, -1
+	dbw -1, -1
+
 	dba LaprasFrontpic
 	dba LaprasBackpic
 	dba DittoFrontpic
@@ -304,8 +307,11 @@ PokemonPicPointers::
 	dba DragonairBackpic
 	dba DragoniteFrontpic
 	dba DragoniteBackpic
-	dba MewtwoFrontpic
-	dba MewtwoBackpic
+
+	; see MewtwoPicPointers
+	dbw -1, -1
+	dbw -1, -1
+
 	dba MewFrontpic
 	dba MewBackpic
 	dba ChikoritaFrontpic
@@ -348,16 +354,17 @@ PokemonPicPointers::
 	dba ChinchouBackpic
 	dba LanturnFrontpic
 	dba LanturnBackpic
-	dba PichuFrontpic
-	dba PichuBackpic
-	dba CleffaFrontpic
-	dba CleffaBackpic
-	dba IgglybuffFrontpic
-	dba IgglybuffBackpic
-	dba TogepiFrontpic
-	dba TogepiBackpic
-	dba TogeticFrontpic
-	dba TogeticBackpic
+
+	; see PichuPicPointers
+	dbw -1, -1
+	dbw -1, -1
+
+	dba MunchlaxFrontpic
+	dba MunchlaxBackpic
+	dba MagnezoneFrontpic
+	dba MagnezoneBackpic
+	dba TangrowthFrontpic
+	dba TangrowthBackpic
 	dba NatuFrontpic
 	dba NatuBackpic
 	dba XatuFrontpic
@@ -370,28 +377,20 @@ PokemonPicPointers::
 	dba AmpharosBackpic
 	dba BellossomFrontpic
 	dba BellossomBackpic
-	dba MarillFrontpic
-	dba MarillBackpic
-	dba AzumarillFrontpic
-	dba AzumarillBackpic
+	dba RhyperiorFrontpic
+	dba RhyperiorBackpic
 	dba SudowoodoFrontpic
 	dba SudowoodoBackpic
 	dba PolitoedFrontpic
 	dba PolitoedBackpic
-	dba HoppipFrontpic
-	dba HoppipBackpic
-	dba SkiploomFrontpic
-	dba SkiploomBackpic
-	dba JumpluffFrontpic
-	dba JumpluffBackpic
-	dba AipomFrontpic
-	dba AipomBackpic
 	dba SunkernFrontpic
 	dba SunkernBackpic
 	dba SunfloraFrontpic
 	dba SunfloraBackpic
 	dba YanmaFrontpic
 	dba YanmaBackpic
+	dba YanmegaFrontpic
+	dba YanmegaBackpic
 	dba WooperFrontpic
 	dba WooperBackpic
 	dba QuagsireFrontpic
@@ -400,14 +399,22 @@ PokemonPicPointers::
 	dba EspeonBackpic
 	dba UmbreonFrontpic
 	dba UmbreonBackpic
+	dba LeafeonFrontpic
+	dba LeafeonBackpic
+	dba GlaceonFrontpic
+	dba GlaceonBackpic
 	dba MurkrowFrontpic
 	dba MurkrowBackpic
+	dba HonchkrowFrontpic
+	dba HonchkrowBackpic
 	dba SlowkingFrontpic
 	dba SlowkingBackpic
 	dba MisdreavusFrontpic
 	dba MisdreavusBackpic
+	dba MismagiusFrontpic
+	dba MismagiusBackpic
 
-	; Unown pics have their own table. See UnownPicPointers
+	; see UnownPicPointers
 	dbw -1, -1
 	dbw -1, -1
 
@@ -423,6 +430,8 @@ PokemonPicPointers::
 	dba DunsparceBackpic
 	dba GligarFrontpic
 	dba GligarBackpic
+	dba GliscorFrontpic
+	dba GliscorBackpic
 	dba SteelixFrontpic
 	dba SteelixBackpic
 	dba SnubbullFrontpic
@@ -433,12 +442,12 @@ PokemonPicPointers::
 	dba QwilfishBackpic
 	dba ScizorFrontpic
 	dba ScizorBackpic
-	dba ShuckleFrontpic
-	dba ShuckleBackpic
 	dba HeracrossFrontpic
 	dba HeracrossBackpic
 	dba SneaselFrontpic
 	dba SneaselBackpic
+	dba WeavileFrontpic
+	dba WeavileBackpic
 	dba TeddiursaFrontpic
 	dba TeddiursaBackpic
 	dba UrsaringFrontpic
@@ -451,14 +460,14 @@ PokemonPicPointers::
 	dba SwinubBackpic
 	dba PiloswineFrontpic
 	dba PiloswineBackpic
+	dba MamoswineFrontpic
+	dba MamoswineBackpic
 	dba CorsolaFrontpic
 	dba CorsolaBackpic
 	dba RemoraidFrontpic
 	dba RemoraidBackpic
 	dba OctilleryFrontpic
 	dba OctilleryBackpic
-	dba DelibirdFrontpic
-	dba DelibirdBackpic
 	dba MantineFrontpic
 	dba MantineBackpic
 	dba SkarmoryFrontpic
@@ -475,20 +484,20 @@ PokemonPicPointers::
 	dba DonphanBackpic
 	dba Porygon2Frontpic
 	dba Porygon2Backpic
-	dba StantlerFrontpic
-	dba StantlerBackpic
 	dba SmeargleFrontpic
 	dba SmeargleBackpic
 	dba TyrogueFrontpic
 	dba TyrogueBackpic
 	dba HitmontopFrontpic
 	dba HitmontopBackpic
-	dba SmoochumFrontpic
-	dba SmoochumBackpic
 	dba ElekidFrontpic
 	dba ElekidBackpic
+	dba ElectivireFrontpic
+	dba ElectivireBackpic
 	dba MagbyFrontpic
 	dba MagbyBackpic
+	dba MagmortarFrontpic
+	dba MagmortarBackpic
 	dba MiltankFrontpic
 	dba MiltankBackpic
 	dba BlisseyFrontpic
@@ -511,8 +520,8 @@ PokemonPicPointers::
 	dba HoOhBackpic
 	dba CelebiFrontpic
 	dba CelebiBackpic
-	dba GlazeonFrontpic	
-	dba GlazeonBackpic
-	dba SubstituteMonFrontpic	
-	dba SubstituteMonBackpic	
+	dba SylveonFrontpic
+	dba SylveonBackpic
+	dba PorygonZFrontpic
+	dba PorygonZBackpic
 	dba EggPic

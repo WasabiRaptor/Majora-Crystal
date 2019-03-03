@@ -1,6 +1,6 @@
 ; Functions handling map objects.
 
-GetSpritePalette::
+GetSpritePalette:: ; 17ff
 	push hl
 	push de
 	push bc
@@ -13,48 +13,56 @@ GetSpritePalette::
 	pop de
 	pop hl
 	ret
+; 180e
 
-GetSpriteVTile::
+GetSpriteVTile:: ; 180e
 	push hl
+	push de
 	push bc
-	ld hl, wUsedSprites + 2
-	ld c, SPRITE_GFX_LIST_CAPACITY - 1
+	ld [hUsedSpriteIndex], a
+	farcall GetSprite
+	ld hl, wSpriteFlags
+	res 5, [hl]
+	; SPRITE_BIG_GYARADOS uses the last object_struct
+	ld a, [hUsedSpriteIndex]
+	cp SPRITE_BIG_GYARADOS
+	ld a, NUM_OBJECT_STRUCTS - 1
+	jr z, .got_sprite_tile
+	ld a, [hObjectStructIndexBuffer]
+.got_sprite_tile
+	cp FIRST_VRAM1_OBJECT_STRUCT
+	jr c, .continue
+	set 5, [hl]
+	sub FIRST_VRAM1_OBJECT_STRUCT
+.continue
+	add a, a
+	add a, a
 	ld b, a
-	ldh a, [hMapObjectIndexBuffer]
-	cp 0
-	jr z, .nope
-	ld a, b
-.loop
-	cp [hl]
-	jr z, .found
-	inc hl
-	inc hl
-	dec c
-	jr nz, .loop
-	ld a, [wUsedSprites + 1]
-	scf
-	jr .done
-
-.nope
-	ld a, [wUsedSprites + 1]
-	jr .done
-
-.found
-	inc hl
+	add a, b
+	add a, b
+	ld [hUsedSpriteTile], a
+	push af
+	farcall GetUsedSprite
+	pop af
+	ld b, a
 	xor a
-	ld a, [hl]
-
-.done
+	ld a, b
+	ld hl, wSpriteFlags
+	bit 5, [hl]
+	jr nz, .using_vbk1
+	or $80
+.using_vbk1
 	pop bc
+	pop de
 	pop hl
 	ret
 
-DoesSpriteHaveFacings::
+DoesSpriteHaveFacings:: ; 1836
 	push de
 	push hl
 
 	ld b, a
-	ldh a, [hROMBank]
+	ld a, [hROMBank]
 	push af
 	ld a, BANK(_DoesSpriteHaveFacings)
 	rst Bankswitch
@@ -70,22 +78,25 @@ DoesSpriteHaveFacings::
 	pop hl
 	pop de
 	ret
+; 184a
 
-GetPlayerStandingTile::
+GetPlayerStandingTile:: ; 184a
 	ld a, [wPlayerStandingTile]
 	call GetTileCollision
 	ld b, a
 	ret
+; 1852
 
-CheckOnWater::
+CheckOnWater:: ; 1852
 	ld a, [wPlayerStandingTile]
 	call GetTileCollision
 	sub WATERTILE
 	ret z
 	and a
 	ret
+; 185d
 
-GetTileCollision::
+GetTileCollision:: ; 185d
 ; Get the collision type of tile a.
 
 	push de
@@ -96,7 +107,7 @@ GetTileCollision::
 	ld d, 0
 	add hl, de
 
-	ldh a, [hROMBank]
+	ld a, [hROMBank]
 	push af
 	ld a, BANK(TileCollisionTable)
 	rst Bankswitch
@@ -110,114 +121,54 @@ GetTileCollision::
 	pop hl
 	pop de
 	ret
+; 1875
 
-CheckGrassTile::
-	ld d, a
-	and $f0
-	cp HI_NYBBLE_TALL_GRASS
-	jr z, .grass
-	cp HI_NYBBLE_WATER
-	jr z, .water
-	scf
+CheckSpinTile::
+	cp COLL_SPIN_UP
+	ld c, UP
+	ret z
+	cp COLL_SPIN_DOWN
+	ld c, DOWN
+	ret z
+	cp COLL_SPIN_LEFT
+	ld c, LEFT
+	ret z
+	cp COLL_SPIN_RIGHT
+	ld c, RIGHT
+	ret z
+	ld c, STANDING
 	ret
 
-.grass
-	ld a, d
-	and LO_NYBBLE_GRASS
-	ret z
-	scf
-	ret
-; For some reason, the above code is duplicated down here.
-.water
-	ld a, d
-	and LO_NYBBLE_GRASS
-	ret z
-	scf
-	ret
-
-CheckSuperTallGrassTile::
-	cp COLL_LONG_GRASS
-	ret z
-	cp COLL_LONG_GRASS_1C
-	ret
-
-CheckCutTreeTile::
-	cp COLL_CUT_TREE
-	ret z
-	cp COLL_CUT_TREE_1A
-	ret
-
-CheckHeadbuttTreeTile::
-	cp COLL_HEADBUTT_TREE
-	ret z
-	cp COLL_HEADBUTT_TREE_1D
-	ret
-
-CheckCounterTile::
-	cp COLL_COUNTER
-	ret z
-	cp COLL_COUNTER_98
-	ret
-
-CheckPitTile::
-	cp COLL_PIT
-	ret z
-	cp COLL_PIT_68
-	ret
-
-CheckIceTile::
-	cp COLL_ICE
-	ret z
-	cp COLL_ICE_2B
-	ret z
-	scf
-	ret
-
-CheckWhirlpoolTile::
-	nop
-	cp COLL_WHIRLPOOL
-	ret z
-	cp COLL_WHIRLPOOL_2C
-	ret z
-	scf
-	ret
-
-CheckWaterfallTile::
-	cp COLL_WATERFALL
-	ret z
-	cp COLL_CURRENT_DOWN
-	ret
-
-CheckStandingOnEntrance::
+CheckStandingOnEntrance:: ; 18c3
 	ld a, [wPlayerStandingTile]
 	cp COLL_DOOR
-	ret z
-	cp COLL_DOOR_79
 	ret z
 	cp COLL_STAIRCASE
 	ret z
 	cp COLL_CAVE
 	ret
+; 18d2
 
-GetMapObject::
+GetMapObject:: ; 18d2
 ; Return the location of map object a in bc.
 	ld hl, wMapObjects
 	ld bc, OBJECT_LENGTH
-	call AddNTimes
+	rst AddNTimes
 	ld b, h
 	ld c, l
 	ret
+; 18de
 
-CheckObjectVisibility::
+CheckObjectVisibility:: ; 18de
 ; Sets carry if the object is not visible on the screen.
-	ldh [hMapObjectIndexBuffer], a
+	ld [hMapObjectIndexBuffer], a
 	call GetMapObject
 	ld hl, MAPOBJECT_OBJECT_STRUCT_ID
 	add hl, bc
 	ld a, [hl]
 	cp -1
 	jr z, .not_visible
-	ldh [hObjectStructIndexBuffer], a
+	ld [hObjectStructIndexBuffer], a
 	call GetObjectStruct
 	and a
 	ret
@@ -225,8 +176,9 @@ CheckObjectVisibility::
 .not_visible
 	scf
 	ret
+; 18f5
 
-CheckObjectTime::
+CheckObjectTime:: ; 18f5
 	ld hl, MAPOBJECT_HOUR
 	add hl, bc
 	ld a, [hl]
@@ -258,10 +210,9 @@ CheckObjectTime::
 	ret
 
 .TimeOfDayValues_191e:
-; entries correspond to TimeOfDay values
-	db MORN
-	db DAY
-	db NITE
+	db 1 << MORN ; 1
+	db 1 << DAY  ; 2
+	db 1 << NITE ; 4
 
 .check_hour
 	ld hl, MAPOBJECT_HOUR
@@ -299,23 +250,18 @@ CheckObjectTime::
 .no
 	scf
 	ret
+; 194d
 
-; unused
-	ldh [hMapObjectIndexBuffer], a
-	call GetMapObject
-	call CopyObjectStruct
-	ret
-
-_CopyObjectStruct::
-	ldh [hMapObjectIndexBuffer], a
+_CopyObjectStruct:: ; 1956
+	ld [hMapObjectIndexBuffer], a
 	call UnmaskObject
-	ldh a, [hMapObjectIndexBuffer]
+	ld a, [hMapObjectIndexBuffer]
 	call GetMapObject
-	farcall CopyObjectStruct
-	ret
+	farjp CopyObjectStruct
+; 1967
 
-ApplyDeletionToMapObject::
-	ldh [hMapObjectIndexBuffer], a
+ApplyDeletionToMapObject:: ; 1967
+	ld [hMapObjectIndexBuffer], a
 	call GetMapObject
 	ld hl, MAPOBJECT_OBJECT_STRUCT_ID
 	add hl, bc
@@ -327,8 +273,7 @@ ApplyDeletionToMapObject::
 	call .CheckStopFollow
 	pop af
 	call GetObjectStruct
-	farcall DeleteMapObject
-	ret
+	farjp DeleteMapObject
 
 .CheckStopFollow:
 	ld hl, wObjectFollow_Leader
@@ -343,13 +288,14 @@ ApplyDeletionToMapObject::
 	ld [wObjectFollow_Leader], a
 	ld [wObjectFollow_Follower], a
 	ret
+; 199f
 
-DeleteObjectStruct::
+DeleteObjectStruct:: ; 199f
 	call ApplyDeletionToMapObject
-	call MaskObject
-	ret
+	jp MaskObject
+; 19a6
 
-CopyPlayerObjectTemplate::
+CopyPlayerObjectTemplate:: ; 19a6
 	push hl
 	call GetMapObject
 	ld d, b
@@ -359,19 +305,21 @@ CopyPlayerObjectTemplate::
 	inc de
 	pop hl
 	ld bc, OBJECT_LENGTH - 1
-	call CopyBytes
+	rst CopyBytes
 	ret
+; 19b8
 
-LoadMovementDataPointer::
-; Load the movement data pointer for object a.
-	ld [wMovementObject], a
-	ldh a, [hROMBank]
+LoadMovementDataPointer:: ; 19e9
+; Load the movement data pointer for person a.
+	ld [wMovementPerson], a
+	ld a, [hROMBank]
 	ld [wMovementDataPointer], a
 	ld a, l
 	ld [wMovementDataPointer + 1], a
 	ld a, h
 	ld [wMovementDataPointer + 2], a
-	ld a, [wMovementObject]
+
+	ld a, [wMovementPerson]
 	call CheckObjectVisibility
 	ret c
 
@@ -387,8 +335,9 @@ LoadMovementDataPointer::
 	set 7, [hl]
 	and a
 	ret
+; 1a13
 
-FindFirstEmptyObjectStruct::
+FindFirstEmptyObjectStruct:: ; 1a13
 ; Returns the index of the first empty object struct in A and its address in HL, then sets carry.
 ; If all object structs are occupied, A = 0 and Z is set.
 ; Preserves BC and DE.
@@ -416,8 +365,9 @@ FindFirstEmptyObjectStruct::
 	pop de
 	pop bc
 	ret
+; 1a2f
 
-GetSpriteMovementFunction::
+GetSpriteMovementFunction:: ; 1a2f
 	ld hl, OBJECT_MOVEMENTTYPE
 	add hl, bc
 	ld a, [hl]
@@ -426,36 +376,38 @@ GetSpriteMovementFunction::
 	xor a
 
 .ok
-	ld hl, SpriteMovementData + SPRITEMOVEATTR_MOVEMENT
+	ld hl, SpriteMovementData
 	ld e, a
 	ld d, 0
-rept NUM_SPRITEMOVEDATA_FIELDS
+rept SPRITEMOVEDATA_FIELDS
 	add hl, de
 endr
 	ld a, [hl]
 	ret
+; 1a47
 
-GetInitialFacing::
+GetInitialFacing:: ; 1a47
 	push bc
 	push de
 	ld e, a
 	ld d, 0
-	ld hl, SpriteMovementData + SPRITEMOVEATTR_FACING
-rept NUM_SPRITEMOVEDATA_FIELDS
+	ld hl, SpriteMovementData + 1 ; init facing
+rept SPRITEMOVEDATA_FIELDS
 	add hl, de
 endr
 	ld a, BANK(SpriteMovementData)
 	call GetFarByte
 	add a
 	add a
-	maskbits NUM_DIRECTIONS, 2
+	and $c
 	pop de
 	pop bc
 	ret
+; 1a61
 
-CopySpriteMovementData::
+CopySpriteMovementData:: ; 1a61
 	ld l, a
-	ldh a, [hROMBank]
+	ld a, [hROMBank]
 	push af
 	ld a, BANK(SpriteMovementData)
 	rst Bankswitch
@@ -469,8 +421,9 @@ CopySpriteMovementData::
 	rst Bankswitch
 
 	ret
+; 1a71
 
-.CopyData:
+.CopyData: ; 1a71
 	ld hl, OBJECT_MOVEMENTTYPE
 	add hl, de
 	ld [hl], a
@@ -478,8 +431,8 @@ CopySpriteMovementData::
 	push de
 	ld e, a
 	ld d, 0
-	ld hl, SpriteMovementData + SPRITEMOVEATTR_FACING
-rept NUM_SPRITEMOVEDATA_FIELDS
+	ld hl, SpriteMovementData + 1 ; init facing
+rept SPRITEMOVEDATA_FIELDS
 	add hl, de
 endr
 	ld b, h
@@ -490,7 +443,7 @@ endr
 	inc bc
 	rlca
 	rlca
-	maskbits NUM_DIRECTIONS, 2
+	and %00001100
 	ld hl, OBJECT_FACING
 	add hl, de
 	ld [hl], a
@@ -519,10 +472,11 @@ endr
 	add hl, de
 	ld [hl], a
 	ret
+; 1aae
 
-_GetMovementByte::
+_GetMovementByte:: ; 1aae
 ; Switch to the movement data bank
-	ldh a, [hROMBank]
+	ld a, [hROMBank]
 	push af
 	ld a, [hli]
 	rst Bankswitch
@@ -544,42 +498,35 @@ _GetMovementByte::
 
 	ld a, h
 	ret
+; 1ac6
 
-SetVramState_Bit0::
-	ld hl, wVramState
-	set 0, [hl]
-	ret
-
-ResetVramState_Bit0::
-	ld hl, wVramState
-	res 0, [hl]
-	ret
-
-UpdateSprites::
+UpdateSprites:: ; 1ad2
 	ld a, [wVramState]
 	bit 0, a
 	ret z
 
-	farcall Function55e0
-	farcall _UpdateSprites
-	ret
+	farcall UpdateMapObjectDataAndSprites
+	farjp _UpdateSprites
+; 1ae5
 
-GetObjectStruct::
+GetObjectStruct:: ; 1ae5
 	ld bc, OBJECT_STRUCT_LENGTH
 	ld hl, wObjectStructs
-	call AddNTimes
+	rst AddNTimes
 	ld b, h
 	ld c, l
 	ret
+; 1af1
 
-DoesObjectHaveASprite::
+DoesObjectHaveASprite:: ; 1af1
 	ld hl, OBJECT_SPRITE
 	add hl, bc
 	ld a, [hl]
 	and a
 	ret
+; 1af8
 
-SetSpriteDirection::
+SetSpriteDirection:: ; 1af8
 	; preserves other flags
 	push af
 	ld hl, OBJECT_FACING
@@ -588,14 +535,16 @@ SetSpriteDirection::
 	and %11110011
 	ld e, a
 	pop af
-	maskbits NUM_DIRECTIONS, 2
+	and %00001100
 	or e
 	ld [hl], a
 	ret
+; 1b07
 
-GetSpriteDirection::
+GetSpriteDirection:: ; 1b07
 	ld hl, OBJECT_FACING
 	add hl, bc
 	ld a, [hl]
-	maskbits NUM_DIRECTIONS, 2
+	and %00001100
 	ret
+; 1b0f

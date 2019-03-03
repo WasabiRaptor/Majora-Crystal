@@ -1,21 +1,27 @@
-	db VAPOREON ; 134
-
 	db 130,  65,  60,  65, 110,  95
-    evs  2,   0,   0,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db WATER, WATER ; type
+	db WATER, WATER
 	db 45 ; catch rate
 	db 196 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F12_5 ; gender ratio
-	db 35 ; step cycles to hatch
-	INCBIN "gfx/pokemon/vaporeon/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_GROUND, EGG_GROUND ; egg groups
+	db NO_ITEM ; item 1
+	db NO_ITEM ; item 2
+	dn FEMALE_12_5, 6 ; gender, step cycles to hatch
+	dn 6, 6 ; frontpic dimensions
+	db WATER_ABSORB ; ability 1
+if DEF(FAITHFUL)
+	db WATER_ABSORB ; ability 2
+else
+	db DRIZZLE ; ability 2
+endc
+	db HYDRATION ; hidden ability
+	db MEDIUM_FAST ; growth rate
+	dn FIELD, FIELD ; egg groups
 
-	; tm/hm learnset
-	tmhm HEADBUTT, CURSE, ROAR, TOXIC, HIDDEN_POWER, SUNNY_DAY, SNORE, BLIZZARD, HYPER_BEAM, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, IRON_TAIL, RETURN, SHADOW_BALL, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, REST, ATTRACT, SURF, WHIRLPOOL, WATERFALL, ICE_BEAM
+	; ev_yield
+	ev_yield   2,   0,   0,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, ROAR, TOXIC, HAIL, HIDDEN_POWER, SUNNY_DAY, ICE_BEAM, BLIZZARD, HYPER_BEAM, PROTECT, RAIN_DANCE, IRON_TAIL, RETURN, DIG, SHADOW_BALL, DOUBLE_TEAM, SWIFT, SUBSTITUTE, FACADE, REST, ATTRACT, ROCK_SMASH, SCALD, ENDURE, WATER_PULSE, GIGA_IMPACT, SURF, STRENGTH, WHIRLPOOL, WATERFALL, AQUA_TAIL, BODY_SLAM, DOUBLE_EDGE, HEADBUTT, HYPER_VOICE, ICY_WIND, SLEEP_TALK, SWAGGER
 	; end

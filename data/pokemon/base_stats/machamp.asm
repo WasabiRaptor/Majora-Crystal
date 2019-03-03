@@ -1,21 +1,23 @@
-	db MACHAMP ; 068
-
 	db  90, 130,  80,  55,  65,  85
-    evs  0,   3,   0,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db FIGHTING, FIGHTING ; type
+	db FIGHTING, FIGHTING
 	db 45 ; catch rate
 	db 193 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F25 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/machamp/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
+	db NO_ITEM ; item 1
+	db FOCUS_BAND ; item 2
+	dn FEMALE_25, 3 ; gender, step cycles to hatch
+	dn 7, 7 ; frontpic dimensions
+	db GUTS ; ability 1
+	db NO_GUARD ; ability 2
+	db STEADFAST ; hidden ability
+	db MEDIUM_SLOW ; growth rate
+	dn HUMANSHAPE, HUMANSHAPE ; egg groups
 
-	; tm/hm learnset
-	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, TOXIC, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, ENDURE, FRUSTRATION, EARTHQUAKE, RETURN, DIG, MUD_SLAP, DOUBLE_TEAM, ICE_PUNCH, SWAGGER, SLEEP_TALK, FIRE_BLAST, THUNDERPUNCH,  REST, ATTRACT, THIEF, FIRE_PUNCH, STRENGTH, FLAMETHROWER
+	; ev_yield
+	ev_yield   0,   3,   0,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm DYNAMICPUNCH, CURSE, TOXIC, BULK_UP, HIDDEN_POWER, SUNNY_DAY, HYPER_BEAM, LIGHT_SCREEN, PROTECT, RAIN_DANCE, BULLDOZE, EARTHQUAKE, RETURN, DIG, DOUBLE_TEAM, FLAMETHROWER, FIRE_BLAST, SUBSTITUTE, FACADE, REST, ATTRACT, THIEF, ROCK_SLIDE, ROCK_SMASH, FOCUS_BLAST, FALSE_SWIPE, ENDURE, POISON_JAB, GIGA_IMPACT, STONE_EDGE, STRENGTH, BODY_SLAM, COUNTER, DOUBLE_EDGE, FIRE_PUNCH, HEADBUTT, ICE_PUNCH, KNOCK_OFF, SEISMIC_TOSS, SLEEP_TALK, SWAGGER, THUNDERPUNCH
 	; end

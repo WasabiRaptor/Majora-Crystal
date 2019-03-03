@@ -1,4 +1,5 @@
-ProfOaksPC:
+
+ProfOaksPC: ; 0x265d3
 	ld hl, OakPCText1
 	call MenuTextBox
 	call YesNoBox
@@ -8,19 +9,17 @@ ProfOaksPC:
 	ld hl, OakPCText4
 	call PrintText
 	call JoyWaitAorB
-	call ExitMenu
-	ret
+	jp ExitMenu
 
-ProfOaksPCBoot:
+ProfOaksPCBoot ; 0x265ee
 	ld hl, OakPCText2
 	call PrintText
 	call Rate
 	call PlaySFX ; sfx loaded by previous Rate function call
 	call JoyWaitAorB
-	call WaitSFX
-	ret
+	jp WaitSFX
 
-ProfOaksPCRating:
+ProfOaksPCRating: ; 0x26601
 	call Rate
 	push de
 	ld de, MUSIC_NONE
@@ -28,10 +27,9 @@ ProfOaksPCRating:
 	pop de
 	call PlaySFX
 	call JoyWaitAorB
-	call WaitSFX
-	ret
+	jp WaitSFX
 
-Rate:
+Rate: ; 0x26616
 ; calculate Seen/Owned
 	ld hl, wPokedexSeen
 	ld b, wEndPokedexSeen - wPokedexSeen
@@ -55,29 +53,26 @@ Rate:
 	pop de
 	ret
 
-.UpdateRatingBuffers:
+.UpdateRatingBuffers: ; 0x26647
 	ld hl, wStringBuffer3
 	ld de, wd002
 	call .UpdateRatingBuffer
 	ld hl, wStringBuffer4
 	ld de, wd003
-	call .UpdateRatingBuffer
-	ret
+	; fallthrough
 
-.UpdateRatingBuffer:
+.UpdateRatingBuffer: ; 0x2665a
 	push hl
 	ld a, "@"
 	ld bc, ITEM_NAME_LENGTH
 	call ByteFill
 	pop hl
-	lb bc, PRINTNUM_RIGHTALIGN | 1, 3
-	call PrintNum
-	ret
+	lb bc, PRINTNUM_LEFTALIGN | 1, 3
+	jp PrintNum
 
-FindOakRating:
+FindOakRating: ; 0x2666b
 ; return sound effect in de
 ; return text pointer in hl
-	nop
 	ld c, a
 .loop
 	ld a, [hli]
@@ -98,17 +93,42 @@ endr
 	ld l, a
 	ret
 
-INCLUDE "data/events/pokedex_ratings.asm"
+OakRatings: ; 0x2667f
+oakrating: MACRO
+	db \1
+	dw \2, \3
+endm
 
-OakPCText1:
+; if you caught at most this many, play this sound, load this text
+	oakrating   9, SFX_DEX_FANFARE_LESS_THAN_20, OakRating01
+	oakrating  19, SFX_DEX_FANFARE_LESS_THAN_20, OakRating02
+	oakrating  34, SFX_DEX_FANFARE_20_49,        OakRating03
+	oakrating  49, SFX_DEX_FANFARE_20_49,        OakRating04
+	oakrating  64, SFX_DEX_FANFARE_50_79,        OakRating05
+	oakrating  79, SFX_DEX_FANFARE_50_79,        OakRating06
+	oakrating  94, SFX_DEX_FANFARE_80_109,       OakRating07
+	oakrating 109, SFX_DEX_FANFARE_80_109,       OakRating08
+	oakrating 124, SFX_CAUGHT_MON,               OakRating09
+	oakrating 139, SFX_CAUGHT_MON,               OakRating10
+	oakrating 154, SFX_DEX_FANFARE_140_169,      OakRating11
+	oakrating 169, SFX_DEX_FANFARE_140_169,      OakRating12
+	oakrating 184, SFX_DEX_FANFARE_170_199,      OakRating13
+	oakrating 199, SFX_DEX_FANFARE_170_199,      OakRating14
+	oakrating 214, SFX_DEX_FANFARE_200_229,      OakRating15
+	oakrating 229, SFX_DEX_FANFARE_200_229,      OakRating16
+	oakrating 239, SFX_DEX_FANFARE_230_PLUS,     OakRating17
+	oakrating 249, SFX_DEX_FANFARE_230_PLUS,     OakRating18
+	oakrating 255, SFX_DEX_FANFARE_230_PLUS,     OakRating19
+
+OakPCText1: ; 0x266de
 	text_jump _OakPCText1
 	db "@"
 
-OakPCText2:
+OakPCText2: ; 0x266e3
 	text_jump _OakPCText2
 	db "@"
 
-OakPCText3:
+OakPCText3: ; 0x266e8
 	text_jump _OakPCText3
 	db "@"
 
@@ -188,6 +208,6 @@ OakRating19:
 	text_jump _OakRating19
 	db "@"
 
-OakPCText4:
+OakPCText4: ; 0x2674c
 	text_jump _OakPCText4
 	db "@"

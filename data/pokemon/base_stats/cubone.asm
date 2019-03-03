@@ -1,21 +1,28 @@
-	db CUBONE ; 104
-
 	db  50,  50,  95,  35,  40,  50
-    evs  0,   0,   1,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db GROUND, GROUND ; type
+	db GROUND, GROUND
 	db 190 ; catch rate
 	db 87 ; base exp
-	db NO_ITEM, THICK_CLUB ; items
-	db GENDER_F50 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/cubone/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_MONSTER, EGG_MONSTER ; egg groups
+	db NO_ITEM ; item 1
+	db THICK_CLUB ; item 2
+	dn FEMALE_50, 3 ; gender, step cycles to hatch
+	dn 5, 5 ; frontpic dimensions
+if DEF(FAITHFUL)
+	db ROCK_HEAD ; ability 1
+	db LIGHTNING_ROD ; ability 2
+else
+	db ROCK_HEAD ; ability 1
+	db CURSED_BODY ; ability 2
+endc
+	db BATTLE_ARMOR ; hidden ability
+	db MEDIUM_FAST ; growth rate
+	dn MONSTER, MONSTER ; egg groups
 
-	; tm/hm learnset
-	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, TOXIC, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, BLIZZARD, ICY_WIND, PROTECT, ENDURE, FRUSTRATION, IRON_TAIL, EARTHQUAKE, RETURN, DIG, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SANDSTORM, FIRE_BLAST, THUNDERPUNCH, REST, ATTRACT, THIEF, FIRE_PUNCH, STRENGTH, FLAMETHROWER, ICE_BEAM
+	; ev_yield
+	ev_yield   0,   0,   1,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm DYNAMICPUNCH, CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, ICE_BEAM, BLIZZARD, PROTECT, BULLDOZE, IRON_TAIL, EARTHQUAKE, RETURN, DIG, DOUBLE_TEAM, FLAMETHROWER, SANDSTORM, FIRE_BLAST, AERIAL_ACE, SUBSTITUTE, FACADE, REST, ATTRACT, THIEF, ROCK_SLIDE, ROCK_SMASH, FALSE_SWIPE, ENDURE, SHADOW_CLAW, SWORDS_DANCE, STRENGTH, BODY_SLAM, COUNTER, DOUBLE_EDGE, EARTH_POWER, FIRE_PUNCH, HEADBUTT, ICE_PUNCH, ICY_WIND, IRON_HEAD, KNOCK_OFF, SEISMIC_TOSS, SLEEP_TALK, SWAGGER, THUNDERPUNCH
 	; end

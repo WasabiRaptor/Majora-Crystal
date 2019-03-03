@@ -1,5 +1,4 @@
 ElevatorFloorNames:
-; entries correspond to FLOOR_* constants
 	dw .B4F
 	dw .B3F
 	dw .B2F
@@ -15,7 +14,7 @@ ElevatorFloorNames:
 	dw ._9F
 	dw ._10F
 	dw ._11F
-	dw .ROOF
+	dw .Roof
 
 .B4F:  db "B4F@"
 .B3F:  db "B3F@"
@@ -32,4 +31,4 @@ ElevatorFloorNames:
 ._9F:  db "9F@"
 ._10F: db "10F@"
 ._11F: db "11F@"
-.ROOF: db "ROOF@"
+.Roof: db "Roof@"

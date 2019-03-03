@@ -22,6 +22,7 @@ enum_set: MACRO
 __enum__ = \1
 ENDM
 
+
 ; Enumerate constants
 
 const_def: MACRO
@@ -42,10 +43,11 @@ shift_const: MACRO
 const_value = const_value + 1
 ENDM
 
+
 ; Enumerate strings
 
 define: MACRO
-if !DEF(\1)
-\1 EQUS \2
+if !def(\1)
+\1 equs \2
 endc
 ENDM

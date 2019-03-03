@@ -1,666 +1,310 @@
-CheckPlayerMoveTypeMatchups:
-; Check how well the moves you've already used
-; fare against the enemy's Pokemon.  Used to
-; score a potential switch.
-	push hl
-	push de
-	push bc
-	ld a, 10
-	ld [wEnemyAISwitchScore], a
-	ld hl, wPlayerUsedMoves
-	ld a, [hl]
-	and a
-	jr z, .unknown_moves
-
-	ld d, NUM_MOVES
-	ld e, 0
-.loop
-	ld a, [hli]
-	and a
-	jr z, .exit
-	push hl
-	dec a
-	ld hl, Moves + MOVE_POWER
-	call GetMoveAttr
-	and a
-	jr z, .next
-
-	inc hl
-	call GetMoveByte
-	ld hl, wEnemyMonType
-	call CheckTypeMatchup
-	ld a, [wTypeMatchup]
-	cp EFFECTIVE + 1 ; 1.0 + 0.1
-	jr nc, .super_effective
-	and a
-	jr z, .next
-	cp EFFECTIVE ; 1.0
-	jr nc, .neutral
-
-.not_very_effective
-	ld a, e
-	cp 1 ; 0.1
-	jr nc, .next
-	ld e, 1
-	jr .next
-
-.neutral
-	ld e, 2
-	jr .next
-
-.super_effective
-	call .DecreaseScore
-	pop hl
-	jr .done
-
-.next
-	pop hl
-	dec d
-	jr nz, .loop
-
-.exit
-	ld a, e
-	cp 2
-	jr z, .done
-	call .IncreaseScore
-	ld a, e
-	and a
-	jr nz, .done
-	call .IncreaseScore
-	jr .done
-
-.unknown_moves
-	ld a, [wBattleMonType1]
-	ld b, a
-	ld hl, wEnemyMonType1
-	call CheckTypeMatchup
-	ld a, [wTypeMatchup]
-	cp EFFECTIVE + 1 ; 1.0 + 0.1
-	jr c, .ok
-	call .DecreaseScore
-.ok
-	ld a, [wBattleMonType2]
-	cp b
-	jr z, .ok2
-	call CheckTypeMatchup
-	ld a, [wTypeMatchup]
-	cp EFFECTIVE + 1 ; 1.0 + 0.1
-	jr c, .ok2
-	call .DecreaseScore
-.ok2
-
-.done
-	call .CheckEnemyMoveMatchups
-	pop bc
-	pop de
-	pop hl
-	ret
-
-.CheckEnemyMoveMatchups:
-	ld de, wEnemyMonMoves
-	ld b, NUM_MOVES + 1
-	ld c, 0
-
-	ld a, [wTypeMatchup]
-	push af
-.loop2
-	dec b
-	jr z, .exit2
-
-	ld a, [de]
-	and a
-	jr z, .exit2
-
-	inc de
-	dec a
-	ld hl, Moves + MOVE_POWER
-	call GetMoveAttr
-	and a
-	jr z, .loop2
-
-	inc hl
-	call GetMoveByte
-	ld hl, wBattleMonType1
-	call CheckTypeMatchup
-
-	ld a, [wTypeMatchup]
-	; immune
-	and a
-	jr z, .loop2
-
-	; not very effective
-	inc c
-	cp EFFECTIVE
-	jr c, .loop2
-
-	; neutral
-	inc c
-	inc c
-	inc c
-	inc c
-	inc c
-	cp EFFECTIVE
-	jr z, .loop2
-
-	; super effective
-	ld c, 100
-	jr .loop2
-
-.exit2
-	pop af
-	ld [wTypeMatchup], a
-
-	ld a, c
-	and a
-	jr z, .doubledown ; double down
-	cp 5
-	jr c, .DecreaseScore ; down
-	cp 100
-	ret c
-	jr .IncreaseScore ; up
-
-.doubledown
-	call .DecreaseScore
-.DecreaseScore:
-	ld a, [wEnemyAISwitchScore]
-	dec a
-	ld [wEnemyAISwitchScore], a
-	ret
-
-.IncreaseScore:
-	ld a, [wEnemyAISwitchScore]
-	inc a
-	ld [wEnemyAISwitchScore], a
-	ret
-
-CheckAbleToSwitch:
+GetSwitchScores:
+; e: Score of current mon out
+; wEnemyAISwitchScore: Score of optimal switch choice (7 is lowest valid, 0 = can't switch)
+; wEnemySwitchMonParam: Index of best switch choice
+; Currently uses type matchups only to figure out score, but is designed to be possible
+; to change
 	xor a
 	ld [wEnemySwitchMonParam], a
-	call FindAliveEnemyMons
-	ret c
+	ld [wEnemyAISwitchScore], a
 
-	ld a, [wEnemySubStatus1]
-	bit SUBSTATUS_PERISH, a
-	jr z, .no_perish
+	; Store active mon's info so we can overwrite it to check stuff
+	ld a, [wEnemyAbility]
+	ld [wAITempAbility], a
+	ld a, [wEnemyMonItem]
+	ld [wAITempItem], a
 
-	ld a, [wEnemyPerishCount]
-	cp 1
-	jr nz, .no_perish
-
-	; Perish count is 1
-
-	call FindAliveEnemyMons
-	call FindEnemyMonsWithAtLeastQuarterMaxHP
-	call FindEnemyMonsThatResistPlayer
-	call FindAliveEnemyMonsWithASuperEffectiveMove
-
-	ld a, e
-	cp 2
-	jr nz, .not_2
-
-	ld a, [wEnemyAISwitchScore]
-	add $30 ; maximum chance
-	ld [wEnemySwitchMonParam], a
-	ret
-
-.not_2
-	call FindAliveEnemyMons
-	sla c
-	sla c
-	ld b, $ff
-
-.loop1
-	inc b
-	sla c
-	jr nc, .loop1
-
-	ld a, b
-	add $30 ; maximum chance
-	ld [wEnemySwitchMonParam], a
-	ret
-
-.no_perish
-	call CheckPlayerMoveTypeMatchups
-	ld a, [wEnemyAISwitchScore]
-	cp 11
-	ret nc
-
-	ld a, [wLastPlayerCounterMove]
-	and a
-	jr z, .no_last_counter_move
-
-	call FindEnemyMonsImmuneToLastCounterMove
-	ld a, [wEnemyAISwitchScore]
-	and a
-	jr z, .no_last_counter_move
-
-	ld c, a
-	call FindEnemyMonsWithASuperEffectiveMove
-	ld a, [wEnemyAISwitchScore]
-	cp $ff
-	ret z
-
-	ld b, a
-	ld a, e
-	cp 2
-	jr z, .not_2_again
-
-	call CheckPlayerMoveTypeMatchups
-	ld a, [wEnemyAISwitchScore]
-	cp 10
-	ret nc
-
-	ld a, b
-	add $10
-	ld [wEnemySwitchMonParam], a
-	ret
-
-.not_2_again
-	ld c, $10
-	call CheckPlayerMoveTypeMatchups
-	ld a, [wEnemyAISwitchScore]
-	cp 10
-	jr nc, .okay
-	ld c, $20
-
-.okay
-	ld a, b
-	add c
-	ld [wEnemySwitchMonParam], a
-	ret
-
-.no_last_counter_move
-	call CheckPlayerMoveTypeMatchups
-	ld a, [wEnemyAISwitchScore]
-	cp 10
-	ret nc
-
-	call FindAliveEnemyMons
-	call FindEnemyMonsWithAtLeastQuarterMaxHP
-	call FindEnemyMonsThatResistPlayer
-	call FindAliveEnemyMonsWithASuperEffectiveMove
-
-	ld a, e
-	cp $2
-	ret nz
-
-	ld a, [wEnemyAISwitchScore]
-	add $10
-	ld [wEnemySwitchMonParam], a
-	ret
-
-FindAliveEnemyMons:
-	ld a, [wOTPartyCount]
-	cp 2
-	jr c, .only_one
-
-	ld d, a
-	ld e, 0
-	ld b, 1 << (PARTY_LENGTH - 1)
-	ld c, 0
-	ld hl, wOTPartyMon1HP
-
-.loop
-	ld a, [wCurOTMon]
-	cp e
-	jr z, .next
-
-	push bc
-	ld b, [hl]
-	inc hl
-	ld a, [hld]
-	or b
-	pop bc
-	jr z, .next
-
-	ld a, c
-	or b
-	ld c, a
-
-.next
-	srl b
-	push bc
-	ld bc, PARTYMON_STRUCT_LENGTH
-	add hl, bc
-	pop bc
-	inc e
-	dec d
-	jr nz, .loop
-
-	ld a, c
-	and a
-	jr nz, .more_than_one
-
-.only_one
-	scf
-	ret
-
-.more_than_one
-	and a
-	ret
-
-FindEnemyMonsImmuneToLastCounterMove:
 	ld hl, wOTPartyMon1
 	ld a, [wOTPartyCount]
 	ld b, a
-	ld c, 1 << (PARTY_LENGTH - 1)
-	ld d, 0
-	xor a
-	ld [wEnemyAISwitchScore], a
+	ld c, 0
+	ld e, 0
 
 .loop
-	ld a, [wCurOTMon]
-	cp d
-	push hl
-	jr z, .next
-
-	push hl
 	push bc
+	push de
+	push hl
 
-	; If the Pokemon has at least 1 HP...
+	; Is this mon alive?
 	ld bc, MON_HP
 	add hl, bc
-	pop bc
 	ld a, [hli]
 	or [hl]
-	pop hl
 	jr z, .next
 
+	; Get item
+	ld bc, MON_ITEM
+	pop hl
+	push hl
+	add hl, bc
 	ld a, [hl]
+	ld [wEnemyMonItem], a
+
+	; Get ability and types (via GetBaseData)
+	ld bc, wPartyMon1 - wPartyMon1Item
+	add hl, bc
+	ld a, [hl]
+
+	; This makes GetAbility "restore" to the current species when done
 	ld [wCurSpecies], a
-	ld hl, wOTPartyMon1DVs
-	ld a, [wCurOTMon]
-	call GetPartyLocation
-	predef GetFormData
-	call GetBaseData
-
-	; the player's last move is damaging...
-	ld a, [wLastPlayerCounterMove]
-	dec a
-	ld hl, Moves + MOVE_POWER
-	call GetMoveAttr
-	and a
-	jr z, .next
-
-	; and the Pokemon is immune to it...
-	inc hl
-	call GetMoveByte
-	ld hl, wBaseType
-	call CheckTypeMatchup
-	ld a, [wTypeMatchup]
-	and a
-	jr nz, .next
-
-	; ... encourage that Pokemon.
-	ld a, [wEnemyAISwitchScore]
-	or c
-	ld [wEnemyAISwitchScore], a
-.next
-	pop hl
-	dec b
-	ret z
-
-	push bc
-	ld bc, PARTYMON_STRUCT_LENGTH
+	ld bc, wPartyMon1Ability - wPartyMon1
 	add hl, bc
-	pop bc
-
-	inc d
-	srl c
-	jr .loop
-
-FindAliveEnemyMonsWithASuperEffectiveMove:
-	push bc
-	ld a, [wOTPartyCount]
-	ld e, a
-	ld hl, wOTPartyMon1HP
-	ld b, 1 << (PARTY_LENGTH - 1)
-	ld c, 0
-.loop
-	ld a, [hli]
-	or [hl]
-	jr z, .next
-
-	ld a, b
-	or c
 	ld c, a
-
-.next
-	srl b
-	push bc
-	ld bc, wPartyMon2HP - (wPartyMon1HP + 1)
-	add hl, bc
-	pop bc
-	dec e
-	jr nz, .loop
-
-	ld a, c
-	pop bc
-
-	and c
-	ld c, a
-	; fallthrough
-
-FindEnemyMonsWithASuperEffectiveMove:
-	ld a, -1
-	ld [wEnemyAISwitchScore], a
-	ld hl, wOTPartyMon1Moves
-	ld b, 1 << (PARTY_LENGTH - 1)
-	ld d, 0
-	ld e, 0
-.loop
-	ld a, b
-	and c
-	jr z, .next
-
-	push hl
-	push bc
-	; for move on mon:
-	ld b, NUM_MOVES
-	ld c, 0
-.loop3
-	; if move is None: break
-	ld a, [hli]
-	and a
-	push hl
-	jr z, .break3
-
-	; if move has no power: continue
-	dec a
-	ld hl, Moves + MOVE_POWER
-	call GetMoveAttr
-	and a
-	jr z, .nope
-
-	; check type matchups
-	inc hl
-	call GetMoveByte
-	ld hl, wBattleMonType1
-	call CheckTypeMatchup
-
-	; if immune or not very effective: continue
-	ld a, [wTypeMatchup]
-	cp 10
-	jr c, .nope
-
-	; if neutral: load 1 and continue
-	ld e, 1
-	cp EFFECTIVE + 1
-	jr c, .nope
-
-	; if super-effective: load 2 and break
-	ld e, 2
-	jr .break3
-
-.nope
-	pop hl
-	dec b
-	jr nz, .loop3
-
-	jr .done
-
-.break3
-	pop hl
-.done
-	ld a, e
-	pop bc
-	pop hl
-	cp 2
-	jr z, .done2 ; at least one move is super-effective
-	cp 1
-	jr nz, .next ; no move does more than half damage
-
-	; encourage this pokemon
-	ld a, d
-	or b
-	ld d, a
-	jr .next ; such a long jump
-
-.next
-	; next pokemon?
-	push bc
-	ld bc, PARTYMON_STRUCT_LENGTH
-	add hl, bc
-	pop bc
-	srl b
-	jr nc, .loop
-
-	; if no pokemon has a super-effective move: return
-	ld a, d
-	ld b, a
-	and a
-	ret z
-
-.done2
-	; convert the bit flag to an int and return
-	push bc
-	sla b
-	sla b
-	ld c, $ff
-.loop2
-	inc c
-	sla b
-	jr nc, .loop2
-
-	ld a, c
-	ld [wEnemyAISwitchScore], a
-	pop bc
-	ret
-
-FindEnemyMonsThatResistPlayer:
-	push bc
-	ld hl, wOTPartySpecies
-	ld b, 1 << (PARTY_LENGTH - 1)
-	ld c, 0
-
-.loop
-	ld a, [hli]
-	cp $ff
-	jr z, .done
-
-	push hl
-	ld [wCurSpecies], a
-	ld hl, wOTPartyMon1DVs
-	ld a, [wCurOTMon]
-	call GetPartyLocation
-	predef GetFormData	
-	call GetBaseData
-	ld a, [wLastPlayerCounterMove]
-	and a
-	jr z, .skip_move
-
-	dec a
-	ld hl, Moves + MOVE_POWER
-	call GetMoveAttr
-	and a
-	jr z, .skip_move
-
-	inc hl
-	call GetMoveByte
-	jr .check_type
-
-.skip_move
-	ld a, [wBattleMonType1]
-	ld hl, wBaseType
-	call CheckTypeMatchup
-	ld a, [wTypeMatchup]
-	cp 10 + 1
-	jr nc, .dont_choose_mon
-	ld a, [wBattleMonType2]
-
-.check_type
-	ld hl, wBaseType
-	call CheckTypeMatchup
-	ld a, [wTypeMatchup]
-	cp EFFECTIVE + 1
-	jr nc, .dont_choose_mon
-
-	ld a, b
-	or c
-	ld c, a
-
-.dont_choose_mon
-	srl b
-	pop hl
-	jr .loop
-
-.done
-	ld a, c
-	pop bc
-	and c
-	ld c, a
-	ret
-
-FindEnemyMonsWithAtLeastQuarterMaxHP:
-	push bc
-	ld de, wOTPartySpecies
-	ld b, 1 << (PARTY_LENGTH - 1)
-	ld c, 0
-	ld hl, wOTPartyMon1HP
-
-.loop
-	ld a, [de]
-	inc de
-	cp $ff
-	jr z, .done
-
-	push hl
-	push bc
 	ld b, [hl]
-	inc hl
-	ld c, [hl]
-	inc hl
-	inc hl
-; hl = MaxHP + 1
-; bc = [CurHP] * 4
-	srl c
-	rl b
-	srl c
-	rl b
-; if bc >= [hl], encourage
-	ld a, [hld]
-	cp c
-	ld a, [hl]
-	sbc b
-	pop bc
-	jr nc, .next
-
+	farcall GetAbility
 	ld a, b
-	or c
-	ld c, a
+	ld [wEnemyAbility], a
+
+	; Give a type matchup score
+	ld bc, MON_MOVES
+	pop hl
+	push hl
+	add hl, bc
+	ld bc, wBaseType
+	call AICheckMatchupForEnemyMon
 
 .next
-	srl b
+	; Checks below are safe if we arrived due to 0HP -- score will be 0 which is never
+	; better, and we can use this to check for lack of switch choice ("best score" = 0)
 	pop hl
+	pop de
+	pop bc
+	ld d, a ; score
+
+	; Is this the mon that's currently out?
+	ld a, [wCurOTMon]
+	cp c
+	jr nz, .not_active_mon
+	ld e, d
+	jr .next2
+
+.not_active_mon
+	ld a, [wEnemyAISwitchScore]
+	cp d
+	jr nc, .next2
+
+	; Target mon is a better switch-in
+	ld a, d
+	ld [wEnemyAISwitchScore], a
+	ld a, c
+	ld [wEnemySwitchMonParam], a
+
+.next2
+	dec b
+	jr z, .reset_vars_and_return
+	inc c
 	push bc
-	ld bc, PARTYMON_STRUCT_LENGTH
+	ld bc, wPartyMon2 - wPartyMon1
 	add hl, bc
 	pop bc
 	jr .loop
+.reset_vars_and_return
+	; Reset item and ability
+	ld a, [wAITempAbility]
+	ld [wEnemyAbility], a
+	ld a, [wAITempItem]
+	ld [wEnemyMonItem], a
+	ret
 
-.done
-	ld a, c
+
+CheckPlayerMoveTypeMatchups:
+	ld hl, wEnemyMonMoves
+	ld bc, wEnemyMonType
+	; fallthrough
+AICheckMatchupForEnemyMon:
+; Check type matchups. Returns a number between 7-13 to a, lower is worse for the enemy.
+; Scoring is +1 for SE, -1 for NVE, -2 for ineffective for enemy vs player, and vice versa.
+; Lack of offensive moves count as neutral.
+; Input is hl (enemy mon moves), bc (enemy mon types). Assumes wEnemyAbility is set
+	; Save old move data/turn
+	ld a, [wCurPlayerMove]
+	ld d, a
+	ld a, [wCurEnemyMove]
+	ld e, a
+	ld a, [hBattleTurn]
+	push af
+	push de
+
+	; Player moves vs enemy
+	call SetPlayerTurn
+	push hl ; Enemy mon moves
+	push bc ; Enemy mon type, popped to hl for CheckTypeMatchup
+	ld hl, wPlayerUsedMoves
+	call .check_matchups
+	ld a, d
+	and a
+	pop hl
+	jr z, .unknown_moves_done
+	push hl
+
+	; Less than 4 known moves
+	; Assume player has STAB and check those type matchups
+	; Done by setting up an arbitrary generic move and manually
+	; modifying its type
+	res 2, e
+	ld a, STRENGTH ; Arbitrary
+	ld [wCurPlayerMove], a
+	push de
+	call UpdateMoveData
+	pop de
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVarAddr
+	ld a, [wBattleMonType1]
+	ld [hl], a
+	pop hl
+	push hl
+	call .set_matchup
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVarAddr
+	ld a, [wBattleMonType2]
+	ld [hl], a
+	pop hl
+	call .set_matchup
+
+	; fallthrough
+.unknown_moves_done
+	pop hl
+	call .score_result
+	add 10 ; use 10 rather than 0 as baseline
+	push af
+
+	; Now do enemy moves vs player
+	ld bc, wBattleMonType
+	call SetEnemyTurn
+	call .check_matchups
+	call .score_result
+	ld b, a
+	pop af
+	sub b
+	ld b, a
+
+	; Reset move data
+	pop de
+	ld a, d
+	ld [wCurPlayerMove], a
+	ld a, e
+	ld [wCurEnemyMove], a
+	push bc
+	call SetPlayerTurn
+	call UpdateMoveData
+	call SetEnemyTurn
+	call UpdateMoveData
 	pop bc
-	and c
-	ld c, a
+
+	; Reset whose turn it is
+	pop af
+	ld [hBattleTurn], a
+
+	ld a, b
+	ret
+
+.check_matchups
+	ld d, NUM_MOVES
+	; e is %0000ABCD, A = has 0.5x, B = no offensive moves, C = has 1x, D = has 2x
+	ld e, %00000100
+.loop
+	ld a, [hli]
+	and a
+	ret z
+	push hl
+	push bc
+	ld b, a
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVarAddr
+	ld [hl], b
+	push de
+	call UpdateMoveData
+	pop de
+	ld a, BATTLE_VARS_MOVE_POWER
+	call GetBattleVar
+	and a
+	jr z, .next
+
+	; We have an attacking move, so reset relevant bit
+	res 2, e
+	pop hl
+	push hl
+	call .set_matchup
+.next
+	pop bc
+	pop hl
+	dec d
+	jr nz, .loop
+	ret
+
+.set_matchup
+	call CheckTypeMatchup
+	ld a, [wTypeMatchup]
+	and a
+	ret z ; no effect
+	set 3, e
+	cp $10
+	ret c ; not very effective
+	set 1, e
+	ret z ; neutral
+	set 0, e
+	ret ; super effective
+
+.score_result
+	; 2x
+	ld a, -1
+	srl e
+	ret c
+	; 1x
+	inc a
+	srl e
+	ret c
+	; No attacking moves
+	srl e
+	ret c
+	; 0.5x
+	inc a
+	srl e
+	ret c
+	; 0x
+	inc a
+	ret
+
+AIWantsSwitchCheck:
+	call GetSwitchScores
+	ld a, [wEnemyAISwitchScore]
+	and a
+	ret z ; We can't switch
+
+	ld a, [wEnemyPerishCount]
+	cp 1
+	ld a, [wEnemyAISwitchScore]
+	jr nz, .no_perish
+
+	; Perish count is 1
+	cp 8
+	ret c ; Bad or no choices, sacrifice active mon instead...
+	ld b, $30
+	jr .set_switch_score
+
+.no_perish
+	; Figure out the difference between active and best choice
+	sub e
+	add 7 ; Make the number easier to work with (changes worst from -6 to +1)
+	cp 8
+	ret c ; No reason to switch, no switch choice would be better than active mon
+	; huge improvement
+	ld b, $30
+	cp 12
+	jr nc, .set_switch_score
+	; decent improvement
+	ld b, $20
+	cp 10
+	jr nc, .set_switch_score
+	; little improvement
+	ld b, $10
+	cp 9
+	jr nc, .set_switch_score
+	; No reason to switch
+	ret
+
+.set_switch_score
+	ld a, [wEnemySwitchMonParam]
+	add b
+	ld [wEnemySwitchMonParam], a
 	ret

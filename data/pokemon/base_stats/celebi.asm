@@ -1,21 +1,31 @@
-	db CELEBI ; 251
-
 	db 100, 100, 100, 100, 100, 100
-	evs  3,   0,   0,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db FAIRY, GRASS ; type
+if DEF(FAITHFUL)
+	db PSYCHIC, GRASS
+else
+	db GRASS, FAIRY
+endc
 	db 45 ; catch rate
 	db 64 ; base exp
-	db NO_ITEM, MIRACLEBERRY ; items
-	db GENDER_UNKNOWN ; gender ratio
-	db 120 ; step cycles to hatch
-	INCBIN "gfx/pokemon/celebi/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_NONE, EGG_NONE ; egg groups
+	db LUM_BERRY ; item 1
+	db LUM_BERRY ; item 2
+	dn GENDERLESS, 15 ; gender, step cycles to hatch
+	dn 5 , 5 ; frontpic dimensions
+	db NATURAL_CURE ; ability 1
+	db NATURAL_CURE ; ability 2
+if DEF(FAITHFUL)
+	db NATURAL_CURE ; hidden ability
+else
+	db MAGIC_GUARD ; hidden ability
+endc
+	db MEDIUM_SLOW ; growth rate
+	dn NO_EGGS, NO_EGGS ; egg groups
 
-	; tm/hm learnset
-	tmhm CURSE, TOXIC, PSYCH_UP, HIDDEN_POWER, SUNNY_DAY, SWEET_SCENT, SNORE, HYPER_BEAM, PROTECT, RAIN_DANCE, GIGA_DRAIN, ENDURE, FRUSTRATION, SOLARBEAM, RETURN, PSYCHIC_M, SHADOW_BALL, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SANDSTORM, SWIFT, DEFENSE_CURL, DREAM_EATER,  REST, NIGHTMARE, FLASH
+	; ev_yield
+	ev_yield   3,   0,   0,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, CALM_MIND, TOXIC, HIDDEN_POWER, SUNNY_DAY, HYPER_BEAM, LIGHT_SCREEN, PROTECT, RAIN_DANCE, GIGA_DRAIN, SAFEGUARD, SOLAR_BEAM, RETURN, PSYCHIC, SHADOW_BALL, DOUBLE_TEAM, REFLECT, SANDSTORM, SWIFT, AERIAL_ACE, SUBSTITUTE, FACADE, REST, DAZZLINGLEAM, ENERGY_BALL, ENDURE, WATER_PULSE, GIGA_IMPACT, U_TURN, FLASH, THUNDER_WAVE, SWORDS_DANCE, CUT, DEFENSE_CURL, DOUBLE_EDGE, DREAM_EATER, EARTH_POWER, SEED_BOMB, SKILL_SWAP, SLEEP_TALK, SUCKER_PUNCH, SWAGGER, TRICK, ZEN_HEADBUTT
 	; end

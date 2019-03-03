@@ -1,5 +1,4 @@
 SFX:
-; entries correspond to SFX_* constants
 	dba Sfx_DexFanfare5079
 	dba Sfx_Item
 	dba Sfx_CaughtMon
@@ -42,7 +41,7 @@ SFX:
 	dba Sfx_ElevatorEnd
 	dba Sfx_ThrowBall
 	dba Sfx_BallPoof
-	dba Sfx_Unknown3A
+	dba Sfx_Faint
 	dba Sfx_Run
 	dba Sfx_SlotMachineStart
 	dba Sfx_Fanfare
@@ -68,7 +67,7 @@ SFX:
 	dba Sfx_Tackle
 	dba Sfx_PoisonSting
 	dba Sfx_Powder
-	dba Sfx_Doubleslap
+	dba Sfx_DoubleSlap
 	dba Sfx_Bite
 	dba Sfx_JumpKick
 	dba Sfx_Stomp
@@ -81,7 +80,7 @@ SFX:
 	dba Sfx_Supersonic
 	dba Sfx_Leer
 	dba Sfx_Ember
-	dba Sfx_Bubblebeam
+	dba Sfx_BubbleBeam
 	dba Sfx_HydroPump
 	dba Sfx_Surf
 	dba Sfx_Psybeam
@@ -127,7 +126,7 @@ SFX:
 	dba Sfx_SweetKiss
 	dba Sfx_SweetKiss2
 	dba Sfx_BellyDrum
-	dba Sfx_Unknown7F
+	dba Sfx_Toxic
 	dba Sfx_SludgeBomb
 	dba Sfx_Foresight
 	dba Sfx_Spite
@@ -149,8 +148,8 @@ SFX:
 	dba Sfx_Fanfare2
 	dba Sfx_RegisterPhoneNumber
 	dba Sfx_3RdPlace
-	dba Sfx_GetEggFromDayCareMan
-	dba Sfx_GetEggFromDayCareLady
+	dba Sfx_GetEggFromDaycareMan
+	dba Sfx_GetEggFromDaycareLady
 	dba Sfx_MoveDeleted
 	dba Sfx_2ndPlace
 	dba Sfx_1stPlace
@@ -179,7 +178,7 @@ SFX:
 	dba Sfx_Encore
 	dba Sfx_BeatUp
 	dba Sfx_BatonPass
-	dba Sfx_BallWobble
+	dba Sfx_BallWiggle
 	dba Sfx_SweetScent
 	dba Sfx_SweetScent2
 	dba Sfx_HitEndOfExpBar
@@ -190,7 +189,9 @@ SFX:
 	dba Sfx_2Boops
 	dba Sfx_GlassTing
 	dba Sfx_GlassTing2
-; new to Crystal
+
+; Crystal adds the following SFX:
+
 	dba Sfx_IntroUnown1
 	dba Sfx_IntroUnown2
 	dba Sfx_IntroUnown3
@@ -204,7 +205,11 @@ SFX:
 	dba Sfx_IntroSuicune4
 	dba Sfx_GameFreakPresents
 	dba Sfx_Tingle
-	dba Sfx_IntroWhoosh
+	dba Sfx_TitleScreenIntro
 	dba Sfx_TwoPcBeeps
 	dba Sfx_4NoteDitty
 	dba Sfx_Twinkle
+
+; Polished Crystal adds the following SFX:
+
+	dba Sfx_Puddle

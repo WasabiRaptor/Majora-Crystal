@@ -1,4 +1,4 @@
-Special::
+Special:: ; c01b
 ; Run script special de.
 	ld hl, SpecialsPointers
 	add hl, de
@@ -10,21 +10,27 @@ Special::
 	ld h, [hl]
 	ld l, a
 	ld a, b
-	rst FarCall
-	ret
+	jp FarCall_hl
+; c029
 
 INCLUDE "data/special_pointers.asm"
 
-DummySpecial_c224:
+SpecialNone: ; c224
 	ret
+; c225
 
-SetPlayerPalette:
+Special_SetPlayerPalette: ; c225
 	ld a, [wScriptVar]
 	ld d, a
-	farcall _SetPlayerPalette
-	ret
+	farjp SetPlayerPalette
+; c230
 
-GameCornerPrizeMonCheckDex:
+Special_SetCopycatPalette:
+	ld a, [wScriptVar]
+	ld d, a
+	farjp SetCopycatPalette
+
+Special_GameCornerPrizeMonCheckDex: ; c230
 	ld a, [wScriptVar]
 	dec a
 	call CheckCaughtMon
@@ -34,189 +40,178 @@ GameCornerPrizeMonCheckDex:
 	call SetSeenAndCaughtMon
 	call FadeToMenu
 	ld a, [wScriptVar]
-	ld [wNamedObjectIndexBuffer], a
+	ld [wd265], a
 	farcall NewPokedexEntry
-	call ExitAllMenus
-	ret
+	jp ExitAllMenus
+; c252
 
-UnusedSetSeenMon:
+SpecialSeenMon: ; c252
 	ld a, [wScriptVar]
 	dec a
-	call SetSeenMon
-	ret
+	jp SetSeenMon
+; c25a
 
-FindPartyMonAboveLevel:
+Special_FindGreaterThanThatLevel: ; c25a
 	ld a, [wScriptVar]
 	ld b, a
-	farcall _FindPartyMonAboveLevel
+	farcall _FindGreaterThanThatLevel
 	jr z, FoundNone
 	jr FoundOne
 
-FindPartyMonAtLeastThatHappy:
+Special_FindAtLeastThatHappy: ; c268
 	ld a, [wScriptVar]
 	ld b, a
-	farcall _FindPartyMonAtLeastThatHappy
+	farcall _FindAtLeastThatHappy
 	jr z, FoundNone
 	jr FoundOne
 
-FindPartyMonThatSpecies:
+Special_FindThatSpecies: ; c276
 	ld a, [wScriptVar]
 	ld b, a
-	farcall _FindPartyMonThatSpecies
+	farcall _FindThatSpecies
 	jr z, FoundNone
 	jr FoundOne
 
-FindPartyMonThatSpeciesYourTrainerID:
+Special_FindThatSpeciesYourTrainerID: ; c284
 	ld a, [wScriptVar]
 	ld b, a
-	farcall _FindPartyMonThatSpeciesYourTrainerID
+	farcall _FindThatSpeciesYourTrainerID
 	jr z, FoundNone
-	jr FoundOne
+	; fallthrough
 
-FoundOne:
+FoundOne: ; c292
 	ld a, TRUE
 	ld [wScriptVar], a
 	ret
 
-FoundNone:
+FoundNone: ; c298
 	xor a
 	ld [wScriptVar], a
 	ret
+; c29d
 
-NameRival:
+SpecialNameRival: ; 0xc29d
 	ld b, $2 ; rival
 	ld de, wRivalName
 	farcall _NamingScreen
-	; default to "SILVER"
+	; default to "Silver"
 	ld hl, wRivalName
-	ld de, .default
-	call InitName
-	ret
+	ld de, .DefaultRivalName
+	jp InitName
+; 0xc2b2
 
-.default
-	db "SILVER@"
+.DefaultRivalName: ; 0xc2b2
+	db "Silver@"
 
-NameRater:
-	farcall _NameRater
-	ret
+SpecialTrendyPhrase:
+	ld b, $3 ; trendy phrase
+	ld de, wTrendyPhrase
+	farcall _NamingScreen
+	; default to "Nothing"
+	ld hl, wTrendyPhrase
+	ld de, .DefaultTrendyPhrase
+	jp InitName
+; 0xc2b2
 
-OverworldTownMap:
+.DefaultTrendyPhrase:
+	db "Nothing@"
+
+SpecialNameRater: ; c2b9
+	farjp NameRater
+; c2c0
+
+Special_TownMap: ; c2c0
 	call FadeToMenu
 	farcall _TownMap
-	call ExitAllMenus
-	ret
+	jp ExitAllMenus
+; c2cd
 
-UnownPrinter:
+Special_DisplayLinkRecord: ; c2da
 	call FadeToMenu
-	farcall _UnownPrinter
-	call ExitAllMenus
-	ret
+	farcall DisplayLinkRecord
+	jp ExitAllMenus
+; c2e7
 
-DisplayLinkRecord:
-	call FadeToMenu
-	farcall _DisplayLinkRecord
-	call ExitAllMenus
-	ret
-
-PlayersHousePC:
+Special_KrissHousePC: ; c2e7
 	xor a
 	ld [wScriptVar], a
-	farcall _PlayersHousePC
+	farcall _KrissHousePC
 	ld a, c
 	ld [wScriptVar], a
 	ret
+; c2f6
 
-CheckMysteryGift:
-	ld a, BANK(sMysteryGiftItem)
-	call GetSRAMBank
-	ld a, [sMysteryGiftItem]
-	and a
-	jr z, .no
-	inc a
-
-.no
-	ld [wScriptVar], a
-	call CloseSRAM
-	ret
-
-GetMysteryGiftItem:
-	ld a, BANK(sMysteryGiftItem)
-	call GetSRAMBank
-	ld a, [sMysteryGiftItem]
-	ld [wCurItem], a
-	ld a, 1
-	ld [wItemQuantityChangeBuffer], a
-	ld hl, wNumItems
-	call ReceiveItem
-	jr nc, .no_room
-	xor a
-	ld [sMysteryGiftItem], a
-	call CloseSRAM
-	ld a, [wCurItem]
-	ld [wNamedObjectIndexBuffer], a
-	call GetItemName
-	ld hl, .ReceiveItemText
-	call PrintText
-	ld a, TRUE
-	ld [wScriptVar], a
-	ret
-
-.no_room
-	call CloseSRAM
-	xor a
-	ld [wScriptVar], a
-	ret
-
-.ReceiveItemText:
-	; received item
-	text_jump UnknownText_0x1bd3be
-	db "@"
-
-BugContestJudging:
+BugContestJudging: ; c34a
 	farcall _BugContestJudging
 	ld a, b
 	ld [wScriptVar], a
+	dec a
+	jr z, .firstplace
+	dec a
+	jr z, .secondplace
+	dec a
+	jr z, .thirdplace
+	ld a, SHED_SHELL
+	jr .finish
+.firstplace
+	ld a, SUN_STONE
+	ld hl, wStatusFlags
+	bit 6, [hl] ; hall of fame
+	jr z, .finish
+	ld a, SHINY_STONE - MOON_STONE + 1 ; TODO: include ICE_STONE once it's useful
+	call RandomRange
+	add MOON_STONE
+	jr .finish
+.secondplace
+	ld a, EVERSTONE
+	jr .finish
+.thirdplace
+	ld a, SITRUS_BERRY
+.finish
+	ld [wBugContestOfficerPrize], a
 	ret
+; c355
 
-MapRadio:
+MapRadio: ; c355
 	ld a, [wScriptVar]
 	ld e, a
-	farcall PlayRadio
-	ret
+	farjp PlayRadio
+; c360
 
-UnownPuzzle:
+Special_UnownPuzzle: ; c360
 	call FadeToMenu
-	farcall _UnownPuzzle
+	farcall UnownPuzzle
 	ld a, [wSolvedUnownPuzzle]
 	ld [wScriptVar], a
-	call ExitAllMenus
-	ret
+	jp ExitAllMenus
+; c373
 
-SlotMachine:
-	call CheckCoinsAndCoinCase
+Special_SlotMachine: ; c373
+	call Special_CheckCoins
 	ret c
 	ld a, BANK(_SlotMachine)
 	ld hl, _SlotMachine
-	call StartGameCornerGame
-	ret
+	jr Special_StartGameCornerGame
+; c380
 
-CardFlip:
-	call CheckCoinsAndCoinCase
+Special_CardFlip: ; c380
+	call Special_CheckCoins
 	ret c
 	ld a, BANK(_CardFlip)
 	ld hl, _CardFlip
-	call StartGameCornerGame
-	ret
+	; fallthrough
+; c38d
 
-DummyNonfunctionalGameCornerGame:
-	call CheckCoinsAndCoinCase
-	ret c
-	ld a, BANK(_DummyGame)
-	ld hl, _DummyGame
-	call StartGameCornerGame
-	ret
+;Special_DummyNonfunctionalGameCornerGame: ; c38d
+;	call Special_CheckCoins
+;	ret c
+;	ld a, BANK(_DummyGame)
+;	ld hl, _DummyGame
+;	call Special_StartGameCornerGame
+;	ret
+;; c39a
 
-StartGameCornerGame:
+Special_StartGameCornerGame: ; c39a
 	call FarQueueScript
 	call FadeToMenu
 	ld hl, wQueuedScriptBank
@@ -226,11 +221,11 @@ StartGameCornerGame:
 	ld h, [hl]
 	ld l, a
 	pop af
-	rst FarCall
-	call ExitAllMenus
-	ret
+	call FarCall_hl
+	jp ExitAllMenus
+; c3ae
 
-CheckCoinsAndCoinCase:
+Special_CheckCoins: ; c3ae
 	ld hl, wCoins
 	ld a, [hli]
 	or [hl]
@@ -254,23 +249,21 @@ CheckCoinsAndCoinCase:
 	call PrintText
 	scf
 	ret
+; c3d1
 
-.NoCoinsText:
+.NoCoinsText: ; 0xc3d1
 	; You have no coins.
 	text_jump UnknownText_0x1bd3d7
 	db "@"
+; 0xc3d6
 
-.NoCoinCaseText:
+.NoCoinCaseText: ; 0xc3d6
 	; You don't have a COIN CASE.
 	text_jump UnknownText_0x1bd3eb
 	db "@"
+; 0xc3db
 
-ClearBGPalettesBufferScreen:
-	call ClearBGPalettes
-	call BufferScreen
-	ret
-
-ScriptReturnCarry:
+ScriptReturnCarry: ; c3e2
 	jr c, .carry
 	xor a
 	ld [wScriptVar], a
@@ -279,19 +272,15 @@ ScriptReturnCarry:
 	ld a, 1
 	ld [wScriptVar], a
 	ret
+; c3ef
 
-UnusedCheckUnusedTwoDayTimer:
-	farcall CheckUnusedTwoDayTimer
-	ld a, [wUnusedTwoDayTimer]
-	ld [wScriptVar], a
-	ret
-
-ActivateFishingSwarm:
+Special_ActivateFishingSwarm: ; c3fc
 	ld a, [wScriptVar]
 	ld [wFishingSwarmFlag], a
 	ret
+; c403
 
-StoreSwarmMapIndices::
+StoreSwarmMapIndices:: ; c403
 	ld a, c
 	and a
 	jr nz, .yanma
@@ -308,26 +297,28 @@ StoreSwarmMapIndices::
 	ld a, e
 	ld [wYanmaMapNumber], a
 	ret
+; c419
 
-CheckPokerus:
+SpecialCheckPokerus: ; c419
 ; Check if a monster in your party has Pokerus
-	farcall _CheckPokerus
+	farcall CheckPokerus
 	jp ScriptReturnCarry
+; c422
 
-ResetLuckyNumberShowFlag:
+Special_ResetLuckyNumberShowFlag: ; c422
 	farcall RestartLuckyNumberCountdown
 	ld hl, wLuckyNumberShowFlag
-	res LUCKYNUMBERSHOW_GAME_OVER_F, [hl]
-	farcall LoadOrRegenerateLuckyIDNumber
-	ret
+	res 0, [hl]
+	farjp LoadOrRegenerateLuckyIDNumber
+; c434
 
-CheckLuckyNumberShowFlag:
-	farcall _CheckLuckyNumberShowFlag
+Special_CheckLuckyNumberShowFlag: ; c434
+	farcall CheckLuckyNumberShowFlag
 	jp ScriptReturnCarry
+; c43d
 
-SnorlaxAwake:
-; Check if the Poké Flute channel is playing, and if the player is standing
-; next to Snorlax.
+SpecialSnorlaxAwake: ; 0xc43d
+; Check if the Poké Flute channel is playing.
 
 ; outputs:
 ; wScriptVar is 1 if the conditions are met, otherwise 0.
@@ -336,94 +327,244 @@ SnorlaxAwake:
 	ld a, [wMapMusic]
 	cp MUSIC_POKE_FLUTE_CHANNEL
 	jr nz, .nope
-
-	ld a, [wXCoord]
-	ld b, a
-	ld a, [wYCoord]
-	ld c, a
-
-	ld hl, .ProximityCoords
-.loop
-	ld a, [hli]
-	cp -1
-	jr z, .nope
-	cp b
-	jr nz, .nextcoord
-	ld a, [hli]
-	cp c
-	jr nz, .loop
-
 	ld a, TRUE
 	jr .done
-
-.nextcoord
-	inc hl
-	jr .loop
-
 .nope
 	xor a
 .done
 	ld [wScriptVar], a
 	ret
 
-.ProximityCoords:
-	;   x,  y
-	db 33,  8 ; left
-	db 34, 10 ; below
-	db 35, 10 ; below
-	db 36,  8 ; right
-	db 36,  9 ; right
-	db -1
-
-PlayCurMonCry:
+PlayCurMonCry: ; c472
 	ld a, [wCurPartySpecies]
-	jp PlayMonCry
+	jp PlayCry
+; c478
 
-GameboyCheck:
-	ldh a, [hCGB]
-	and a
-	jr nz, .cgb
-
-	ldh a, [hSGB]
-	and a
-	jr nz, .sgb
-
-.gb
-	xor a ; GBCHECK_GB
-	jr .done
-.sgb
-	ld a, GBCHECK_SGB
-	jr .done
-.cgb
-	ld a, GBCHECK_CGB
-.done
-	ld [wScriptVar], a
-	ret
-
-FadeOutMusic:
-	ld a, LOW(MUSIC_NONE)
-	ld [wMusicFadeID], a
-	ld a, HIGH(MUSIC_NONE)
-	ld [wMusicFadeID + 1], a
+Special_FadeOutMusic: ; c48f
+	ld a, MUSIC_NONE % $100
+	ld [wMusicFadeIDLo], a
+	ld a, MUSIC_NONE / $100
+	ld [wMusicFadeIDHi], a
 	ld a, $2
 	ld [wMusicFade], a
 	ret
+; c49f
 
-Diploma:
+Diploma: ; c49f
 	call FadeToMenu
 	farcall _Diploma
-	call ExitAllMenus
-	ret
+	jp ExitAllMenus
+; c4ac
 
-PrintDiploma:
-	call FadeToMenu
-	farcall _PrintDiploma
-	call ExitAllMenus
-	ret
-
-TrainerHouse:
-	ld a, BANK(sMysteryGiftTrainerHouseFlag)
-	call GetSRAMBank
-	ld a, [sMysteryGiftTrainerHouseFlag]
+Special_GetOvercastIndex::
+	call GetOvercastIndex
 	ld [wScriptVar], a
-	jp CloseSRAM
+	ret
+
+CheckIfTrendyPhraseIsLucky:
+	xor a
+	ld [wScriptVar], a
+	ld hl, wTrendyPhrase
+	ld bc, .KeyPhrase
+	ld d, 6
+.loop
+	ld a, [bc]
+	ld e, a
+	ld a, [hli]
+	cp e
+	ret nz
+	inc bc
+	dec d
+	jr nz, .loop
+	ld a, 1
+	ld [wScriptVar], a
+	ret
+
+.KeyPhrase:
+	db "Lucky@"
+
+RespawnOneOffs:
+	eventflagreset EVENT_BEAT_LAWRENCE
+	eventflagreset EVENT_BEAT_FLANNERY
+	eventflagreset EVENT_BEAT_MAYLENE
+	eventflagreset EVENT_BEAT_SKYLA_AGAIN
+	eventflagreset EVENT_BEAT_KUKUI
+
+	eventflagcheck EVENT_GOT_MUSCLE_BAND_FROM_STEVEN
+	jr z, .SkipSteven
+	eventflagset EVENT_EMBEDDED_TOWER_STEVEN_1
+	eventflagreset EVENT_EMBEDDED_TOWER_STEVEN_2
+	eventflagreset EVENT_BEAT_STEVEN
+.SkipSteven
+
+	eventflagcheck EVENT_GOT_WISE_GLASSES_FROM_CYNTHIA
+	jr z, .SkipCynthia
+	eventflagset EVENT_MYSTRI_STAGE_CYNTHIA
+	eventflagreset EVENT_SINJOH_RUINS_HOUSE_CYNTHIA
+	eventflagreset EVENT_BEAT_CYNTHIA
+.SkipCynthia
+
+	ld a, SUDOWOODO - 1
+	call CheckCaughtMon
+	jr nz, .CaughtSudowoodo
+	eventflagreset EVENT_ROUTE_36_SUDOWOODO
+.CaughtSudowoodo
+
+	ld a, ARTICUNO - 1
+	call CheckCaughtMon
+	jr nz, .CaughtArticuno
+	eventflagreset EVENT_SEAFOAM_ISLANDS_ARTICUNO
+.CaughtArticuno
+
+	ld a, ZAPDOS - 1
+	call CheckCaughtMon
+	jr nz, .CaughtZapdos
+	eventflagreset EVENT_ROUTE_10_ZAPDOS
+	eventflagreset EVENT_ZAPDOS_GONE
+.CaughtZapdos
+
+	ld a, MOLTRES - 1
+	call CheckCaughtMon
+	jr nz, .CaughtMoltres
+	eventflagreset EVENT_CINNABAR_VOLCANO_MOLTRES
+.CaughtMoltres
+
+	ld a, MEWTWO - 1
+	call CheckCaughtMon
+	jr nz, .CaughtMewtwo
+	eventflagreset EVENT_CERULEAN_CAVE_MEWTWO
+.CaughtMewtwo
+
+	ld a, MEW - 1
+	call CheckCaughtMon
+	jr nz, .CaughtMew
+	eventflagreset EVENT_FARAWAY_JUNGLE_MEW
+.CaughtMew
+
+	ld a, RAIKOU - 1
+	call CheckCaughtMon
+	jr nz, .CaughtRaikou
+	ld hl, wRoamMon1Species
+	ld a, [hl]
+	and a
+	jr nz, .CaughtRaikou
+	ld a, RAIKOU
+	ld [wRoamMon1Species], a
+	ld a, 50
+	ld [wRoamMon1Level], a
+	ld a, GROUP_ROUTE_42
+	ld [wRoamMon1MapGroup], a
+	ld a, MAP_ROUTE_42
+	ld [wRoamMon1MapNumber], a
+	xor a ; generate new stats
+	ld [wRoamMon1HP], a
+.CaughtRaikou
+
+	ld a, ENTEI - 1
+	call CheckCaughtMon
+	jr nz, .CaughtEntei
+	ld hl, wRoamMon2Species
+	ld a, [hl]
+	and a
+	jr nz, .CaughtEntei
+	ld a, ENTEI
+	ld [wRoamMon2Species], a
+	ld a, 50
+	ld [wRoamMon2Level], a
+	ld a, GROUP_ROUTE_37
+	ld [wRoamMon2MapGroup], a
+	ld a, MAP_ROUTE_37
+	ld [wRoamMon2MapNumber], a
+	xor a ; generate new stats
+	ld [wRoamMon2HP], a
+.CaughtEntei
+
+	eventflagcheck EVENT_FOUGHT_SUICUNE
+	jr z, .CaughtSuicune
+	ld a, SUICUNE - 1
+	call CheckCaughtMon
+	jr nz, .CaughtSuicune
+	ld hl, wRoamMon3Species
+	ld a, [hl]
+	and a
+	jr nz, .CaughtSuicune
+	ld a, SUICUNE
+	ld [wRoamMon3Species], a
+	ld a, 50
+	ld [wRoamMon3Level], a
+	ld a, GROUP_ROUTE_38
+	ld [wRoamMon3MapGroup], a
+	ld a, MAP_ROUTE_38
+	ld [wRoamMon3MapNumber], a
+	xor a ; generate new stats
+	ld [wRoamMon3HP], a
+.CaughtSuicune
+
+	ld a, LUGIA - 1
+	call CheckCaughtMon
+	jr nz, .CaughtLugia
+	eventflagreset EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_LUGIA
+	eventflagreset EVENT_FOUGHT_LUGIA
+.CaughtLugia
+
+	ld a, HO_OH - 1
+	call CheckCaughtMon
+	ret nz
+	eventflagreset EVENT_TIN_TOWER_ROOF_HO_OH
+	eventflagreset EVENT_FOUGHT_HO_OH
+	ret
+
+BillBoxSwitchCheck:
+	ld a, [wCurBox]
+	cp NUM_BOXES - 1
+	jr nz, .notbox14
+	ld a, -1
+.notbox14
+	inc a
+.billboxloop
+	inc a
+	ld c, a
+	push af
+	farcall GetBoxCountWithC
+	cp MONS_PER_BOX
+	jr nz, .foundspace
+	pop af
+	dec a
+	cp NUM_BOXES - 1
+	jr nz, .notlastbox
+	ld a, -1
+.notlastbox
+	inc a
+	ld c, a
+	ld a, [wCurBox]
+	cp c
+	ld a, c
+	jr nz, .billboxloop
+	xor a
+	ld [wScriptVar], a
+	ret
+
+.foundspace
+	pop af
+	dec a
+	ld [wScriptVar], a
+	ld [wEngineBuffer1], a
+	ret
+
+BillBoxSwitch:
+	; back up wMisc to wDecompressScratch
+	ld hl, wMisc
+	ld de, wDecompressScratch
+	ld bc, (wMiscEnd - wMisc)
+	ld a, BANK(wDecompressScratch)
+	call FarCopyWRAM
+	; change boxes (overwrites wMisc)
+	ld a, [wEngineBuffer1]
+	ld e, a
+	farcall ChangeBoxSaveGameNoConfirm
+	; restore wMisc from wDecompressScratch
+	ld hl, wDecompressScratch
+	ld de, wMisc
+	ld bc, (wMiscEnd - wMisc)
+	ld a, BANK(wDecompressScratch)
+	jp FarCopyWRAM

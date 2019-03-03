@@ -1,16 +1,17 @@
-Music_TinTower:
+Music_TinTower: ; f6811
 	musicheader 4, 1, Music_TinTower_Ch1
 	musicheader 1, 2, Music_TinTower_Ch2
 	musicheader 1, 3, Music_TinTower_Ch3
 	musicheader 1, 4, Music_TinTower_Ch4
+; f681d
 
-Music_TinTower_Ch1:
+Music_TinTower_Ch1: ; f681d
 	tempo 208
 	volume $77
 	dutycycle $3
 	tone $0004
 	vibrato $8, $45
-Music_TinTower_branch_f682a:
+Music_TinTower_branch_f682a: ; f682a
 	stereopanning $f0
 	notetype $c, $a5
 	octave 3
@@ -94,14 +95,15 @@ Music_TinTower_branch_f682a:
 	octave 3
 	note A#, 4
 	loopchannel 0, Music_TinTower_branch_f682a
+; f688b
 
-Music_TinTower_Ch2:
+Music_TinTower_Ch2: ; f688b
 	dutycycle $3
 	tone $0002
 	vibrato $18, $44
-Music_TinTower_branch_f6893:
+Music_TinTower_branch_f6893: ; f6893
 	stereopanning $ff
-Music_TinTower_branch_f6895:
+Music_TinTower_branch_f6895: ; f6895
 	notetype $c, $b5
 	octave 4
 	note C_, 4
@@ -183,10 +185,11 @@ Music_TinTower_branch_f6895:
 	intensity $95
 	note C#, 2
 	loopchannel 0, Music_TinTower_branch_f6893
+; f68f8
 
-Music_TinTower_Ch3:
+Music_TinTower_Ch3: ; f68f8
 	notetype $c, $14
-Music_TinTower_branch_f68fb:
+Music_TinTower_branch_f68fb: ; f68fb
 	note __, 16
 	note __, 16
 	note __, 16
@@ -257,11 +260,12 @@ Music_TinTower_branch_f68fb:
 	note __, 11
 	stereopanning $ff
 	loopchannel 0, Music_TinTower_branch_f68fb
+; f6948
 
-Music_TinTower_Ch4:
+Music_TinTower_Ch4: ; f6948
 	togglenoise $0
 	notetype $c
-Music_TinTower_branch_f694c:
+Music_TinTower_branch_f694c: ; f694c
 	stereopanning $f
 	note G_, 2
 	stereopanning $f0
@@ -289,3 +293,4 @@ Music_TinTower_branch_f694c:
 	note G_, 2
 	note F_, 2
 	loopchannel 0, Music_TinTower_branch_f694c
+; f6974

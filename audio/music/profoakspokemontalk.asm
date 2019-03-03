@@ -1,11 +1,10 @@
-Music_ProfOaksPokemonTalk:
+Music_ProfOaksPokemonTalk: ; f4c9f
 	musicheader 3, 1, Music_ProfOaksPokemonTalk_Ch1
 	musicheader 1, 2, Music_ProfOaksPokemonTalk_Ch2
 	musicheader 1, 3, Music_ProfOaksPokemonTalk_Ch3
+; f4ca8
 
-	db $3
-
-Music_ProfOaksPokemonTalk_Ch1:
+Music_ProfOaksPokemonTalk_Ch1: ; f4ca9
 	tempo 164
 	volume $77
 	stereopanning $f
@@ -23,7 +22,7 @@ Music_ProfOaksPokemonTalk_Ch1:
 	note D#, 1
 	note E_, 1
 	note F#, 1
-Music_ProfOaksPokemonTalk_branch_f4cc3:
+Music_ProfOaksPokemonTalk_branch_f4cc3: ; f4cc3
 	note D#, 6
 	note C#, 1
 	octave 3
@@ -131,8 +130,9 @@ Music_ProfOaksPokemonTalk_branch_f4cc3:
 	note F#, 1
 	note __, 1
 	loopchannel 0, Music_ProfOaksPokemonTalk_branch_f4cc3
+; f4d31
 
-Music_ProfOaksPokemonTalk_Ch2:
+Music_ProfOaksPokemonTalk_Ch2: ; f4d31
 	vibrato $8, $24
 	dutycycle $3
 	notetype $c, $a7
@@ -155,7 +155,7 @@ Music_ProfOaksPokemonTalk_Ch2:
 	note F#, 1
 	note G#, 1
 	note A#, 1
-Music_ProfOaksPokemonTalk_branch_f4d4d:
+Music_ProfOaksPokemonTalk_branch_f4d4d: ; f4d4d
 	note B_, 6
 	note A#, 1
 	note G#, 1
@@ -206,8 +206,9 @@ Music_ProfOaksPokemonTalk_branch_f4d4d:
 	note A#, 1
 	note __, 1
 	loopchannel 0, Music_ProfOaksPokemonTalk_branch_f4d4d
+; f4d82
 
-Music_ProfOaksPokemonTalk_Ch3:
+Music_ProfOaksPokemonTalk_Ch3: ; f4d82
 	vibrato $6, $38
 	notetype $c, $25
 	stereopanning $f0
@@ -222,7 +223,7 @@ Music_ProfOaksPokemonTalk_Ch3:
 	note C#, 1
 	octave 2
 	note A#, 1
-Music_ProfOaksPokemonTalk_branch_f4d95:
+Music_ProfOaksPokemonTalk_branch_f4d95: ; f4d95
 	note B_, 6
 	octave 3
 	note D#, 1
@@ -305,3 +306,4 @@ Music_ProfOaksPokemonTalk_branch_f4d95:
 	note A#, 1
 	note __, 1
 	loopchannel 0, Music_ProfOaksPokemonTalk_branch_f4d95
+; f4dea

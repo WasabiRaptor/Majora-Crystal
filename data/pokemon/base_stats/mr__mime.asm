@@ -1,21 +1,28 @@
-	db MR__MIME ; 122
-
+if DEF(FAITHFUL)
 	db  40,  45,  65,  90, 100, 120
-    evs  0,   0,   0,   0,   0,   2
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  50,  45,  65, 100, 100, 125
+	;   hp  atk  def  spd  sat  sdf
+endc
 
-	db PSYCHIC, FAIRY ; type
+	db PSYCHIC, FAIRY
 	db 45 ; catch rate
 	db 136 ; base exp
-	db NO_ITEM, MYSTERYBERRY ; items
-	db GENDER_F50 ; gender ratio
-	db 25 ; step cycles to hatch
-	INCBIN "gfx/pokemon/mr__mime/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
+	db NO_ITEM ; item 1
+	db LEPPA_BERRY ; item 2
+	dn FEMALE_50, 4 ; gender, step cycles to hatch
+	dn 6, 6 ; frontpic dimensions
+	db SOUNDPROOF ; ability 1
+	db FILTER ; ability 2
+	db TECHNICIAN ; hidden ability
+	db MEDIUM_FAST ; growth rate
+	dn HUMANSHAPE, HUMANSHAPE ; egg groups
 
-	; tm/hm learnset
-	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, TOXIC, ZAP_CANNON, PSYCH_UP, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, ENDURE, FRUSTRATION, SOLARBEAM, THUNDER, RETURN, PSYCHIC_M, SHADOW_BALL, MUD_SLAP, DOUBLE_TEAM, ICE_PUNCH, SWAGGER, SLEEP_TALK, THUNDERPUNCH, DREAM_EATER, REST, ATTRACT, THIEF, FIRE_PUNCH, NIGHTMARE, FLASH, THUNDERBOLT
+	; ev_yield
+	ev_yield   0,   0,   0,   0,   0,   2
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm DYNAMICPUNCH, CURSE, CALM_MIND, TOXIC, HIDDEN_POWER, SUNNY_DAY, HYPER_BEAM, LIGHT_SCREEN, PROTECT, RAIN_DANCE, SAFEGUARD, SOLAR_BEAM, THUNDERBOLT, THUNDER, RETURN, PSYCHIC, SHADOW_BALL, DOUBLE_TEAM, REFLECT, AERIAL_ACE, SUBSTITUTE, FACADE, REST, ATTRACT, THIEF, DAZZLINGLEAM, ROCK_SMASH, FOCUS_BLAST, ENERGY_BALL, ENDURE, DRAIN_PUNCH, GIGA_IMPACT, FLASH, THUNDER_WAVE, BODY_SLAM, COUNTER, DOUBLE_EDGE, DREAM_EATER, FIRE_PUNCH, HEADBUTT, ICE_PUNCH, ICY_WIND, SEISMIC_TOSS, SKILL_SWAP, SLEEP_TALK, SWAGGER, THUNDERPUNCH, TRICK, ZAP_CANNON, ZEN_HEADBUTT
 	; end

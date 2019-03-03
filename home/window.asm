@@ -1,97 +1,104 @@
-RefreshScreen::
+RefreshScreen:: ; 2dba
 	call ClearWindowData
-	ldh a, [hROMBank]
+	ld a, [hROMBank]
 	push af
-	ld a, BANK(ReanchorBGMap_NoOAMUpdate) ; and BANK(LoadFonts_NoOAMUpdate)
+	ld a, BANK(ReanchorBGMap_NoOAMUpdate) ; BANK(LoadFonts_NoOAMUpdate)
 	rst Bankswitch
 
 	call ReanchorBGMap_NoOAMUpdate
-	call _OpenAndCloseMenu_HDMATransferTileMapAndAttrMap
+	call BGMapAnchorTopLeft
 	call LoadFonts_NoOAMUpdate
 
 	pop af
 	rst Bankswitch
 	ret
+; 2dcf
 
-CloseText::
-	ldh a, [hOAMUpdate]
+RefreshScreen_BridgeUpdate::
+	call GetMovementPermissions
+	farjp ReanchorBGMap_NoOAMUpdate_NoDelay
+
+CloseText:: ; 2dcf
+	ld a, [hOAMUpdate]
 	push af
 	ld a, $1
-	ldh [hOAMUpdate], a
+	ld [hOAMUpdate], a
 
 	call .CloseText
 
 	pop af
-	ldh [hOAMUpdate], a
+	ld [hOAMUpdate], a
 	ld hl, wVramState
 	res 6, [hl]
 	ret
+; 2de2
 
-.CloseText:
+.CloseText: ; 2de2
 	call ClearWindowData
 	xor a
-	ldh [hBGMapMode], a
-	call OverworldTextModeSwitch
-	call _OpenAndCloseMenu_HDMATransferTileMapAndAttrMap
+	ld [hBGMapMode], a
+	call LoadMapPart
+	call BGMapAnchorTopLeft
 	xor a
-	ldh [hBGMapMode], a
+	ld [hBGMapMode], a
 	call SafeUpdateSprites
+	farcall ReloadVisibleSprites
 	ld a, $90
-	ldh [hWY], a
+	ld [hWY], a
 	call ReplaceKrisSprite
-	farcall ReturnFromMapSetupScript
-	farcall LoadOverworldFont
-	ret
+	xor a
+	ld [hBGMapMode], a
 
-OpenText::
+	farjp ReturnFromMapSetupScript
+; 2e08
+
+OpenText:: ; 2e08
 	call ClearWindowData
-	ldh a, [hROMBank]
+	ld a, [hROMBank]
 	push af
 	ld a, BANK(ReanchorBGMap_NoOAMUpdate) ; and BANK(LoadFonts_NoOAMUpdate)
 	rst Bankswitch
 
-	call ReanchorBGMap_NoOAMUpdate ; clear bgmap
+	call ReanchorBGMap_NoOAMUpdate
 	call SpeechTextBox
-	call _OpenAndCloseMenu_HDMATransferTileMapAndAttrMap ; anchor bgmap
-	call LoadFonts_NoOAMUpdate ; load font
+	call BGMapAnchorTopLeft
+	call LoadFonts_NoOAMUpdate
 	pop af
 	rst Bankswitch
 
 	ret
+; 2e20
 
-_OpenAndCloseMenu_HDMATransferTileMapAndAttrMap::
-	ldh a, [hOAMUpdate]
+BGMapAnchorTopLeft::
+	ld a, [hOAMUpdate]
 	push af
 	ld a, $1
-	ldh [hOAMUpdate], a
+	ld [hOAMUpdate], a
 
-	farcall OpenAndCloseMenu_HDMATransferTileMapAndAttrMap
+	ld b, 0
+	call SafeCopyTilemapAtOnce
 
 	pop af
-	ldh [hOAMUpdate], a
+	ld [hOAMUpdate], a
 	ret
+; 2e31
 
-SafeUpdateSprites::
-	ldh a, [hOAMUpdate]
+SafeUpdateSprites:: ; 2e31
+	ld a, [hOAMUpdate]
 	push af
-	ldh a, [hBGMapMode]
+	ld a, [hBGMapMode]
 	push af
 	xor a
-	ldh [hBGMapMode], a
+	ld [hBGMapMode], a
 	ld a, $1
-	ldh [hOAMUpdate], a
-
+	ld [hOAMUpdate], a
 	call UpdateSprites
-
 	xor a
-	ldh [hOAMUpdate], a
+	ld [hOAMUpdate], a
 	call DelayFrame
 	pop af
-	ldh [hBGMapMode], a
+	ld [hBGMapMode], a
 	pop af
-	ldh [hOAMUpdate], a
+	ld [hOAMUpdate], a
 	ret
-
-; unused
-	scf
-	ret
+; 2e4e

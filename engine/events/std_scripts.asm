@@ -1,6 +1,5 @@
 StdScripts::
-; entries correspond to constants/std_constants.asm
-	dba PokecenterNurseScript
+	dba PokeCenterNurseScript
 	dba DifficultBookshelfScript
 	dba PictureBookshelfScript
 	dba MagazineBookshelfScript
@@ -10,13 +9,12 @@ StdScripts::
 	dba TownMapScript
 	dba WindowScript
 	dba TVScript
-	dba HomepageScript
 	dba Radio1Script
 	dba Radio2Script
 	dba TrashCanScript
 	dba StrengthBoulderScript
 	dba SmashRockScript
-	dba PokecenterSignScript
+	dba PokeCenterSignScript
 	dba MartSignScript
 	dba GoldenrodRocketsScript
 	dba RadioTowerRocketsScript
@@ -45,85 +43,114 @@ StdScripts::
 	dba GiftFScript
 	dba PackFullFScript
 	dba RematchGiftFScript
+	dba GymStatue0Script
 	dba GymStatue1Script
 	dba GymStatue2Script
+	dba GymStatue3Script
 	dba ReceiveItemScript
-	dba ReceiveTogepiEggScript
 	dba PCScript
 	dba GameCornerCoinVendorScript
 	dba HappinessCheckScript
+	dba CutTreeScript
+	dba RefrigeratorScript
+	dba SinkScript
+	dba StoveScript
+	dba VendingMachineScript
+	dba TreeGrottoScript
+	dba CaveGrottoScript
 
-PokecenterNurseScript:
-; EVENT_WELCOMED_TO_POKECOM_CENTER is never set
-
+PokeCenterNurseScript:
 	opentext
-	checktime MORN
+	checkevent EVENT_NURSE_SAW_FOUR_TRAINER_STARS
+	iftrue .four_star_center
+	checktime 1 << MORN
 	iftrue .morn
-	checktime DAY
+	checktime 1 << DAY
 	iftrue .day
-	checktime NITE
+	checktime 1 << NITE
 	iftrue .nite
 	jump .ok
 
 .morn
 	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .morn_comcenter
-	farwritetext NurseMornText
-	buttonsound
-	jump .ok
-.morn_comcenter
+	iftrue .morn_center
+	checkevent EVENT_WELCOMING_TO_POKECOM_CENTER
+	iffalse .morn_center
 	farwritetext PokeComNurseMornText
+	buttonsound
+	setevent EVENT_WELCOMED_TO_POKECOM_CENTER
+	jump .ok
+.morn_center
+	farwritetext NurseMornText
 	buttonsound
 	jump .ok
 
 .day
 	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .day_comcenter
-	farwritetext NurseDayText
-	buttonsound
-	jump .ok
-.day_comcenter
+	iftrue .day_center
+	checkevent EVENT_WELCOMING_TO_POKECOM_CENTER
+	iffalse .day_center
 	farwritetext PokeComNurseDayText
+	buttonsound
+	setevent EVENT_WELCOMED_TO_POKECOM_CENTER
+	jump .ok
+.day_center
+	farwritetext NurseDayText
 	buttonsound
 	jump .ok
 
 .nite
 	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .nite_comcenter
-	farwritetext NurseNiteText
-	buttonsound
-	jump .ok
-.nite_comcenter
+	iftrue .nite_center
+	checkevent EVENT_WELCOMING_TO_POKECOM_CENTER
+	iffalse .nite_center
 	farwritetext PokeComNurseNiteText
+	buttonsound
+	setevent EVENT_WELCOMED_TO_POKECOM_CENTER
+	jump .ok
+.nite_center
+	farwritetext NurseNiteText
 	buttonsound
 	jump .ok
 
 .ok
-	; only do this once
-	clearevent EVENT_WELCOMED_TO_POKECOM_CENTER
+	checkcode VAR_TRAINER_STARS
+	ifnotequal 4, .ask_heal
+	farwritetext NurseFourTrainerStarsText
+	setevent EVENT_NURSE_SAW_FOUR_TRAINER_STARS
+	jump .answer_heal
 
+.ask_heal
 	farwritetext NurseAskHealText
+.answer_heal
 	yesorno
 	iffalse .done
+	jump .heal_pokemon
 
+.four_star_center
+	farwritetext NurseTheUsualText
+	yesorno
+	iffalse .done
+.heal_pokemon
 	farwritetext NurseTakePokemonText
 	pause 20
 	turnobject LAST_TALKED, LEFT
 	pause 10
 	special HealParty
+	special SaveMusic
 	playmusic MUSIC_NONE
-	writebyte HEALMACHINE_POKECENTER
+	writebyte 0 ; Machine is at a Pokemon Center
 	special HealMachineAnim
 	pause 30
-	special RestartMapMusic
+	special RestoreMusic
 	turnobject LAST_TALKED, DOWN
 	pause 10
 
 	checkphonecall ; elm already called about pokerus
 	iftrue .no
-	checkflag ENGINE_CAUGHT_POKERUS
+	checkflag ENGINE_POKERUS ; nurse already talked about pokerus
 	iftrue .no
-	special CheckPokerus
+	special SpecialCheckPokerus
 	iftrue .pokerus
 .no
 
@@ -138,9 +165,7 @@ PokecenterNurseScript:
 	turnobject LAST_TALKED, DOWN
 	pause 10
 
-	waitbutton
-	closetext
-	end
+	waitendtext
 
 .pokerus
 	; already cleared earlier in the script
@@ -157,7 +182,7 @@ PokecenterNurseScript:
 	closetext
 
 .pokerus_done
-	setflag ENGINE_CAUGHT_POKERUS
+	setflag ENGINE_POKERUS
 	specialphonecall SPECIALCALL_POKERUS
 	end
 
@@ -179,50 +204,77 @@ IncenseBurnerScript:
 MerchandiseShelfScript:
 	farjumptext MerchandiseShelfText
 
+RefrigeratorScript:
+	farjumptext RefrigeratorText
+
+SinkScript:
+	farjumptext SinkText
+
+StoveScript:
+	farjumptext StoveText
+
 TownMapScript:
 	opentext
 	farwritetext TownMapText
 	waitbutton
-	special OverworldTownMap
-	closetext
-	end
+	special Special_TownMap
+	endtext
 
 WindowScript:
 	farjumptext WindowText
 
 TVScript:
-	opentext
-	farwritetext TVText
-	waitbutton
-	closetext
-	end
+	checkcode VAR_FACING
+	ifnotequal UP, WrongSideScript
+	farjumptext TVText
 
-HomepageScript:
-	farjumptext HomepageText
+WrongSideScript:
+	farjumptext WrongSideText
 
 Radio1Script:
+	callasm IsKantoRadioOffAir
+	iftrue RadioOffAirScript
 	opentext
 	writebyte MAPRADIO_POKEMON_CHANNEL
 	special MapRadio
-	closetext
-	end
+	endtext
 
 Radio2Script:
-; Lucky Channel
+	callasm IsKantoRadioOffAir
+	iftrue RadioOffAirScript
 	opentext
 	writebyte MAPRADIO_LUCKY_CHANNEL
 	special MapRadio
-	closetext
-	end
+	endtext
 
-TrashCanScript:
+RadioOffAirScript:
+	farjumptext RadioOffAirText
+
+IsKantoRadioOffAir:
+	call RegionCheck
+	ld a, e
+	cp KANTO_REGION
+	jr nz, .no
+	ld a, [wPokegearFlags]
+	bit 3, a
+	jr nz, .no
+	ld a, TRUE
+	jr .ok
+.no
+	xor a ; ld a, FALSE
+.ok
+	ld [wScriptVar], a
+	ret
+
+TrashCanScript: ; 0xbc1a5
 	farjumptext TrashCanText
 
 PCScript:
+	checkcode VAR_FACING
+	ifnotequal UP, WrongSideScript
 	opentext
 	special PokemonCenterPC
-	closetext
-	end
+	endtext
 
 ElevatorButtonScript:
 	playsound SFX_READ_TEXT_2
@@ -236,10 +288,10 @@ StrengthBoulderScript:
 SmashRockScript:
 	farjump AskRockSmashScript
 
-PokecenterSignScript:
-	farjumptext PokecenterSignText
+PokeCenterSignScript:
+	farjumptext PokeCenterSignText
 
-MartSignScript:
+MartSignScript
 	farjumptext MartSignText
 
 DayToTextScript:
@@ -250,40 +302,40 @@ DayToTextScript:
 	ifequal THURSDAY, .Thursday
 	ifequal FRIDAY, .Friday
 	ifequal SATURDAY, .Saturday
-	stringtotext .SundayText, MEM_BUFFER_0
+	stringtotext .SundayText, 0
 	end
 .Monday:
-	stringtotext .MondayText, MEM_BUFFER_0
+	stringtotext .MondayText, 0
 	end
 .Tuesday:
-	stringtotext .TuesdayText, MEM_BUFFER_0
+	stringtotext .TuesdayText, 0
 	end
 .Wednesday:
-	stringtotext .WednesdayText, MEM_BUFFER_0
+	stringtotext .WednesdayText, 0
 	end
 .Thursday:
-	stringtotext .ThursdayText, MEM_BUFFER_0
+	stringtotext .ThursdayText, 0
 	end
 .Friday:
-	stringtotext .FridayText, MEM_BUFFER_0
+	stringtotext .FridayText, 0
 	end
 .Saturday:
-	stringtotext .SaturdayText, MEM_BUFFER_0
+	stringtotext .SaturdayText, 0
 	end
 .SundayText:
-	db "SUNDAY@"
+	db "Sunday@"
 .MondayText:
-	db "MONDAY@"
+	db "Monday@"
 .TuesdayText:
-	db "TUESDAY@"
+	db "Tuesday@"
 .WednesdayText:
-	db "WEDNESDAY@"
+	db "Wednesday@"
 .ThursdayText:
-	db "THURSDAY@"
+	db "Thursday@"
 .FridayText:
-	db "FRIDAY@"
+	db "Friday@"
 .SaturdayText:
-	db "SATURDAY@"
+	db "Saturday@"
 
 GoldenrodRocketsScript:
 	clearevent EVENT_GOLDENROD_CITY_ROCKET_TAKEOVER
@@ -293,11 +345,12 @@ RadioTowerRocketsScript:
 	setflag ENGINE_ROCKETS_IN_RADIO_TOWER
 	setevent EVENT_GOLDENROD_CITY_CIVILIANS
 	setevent EVENT_RADIO_TOWER_BLACKBELT_BLOCKS_STAIRS
+	clearevent EVENT_GOLDENROD_CITY_ROCKET_SCOUT
 	clearevent EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	clearevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
 	setevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_EAST
 	specialphonecall SPECIALCALL_WEIRDBROADCAST
-	;setmapscene MAHOGANY_TOWN, SCENE_FINISHED
+	setmapscene MAHOGANY_TOWN, $1
 	end
 
 BugContestResultsWarpScript:
@@ -306,54 +359,71 @@ BugContestResultsWarpScript:
 	setevent EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_CONTEST_DAY
 	clearevent EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_NOT_CONTEST_DAY
 	setevent EVENT_WARPED_FROM_ROUTE_35_NATIONAL_PARK_GATE
-	;warp ROUTE_36_NATIONAL_PARK_GATE, 0, 4
+	warp ROUTE_36_NATIONAL_PARK_GATE, $0, $4
 	applymovement PLAYER, Movement_ContestResults_WalkAfterWarp
+	; fallthrough
 
 BugContestResultsScript:
 	clearflag ENGINE_BUG_CONTEST_TIMER
 	clearevent EVENT_WARPED_FROM_ROUTE_35_NATIONAL_PARK_GATE
-	clearevent EVENT_CONTEST_OFFICER_HAS_SUN_STONE
-	clearevent EVENT_CONTEST_OFFICER_HAS_EVERSTONE
-	clearevent EVENT_CONTEST_OFFICER_HAS_GOLD_BERRY
-	clearevent EVENT_CONTEST_OFFICER_HAS_BERRY
+	clearevent EVENT_CONTEST_OFFICER_HAS_PRIZE
 	opentext
 	farwritetext ContestResults_ReadyToJudgeText
 	waitbutton
 	special BugContestJudging
-	vartomem MEM_BUFFER_0
-	ifequal 1, BugContestResults_FirstPlace
-	ifequal 2, BugContestResults_SecondPlace
-	ifequal 3, BugContestResults_ThirdPlace
+	RAM2MEM $0
+	ifequal 1, .FirstPlace
+	ifequal 2, .SecondPlace
+	ifequal 3, .ThirdPlace
+	copybytetovar wBugContestOfficerPrize
+	itemtotext $0, $1
 	farwritetext ContestResults_ConsolationPrizeText
 	buttonsound
 	waitsfx
-	verbosegiveitem BERRY
-	iffalse BugContestResults_NoRoomForBerry
-
-BugContestResults_DidNotWin:
+	copybytetovar wBugContestOfficerPrize
+	verbosegiveitem ITEM_FROM_MEM
+	iftrue .GotConsolationPrize
+	farwritetext BugContestPrizeNoRoomText
+	buttonsound
+	setevent EVENT_CONTEST_OFFICER_HAS_PRIZE
+.GotConsolationPrize
 	farwritetext ContestResults_DidNotWinText
 	buttonsound
-	jump BugContestResults_FinishUp
+	jump .FinishUp
 
-BugContestResults_ReturnAfterWinnersPrize:
+.FirstPlace
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+.SecondPlace
+.ThirdPlace
+	copybytetovar wBugContestOfficerPrize
+	itemtotext $0, $1
+	farwritetext ContestResults_PlayerWonAPrizeText
+	waitbutton
+	copybytetovar wBugContestOfficerPrize
+	verbosegiveitem ITEM_FROM_MEM
+	iftrue .GotWinnersPrize
+	farwritetext BugContestPrizeNoRoomText
+	buttonsound
+	setevent EVENT_CONTEST_OFFICER_HAS_PRIZE
+.GotWinnersPrize
 	farwritetext ContestResults_JoinUsNextTimeText
 	buttonsound
-
-BugContestResults_FinishUp:
+.FinishUp
 	checkevent EVENT_LEFT_MONS_WITH_CONTEST_OFFICER
-	iffalse BugContestResults_DidNotLeaveMons
+	iffalse .DidNotLeaveMons
 	farwritetext ContestResults_ReturnPartyText
 	waitbutton
 	special ContestReturnMons
-BugContestResults_DidNotLeaveMons:
+.DidNotLeaveMons
 	special CheckPartyFullAfterContest
-	ifequal BUGCONTEST_CAUGHT_MON, BugContestResults_CleanUp
-	ifequal BUGCONTEST_NO_CATCH, BugContestResults_CleanUp
-	; BUGCONTEST_BOXED_MON
+	ifequal $0, .CleanUp
+	ifequal $2, .CleanUp
 	farwritetext ContestResults_PartyFullText
 	waitbutton
-BugContestResults_CleanUp:
+.CleanUp
 	closetext
+	setscene $0
+	setmapscene ROUTE_35_NATIONAL_PARK_GATE, $0
 	setevent EVENT_BUG_CATCHING_CONTESTANT_1A
 	setevent EVENT_BUG_CATCHING_CONTESTANT_2A
 	setevent EVENT_BUG_CATCHING_CONTESTANT_3A
@@ -377,57 +447,9 @@ BugContestResults_CleanUp:
 	setflag ENGINE_DAILY_BUG_CONTEST
 	special PlayMapMusic
 	end
+; 0xbc31e
 
-BugContestResults_FirstPlace:
-	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	itemtotext SUN_STONE, MEM_BUFFER_1
-	farwritetext ContestResults_PlayerWonAPrizeText
-	waitbutton
-	verbosegiveitem SUN_STONE
-	iffalse BugContestResults_NoRoomForSunStone
-	jump BugContestResults_ReturnAfterWinnersPrize
-
-BugContestResults_SecondPlace:
-	itemtotext EVERSTONE, MEM_BUFFER_1
-	farwritetext ContestResults_PlayerWonAPrizeText
-	waitbutton
-	verbosegiveitem EVERSTONE
-	iffalse BugContestResults_NoRoomForEverstone
-	jump BugContestResults_ReturnAfterWinnersPrize
-
-BugContestResults_ThirdPlace:
-	itemtotext GOLD_BERRY, MEM_BUFFER_1
-	farwritetext ContestResults_PlayerWonAPrizeText
-	waitbutton
-	verbosegiveitem GOLD_BERRY
-	iffalse BugContestResults_NoRoomForGoldBerry
-	jump BugContestResults_ReturnAfterWinnersPrize
-
-BugContestResults_NoRoomForSunStone:
-	farwritetext BugContestPrizeNoRoomText
-	buttonsound
-	setevent EVENT_CONTEST_OFFICER_HAS_SUN_STONE
-	jump BugContestResults_ReturnAfterWinnersPrize
-
-BugContestResults_NoRoomForEverstone:
-	farwritetext BugContestPrizeNoRoomText
-	buttonsound
-	setevent EVENT_CONTEST_OFFICER_HAS_EVERSTONE
-	jump BugContestResults_ReturnAfterWinnersPrize
-
-BugContestResults_NoRoomForGoldBerry:
-	farwritetext BugContestPrizeNoRoomText
-	buttonsound
-	setevent EVENT_CONTEST_OFFICER_HAS_GOLD_BERRY
-	jump BugContestResults_ReturnAfterWinnersPrize
-
-BugContestResults_NoRoomForBerry:
-	farwritetext BugContestPrizeNoRoomText
-	buttonsound
-	setevent EVENT_CONTEST_OFFICER_HAS_BERRY
-	jump BugContestResults_DidNotWin
-
-BugContestResults_CopyContestantsToResults:
+BugContestResults_CopyContestantsToResults ; 0xbc380
 	checkevent EVENT_BUG_CATCHING_CONTESTANT_1A
 	iftrue .skip1
 	clearevent EVENT_BUG_CATCHING_CONTESTANT_1B
@@ -471,35 +493,51 @@ BugContestResults_CopyContestantsToResults:
 	end
 
 InitializeEventsScript:
+	setmapscene GOLDENROD_CITY, $1
+	setmapscene BATTLE_TOWER_OUTSIDE, $1
+	setmapscene BELLCHIME_TRAIL, $1
 	setevent EVENT_EARLS_ACADEMY_EARL
+	setevent EVENT_VIOLET_GYM_FALKNER
 	setevent EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	setevent EVENT_GOLDENROD_CITY_ROCKET_TAKEOVER
 	setevent EVENT_RADIO_TOWER_CIVILIANS_AFTER
-	setevent EVENT_CHARCOAL_KILN_FARFETCH_D
-	setevent EVENT_CHARCOAL_KILN_APPRENTICE
+	setevent EVENT_ILEX_FOREST_APPRENTICE
+	setevent EVENT_ILEX_FOREST_FARFETCHD
 	setevent EVENT_ILEX_FOREST_CHARCOAL_MASTER
 	setevent EVENT_MAHOGANY_MART_LANCE_AND_DRAGONITE
-	setevent EVENT_TEAM_ROCKET_BASE_B2F_GRUNT_WITH_EXECUTIVE
-	setevent EVENT_TEAM_ROCKET_BASE_B2F_EXECUTIVE
+	setevent EVENT_TEAM_ROCKET_BASE_B2F_PETREL
+	setevent EVENT_TEAM_ROCKET_BASE_B2F_ARIANA
 	setevent EVENT_TEAM_ROCKET_BASE_B2F_DRAGONITE
 	setevent EVENT_RIVAL_TEAM_ROCKET_BASE
-	setevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	setevent EVENT_BLACKTHORN_CITY_DRAGON_TAMER_DOES_NOT_BLOCK_GYM
 	setevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
+	setevent EVENT_TEACHER_NEW_BARK_TOWN
+	setevent EVENT_LYRA_IN_HER_ROOM
+	setevent EVENT_LYRA_NEW_BARK_TOWN
+	setevent EVENT_LYRA_ROUTE_29
+	setevent EVENT_LYRA_ROUTE_34
+	setevent EVENT_LYRA_ROUTE_42
 	setevent EVENT_RIVAL_CHERRYGROVE_CITY
 	setevent EVENT_RIVAL_AZALEA_TOWN
-	setevent EVENT_RIVAL_GOLDENROD_UNDERGROUND
+	setevent EVENT_RIVAL_UNDERGROUND_PATH
+	setevent EVENT_VALERIE_ECRUTEAK_CITY
+	setevent EVENT_VALERIE_BELLCHIME_TRAIL
 	setevent EVENT_AZALEA_TOWN_SLOWPOKES
 	setevent EVENT_KURTS_HOUSE_SLOWPOKE
 	setevent EVENT_GUIDE_GENT_VISIBLE_IN_CHERRYGROVE
 	setevent EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER
 	setevent EVENT_COP_IN_ELMS_LAB
 	setevent EVENT_RUINS_OF_ALPH_OUTSIDE_SCIENTIST
+	setevent EVENT_RUINS_OF_ALPH_OUTSIDE_SCIENTIST_CLIMAX
 	setevent EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST
 	setevent EVENT_BOULDER_IN_ICE_PATH_1A
 	setevent EVENT_BOULDER_IN_ICE_PATH_2A
 	setevent EVENT_BOULDER_IN_ICE_PATH_3A
 	setevent EVENT_BOULDER_IN_ICE_PATH_4A
-	setevent EVENT_ROUTE_30_BATTLE
+	setevent EVENT_BOULDER_FELL_IN_DIM_CAVE_2F
+	setevent EVENT_BOULDER_FELL_IN_DIM_CAVE_3F
+	setevent EVENT_BOULDER_FELL_IN_DIM_CAVE_4F
+	setevent EVENT_ROUTE_30_YOUNGSTER_JOEY
 	setevent EVENT_BUG_CATCHING_CONTESTANT_1A
 	setevent EVENT_BUG_CATCHING_CONTESTANT_2A
 	setevent EVENT_BUG_CATCHING_CONTESTANT_3A
@@ -527,20 +565,20 @@ InitializeEventsScript:
 	setevent EVENT_MAHOGANY_MART_OWNERS
 	setevent EVENT_TIN_TOWER_ROOF_HO_OH
 	setevent EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_LUGIA
-	setevent EVENT_PLAYERS_HOUSE_2F_CONSOLE
-	setevent EVENT_PLAYERS_HOUSE_2F_DOLL_1
-	setevent EVENT_PLAYERS_HOUSE_2F_DOLL_2
-	setevent EVENT_PLAYERS_HOUSE_2F_BIG_DOLL
+	setevent EVENT_KRISS_HOUSE_2F_CONSOLE
+	setevent EVENT_KRISS_HOUSE_2F_DOLL_1
+	setevent EVENT_KRISS_HOUSE_2F_DOLL_2
+	setevent EVENT_KRISS_HOUSE_2F_BIG_DOLL
 	setevent EVENT_DECO_BED_1
 	setevent EVENT_DECO_PLANT_4
+	setevent EVENT_GOLDENROD_TRAIN_STATION_GENTLEMAN
 	setevent EVENT_OLIVINE_GYM_JASMINE
 	setevent EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
-	setevent EVENT_MET_BILL
+	setevent EVENT_NEVER_MET_BILL
 	setevent EVENT_ECRUTEAK_POKE_CENTER_BILL
-	setevent EVENT_MYSTERY_GIFT_DELIVERY_GUY
 	setevent EVENT_LAKE_OF_RAGE_LANCE
-	setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_1
-	setevent EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_BLOCKED_OFF
+	setevent EVENT_WAREHOUSE_LAYOUT_1
+	setevent EVENT_WAREHOUSE_BLOCKED_OFF
 	setevent EVENT_DRAGONS_DEN_CLAIR
 	setevent EVENT_RIVAL_OLIVINE_CITY
 	setevent EVENT_RIVAL_VICTORY_ROAD
@@ -548,7 +586,6 @@ InitializeEventsScript:
 	setevent EVENT_LANCES_ROOM_OAK_AND_MARY
 	setevent EVENT_FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN_TWIN_1
 	setevent EVENT_BURNED_TOWER_B1F_BEASTS_1
-	setevent EVENT_RED_IN_MT_SILVER
 	setevent EVENT_OLIVINE_PORT_SPRITES_AFTER_HALL_OF_FAME
 	setevent EVENT_FAST_SHIP_PASSENGERS_EASTBOUND
 	setevent EVENT_FAST_SHIP_PASSENGERS_WESTBOUND
@@ -562,8 +599,8 @@ InitializeEventsScript:
 	setevent EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_FISHER
 	setevent EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_YOUNGSTERS
 	setevent EVENT_DRAGON_SHRINE_CLAIR
-	;setevent EVENT_BATTLE_TOWER_BATTLE_ROOM_YOUNGSTER
-	setevent EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
+	setevent EVENT_BATTLE_TOWER_BATTLE_ROOM_YOUNGSTER
+	setevent EVENT_KRISS_NEIGHBORS_HOUSE_NEIGHBOR
 	setevent EVENT_AZALEA_TOWN_KURT
 	setevent EVENT_AZALEA_TOWN_KURT
 	setevent EVENT_ILEX_FOREST_KURT
@@ -572,7 +609,7 @@ InitializeEventsScript:
 	setevent EVENT_GOLDENROD_SALE_OFF
 	setevent EVENT_ECRUTEAK_CITY_GRAMPS
 	setevent EVENT_EUSINE_IN_BURNED_TOWER
-	setevent EVENT_PLAYERS_HOUSE_MOM_2
+	setevent EVENT_KRISS_HOUSE_MOM_2
 	setevent EVENT_WISE_TRIOS_ROOM_WISE_TRIO_2
 	setevent EVENT_CIANWOOD_CITY_EUSINE
 	setevent EVENT_TIN_TOWER_1F_EUSINE
@@ -582,28 +619,69 @@ InitializeEventsScript:
 	setevent EVENT_SAW_SUICUNE_ON_ROUTE_36
 	setevent EVENT_SAW_SUICUNE_ON_ROUTE_42
 	setevent EVENT_SAW_SUICUNE_AT_CIANWOOD_CITY
-	;setevent EVENT_BATTLE_TOWER_OUTSIDE_SAILOR
+	setevent EVENT_YELLOW_FOREST_ROCKET_TAKEOVER
+	setevent EVENT_ROUTE_48_JESSIE
+	setevent EVENT_ROUTE_48_JAMES
+	setevent EVENT_ROUTE_48_NURSE
+	setevent EVENT_YELLOW_FOREST_SKARMORY
+	setevent EVENT_RADIO_TOWER_PETREL
+	setevent EVENT_FOUND_MACHINE_PART_IN_CERULEAN_GYM
+	setevent EVENT_CERULEAN_GYM_ROCKET
+	setevent EVENT_ROUTE_24_ROCKET
+	setevent EVENT_ROUTE_25_COOLTRAINER_M_AFTER
+	setevent EVENT_CERULEAN_CAPE_BOYFRIEND
+	setevent EVENT_TRAINERS_IN_CERULEAN_GYM
+	setevent EVENT_COPYCATS_HOUSE_2F_DOLL
+	setevent EVENT_VIRIDIAN_GYM_BLUE
+	setevent EVENT_SEAFOAM_GYM_GYM_GUY
+	setevent EVENT_MT_MOON_SQUARE_CLEFAIRY
+	setevent EVENT_SAFFRON_TRAIN_STATION_POPULATION
+	setevent EVENT_LAVENDER_TOWN_FLEEING_YOUNGSTER
+	setevent EVENT_LAV_RADIO_TOWER_POPULATION
+	setevent EVENT_SOUL_HOUSE_MR_FUJI
+	setevent EVENT_ROUTE_8_KANTO_POKEMON_FEDERATION
+	setevent EVENT_SHAMOUTI_ISLAND_PIKABLU_GUY
+	setevent EVENT_SHAMOUTI_COAST_CANDELA
+	setevent EVENT_SHAMOUTI_COAST_BLANCHE
+	setevent EVENT_SHAMOUTI_COAST_SPARK
+	setevent EVENT_LAWRENCE_ROUTE_10
+	setevent EVENT_LAWRENCES_ZAPDOS_ROUTE_10
+	setevent EVENT_LAWRENCE_FINAL_BIRD
+	setevent EVENT_LAWRENCE_FINAL_BIRD_SURF
+	setevent EVENT_LAWRENCE_SHAMOUTI_SHRINE_RUINS
+	setevent EVENT_BATTLE_TOWER_CLOSED
+	setevent EVENT_BATTLE_TOWER_CHERYL
+	setevent EVENT_BATTLE_TOWER_RILEY
+	setevent EVENT_BATTLE_TOWER_BUCK
+	setevent EVENT_BATTLE_TOWER_MARLEY
+	setevent EVENT_BATTLE_TOWER_MIRA
+	setevent EVENT_BATTLE_TOWER_ANABEL
+	setevent EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
+	setevent EVENT_INDIGO_PLATEAU_POKECENTER_LYRA
+	setevent EVENT_INDIGO_PLATEAU_POKECENTER_YELLOW
+	setevent EVENT_MYSTRI_UNOWN_W
+	setevent EVENT_MYSTRI_UNOWN_A
+	setevent EVENT_MYSTRI_UNOWN_R
+	setevent EVENT_MYSTRI_UNOWN_P
+	setevent EVENT_MYSTRI_STAGE_CYNTHIA
+	setevent EVENT_MYSTRI_STAGE_EGG
+	setevent EVENT_SINJOH_RUINS_HOUSE_CYNTHIA
+	setevent EVENT_EMBEDDED_TOWER_STEVEN_2
+	setevent EVENT_ILEX_FOREST_LYRA
+	setevent EVENT_ILEX_FOREST_CELEBI
+	setevent EVENT_LAWRENCE_FARAWAY_ISLAND
+	setevent EVENT_GIOVANNIS_CAVE_LYRA
+	setevent EVENT_GIOVANNIS_CAVE_CELEBI
+	setevent EVENT_GIOVANNIS_CAVE_GIOVANNI
+	setevent EVENT_CHRIS_IN_NAVEL_ROCK
+	setevent EVENT_KRIS_IN_NAVEL_ROCK
 	setflag ENGINE_ROCKET_SIGNAL_ON_CH20
 	setflag ENGINE_ROCKETS_IN_MAHOGANY
-	variablesprite SPRITE_WEIRD_TREE, SPRITE_SUDOWOODO
-	variablesprite SPRITE_OLIVINE_RIVAL, SPRITE_SILVER
-	variablesprite SPRITE_AZALEA_ROCKET, SPRITE_ROCKET
 	variablesprite SPRITE_FUCHSIA_GYM_1, SPRITE_JANINE
 	variablesprite SPRITE_FUCHSIA_GYM_2, SPRITE_JANINE
 	variablesprite SPRITE_FUCHSIA_GYM_3, SPRITE_JANINE
 	variablesprite SPRITE_FUCHSIA_GYM_4, SPRITE_JANINE
 	variablesprite SPRITE_COPYCAT, SPRITE_LASS
-	variablesprite SPRITE_JANINE_IMPERSONATOR, SPRITE_LASS
-	setevent EVENT_RETURNED_MACHINE_PART
-	setevent EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
-	setevent EVENT_ROUTE_24_ROCKET
-	setevent EVENT_RESTORED_POWER_TO_KANTO
-	setevent EVENT_GOT_TM07_ZAP_CANNON
-	setevent EVENT_COPYCATS_HOUSE_2F_DOLL
-	setevent EVENT_VIRIDIAN_GYM_BLUE
-	setevent EVENT_SEAFOAM_GYM_GYM_GUY
-	setevent EVENT_MT_MOON_SQUARE_CLEFAIRY
-	setevent EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
 	setevent EVENT_INITIALIZED_EVENTS
 	return
 
@@ -809,104 +887,83 @@ NumberAcceptedMScript:
 
 .Jack:
 	farwritetext JackNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Huey:
 	farwritetext HueyNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Gaven:
 	farwritetext GavenNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Jose:
 	farwritetext JoseNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Joey:
 	farwritetext JoeyNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Wade:
 	farwritetext WadeNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Ralph:
 	farwritetext RalphNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Anthony:
 	farwritetext AnthonyNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Todd:
 	farwritetext ToddNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Irwin:
 	farwritetext IrwinNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Arnie:
 	farwritetext ArnieNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Alan:
 	farwritetext AlanNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Chad:
 	farwritetext ChadNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Derek:
 	farwritetext DerekNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Tully:
 	farwritetext TullyNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Brent:
 	farwritetext BrentNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Vance:
 	farwritetext VanceNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Wilton:
 	farwritetext WiltonNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Kenji:
 	farwritetext KenjiNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Parry:
 	farwritetext ParryNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
 
 NumberDeclinedMScript:
 	checkcode VAR_CALLERID
@@ -933,104 +990,83 @@ NumberDeclinedMScript:
 
 .Jack:
 	farwritetext JackNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Huey:
 	farwritetext HueyNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Gaven:
 	farwritetext GavenNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Jose:
 	farwritetext JoseNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Joey:
 	farwritetext JoeyNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Wade:
 	farwritetext WadeNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Ralph:
 	farwritetext RalphNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Anthony:
 	farwritetext AnthonyNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Todd:
 	farwritetext ToddNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Irwin:
 	farwritetext IrwinNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Arnie:
 	farwritetext ArnieNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Alan:
 	farwritetext AlanNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Chad:
 	farwritetext ChadNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Derek:
 	farwritetext DerekNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Tully:
 	farwritetext TullyNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Brent:
 	farwritetext BrentNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Vance:
 	farwritetext VanceNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Wilton:
 	farwritetext WiltonNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Kenji:
 	farwritetext KenjiNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Parry:
 	farwritetext ParryNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
 
 PhoneFullMScript:
 	checkcode VAR_CALLERID
@@ -1057,104 +1093,83 @@ PhoneFullMScript:
 
 .Jack:
 	farwritetext JackPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Huey:
 	farwritetext HueyPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Gaven:
 	farwritetext GavenPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Jose:
 	farwritetext JosePhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Joey:
 	farwritetext JoeyPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Wade:
 	farwritetext WadePhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Ralph:
 	farwritetext RalphPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Anthony:
 	farwritetext AnthonyPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Todd:
 	farwritetext ToddPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Irwin:
 	farwritetext IrwinPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Arnie:
 	farwritetext ArniePhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Alan:
 	farwritetext AlanPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Chad:
 	farwritetext ChadPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Derek:
 	farwritetext DerekPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Tully:
 	farwritetext TullyPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Brent:
 	farwritetext BrentPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Vance:
 	farwritetext VancePhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Wilton:
 	farwritetext WiltonPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Kenji:
 	farwritetext KenjiPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Parry:
 	farwritetext ParryPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
 
 RematchMScript:
 	checkcode VAR_CALLERID
@@ -1178,89 +1193,71 @@ RematchMScript:
 
 .Jack:
 	farwritetext JackRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Huey:
 	farwritetext HueyRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Gaven:
 	farwritetext GavenRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Jose:
 	farwritetext JoseRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Joey:
 	farwritetext JoeyRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Wade:
 	farwritetext WadeRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Ralph:
 	farwritetext RalphRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Anthony:
 	farwritetext AnthonyRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Todd:
 	farwritetext ToddRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Arnie:
 	farwritetext ArnieRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Alan:
 	farwritetext AlanRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Chad:
 	farwritetext ChadRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Tully:
 	farwritetext TullyRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Brent:
 	farwritetext BrentRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Vance:
 	farwritetext VanceRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Wilton:
 	farwritetext WiltonRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Parry:
 	farwritetext ParryRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
 
 GiftMScript:
 	checkcode VAR_CALLERID
@@ -1317,59 +1314,47 @@ PackFullMScript:
 
 .Huey:
 	farwritetext HueyPackFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Jose:
 	farwritetext JosePackFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Joey:
 	farwritetext JoeyPackFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Wade:
 	farwritetext WadePackFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Alan:
 	farwritetext AlanPackFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Derek:
 	farwritetext DerekPackFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Tully:
 	farwritetext TullyPackFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Vance:
 	farwritetext VancePackFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Wilton:
 	farwritetext WiltonPackFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Kenji:
 	farwritetext KenjiPackFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Parry:
 	farwritetext ParryPackFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
 
 RematchGiftMScript:
 	opentext
@@ -1475,7 +1460,7 @@ RegisteredNumberFScript:
 	buttonsound
 	end
 
-NumberAcceptedFScript:
+NumberAcceptedFScript: ; 0xbcbd3
 	checkcode VAR_CALLERID
 	ifequal PHONE_POKEFAN_BEVERLY, .Beverly
 	ifequal PHONE_COOLTRAINERF_BETH, .Beth
@@ -1488,44 +1473,35 @@ NumberAcceptedFScript:
 
 .Beverly:
 	farwritetext BeverlyNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Beth:
 	farwritetext BethNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Reena:
 	farwritetext ReenaNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Liz:
 	farwritetext LizNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Gina:
 	farwritetext GinaNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Dana:
 	farwritetext DanaNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Tiffany:
 	farwritetext TiffanyNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Erin:
 	farwritetext ErinNumberAcceptedText
-	waitbutton
-	closetext
-	end
+	waitendtext
 
 NumberDeclinedFScript:
 	checkcode VAR_CALLERID
@@ -1540,44 +1516,35 @@ NumberDeclinedFScript:
 
 .Beverly:
 	farwritetext BeverlyNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Beth:
 	farwritetext BethNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Reena:
 	farwritetext ReenaNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Liz:
 	farwritetext LizNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Gina:
 	farwritetext GinaNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Dana:
 	farwritetext DanaNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Tiffany:
 	farwritetext TiffanyNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Erin:
 	farwritetext ErinNumberDeclinedText
-	waitbutton
-	closetext
-	end
+	waitendtext
 
 PhoneFullFScript:
 	checkcode VAR_CALLERID
@@ -1592,44 +1559,35 @@ PhoneFullFScript:
 
 .Beverly:
 	farwritetext BeverlyPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Beth:
 	farwritetext BethPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Reena:
 	farwritetext ReenaPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Liz:
 	farwritetext LizPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Gina:
 	farwritetext GinaPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Dana:
 	farwritetext DanaPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Tiffany:
 	farwritetext TiffanyPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Erin:
 	farwritetext ErinPhoneFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
 
 RematchFScript:
 	checkcode VAR_CALLERID
@@ -1643,39 +1601,31 @@ RematchFScript:
 
 .Beth:
 	farwritetext BethRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Reena:
 	farwritetext ReenaRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Liz:
 	farwritetext LizRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Gina:
 	farwritetext GinaRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Dana:
 	farwritetext DanaRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Tiffany:
 	farwritetext TiffanyRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Erin:
 	farwritetext ErinRematchText
-	waitbutton
-	closetext
-	end
+	waitendtext
 
 GiftFScript:
 	checkcode VAR_CALLERID
@@ -1711,29 +1661,23 @@ PackFullFScript:
 
 .Beverly:
 	farwritetext BeverlyPackFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Gina:
 	farwritetext GinaPackFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Dana:
 	farwritetext DanaPackFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Tiffany:
 	farwritetext TiffanyPackFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+
 .Erin:
 	farwritetext ErinPackFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
 
 RematchGiftFScript:
 	checkcode VAR_CALLERID
@@ -1745,39 +1689,45 @@ RematchGiftFScript:
 	buttonsound
 	end
 
-GymStatue1Script:
-	mapnametotext MEM_BUFFER_0
+GymStatue0Script:
+	mapnametotext $0
 	opentext
 	farwritetext GymStatue_CityGymText
-	waitbutton
-	closetext
-	end
+	waitendtext
 
-GymStatue2Script:
-	mapnametotext MEM_BUFFER_0
+GymStatue1Script:
+	mapnametotext $0
 	opentext
 	farwritetext GymStatue_CityGymText
 	buttonsound
 	farwritetext GymStatue_WinningTrainersText
-	waitbutton
-	closetext
-	end
+	waitendtext
 
-ReceiveItemScript:
+GymStatue2Script:
+	mapnametotext $0
+	opentext
+	farwritetext GymStatue_CityGymText
+	buttonsound
+	farwritetext GymStatue_TwoWinningTrainersText
+	waitendtext
+
+GymStatue3Script:
+	mapnametotext $0
+	opentext
+	farwritetext GymStatue_CityGymText
+	buttonsound
+	farwritetext GymStatue_ThreeWinningTrainersText
+	waitendtext
+
+ReceiveItemScript: ; 0xbcdb9
 	waitsfx
 	farwritetext ReceivedItemText
 	playsound SFX_ITEM
 	waitsfx
 	end
+; 0xbcdc3
 
-ReceiveTogepiEggScript:
-	waitsfx
-	farwritetext ReceivedItemText
-	playsound SFX_GET_EGG_FROM_DAY_CARE_LADY
-	waitsfx
-	end
-
-GameCornerCoinVendorScript:
+GameCornerCoinVendorScript: ; 0xbcdcd
 	faceplayer
 	opentext
 	farwritetext CoinVendor_WelcomeText
@@ -1785,78 +1735,80 @@ GameCornerCoinVendorScript:
 	checkitem COIN_CASE
 	iftrue CoinVendor_IntroScript
 	farwritetext CoinVendor_NoCoinCaseText
-	waitbutton
-	closetext
-	end
+	waitendtext
+; 0xbcde0
 
-CoinVendor_IntroScript:
+CoinVendor_IntroScript: ; 0xbcde0
 	farwritetext CoinVendor_IntroText
 
-.loop
-	special DisplayMoneyAndCoinBalance
-	loadmenu .MenuHeader
+.loop ; 0xbcde4
+	special Special_DisplayMoneyAndCoinBalance
+	loadmenu .MenuDataHeader
 	verticalmenu
 	closewindow
-	ifequal 1, .Buy50
-	ifequal 2, .Buy500
+	ifequal $1, .Buy50
+	ifequal $2, .Buy500
 	jump .Cancel
+; 0xbcdf7
 
-.Buy50:
-	checkcoins MAX_COINS - 50
-	ifequal HAVE_MORE, .CoinCaseFull
-	checkmoney YOUR_MONEY, 1000
-	ifequal HAVE_LESS, .NotEnoughMoney
+.Buy50: ; 0xbcdf7
+	checkcoins 49950
+	ifequal $0, .CoinCaseFull
+	checkmoney $0, 1000
+	ifequal $2, .NotEnoughMoney
 	givecoins 50
-	takemoney YOUR_MONEY, 1000
+	takemoney $0, 1000
 	waitsfx
 	playsound SFX_TRANSACTION
 	farwritetext CoinVendor_Buy50CoinsText
 	waitbutton
 	jump .loop
+; 0xbce1b
 
-.Buy500:
-	checkcoins MAX_COINS - 500
-	ifequal HAVE_MORE, .CoinCaseFull
-	checkmoney YOUR_MONEY, 10000
-	ifequal HAVE_LESS, .NotEnoughMoney
+.Buy500: ; 0xbce1b
+	checkcoins 49500
+	ifequal $0, .CoinCaseFull
+	checkmoney $0, 10000
+	ifequal $2, .NotEnoughMoney
 	givecoins 500
-	takemoney YOUR_MONEY, 10000
+	takemoney $0, 10000
 	waitsfx
 	playsound SFX_TRANSACTION
 	farwritetext CoinVendor_Buy500CoinsText
 	waitbutton
 	jump .loop
+; 0xbce3f
 
-.NotEnoughMoney:
+.NotEnoughMoney: ; 0xbce3f
 	farwritetext CoinVendor_NotEnoughMoneyText
-	waitbutton
-	closetext
-	end
+	waitendtext
+; 0xbce46
 
-.CoinCaseFull:
+.CoinCaseFull: ; 0xbce46
 	farwritetext CoinVendor_CoinCaseFullText
-	waitbutton
-	closetext
-	end
+	waitendtext
+; 0xbce4d
 
-.Cancel:
+.Cancel: ; 0xbce4d
 	farwritetext CoinVendor_CancelText
-	waitbutton
-	closetext
-	end
+	waitendtext
+; 0xbce54
 
-.MenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 4, 15, TEXTBOX_Y - 1
-	dw .MenuData
+.MenuDataHeader:
+	db $40 ; flags
+	db 04, 00 ; start coords
+	db 11, 15 ; end coords
+	dw .MenuData2
 	db 1 ; default option
 
-.MenuData:
-	db STATICMENU_CURSOR ; flags
+.MenuData2:
+	db $80 ; flags
 	db 3 ; items
 	db " 50 :  ¥1000@"
 	db "500 : ¥10000@"
-	db "CANCEL@"
+	db "Cancel@"
+; 0xbce7f
+
 
 HappinessCheckScript:
 	faceplayer
@@ -1865,24 +1817,162 @@ HappinessCheckScript:
 	ifless 50, .Unhappy
 	ifless 150, .KindaHappy
 	farwritetext HappinessText3
-	waitbutton
-	closetext
-	end
+	waitendtext
 
 .KindaHappy:
 	farwritetext HappinessText2
-	waitbutton
-	closetext
-	end
+	waitendtext
 
 .Unhappy:
 	farwritetext HappinessText1
-	waitbutton
-	closetext
+	waitendtext
+
+Movement_ContestResults_WalkAfterWarp: ; bcea1
+	step_right
+	step_down
+	turn_head_up
+	step_end
+; bcea5
+
+CutTreeScript:
+	farjump AskCutTreeScript
+
+VendingMachineScript:
+	opentext
+	farwritetext VendingMachineText
+.Start:
+	special PlaceMoneyTopRight
+	loadmenu .MenuData
+	verticalmenu
+	closewindow
+	ifequal $1, .FreshWater
+	ifequal $2, .SodaPop
+	ifequal $3, .Lemonade
+	endtext
+
+.FreshWater:
+	checkmoney $0, 200
+	ifequal $2, .NotEnoughMoney
+	giveitem FRESH_WATER
+	iffalse .NotEnoughSpace
+	takemoney $0, 200
+	itemtotext FRESH_WATER, $0
+	scall .VendItem
+	random $20
+	ifnotequal $0, .Start
+	giveitem FRESH_WATER
+	iffalse .Start
+	itemtotext FRESH_WATER, $0
+	jump .ExtraItem
+
+.SodaPop:
+	checkmoney $0, 300
+	ifequal $2, .NotEnoughMoney
+	giveitem SODA_POP
+	iffalse .NotEnoughSpace
+	takemoney $0, 300
+	itemtotext SODA_POP, $0
+	scall .VendItem
+	random $20
+	ifnotequal $0, .Start
+	giveitem SODA_POP
+	iffalse .Start
+	itemtotext SODA_POP, $0
+	jump .ExtraItem
+
+.Lemonade:
+	checkmoney $0, 350
+	ifequal $2, .NotEnoughMoney
+	giveitem LEMONADE
+	iffalse .NotEnoughSpace
+	takemoney $0, 350
+	itemtotext LEMONADE, $0
+	scall .VendItem
+	random $20
+	ifnotequal $0, .Start
+	giveitem LEMONADE
+	iffalse .Start
+	itemtotext LEMONADE, $0
+	jump .ExtraItem
+
+.VendItem:
+	pause 10
+	playsound SFX_ENTER_DOOR
+	farwritetext VendingMachineClangText
+	buttonsound
+	itemnotify
 	end
 
-Movement_ContestResults_WalkAfterWarp:
-	step RIGHT
-	step DOWN
-	turn_head UP
-	step_end
+.ExtraItem:
+	pause 10
+	playsound SFX_ENTER_DOOR
+	farwritetext VendingMachineScoreText
+	buttonsound
+	itemnotify
+	jump .Start
+
+.NotEnoughMoney:
+	farwritetext VendingMachineNoMoneyText
+	waitbutton
+	jump .Start
+
+.NotEnoughSpace:
+	farwritetext VendingMachineNoSpaceText
+	waitbutton
+	jump .Start
+
+.MenuData:
+	db $40 ; flags
+	db 02, 00 ; start coords
+	db 11, 19 ; end coords
+	dw .MenuData2
+	db 1 ; default option
+
+.MenuData2:
+	db $80 ; flags
+	db 4 ; items
+	db "Fresh Water  ¥200@"
+	db "Soda Pop     ¥300@"
+	db "Lemonade     ¥350@"
+	db "Cancel@"
+
+TreeGrottoScript:
+	scall _HiddenGrottoInitScript
+	iffalse_endtext
+	closetext
+	playsound SFX_EXIT_BUILDING
+	special FadeOutPalettes
+	pause 15
+	callasm _HiddenGrottoBackupMap
+	warpfacing UP, HIDDEN_TREE_GROTTO, 4, 15
+	end
+
+CaveGrottoScript:
+	scall _HiddenGrottoInitScript
+	iffalse_endtext
+	closetext
+	playsound SFX_EXIT_BUILDING
+	special FadeOutPalettes
+	pause 15
+	callasm _HiddenGrottoBackupMap
+	warpfacing UP, HIDDEN_CAVE_GROTTO, 35, 85
+	end
+
+_HiddenGrottoInitScript:
+	callasm .StoreCurHiddenGrotto
+	opentext
+	farwritetext HiddenGrottoText
+	yesorno
+	end
+
+.StoreCurHiddenGrotto:
+	ld a, [wScriptVar]
+	ld [wCurHiddenGrotto], a
+	ret
+
+_HiddenGrottoBackupMap:
+	ld a, [wMapGroup]
+	ld [wBackupMapGroup], a
+	ld a, [wMapNumber]
+	ld [wBackupMapNumber], a
+	ret

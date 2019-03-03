@@ -1,10 +1,11 @@
-Music_BurnedTower:
+Music_BurnedTower: ; f6a99
 	musicheader 4, 1, Music_BurnedTower_Ch1
 	musicheader 1, 2, Music_BurnedTower_Ch2
 	musicheader 1, 3, Music_BurnedTower_Ch3
 	musicheader 1, 4, Music_BurnedTower_Ch4
+; f6aa5
 
-Music_BurnedTower_Ch1:
+Music_BurnedTower_Ch1: ; f6aa5
 	tempo 168
 	volume $77
 	dutycycle $1
@@ -26,7 +27,7 @@ Music_BurnedTower_Ch1:
 	note D_, 2
 	intensity $80
 	note C#, 6
-Music_BurnedTower_branch_f6ac8:
+Music_BurnedTower_branch_f6ac8: ; f6ac8
 	intensity $91
 	octave 2
 	note A_, 4
@@ -36,7 +37,7 @@ Music_BurnedTower_branch_f6ac8:
 	note A#, 6
 	loopchannel 2, Music_BurnedTower_branch_f6ac8
 	tempo 150
-Music_BurnedTower_branch_f6ad8:
+Music_BurnedTower_branch_f6ad8: ; f6ad8
 	intensity $b1
 	octave 2
 	note A_, 4
@@ -86,7 +87,7 @@ Music_BurnedTower_branch_f6ad8:
 	note E_, 2
 	intensity $a0
 	note D#, 6
-Music_BurnedTower_branch_f6b17:
+Music_BurnedTower_branch_f6b17: ; f6b17
 	intensity $b1
 	octave 2
 	note B_, 4
@@ -97,15 +98,16 @@ Music_BurnedTower_branch_f6b17:
 	note C_, 6
 	loopchannel 2, Music_BurnedTower_branch_f6b17
 	loopchannel 0, Music_BurnedTower_branch_f6ad8
+; f6b29
 
-Music_BurnedTower_Ch2:
+Music_BurnedTower_Ch2: ; f6b29
 	dutycycle $2
 	vibrato $20, $82
 	tone $0002
 	notetype $c, $70
 	callchannel Music_BurnedTower_branch_f6b8e
 	intensity $c5
-Music_BurnedTower_branch_f6b39:
+Music_BurnedTower_branch_f6b39: ; f6b39
 	callchannel Music_BurnedTower_branch_f6b8e
 	intensity $c1
 	dutycycle $3
@@ -168,8 +170,9 @@ Music_BurnedTower_branch_f6b39:
 	intensity $b7
 	note F#, 16
 	loopchannel 0, Music_BurnedTower_branch_f6b39
+; f6b8e
 
-Music_BurnedTower_branch_f6b8e:
+Music_BurnedTower_branch_f6b8e: ; f6b8e
 	octave 3
 	note E_, 4
 	note D_, 2
@@ -190,8 +193,9 @@ Music_BurnedTower_branch_f6b8e:
 	note D_, 4
 	note E_, 16
 	endchannel
+; f6ba2
 
-Music_BurnedTower_Ch3:
+Music_BurnedTower_Ch3: ; f6ba2
 	stereopanning $f
 	notetype $c, $14
 	note __, 16
@@ -200,7 +204,7 @@ Music_BurnedTower_Ch3:
 	note __, 12
 	octave 3
 	note D#, 4
-Music_BurnedTower_branch_f6bad:
+Music_BurnedTower_branch_f6bad: ; f6bad
 	octave 2
 	note A_, 2
 	octave 3
@@ -220,7 +224,7 @@ Music_BurnedTower_branch_f6bad:
 	note E_, 2
 	note D#, 4
 	loopchannel 4, Music_BurnedTower_branch_f6bad
-Music_BurnedTower_branch_f6bc3:
+Music_BurnedTower_branch_f6bc3: ; f6bc3
 	octave 2
 	note B_, 2
 	octave 3
@@ -241,15 +245,16 @@ Music_BurnedTower_branch_f6bc3:
 	note F_, 4
 	loopchannel 2, Music_BurnedTower_branch_f6bc3
 	loopchannel 0, Music_BurnedTower_branch_f6bad
+; f6bdd
 
-Music_BurnedTower_Ch4:
+Music_BurnedTower_Ch4: ; f6bdd
 	togglenoise $0
 	notetype $c
-Music_BurnedTower_branch_f6be1:
+Music_BurnedTower_branch_f6be1: ; f6be1
 	note __, 16
 	loopchannel 4, Music_BurnedTower_branch_f6be1
 	note __, 2
-Music_BurnedTower_branch_f6be7:
+Music_BurnedTower_branch_f6be7: ; f6be7
 	stereopanning $f0
 	note G_, 2
 	note G#, 2
@@ -257,3 +262,4 @@ Music_BurnedTower_branch_f6be7:
 	note G#, 2
 	note G_, 4
 	loopchannel 0, Music_BurnedTower_branch_f6be7
+; f6bf2

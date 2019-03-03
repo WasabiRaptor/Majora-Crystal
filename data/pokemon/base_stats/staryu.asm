@@ -1,21 +1,23 @@
-	db STARYU ; 120
-
 	db  30,  45,  55,  85,  70,  55
-    evs  0,   0,   0,   1,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db WATER, WATER ; type
+	db WATER, WATER
 	db 225 ; catch rate
 	db 106 ; base exp
-	db STARDUST, STAR_PIECE ; items
-	db GENDER_UNKNOWN ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/staryu/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_SLOW ; growth rate
-	dn EGG_WATER_3, EGG_WATER_3 ; egg groups
+	db STARDUST ; item 1
+	db STAR_PIECE ; item 2
+	dn GENDERLESS, 3 ; gender, step cycles to hatch
+	dn 6, 6 ; frontpic dimensions
+	db ILLUMINATE ; ability 1
+	db NATURAL_CURE ; ability 2
+	db ANALYTIC ; hidden ability
+	db SLOW ; growth rate
+	dn INVERTEBRATE, INVERTEBRATE ; egg groups
 
-	; tm/hm learnset
-	tmhm CURSE, TOXIC, ZAP_CANNON, PSYCH_UP, HIDDEN_POWER, SNORE, BLIZZARD, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, THUNDER, RETURN, PSYCHIC_M, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, REST, ATTRACT, SURF, FLASH, WHIRLPOOL, WATERFALL, THUNDERBOLT, ICE_BEAM
+	; ev_yield
+	ev_yield   0,   0,   0,   1,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, CALM_MIND, TOXIC, HAIL, HIDDEN_POWER, ICE_BEAM, BLIZZARD, LIGHT_SCREEN, PROTECT, RAIN_DANCE, THUNDERBOLT, THUNDER, RETURN, PSYCHIC, DOUBLE_TEAM, REFLECT, FLASH_CANNON, SWIFT, SUBSTITUTE, FACADE, REST, ATTRACT, DAZZLINGLEAM, SCALD, ENDURE, WATER_PULSE, FLASH, THUNDER_WAVE, GYRO_BALL, SURF, WHIRLPOOL, WATERFALL, DOUBLE_EDGE, ICY_WIND, ROLLOUT, SLEEP_TALK, SWAGGER, ZAP_CANNON
 	; end

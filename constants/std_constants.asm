@@ -1,5 +1,3 @@
-; StdScripts indexes (see engine/events/std_scripts.asm)
-; also used in TileCollisionStdScripts (see data/events/collision_stdscripts.asm)
 	enum_start
 	enum pokecenternurse
 	enum difficultbookshelf
@@ -11,7 +9,6 @@
 	enum townmap
 	enum window
 	enum tv
-	enum homepage
 	enum radio1
 	enum radio2
 	enum trashcan
@@ -46,10 +43,18 @@
 	enum giftf
 	enum packfullf
 	enum rematchgiftf
+	enum gymstatue0
 	enum gymstatue1
 	enum gymstatue2
+	enum gymstatue3
 	enum receiveitem
-	enum receivetogepiegg
 	enum pcscript
 	enum gamecornercoinvendor
 	enum happinesschecknpc
+	enum cuttree
+	enum refrigerator
+	enum sink
+	enum stove
+	enum vendingmachine
+	enum treegrotto
+	enum cavegrotto

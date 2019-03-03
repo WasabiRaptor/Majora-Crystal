@@ -1,15 +1,16 @@
-Music_PalletTown:
+Music_PalletTown: ; f4b0c
 	musicheader 3, 1, Music_PalletTown_Ch1
 	musicheader 1, 2, Music_PalletTown_Ch2
 	musicheader 1, 3, Music_PalletTown_Ch3
+; f4b15
 
-Music_PalletTown_Ch1:
+Music_PalletTown_Ch1: ; f4b15
 	tempo 188
 	volume $77
 	vibrato $12, $24
 	tone $0001
 	stereopanning $f
-Music_PalletTown_branch_f4b22:
+Music_PalletTown_branch_f4b22: ; f4b22
 	dutycycle $2
 	notetype $c, $78
 	octave 3
@@ -59,7 +60,7 @@ Music_PalletTown_branch_f4b22:
 	note B_, 8
 	intensity $77
 	note B_, 8
-Music_PalletTown_branch_f4b59:
+Music_PalletTown_branch_f4b59: ; f4b59
 	dutycycle $3
 	intensity $92
 	note G_, 2
@@ -117,12 +118,13 @@ Music_PalletTown_branch_f4b59:
 	intensity $1f
 	note F#, 8
 	loopchannel 0, Music_PalletTown_branch_f4b22
+; f4ba1
 
-Music_PalletTown_Ch2:
+Music_PalletTown_Ch2: ; f4ba1
 	vibrato $12, $44
 	dutycycle $2
 	stereopanning $f0
-Music_PalletTown_branch_f4ba8:
+Music_PalletTown_branch_f4ba8: ; f4ba8
 	notetype $c, $88
 	octave 1
 	note G_, 2
@@ -182,7 +184,7 @@ Music_PalletTown_branch_f4ba8:
 	octave 3
 	note C_, 2
 	note D_, 2
-Music_PalletTown_branch_f4be5:
+Music_PalletTown_branch_f4be5: ; f4be5
 	intensity $a2
 	octave 3
 	note E_, 2
@@ -242,10 +244,11 @@ Music_PalletTown_branch_f4be5:
 	note B_, 2
 	note A_, 2
 	loopchannel 0, Music_PalletTown_branch_f4ba8
+; f4c2a
 
-Music_PalletTown_Ch3:
+Music_PalletTown_Ch3: ; f4c2a
 	vibrato $14, $24
-Music_PalletTown_branch_f4c2d:
+Music_PalletTown_branch_f4c2d: ; f4c2d
 	notetype $c, $10
 	octave 6
 	note D_, 2
@@ -355,3 +358,4 @@ Music_PalletTown_branch_f4c2d:
 	note B_, 8
 	note A_, 8
 	loopchannel 0, Music_PalletTown_branch_f4c2d
+; f4c9f

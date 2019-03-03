@@ -5,7 +5,7 @@ JoeyAskNumber1Text:
 	para "I'll ring you for"
 	line "some battles."
 
-	para "I'm a rookie too, "
+	para "I'm a rookie too,"
 	line "so I think it'd be"
 	cont "a good motivator."
 	done
@@ -39,6 +39,31 @@ JoeyPhoneFullText:
 	line "phone's full."
 	done
 
+JoeyTopPercentageText:
+	text "Hey, do you remem-"
+	line "ber my super-cool"
+	cont "@"
+	text_from_ram wStringBuffer4
+	text "?"
+
+	para "My @"
+	text_from_ram wStringBuffer4
+	text " is"
+	line "different from"
+	cont "regular @"
+	text_from_ram wStringBuffer4
+	text "."
+
+	para "It's in the top"
+	line "percentage of"
+	cont "@"
+	text_from_ram wStringBuffer4
+	text "."
+
+	para "Do you know what"
+	line "I'm saying?"
+	done
+
 JoeyRematchText:
 	text "I've been waiting!"
 	line "Let's battle now!"
@@ -46,7 +71,7 @@ JoeyRematchText:
 
 JoeyPackFullText:
 	text "Hey, wait! Your"
-	line "PACK is stuffed!"
+	line "Bag is stuffed!"
 
 	para "Well, we'll leave"
 	line "it till next time."
@@ -63,7 +88,7 @@ JoeyRematchGiftText:
 	line "often actually"
 	cont "feels good now!"
 
-	para "Here, take this. "
+	para "Here, take this."
 	line "Use it to get even"
 
 	para "tougher. That will"

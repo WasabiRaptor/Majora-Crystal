@@ -1,21 +1,23 @@
-	db GRANBULL ; 210
-
 	db  90, 120,  75,  45,  60,  60
-    evs  0,   2,   0,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db FAIRY, FAIRY ; type
+	db FAIRY, FAIRY
 	db 75 ; catch rate
 	db 178 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F75 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/granbull/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_FAST ; growth rate
-	dn EGG_GROUND, EGG_FAIRY ; egg groups
+	db NO_ITEM ; item 1
+	db NO_ITEM ; item 2
+	dn FEMALE_75, 3 ; gender, step cycles to hatch
+	dn 6, 6 ; frontpic dimensions
+	db INTIMIDATE ; ability 1
+	db QUICK_FEET ; ability 2
+	db RATTLED ; hidden ability
+	db FAST ; growth rate
+	dn FIELD, FAERY ; egg groups
 
-	; tm/hm learnset
-	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, ROAR, TOXIC, ZAP_CANNON, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, THUNDER, RETURN, SHADOW_BALL, MUD_SLAP, DOUBLE_TEAM, ICE_PUNCH, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, DEFENSE_CURL, THUNDERPUNCH, REST, ATTRACT, THIEF, FIRE_PUNCH, STRENGTH, THUNDERBOLT
+	; ev_yield
+	ev_yield   0,   2,   0,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm DYNAMICPUNCH, CURSE, ROAR, TOXIC, BULK_UP, HIDDEN_POWER, SUNNY_DAY, HYPER_BEAM, PROTECT, RAIN_DANCE, BULLDOZE, SOLAR_BEAM, IRON_TAIL, THUNDERBOLT, THUNDER, EARTHQUAKE, RETURN, DIG, SHADOW_BALL, DOUBLE_TEAM, REFLECT, FLAMETHROWER, SLUDGE_BOMB, FIRE_BLAST, SUBSTITUTE, FACADE, WILD_CHARGE, REST, ATTRACT, THIEF, ROCK_SLIDE, DAZZLINGLEAM, ROCK_SMASH, FOCUS_BLAST, ENDURE, WATER_PULSE, GIGA_IMPACT, STONE_EDGE, THUNDER_WAVE, STRENGTH, BODY_SLAM, COUNTER, DEFENSE_CURL, DOUBLE_EDGE, FIRE_PUNCH, HEADBUTT, HYPER_VOICE, ICE_PUNCH, SEISMIC_TOSS, SLEEP_TALK, SWAGGER, THUNDERPUNCH, ZAP_CANNON
 	; end

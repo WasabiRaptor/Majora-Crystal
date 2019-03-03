@@ -1,4 +1,4 @@
-Fish:
+Fish: ; 92402
 ; Using a fishing rod.
 ; Fish for monsters with rod e in encounter group d.
 ; Return monster e at level d.
@@ -11,7 +11,7 @@ Fish:
 	call GetFishGroupIndex
 
 	ld hl, FishGroups
-rept FISHGROUP_DATA_LENGTH
+rept 8 ; size of dbbwww
 	add hl, de
 endr
 	call .Fish
@@ -20,19 +20,38 @@ endr
 	pop bc
 	pop af
 	ret
+; 9241a
 
-.Fish:
+
+.Fish: ; 9241a
 ; Fish for monsters with rod b from encounter data in FishGroup at hl.
-; Return monster e at level d.
+; Return monster e at level d; or item e if d = 0; or nothing if de = 0.
 
 	call Random
 	cp [hl]
+	jr c, .bite
+	inc hl
+	cp [hl]
 	jr nc, .no_bite
 
+	; Get item by rod
+	; 0: Old
+	; 1: Good
+	; 2: Super
+	ld hl, FishItems
+	ld e, b
+	ld d, 0
+	add hl, de
+	ld a, [hl]
+	ld e, a
+	ret
+
+.bite
 	; Get encounter data by rod:
 	; 0: Old
 	; 1: Good
 	; 2: Super
+	inc hl
 	inc hl
 	ld e, b
 	ld d, 0
@@ -78,8 +97,8 @@ rept 4
 endr
 
 	ld a, [wTimeOfDay]
-	maskbits NUM_DAYTIMES
-	cp NITE_F
+	and 3
+	cp NITE
 	jr c, .time_species
 	inc hl
 	inc hl
@@ -88,13 +107,15 @@ endr
 	ld d, [hl]
 	inc hl
 	ret
+; 9245b
 
-GetFishGroupIndex:
+
+GetFishGroupIndex: ; 9245b
 ; Return the index of fishgroup d in de.
 
 	push hl
-	ld hl, wDailyFlags1
-	bit DAILYFLAGS1_FISH_SWARM_F, [hl]
+	ld hl, wDailyFlags
+	bit 2, [hl] ; ENGINE_SPECIAL_WILDDATA
 	pop hl
 	jr z, .done
 
@@ -123,5 +144,7 @@ GetFishGroupIndex:
 	jr nz, .done
 	ld d, FISHGROUP_REMORAID_SWARM
 	jr .done
+; 92488
+
 
 INCLUDE "data/wild/fish.asm"

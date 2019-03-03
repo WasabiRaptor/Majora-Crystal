@@ -1,22 +1,23 @@
-Music_UnionCave:
+Music_UnionCave: ; f5c60
 	musicheader 4, 1, Music_UnionCave_Ch1
 	musicheader 1, 2, Music_UnionCave_Ch2
 	musicheader 1, 3, Music_UnionCave_Ch3
 	musicheader 1, 4, Music_UnionCave_Ch4
+; f5c6c
 
-Music_UnionCave_Ch1:
+Music_UnionCave_Ch1: ; f5c6c
 	tempo 160
 	volume $77
 	dutycycle $1
 	tone $0002
 	vibrato $18, $34
 	stereopanning $f
-Music_UnionCave_branch_f5c7b:
+Music_UnionCave_branch_f5c7b: ; f5c7b
 	notetype $c, $b3
-Music_UnionCave_branch_f5c7e:
+Music_UnionCave_branch_f5c7e: ; f5c7e
 	callchannel Music_UnionCave_branch_f5ccf
 	loopchannel 4, Music_UnionCave_branch_f5c7e
-Music_UnionCave_branch_f5c85:
+Music_UnionCave_branch_f5c85: ; f5c85
 	octave 2
 	note G#, 2
 	octave 3
@@ -26,7 +27,7 @@ Music_UnionCave_branch_f5c85:
 	note E_, 2
 	note F_, 4
 	loopchannel 8, Music_UnionCave_branch_f5c85
-Music_UnionCave_branch_f5c91:
+Music_UnionCave_branch_f5c91: ; f5c91
 	octave 2
 	note A_, 2
 	octave 3
@@ -63,19 +64,21 @@ Music_UnionCave_branch_f5c91:
 	callchannel Music_UnionCave_branch_f5ccf
 	tone $0002
 	loopchannel 0, Music_UnionCave_branch_f5c7b
+; f5ccf
 
-Music_UnionCave_branch_f5ccf:
+Music_UnionCave_branch_f5ccf: ; f5ccf
 	octave 2
 	note G#, 2
 	octave 3
 	note C#, 2
 	note E_, 12
 	endchannel
+; f5cd5
 
-Music_UnionCave_Ch2:
+Music_UnionCave_Ch2: ; f5cd5
 	dutycycle $3
 	vibrato $8, $24
-Music_UnionCave_branch_f5cda:
+Music_UnionCave_branch_f5cda: ; f5cda
 	notetype $c, $c4
 	callchannel Music_UnionCave_branch_f5d34
 	intensity $c5
@@ -132,8 +135,9 @@ Music_UnionCave_branch_f5cda:
 	callchannel Music_UnionCave_branch_f5d52
 	vibrato $8, $24
 	loopchannel 0, Music_UnionCave_branch_f5cda
+; f5d34
 
-Music_UnionCave_branch_f5d34:
+Music_UnionCave_branch_f5d34: ; f5d34
 	octave 4
 	note C_, 4
 	octave 3
@@ -164,25 +168,27 @@ Music_UnionCave_branch_f5d34:
 	note C#, 4
 	note C_, 4
 	endchannel
+; f5d52
 
-Music_UnionCave_branch_f5d52:
+Music_UnionCave_branch_f5d52: ; f5d52
 	octave 2
 	note G#, 2
 	octave 3
 	note C#, 2
 	note E_, 12
 	endchannel
+; f5d58
 
-Music_UnionCave_Ch3:
+Music_UnionCave_Ch3: ; f5d58
 	notetype $c, $16
 	stereopanning $f0
-Music_UnionCave_branch_f5d5d:
+Music_UnionCave_branch_f5d5d: ; f5d5d
 	note __, 16
 	loopchannel 7, Music_UnionCave_branch_f5d5d
 	note __, 14
 	octave 4
 	note C_, 2
-Music_UnionCave_branch_f5d65:
+Music_UnionCave_branch_f5d65: ; f5d65
 	note __, 2
 	octave 3
 	note E_, 2
@@ -194,7 +200,7 @@ Music_UnionCave_branch_f5d65:
 	octave 4
 	note C_, 2
 	loopchannel 4, Music_UnionCave_branch_f5d65
-Music_UnionCave_branch_f5d73:
+Music_UnionCave_branch_f5d73: ; f5d73
 	note __, 2
 	octave 3
 	note F_, 2
@@ -218,7 +224,7 @@ Music_UnionCave_branch_f5d73:
 	octave 3
 	note B_, 8
 	note A#, 8
-Music_UnionCave_branch_f5d8d:
+Music_UnionCave_branch_f5d8d: ; f5d8d
 	note A_, 4
 	note G_, 4
 	note A#, 2
@@ -231,15 +237,16 @@ Music_UnionCave_branch_f5d8d:
 	note A_, 4
 	note G_, 4
 	note A#, 8
-Music_UnionCave_branch_f5d9c:
+Music_UnionCave_branch_f5d9c: ; f5d9c
 	note __, 16
 	loopchannel 4, Music_UnionCave_branch_f5d9c
 	loopchannel 0, Music_UnionCave_branch_f5d5d
+; f5da5
 
-Music_UnionCave_Ch4:
+Music_UnionCave_Ch4: ; f5da5
 	togglenoise $1
 	notetype $c
-Music_UnionCave_branch_f5da9:
+Music_UnionCave_branch_f5da9: ; f5da9
 	stereopanning $f0
 	note E_, 4
 	stereopanning $ff
@@ -255,4 +262,4 @@ Music_UnionCave_branch_f5da9:
 	note G#, 4
 	note __, 8
 	loopchannel 0, Music_UnionCave_branch_f5da9
-	loopchannel 0, Music_UnionCave_branch_f5da9 ; unused
+; f5dc5

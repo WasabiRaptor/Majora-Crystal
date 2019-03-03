@@ -1,17 +1,18 @@
-Music_Gym:
+Music_Gym: ; f48ae
 	musicheader 4, 1, Music_Gym_Ch1
 	musicheader 1, 2, Music_Gym_Ch2
 	musicheader 1, 3, Music_Gym_Ch3
 	musicheader 1, 4, Music_Gym_Ch4
+; f48ba
 
-Music_Gym_Ch1:
+Music_Gym_Ch1: ; f48ba
 	tempo 156
 	volume $77
 	stereopanning $f
 	vibrato $12, $24
 	dutycycle $1
 	notetype $c, $b7
-Music_Gym_branch_f48c9:
+Music_Gym_branch_f48c9: ; f48c9
 	octave 4
 	note F#, 2
 	octave 2
@@ -188,11 +189,12 @@ Music_Gym_branch_f48c9:
 	note F#, 1
 	note E_, 1
 	loopchannel 0, Music_Gym_branch_f48c9
+; f497c
 
-Music_Gym_Ch2:
+Music_Gym_Ch2: ; f497c
 	dutycycle $1
 	stereopanning $f0
-Music_Gym_branch_f4980:
+Music_Gym_branch_f4980: ; f4980
 	notetype $c, $c3
 	octave 2
 	note D_, 2
@@ -284,8 +286,9 @@ Music_Gym_branch_f4980:
 	note F#, 2
 	note D_, 2
 	loopchannel 0, Music_Gym_branch_f4980
+; f49e9
 
-Music_Gym_branch_f49e9:
+Music_Gym_branch_f49e9: ; f49e9
 	octave 3
 	note D_, 3
 	octave 2
@@ -330,8 +333,9 @@ Music_Gym_branch_f49e9:
 	note C_, 1
 	note C_, 2
 	endchannel
+; f4a15
 
-Music_Gym_branch_f4a15:
+Music_Gym_branch_f4a15: ; f4a15
 	octave 2
 	note D_, 4
 	note D_, 2
@@ -366,11 +370,12 @@ Music_Gym_branch_f4a15:
 	note F#, 1
 	note F#, 1
 	endchannel
+; f4a37
 
-Music_Gym_Ch3:
+Music_Gym_Ch3: ; f4a37
 	vibrato $14, $23
 	stereopanning $ff
-Music_Gym_branch_f4a3c:
+Music_Gym_branch_f4a3c: ; f4a3c
 	notetype $c, $14
 	octave 6
 	note D_, 2
@@ -480,8 +485,9 @@ Music_Gym_branch_f4a3c:
 	note F#, 8
 	note E_, 4
 	loopchannel 0, Music_Gym_branch_f4a3c
+; f4ab3
 
-Music_Gym_branch_f4ab3:
+Music_Gym_branch_f4ab3: ; f4ab3
 	octave 5
 	note A_, 6
 	octave 6
@@ -500,10 +506,11 @@ Music_Gym_branch_f4ab3:
 	note G_, 1
 	note A_, 4
 	endchannel
+; f4ac5
 
-Music_Gym_Ch4:
+Music_Gym_Ch4: ; f4ac5
 	togglenoise $4
-Music_Gym_branch_f4ac7:
+Music_Gym_branch_f4ac7: ; f4ac7
 	notetype $c
 	note D_, 2
 	note C#, 1
@@ -528,7 +535,7 @@ Music_Gym_branch_f4ac7:
 	note D_, 1
 	note D_, 1
 	notetype $6
-Music_Gym_branch_f4ae1:
+Music_Gym_branch_f4ae1: ; f4ae1
 	note D_, 6
 	note D_, 6
 	note D_, 4
@@ -551,7 +558,7 @@ Music_Gym_branch_f4ae1:
 	note D_, 4
 	note B_, 8
 	loopchannel 4, Music_Gym_branch_f4ae1
-Music_Gym_branch_f4afa:
+Music_Gym_branch_f4afa: ; f4afa
 	note D#, 4
 	note F#, 4
 	note D_, 4
@@ -564,3 +571,4 @@ Music_Gym_branch_f4afa:
 	note F#, 4
 	loopchannel 8, Music_Gym_branch_f4afa
 	loopchannel 0, Music_Gym_branch_f4ac7
+; f4b0c

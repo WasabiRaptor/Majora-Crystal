@@ -1,9 +1,10 @@
-Cosine::
-; a = d * cos(a * pi/32)
-	add %010000 ; cos(x) = sin(x + pi/2)
-	; fallthrough
-Sine::
-; a = d * sin(a * pi/32)
+Cosine:: ; 1b0f
+; Return d * cos(a) in hl
+	add $10 ; 90 degrees
+
+Sine:: ; 1b11
+; Return d * sin(a) in hl
+; a is a signed 6-bit value.
 	ld e, a
-	homecall _Sine
-	ret
+	farjp _Sine
+; 1b1e

@@ -1,21 +1,28 @@
-	db POLIWRATH ; 062
-
-	db  90,  85,  95,  70,  70,  90
-    evs  0,   0,   3,   0,   0,   0
+if DEF(FAITHFUL)
+	db  90,  95,  95,  70,  70,  90
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  90,  95, 100,  70,  70,  90
+	;   hp  atk  def  spd  sat  sdf
+endc
 
-	db WATER, FIGHTING ; type
+	db WATER, FIGHTING
 	db 45 ; catch rate
 	db 185 ; base exp
-	db NO_ITEM, KINGS_ROCK ; items
-	db GENDER_F50 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/poliwrath/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_WATER_1, EGG_WATER_1 ; egg groups
+	db NO_ITEM ; item 1
+	db KINGS_ROCK ; item 2
+	dn FEMALE_50, 3 ; gender, step cycles to hatch
+	dn 7, 7 ; frontpic dimensions
+	db WATER_ABSORB ; ability 1
+	db DAMP ; ability 2
+	db SWIFT_SWIM ; hidden ability
+	db MEDIUM_SLOW ; growth rate
+	dn AMPHIBIAN, AMPHIBIAN ; egg groups
 
-	; tm/hm learnset
-	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, TOXIC, ROCK_SMASH, HIDDEN_POWER, SNORE, BLIZZARD, HYPER_BEAM, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, EARTHQUAKE, RETURN, PSYCHIC_M, MUD_SLAP, DOUBLE_TEAM, ICE_PUNCH, SWAGGER, SLEEP_TALK, DEFENSE_CURL, REST, ATTRACT, THIEF, SURF, STRENGTH, WHIRLPOOL, WATERFALL, ICE_BEAM
+	; ev_yield
+	ev_yield   0,   0,   3,   0,   0,   0
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm DYNAMICPUNCH, CURSE, TOXIC, HAIL, BULK_UP, HIDDEN_POWER, ICE_BEAM, BLIZZARD, HYPER_BEAM, PROTECT, RAIN_DANCE, BULLDOZE, EARTHQUAKE, RETURN, DIG, PSYCHIC, DOUBLE_TEAM, SUBSTITUTE, FACADE, REST, ATTRACT, THIEF, ROCK_SLIDE, ROCK_SMASH, FOCUS_BLAST, SCALD, ENDURE, WATER_PULSE, POISON_JAB, GIGA_IMPACT, SURF, STRENGTH, WHIRLPOOL, WATERFALL, BODY_SLAM, COUNTER, DEFENSE_CURL, DOUBLE_EDGE, EARTH_POWER, HEADBUTT, ICE_PUNCH, ICY_WIND, SEISMIC_TOSS, SLEEP_TALK, SWAGGER
 	; end

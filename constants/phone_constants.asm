@@ -1,14 +1,13 @@
-; PhoneContacts indexes (see data/phone/phone_contacts.asm)
 	const_def
 	const PHONE_00
 	const PHONE_MOM
 	const PHONE_OAK
 	const PHONE_BILL
 	const PHONE_ELM
+	const PHONE_LYRA
 	const PHONE_SCHOOLBOY_JACK
 	const PHONE_POKEFAN_BEVERLY
 	const PHONE_SAILOR_HUEY
-	const PHONE_08
 	const PHONE_09
 	const PHONE_0A
 	const PHONE_COOLTRAINERM_GAVEN
@@ -39,7 +38,6 @@
 	const PHONE_PICNICKER_ERIN
 	const PHONE_BUENA
 
-; SpecialPhoneCallList indexes (see data/phone/special_calls.asm)
 	const_def
 	const SPECIALCALL_NONE
 	const SPECIALCALL_POKERUS
@@ -50,8 +48,11 @@
 	const SPECIALCALL_BIKESHOP
 	const SPECIALCALL_WORRIED
 	const SPECIALCALL_MASTERBALL
+	const SPECIALCALL_YELLOWFOREST
+	const SPECIALCALL_FIRSTBADGE
+	const SPECIALCALL_SECONDBADGE
+	const SPECIALCALL_LYRASEGG
 
-; phone struct members
 	const_def
 	const PHONE_CONTACT_TRAINER_CLASS
 	const PHONE_CONTACT_TRAINER_NUMBER
@@ -66,6 +67,9 @@
 	const PHONE_CONTACT_SCRIPT2_ADDR_LO
 	const PHONE_CONTACT_SCRIPT2_ADDR_HI
 PHONE_TABLE_WIDTH EQU const_value
+CONTACT_LIST_SIZE EQU 30
 
-; maximum number of pokegear contacts
-CONTACT_LIST_SIZE EQU 10
+; mom items
+const_value = 1
+	const MOM_ITEM
+	const MOM_DOLL

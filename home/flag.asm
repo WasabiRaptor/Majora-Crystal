@@ -1,42 +1,43 @@
-ResetMapBufferEventFlags::
+ResetMapBufferEventFlags:: ; 2e50
 	xor a
 	ld hl, wEventFlags
 	ld [hli], a
 	ret
+; 2e56
 
-ResetBikeFlags::
+ResetBikeFlags:: ; 2e56
 	xor a
 	ld hl, wBikeFlags
 	ld [hli], a
 	ld [hl], a
 	ret
+; 2e5d
 
-ResetFlashIfOutOfCave::
-	ld a, [wEnvironment]
+ResetFlashIfOutOfCave:: ; 2e5d
+	ld a, [wPermission]
 	cp ROUTE
-	jr z, .outdoors
+	jr z, .asm_2e69
 	cp TOWN
-	jr z, .outdoors
+	jr z, .asm_2e69
 	ret
 
-.outdoors
+.asm_2e69
 	ld hl, wStatusFlags
-	res STATUSFLAGS_FLASH_F, [hl]
+	res 2, [hl]
 	ret
+; 2e6f
 
-EventFlagAction::
+
+EventFlagAction:: ; 0x2e6f
 	ld hl, wEventFlags
-	call FlagAction
-	ret
-
-FlagAction::
+FlagAction:: ; 0x2e76
 ; Perform action b on bit de in flag array hl.
 
 ; inputs:
 ; b: function
-;    0  RESET_FLAG  clear bit
-;    1  SET_FLAG    set bit
-;    2  CHECK_FLAG  check bit
+;    0 clear bit
+;    1 set bit
+;    2 check bit
 ; de: bit number
 ; hl: index within bit table
 
@@ -71,9 +72,9 @@ FlagAction::
 
 	; check b's value: 0, 1, 2
 	ld a, b
-	cp SET_FLAG
-	jr c, .clearbit ; RESET_FLAG
-	jr z, .setbit ; SET_FLAG
+	cp 1
+	jr c, .clearbit ; 0
+	jr z, .setbit ; 1
 
 	; check bit
 	ld a, [hl]
@@ -95,11 +96,14 @@ FlagAction::
 	and [hl]
 	ld [hl], a
 	ret
+; 0x2ead
 
-CheckReceivedDex::
+
+CheckReceivedDex:: ; 2ead
 	ld de, ENGINE_POKEDEX
 	ld b, CHECK_FLAG
 	farcall EngineFlagAction
 	ld a, c
 	and a
 	ret
+; 2ebb

@@ -1,21 +1,23 @@
-	db SEEL ; 086
-
 	db  65,  45,  55,  45,  45,  70
-    evs  0,   0,   0,   0,   0,   1
 	;   hp  atk  def  spd  sat  sdf
 
-	db WATER, WATER ; type
+	db WATER, WATER
 	db 190 ; catch rate
 	db 100 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F50 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/seel/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_WATER_1, EGG_GROUND ; egg groups
+	db NO_ITEM ; item 1
+	db RAWST_BERRY ; item 2
+	dn FEMALE_50, 3 ; gender, step cycles to hatch
+	dn 6, 6 ; frontpic dimensions
+	db THICK_FAT ; ability 1
+	db HYDRATION ; ability 2
+	db ICE_BODY ; hidden ability
+	db MEDIUM_FAST ; growth rate
+	dn AMPHIBIAN, FIELD ; egg groups
 
-	; tm/hm learnset
-	tmhm HEADBUTT, CURSE, TOXIC, HIDDEN_POWER, SNORE, BLIZZARD, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, REST, ATTRACT, SURF, WHIRLPOOL, WATERFALL, ICE_BEAM
+	; ev_yield
+	ev_yield   0,   0,   0,   0,   0,   1
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, TOXIC, HAIL, HIDDEN_POWER, ICE_BEAM, BLIZZARD, PROTECT, RAIN_DANCE, SAFEGUARD, IRON_TAIL, RETURN, DOUBLE_TEAM, SUBSTITUTE, FACADE, REST, ATTRACT, THIEF, ENDURE, WATER_PULSE, SURF, WHIRLPOOL, WATERFALL, AQUA_TAIL, BODY_SLAM, DOUBLE_EDGE, HEADBUTT, ICY_WIND, PAY_DAY, SLEEP_TALK, SWAGGER
 	; end

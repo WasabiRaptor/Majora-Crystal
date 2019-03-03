@@ -1,193 +1,143 @@
-; wInputType:: ; c2c7
+; wMonType: ; cf5f
+PARTYMON   EQU 0
+OTPARTYMON EQU 1
+BOXMON     EQU 2
+BREEDMON   EQU 3
+WILDMON    EQU 4
+
+; Text box flags
+; TODO: add the other bits used
+NO_LINE_SPACING EQU 2
+
+; wOptions1: text speed
+INST_TEXT      EQU $0
+FAST_TEXT      EQU $1
+MED_TEXT       EQU $2
+SLOW_TEXT      EQU $3
+
+; wOptions1: text autoscroll.
+; CheckAutoscroll relies on exact bit usage and order
+AUTOSCROLL_MASK  EQU %1100
+AUTOSCROLL_NONE  EQU %0000
+AUTOSCROLL_START EQU %0100
+AUTOSCROLL_AANDB EQU %1000
+AUTOSCROLL_AORB  EQU %1100
+
+TURNING_SPEED_MASK EQU %10000
+
+; bits
+AUTOSCROLL_ABF EQU 3
+TURNING_SPEED  EQU 4
+NO_TEXT_SCROLL EQU 5
+STEREO         EQU 6
+BATTLE_EFFECTS EQU 7
+
+; wOptions2:
+FONT_MASK      EQU %00000111
+NORMAL_FONT    EQU %000
+NARROW_FONT    EQU %001
+BOLD_FONT      EQU %010
+ITALIC_FONT    EQU %011
+SERIF_FONT     EQU %100
+UNOWN_FONT     EQU %101
+; bits
+RUNNING_SHOES  EQU 3
+CLOCK_FORMAT   EQU 4
+POKEDEX_UNITS  EQU 5
+BATTLE_SWITCH  EQU 6
+BATTLE_PREDICT EQU 7
+
+; wInitialOptions:
+NATURES_OPT      EQU 0
+ABILITIES_OPT    EQU 1
+COLOR_VARY_OPT   EQU 2
+PERFECT_IVS_OPT  EQU 3
+TRADED_AS_OT_OPT EQU 4
+NUZLOCKE_MODE    EQU 5
+RESET_INIT_OPTS  EQU 7
+ABILITIES_OPTMASK EQU %00000010
+
+; wWalkingDirection: ; d043
+STANDING EQU -1
+DOWN     EQU 0
+UP       EQU 1
+LEFT     EQU 2
+RIGHT    EQU 3
+
+; wFacingDirection: ; d044
+FACE_CURRENT EQU 0
+FACE_DOWN  EQU 8
+FACE_UP    EQU 4
+FACE_LEFT  EQU 2
+FACE_RIGHT EQU 1
+
+; wTimeOfDay: ; d269
+MORN     EQU 0
+DAY      EQU 1
+NITE     EQU 2
+DARKNESS EQU 3
+
+; wScriptFlags: ; d434
+SCRIPT_RUNNING EQU 2
+
+; wScriptMode: ; d437
+SCRIPT_OFF EQU 0
+SCRIPT_READ EQU 1
+SCRIPT_WAIT_MOVEMENT EQU 2
+SCRIPT_WAIT EQU 3
+
+; wCurDay: ; d4cb
+SUNDAY    EQU 0
+MONDAY    EQU 1
+TUESDAY   EQU 2
+WEDNESDAY EQU 3
+THURSDAY  EQU 4
+FRIDAY    EQU 5
+SATURDAY  EQU 6
+
+; wMapObjects: ; d71e
+PLAYER_OBJECT EQU 0
+NUM_OBJECTS EQU $15
+
+; wInputType: ; c2c7
 AUTO_INPUT EQU $ff
 
-; wDebugFlags:: ; c2cc
-	const_def
-	const DEBUG_BATTLE_F
-	const DEBUG_FIELD_F
+; wPlayerState: ; d95d
+PLAYER_NORMAL    EQU 0
+PLAYER_BIKE      EQU 1
+PLAYER_SLIP      EQU 2
+PLAYER_SURF      EQU 4
+PLAYER_SURF_PIKA EQU 8
 
-; wCurDexMode:: ; c7d4
+OBJECT_STRUCT_LENGTH EQU 33
+NUM_OBJECT_STRUCTS EQU 13
+FIRST_VRAM1_OBJECT_STRUCT EQU 8
+
+; After-Champion Spawn
+SPAWN_LANCE EQU 1
+SPAWN_LEAF EQU 2
+
+; wPokemonWithdrawDepositParameter
+PC_WITHDRAW EQU 0
+PC_DEPOSIT EQU 1
+DAYCARE_WITHDRAW EQU 2
+DAYCARE_DEPOSIT EQU 3
+
+; wCurrentDexMode
 	const_def
 	const DEXMODE_NEW
 	const DEXMODE_OLD
 	const DEXMODE_ABC
 	const DEXMODE_UNOWN
 
-; wMonType:: ; cf5f
+; wHiddenGrottoContents
 	const_def
-	const PARTYMON   ; 0
-	const OTPARTYMON ; 1
-	const BOXMON     ; 2
-	const TEMPMON    ; 3
-	const WILDMON    ; 4
+	const GROTTO_UNDEFINED
+	const GROTTO_POKEMON
+	const GROTTO_ITEM
+	const GROTTO_HIDDEN_ITEM
+	const GROTTO_EMPTY
 
-; wGameTimerPause:: ; cfbc
-GAMETIMERPAUSE_TIMER_PAUSED_F EQU 0
-GAMETIMERPAUSE_MOBILE_7_F     EQU 7
-
-; wOptions:: ; cfcc
-TEXT_DELAY_MASK EQU %111
-	const_def 4
-	const NO_TEXT_SCROLL ; 4
-	const STEREO         ; 5
-	const BATTLE_SHIFT   ; 6
-	const BATTLE_SCENE   ; 7
-
-TEXT_DELAY_FAST EQU %001 ; 1
-TEXT_DELAY_MED  EQU %011 ; 3
-TEXT_DELAY_SLOW EQU %101 ; 5
-
-; wTextBoxFrame:: ; cfce
-	const_def
-	const FRAME_1 ; 0
-	const FRAME_2 ; 1
-	const FRAME_3 ; 2
-	const FRAME_4 ; 3
-	const FRAME_5 ; 4
-	const FRAME_6 ; 5
-	const FRAME_7 ; 6
-	const FRAME_8 ; 7
-	const FRAME_9 ; 8
-	const FRAME_10 ; 9
-NUM_FRAMES EQU const_value
-
-; wTextBoxFlags:: ; cfcf
-	const_def
-	const FAST_TEXT_DELAY_F ; 0
-	const NO_TEXT_DELAY_F   ; 1
-
-; wGBPrinter:: ; cfd0
-GBPRINTER_LIGHTEST EQU $00
-GBPRINTER_LIGHTER  EQU $20
-GBPRINTER_NORMAL   EQU $40
-GBPRINTER_DARKER   EQU $60
-GBPRINTER_DARKEST  EQU $7f
-
-; wOptions2:: ; cfd1
-	const_def
-	const MENU_ACCOUNT ; 0
-	const CLOCK_FORMAT ; 1
-
-
-; wWalkingDirection:: ; d043
-	const_def -1
-	const STANDING ; -1
-	const DOWN     ; 0
-	const UP       ; 1
-	const LEFT     ; 2
-	const RIGHT    ; 3
-NUM_DIRECTIONS EQU const_value
-
-DOWN_MASK  EQU 1 << DOWN
-UP_MASK    EQU 1 << UP
-LEFT_MASK  EQU 1 << LEFT
-RIGHT_MASK EQU 1 << RIGHT
-
-; wFacingDirection:: ; d044
-FACE_CURRENT EQU 0
-FACE_DOWN    EQU 8
-FACE_UP      EQU 4
-FACE_LEFT    EQU 2
-FACE_RIGHT   EQU 1
-
-; wPokemonWithdrawDepositParameter:: ; d10b
-PC_WITHDRAW       EQU 0
-PC_DEPOSIT        EQU 1
-REMOVE_PARTY      EQU 0
-REMOVE_BOX        EQU 1
-DAY_CARE_WITHDRAW EQU 2
-DAY_CARE_DEPOSIT  EQU 3
-
-; wInitListType:: ; d263
-INIT_ENEMYOT_LIST    EQU 1
-INIT_BAG_ITEM_LIST   EQU 2
-INIT_OTHER_ITEM_LIST EQU 3
-INIT_PLAYEROT_LIST   EQU 4
-INIT_MON_LIST        EQU 5
-
-; wTimeOfDay:: ; d269
-	const_def
-	const MORN_F     ; 0
-	const DAY_F      ; 1
-	const NITE_F     ; 2
-	const DARKNESS_F ; 3
-NUM_DAYTIMES EQU const_value
-
-MORN     EQU 1 << MORN_F
-DAY      EQU 1 << DAY_F
-NITE     EQU 1 << NITE_F
-DARKNESS EQU 1 << DARKNESS_F
-
-ANYTIME EQU MORN | DAY | NITE
-
-; wPlayerSpriteSetupFlags:: ; d45b
-PLAYERSPRITESETUP_FACING_MASK       EQU %11
-PLAYERSPRITESETUP_FEMALE_TO_MALE_F  EQU 2
-PLAYERSPRITESETUP_CUSTOM_FACING_F   EQU 5
-PLAYERSPRITESETUP_SKIP_RELOAD_GFX_F EQU 6
-PLAYERSPRITESETUP_RESET_ACTION_F    EQU 7
-
-; wPlayerGender:: ; d472
-PLAYERGENDER_FEMALE_F EQU 0
-
-; wScriptFlags:: ; d434
-SCRIPT_RUNNING EQU 2
-
-; wScriptMode:: ; d437
-SCRIPT_OFF EQU 0
-SCRIPT_READ EQU 1
-SCRIPT_WAIT_MOVEMENT EQU 2
-SCRIPT_WAIT EQU 3
-
-; wSpawnAfterChampion:: ; d4b5
-SPAWN_LANCE EQU 1
-SPAWN_RED   EQU 2
-
-; wCurDay:: ; d4cb
-	const_def
-	const SUNDAY    ; 0
-	const MONDAY    ; 1
-	const TUESDAY   ; 2
-	const WEDNESDAY ; 3
-	const THURSDAY  ; 4
-	const FRIDAY    ; 5
-	const SATURDAY  ; 6
-
-; wMapObjects:: ; d71e
-PLAYER_OBJECT EQU 0
-NUM_OBJECTS   EQU $10
-
-; wStatusFlags:: ; d84c
-	const_def
-	const STATUSFLAGS_POKEDEX_F                  ; 0
-	const STATUSFLAGS_UNOWN_DEX_F                ; 1
-	const STATUSFLAGS_FLASH_F                    ; 2
-	const STATUSFLAGS_CAUGHT_POKERUS_F           ; 3
-	const STATUSFLAGS_ROCKET_SIGNAL_F            ; 4
-	const STATUSFLAGS_NO_WILD_ENCOUNTERS_F       ; 5
-	const STATUSFLAGS_HALL_OF_FAME_F             ; 6
-	const STATUSFLAGS_MAIN_MENU_MOBILE_CHOICES_F ; 7
-
-; wStatusFlags2:: ; d84d
-	const_def
-	const STATUSFLAGS2_ROCKETS_IN_RADIO_TOWER_F ; 0
-	const STATUSFLAGS2_SAFARI_GAME_F            ; 1
-	const STATUSFLAGS2_BUG_CONTEST_TIMER_F      ; 2
-	const STATUSFLAGS2_UNUSED_3_F               ; 3
-	const STATUSFLAGS2_BIKE_SHOP_CALL_F         ; 4
-	const STATUSFLAGS2_UNUSED_5_F               ; 5
-	const STATUSFLAGS2_REACHED_GOLDENROD_F      ; 6
-	const STATUSFLAGS2_ROCKETS_IN_MAHOGANY_F    ; 7
-
-; wMomSavingMoney:: ; d854
-MOM_SAVING_SOME_MONEY_F EQU 0
-MOM_SAVING_HALF_MONEY_F EQU 1
-MOM_SAVING_ALL_MONEY_F  EQU 2
-MOM_ACTIVE_F            EQU 7
-
-MOM_SAVING_MONEY_MASK EQU (1 << MOM_SAVING_SOME_MONEY_F) | (1 << MOM_SAVING_HALF_MONEY_F) | (1 << MOM_SAVING_ALL_MONEY_F)
-
-; wJohtoBadges:: ; d857
 	const_def
 	const ZEPHYRBADGE
 	const HIVEBADGE
@@ -198,88 +148,50 @@ MOM_SAVING_MONEY_MASK EQU (1 << MOM_SAVING_SOME_MONEY_F) | (1 << MOM_SAVING_HALF
 	const GLACIERBADGE
 	const RISINGBADGE
 NUM_JOHTO_BADGES EQU const_value
-
-; wKantoBadges:: ; d858
 	const_def
 	const BOULDERBADGE
 	const CASCADEBADGE
 	const THUNDERBADGE
 	const RAINBOWBADGE
-	const SOULBADGE
 	const MARSHBADGE
+	const SOULBADGE
 	const VOLCANOBADGE
 	const EARTHBADGE
 NUM_KANTO_BADGES EQU const_value
 NUM_BADGES EQU NUM_JOHTO_BADGES + NUM_KANTO_BADGES
 
-; wPokegearFlags:: ; d957
 	const_def
-	const POKEGEAR_MAP_CARD_F   ; 0
-	const POKEGEAR_RADIO_CARD_F ; 1
-	const POKEGEAR_PHONE_CARD_F ; 2
-	const POKEGEAR_EXPN_CARD_F  ; 3
-
-POKEGEAR_OBTAINED_F EQU 7
-
-; wWhichRegisteredItem:: ; d95b
-REGISTERED_POCKET EQU %11000000
-REGISTERED_NUMBER EQU %00111111
-
-; wPlayerState:: ; d95d
-PLAYER_NORMAL    EQU 0
-PLAYER_BIKE      EQU 1
-PLAYER_SKATE     EQU 2
-PLAYER_SURF      EQU 4
-PLAYER_SURF_PIKA EQU 8
-
-; wCelebiEvent:: ; dbf3
-CELEBIEVENT_FOREST_IS_RESTLESS_F EQU 2
-
-; wBikeFlags:: ; dbf5
-	const_def
-	const BIKEFLAGS_STRENGTH_ACTIVE_F ; 0
-	const BIKEFLAGS_ALWAYS_ON_BIKE_F  ; 1
-	const BIKEFLAGS_DOWNHILL_F        ; 2
-
-; wDailyFlags1:: ; dc1e
-	const_def
-	const DAILYFLAGS1_KURT_MAKING_BALLS_F             ; 0
-	const DAILYFLAGS1_BUG_CONTEST_F                   ; 1
-	const DAILYFLAGS1_FISH_SWARM_F                    ; 2
-	const DAILYFLAGS1_TIME_CAPSULE_F                  ; 3
-	const DAILYFLAGS1_ALL_FRUIT_TREES_F               ; 4
-	const DAILYFLAGS1_GOT_SHUCKIE_TODAY_F             ; 5
-	const DAILYFLAGS1_GOLDENROD_UNDERGROUND_BARGAIN_F ; 6
-	const DAILYFLAGS1_TRAINER_HOUSE_F                 ; 7
-
-; wDailyFlags2:: ; dc1f
-	const_def
-	const DAILYFLAGS2_MT_MOON_SQUARE_CLEFAIRY_F           ; 0
-	const DAILYFLAGS2_UNION_CAVE_LAPRAS_F                 ; 1
-	const DAILYFLAGS2_GOLDENROD_UNDERGROUND_GOT_HAIRCUT_F ; 2
-	const DAILYFLAGS2_GOLDENROD_DEPT_STORE_TM27_RETURN_F  ; 3
-	const DAILYFLAGS2_DAISYS_GROOMING_F                   ; 4
-	const DAILYFLAGS2_INDIGO_PLATEAU_RIVAL_FIGHT_F        ; 5
-	const DAILYFLAGS2_MOVE_TUTOR_F                        ; 6
-	const DAILYFLAGS2_BUENAS_PASSWORD_F                   ; 7
-
-; wSwarmFlags:: ; dc20
-	const_def
-	const SWARMFLAGS_BUENAS_PASSWORD_F           ; 0
-	const SWARMFLAGS_GOLDENROD_DEPT_STORE_SALE_F ; 1
-	const SWARMFLAGS_DUNSPARCE_SWARM_F           ; 2
-	const SWARMFLAGS_YANMA_SWARM_F               ; 3
-	const SWARMFLAGS_MOBILE_4_F                  ; 4
-
-; wLuckyNumberShowFlag:: ; dc9d
-LUCKYNUMBERSHOW_GAME_OVER_F EQU 0
-
-; wDayCareMan:: ; def5
-DAYCAREMAN_HAS_MON_F         EQU 0
-DAYCAREMAN_MONS_COMPATIBLE_F EQU 5
-DAYCAREMAN_HAS_EGG_F         EQU 6
-DAYCAREMAN_ACTIVE_F          EQU 7
-
-; wDayCareLady:: ; df2c
-DAYCARELADY_HAS_MON_F        EQU 0
-DAYCARELADY_ACTIVE_F         EQU 7
+	const FALKNER_JOURNAL ; Violet Pokémon Center
+	const BUGSY_JOURNAL ; Azalea Pokémon Center
+	const WHITNEY_JOURNAL ; Goldenrod PokéCom Center
+	const MORTY_JOURNAL ; Ecruteak Pokémon Center
+	const CHUCK_JOURNAL ; Cianwood Pokémon Center
+	const JASMINE_JOURNAL ; Olivine Pokémon Center
+	const PRYCE_JOURNAL ; Mahogany Pokémon Center
+	const CLAIR_JOURNAL ; Blackthorn Pokémon Center
+	const BROCK_JOURNAL ; Pewter Pokémon Center
+	const MISTY_JOURNAL ; Cerulean Pokémon Center
+	const LT_SURGE_JOURNAL ; Vermilion Pokémon Center
+	const ERIKA_JOURNAL ; Celadon Pokémon Center
+	const JANINE_JOURNAL ; Fuchsia Pokémon Center
+	const SABRINA_JOURNAL ; Saffron Pokémon Center
+	const BLAINE_JOURNAL ; Cinnabar Pokémon Center
+	const BLUE_JOURNAL ; Viridian Pokémon Center
+	const WILL_JOURNAL ; Earl's Pokémon Academy
+	const KOGA_JOURNAL ; Safari Zone rest houses
+	const BRUNO_JOURNAL ; Pokémon Trainer Fan Club
+	const KAREN_JOURNAL ; Mt. Moon Pokémon Center
+	const LANCE_JOURNAL ; Silver Cave Pokémon Center
+	const RED_JOURNAL ; Cherrygrove Pokémon Center
+	const GREEN_JOURNAL ; Pokémon Fan Club
+	const PROF_OAK_JOURNAL ; Red's house, Blue's house
+	const PROF_ELM_JOURNAL ; Kris's house, Lyra's house
+	const PROF_IVY_JOURNAL ; Ivy's lab
+	const PROF_WESTWOOD_JOURNAL ; Kurt's house
+	const GIOVANNI_JOURNAL ; Indigo Plateau Pokémon Center
+	const LORELEI_JOURNAL ; Shamouti Island Pokémon Center
+	const AGATHA_JOURNAL ; Rock Tunnel Pokémon Center
+	const BILL_JOURNAL ; Bill's house
+	const KURT_JOURNAL ; Union Cave Pokémon Center
+	const MR_FUJI_JOURNAL ; Lavender Town Pokémon Center
+NUM_POKEMON_JOURNALS EQU const_value

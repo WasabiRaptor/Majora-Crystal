@@ -1,70 +1,46 @@
-AIChooseMove:
+AIChooseMove: ; 440ce
 ; Score each move in wEnemyMonMoves starting from wBuffer1. Lower is better.
 ; Pick the move with the lowest score.
 
-; Wildmons attack at random.
-	ld a, [wBattleMode]
-	dec a
-	ret z
-
+	; Linking is handled elsewhere
 	ld a, [wLinkMode]
 	and a
 	ret nz
 
-; No use picking a move if there's no choice.
+	; No use picking a move if there's no choice.
 	farcall CheckEnemyLockedIn
 	ret nz
 
-; The default score is 20. Unusable moves are given a score of 80.
+	; Default score is 20, unusable moves are set to 80.
+	call SetEnemyTurn
+	ld hl, wBuffer1 + 3
+	ld a, 4
+.unusable_loop
+	dec a
+	push af
+	push hl
+	farcall CheckUsableMove
 	ld a, 20
-	ld hl, wBuffer1
-	ld [hli], a
-	ld [hli], a
-	ld [hli], a
+	jr z, .unusable_next
+	ld a, 80
+.unusable_next
+	pop hl
 	ld [hl], a
-
-; Don't pick disabled moves.
-	ld a, [wEnemyDisabledMove]
+	pop af
+	dec hl
 	and a
-	jr z, .CheckPP
+	jr nz, .unusable_loop
 
-	ld hl, wEnemyMonMoves
-	ld c, 0
-.CheckDisabledMove:
-	cp [hl]
-	jr z, .ScoreDisabledMove
-	inc c
-	inc hl
-	jr .CheckDisabledMove
-.ScoreDisabledMove:
-	ld hl, wBuffer1
-	ld b, 0
-	add hl, bc
-	ld [hl], 80
-
-; Don't pick moves with 0 PP.
-.CheckPP:
-	ld hl, wBuffer1 - 1
-	ld de, wEnemyMonPP
-	ld b, 0
-.CheckMovePP:
-	inc b
-	ld a, b
-	cp wEnemyMonMovesEnd - wEnemyMonMoves + 1
-	jr z, .ApplyLayers
-	inc hl
-	ld a, [de]
-	inc de
-	and PP_MASK
-	jr nz, .CheckMovePP
-	ld [hl], 80
-	jr .CheckMovePP
+	; Wildmons choose moves at random
+	ld a, [wBattleMode]
+	dec a
+	jr z, .DecrementScores
 
 ; Apply AI scoring layers depending on the trainer class.
 .ApplyLayers:
 	ld hl, TrainerClassAttributes + TRNATTR_AI_MOVE_WEIGHTS
 
-	; If we have a battle in BattleTower just load the Attributes of the first trainer class in wTrainerClass (Falkner)
+	; If we have a battle in BattleTower just load the Attributes of the first wTrainerClass (Falkner)
 	; so we have always the same AI, regardless of the loaded class of trainer
 	ld a, [wInBattleTowerBattle]
 	bit 0, a
@@ -73,7 +49,7 @@ AIChooseMove:
 	ld a, [wTrainerClass]
 	dec a
 	ld bc, 7 ; Trainer2AI - Trainer1AI
-	call AddNTimes
+	rst AddNTimes
 
 .battle_tower_skip
 	lb bc, CHECK_FLAG, 0
@@ -90,7 +66,7 @@ AIChooseMove:
 
 	push bc
 	ld d, BANK(TrainerClassAttributes)
-	predef SmallFarFlagAction
+	predef FlagPredef
 	ld d, c
 	pop bc
 
@@ -119,7 +95,7 @@ AIChooseMove:
 .DecrementScores:
 	ld hl, wBuffer1
 	ld de, wEnemyMonMoves
-	ld c, wEnemyMonMovesEnd - wEnemyMonMoves
+	ld c, NUM_MOVES
 
 .DecrementNextScore:
 	; If the enemy has no moves, this will infinite.
@@ -184,7 +160,7 @@ AIChooseMove:
 .ChooseMove:
 	ld hl, wBuffer1
 	call Random
-	maskbits NUM_MOVES
+	and 3
 	ld c, a
 	ld b, 0
 	add hl, bc
@@ -196,9 +172,10 @@ AIChooseMove:
 	ld a, c
 	ld [wCurEnemyMoveNum], a
 	ret
+; 441af
 
-AIScoringPointers:
-; entries correspond to AI_* constants
+
+AIScoringPointers: ; 441af
 	dw AI_Basic
 	dw AI_Setup
 	dw AI_Types
@@ -215,3 +192,4 @@ AIScoringPointers:
 	dw AI_None
 	dw AI_None
 	dw AI_None
+; 441cf

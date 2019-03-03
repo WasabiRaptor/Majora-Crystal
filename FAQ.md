@@ -1,85 +1,87 @@
 # FAQ
 
+If you have a question about playing Polished Crystal, or think you've found a bug, please read this FAQ first.
 
-## Questions
-
-- [What is pokecrystal11.gbc?](#what-is-pokecrystal11gbc)
-- [I can't build the ROM, `make` just prints an error!](#i-cant-build-the-rom-make-just-prints-an-error)
-  - [`gcc`: command not found](#gcc-command-not-found)
-  - ["ERROR: `UNION` already defined"](#error-union-already-defined)
-  - ["Segmentation fault" from `rgbgfx`](#segmentation-fault-from-rgbgfx)
-  - ["Section is too big" or "Unable to place section in bank"](#section-is-too-big-or-unable-to-place-section-in-bank)
-  - ["Invalid file or object file version"](#invalid-file-or-object-file-version)
-  - ["Syntax error"](#syntax-error)
-- [How do I edit maps?](#how-do-i-edit-maps)
-- [How do I edit the colors of an image?](#how-do-i-edit-the-colors-of-an-image)
-- [How do I write new features?](#how-do-i-write-new-features)
-- [I need more help!](#i-need-more-help)
+> At the time, I was asking really obvious questions like: "So 'wireless' means you're getting rid of the wires, right?"
+>
+> — Tsunekazu Ishihara, "[Iwata Asks – Pokémon HeartGold Version & SoulSilver Version](https://www.nintendo.co.uk/Iwata-Asks/Iwata-Asks-Pokemon-HeartGold-Version-SoulSilver-Version/Iwata-Asks-Pokemon-HeartGold-Version-SoulSilver-Version/4-The-Power-of-Science-is-Staggering-/4-The-Power-of-Science-is-Staggering--226003.html)"
 
 
-## What is pokecrystal11.gbc?
+### Is there a Pokédex document I can refer to?
 
-Version 1.1 of Pokémon Crystal, which fixed some issues with the initial international release. `make crystal11` defines `_CRYSTAL11` so the assembly builds the changed version.
+The game's data files do a fairly good job of listing things you'll want to know.
 
-
-## I can't build the ROM, `make` just prints an error!
-
-Reread [INSTALL.md](INSTALL.md) carefully, and make sure you're following all its steps.
-
-### `gcc`: command not found
-
-You need to install `gcc`. If you're using Cygwin, re-run its setup, and at "Select Packages", choose to install `gcc-core`.
-
-### "ERROR: `UNION` already defined"
-
-Download [**rgbds 0.3.7**][rgbds]. Older versions will not work.
-
-### "Segmentation fault" from `rgbgfx`
-
-If you are using 64-bit Windows, download [**64-bit Cygwin**][cygwin] and [**64-bit rgbds**][rgbds].
-
-### "Section is too big" or "Unable to place section in bank"
-
-If you have not changed any of the asm, make sure you have the latest version of pokecrystal and the correct version of rgbds (see [INSTALL.md](INSTALL.md)).
-
-If you added or changed any code, it has to fit in the **memory banks**. The 2MB ROM is divided into 128 banks of 4KB each, numbered $00 to $7F. The linkerscript **pokecrystal.link** lists which `SECTION`s go in which banks. Try moving some code into a new section.
-
-### "Invalid file or object file version"
-
-Run `make clean` to remove all the old `o` files, then re-run `make`.
-
-### "Syntax error"
-
-If you have not changed any of the asm, make sure you have the latest version of pokecrystal and the correct version of rgbds (see [INSTALL.md](INSTALL.md)).
-
-If you added or changed any code, you've made a mistake while writing some of it. Re-read the modifications you've made to the file it complains about and try to compare them with other code.
+* [Base stats and TM learnsets](data/pokemon/base_stats/)
+* [Level-up learnsets and evolution methods](data/pokemon/evos_attacks.asm)
+* [Egg moves](data/pokemon/egg_moves.asm)
+* [Move attributes](data/moves/moves.asm)
+* [TM+HM+tutor list](data/moves/tmhm_moves.asm)
+* [Wild Pokémon](data/wild/)
+* [Hidden Grottoes](data/events/hidden_grottoes/grottoes.asm)
 
 
-## How do I edit maps?
+### How do I evolve my Pokémon?
 
-For `asm` scripts, read [docs/map_event_scripts.md](docs/map_event_scripts.md). For `blk` layouts, try [Polished Map][polished-map] or [crowdmap][crowdmap].
-
-
-## How do I edit the colors of an image?
-
-Most `.png` images are paletted PNGs. You can edit these with any program that supports creating PNGs with palette information. These palettes should consist of exactly 4 colors. Additionally, for Pokémon images, the first color should be white, and the last black. Tools such as Paint and [GIMP](https://www.gimp.org/) will do the right job, while other tools such as Photoshop might mess it up and output palettes of 255 colors even though only using 4. You may try using tools like [GraphicsGale](https://graphicsgale.com/us/) or [IrfanView](https://www.irfanview.com/) to fix this, or sometimes resaving the image in Paint seems to help.
-
-Some image `.png` files are greyscale. This indicates that even though these images do have proper colors in-game, they're shared with something else, and as such changing them will affect other things as well. Don't try opening the `.2bpp` files, these only contain the image data as well, not the palettes.
-
-It really depends on what image you're trying to change the colors of, where these colors are specified. Try looking for related files or `.pal` files.
+* Item trade evolutions (like Seadra into Kingdra while holding a Dragon Scale) now evolve while holding the item.
+* Yanma, Tangela, and Piloswine evolve while knowing AncientPower.
+* Eevee evolves into Leafeon in Ilex Forest, site of the Moss Rock.
+* Eevee evolves into Glaceon in the Ice Path, site of the Ice Rock.
+* Eevee evolves into Sylveon with a Shiny Stone.
+* Magneton evolves into Magnezone in Rock Tunnel, site of the Lodestone.
+* Machoke, Graveler, Haunter, and Kadabra evolve by having sufficient EVs in Attack, Defense, Speed, and Special respectively (five Protein, Iron, Carbos, or Calcium is enough).
 
 
-## How do I write new features?
+### Where do I get the legendary Pokémon?
 
-There are a number of special-purpose scripting languages, as described in [docs](docs/). For more general features, you'll need to code directly in assembly language. See [docs/assembly_programming.md](docs/assembly_programming.md). Some of the [tutorials][tutorials] may also be helpful.
+* Articuno is in the Seafoam Islands.
+* Zapdos is above the Power Plant after you fix the generator.
+* Moltres is inside Cinnabar Volcano.
+* Raikou and Entei are roaming Johto after you awaken them.
+* Suicune is in the Bell Tower after you get the Clear Bell.
+* Lugia is in the Whirl Islands after you catch all three legendary birds and then get the Silver Wing in Victory Road.
+* Ho-Oh is atop the Bell Tower after you catch all three legendary beasts and then get the Rainbow Wing in Bell Tower.
+* Mewtwo is in Cerulean Cave.
+* Mew and Celebi are a secret!
 
 
-## I need more help!
+### Where do I get this item?
 
-Try asking on IRC or Discord (see [README.md](README.md)).
+* Helix Fossil and Dome Fossil are in Quiet Cave.
+* Old Amber is in Pewter City.
+* Razor Claw is in Quiet Cave, or held by some wild Sneasel.
+* Razor Fang is in Victory Road, or held by some wild Gligar.
+* Electirizer is in Rock Tunnel, or held by some wild Electabuzz.
+* Magmarizer is on Cinnabar Island, or held by some wild Magmar.
+* Protector is in Mt. Mortar, or held by some wild Rhydon.
+* Up-Grade is given to you in Silph Co. after fixing the Power Plant generator.
+* Dubious Disc is in Celadon City.
+* King's Rock is in Slowpoke Well, or held by some wild Slowpoke/Slowbro and Poliwhirl.
+* Metal Coat is in the Goldenrod Dept. Store basement, or held by some wild Magnemite/Magneton and Steelix.
+* Dragon Scales are in Dragon's Den and Mount Mortar, or held by some wild Horsea/Seadra and Dratini/Dragonair.
+* Dusk Stones are in Dark Cave, Quiet Cave, Cerulean Cave, and Mt. Moon. Bill's grandpa also gives you one.
+* Shiny Stones are in National Park, Cherrygrove Bay, and Mt. Moon. Bill's grandpa also gives you one.
+* Bill's grandpa gives you one of each evolution stone in Goldenrod City. Also, certain trainers will call you up to give you stones, just like in regular Crystal. The Celadon Dept. Store sells the Fire, Water, Thunder, and Leaf Stones.
 
-[cygwin]: https://cygwin.com/install.html
-[rgbds]: https://github.com/rednex/rgbds/releases
-[polished-map]: https://github.com/Rangi42/polished-map
-[crowdmap]: https://github.com/yenatch/crowdmap/
-[tutorials]: https://github.com/pret/pokecrystal/wiki/Tutorials
+
+### Where do I get Silver/Gold Leaves?
+
+Silver Leaves are like Shards in future generations: they can be given to Move Tutors to learn moves. Wild Oddish have a 50% chance of holding Silver Leaves, and there are some hidden on the ground in Ilex Forest.
+
+Gold Leaves can be given to the Move Maniac to relearn moves. Wild Bellsprout have a 50% chance of holding Gold Leaves, and there are some hidden on the ground in Yellow Forest.
+
+
+### Where do I get this TM/HM?
+
+* HM02 Fly is given to you after a certain battle in Yellow Forest, at the end of Route 47+48, which become accessible after beating Chuck.
+* HM06 Whirlpool is given to you after a battle with Lyra on Route 42, which becomes accessible after beating Jasmine.
+* TM46 Thief is given to you by Lance after completing Team Rocket's Base in Mahogany Town.
+
+
+### What do blessings and photographs do?
+
+Daily blessings in Ecruteak City and photographs in Cianwood City make your Pokémon happier, just like haircuts or grooming.
+
+
+### I don't like non-canon Pokémon types!
+
+I was hesitant to make original changes like this, because the goal is to be an improved Crystal version, not a new game. In the end I made two versions, one regular (with changes) and one "faithful" (with original typings).

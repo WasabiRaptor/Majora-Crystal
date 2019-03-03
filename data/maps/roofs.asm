@@ -1,47 +1,45 @@
-; MapGroupRoofs values; Roofs indexes
-	const_def
-	const ROOF_NEW_BARK  ; 0
-	const ROOF_VIOLET    ; 1
-	const ROOF_AZALEA    ; 2
-	const ROOF_OLIVINE   ; 3
-	const ROOF_GOLDENROD ; 4
-
 MapGroupRoofs:
 ; entries correspond to map groups
 ; values are indexes for Roofs (see below)
-	db -1	;  0
-	db -1	;  1 (Olivine)
-	db -1	;  2 (Mahogany)
-	db -1	;  3
-	db -1	;  4 (Ecruteak)
-	db -1	;  5 (Blackthorn)
-	db -1	;  6
-	db -1	;  7
-	db -1	;  8 (Azalea)
-	db -1	;  9 (Lake of Rage)
-	db -1	; 10 (Violet)
-	db -1	; 11 (Goldenrod)
-	db -1	; 12
-	db -1	; 13
-	db -1	; 14
-	db -1	; 15
-	db -1	; 16
-	db -1	; 17
-	db -1	; 18
-	db -1	; 19 (Silver Cave)
-	db -1	; 20
-	db -1	; 21
-	db -1	; 22 (Cianwood)
-	db -1	; 23
-	db -1	; 24 (New Bark)
-	db -1	; 25
-	db -1	; 26 (Cherrygrove)
-	db -1	; 27 (dungeon)
+	db -1 ; group 0
+	db  3 ; group 1 (Olivine City)
+	db  2 ; group 2 (Mahogany Town)
+	db -1 ; group 3
+	db  1 ; group 4 (Ecruteak City)
+	db  2 ; group 5 (Blackthorn City)
+	db -1 ; group 6
+	db -1 ; group 7
+	db  2 ; group 8 (Azalea Town)
+	db  2 ; group 9 (Lake of Rage)
+	db  1 ; group 10 (Violet City)
+	db -1 ; group 11 (Goldenrod City)
+	db -1 ; group 12
+	db -1 ; group 13
+	db -1 ; group 14
+	db -1 ; group 15
+	db -1 ; group 16
+	db -1 ; group 17
+	db -1 ; group 18
+	db  0 ; group 19 (Route 28)
+	db -1 ; group 20 (Ecruteak Shrine)
+	db -1 ; group 21
+	db  3 ; group 22 (Cianwood City)
+	db -1 ; group 23
+	db  0 ; group 24 (New Bark Town)
+	db -1 ; group 25
+	db  0 ; group 26 (Cherrygrove City)
+	db -1 ; group 27
+	db -1 ; group 28
+	db  3 ; group 29 (Goldenrod Harbor)
+	db  0 ; group 30 (Ruins of Alph)
+	db -1 ; group 31
+	db -1 ; group 32
+	db -1 ; group 33
+	db  2 ; group 34 (Sinjoh Ruins)
+	db -1 ; group 35
 
 Roofs:
-; entries correspond to ROOF_* constants
 INCBIN "gfx/tilesets/roofs/0.2bpp"
 INCBIN "gfx/tilesets/roofs/1.2bpp"
 INCBIN "gfx/tilesets/roofs/2.2bpp"
 INCBIN "gfx/tilesets/roofs/3.2bpp"
-INCBIN "gfx/tilesets/roofs/4.2bpp"

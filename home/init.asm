@@ -1,24 +1,26 @@
-Reset::
+SoftReset:: ; 150
 	di
 	call MapSetup_Sound_Off
 	xor a
-	ldh [hMapAnims], a
+	ld [hMapAnims], a
 	call ClearPalettes
 	xor a
-	ldh [rIF], a
+	ld [rIF], a
 	ld a, 1 ; VBlank int
-	ldh [rIE], a
+	ld [rIE], a
 	ei
 
-	ld hl, wcfbe
+	ld hl, InputFlags
 	set 7, [hl]
 
 	ld c, 32
 	call DelayFrames
 
 	jr Init
+; 16e
 
-_Start::
+
+_Start:: ; 16e
 	cp $11
 	jr z, .cgb
 	xor a
@@ -28,44 +30,41 @@ _Start::
 	ld a, $1
 
 .load
-	ldh [hCGB], a
-	ld a, $1
-	ldh [hSystemBooted], a
+	ld [hCGB], a
+	; fallthrough
 
-Init::
+Init:: ; 17d
+
 	di
 
 	xor a
-	ldh [rIF], a
-	ldh [rIE], a
-	ldh [rRP], a
-	ldh [rSCX], a
-	ldh [rSCY], a
-	ldh [rSB], a
-	ldh [rSC], a
-	ldh [rWX], a
-	ldh [rWY], a
-	ldh [rBGP], a
-	ldh [rOBP0], a
-	ldh [rOBP1], a
-	ldh [rTMA], a
-	ldh [rTAC], a
-	ld [WRAM1_Begin], a
-
-	ld a, %100 ; Start timer at 4096Hz
-	ldh [rTAC], a
+	ld [rIF], a
+	ld [rIE], a
+	ld [rRP], a
+	ld [rSCX], a
+	ld [rSCY], a
+	ld [rSB], a
+	ld [rSC], a
+	ld [rWX], a
+	ld [rWY], a
+	ld [rBGP], a
+	ld [rOBP0], a
+	ld [rOBP1], a
+	ld [rTMA], a
+	ld [rTAC], a
+	ld [wRAM1Start], a
 
 .wait
-	ldh a, [rLY]
-	cp LY_VBLANK + 1
+	ld a, [rLY]
+	cp 145
 	jr nz, .wait
 
 	xor a
-	ldh [rLCDC], a
+	ld [rLCDC], a
 
 ; Clear WRAM bank 0
-	ld hl, WRAM0_Begin
-	ld bc, WRAM0_End - WRAM0_Begin
+	ld hl, wRAM0Start
+	ld bc, wRAM0End - wRAM0Start
 .ByteFill:
 	ld [hl], 0
 	inc hl
@@ -77,49 +76,55 @@ Init::
 	ld sp, wStack
 
 ; Clear HRAM
-	ldh a, [hCGB]
-	push af
-	ldh a, [hSystemBooted]
+	ld a, [hCGB]
 	push af
 	xor a
-	ld hl, HRAM_Begin
-	ld bc, HRAM_End - HRAM_Begin
+	ld hl, HRAM_START
+	ld bc, HRAM_END - HRAM_START
 	call ByteFill
 	pop af
-	ldh [hSystemBooted], a
-	pop af
-	ldh [hCGB], a
+	ld [hCGB], a
 
 	call ClearWRAM
 	ld a, 1
-	ldh [rSVBK], a
+	ld [rSVBK], a
 	call ClearVRAM
 	call ClearSprites
 	call ClearsScratch
 
-	ld a, BANK(WriteOAMDMACodeToHRAM)
+; Initialize the RNG state. It can be initialized to anything but zero; this is just a simple way of doing it.
+	ld hl, wRNGState
+	ld a, "R"
+	ld [hli], a
+	ld a, "N"
+	ld [hli], a
+	ld a, "G"
+	ld [hli], a
+	ld [hl], "!"
+
+	ld a, BANK(LoadPushOAM)
 	rst Bankswitch
 
-	call WriteOAMDMACodeToHRAM
+	call LoadPushOAM
 
 	xor a
-	ldh [hMapAnims], a
-	ldh [hSCX], a
-	ldh [hSCY], a
-	ldh [rJOYP], a
+	ld [hMapAnims], a
+	ld [hSCX], a
+	ld [hSCY], a
+	ld [rJOYP], a
 
 	ld a, $8 ; HBlank int enable
-	ldh [rSTAT], a
+	ld [rSTAT], a
 
 	ld a, $90
-	ldh [hWY], a
-	ldh [rWY], a
+	ld [hWY], a
+	ld [rWY], a
 
 	ld a, 7
-	ldh [hWX], a
-	ldh [rWX], a
+	ld [hWX], a
+	ld [rWX], a
 
-	ld a, LCDC_DEFAULT ; %11100011
+	ld a, %11100011
 	; LCD on
 	; Win tilemap 1
 	; Win on
@@ -128,84 +133,83 @@ Init::
 	; OBJ 8x8
 	; OBJ on
 	; BG on
-	ldh [rLCDC], a
+	ld [rLCDC], a
 
 	ld a, CONNECTION_NOT_ESTABLISHED
-	ldh [hSerialConnectionStatus], a
+	ld [hSerialConnectionStatus], a
 
 	farcall InitCGBPals
 
-	ld a, HIGH(vBGMap1)
-	ldh [hBGMapAddress + 1], a
-	xor a ; LOW(vBGMap1)
-	ldh [hBGMapAddress], a
+	ld a, VBGMap1 / $100
+	ld [hBGMapAddress + 1], a
+	xor a ; VBGMap1 % $100
+	ld [hBGMapAddress], a
+
+	farcall StartClock
 
 	xor a
-	ld [MBC5SRamEnable], a
+	ld [MBC3LatchClock], a
+	ld [MBC3SRamEnable], a
 
-	ldh a, [hCGB]
+	ld a, [hCGB]
 	and a
-	jr z, .no_double_speed
-	call NormalSpeed
-.no_double_speed
+	call nz, DoubleSpeed
 
 	xor a
-	ldh [rIF], a
-	ld a, %1111 ; VBlank, LCDStat, Timer, Serial interrupts
-	ldh [rIE], a
+	ld [rIF], a
+	ld a, 1 << VBLANK | 1 << SERIAL
+	ld [rIE], a
 	ei
 
 	call DelayFrame
-
-	predef InitSGBBorder ; SGB init
 
 	call MapSetup_Sound_Off
 	xor a
 	ld [wMapMusic], a
 	jp GameInit
+; 245
 
-ClearVRAM::
+
+ClearVRAM:: ; 245
 ; Wipe VRAM banks 0 and 1
 
 	ld a, 1
-	ldh [rVBK], a
+	ld [rVBK], a
 	call .clear
 
-	xor a ; 0
-	ldh [rVBK], a
-.clear
-	ld hl, VRAM_Begin
-	ld bc, VRAM_End - VRAM_Begin
 	xor a
-	call ByteFill
-	ret
+	ld [rVBK], a
+.clear
+	ld hl, VTiles0
+	ld bc, $2000
+	xor a
+	jp ByteFill
+; 25a
 
-ClearWRAM::
+ClearWRAM:: ; 25a
 ; Wipe swappable WRAM banks (1-7)
-; Assumes CGB or AGB
 
 	ld a, 1
 .bank_loop
 	push af
-	ldh [rSVBK], a
+	ld [rSVBK], a
 	xor a
-	ld hl, WRAM1_Begin
-	ld bc, WRAM1_End - WRAM1_Begin
+	ld hl, wRAM1Start
+	ld bc, $1000
 	call ByteFill
 	pop af
 	inc a
 	cp 8
-	jr c, .bank_loop ; Should be jr c
+	jr c, .bank_loop
 	ret
+; 270
 
-ClearsScratch::
-; Wipe the first 32 bytes of sScratch
-
-	ld a, BANK(sScratch)
+ClearsScratch:: ; 270
+	xor a
 	call GetSRAMBank
 	ld hl, sScratch
 	ld bc, $20
 	xor a
 	call ByteFill
-	call CloseSRAM
-	ret
+	jp CloseSRAM
+; 283

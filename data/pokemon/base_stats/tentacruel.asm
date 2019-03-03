@@ -1,21 +1,23 @@
-	db TENTACRUEL ; 073
-
 	db  80,  70,  65, 100,  80, 120
-    evs  0,   0,   0,   0,   0,   2
 	;   hp  atk  def  spd  sat  sdf
 
-	db WATER, POISON ; type
+	db WATER, POISON
 	db 60 ; catch rate
 	db 205 ; base exp
-	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F50 ; gender ratio
-	db 20 ; step cycles to hatch
-	INCBIN "gfx/pokemon/tentacruel/front.dimensions"
-	db 0, 0 ;form differences
-	db 0, 0	;abilities
-	db GROWTH_SLOW ; growth rate
-	dn EGG_WATER_3, EGG_WATER_3 ; egg groups
+	db NO_ITEM ; item 1
+	db POISON_BARB ; item 2
+	dn FEMALE_50, 3 ; gender, step cycles to hatch
+	dn 6, 6 ; frontpic dimensions
+	db CLEAR_BODY ; ability 1
+	db LIQUID_OOZE ; ability 2
+	db RAIN_DISH ; hidden ability
+	db SLOW ; growth rate
+	dn INVERTEBRATE, INVERTEBRATE ; egg groups
 
-	; tm/hm learnset
-	tmhm CURSE, TOXIC, HIDDEN_POWER, SNORE, BLIZZARD, HYPER_BEAM, ICY_WIND, PROTECT, RAIN_DANCE, GIGA_DRAIN, ENDURE, FRUSTRATION, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, REST, ATTRACT, CUT, SURF, WHIRLPOOL, ICE_BEAM
+	; ev_yield
+	ev_yield   0,   0,   0,   0,   0,   2
+	;         hp, atk, def, spd, sat, sdf
+
+	; tmhm
+	tmhm CURSE, TOXIC, HAIL, HIDDEN_POWER, ICE_BEAM, BLIZZARD, HYPER_BEAM, PROTECT, RAIN_DANCE, GIGA_DRAIN, SAFEGUARD, RETURN, DOUBLE_TEAM, SLUDGE_BOMB, SUBSTITUTE, FACADE, REST, ATTRACT, THIEF, DAZZLINGLEAM, LEECH_LIFE, SCALD, ENDURE, WATER_PULSE, POISON_JAB, GIGA_IMPACT, SWORDS_DANCE, CUT, SURF, WHIRLPOOL, WATERFALL, DOUBLE_EDGE, ICY_WIND, KNOCK_OFF, SLEEP_TALK, SWAGGER
 	; end
