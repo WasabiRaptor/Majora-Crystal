@@ -1,230 +1,256 @@
-	const_def 2 ; object constants
-	const NEWBARKTOWN_TEACHER
-	const NEWBARKTOWN_FISHER
-	const NEWBARKTOWN_SILVER
-
-NewBarkTown_MapScripts:
-	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
+NewBarkTown_MapScriptHeader:
+	db 0 ; scene scripts
 
 	db 1 ; callbacks
-	callback MAPCALLBACK_NEWMAP, .FlyPoint
+	callback MAPCALLBACK_NEWMAP, NewBarkTownFlyPoint
 
-.DummyScene0:
-	end
+	db 5 ; warp events
+	warp_event  6,  3, ELMS_LAB, 1
+	warp_event 15,  5, KRISS_HOUSE_1F, 1
+	warp_event  3, 11, KRISS_NEIGHBORS_HOUSE, 1
+	warp_event 11, 13, LYRAS_HOUSE_1F, 1
+	warp_event 10,  2, ELMS_HOUSE, 2
 
-.DummyScene1:
-	end
+	db 7 ; coord events
+	coord_event  1,  8, 0, NewBarkTown_TeacherStopsYouTrigger1
+	coord_event  1,  9, 0, NewBarkTown_TeacherStopsYouTrigger2
+	coord_event  6,  4, 0, NewBarkTown_LyraIntroTrigger
+	coord_event 17,  6, 1, NewBarkTown_LyraFinalTrigger1
+	coord_event 17,  7, 1, NewBarkTown_LyraFinalTrigger2
+	coord_event 17,  8, 1, NewBarkTown_LyraFinalTrigger3
+	coord_event 17,  9, 1, NewBarkTown_LyraFinalTrigger4
 
-.FlyPoint:
+	db 5 ; bg events
+	bg_event  8,  8, SIGNPOST_JUMPTEXT, NewBarkTownSignText
+	bg_event 13,  5, SIGNPOST_JUMPTEXT, PlayersHouseSignText
+	bg_event  3,  3, SIGNPOST_JUMPTEXT, ElmsLabSignText
+	bg_event  9, 13, SIGNPOST_JUMPTEXT, LyrasHouseSignText
+	bg_event  3,  2, SIGNPOST_ITEM + POTION, EVENT_NEW_BARK_TOWN_HIDDEN_POTION
+
+	db 5 ; object events
+	object_event  3,  2, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, NewBarkTownSilverScript, EVENT_RIVAL_NEW_BARK_TOWN
+	object_event  1,  6, SPRITE_LYRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, ObjectEvent, EVENT_LYRA_NEW_BARK_TOWN
+	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, PERSONTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
+	object_event 13,  8, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, PAL_NPC_GREEN, PERSONTYPE_COMMAND, jumptextfaceplayer, Text_ElmDiscoveredNewMon, -1
+	object_event  7, 15, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, (1 << MORN) | (1 << DAY), 0, PERSONTYPE_COMMAND, jumptextfaceplayer, Text_GearIsImpressive, -1
+
+	const_def 1 ; object constants
+	const NEWBARKTOWN_SILVER
+	const NEWBARKTOWN_LYRA
+	const NEWBARKTOWN_TEACHER
+
+NewBarkTownFlyPoint:
 	setflag ENGINE_FLYPOINT_NEW_BARK
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	return
 
-MysteryDungeonEnterScript:
-	callasm MysteryDungeonSetup
-	special WarpToSpawnPoint
-	newloadmap MAPSETUP_TELEPORT
-	writecode VAR_MOVEMENT, PLAYER_NORMAL
-	end
-
-MysteryDungeonSetup:
-	ld a, 5
-	ld [hMysteryDungeonX], a
-	ld [hMysteryDungeonY], a
-	ld a, 11
-	call RandomRange
-	add 11
-	ld [hMysteryDungeonSeed], a
-	ld a, SPAWN_MYSTERY_DUNGEON
-	ld [wDefaultSpawnpoint], a
-	ret
-
-NewBarkTown_TeacherStopsYouScene1:
-	checkcode VAR_PARTYCOUNT
-	ifequal 0, .stop
-	setmapscene STARTING_TOWN, SCENE_FINISHED
-	end
-.stop
+NewBarkTown_TeacherStopsYouTrigger1:
 	playmusic MUSIC_MOM
 	turnobject NEWBARKTOWN_TEACHER, LEFT
-	opentext
-	writetext Text_WaitPlayer
-	waitbutton
-	closetext
+	showtext Text_WaitPlayer
 	turnobject PLAYER, RIGHT
 	applymovement NEWBARKTOWN_TEACHER, Movement_TeacherRunsToYou1_NBT
-	opentext
-	writetext Text_WhatDoYouThinkYoureDoing
-	waitbutton
-	closetext
+	showtext Text_WhatDoYouThinkYoureDoing
 	follow NEWBARKTOWN_TEACHER, PLAYER
 	applymovement NEWBARKTOWN_TEACHER, Movement_TeacherBringsYouBack1_NBT
 	stopfollow
-	opentext
-	writetext Text_ItsDangerousToGoAlone
-	waitbutton
-	closetext
+	showtext Text_ItsDangerousToGoAlone
 	special RestartMapMusic
 	end
 
-NewBarkTown_TeacherStopsYouScene2:
-	checkcode VAR_PARTYCOUNT
-	ifequal 0, .stop
-	setmapscene STARTING_TOWN, SCENE_FINISHED
-	end
-.stop
+NewBarkTown_TeacherStopsYouTrigger2:
 	playmusic MUSIC_MOM
 	turnobject NEWBARKTOWN_TEACHER, LEFT
-	opentext
-	writetext Text_WaitPlayer
-	waitbutton
-	closetext
+	showtext Text_WaitPlayer
 	turnobject PLAYER, RIGHT
 	applymovement NEWBARKTOWN_TEACHER, Movement_TeacherRunsToYou2_NBT
 	turnobject PLAYER, UP
-	opentext
-	writetext Text_WhatDoYouThinkYoureDoing
-	waitbutton
-	closetext
+	showtext Text_WhatDoYouThinkYoureDoing
 	follow NEWBARKTOWN_TEACHER, PLAYER
 	applymovement NEWBARKTOWN_TEACHER, Movement_TeacherBringsYouBack2_NBT
 	stopfollow
-	opentext
-	writetext Text_ItsDangerousToGoAlone
-	waitbutton
-	closetext
+	showtext Text_ItsDangerousToGoAlone
 	special RestartMapMusic
 	end
 
+NewBarkTown_LyraIntroTrigger:
+	appear NEWBARKTOWN_LYRA
+	special Special_FadeOutMusic
+	applymovement NEWBARKTOWN_LYRA, Movement_LyraEnters_NBT
+	playmusic MUSIC_LYRA_ENCOUNTER_HGSS
+	showemote EMOTE_SHOCK, NEWBARKTOWN_LYRA, 15
+	applymovement NEWBARKTOWN_LYRA, Movement_LyraApproaches_NBT
+	turnobject PLAYER, LEFT
+	showtext Text_LyraIntro
+	follow PLAYER, NEWBARKTOWN_LYRA
+	applyonemovement PLAYER, step_up
+	stopfollow
+	playsound SFX_EXIT_BUILDING
+	disappear PLAYER
+	applyonemovement NEWBARKTOWN_LYRA, step_up
+	playsound SFX_EXIT_BUILDING
+	disappear NEWBARKTOWN_LYRA
+	setscene $2
+	special FadeOutPalettes
+	pause 15
+	warpfacing UP, ELMS_LAB, 4, 11
+	end
+
+NewBarkTown_LyraFinalTrigger1:
+	moveobject NEWBARKTOWN_LYRA, 14, 11
+	jump NewBarkTown_LyraFinalTrigger
+
+NewBarkTown_LyraFinalTrigger2:
+	moveobject NEWBARKTOWN_LYRA, 14, 12
+	jump NewBarkTown_LyraFinalTrigger
+
+NewBarkTown_LyraFinalTrigger3:
+	moveobject NEWBARKTOWN_LYRA, 14, 13
+	jump NewBarkTown_LyraFinalTrigger
+
+NewBarkTown_LyraFinalTrigger4:
+	moveobject NEWBARKTOWN_LYRA, 14, 14
+NewBarkTown_LyraFinalTrigger:
+	appear NEWBARKTOWN_LYRA
+	applymovement NEWBARKTOWN_LYRA, Movement_LyraSaysGoodbye1_NBT
+	showemote EMOTE_SHOCK, NEWBARKTOWN_LYRA, 15
+	special Special_FadeOutMusic
+	pause 15
+	applymovement NEWBARKTOWN_LYRA, Movement_LyraSaysGoodbye2_NBT
+	turnobject PLAYER, LEFT
+	showtext Text_LyraGoodbye1
+	setevent EVENT_LYRA_NEW_BARK_TOWN
+	winlosstext Text_LyraGoodbyeWin, Text_LyraGoodbyeLoss
+	setlasttalked NEWBARKTOWN_LYRA
+	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	iftrue .Totodile
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .Chikorita
+	loadtrainer LYRA1, LYRA1_10
+	jump .AfterBattle
+
+.Totodile:
+	loadtrainer LYRA1, LYRA1_11
+	jump .AfterBattle
+
+.Chikorita:
+	loadtrainer LYRA1, LYRA1_12
+.AfterBattle
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	special DeleteSavedMusic
+	playmusic MUSIC_LYRA_DEPARTURE_HGSS
+	showtext Text_LyraGoodbye2
+	applymovement NEWBARKTOWN_LYRA, Movement_LyraSaysGoodbye3_NBT
+	disappear NEWBARKTOWN_LYRA
+	setscene $2
+	playmapmusic
+	end
+
 NewBarkTownTeacherScript:
-	faceplayer
-	opentext
 	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
-	iftrue .CallMom
+	iftrue_jumptextfaceplayer Text_CallMomOnGear
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue .TellMomYoureLeaving
+	iftrue_jumptextfaceplayer Text_TellMomIfLeaving
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
-	iftrue .MonIsAdorable
-	writetext Text_GearIsImpressive
-	waitbutton
-	closetext
-	end
-
-.MonIsAdorable:
-	writetext Text_YourMonIsAdorable
-	waitbutton
-	closetext
-	end
-
-.TellMomYoureLeaving:
-	writetext Text_TellMomIfLeaving
-	waitbutton
-	closetext
-	end
-
-.CallMom:
-	writetext Text_CallMomOnGear
-	waitbutton
-	closetext
-	end
-
-NewBarkTownFisherScript:
-	jumptextfaceplayer Text_ElmDiscoveredNewMon
+	iftrue_jumptextfaceplayer Text_YourMonIsAdorable
+	jumptextfaceplayer Text_RefreshingBreeze
 
 NewBarkTownSilverScript:
-	opentext
-	writetext NewBarkTownRivalText1
-	waitbutton
-	closetext
+	showtext NewBarkTownRivalText1
 	turnobject NEWBARKTOWN_SILVER, LEFT
-	opentext
-	writetext NewBarkTownRivalText2
-	waitbutton
-	closetext
+	showtext NewBarkTownRivalText2
+	turnobject PLAYER, UP
+	applyonemovement PLAYER, fix_facing
 	follow PLAYER, NEWBARKTOWN_SILVER
-	applymovement PLAYER, Movement_SilverPushesYouAway_NBT
+	applyonemovement PLAYER, step_down
 	stopfollow
 	pause 5
 	turnobject NEWBARKTOWN_SILVER, DOWN
 	pause 5
 	playsound SFX_TACKLE
-	applymovement PLAYER, Movement_SilverShovesYouOut_NBT
-	applymovement NEWBARKTOWN_SILVER, Movement_SilverReturnsToTheShadows_NBT
+	applyonemovement PLAYER, jump_step_down
+	applyonemovement PLAYER, remove_fixed_facing
+	applyonemovement NEWBARKTOWN_SILVER, step_right
 	end
 
-NewBarkTownSign:
-	jumptext NewBarkTownSignText
-
-NewBarkTownPlayersHouseSign:
-	jumptext NewBarkTownPlayersHouseSignText
-
-NewBarkTownElmsLabSign:
-	jumptext NewBarkTownElmsLabSignText
-
-NewBarkTownElmsHouseSign:
-	jumptext NewBarkTownElmsHouseSignText
-
 Movement_TeacherRunsToYou1_NBT:
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
+	step_left
+	step_left
+	step_left
+	step_left
 	step_end
 
 Movement_TeacherRunsToYou2_NBT:
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	turn_head DOWN
-	step_end
-
-Movement_TeacherBringsYouBack1_NBT:
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	turn_head LEFT
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
+	turn_head_down
 	step_end
 
 Movement_TeacherBringsYouBack2_NBT:
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	turn_head LEFT
+	step_right
+Movement_TeacherBringsYouBack1_NBT:
+	step_right
+	step_right
+	step_right
+	step_right
+	turn_head_left
 	step_end
 
-Movement_SilverPushesYouAway_NBT:
-	turn_head UP
-	step DOWN
+Movement_LyraEnters_NBT:
+	step_right
+	step_right
 	step_end
 
-Movement_SilverShovesYouOut_NBT:
-	turn_head UP
-	fix_facing
-	jump_step DOWN
-	remove_fixed_facing
+Movement_LyraApproaches_NBT:
+	step_right
+	step_up
+	step_up
+	step_right
 	step_end
 
-Movement_SilverReturnsToTheShadows_NBT:
-	step RIGHT
+Movement_LyraSaysGoodbye1_NBT:
+	step_up
+	step_up
+	step_end
+
+Movement_LyraSaysGoodbye2_NBT:
+	step_right
+	step_up
+	step_up
+	step_up
+	step_right
+	step_end
+
+Movement_LyraSaysGoodbye3_NBT:
+	step_left
+	step_down
+	step_down
+	step_down
+	step_down
+	step_down
 	step_end
 
 Text_GearIsImpressive:
-	text "Wow, your #GEAR"
+	text "Wow, your #gear"
 	line "is impressive!"
 
 	para "Did your mom get"
 	line "it for you?"
 	done
 
+Text_RefreshingBreeze:
+	text "There's always"
+	line "such a refreshing"
+	cont "breeze here."
+	done
+
 Text_WaitPlayer:
-	text "Wait, <PLAY_G>!"
+	text "Wait, <PLAYER>!"
 	done
 
 Text_WhatDoYouThinkYoureDoing:
@@ -235,9 +261,9 @@ Text_WhatDoYouThinkYoureDoing:
 Text_ItsDangerousToGoAlone:
 	text "It's dangerous to"
 	line "go out without a"
-	cont "#MON!"
+	cont "#mon!"
 
-	para "Wild #MON"
+	para "Wild #mon"
 	line "jump out of the"
 
 	para "grass on the way"
@@ -245,13 +271,13 @@ Text_ItsDangerousToGoAlone:
 	done
 
 Text_YourMonIsAdorable:
-	text "Oh! Your #MON"
+	text "Oh! Your #mon"
 	line "is adorable!"
 	cont "I wish I had one!"
 	done
 
 Text_TellMomIfLeaving:
-	text "Hi, <PLAY_G>!"
+	text "Hi, <PLAYER>!"
 	line "Leaving again?"
 
 	para "You should tell"
@@ -261,7 +287,7 @@ Text_TellMomIfLeaving:
 
 Text_CallMomOnGear:
 	text "Call your mom on"
-	line "your #GEAR to"
+	line "your #gear to"
 
 	para "let her know how"
 	line "you're doing."
@@ -270,17 +296,17 @@ Text_CallMomOnGear:
 Text_ElmDiscoveredNewMon:
 	text "Yo, <PLAYER>!"
 
-	para "I hear PROF.ELM"
+	para "I hear Prof.Elm"
 	line "discovered some"
-	cont "new #MON."
+	cont "new #mon."
 	done
 
 NewBarkTownRivalText1:
-	text "<……>"
+	text "……"
 
 	para "So this is the"
-	line "famous ELM #MON"
-	cont "LAB…"
+	line "famous Elm #mon"
+	cont "Lab…"
 	done
 
 NewBarkTownRivalText2:
@@ -288,50 +314,111 @@ NewBarkTownRivalText2:
 	line "staring at?"
 	done
 
+Text_LyraIntro:
+	text "Lyra: Oh, hello,"
+	line "<PLAYER>!"
+
+	para "I came by your"
+	line "house earlier,"
+
+	para "but you were"
+	line "still sleeping."
+
+	para "You know how I"
+	line "assist Prof.Elm"
+	cont "sometimes?"
+
+	para "He's starting new"
+	line "#mon research"
+
+	para "and would like us"
+	line "both to help."
+
+	para "Let's go and see"
+	line "what he wants!"
+	done
+
+Text_LyraGoodbye1:
+	text "Lyra: <PLAYER>!"
+
+	para "I heard that you"
+	line "have all the Gym"
+	cont "badges in Johto."
+
+	para "…You're really"
+	line "something,"
+	cont "<PLAYER>."
+
+	para "To think that we"
+	line "both started our"
+
+	para "journeys in this"
+	line "town…"
+
+	para "I do what I can"
+	line "to help the Prof-"
+	cont "essor, but I could"
+
+	para "never take on the"
+	line "League Champion."
+
+	para "…Before you go…"
+
+	para "How about one"
+	line "more battle?"
+
+	para "I want to see the"
+	line "kind of trainer"
+	cont "you've become!"
+	done
+
+Text_LyraGoodbyeWin:
+	text "You're as talented"
+	line "as I expected!"
+	done
+
+Text_LyraGoodbyeLoss:
+	text "I hope you didn't"
+	line "let me win…"
+	done
+
+Text_LyraGoodbye2:
+	text "…Thanks, <PLAYER>."
+
+	para "I can tell how"
+	line "much work and"
+
+	para "love you put into"
+	line "raising your"
+	cont "#mon."
+
+	para "…So, this is"
+	line "goodbye."
+
+	para "I know you can win"
+	line "at the #mon"
+	cont "League!"
+
+	para "You're going to be"
+	line "a great Champion!"
+	done
+
 NewBarkTownSignText:
-	text "NEW BARK TOWN"
+	text "New Bark Town"
 
 	para "The Town Where the"
 	line "Winds of a New"
 	cont "Beginning Blow"
 	done
 
-NewBarkTownPlayersHouseSignText:
+PlayersHouseSignText:
 	text "<PLAYER>'s House"
 	done
 
-NewBarkTownElmsLabSignText:
-	text "ELM #MON LAB"
+ElmsLabSignText:
+	text "Elm #mon Lab"
 	done
 
-NewBarkTownElmsHouseSignText:
-	text "ELM'S HOUSE"
+LyrasHouseSignText:
+	text "Lyra's House"
 	done
-
-NewBarkTown_MapEvents:
-	db 0, 0 ; filler
-
-	db 4 ; warp events
-	warp_event  6,  3, ELMS_LAB, 1
-	warp_event 13,  5, PLAYERS_HOUSE_1F, 1
-	warp_event  3, 11, PLAYERS_NEIGHBORS_HOUSE, 1
-	warp_event 11, 13, ELMS_HOUSE, 1
-
-
-	db 2 ; coord events
-	coord_event  1,  8, SCENE_DEFAULT, NewBarkTown_TeacherStopsYouScene1
-	coord_event  1,  9, SCENE_DEFAULT, NewBarkTown_TeacherStopsYouScene2
-
-	db 4 ; bg events
-	bg_event  8,  8, BGEVENT_READ, NewBarkTownSign
-	bg_event 11,  5, BGEVENT_READ, NewBarkTownPlayersHouseSign
-	bg_event  3,  3, BGEVENT_READ, NewBarkTownElmsLabSign
-	bg_event  9, 13, BGEVENT_READ, NewBarkTownElmsHouseSign
-
-	db 4 ; object events
-	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
-	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
-	object_event  3,  2, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownSilverScript, EVENT_RIVAL_STARTING_TOWN
-
-	object_event 14,  11, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MysteryDungeonEnterScript, -1
-

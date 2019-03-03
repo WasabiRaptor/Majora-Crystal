@@ -1,67 +1,3 @@
-LycanrocFramesPointers:
-	dw LycanrocFrames
-	dw Lycanroc_DuskFrames
-	dw Lycanroc_MidnightFrames
-	dw Lycanroc_DawnFrames
-
-MeowthFramesPointers:
-	dw MeowthFrames
-	dw Meowth_AlolaFrames
-
-PersianFramesPointers:
-	dw PersianFrames
-	dw Persian_AlolaFrames
-
-RotomFramesPointers:
-	dw RotomFrames
-	dw Rotom_FanFrames
-	dw Rotom_FrostFrames
-	dw Rotom_HeatFrames
-	dw Rotom_MowFrames
-	dw Rotom_WashFrames
-
-MeowsticFramesPointers:
-	dw Meowstic_MFrames
-	dw Meowstic_FFrames
-
-GrimerFramesPointers:
-	dw GrimerFrames
-	dw Grimer_AlolaFrames
-
-MukFramesPointers:
-	dw MukFrames
-	dw Muk_AlolaFrames
-
-NidoranFramesPointers:
-	dw Nidoran_MFrames
-	dw Nidoran_FFrames
-
-SandshrewFramesPointers:
-	dw SandshrewFrames
-	dw Sandshrew_AlolaFrames
-
-SandslashFramesPointers:
-	dw SandslashFrames
-	dw Sandslash_AlolaFrames
-
-SawsbuckFramesPointers:
-	dw SawsbuckFrames
-	dw Sawsbuck_SummerFrames
-	dw Sawsbuck_FallFrames
-	dw Sawsbuck_WinterFrames
-
-GirafarigFramesPointers:
-	dw GirafarigFrames
-	dw Girafarig_BetaFrames
-
-VulpixFramesPointers:
-	dw VulpixFrames
-	dw Vulpix_AlolaFrames
-
-NinetalesFramesPointers:
-	dw NinetalesFrames
-	dw Ninetales_AlolaFrames
-
 UnownFramesPointers:
 	dw UnownAFrames
 	dw UnownBFrames
@@ -89,28 +25,49 @@ UnownFramesPointers:
 	dw UnownXFrames
 	dw UnownYFrames
 	dw UnownZFrames
+	dw UnownExclamationFrames
+	dw UnownQuestionFrames
 
-AegislashFramesPointers
-	dw AegislashFrames
-	dw Aegislash_BladeFrames
+PikachuFramesPointers:
+	dw PikachuPlainFrames
+	dw PikachuFlyFrames
+	dw PikachuSurfFrames
+	dw PikachuPikaFrames
+	dw PikachuChuchuFrames
 
-SuicuneFramesPointers:
-	dw SuicuneFrames
-	dw Suicune_BetaFrames
+PichuFramesPointers:
+	dw PichuPlainFrames
+	dw PichuSpikyFrames
 
-RaikouFramesPointers:
-	dw RaikouFrames
-	dw Raikou_BetaFrames
+ArbokFramesPointers:
+	dw ArbokJohtoFrames
+	dw ArbokKantoFrames
+	dw ArbokKogaFrames
+	dw ArbokAgathaFrames
+	dw ArbokArianaFrames
 
-EnteiFramesPointers:
-	dw EnteiFrames
-	dw Entei_BetaFrames
+MagikarpFramesPointers:
+	dw MagikarpPlainFrames
+	dw MagikarpSkellyFrames
+	dw MagikarpCalico1Frames
+	dw MagikarpCalico2Frames
+	dw MagikarpCalico3Frames
+	dw MagikarpTwoToneFrames
+	dw MagikarpOrcaFrames
+	dw MagikarpDapplesFrames
+	dw MagikarpTigerFrames
+	dw MagikarpZebraFrames
+	dw MagikarpStripeFrames
+	dw MagikarpBubblesFrames
+	dw MagikarpForeheadFrames
+	dw MagikarpMaskFrames
 
-ShayminFramesPointers:
-	dw ShayminFrames
-	dw Shaymin_SkyFrames
+GyaradosFramesPointers:
+rept NUM_MAGIKARP
+	dw GyaradosPlainFrames
+endr
+	dw GyaradosRedFrames
 
-ZygardeFramesPointers:
-	dw Zygarde_Ten_PercentFrames
-	dw ZygardeFrames
-	dw Zygarde_CompleteFrames
+MewtwoFramesPointers:
+	dw MewtwoPlainFrames
+	dw MewtwoArmoredFrames
