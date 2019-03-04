@@ -3,6 +3,7 @@ SECTION "StartingTown Map Scripts", ROMX
 INCLUDE "maps/PlayersHouse1F.asm"
 INCLUDE "maps/PlayersHouse2F.asm"
 INCLUDE "maps/DayCare.asm"
+INCLUDE "maps/MoveDeletersHouse.asm"
 
 
 SECTION "Utility Map Scripts", ROMX

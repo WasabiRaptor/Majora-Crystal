@@ -938,7 +938,7 @@ LinkTradeMenu: ; 16d70c
 	ret
 
 .loop2
-	call RTC
+	call UpdateTime	
 	call .TryAnims
 	ret c
 	ld a, [w2DMenuFlags1]

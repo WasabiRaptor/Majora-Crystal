@@ -1,1065 +1,1240 @@
-; ScriptCommandTable indexes (see engine/overworld/scripting.asm)
 	enum_start
 
-	enum scall_command ; $00
-scall: MACRO
+	enum scall_command
+scall: macro
 	db scall_command
 	dw \1 ; pointer
-ENDM
+	endm
 
-	enum farscall_command ; $01
-farscall: MACRO
+	enum farscall_command
+farscall: macro
 	db farscall_command
 	dba \1
-ENDM
+	endm
 
-	enum ptcall_command ; $02
-ptcall: MACRO
+	enum ptcall_command
+ptcall: macro
 	db ptcall_command
 	dw \1 ; pointer
-ENDM
+	endm
 
-	enum jump_command ; $03
-jump: MACRO
+	enum jump_command
+jump: macro
 	db jump_command
 	dw \1 ; pointer
-ENDM
+	endm
 
-	enum farjump_command ; $04
-farjump: MACRO
+	enum farjump_command
+farjump: macro
 	db farjump_command
 	dba \1
-ENDM
+	endm
 
-	enum ptjump_command ; $05
-ptjump: MACRO
+	enum ptjump_command
+ptjump: macro
 	db ptjump_command
 	dw \1 ; pointer
-ENDM
+	endm
 
-	enum ifequal_command ; $06
-ifequal: MACRO
+	enum ifequal_command
+ifequal: macro
 	db ifequal_command
 	db \1 ; byte
 	dw \2 ; pointer
-ENDM
+	endm
 
-	enum ifnotequal_command ; $07
-ifnotequal: MACRO
+	enum ifnotequal_command
+ifnotequal: macro
 	db ifnotequal_command
 	db \1 ; byte
 	dw \2 ; pointer
-ENDM
+	endm
 
-	enum iffalse_command ; $08
-iffalse: MACRO
+	enum iffalse_command
+iffalse: macro
 	db iffalse_command
 	dw \1 ; pointer
-ENDM
+	endm
 
-	enum iftrue_command ; $09
-iftrue: MACRO
+	enum iftrue_command
+iftrue: macro
 	db iftrue_command
 	dw \1 ; pointer
-ENDM
+	endm
 
-	enum ifgreater_command ; $0a
-ifgreater: MACRO
+	enum ifgreater_command
+ifgreater: macro
 	db ifgreater_command
 	db \1 ; byte
 	dw \2 ; pointer
-ENDM
+	endm
 
-	enum ifless_command ; $0b
-ifless: MACRO
+	enum ifless_command
+ifless: macro
 	db ifless_command
 	db \1 ; byte
 	dw \2 ; pointer
-ENDM
+	endm
 
-	enum jumpstd_command ; $0c
-jumpstd: MACRO
+	enum jumpstd_command
+jumpstd: macro
 	db jumpstd_command
-	dw \1 ; predefined_script
-ENDM
+	db \1 ; predefined_script
+	endm
 
-	enum callstd_command ; $0d
-callstd: MACRO
+	enum callstd_command
+callstd: macro
 	db callstd_command
-	dw \1 ; predefined_script
-ENDM
+	db \1 ; predefined_script
+	endm
 
-	enum callasm_command ; $0e
-callasm: MACRO
+	enum callasm_command
+callasm: macro
 	db callasm_command
 	dba \1
-ENDM
+	endm
 
-	enum special_command ; $0f
-special: MACRO
+	enum special_command
+special: macro
 	db special_command
-	dw (\1Special - SpecialsPointers) / 3
-ENDM
+	db (\1Special - SpecialsPointers) / 3
+	endm
 
-	enum ptcallasm_command ; $10
-ptcallasm: MACRO
+	enum ptcallasm_command
+ptcallasm: macro
 	db ptcallasm_command
 	dw \1 ; asm
-ENDM
+	endm
 
-	enum checkmapscene_command ; $11
-checkmapscene: MACRO
+	enum checkmapscene_command
+checkmapscene: macro
 	db checkmapscene_command
 	map_id \1 ; map
-ENDM
+	endm
 
-	enum setmapscene_command ; $12
-setmapscene: MACRO
+	enum setmapscene_command
+setmapscene: macro
 	db setmapscene_command
 	map_id \1 ; map
-	db \2 ; scene_id
-ENDM
+	db \2 ; trigger_id
+	endm
 
-	enum checkscene_command ; $13
-checkscene: MACRO
+	enum checkscene_command
+checkscene: macro
 	db checkscene_command
-ENDM
+	endm
 
-	enum setscene_command ; $14
-setscene: MACRO
+	enum setscene_command
+setscene: macro
 	db setscene_command
-	db \1 ; scene_id
-ENDM
+	db \1 ; trigger_id
+	endm
 
-	enum writebyte_command ; $15
-writebyte: MACRO
+	enum writebyte_command
+writebyte: macro
 	db writebyte_command
 	db \1 ; value
-ENDM
+	endm
 
-	enum addvar_command ; $16
-addvar: MACRO
+	enum addvar_command
+addvar: macro
 	db addvar_command
 	db \1 ; value
-ENDM
+	endm
 
-	enum random_command ; $17
-random: MACRO
+	enum random_command
+random: macro
 	db random_command
 	db \1 ; input
-ENDM
+	endm
 
-	enum checkver_command ; $18
-checkver: MACRO
-	db checkver_command
-ENDM
-
-	enum copybytetovar_command ; $19
-copybytetovar: MACRO
+	enum copybytetovar_command
+copybytetovar: macro
 	db copybytetovar_command
 	dw \1 ; address
-ENDM
+	endm
 
-	enum copyvartobyte_command ; $1a
-copyvartobyte: MACRO
+	enum copyvartobyte_command
+copyvartobyte: macro
 	db copyvartobyte_command
 	dw \1 ; address
-ENDM
+	endm
 
-	enum loadvar_command ; $1b
-loadvar: MACRO
+	enum loadvar_command
+loadvar: macro
 	db loadvar_command
 	dw \1 ; address
 	db \2 ; value
-ENDM
+	endm
 
-	enum checkcode_command ; $1c
-checkcode: MACRO
+	enum checkcode_command
+checkcode: macro
 	db checkcode_command
 	db \1 ; variable_id
-ENDM
+	endm
 
-	enum writevarcode_command ; $1d
-writevarcode: MACRO
+	enum writevarcode_command
+writevarcode: macro
 	db writevarcode_command
 	db \1 ; variable_id
-ENDM
+	endm
 
-	enum writecode_command ; $1e
-writecode: MACRO
+	enum writecode_command
+writecode: macro
 	db writecode_command
 	db \1 ; variable_id
 	db \2 ; value
-ENDM
+	endm
 
-	enum giveitem_command ; $1f
-giveitem: MACRO
-if _NARG == 1
-	giveitem \1, 1
-else
+	enum giveitem_command
+giveitem: macro
 	db giveitem_command
 	db \1 ; item
+if _NARG == 2
 	db \2 ; quantity
-endc
-ENDM
-
-	enum takeitem_command ; $20
-takeitem: MACRO
-if _NARG == 1
-	takeitem \1, 1
 else
+	db 1
+endc
+	endm
+
+	enum takeitem_command
+takeitem: macro
 	db takeitem_command
 	db \1 ; item
+if _NARG == 2
 	db \2 ; quantity
+else
+	db 1
 endc
-ENDM
+	endm
 
-	enum checkitem_command ; $21
-checkitem: MACRO
+	enum checkitem_command
+checkitem: macro
 	db checkitem_command
 	db \1 ; item
-ENDM
+	endm
 
-	enum givemoney_command ; $22
-givemoney: MACRO
+	enum givemoney_command
+givemoney: macro
 	db givemoney_command
 	db \1 ; account
 	dt \2 ; money
-ENDM
+	endm
 
-	enum takemoney_command ; $23
-takemoney: MACRO
+	enum takemoney_command
+takemoney: macro
 	db takemoney_command
 	db \1 ; account
 	dt \2 ; money
-ENDM
+	endm
 
-	enum checkmoney_command ; $24
-checkmoney: MACRO
+	enum checkmoney_command
+checkmoney: macro
 	db checkmoney_command
 	db \1 ; account
 	dt \2 ; money
-ENDM
+	endm
 
-	enum givecoins_command ; $25
-givecoins: MACRO
+	enum givecoins_command
+givecoins: macro
 	db givecoins_command
 	dw \1 ; coins
-ENDM
+	endm
 
-	enum takecoins_command ; $26
-takecoins: MACRO
+	enum takecoins_command
+takecoins: macro
 	db takecoins_command
 	dw \1 ; coins
-ENDM
+	endm
 
-	enum checkcoins_command ; $27
-checkcoins: MACRO
+	enum checkcoins_command
+checkcoins: macro
 	db checkcoins_command
 	dw \1 ; coins
-ENDM
+	endm
 
-	enum addcellnum_command ; $28
-addcellnum: MACRO
+	enum addcellnum_command
+addcellnum: macro
 	db addcellnum_command
 	db \1 ; person
-ENDM
+	endm
 
-	enum delcellnum_command ; $29
-delcellnum: MACRO
+	enum delcellnum_command
+delcellnum: macro
 	db delcellnum_command
 	db \1 ; person
-ENDM
+	endm
 
-	enum checkcellnum_command ; $2a
-checkcellnum: MACRO
+	enum checkcellnum_command
+checkcellnum: macro
 	db checkcellnum_command
 	db \1 ; person
-ENDM
+	endm
 
-	enum checktime_command ; $2b
-checktime: MACRO
+	enum checktime_command
+checktime: macro
 	db checktime_command
 	db \1 ; time
-ENDM
+	endm
 
-	enum checkpoke_command ; $2c
-checkpoke: MACRO
+	enum checkpoke_command
+checkpoke: macro
 	db checkpoke_command
 	db \1 ; pkmn
-ENDM
+	endm
 
-	enum givepoke_command ; $2d
-givepoke: MACRO
-if _NARG == 2
-	givepoke \1, \2, NO_ITEM, FALSE
-elif _NARG == 3
-	givepoke \1, \2, \3, FALSE
-else
+	enum givepoke_command
+givepoke: macro
 	db givepoke_command
 	db \1 ; pokemon
 	db \2 ; level
+	if _NARG >= 3
 	db \3 ; item
+	if _NARG >= 4
 	db \4 ; trainer
-if \4
+	if \4
 	dw \5 ; trainer_name_pointer
 	dw \6 ; pkmn_nickname
-endc
-endc
-ENDM
+	endc
+	else
+	db 0
+	endc
+	else
+	db 0, 0
+	endc
+	endm
 
-	enum giveegg_command ; $2e
-giveegg: MACRO
+	enum giveegg_command
+giveegg: macro
 	db giveegg_command
 	db \1 ; pkmn
 	db \2 ; level
-ENDM
+	endm
 
-	enum givepokemail_command ; $2f
-givepokemail: MACRO
-	db givepokemail_command
+	enum givepokeitem_command
+givepokeitem: macro
+	db givepokeitem_command
 	dw \1 ; pointer
-ENDM
+	endm
 
-	enum checkpokemail_command ; $30
-checkpokemail: MACRO
-	db checkpokemail_command
+	enum checkpokeitem_command
+checkpokeitem: macro
+	db checkpokeitem_command
 	dw \1 ; pointer
-ENDM
+	endm
 
-	enum checkevent_command ; $31
-checkevent: MACRO
+	enum checkevent_command
+checkevent: macro
 	db checkevent_command
 	dw \1 ; event_flag
-ENDM
+	endm
 
-	enum clearevent_command ; $32
-clearevent: MACRO
+	enum clearevent_command
+clearevent: macro
 	db clearevent_command
 	dw \1 ; event_flag
-ENDM
+	endm
 
-	enum setevent_command ; $33
-setevent: MACRO
+	enum setevent_command
+setevent: macro
 	db setevent_command
 	dw \1 ; event_flag
-ENDM
+	endm
 
-	enum checkflag_command ; $34
-checkflag: MACRO
+	enum checkflag_command
+checkflag: macro
 	db checkflag_command
 	dw \1 ; engine_flag
-ENDM
+	endm
 
-	enum clearflag_command ; $35
-clearflag: MACRO
+	enum clearflag_command
+clearflag: macro
 	db clearflag_command
 	dw \1 ; engine_flag
-ENDM
+	endm
 
-	enum setflag_command ; $36
-setflag: MACRO
+	enum setflag_command
+setflag: macro
 	db setflag_command
 	dw \1 ; engine_flag
-ENDM
+	endm
 
-	enum wildon_command ; $37
-wildon: MACRO
+	enum wildon_command
+wildon: macro
 	db wildon_command
-ENDM
+	endm
 
-	enum wildoff_command ; $38
-wildoff: MACRO
+	enum wildoff_command
+wildoff: macro
 	db wildoff_command
-ENDM
+	endm
 
-	enum xycompare_command ; $39
-xycompare: MACRO
-	db xycompare_command
-	dw \1 ; pointer
-ENDM
-
-	enum warpmod_command ; $3a
-warpmod: MACRO
+	enum warpmod_command
+warpmod: macro
 	db warpmod_command
 	db \1 ; warp_id
 	map_id \2 ; map
-ENDM
+	endm
 
-	enum blackoutmod_command ; $3b
-blackoutmod: MACRO
+	enum blackoutmod_command
+blackoutmod: macro
 	db blackoutmod_command
 	map_id \1 ; map
-ENDM
+	endm
 
-	enum warp_command ; $3c
-warp: MACRO
+	enum warp_command
+warp: macro
 	db warp_command
 	map_id \1 ; map
 	db \2 ; x
 	db \3 ; y
-ENDM
+	endm
 
-	enum readmoney_command ; $3d
-readmoney: MACRO
+	enum readmoney_command
+readmoney: macro
 	db readmoney_command
 	db \1 ; account
 	db \2 ; memory
-ENDM
+	endm
 
-	enum readcoins_command ; $3e
-readcoins: MACRO
+	enum readcoins_command
+readcoins: macro
 	db readcoins_command
 	db \1 ; memory
-ENDM
+	endm
 
-	enum vartomem_command ; $3f
-vartomem: MACRO
-	db vartomem_command
+	enum RAM2MEM_command
+RAM2MEM: macro
+	db RAM2MEM_command
 	db \1 ; memory
-ENDM
+	endm
 
-	enum pokenamemem_command ; $40
-pokenamemem: MACRO
+	enum pokenamemem_command
+pokenamemem: macro
 	db pokenamemem_command
 	db \1 ; pokemon
 	db \2 ; memory
-ENDM
+	endm
 
-	enum itemtotext_command ; $41
-itemtotext: MACRO
+	enum itemtotext_command
+itemtotext: macro
 	db itemtotext_command
 	db \1 ; item
 	db \2 ; memory
-ENDM
+	endm
 
-	enum mapnametotext_command ; $42
-mapnametotext: MACRO
+	enum mapnametotext_command
+mapnametotext: macro
 	db mapnametotext_command
 	db \1 ; memory
-ENDM
+	endm
 
-	enum trainertotext_command ; $43
-trainertotext: MACRO
+	enum trainertotext_command
+trainertotext: macro
 	db trainertotext_command
 	db \1 ; trainer_id
 	db \2 ; trainer_group
 	db \3 ; memory
-ENDM
+	endm
 
-	enum stringtotext_command ; $44
-stringtotext: MACRO
+	enum stringtotext_command
+stringtotext: macro
 	db stringtotext_command
 	dw \1 ; text_pointer
 	db \2 ; memory
-ENDM
+	endm
 
-	enum itemnotify_command ; $45
-itemnotify: MACRO
+	enum itemnotify_command
+itemnotify: macro
 	db itemnotify_command
-ENDM
+	endm
 
-	enum pocketisfull_command ; $46
-pocketisfull: MACRO
+	enum pocketisfull_command
+pocketisfull: macro
 	db pocketisfull_command
-ENDM
+	endm
 
-	enum opentext_command ; $47
-opentext: MACRO
+	enum opentext_command
+opentext: macro
 	db opentext_command
-ENDM
+	endm
 
-	enum refreshscreen_command ; $48
-refreshscreen: MACRO
-if _NARG == 0
-	refreshscreen 0
-else
+	enum refreshscreen_command
+refreshscreen: macro
 	db refreshscreen_command
-	db \1 ; dummy
-endc
-ENDM
+	endm
 
-	enum closetext_command ; $49
-closetext: MACRO
+	enum closetext_command
+closetext: macro
 	db closetext_command
-ENDM
+	endm
 
-	enum loadbytec2cf_command ; $4a
-loadbytec2cf: MACRO
-	db loadbytec2cf_command
-	db \1 ; byte
-ENDM
-
-	enum farwritetext_command ; $4b
-farwritetext: MACRO
+	enum farwritetext_command
+farwritetext: macro
 	db farwritetext_command
 	dba \1
-ENDM
+	endm
 
-	enum writetext_command ; $4c
-writetext: MACRO
+	enum writetext_command
+writetext: macro
 	db writetext_command
 	dw \1 ; text_pointer
-ENDM
+	endm
 
-	enum repeattext_command ; $4d
-repeattext: MACRO
+	enum repeattext_command
+repeattext: macro
 	db repeattext_command
 	db \1 ; byte
 	db \2 ; byte
-ENDM
+	endm
 
-	enum yesorno_command ; $4e
-yesorno: MACRO
+	enum yesorno_command
+yesorno: macro
 	db yesorno_command
-ENDM
+	endm
 
-	enum loadmenu_command ; $4f
-loadmenu: MACRO
+	enum loadmenu_command
+loadmenu: macro
 	db loadmenu_command
-	dw \1 ; menu_header
-ENDM
+	dw \1 ; data
+	endm
 
-	enum closewindow_command ; $50
-closewindow: MACRO
+	enum closewindow_command
+closewindow: macro
 	db closewindow_command
-ENDM
+	endm
 
-	enum jumptextfaceplayer_command ; $51
-jumptextfaceplayer: MACRO
+	enum jumptextfaceplayer_command
+jumptextfaceplayer: macro
 	db jumptextfaceplayer_command
 	dw \1 ; text_pointer
-ENDM
+	endm
 
-; if _BRASS
-	enum farjumptext_command ; $52
-farjumptext: MACRO
+	enum farjumptext_command
+farjumptext: macro
 	db farjumptext_command
 	dba \1
-ENDM
-; endc
+	endm
 
-	enum jumptext_command ; $53
-jumptext: MACRO
+	enum jumptext_command
+jumptext: macro
 	db jumptext_command
 	dw \1 ; text_pointer
-ENDM
+	endm
 
-	enum waitbutton_command ; $54
-waitbutton: MACRO
+	enum waitbutton_command
+waitbutton: macro
 	db waitbutton_command
-ENDM
+	endm
 
-	enum buttonsound_command ; $55
-buttonsound: MACRO
+	enum buttonsound_command
+buttonsound: macro
 	db buttonsound_command
-ENDM
+	endm
 
-	enum pokepic_command ; $56
-pokepic: MACRO
+	enum pokepic_command
+pokepic: macro
 	db pokepic_command
 	db \1 ; pokemon
-ENDM
+if _NARG == 2
+	db \2 ; party flag
+else
+	db 0
+endc
+	endm
 
-	enum closepokepic_command ; $57
-closepokepic: MACRO
+	enum closepokepic_command
+closepokepic: macro
 	db closepokepic_command
-ENDM
+	endm
 
-	enum _2dmenu_command ; $58
-_2dmenu: MACRO
+	enum _2dmenu_command
+_2dmenu: macro
 	db _2dmenu_command
-ENDM
+	endm
 
-	enum verticalmenu_command ; $59
-verticalmenu: MACRO
+	enum verticalmenu_command
+verticalmenu: macro
 	db verticalmenu_command
-ENDM
+	endm
 
-	enum loadpikachudata_command ; $5a
-loadpikachudata: MACRO
-	db loadpikachudata_command
-ENDM
-
-	enum randomwildmon_command ; $5b
-randomwildmon: MACRO
+	enum randomwildmon_command
+randomwildmon: macro
 	db randomwildmon_command
-ENDM
+	endm
 
-	enum loadmemtrainer_command ; $5c
-loadmemtrainer: MACRO
+	enum loadmemtrainer_command
+loadmemtrainer: macro
 	db loadmemtrainer_command
-ENDM
+	endm
 
-	enum loadwildmon_command ; $5d
-loadwildmon: MACRO
+	enum loadwildmon_command
+loadwildmon: macro
 	db loadwildmon_command
 	db \1 ; pokemon
 	db \2 ; level
-ENDM
+	endm
 
-	enum loadtrainer_command ; $5e
-loadtrainer: MACRO
+	enum loadtrainer_command
+loadtrainer: macro
 	db loadtrainer_command
 	db \1 ; trainer_group
 	db \2 ; trainer_id
-ENDM
+	endm
 
-	enum startbattle_command ; $5f
-startbattle: MACRO
+	enum startbattle_command
+startbattle: macro
 	db startbattle_command
-ENDM
+	endm
 
-	enum reloadmapafterbattle_command ; $60
-reloadmapafterbattle: MACRO
+	enum reloadmapafterbattle_command
+reloadmapafterbattle: macro
 	db reloadmapafterbattle_command
-ENDM
+	endm
 
-	enum catchtutorial_command ; $61
-catchtutorial: MACRO
+	enum catchtutorial_command
+catchtutorial: macro
 	db catchtutorial_command
 	db \1 ; byte
-ENDM
+	endm
 
-	enum trainertext_command ; $62
-trainertext: MACRO
+	enum trainertext_command
+trainertext: macro
 	db trainertext_command
 	db \1 ; which_text
-ENDM
+	endm
 
-	enum trainerflagaction_command ; $63
-trainerflagaction: MACRO
+	enum trainerflagaction_command
+trainerflagaction: macro
 	db trainerflagaction_command
 	db \1 ; action
-ENDM
+	endm
 
-	enum winlosstext_command ; $64
-winlosstext: MACRO
+	enum winlosstext_command
+winlosstext: macro
 	db winlosstext_command
 	dw \1 ; win_text_pointer
 	dw \2 ; loss_text_pointer
-ENDM
+	endm
 
-	enum scripttalkafter_command ; $65
-scripttalkafter: MACRO
+	enum scripttalkafter_command
+scripttalkafter: macro
 	db scripttalkafter_command
-ENDM
+	endm
 
-	enum endifjustbattled_command ; $66
-endifjustbattled: MACRO
-	db endifjustbattled_command
-ENDM
+	enum end_if_just_battled_command
+end_if_just_battled: macro
+	db end_if_just_battled_command
+	endm
 
-	enum checkjustbattled_command ; $67
-checkjustbattled: MACRO
-	db checkjustbattled_command
-ENDM
+	enum check_just_battled_command
+check_just_battled: macro
+	db check_just_battled_command
+	endm
 
-	enum setlasttalked_command ; $68
-setlasttalked: MACRO
+	enum setlasttalked_command
+setlasttalked: macro
 	db setlasttalked_command
-	db \1 ; object id
-ENDM
+	db \1 ; person
+	endm
 
-	enum applymovement_command ; $69
-applymovement: MACRO
+	enum applymovement_command
+applymovement: macro
 	db applymovement_command
-	db \1 ; object id
+	db \1 ; person
 	dw \2 ; data
-ENDM
+	endm
 
-	enum applymovement2_command ; $6a
-applymovement2: MACRO
+	enum applymovement2_command
+applymovement2: macro
 	db applymovement2_command
 	dw \1 ; data
-ENDM
+	endm
 
-	enum faceplayer_command ; $6b
-faceplayer: MACRO
+	enum faceplayer_command
+faceplayer: macro
 	db faceplayer_command
-ENDM
+	endm
 
-	enum faceobject_command ; $6c
-faceobject: MACRO
+	enum faceobject_command
+faceobject: macro
 	db faceobject_command
-	db \1 ; object1
-	db \2 ; object2
-ENDM
+	db \1 ; person1
+	db \2 ; person2
+	endm
 
-	enum variablesprite_command ; $6d
-variablesprite: MACRO
+	enum variablesprite_command
+variablesprite: macro
 	db variablesprite_command
 	db \1 - SPRITE_VARS ; byte
 	db \2 ; sprite
-ENDM
+	endm
 
-	enum disappear_command ; $6e
-disappear: MACRO
+	enum disappear_command
+disappear: macro
 	db disappear_command
-	db \1 ; object id
-ENDM
+	db \1 ; person
+	endm
 
-	enum appear_command ; $6f
-appear: MACRO
+	enum appear_command
+appear: macro
 	db appear_command
-	db \1 ; object id
-ENDM
+	db \1 ; person
+	endm
 
-	enum follow_command ; $70
-follow: MACRO
+	enum follow_command
+follow: macro
 	db follow_command
-	db \1 ; object2
-	db \2 ; object1
-ENDM
+	db \1 ; person2
+	db \2 ; person1
+	endm
 
-	enum stopfollow_command ; $71
-stopfollow: MACRO
+	enum stopfollow_command
+stopfollow: macro
 	db stopfollow_command
-ENDM
+	endm
 
-	enum moveobject_command ; $72
-moveobject: MACRO
+	enum moveobject_command
+moveobject: macro
 	db moveobject_command
-	db \1 ; object id
+	db \1 ; person
 	db \2 ; x
 	db \3 ; y
-ENDM
+	endm
 
-	enum writeobjectxy_command ; $73
-writeobjectxy: MACRO
-	db writeobjectxy_command
-	db \1 ; object id
-ENDM
+	enum writepersonxy_command
+writepersonxy: macro
+	db writepersonxy_command
+	db \1 ; person
+	endm
 
-	enum loademote_command ; $74
-loademote: MACRO
+	enum loademote_command
+loademote: macro
 	db loademote_command
 	db \1 ; bubble
-ENDM
+	endm
 
-	enum showemote_command ; $75
-showemote: MACRO
+	enum showemote_command
+showemote: macro
 	db showemote_command
 	db \1 ; bubble
-	db \2 ; object id
+	db \2 ; person
 	db \3 ; time
-ENDM
+	endm
 
-	enum turnobject_command ; $76
-turnobject: MACRO
+	enum turnobject_command
+turnobject: macro
 	db turnobject_command
-	db \1 ; object id
+	db \1 ; person
 	db \2 ; facing
-ENDM
+	endm
 
-	enum follownotexact_command ; $77
-follownotexact: MACRO
+	enum follownotexact_command
+follownotexact: macro
 	db follownotexact_command
-	db \1 ; object2
-	db \2 ; object1
-ENDM
+	db \1 ; person2
+	db \2 ; person1
+	endm
 
-	enum earthquake_command ; $78
-earthquake: MACRO
+	enum earthquake_command
+earthquake: macro
 	db earthquake_command
 	db \1 ; param
-ENDM
+	endm
 
-	enum changemap_command ; $79
-changemap: MACRO
+	enum changemap_command
+changemap: macro
 	db changemap_command
-	db \1 ; map_bank
-	dw \2 ; map_data_pointer
-ENDM
+	dba \1 ; map_data
+	endm
 
-	enum changeblock_command ; $7a
-changeblock: MACRO
+	enum changeblock_command
+changeblock: macro
 	db changeblock_command
 	db \1 ; x
 	db \2 ; y
 	db \3 ; block
-ENDM
+	endm
 
-	enum reloadmap_command ; $7b
-reloadmap: MACRO
+	enum reloadmap_command
+reloadmap: macro
 	db reloadmap_command
-ENDM
+	endm
 
-	enum reloadmappart_command ; $7c
-reloadmappart: MACRO
+	enum reloadmappart_command
+reloadmappart: macro
 	db reloadmappart_command
-ENDM
+	endm
 
-	enum writecmdqueue_command ; $7d
-writecmdqueue: MACRO
+	enum writecmdqueue_command
+writecmdqueue: macro
 	db writecmdqueue_command
 	dw \1 ; queue_pointer
-ENDM
+	endm
 
-	enum delcmdqueue_command ; $7e
-delcmdqueue: MACRO
+	enum delcmdqueue_command
+delcmdqueue: macro
 	db delcmdqueue_command
 	db \1 ; byte
-ENDM
+	endm
 
-	enum playmusic_command ; $7f
-playmusic: MACRO
+	enum playmusic_command
+playmusic: macro
 	db playmusic_command
-	dw \1 ; music_pointer
-ENDM
+	db \1 ; music_id
+	endm
 
-	enum encountermusic_command ; $80
-encountermusic: MACRO
+	enum encountermusic_command
+encountermusic: macro
 	db encountermusic_command
-ENDM
+	endm
 
-	enum musicfadeout_command ; $81
-musicfadeout: MACRO
+	enum musicfadeout_command
+musicfadeout: macro
 	db musicfadeout_command
-	dw \1 ; music
+	db \1 ; music
 	db \2 ; fadetime
-ENDM
+	endm
 
-	enum playmapmusic_command ; $82
-playmapmusic: MACRO
+	enum playmapmusic_command
+playmapmusic: macro
 	db playmapmusic_command
-ENDM
+	endm
 
-	enum dontrestartmapmusic_command ; $83
-dontrestartmapmusic: MACRO
+	enum dontrestartmapmusic_command
+dontrestartmapmusic: macro
 	db dontrestartmapmusic_command
-ENDM
+	endm
 
-	enum cry_command ; $84
-cry: MACRO
+	enum cry_command
+cry: macro
 	db cry_command
-	dw \1 ; cry_id
-ENDM
+	db \1 ; cry_id
+	endm
 
-	enum playsound_command ; $85
-playsound: MACRO
+	enum playsound_command
+playsound: macro
 	db playsound_command
-	dw \1 ; sound_pointer
-ENDM
+	db \1 ; sound_id
+	endm
 
-	enum waitsfx_command ; $86
-waitsfx: MACRO
+	enum waitsfx_command
+waitsfx: macro
 	db waitsfx_command
-ENDM
+	endm
 
-	enum warpsound_command ; $87
-warpsound: MACRO
+	enum warpsound_command
+warpsound: macro
 	db warpsound_command
-ENDM
+	endm
 
-	enum specialsound_command ; $88
-specialsound: MACRO
+	enum specialsound_command
+specialsound: macro
 	db specialsound_command
-ENDM
+	endm
 
-	enum passtoengine_command ; $89
-passtoengine: MACRO
+	enum passtoengine_command
+passtoengine: macro
 	db passtoengine_command
 	db \1 ; data_pointer
-ENDM
+	endm
 
-	enum newloadmap_command ; $8a
-newloadmap: MACRO
+	enum newloadmap_command
+newloadmap: macro
 	db newloadmap_command
 	db \1 ; which_method
-ENDM
+	endm
 
-	enum pause_command ; $8b
-pause: MACRO
+	enum pause_command
+pause: macro
 	db pause_command
 	db \1 ; length
-ENDM
+	endm
 
-	enum deactivatefacing_command ; $8c
-deactivatefacing: MACRO
+	enum deactivatefacing_command
+deactivatefacing: macro
 	db deactivatefacing_command
 	db \1 ; time
-ENDM
+	endm
 
-	enum priorityjump_command ; $8d
-priorityjump: MACRO
+	enum priorityjump_command
+priorityjump: macro
 	db priorityjump_command
 	dw \1 ; pointer
-ENDM
+	endm
 
-	enum warpcheck_command ; $8e
-warpcheck: MACRO
+	enum warpcheck_command
+warpcheck: macro
 	db warpcheck_command
-ENDM
+	endm
 
-	enum ptpriorityjump_command ; $8f
-ptpriorityjump: MACRO
+	enum ptpriorityjump_command
+ptpriorityjump: macro
 	db ptpriorityjump_command
 	dw \1 ; pointer
-ENDM
+	endm
 
-	enum return_command ; $90
-return: MACRO
+	enum return_command
+return: macro
 	db return_command
-ENDM
+	endm
 
-	enum end_command ; $91
-end: MACRO
+	enum end_command
+end: macro
 	db end_command
-ENDM
+	endm
 
-	enum reloadandreturn_command ; $92
-reloadandreturn: MACRO
+	enum reloadandreturn_command
+reloadandreturn: macro
 	db reloadandreturn_command
 	db \1 ; which_method
-ENDM
+	endm
 
-	enum endall_command ; $93
-endall: MACRO
+	enum endall_command
+endall: macro
 	db endall_command
-ENDM
+	endm
 
-	enum pokemart_command ; $94
-pokemart: MACRO
+	enum pokemart_command
+pokemart: macro
 	db pokemart_command
 	db \1 ; dialog_id
-	dw \2 ; mart_id
-ENDM
+	db \2 ; mart_id
+	endm
 
-	enum elevator_command ; $95
-elevator: MACRO
+	enum elevator_command
+elevator: macro
 	db elevator_command
 	dw \1 ; floor_list_pointer
-ENDM
+	endm
 
-	enum trade_command ; $96
-trade: MACRO
+	enum trade_command
+trade: macro
 	db trade_command
 	db \1 ; trade_id
-ENDM
+	endm
 
-	enum askforphonenumber_command ; $97
-askforphonenumber: MACRO
+	enum askforphonenumber_command
+askforphonenumber: macro
 	db askforphonenumber_command
 	db \1 ; number
-ENDM
+	endm
 
-	enum phonecall_command ; $98
-phonecall: MACRO
+	enum phonecall_command
+phonecall: macro
 	db phonecall_command
 	dw \1 ; caller_name
-ENDM
+	endm
 
-	enum hangup_command ; $99
-hangup: MACRO
+	enum hangup_command
+hangup: macro
 	db hangup_command
-ENDM
+	endm
 
-	enum describedecoration_command ; $9a
-describedecoration: MACRO
+	enum describedecoration_command
+describedecoration: macro
 	db describedecoration_command
 	db \1 ; byte
-ENDM
+	endm
 
-	enum fruittree_command ; $9b
-fruittree: MACRO
+	enum fruittree_command
+fruittree: macro
 	db fruittree_command
 	db \1 ; tree_id
-ENDM
+	db \2 ; fruit_id
+	endm
 
-	enum specialphonecall_command ; $9c
-specialphonecall: MACRO
+	enum specialphonecall_command
+specialphonecall: macro
 	db specialphonecall_command
-	dw \1 ; call_id
-ENDM
+	db \1 ; call_id
+	endm
 
-	enum checkphonecall_command ; $9d
-checkphonecall: MACRO
+	enum checkphonecall_command
+checkphonecall: macro
 	db checkphonecall_command
-ENDM
+	endm
 
-	enum verbosegiveitem_command ; $9e
-verbosegiveitem: MACRO
-if _NARG == 1
-	verbosegiveitem \1, 1
-else
+	enum verbosegiveitem_command
+verbosegiveitem: macro
 	db verbosegiveitem_command
 	db \1 ; item
+if _NARG == 2
 	db \2 ; quantity
+else
+	db 1
 endc
-ENDM
+	endm
 
-	enum verbosegiveitem2_command ; $9f
-verbosegiveitem2: MACRO
+	enum verbosegiveitem2_command
+verbosegiveitem2: macro
 	db verbosegiveitem2_command
 	db \1 ; item
 	db \2 ; var
-ENDM
+	endm
 
-	enum swarm_command ; $a0
-swarm: MACRO
+	enum swarm_command
+swarm: macro
 	db swarm_command
 	db \1 ; flag
 	map_id \2 ; map
-ENDM
+	endm
 
-	enum halloffame_command ; $a1
-halloffame: MACRO
+	enum halloffame_command
+halloffame: macro
 	db halloffame_command
-ENDM
+	endm
 
-	enum credits_command ; $a2
-credits: MACRO
+	enum credits_command
+credits: macro
 	db credits_command
-ENDM
+	endm
 
-	enum warpfacing_command ; $a3
-warpfacing: MACRO
+	enum warpfacing_command
+warpfacing: macro
 	db warpfacing_command
 	db \1 ; facing
 	map_id \2 ; map
 	db \3 ; x
 	db \4 ; y
-ENDM
+	endm
 
-	enum battletowertext_command ; $a4
-battletowertext: MACRO
+	enum battletowertext_command
+battletowertext: macro
 	db battletowertext_command
 	db \1 ; memory
-ENDM
+	endm
 
-	enum landmarktotext_command ; $a5
-landmarktotext: MACRO
+	enum landmarktotext_command
+landmarktotext: macro
 	db landmarktotext_command
 	db \1 ; id
 	db \2 ; memory
-ENDM
+	endm
 
-	enum trainerclassname_command ; $a6
-trainerclassname: MACRO
+	enum trainerclassname_command
+trainerclassname: macro
 	db trainerclassname_command
 	db \1 ; id
 	db \2 ; memory
-ENDM
+	endm
 
-	enum name_command ; $a7
-name: MACRO
+	enum name_command
+name: macro
 	db name_command
 	db \1 ; type
 	db \2 ; id
 	db \3 ; memory
-ENDM
+	endm
 
-	enum wait_command ; $a8
-wait: MACRO
+	enum wait_command
+wait: macro
 	db wait_command
 	db \1 ; duration
-ENDM
+	endm
 
-	enum checksave_command ; $a9
-checksave: MACRO
-	db checksave_command
-ENDM
+	enum check_save_command
+check_save: macro
+	db check_save_command
+	endm
+
+	enum count_seen_caught_command
+count_seen_caught: macro
+	db count_seen_caught_command
+	endm
+
+	enum trainerpic_command
+trainerpic: macro
+	db trainerpic_command
+	db \1 ; trainer
+	endm
+
+	enum givetmhm_command
+givetmhm: macro
+	db givetmhm_command
+	db \1 ; tmhm
+	endm
+
+	enum checktmhm_command
+checktmhm: macro
+	db checktmhm_command
+	db \1 ; tmhm
+	endm
+
+	enum verbosegivetmhm_command
+verbosegivetmhm: macro
+	db verbosegivetmhm_command
+	db \1 ; tmhm
+	endm
+
+	enum tmhmnotify_command
+tmhmnotify: macro
+	db tmhmnotify_command
+	endm
+
+	enum tmhmtotext_command
+tmhmtotext: macro
+	db tmhmtotext_command
+	db \1 ; tmhm
+	db \2 ; memory
+	endm
+
+	enum checkdarkness_command
+checkdarkness: macro
+	db checkdarkness_command
+	endm
+
+	enum checkunits_command
+checkunits: macro
+	db checkunits_command
+	endm
+
+	enum unowntypeface_command
+unowntypeface: macro
+	db unowntypeface_command
+	endm
+
+	enum restoretypeface_command
+restoretypeface: macro
+	db restoretypeface_command
+	endm
+
+	enum jumpstashedtext_command
+jumpstashedtext: macro
+	db jumpstashedtext_command
+	endm
+
+	enum jumpopenedtext_command
+jumpopenedtext: macro
+	db jumpopenedtext_command
+	dw \1 ; text_pointer
+	endm
+
+	enum iftrue_jumptext_command
+iftrue_jumptext: macro
+	db iftrue_jumptext_command
+	dw \1 ; text_pointer
+	endm
+
+	enum iffalse_jumptext_command
+iffalse_jumptext: macro
+	db iffalse_jumptext_command
+	dw \1 ; text_pointer
+	endm
+
+	enum iftrue_jumptextfaceplayer_command
+iftrue_jumptextfaceplayer: macro
+	db iftrue_jumptextfaceplayer_command
+	dw \1 ; text_pointer
+	endm
+
+	enum iffalse_jumptextfaceplayer_command
+iffalse_jumptextfaceplayer: macro
+	db iffalse_jumptextfaceplayer_command
+	dw \1 ; text_pointer
+	endm
+
+	enum iftrue_jumpopenedtext_command
+iftrue_jumpopenedtext: macro
+	db iftrue_jumpopenedtext_command
+	dw \1 ; text_pointer
+	endm
+
+	enum iffalse_jumpopenedtext_command
+iffalse_jumpopenedtext: macro
+	db iffalse_jumpopenedtext_command
+	dw \1 ; text_pointer
+	endm
+
+	enum thistext_command
+thistext: macro
+	db thistext_command
+	endm
+
+	enum thistextfaceplayer_command
+thistextfaceplayer: macro
+	db thistextfaceplayer_command
+	endm
+
+	enum thisopenedtext_command
+thisopenedtext: macro
+	db thisopenedtext_command
+	endm
+
+	enum showtext_command
+showtext: macro
+	db showtext_command
+	dw \1 ; text_pointer
+	endm
+
+	enum showtextfaceplayer_command
+showtextfaceplayer: macro
+	db showtextfaceplayer_command
+	dw \1 ; text_pointer
+	endm
+
+	enum applyonemovement_command
+applyonemovement: macro
+	db applyonemovement_command
+	db \1 ; person
+	db movement_\2 ; movement data
+	db movement_step_end
+	endm
+
+	enum showcrytext_command
+showcrytext: macro
+	db showcrytext_command
+	dw \1 ; text_pointer
+	db \2 ; cry_id
+	endm
+
+	enum endtext_command
+endtext: macro
+	db endtext_command
+	endm
+
+	enum waitendtext_command
+waitendtext: macro
+	db waitendtext_command
+	endm
+
+	enum iftrue_endtext_command
+iftrue_endtext: macro
+	db iftrue_endtext_command
+	endm
+
+	enum iffalse_endtext_command
+iffalse_endtext: macro
+	db iffalse_endtext_command
+	endm
+
+	enum loadgrottomon_command
+loadgrottomon: macro
+	db loadgrottomon_command
+	endm
+
+	enum giveapricorn_command
+giveapricorn: macro
+	db giveapricorn_command
+	db \1 ; apricorn
+if _NARG == 2
+	db \2 ; quantity
+else
+	db 1
+endc
+	endm
+
+	enum paintingpic_command
+paintingpic: macro
+	db paintingpic_command
+	db \1 ; painting
+	endm
+
+thisasm: macro
+	callasm .asm\@
+	end
+.asm\@
+endm
 
 	enum mysterydungeonwarp_command ; $aa
 mysterydungeonwarp: MACRO

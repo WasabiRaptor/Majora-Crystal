@@ -31,10 +31,10 @@ MenuMonIconColors::
 	iconpal RED, BLUE ; RAICHU
 	iconpal BROWN, TEAL ; SANDSHREW
 	iconpal BROWN, RED ; SANDSLASH
-	iconpal TEAL, PURPLE ; NIDORAN_F
+	iconpal TEAL, PURPLE ; NIDORAN
 	iconpal TEAL, PURPLE ; NIDORINA
 	iconpal TEAL, PURPLE ; NIDOQUEEN
-	iconpal PURPLE, TEAL ; NIDORAN_M
+	iconpal PURPLE, TEAL ; NIDORAN
 	iconpal PURPLE, TEAL ; NIDORINO
 	iconpal PURPLE, TEAL ; NIDOKING
 	iconpal PINK, RED ; CLEFAIRY

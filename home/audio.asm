@@ -11,13 +11,13 @@ MapSetup_Sound_Off:: ; 3b4e
 	push af
 	ld a, BANK(_MapSetup_Sound_Off)
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 
 	call _MapSetup_Sound_Off
 
 	pop af
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 
 	pop af
 	pop bc
@@ -38,13 +38,13 @@ UpdateSound:: ; 3b6a
 	push af
 	ld a, BANK(_UpdateSound)
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 
 	call _UpdateSound
 
 	pop af
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 
 	pop af
 	pop bc
@@ -59,14 +59,14 @@ _LoadMusicByte:: ; 3b86
 GLOBAL LoadMusicByte
 
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 
 	ld a, [de]
 	ld [wCurMusicByte], a
 	ld a, BANK(LoadMusicByte)
 
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 	ret
 ; 3b97
 
@@ -91,7 +91,7 @@ PlayMusic:: ; 3b97
 	push af
 	ld a, BANK(_PlayMusic) ; and BANK(_MapSetup_Sound_Off)
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 
 	ld a, e
 	and a
@@ -106,7 +106,7 @@ PlayMusic:: ; 3b97
 .end
 	pop af
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 	pop af
 	pop bc
 	pop de
@@ -127,7 +127,7 @@ PlayMusic2:: ; 3bbc
 	push af
 	ld a, BANK(_PlayMusic)
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 
 	push de
 	ld de, MUSIC_NONE
@@ -138,7 +138,7 @@ PlayMusic2:: ; 3bbc
 
 	pop af
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 
 	pop af
 	pop bc
@@ -163,7 +163,7 @@ PlayCryHeader:: ; 3be3
 	; Cry headers are stuck in one bank.
 	ld a, BANK(CryHeaders)
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 
 	ld hl, CryHeaders
 rept 6
@@ -186,13 +186,13 @@ endr
 
 	ld a, BANK(_PlayCryHeader)
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 
 	call _PlayCryHeader
 
 	pop af
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 
 	pop af
 	pop bc
@@ -227,7 +227,7 @@ PlaySFX:: ; 3c23
 	push af
 	ld a, BANK(_PlaySFX)
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 
 	ld a, e
 	ld [wCurSFX], a
@@ -235,7 +235,7 @@ PlaySFX:: ; 3c23
 
 	pop af
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 
 .done
 	pop af
@@ -463,56 +463,20 @@ GetMapMusic::
 	inc hl
 	jr .loop
 
-GetCyclingRoadMusic:
-	ld de, MUSIC_BICYCLE_XY
-	ld a, [wPlayerState]
-	cp PLAYER_BIKE
-	ret z
-	jr GetPlayerStateMusic
-
-GetBugCatchingContestMusic:
-	ld de, MUSIC_BUG_CATCHING_CONTEST_RANKING
-	ld a, [wStatusFlags2]
-	bit 2, a ; ENGINE_BUG_CONTEST_TIMER
-	ret nz
-	; fallthrough
-
 GetPlayerStateMusic:
 	ld a, [wPlayerState]
 	cp PLAYER_BIKE
 	jr z, .bike
 	cp PLAYER_SURF
 	jr z, .surf
-	cp PLAYER_SURF_PIKA
-	jr z, .surf_pikachu
 	jp GetMapHeaderMusic
 
 .bike:
-	call RegionCheck
-	ld a, e
-	ld de, MUSIC_BICYCLE_RB
-	cp KANTO_REGION
-	ret z
-;	ld de, MUSIC_BICYCLE_RSE
-;	cp ORANGE_REGION
-;	ret z
 	ld de, MUSIC_BICYCLE
 	ret
 
 .surf:
-	call RegionCheck
-	ld a, e
-	ld de, MUSIC_SURF_KANTO
-	cp KANTO_REGION
-	ret z
-	ld de, MUSIC_SURF_HOENN
-	cp ORANGE_REGION
-	ret z
 	ld de, MUSIC_SURF
-	ret
-
-.surf_pikachu:
-	ld de, MUSIC_SURFING_PIKACHU
 	ret
 
 SpecialMusicMaps:
@@ -520,21 +484,8 @@ music_map: MACRO
 	map_id \1
 	dw \2
 ENDM
-	music_map ROUTE_23, GetMapHeaderMusic
-	music_map INDIGO_PLATEAU, GetMapHeaderMusic
-	music_map QUIET_CAVE_1F, GetMapHeaderMusic
-	music_map QUIET_CAVE_B1F, GetMapHeaderMusic
-	music_map QUIET_CAVE_B2F, GetMapHeaderMusic
-	music_map QUIET_CAVE_B3F, GetMapHeaderMusic
-	music_map SCARY_CAVE_SHIPWRECK, GetMapHeaderMusic
-	music_map WHIRL_ISLAND_LUGIA_CHAMBER, GetMapHeaderMusic
-	music_map TIN_TOWER_ROOF, GetMapHeaderMusic
-	music_map ROUTE_16_SOUTH, GetCyclingRoadMusic
-	music_map ROUTE_17, GetCyclingRoadMusic
-	music_map ROUTE_18_WEST, GetCyclingRoadMusic
-	music_map ROUTE_35_NATIONAL_PARK_GATE, GetBugCatchingContestMusic
-	music_map ROUTE_36_NATIONAL_PARK_GATE, GetBugCatchingContestMusic
 	db 0 ; end
+SECTION "Home 2", ROM0
 
 CheckSFX:: ; 3dde
 ; Return carry if any SFX channels are active.

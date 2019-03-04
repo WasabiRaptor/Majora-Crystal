@@ -1,4 +1,4 @@
-
+VariantEvosAttacksPointerTable:
     dbba LYCANROC,  LycanrocEvosAttacksPointers
     dbba MEOWTH,    MeowthEvosAttacksPointers  
     dbba PERSIAN,   PersianEvosAttacksPointers   

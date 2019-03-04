@@ -27,10 +27,10 @@ EvolutionMoves::
 	db NO_MOVE      ; RAICHU
 	db NO_MOVE      ; SANDSHREW
 	db SLASH        ; SANDSLASH
-	db NO_MOVE      ; NIDORAN_F
+	db NO_MOVE      ; NIDORAN
 	db NO_MOVE      ; NIDORINA
 	db NO_MOVE      ; NIDOQUEEN
-	db NO_MOVE      ; NIDORAN_M
+	db NO_MOVE      ; NIDORAN
 	db NO_MOVE      ; NIDORINO
 	db NO_MOVE      ; NIDOKING
 	db NO_MOVE      ; CLEFAIRY
@@ -184,11 +184,7 @@ EvolutionMoves::
 	db NO_MOVE      ; SUDOWOODO
 	db GIGA_DRAIN   ; POLITOED
 	db NO_MOVE      ; SUNKERN
-if DEF(FAITHFUL)
-	db NO_MOVE      ; SUNFLORA
-else
 	db EMBER        ; SUNFLORA
-endc
 	db NO_MOVE      ; YANMA
 	db DRAGONBREATH ; YANMEGA
 	db NO_MOVE      ; WOOPER

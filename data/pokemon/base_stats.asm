@@ -53,7 +53,9 @@ endr
 ENDM
 
 BaseData::
+BaseData0::
 INCLUDE "data/pokemon/base_stats/eevee.asm"
+BaseData1::
 INCLUDE "data/pokemon/base_stats/vaporeon.asm"
 INCLUDE "data/pokemon/base_stats/jolteon.asm"
 INCLUDE "data/pokemon/base_stats/flareon.asm"

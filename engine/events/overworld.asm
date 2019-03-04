@@ -115,7 +115,7 @@ CheckForSurfingPikachu:
 	ld hl, wPartySpecies
 	add hl, de
 	ld a, [hl]
-	cp PIKACHU
+	;cp PIKACHU
 	jr nz, .no
 	ld a, TRUE
 	ld [wScriptVar], a
@@ -509,7 +509,7 @@ GetSurfType: ; c9b8
 	add hl, de
 
 	ld a, [hl]
-	cp PIKACHU
+	;cp PIKACHU
 	ld a, PLAYER_SURF_PIKA
 	ret z
 	ld a, PLAYER_SURF
@@ -611,29 +611,13 @@ CheckFlyAllowedOnMap:
 	call CheckOutdoorMap
 	ret z
 ; assumes all special roof maps are in different groups
-	ld a, [wMapGroup]
-	cp GROUP_GOLDENROD_DEPT_STORE_ROOF
-	jr z, .goldenrod_dept_store_roof_group
-	cp GROUP_CELADON_MANSION_ROOF
-	jr z, .celadon_mansion_roof_group
-	cp GROUP_TIN_TOWER_ROOF
-	jr z, .tin_tower_roof_group
-	cp GROUP_OLIVINE_LIGHTHOUSE_ROOF
-	ret nz
-	ld a, [wMapNumber]
-	cp MAP_OLIVINE_LIGHTHOUSE_ROOF
+	;ld a, [wMapGroup]
+	;cp GROUP_GOLDENROD_DEPT_STORE_ROOF
+	;jr z, .goldenrod_dept_store_roof_group
 	ret
 .goldenrod_dept_store_roof_group
-	ld a, [wMapNumber]
-	cp MAP_GOLDENROD_DEPT_STORE_ROOF
-	ret
-.celadon_mansion_roof_group
-	ld a, [wMapNumber]
-	cp MAP_CELADON_MANSION_ROOF
-	ret
-.tin_tower_roof_group
-	ld a, [wMapNumber]
-	cp MAP_TIN_TOWER_ROOF
+	;ld a, [wMapNumber]
+	;cp MAP_GOLDENROD_DEPT_STORE_ROOF
 	ret
 
 FlyFunction: ; ca3b
@@ -659,16 +643,16 @@ FlyFunction: ; ca3b
 	call CheckFlyAllowedOnMap
 	jr nz, .indoors
 
-	ld a, [wMapGroup]
-	cp GROUP_SHAMOUTI_ISLAND
-	jr z, .indoors
-	cp GROUP_VALENCIA_ISLAND
-	jr z, .indoors
-	cp GROUP_SHAMOUTI_SHRINE_RUINS
-	jr nz, .outdoors
-	ld a, [wMapNumber]
-	cp MAP_SHAMOUTI_SHRINE_RUINS
-	jr z, .indoors
+	;ld a, [wMapGroup]
+	;cp GROUP_SHAMOUTI_ISLAND
+	;jr z, .indoors
+	;cp GROUP_VALENCIA_ISLAND
+	;jr z, .indoors
+	;cp GROUP_SHAMOUTI_SHRINE_RUINS
+	;jr nz, .outdoors
+	;ld a, [wMapNumber]
+	;cp MAP_SHAMOUTI_SHRINE_RUINS
+	;jr z, .indoors
 
 .outdoors
 	xor a
@@ -804,7 +788,7 @@ Script_UsedWaterfall: ; 0xcb20
 	ret
 
 .WaterfallStep: ; cb4f
-	turn_waterfall_up
+	turn_waterfall UP
 	step_end
 
 .Text_UsedWaterfall: ; 0xcb51
@@ -981,11 +965,11 @@ dig_incave
 
 .DigOut: ; 0xcc59
 	step_dig 32
-	hide_person
+	hide_object
 	step_end
 
 .DigReturn: ; 0xcc5d
-	show_person
+	show_object
 	return_dig 32
 	step_end
 
@@ -1287,23 +1271,23 @@ Script_UsedWhirlpool: ; 0xce0f
 	end
 
 .UpMovementData:
-	slow_step_up
-	slow_step_up
+	slow_step UP
+	slow_step UP
 	step_end
 
 .RightMovementData:
-	slow_step_right
-	slow_step_right
+	slow_step RIGHT
+	slow_step RIGHT
 	step_end
 
 .DownMovementData:
-	slow_step_down
-	slow_step_down
+	slow_step DOWN
+	slow_step DOWN
 	step_end
 
 .LeftMovementData:
-	slow_step_left
-	slow_step_left
+	slow_step LEFT
+	slow_step LEFT
 	step_end
 
 TryWhirlpoolOW:: ; ce3e
@@ -1740,7 +1724,7 @@ Movement_BiteFacingUp: ; d062
 	fish_got_bite
 Movement_HookedItemFacingUp:
 	fish_got_bite
-	step_sleep_1
+	step_sleep 1
 	show_emote
 	step_end
 

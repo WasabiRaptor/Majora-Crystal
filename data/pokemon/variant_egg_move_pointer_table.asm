@@ -1,8 +1,8 @@
-
-    dbba MEOWTH,    MeowthEvosAttacksPointers  
-    dbba GRIMER,    GrimerEvosAttacksPointers
-    dbba SANDSHREW, SandshrewEvosAttacksPointers
-    dbba GIRAFARIG, GirafarigEvosAttacksPointers
-    dbba VULPIX,    VulpixEvosAttacksPointers
-    ;dbba SHAYMIN,   ShayminEvosAttacksPointers
+VariantEggMovePointerTable:
+    dbba MEOWTH,    MeowthEggMovePointers  
+    dbba GRIMER,    GrimerEggMovePointers
+    dbba SANDSHREW, SandshrewEggMovePointers
+    dbba GIRAFARIG, GirafarigEggMovePointers
+    dbba VULPIX,    VulpixEggMovePointers
+    ;dbba SHAYMIN,   ShayminEggMovePointers
 	dbba -1,        EggMovePointers

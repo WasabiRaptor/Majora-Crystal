@@ -142,7 +142,6 @@ SECTION "Code 2", ROMX
 INCLUDE "engine/player_object.asm"
 INCLUDE "engine/sine.asm"
 INCLUDE "data/predef_pointers.asm"
-INCLUDE "engine/color.asm"
 INCLUDE "engine/trainer_scripts.asm"
 
 
@@ -362,6 +361,8 @@ INCLUDE "engine/events/bug_contest.asm"
 INCLUDE "engine/events/safari_game.asm"
 INCLUDE "engine/events/std_tiles.asm"
 
+INCLUDE "audio/musicplayer.asm"
+
 
 SECTION "Roofs", ROMX
 
@@ -370,7 +371,6 @@ INCLUDE "engine/mapgroup_roofs.asm"
 
 SECTION "Code 5", ROMX
 
-INCLUDE "engine/rtc.asm"
 INCLUDE "engine/overworld.asm"
 INCLUDE "engine/tile_events.asm"
 INCLUDE "engine/save.asm"
@@ -386,8 +386,6 @@ INCLUDE "engine/breeding.asm"
 
 
 SECTION "Code 6", ROMX
-
-INCLUDE "engine/clock_reset.asm"
 
 
 SECTION "Code 7", ROMX
@@ -1352,7 +1350,6 @@ endr
 	pop hl
 	ret
 
-PokedexDataPointerTable: ; 0x44378
 INCLUDE "data/pokemon/dex_entry_pointers.asm"
 
 
@@ -2150,7 +2147,7 @@ CheckPartyFullAfterContest: ; 4d9e5
 	dec a
 	ld hl, wPartyMon1CaughtLocation
 	call GetPartyLocation
-	ld a, NATIONAL_PARK
+	;ld a, NATIONAL_PARK
 	ld [hl], a
 	xor a
 	ld [wContestMon], a
@@ -2207,7 +2204,7 @@ CheckPartyFullAfterContest: ; 4d9e5
 	ld a, BANK(sBoxMon1CaughtLocation)
 	call GetSRAMBank
 	ld hl, sBoxMon1CaughtLocation
-	ld a, NATIONAL_PARK
+	;ld a, NATIONAL_PARK
 	ld [hl], a
 	call CloseSRAM
 	xor a
@@ -3925,7 +3922,6 @@ InsertDataIntoBoxOrParty: ; 513e0
 	rst CopyBytes
 	ret
 
-INCLUDE "data/pokemon/base_stats.asm"
 INCLUDE "data/pokemon/names.asm"
 
 
@@ -4435,3 +4431,15 @@ SECTION "Crystal Data", ROMX
 
 INCLUDE "engine/events/battle_tower/load_trainer.asm"
 INCLUDE "data/events/odd_eggs.asm"
+
+
+SECTION "base stats", ROMX
+
+INCLUDE "data/pokemon/base_stats.asm"
+
+
+SECTION "color", ROMX
+
+INCLUDE "engine/color.asm"
+
+

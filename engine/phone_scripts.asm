@@ -33,11 +33,6 @@ UnknownScript_0xbcedf: ; 0xbcedf
 
 UnknownScript_0xbcee7: ; 0xbcee7
 	checkcode VAR_MAPGROUP
-	ifequal GROUP_NEW_BARK_TOWN, .newbark
-	ifequal GROUP_CHERRYGROVE_CITY, .cherrygrove
-	ifequal GROUP_VIOLET_CITY, .violet
-	ifequal GROUP_AZALEA_TOWN, .azalea
-	ifequal GROUP_GOLDENROD_CITY, .goldenrod
 	farwritetext MomPhoneGenericAreaText
 	buttonsound
 	jump UnknownScript_0xbcf37
@@ -399,7 +394,6 @@ UnknownScript_0xbd0ef:
 	farjump UnknownScript_0xa08f8
 
 UnknownScript_0xbd0f3:
-	landmarktotext NATIONAL_PARK, $2
 	farjump UnknownScript_0xa0a2d
 
 JackPhoneScript2:
@@ -423,7 +417,6 @@ UnknownScript_0xbd12a:
 	setflag ENGINE_JACK_MONDAY_MORNING
 
 UnknownScript_0xbd12d:
-	landmarktotext NATIONAL_PARK, $2
 	setflag ENGINE_JACK
 	farjump UnknownScript_0xa0376
 
@@ -443,7 +436,6 @@ BeverlyPhoneScript1:
 	farjump UnknownScript_0xa0900
 
 UnknownScript_0xbd151:
-	landmarktotext NATIONAL_PARK, $2
 	farjump UnknownScript_0xa0aa5
 
 BeverlyPhoneScript2:
@@ -459,7 +451,6 @@ UnknownScript_0xbd16e:
 
 UnknownScript_0xbd172:
 	setflag ENGINE_BEVERLY_HAS_NUGGET
-	landmarktotext NATIONAL_PARK, $2
 	farjump UnknownScript_0xa061e
 
 ; Huey
@@ -1084,8 +1075,6 @@ UnknownScript_0xbd6a6:
 	checkflag ENGINE_DUNSPARCE_SWARM
 	iftrue UnknownScript_0xbd6bd
 	setflag ENGINE_DUNSPARCE_SWARM
-	pokenamemem DUNSPARCE, $1
-	swarm SWARM_DUNSPARCE, DARK_CAVE_VIOLET_ENTRANCE
 	landmarktotext DARK_CAVE, $2
 	farjump UnknownScript_0xa05de
 
@@ -1271,11 +1260,9 @@ UnknownScript_0xbd832:
 	farjump UnknownScript_0xa0968
 
 UnknownScript_0xbd83c:
-	landmarktotext ROUTE_35, $2
 	farjump UnknownScript_0xa0a6e
 
 UnknownScript_0xbd843:
-	landmarktotext ROUTE_35, $2
 	farjump UnknownScript_0xa0aff
 
 ArniePhoneScript2:
@@ -1299,7 +1286,6 @@ UnknownScript_0xbd87a:
 	setflag ENGINE_ARNIE_TUESDAY_MORNING
 
 UnknownScript_0xbd87d:
-	landmarktotext ROUTE_35, $2
 	setflag ENGINE_ARNIE
 	farjump UnknownScript_0xa0376
 
@@ -1308,8 +1294,6 @@ UnknownScript_0xbd887: ; start swarm
 	iftrue UnknownScript_0xbd8a2
 	setflag ENGINE_YANMA_SWARM
 	pokenamemem YANMA, $1
-	swarm SWARM_YANMA, ROUTE_35
-	landmarktotext ROUTE_35, $2
 	farjump UnknownScript_0xa05ce
 
 UnknownScript_0xbd89e:
@@ -1947,7 +1931,6 @@ UnknownScript_0xbde03:
 	farjump UnknownScript_0xa09c0
 
 UnknownScript_0xbde07:
-	landmarktotext ROUTE_46, $2
 	farjump UnknownScript_0xa0aa0
 
 ErinPhoneScript2:
@@ -1968,7 +1951,6 @@ UnknownScript_0xbde32:
 	setflag ENGINE_ERIN_SATURDAY_NIGHT
 
 UnknownScript_0xbde35:
-	landmarktotext ROUTE_46, $2
 	setflag ENGINE_ERIN
 	farjump UnknownScript_0xa037e
 

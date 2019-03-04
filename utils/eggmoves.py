@@ -77,11 +77,11 @@ def get_level_up_moves():
 		for line in file:
 			line = line.rstrip()
 			# Assume that evo/attack data is labeled consistently
-			if line.endswith('EvosAttacks:'):
+			if line.endswith('"Evolutions and Attacks":'):
 				# 'MrMimeEvosAttacks:' => 'mrmime'
 				simple_name = line[:-12].lower()
 				if simple_name not in underscore_names:
-					raise RuntimeError('bad EvosAttacks name: %s' % simple_name)
+					raise RuntimeError('bad "Evolutions and Attacks" name: %s' % simple_name)
 				current_mon = underscore_names[simple_name]
 				continue
 			# Assume that level-up moves are terminated consistently
@@ -124,11 +124,11 @@ def get_egg_moves():
 			if line.startswith('NoEggMoves'):
 				continue
 			# Assume that egg move data is labeled consistently
-			if line.endswith('EggMoves:'):
+			if line.endswith('"Egg Moves":'):
 				# 'MrMimeEggMoves:' => 'mrmime'
 				simple_name = line[:-9].lower()
 				if simple_name not in underscore_names:
-					raise RuntimeError('bad EggMoves name: %s' % simple_name)
+					raise RuntimeError('bad "Egg Moves" name: %s' % simple_name)
 				current_mon = underscore_names[simple_name]
 				continue
 			# Assume that egg moves are terminated consistently

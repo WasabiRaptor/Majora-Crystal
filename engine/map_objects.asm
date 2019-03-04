@@ -589,7 +589,7 @@ MapObjectMovementPattern:
 	call EndSpriteMovement
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_STAND
+	ld [hl], OBJECT_ACTION_STAND
 	ld hl, OBJECT_STEP_TYPE
 	add hl, bc
 	ld [hl], STEP_TYPE_05
@@ -716,43 +716,43 @@ MapObjectMovementPattern:
 	ld [hl], STANDING
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_STAND
+	ld [hl], OBJECT_ACTION_STAND
 	ret
 
 .MovementBigStanding:
-	ld a, PERSON_ACTION_BIG_SNORLAX
+	ld a, OBJECT_ACTION_BIG_SNORLAX
 	jr ._ActionA_StepType04
 
 .MovementBouncing:
-	ld a, PERSON_ACTION_BOUNCE
+	ld a, OBJECT_ACTION_BOUNCE
 	jr ._ActionA_StepType04
 
 .MovementBigGyarados:
-	ld a, PERSON_ACTION_BIG_GYARADOS
+	ld a, OBJECT_ACTION_BIG_GYARADOS
 	jr ._ActionA_StepType04
 
 .MovementPokecomNews:
-	ld a, PERSON_ACTION_POKECOM_NEWS
+	ld a, OBJECT_ACTION_POKECOM_NEWS
 	jr ._ActionA_StepType04
 
 .MovementCutTree:
-	ld a, PERSON_ACTION_CUT_TREE
+	ld a, OBJECT_ACTION_CUT_TREE
 	jr ._ActionA_StepType04
 
 .MovementArchTree:
-	ld a, PERSON_ACTION_ARCH_TREE
+	ld a, OBJECT_ACTION_ARCH_TREE
 	jr ._ActionA_StepType04
 
 .MovementSailboatTop:
-	ld a, PERSON_ACTION_SAILBOAT_TOP
+	ld a, OBJECT_ACTION_SAILBOAT_TOP
 	jr ._ActionA_StepType04
 
 .MovementSailboatBottom:
-	ld a, PERSON_ACTION_SAILBOAT_BOTTOM
+	ld a, OBJECT_ACTION_SAILBOAT_BOTTOM
 	jr ._ActionA_StepType04
 
 .StandingFlip:
-	ld a, PERSON_ACTION_STAND_FLIP
+	ld a, OBJECT_ACTION_STAND_FLIP
 ._ActionA_StepType04
 	push af
 	call EndSpriteMovement
@@ -783,7 +783,7 @@ MapObjectMovementPattern:
 .MovementSpinRepeat:
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_STAND
+	ld [hl], OBJECT_ACTION_STAND
 	ld a, $20
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
@@ -829,7 +829,7 @@ MapObjectMovementPattern:
 	call ._MovementShadow_Grass_Puddle_Dust_Emote
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_SHADOW
+	ld [hl], OBJECT_ACTION_SHADOW
 	ld hl, OBJECT_STEP_DURATION
 	add hl, de
 	ld a, [hl]
@@ -866,7 +866,7 @@ MapObjectMovementPattern:
 	call ._MovementShadow_Grass_Puddle_Dust_Emote
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_EMOTE
+	ld [hl], OBJECT_ACTION_EMOTE
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
 	ld [hl], 0
@@ -886,7 +886,7 @@ MapObjectMovementPattern:
 	call ._MovementShadow_Grass_Puddle_Dust_Emote
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_BOULDER_DUST
+	ld [hl], OBJECT_ACTION_BOULDER_DUST
 	ld hl, OBJECT_STEP_DURATION
 	add hl, de
 	ld a, [hl]
@@ -930,7 +930,7 @@ MapObjectMovementPattern:
 	call ._MovementShadow_Grass_Puddle_Dust_Emote
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_GRASS_SHAKE
+	ld [hl], OBJECT_ACTION_GRASS_SHAKE
 	jr ._MovementGrass_Puddle_End
 
 .MovementSplashingPuddle:
@@ -938,7 +938,7 @@ MapObjectMovementPattern:
 	call ._MovementShadow_Grass_Puddle_Dust_Emote
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_PUDDLE_SPLASH
+	ld [hl], OBJECT_ACTION_PUDDLE_SPLASH
 ._MovementGrass_Puddle_End:
 	ld hl, OBJECT_STEP_DURATION
 	add hl, de
@@ -972,7 +972,7 @@ MapObjectMovementPattern:
 	call EndSpriteMovement
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_00
+	ld [hl], OBJECT_ACTION_00
 	ld hl, OBJECT_RANGE
 	add hl, bc
 	ld a, [hl]
@@ -1013,7 +1013,7 @@ MapObjectMovementPattern:
 	call UpdateTallGrassFlags
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_STEP
+	ld [hl], OBJECT_ACTION_STEP
 	ld hl, wCenteredObject
 	ld a, [hMapObjectIndexBuffer]
 	cp [hl]
@@ -1052,7 +1052,7 @@ SetRandomStepDuration: ; 4b2d
 	ld [hl], STANDING
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_STAND
+	ld [hl], OBJECT_ACTION_STAND
 	ld hl, OBJECT_STEP_TYPE
 	add hl, bc
 	ld [hl], STEP_TYPE_03
@@ -1199,7 +1199,7 @@ TeleportFrom: ; 4c18
 .DoSpin:
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_SPIN
+	ld [hl], OBJECT_ACTION_SPIN
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
 	dec [hl]
@@ -1223,7 +1223,7 @@ TeleportFrom: ; 4c18
 .DoSpinRise:
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_SPIN
+	ld [hl], OBJECT_ACTION_SPIN
 	ld hl, OBJECT_31
 	add hl, bc
 	inc [hl]
@@ -1263,7 +1263,7 @@ TeleportTo: ; 4c89
 .InitWait:
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_00
+	ld [hl], OBJECT_ACTION_00
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
 	ld [hl], 32
@@ -1292,7 +1292,7 @@ TeleportTo: ; 4c89
 .DoDescent:
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_SPIN
+	ld [hl], OBJECT_ACTION_SPIN
 	ld hl, OBJECT_31
 	add hl, bc
 	inc [hl]
@@ -1319,7 +1319,7 @@ TeleportTo: ; 4c89
 .DoFinalSpin:
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_SPIN
+	ld [hl], OBJECT_ACTION_SPIN
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
 	dec [hl]
@@ -1349,7 +1349,7 @@ Skyfall: ; 4d14
 .Init:
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_00
+	ld [hl], OBJECT_ACTION_00
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
 	ld [hl], 16
@@ -1361,7 +1361,7 @@ Skyfall: ; 4d14
 	ret nz
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_STEP
+	ld [hl], OBJECT_ACTION_STEP
 	ld hl, OBJECT_STEP_FRAME
 	add hl, bc
 	ld [hl], 0
@@ -1441,9 +1441,9 @@ RockSmashStep: ; 4daf
 	add hl, bc
 	ld a, [hl]
 	and %00000001
-	ld a, PERSON_ACTION_STAND
+	ld a, OBJECT_ACTION_STAND
 	jr z, .yes
-	ld a, PERSON_ACTION_00
+	ld a, OBJECT_ACTION_00
 .yes
 	ld hl, OBJECT_ACTION
 	add hl, bc
@@ -1456,9 +1456,9 @@ ReturnDigStep: ; 4dc8
 	add hl, bc
 	ld a, [hl]
 	and %00000001
-	ld a, PERSON_ACTION_SPIN
+	ld a, OBJECT_ACTION_SPIN
 	jr z, .yes
-	ld a, PERSON_ACTION_SPIN_FLICKER
+	ld a, OBJECT_ACTION_SPIN_FLICKER
 .yes
 	ld hl, OBJECT_ACTION
 	add hl, bc
@@ -1746,7 +1746,7 @@ SkyfallTop: ; 4f83
 .Init:
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_SKYFALL
+	ld [hl], OBJECT_ACTION_SKYFALL
 	ld hl, OBJECT_STEP_DURATION
 	add hl, bc
 	ld [hl], 16
@@ -1797,8 +1797,8 @@ Function5000: ; unscripted?
 	ld a, [wPlayerNextMovement]
 	ld hl, wPlayerMovement
 	ld [hl], a
-; load [wPlayerNextMovement] with movement_step_sleep_1
-	ld a, movement_step_sleep_1
+; load [wPlayerNextMovement] with movement_step_sleep
+	ld a, movement_step_sleep
 	ld [wPlayerNextMovement], a
 ; recover the previous value of [wPlayerNextMovement]
 	ld a, [hl]
@@ -1877,13 +1877,13 @@ ApplyMovementToFollower: ; 54b8
 	cp d
 	ret nz
 	ld a, e
-	cp movement_step_sleep_1
+	cp movement_step_sleep
 	ret z
 	cp movement_step_end
 	ret z
 	cp movement_step_bump
 	ret z
-	cp movement_turn_step_right + 1
+	cp movement_slow_step
 	ret c
 	push af
 	ld hl, wFollowerMovementQueueLength
@@ -1922,7 +1922,7 @@ GetFollowerNextMovementByte: ; 54e6
 .done
 	call .CancelFollowIfLeaderMissing
 	ret c
-	ld a, movement_step_sleep_1
+	ld a, movement_step_sleep
 	ret
 
 .CancelFollowIfLeaderMissing:
@@ -2397,7 +2397,7 @@ HandleNPCStep::
 	ret
 
 RefreshPlayerSprite: ; 579d
-	ld a, movement_step_sleep_1
+	ld a, movement_step_sleep
 	ld [wPlayerNextMovement], a
 	ld [wPlayerMovement], a
 	xor a

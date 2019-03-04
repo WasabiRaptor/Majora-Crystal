@@ -272,7 +272,7 @@ JoyWaitAorB::
 	ret nz
 	call CheckAutoscroll
 	ret nz
-	call RTC
+	call UpdateTime	
 	jr .loop
 
 CheckIfAOrBPressed:
@@ -414,7 +414,7 @@ ButtonSound:: ; aaf
 	call .blink_cursor
 	call CheckIfAOrBPressed
 	jr nz, .received_input
-	call RTC
+	call UpdateTime	
 	ld a, $1
 	ld [hBGMapMode], a
 	call DelayFrame

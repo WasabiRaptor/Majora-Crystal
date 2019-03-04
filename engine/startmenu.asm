@@ -1732,7 +1732,7 @@ GetForgottenMoves::
 	ld a, BANK(EvosAttacksPointers)
 	call GetFarHalfword
 .skip_evos
-	ld a, BANK(EvosAttacks)
+	ld a, BANK("Evolutions and Attacks")
 	call GetFarByte
 	inc hl
 	and a
@@ -1745,14 +1745,14 @@ GetForgottenMoves::
 	ld b, 100 ; Gen VII behaviour
 	inc b ; so that we can use jr nc
 .loop
-	ld a, BANK(EvosAttacks)
+	ld a, BANK("Evolutions and Attacks")
 	call GetFarByte
 	inc hl
 	and a
 	ret z
 	cp b
 	ret nc
-	ld a, BANK(EvosAttacks)
+	ld a, BANK("Evolutions and Attacks")
 	call GetFarByte
 	inc hl
 

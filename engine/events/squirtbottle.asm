@@ -11,7 +11,7 @@ _Squirtbottle: ; 50730
 	special UpdateTimePals
 	callasm .CheckCanUseSquirtbottle
 	iffalse .NothingHappenedScript
-	farjump WateredWeirdTreeScript
+	;farjump WateredWeirdTreeScript
 ; 0x5074b
 
 .NothingHappenedScript: ; 0x5074b
@@ -26,11 +26,11 @@ _Squirtbottle: ; 50730
 
 .CheckCanUseSquirtbottle: ; 50753
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_36
+	;cp GROUP_ROUTE_36
 	jr nz, .nope
 
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_36
+	;cp MAP_ROUTE_36
 	jr nz, .nope
 
 	farcall GetFacingObject

@@ -149,7 +149,6 @@ SpecialsPointers::
 ; Polished Crystal
 	add_special SaveOptions
 	add_special WonderTrade
-	add_special RespawnOneOffs
 	add_special SpecialGiveShinyDitto
 	add_special GiveMystriEgg
 	add_special Special_ReiBlessing

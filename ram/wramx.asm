@@ -759,17 +759,12 @@ wGameTimeFrames:: ds 1
 wCurDay:: ds 1
 
 ; do not talk to the RTC hardware in the no-RTC patch
-if DEF(NO_RTC)
 wNoRTC::
 wNoRTCDayHi::   ds 1 ; copied to hRTCDayHi
 wNoRTCDayLo::   ds 1 ; copied to hRTCDayLo
 wNoRTCHours::   ds 1 ; copied to hRTCHours
 wNoRTCMinutes:: ds 1 ; copied to hRTCMinutes
 wNoRTCSeconds:: ds 1 ; copied to hRTCSeconds
-else
-; reserve equal space in RTC versions so that saved games remain compatible
-	ds 5
-endc
 
 	ds 1
 
@@ -922,17 +917,40 @@ wFarfetchdPosition:: ds 1
 
 ; map triggers
 wAlways0Trigger:: ds 1
-wAzaleaTownTrigger:: ds 1
+
+wMysteryDungeonNorthSouthEastWestSceneID::		  
+
+wMysteryDungeonNorthSouthEastSceneID::		  	  
+wMysteryDungeonNorthSouthWestSceneID::		 	  
+wMysteryDungeonNorthEastWestSceneID::			  
+wMysteryDungeonSouthEastWestSceneID::			  
+
+wMysteryDungeonNorthSouthSceneID::				  
+wMysteryDungeonEastWestSceneID::				  
+
+wMysteryDungeonNorthEastSceneID::				  
+wMysteryDungeonNorthWestSceneID::				  
+wMysteryDungeonSouthEastSceneID::				  
+wMysteryDungeonSouthWestSceneID::				  
+
+wMysteryDungeonNorthSceneID::					  
+wMysteryDungeonSouthSceneID::					  
+wMysteryDungeonEastSceneID::					  
+wMysteryDungeonWestSceneID::					  db
+
 wBattleTower1FTrigger:: ds 1
 wBattleTowerBattleRoomTrigger:: ds 1
 wBattleTowerElevatorTrigger:: ds 1
 wBattleTowerHallwayTrigger:: ds 1
 wBattleTowerOutsideTrigger:: ds 1
-wBellchimeTrailTrigger:: ds 1
-wBrunosRoomTrigger:: ds 1
-wBurnedTower1FTrigger:: ds 1
-wBurnedTowerB1FTrigger:: ds 1
-wCeruleanCapeTrigger:: ds 1
+
+wPokecenter2FSceneID::                            db ; d972
+wTradeCenterSceneID::                             db ; d973
+wColosseumSceneID::                               db ; d974
+wTimeCapsuleSceneID::                             db ; d975
+
+wPlayersHouse1FSceneID::                          db ; d988
+
 wCeruleanCave1FTrigger:: ds 1
 wCeruleanGymTrigger:: ds 1
 wCherrygroveCityTrigger:: ds 1

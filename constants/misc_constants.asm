@@ -17,9 +17,7 @@ MORN_HOUR EQU 4
 DAY_HOUR EQU 10
 NITE_HOUR EQU 20
 
-if DEF(NO_RTC)
 NO_RTC_SPEEDUP EQU 6
-endc
 
 ; mail
 MAIL_STRUCT_LENGTH EQU $2f
@@ -28,20 +26,6 @@ MAIL_MSG_LENGTH    EQU $20
 
 SHINY_NUMERATOR         EQU 16 ; 16/65536 = 1/4096
 CHARMED_SHINY_NUMERATOR EQU 48 ; 48/65536 = 3/4096
-
-; movement
-	const_def
-	const STEP_SLOW
-	const STEP_WALK
-	const STEP_BIKE
-	const STEP_RUN
-	const STEP_LEDGE
-	const STEP_ICE
-	const STEP_TURN
-	const STEP_BACK_LEDGE
-	const STEP_WALK_IN_PLACE
-	const STEP_SPIN
-	const STEP_FAST ; same as STEP_RUN but without doubling animation speed
 
 const_value = 1
 	const HAPPINESS_GAINLEVEL         ; 01

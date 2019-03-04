@@ -409,7 +409,7 @@ PlacePartyMonEvoStoneCompatibility: ; 5022f
 	ld de, wStringBuffer1
 ; Only reads first 4 evolution entries
 ; https://hax.iimarck.us/topic/4567/
-	ld a, BANK(EvosAttacks)
+	ld a, BANK("Evolutions and Attacks")
 	ld bc, $10
 	call FarCopyBytes
 	ld hl, wStringBuffer1

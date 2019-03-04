@@ -70,11 +70,7 @@ UpdateGameTimer:: ; 20ad
 ; the game timer has increased by 1 second; increase the "fake" RTC by 6 seconds
 ; (24 in-game hours will pass in 4 real-world hours)
 ; this does not affect the rate of the "hours played", which remains real-time
-if DEF(NO_RTC)
-rept NO_RTC_SPEEDUP
 	call UpdateNoRTC
-endr
-endc
 
 ; +1 second
 	ld hl, wGameTimeSeconds
@@ -139,19 +135,12 @@ endc
 ; 210f
 
 ;; add a second to the no-RTC fake real-time clock
-if DEF(NO_RTC)
 UpdateNoRTC::
 	; set our modulus
 	ld a, 60
 	ld b, a
 
-	ld hl, wNoRTCSeconds
-
-; +1 second
-	inc [hl]
-	sub [hl]
-	ret nz
-	ld [hld], a
+	ld hl, wNoRTCMinutes
 
 ; +1 minute
 	ld a, b
@@ -174,4 +163,3 @@ UpdateNoRTC::
 ; RTC hardware limit of 512 days!
 	inc [hl]
 	ret
-endc

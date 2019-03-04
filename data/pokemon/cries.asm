@@ -43,7 +43,7 @@ PokemonCries::
 	mon_cry CRY_VENONAT,     $088,  $0e0 ; LIEPARD
 	mon_cry CRY_GRIMER,      $000,  $100 ; GRIMER
 	mon_cry CRY_MUK,         $0ef,  $17f ; MUK
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; NIDORAN_M
+	mon_cry CRY_NIDORAN_M,   $000,  $100 ; NIDORAN
 	mon_cry CRY_NIDORAN_M,   $02c,  $140 ; NIDORINO
 	mon_cry CRY_NIDORAN_F,   $02c,  $160 ; NIDORINA
 	mon_cry CRY_RAICHU,      $000,  $100 ; NIDOKING

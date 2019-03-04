@@ -27,7 +27,3 @@ ROM0
 	org $0060
 	"joypad"
 	"High Home"
-	org $0100
-	"Header"
-	org $0150
-	"Home"

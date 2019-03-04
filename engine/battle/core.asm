@@ -6995,10 +6995,10 @@ endr
 
 .CheckMagikarpArea:
 	ld a, [wMapGroup]
-	cp GROUP_LAKE_OF_RAGE
+	;cp GROUP_LAKE_OF_RAGE
 	jr nz, .Happiness
 	ld a, [wMapNumber]
-	cp MAP_LAKE_OF_RAGE
+	;cp MAP_LAKE_OF_RAGE
 	jr nz, .Happiness
 .LakeOfRageMagikarp
 	; 40% chance of not flooring

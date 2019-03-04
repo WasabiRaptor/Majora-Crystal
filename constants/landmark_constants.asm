@@ -5,9 +5,15 @@
 
 
 	const_def
-
 	const SPECIAL_MAP        ; 00
+	const STARTING_TOWN     ; 01
+NUM_LANDMARKS EQU const_value
 
+; used in CaughtData
+GIFT_LOCATION  EQU $7e
+EVENT_LOCATION EQU $7f
+
+	const_def 1
 	const NEW_BARK_TOWN      ; 01
 	const ROUTE_29           ; 02
 	const CHERRYGROVE_CITY   ; 03
@@ -157,5 +163,3 @@ SHAMOUTI_LANDMARK EQU const_value
 	const VALENCIA_ISLAND    ; 8d
 	const NAVEL_ROCK         ; 8e
 	const FARAWAY_ISLAND     ; 8f
-
-NUM_LANDMARKS EQU const_value

@@ -964,7 +964,6 @@ LureBallMultiplier:
 
 MoonBallMultiplier:
 ; multiply catch rate by 4 if mon evolves with moon stone
-GLOBAL EvosAttacks
 GLOBAL EvosAttacksPointers
 
 	push bc
@@ -980,7 +979,7 @@ GLOBAL EvosAttacksPointers
 	pop bc
 
 	push bc
-	ld a, BANK(EvosAttacks)
+	ld a, BANK("Evolutions and Attacks")
 	call GetFarByte
 	cp EVOLVE_ITEM
 	pop bc
@@ -991,7 +990,7 @@ GLOBAL EvosAttacksPointers
 	inc hl
 
 	push bc
-	ld a, BANK(EvosAttacks)
+	ld a, BANK("Evolutions and Attacks")
 	call GetFarByte
 	cp MOON_STONE
 	pop bc

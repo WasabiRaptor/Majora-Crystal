@@ -248,7 +248,7 @@ Do2DMenuRTCJoypad: ; 24249
 .loopRTC
 	call DelayFrame
 .handleLoop
-	call RTC
+	call UpdateTime	
 	call Menu_WasButtonPressed
 	ret c
 	ld a, [w2DMenuFlags1]

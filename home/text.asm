@@ -715,7 +715,7 @@ Text_Jump::
 	ld a, [hli]
 
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 
 	push hl
 	ld h, d
@@ -725,7 +725,7 @@ Text_Jump::
 
 	pop af
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 	ret
 
 Text_BCD::

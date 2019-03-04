@@ -99,17 +99,7 @@ ReturnFromMapSetupScript:: ; b8000
 	ret z
 	and a ; cp SPECIAL_MAP
 	ret z
-	cp RADIO_TOWER
-	ret z
-	cp LAV_RADIO_TOWER
-	ret z
-	cp UNDERGROUND
-	ret z
-	cp POWER_PLANT
-	ret z
-	cp POKEMON_MANSION
-	ret z
-	cp CINNABAR_LAB
+	;cp RADIO_TOWER
 	ret z
 	ld a, $1
 	and a
@@ -118,12 +108,12 @@ ReturnFromMapSetupScript:: ; b8000
 
 .CheckNationalParkGate: ; b8089
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_35_NATIONAL_PARK_GATE
+	;cp GROUP_ROUTE_35_NATIONAL_PARK_GATE
 	ret nz
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_35_NATIONAL_PARK_GATE
+	;cp MAP_ROUTE_35_NATIONAL_PARK_GATE
 	ret z
-	cp MAP_ROUTE_36_NATIONAL_PARK_GATE
+	;cp MAP_ROUTE_36_NATIONAL_PARK_GATE
 	ret
 ; b8098
 

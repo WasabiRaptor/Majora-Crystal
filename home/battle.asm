@@ -391,11 +391,16 @@ LegendaryMons::
 	db RAIKOU
 	db ENTEI
 	db SUICUNE
+	db LATIOS
+	db LATIAS
+	db ZYGARDE
+	db SILVALLY
 UberMons::
 	db MEWTWO
 	db MEW
-	db LUGIA
-	db HO_OH
+	db MAGEARNA
+	db SHAYMIN
+	db ZYGARDE
 	db CELEBI
 	db -1
 
@@ -938,7 +943,7 @@ FarCopyRadioText:: ; 3a90
 	ld d, a
 	ld a, [hli]
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 	ld a, e
 	ld l, a
 	ld a, d
@@ -948,7 +953,7 @@ FarCopyRadioText:: ; 3a90
 	rst CopyBytes
 	pop af
 	ld [hROMBank], a
-	ld [MBC3RomBank], a
+	ld [MBC5RomBank], a
 	ret
 ; 3ab2
 

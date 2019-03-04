@@ -455,7 +455,6 @@ InitEggMoves: ; 170bf
 ; 170e4
 
 GetEggMove: ; 170e4
-GLOBAL EggMoves
 
 	push bc
 	ld a, [wEggMonSpecies]
@@ -468,7 +467,7 @@ GLOBAL EggMoves
 	ld a, BANK(EggMovePointers)
 	call GetFarHalfword
 .loop
-	ld a, BANK(EggMoves)
+	ld a, BANK("Egg Moves")
 	call GetFarByte
 	cp -1
 	jr z, .reached_end
@@ -502,18 +501,18 @@ GLOBAL EggMoves
 	ld a, BANK(EvosAttacksPointers)
 	call GetFarHalfword
 .loop3
-	ld a, BANK(EvosAttacks)
+	ld a, BANK("Evolutions and Attacks")
 	call GetFarByte
 	inc hl
 	and a
 	jr nz, .loop3
 .loop4
-	ld a, BANK(EvosAttacks)
+	ld a, BANK("Evolutions and Attacks")
 	call GetFarByte
 	and a
 	jr z, .inherit_tmhm
 	inc hl
-	ld a, BANK(EvosAttacks)
+	ld a, BANK("Evolutions and Attacks")
 	call GetFarByte
 	ld b, a
 	ld a, [de]

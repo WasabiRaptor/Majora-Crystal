@@ -107,12 +107,8 @@ Pokegear_LoadGFX: ; 90c4e
 	ld a, [wMapNumber]
 	ld c, a
 	call GetWorldMapLocation
-	cp FAST_SHIP
-	jr z, .ssaqua
-	cp SINJOH_RUINS
-	jr z, .sinjoh
-	cp MYSTRI_STAGE
-	jr z, .sinjoh
+	;cp FAST_SHIP
+	;jr z, .ssaqua
 	farcall GetPlayerIcon
 	push de
 	ld h, d
@@ -140,18 +136,11 @@ Pokegear_LoadGFX: ; 90c4e
 	rst CopyBytes
 	ret
 
-.sinjoh
-	ld hl, SinjohRuinsArrowGFX
-	jr .loadaltsprite
-
 ; 90cb2
 
 FastShipGFX: ; 90cb2
 INCBIN "gfx/town_map/fast_ship.2bpp"
 ; 90d32
-
-SinjohRuinsArrowGFX:
-INCBIN "gfx/pokegear/arrow.2bpp"
 
 InitPokegearModeIndicatorArrow: ; 90d32 (24:4d32)
 	depixel 4, 2, 4, 0
@@ -495,18 +484,7 @@ Pokegear_UpdateClock: ; 90f86 (24:4f86)
 
 PokegearMap_CheckRegion: ; 90fb4 (24:4fb4)
 	ld a, [wPokegearMapPlayerIconLandmark]
-	cp SHAMOUTI_LANDMARK
-	jr nc, .orange
-	cp KANTO_LANDMARK
-	jr nc, .kanto
 	ld a, 3
-	jr .done
-.kanto
-	ld a, 5
-	jr .done
-.orange
-	ld a, 7
-.done
 	ld [wJumptableIndex], a
 	jp ExitPokegearRadio_HandleMusic
 
@@ -626,9 +604,9 @@ SkipHiddenOrangeIslandsUp:
 	inc [hl]
 .not_after_faraway_island
 	ld a, [hl]
-	cp FARAWAY_ISLAND + 1
+	;cp FARAWAY_ISLAND + 1
 	ret nz
-	ld [hl], SHAMOUTI_ISLAND
+	;ld [hl], SHAMOUTI_ISLAND
 	ret
 
 SkipHiddenOrangeIslandsDown:
@@ -643,7 +621,7 @@ SkipHiddenOrangeIslandsDown:
 
 CheckSkipNavelRock:
 	ld a, [hl]
-	cp NAVEL_ROCK
+	;cp NAVEL_ROCK
 	ret nz
 	push hl
 	eventflagcheck EVENT_VISITED_NAVEL_ROCK
@@ -652,7 +630,7 @@ CheckSkipNavelRock:
 
 CheckSkipFarawayIsland:
 	ld a, [hl]
-	cp FARAWAY_ISLAND
+	;cp FARAWAY_ISLAND
 	ret nz
 	push hl
 	eventflagcheck EVENT_VISITED_FARAWAY_ISLAND
@@ -760,19 +738,19 @@ TownMap_ConvertLineBreakCharacters: ; 1de2c5
 	jp PlaceString
 
 TownMap_GetJohtoLandmarkLimits:
-	lb de, SILVER_CAVE, NEW_BARK_TOWN
+	;lb de, SILVER_CAVE, NEW_BARK_TOWN
 	ret
 
 TownMap_GetKantoLandmarkLimits: ; 910e8
-	lb de, ROUTE_28, ROUTE_27
+	;lb de, ROUTE_28, ROUTE_27
 	ld a, [wStatusFlags]
 	bit 6, a
 	ret z
-	ld e, PALLET_TOWN
+	;ld e, PALLET_TOWN
 	ret
 
 TownMap_GetOrangeLandmarkLimits:
-	lb de, FARAWAY_ISLAND, SHAMOUTI_ISLAND
+	;lb de, FARAWAY_ISLAND, SHAMOUTI_ISLAND
 	ret
 
 ; 910f9
@@ -1543,7 +1521,7 @@ RadioChannels:
 
 .RuinsOfAlphRadio:
 	ld a, [wPokegearMapPlayerIconLandmark]
-	cp RUINS_OF_ALPH
+	;cp RUINS_OF_ALPH
 	jr nz, .NoSignal
 	jp LoadStation_UnownRadio
 
@@ -1577,14 +1555,6 @@ RadioChannels:
 	bit 4, a
 	jr z, .NoSignal
 	ld a, [wPokegearMapPlayerIconLandmark]
-	cp MAHOGANY_TOWN
-	jr z, .ok
-	cp ROUTE_43
-	jr z, .ok
-	cp LAKE_OF_RAGE
-	jr nz, .NoSignal
-.ok
-	jp LoadStation_EvolutionRadio
 
 .NoSignal:
 	jp NoRadioStation
@@ -1789,19 +1759,7 @@ _TownMap: ; 9191c
 	call DelayFrame
 
 	ld a, [wTownMapPlayerIconLandmark]
-	cp SHAMOUTI_LANDMARK
-	jr nc, .orange
-	cp KANTO_LANDMARK
-	jr nc, .kanto
 	call TownMap_GetJohtoLandmarkLimits
-	jr .resume
-.kanto
-	call TownMap_GetKantoLandmarkLimits
-	jr .resume
-.orange
-	call TownMap_GetOrangeLandmarkLimits
-
-.resume
 	call .loop
 	pop af
 	ld [wVramState], a
@@ -1900,10 +1858,6 @@ _TownMap: ; 9191c
 	call TownMapPals
 
 	ld a, [wTownMapPlayerIconLandmark]
-	cp SHAMOUTI_LANDMARK
-	jp nc, TownMapOrangeFlips
-	cp KANTO_LANDMARK
-	jp nc, TownMapKantoFlips
 	jp TownMapJohtoFlips
 ; 91a53
 
@@ -2000,10 +1954,6 @@ PlayRadio: ; 91a53
 PokegearMap: ; 91ae1
 	call LoadTownMapGFX
 	ld a, [wPokegearMapPlayerIconLandmark]
-	cp SHAMOUTI_LANDMARK
-	jp nc, FillOrangeMap
-	cp KANTO_LANDMARK
-	jp nc, FillKantoMap
 	jp FillJohtoMap
 ; 91af3
 
@@ -2238,84 +2188,22 @@ INCLUDE "data/maps/flypoints.asm"
 FlyMap: ; 91c90
 	call GetCurrentLandmark
 ; The first 46 locations are part of Johto. The rest are in Kanto
-	cp KANTO_LANDMARK
-	jr nc, .KantoFlyMap
 ;.JohtoFlyMap:
 ; Note that .NoKanto should be modified in tandem with this branch
 	push af
 ; Start from New Bark Town
-	ld a, FLY_NEW_BARK
+	;ld a, FLY_NEW_BARK
 	ld [wTownMapPlayerIconLandmark], a
 ; Flypoints begin at New Bark Town...
 	ld [wStartFlypoint], a
 ; ..and end at Silver Cave
-	ld a, FLY_MT_SILVER
+	;ld a, FLY_MT_SILVER
 	ld [wEndFlypoint], a
 ; Fill out the map
 	call FillJohtoMap
 	call TownMapBubble
 	call TownMapPals
 	call TownMapJohtoFlips
-	call .MapHud
-	pop af
-	jp TownMapPlayerIcon
-
-.KantoFlyMap:
-; The event that there are no flypoints enabled in a map is not
-
-; accounted for. As a result, if you attempt to select a flypoint
-; when there are none enabled, the game will crash. Additionally,
-
-; the flypoint selection has a default starting point that
-; can be flown to even if none are enabled
-
-; To prevent both of these things from happening when the player
-; enters Kanto, fly access is restricted until Indigo Plateau is
-
-; visited and its flypoint enabled
-	push af
-	ld c, SPAWN_INDIGO
-	call HasVisitedSpawn
-	and a
-	jr z, .NoKanto
-; Kanto's map is only loaded if we've visited Indigo Plateau
-
-; Flypoints begin at Pallet Town...
-	ld a, FLY_PALLET
-	ld [wStartFlypoint], a
-; ...and end at Indigo Plateau
-	ld a, FLY_INDIGO
-	ld [wEndFlypoint], a
-; Because Indigo Plateau is the first flypoint the player
-
-; visits, it's made the default flypoint
-	ld [wTownMapPlayerIconLandmark], a
-; Fill out the map
-	call FillKantoMap
-	call TownMapBubble
-	call TownMapPals
-	call TownMapKantoFlips
-	call .MapHud
-	pop af
-	jp TownMapPlayerIcon
-
-.NoKanto:
-; If Indigo Plateau hasn't been visited, we use Johto's map instead
-
-; Start from New Bark Town
-	ld a, FLY_NEW_BARK
-	ld [wTownMapPlayerIconLandmark], a
-; Flypoints begin at New Bark Town...
-	ld [wStartFlypoint], a
-; ..and end at Silver Cave
-	ld a, FLY_MT_SILVER
-	ld [wEndFlypoint], a
-	call FillJohtoMap
-	pop af
-	call TownMapBubble
-	call TownMapPals
-	call TownMapJohtoFlips
-.MapHud:
 	hlbgcoord 0, 0 ; BG Map 0
 	call TownMapBGUpdate
 	call TownMapMon
@@ -2323,7 +2211,9 @@ FlyMap: ; 91c90
 	ld [wTownMapCursorCoordinates], a
 	ld a, b
 	ld [wTownMapCursorCoordinates + 1], a
-	ret
+	pop af
+	jp TownMapPlayerIcon
+
 
 ; 91d11
 
@@ -2351,19 +2241,7 @@ _Area: ; 91d11
 	call LoadTownMapGFX
 
 	ld a, [wTownMapPlayerIconLandmark]
-	cp SHAMOUTI_LANDMARK
-	jr nc, .shamouti
-	cp KANTO_LANDMARK
-	jr nc, .kanto
-.johto
 	ld a, JOHTO_REGION
-	jr .set_region
-.shamouti
-	ld a, ORANGE_REGION
-	jr .set_region
-.kanto
-	ld a, KANTO_REGION
-.set_region
 	ld [wTownMapCursorLandmark], a
 	call .UpdateGFX
 	call .GetAndPlaceNest
@@ -2619,28 +2497,12 @@ _Area: ; 91d11
 ; not in the same region as what's currently
 ; on the screen.
 	ld a, [wTownMapPlayerIconLandmark]
-	cp SHAMOUTI_LANDMARK
-	jr nc, .player_in_orange
-	cp KANTO_LANDMARK
-	jr nc, .player_in_kanto
 	ld a, [wTownMapCursorLandmark]
 	and a ; cp JOHTO_REGION
 	jr nz, .clear
 .ok
 	and a
 	ret
-
-.player_in_kanto
-	ld a, [wTownMapCursorLandmark]
-	cp KANTO_REGION
-	jr nz, .clear
-	jr .ok
-
-.player_in_orange
-	ld a, [wTownMapCursorLandmark]
-	cp ORANGE_REGION
-	jr nz, .clear
-	jr .ok
 
 .clear
 	ld hl, wSprites
@@ -2654,22 +2516,13 @@ _Area: ; 91d11
 
 .GetPlayerOrFastShipIcon: ; 91ed0
 	ld a, [wTownMapPlayerIconLandmark]
-	cp FAST_SHIP
-	jr z, .FastShip
-	cp SINJOH_RUINS
-	jr z, .Sinjoh
-	cp MYSTRI_STAGE
-	jr z, .Sinjoh
+	;cp FAST_SHIP
+	;jr z, .FastShip
 	farjp GetPlayerIcon
 
 .FastShip:
 	ld de, FastShipGFX
 	ld b, BANK(FastShipGFX)
-	ret
-
-.Sinjoh:
-	ld de, SinjohRuinsArrowGFX
-	ld b, BANK(SinjohRuinsArrowGFX)
 	ret
 
 ; 91ee4

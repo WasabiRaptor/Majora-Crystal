@@ -1,3 +1,74 @@
+; get time of day based on the current hour
+GetTimeOfDay::
+	ld a, [hHours]
+	ld hl, TimesOfDay
+.check
+	cp [hl]
+	jr c, .match
+	inc hl
+	inc hl
+	jr .check
+.match
+	inc hl
+	ld a, [hl]
+	ld [wTimeOfDay], a
+	ret
+
+; hours for the time of day
+TimesOfDay:
+	db MORN_HOUR, NITE
+	db DAY_HOUR, MORN
+	db NITE_HOUR, DAY
+	db 24, NITE
+	db -1, MORN
+
+_InitTime::
+	call GetClock
+	ld hl, hRTCSeconds
+	ld de, wStartSecond
+	ld bc, wStringBuffer2 + 3
+; seconds
+	ld a, [bc]
+	sub [hl]
+	dec hl
+	jr nc, .ok_secs
+	add 60
+.ok_secs
+	ld [de], a
+	dec de
+	dec bc
+; minutes
+	ld a, [bc]
+	sbc [hl]
+	dec hl
+	jr nc, .ok_mins
+	add 60
+.ok_mins
+	ld [de], a
+	dec de
+	dec bc
+; hours
+	ld a, [bc]
+	sbc [hl]
+	dec hl
+	jr nc, .ok_hrs
+	add 24
+.ok_hrs
+	ld [de], a
+	dec de
+	dec bc
+; days
+	ld a, [bc]
+	sbc [hl]
+	dec hl
+	jr nc, .ok_days
+	add 140
+	ld c, 7
+	call SimpleDivide
+.ok_days
+	ld [de], a
+	ret
+
 _InitializeStartDay: ; 113d6
 	jp InitializeStartDay
 ; 113da
@@ -29,11 +100,8 @@ NextCallReceiveDelay: ; 113e9
 ; 113fd
 
 .ReceiveCallDelays:
-if DEF(NO_RTC)
 	db 20 * NO_RTC_SPEEDUP, 10 * NO_RTC_SPEEDUP, 5 * NO_RTC_SPEEDUP, 3 * NO_RTC_SPEEDUP
-else
-	db 20, 10, 5, 3
-endc
+
 ; 11401
 
 CheckReceiveCallTimer: ; 11401
@@ -152,11 +220,8 @@ Special_SampleKenjiBreakCountdown: ; 11485
 ; 11490
 
 StartBugContestTimer: ; 11490
-if DEF(NO_RTC)
 	ld a, 20 * NO_RTC_SPEEDUP
-else
-	ld a, 20
-endc
+
 	ld [wBugContestMinsRemaining], a
 	xor a
 	ld [wBugContestSecsRemaining], a

@@ -80,6 +80,10 @@ ENDM
 
 	newgroup ;4
 
+	map_const HIDDEN_TREE_GROTTO,                          5,  9 ;  4
+	map_const HIDDEN_CAVE_GROTTO,                         20, 45 ;  5
+
+	newgroup
 ;every way crossroads
 	map_const MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST,	    5,  5 ;  1
 

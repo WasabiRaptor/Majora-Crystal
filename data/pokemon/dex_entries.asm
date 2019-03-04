@@ -3,6 +3,7 @@ INCLUDE "constants.asm"
 
 SECTION "Pokedex Entries 001-064", ROMX
 
+PokedexEntries1::
 EeveePokedexEntry::  INCLUDE "data/pokemon/dex_entries/eevee.asm"
 VaporeonPokedexEntry::    INCLUDE "data/pokemon/dex_entries/vaporeon.asm"
 JolteonPokedexEntry::   INCLUDE "data/pokemon/dex_entries/jolteon.asm"
@@ -71,6 +72,7 @@ FloettePokedexEntry::    INCLUDE "data/pokemon/dex_entries/floette.asm"
 
 SECTION "Pokedex Entries 065-128", ROMX
 
+PokedexEntries2::
 FlorgesPokedexEntry::   INCLUDE "data/pokemon/dex_entries/florges.asm"
 IgglybuffPokedexEntry::     INCLUDE "data/pokemon/dex_entries/igglybuff.asm"
 JigglypuffPokedexEntry::    INCLUDE "data/pokemon/dex_entries/jigglypuff.asm"
@@ -139,6 +141,7 @@ AzumarillPokedexEntry::     INCLUDE "data/pokemon/dex_entries/azumarill.asm"
 
 SECTION "Pokedex Entries 129-192", ROMX
 
+PokedexEntries3::
 LaprasPokedexEntry::   INCLUDE "data/pokemon/dex_entries/lapras.asm"
 AnorithPokedexEntry::   INCLUDE "data/pokemon/dex_entries/anorith.asm"
 ArmaldoPokedexEntry::     INCLUDE "data/pokemon/dex_entries/armaldo.asm"
@@ -207,6 +210,7 @@ FletchinderPokedexEntry::   INCLUDE "data/pokemon/dex_entries/fletchinder.asm"
 
 SECTION "Pokedex Entries 193-251", ROMX
 
+PokedexEntries4::
 TalonflamePokedexEntry::      INCLUDE "data/pokemon/dex_entries/talonflame.asm"
 HeatmorPokedexEntry::     INCLUDE "data/pokemon/dex_entries/heatmor.asm"
 DurantPokedexEntry::   INCLUDE "data/pokemon/dex_entries/durant.asm"

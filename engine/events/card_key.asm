@@ -1,11 +1,11 @@
 _CardKey: ; 50779
 ; Are we even in the right map to use this?
 	ld a, [wMapGroup]
-	cp GROUP_RADIO_TOWER_3F
+;	cp GROUP_RADIO_TOWER_3F
 	jr nz, .nope
 
 	ld a, [wMapNumber]
-	cp MAP_RADIO_TOWER_3F
+;	cp MAP_RADIO_TOWER_3F
 	jr nz, .nope
 ; Are we facing the slot?
 	ld a, [wPlayerDirection]
@@ -21,7 +21,7 @@ _CardKey: ; 50779
 	cp 2 + 4
 	jr nz, .nope
 ; Let's use the Card Key.
-	ld hl, .CardKeyScript
+;	ld hl, .CardKeyScript
 	call QueueScript
 	ld a, TRUE
 	ld [wItemEffectSucceeded], a
@@ -35,5 +35,5 @@ _CardKey: ; 50779
 
 .CardKeyScript: ; 0x507af
 	closetext
-	farjump MapRadioTower3FSignpost2Script
+	;farjump MapRadioTower3FSignpost2Script
 ; 0x507b4

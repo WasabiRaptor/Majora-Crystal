@@ -1110,27 +1110,6 @@ BattleCommand_Critical: ; 34631
 .Item:
 	ld c, 0
 
-	cp CHANSEY
-	jr nz, .Farfetchd
-	ld a, [hl]
-	cp LUCKY_PUNCH
-	jr nz, .FocusEnergy
-
-; +2 critical level
-	ld c, 2
-	jr .FocusEnergy
-
-.Farfetchd:
-	cp FARFETCH_D
-	jr nz, .FocusEnergy
-	ld a, [hl]
-	cp STICK
-	jr nz, .FocusEnergy
-
-; +2 critical level
-	ld c, 2
-	; fallthrough
-
 .FocusEnergy:
 	ld a, BATTLE_VARS_SUBSTATUS4
 	call GetBattleVar
@@ -2271,23 +2250,12 @@ BattleCommand_HitTargetNoSub: ; 34f60
 	jr .fury_attack
 
 .fury_attack_users
-	db BEEDRILL
-	db NIDORAN_M
+	db NIDORAN
 	db NIDORINO
 	db NIDOKING
-	db FARFETCH_D
-	db DODUO
-	db DODRIO
-	db RHYHORN
-	db RHYDON
-	db RHYPERIOR
-	db PINSIR
-	db DUNSPARCE
 	db HERACROSS
 	db PILOSWINE
 	db MAMOSWINE
-	db SKARMORY
-	db DONPHAN
 	db -1
 
 ; 34fd1
@@ -2362,35 +2330,14 @@ BattleCommand_StatUpDownAnim: ; 34feb
 	jp PlayFXAnimID
 
 .withdraw_users
-	db SQUIRTLE
-	db WARTORTLE
-	db BLASTOISE
-	db SLOWBRO
-	db SHELLDER
-	db CLOYSTER
-	db OMANYTE
-	db OMASTAR
 	db -1
 
 .harden_users
-	db METAPOD
-	db KAKUNA
 	db GRIMER
 	db MUK
-	db ONIX
-	db STEELIX
-	db KRABBY
-	db KINGLER
-	db STARYU
-	db STARMIE
-	db KABUTO
-	db KABUTOPS
 	db HERACROSS
-	db GLIGAR
-	db GLISCOR
 	db SLUGMA
 	db MAGCARGO
-	db CORSOLA
 	db PUPITAR
 	db TYRANITAR
 	db -1
@@ -3307,7 +3254,7 @@ UnevolvedEviolite:
 	add hl, bc
 	ld a, BANK(EvosAttacksPointers)
 	call GetFarHalfword
-	ld a, BANK(EvosAttacks)
+	ld a, BANK("Evolutions and Attacks")
 	call GetFarByte
 	and a
 	pop bc
@@ -3407,16 +3354,16 @@ endc
 	ld hl, wBattleMonAttack
 	ld a, [wEnemyAbility]
 	cp INFILTRATOR
-	jr z, .thickcluborlightball
+	jr z, .done
 	ld a, [wEnemyScreens]
 	bit SCREENS_REFLECT, a
-	jr z, .thickcluborlightball
+	jr z, .done
 	ld a, [wCriticalHit]
 	and a
-	jr nz, .thickcluborlightball
+	jr nz, .done
 	sla c
 	rl b
-	jr .thickcluborlightball
+	jr .done
 
 .special
 	ld a, BATTLE_VARS_MOVE_EFFECT
@@ -3443,24 +3390,15 @@ endc
 	ld hl, wBattleMonSpclAtk
 	ld a, [wEnemyAbility]
 	cp INFILTRATOR
-	jr z, .lightball
+	jr z, .done
 	ld a, [wEnemyScreens]
 	bit SCREENS_LIGHT_SCREEN, a
-	jr z, .lightball
+	jr z, .done
 	ld a, [wCriticalHit]
 	and a
-	jr nz, .lightball
+	jr nz, .done
 	sla c
 	rl b
-
-.lightball
-; Note: Returns player special attack at hl in hl.
-	call LightBallBoost
-	jr .done
-
-.thickcluborlightball
-; Note: Returns player attack at hl in hl.
-	call ThickClubOrLightBallBoost
 
 .done
 	call TruncateHL_BC
@@ -3500,23 +3438,21 @@ EnemyAttackDamage: ; 353f6
 	ld b, a
 	ld c, [hl]
 
-if !DEF(FAITHFUL)
 	call HailDefenseBoost
-endc
 
 	ld hl, wEnemyMonAttack
 	ld a, [wPlayerAbility]
 	cp INFILTRATOR
-	jr z, .thickcluborlightball
+	jr z, .done
 	ld a, [wPlayerScreens]
 	bit SCREENS_REFLECT, a
-	jr z, .thickcluborlightball
+	jr z, .done
 	ld a, [wCriticalHit]
 	and a
-	jr nz, .thickcluborlightball
+	jr nz, .done
 	sla c
 	rl b
-	jr .thickcluborlightball
+	jr .done
 
 .special
 	ld a, BATTLE_VARS_MOVE_EFFECT
@@ -3543,24 +3479,15 @@ endc
 	ld hl, wEnemyMonSpclAtk
 	ld a, [wPlayerAbility]
 	cp INFILTRATOR
-	jr z, .lightball
+	jr z, .done
 	ld a, [wPlayerScreens]
 	bit SCREENS_LIGHT_SCREEN, a
-	jr z, .lightball
+	jr z, .done
 	ld a, [wCriticalHit]
 	and a
-	jr nz, .lightball
+	jr nz, .done
 	sla c
 	rl b
-
-.lightball
-; Note: Returns enemy special attack at hl in hl.
-	call LightBallBoost
-	jr .done
-
-.thickcluborlightball
-; Note: Returns enemy attack at hl in hl.
-	call ThickClubOrLightBallBoost
 
 .done
 	call TruncateHL_BC
@@ -3621,56 +3548,6 @@ TruncateHL_BC: ; 3534d
 .done
 	ld b, l
 	ret
-
-ThickClubOrLightBallBoost: ; 353b5
-; Return in hl the stat value at hl.
-
-; If the attacking monster is Cubone or Marowak and
-; it's holding a Thick Club, or if it's Pikachu and
-; it's holding a Light Ball, double it.
-	push bc
-	push de
-	push hl
-	ld a, MON_SPECIES
-	call UserPartyAttr
-	ld a, [hBattleTurn]
-	and a
-	ld a, [hl]
-	jr z, .checkpikachu
-	ld a, [wTempEnemyMonSpecies]
-.checkpikachu:
-	pop hl
-	cp PIKACHU
-	lb bc, PIKACHU, PIKACHU
-	ld d, LIGHT_BALL
-	jr z, .ok
-	lb bc, CUBONE, MAROWAK
-	ld d, THICK_CLUB
-.ok
-	call SpeciesItemBoost
-	pop de
-	pop bc
-	ret
-
-; 353c3
-
-
-LightBallBoost: ; 353c3
-; Return in hl the stat value at hl.
-
-; If the attacking monster is Pikachu and it's
-; holding a Light Ball, double it.
-	push bc
-	push de
-	lb bc, PIKACHU, PIKACHU
-	ld d, LIGHT_BALL
-	call SpeciesItemBoost
-	pop de
-	pop bc
-	ret
-
-; 353d1
-
 
 SpeciesItemBoost: ; 353d1
 ; Return in hl the stat value at hl.

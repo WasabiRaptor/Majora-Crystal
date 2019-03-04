@@ -1,4 +1,4 @@
-
+VariantPicPointerTable:
     dbba LYCANROC,  LycanrocPicPointers
     dbba MEOWTH,    MeowthPicPointers  
     dbba PERSIAN,   PersianPicPointers   

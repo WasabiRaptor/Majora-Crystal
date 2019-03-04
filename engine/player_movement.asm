@@ -1,7 +1,7 @@
 DoPlayerMovement:: ; 80000
 
 	call .GetDPad
-	ld a, movement_step_sleep_1
+	ld a, movement_step_sleep
 	ld [wMovementAnimation], a
 	call .TranslateIntoMovement
 	ld c, a
@@ -54,6 +54,8 @@ DoPlayerMovement:: ; 80000
 	ret c
 	call .TryJump
 	ret c
+	call .TryDiagonalStairs
+	ret c
 	call .CheckWarp
 	ret c
 	jr .NotMoving
@@ -79,6 +81,8 @@ DoPlayerMovement:: ; 80000
 	call .TryStep
 	ret c
 	call .TryJump
+	ret c
+	call .TryDiagonalStairs
 	ret c
 	call .CheckWarp
 	ret c
@@ -156,11 +160,20 @@ DoPlayerMovement:: ; 80000
 	jr z, .up
 	cp COLL_DOOR
 	jr z, .down
+	cp COLL_DOOR_RIGHT
+	jr z, .left
+	cp COLL_DOOR_LEFT
+	jr z, .right
 	cp COLL_STAIRCASE
 	jr z, .down
 	cp COLL_CAVE
 	jr nz, .no_walk
-
+.left
+	ld a, LEFT
+	jr .set_direction
+.right
+	ld a, RIGHT
+	jr .set_direction
 .down
 	xor a ; DOWN
 	jr .set_direction
@@ -353,7 +366,7 @@ DoPlayerMovement:: ; 80000
 	ld e, a
 	and $f0
 	cp $a0 ; ledge
-	jr nz, .DontJump
+	jr nz, .DontJumpOrStairs
 
 	ld a, e
 	and 7
@@ -363,7 +376,7 @@ DoPlayerMovement:: ; 80000
 	add hl, de
 	ld a, [wFacingDirection]
 	and [hl]
-	jr z, .DontJump
+	jr z, .DontJumpOrStairs
 
 	ld de, SFX_JUMP_OVER_LEDGE
 	call PlaySFX
@@ -373,7 +386,7 @@ DoPlayerMovement:: ; 80000
 	scf
 	ret
 
-.DontJump:
+.DontJumpOrStairs:
 	xor a
 	ret
 
@@ -387,6 +400,33 @@ DoPlayerMovement:: ; 80000
 	db FACE_UP | FACE_RIGHT
 	db FACE_UP | FACE_LEFT
 ; 80226
+
+.TryDiagonalStairs
+	ld a, [wPlayerStandingTile]
+	ld e, a
+	and $f0
+	cp HI_NYBBLE_DIAGONAL_STAIRS
+	jr nz, .DontJumpOrStairs;if not going up or down we're not doing stairs at all
+
+	ld a, e
+	and 7
+	ld e, a
+	ld d, 0
+	ld hl, .FacingStairsTable
+	add hl, de
+	ld a, [wFacingDirection]
+	and [hl]
+	jr z, .DontJumpOrStairs
+
+	ld a, STEP_DIAGONAL_STAIRS
+	call .DoStep
+	ld a, 7
+	scf
+	ret
+
+.FacingStairsTable
+	db FACE_RIGHT
+	db FACE_LEFT
 
 .CheckWarp: ; 80226
 
@@ -470,65 +510,71 @@ DoPlayerMovement:: ; 80000
 	dw .InPlace
 	dw .SpinStep
 	dw .Fast ; x2
+	dw .DiagonalStairsStep
 
 .SlowStep:
-	slow_step_down
-	slow_step_up
-	slow_step_left
-	slow_step_right
+	slow_step DOWN
+	slow_step UP
+	slow_step LEFT
+	slow_step RIGHT
 .NormalStep:
-	step_down
-	step_up
-	step_left
-	step_right
+	step DOWN
+	step UP
+	step LEFT
+	step RIGHT
 .FastStep:
-	big_step_down
-	big_step_up
-	big_step_left
-	big_step_right
+	big_step DOWN
+	big_step UP
+	big_step LEFT
+	big_step RIGHT
 .Run
-	run_step_down
-	run_step_up
-	run_step_left
-	run_step_right
+	run_step DOWN
+	run_step UP
+	run_step LEFT
+	run_step RIGHT
 .JumpStep:
-	jump_step_down
-	jump_step_up
-	jump_step_left
-	jump_step_right
+	jump_step DOWN
+	jump_step UP
+	jump_step LEFT
+	jump_step RIGHT
 .SlideStep:
-	fast_slide_step_down
-	fast_slide_step_up
-	fast_slide_step_left
-	fast_slide_step_right
+	fast_slide_step DOWN
+	fast_slide_step UP
+	fast_slide_step LEFT
+	fast_slide_step RIGHT
 .BackJumpStep:
-	jump_step_up
-	jump_step_down
-	jump_step_right
-	jump_step_left
+	jump_step UP
+	jump_step DOWN
+	jump_step RIGHT
+	jump_step LEFT
 .TurningStep:
-	turn_step_down
-	turn_step_up
-	turn_step_left
-	turn_step_right
+	turn_step DOWN
+	turn_step UP
+	turn_step LEFT
+	turn_step RIGHT
 .InPlace:
-	db $80 + movement_turn_head_down
-	db $80 + movement_turn_head_up
-	db $80 + movement_turn_head_left
-	db $80 + movement_turn_head_right
+	db $80 + DOWN
+	db $80 + UP
+	db $80 + LEFT
+	db $80 + RIGHT
 .SpinStep
-	turn_in_down
-	turn_in_up
-	turn_in_left
-	turn_in_right
+	turn_in DOWN
+	turn_in UP
+	turn_in LEFT
+	turn_in RIGHT
 .Fast
-	fast_step_down
-	fast_step_up
-	fast_step_left
-	fast_step_right
+	fast_step DOWN
+	fast_step UP
+	fast_step LEFT
+	fast_step RIGHT
+.DiagonalStairsStep
+	diagonal_stairs_step DOWN
+	diagonal_stairs_step UP
+	diagonal_stairs_step LEFT
+	diagonal_stairs_step RIGHT
 
 .StandInPlace: ; 802b3
-	ld a, movement_step_sleep_1
+	ld a, movement_step_sleep
 	ld [wMovementAnimation], a
 	xor a
 	ld [wPlayerTurningDirection], a
@@ -874,7 +920,7 @@ CheckSpinning::
 
 StopPlayerForEvent:: ; 80422
 	ld hl, wPlayerNextMovement
-	ld a, movement_step_sleep_1
+	ld a, movement_step_sleep
 	cp [hl]
 	ret z
 

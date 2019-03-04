@@ -1,9 +1,6 @@
 ; Written by Sanqui
 ; https://github.com/froggestspirit/CrystalComplete/blob/master/misc/musicplayer.asm
 
-INCLUDE "constants.asm"
-
-
 MP_METER0 EQU $20
 MP_METER8 EQU $28
 MP_DUTY0 EQU $29
@@ -37,33 +34,6 @@ jpbutton: macro
 	jp nz, \2
 endm
 
-jrheldbutton: macro
-; assumes hl == hJoyDown
-	ld a, [wTextDelayFrames]
-	and a
-	jr nz, .no\@
-	ld a, [hl]
-	and \1
-	jr z, .no\@
-	ld a, \3
-	ld [wTextDelayFrames], a
-	jr \2
-.no\@:
-endm
-
-jpheldbutton: macro
-; assumes hl == hJoyDown
-	ld a, [wTextDelayFrames]
-	and a
-	jr nz, .no\@
-	ld a, [hl]
-	and \1
-	jr z, .no\@
-	ld a, \3
-	ld [wTextDelayFrames], a
-	jp \2
-.no\@:
-endm
 
 MusicPlayerPals:
 if !DEF(MONOCHROME)
@@ -269,10 +239,10 @@ MusicPlayerLoop:
 
 	call MPUpdateUIAndGetJoypad
 	ld hl, hJoyDown
-	jrheldbutton D_UP, .up, 12
-	jrheldbutton D_DOWN, .down, 12
-	jrheldbutton D_LEFT, .left, 12
-	jrheldbutton D_RIGHT, .right, 12
+	jrbutton D_UP, .up
+	jrbutton D_DOWN, .down
+	jrbutton D_LEFT, .left
+	jrbutton D_RIGHT, .right
 	ld hl, hJoyPressed
 	jrbutton A_BUTTON, .a
 	jrbutton B_BUTTON, .b
@@ -373,8 +343,8 @@ MusicPlayerLoop:
 SongEditor:
 	call MPUpdateUIAndGetJoypad
 	ld hl, hJoyDown
-	jrheldbutton D_UP, .up, 10
-	jpheldbutton D_DOWN, .down, 10
+	jrbutton D_UP, .up
+	jpbutton D_DOWN, .down
 	ld hl, hJoyPressed
 	jrbutton D_LEFT, .left
 	jrbutton D_RIGHT, .right
@@ -611,10 +581,10 @@ AdjustTempo:
 .loop:
 	call MPUpdateUIAndGetJoypad
 	ld hl, hJoyDown
-	jrheldbutton D_UP, .up, 6
-	jrheldbutton D_DOWN, .down, 6
-	jrheldbutton D_RIGHT, .right, 18
-	jrheldbutton D_LEFT, .left, 18
+	jrbutton D_UP, .up
+	jrbutton D_DOWN, .down
+	jrbutton D_RIGHT, .right
+	jrbutton D_LEFT, .left
 	ld hl, hJoyPressed
 	jrbutton A_BUTTON, .a
 	jrbutton B_BUTTON, .b
@@ -1651,10 +1621,10 @@ SongSelector:
 	call DelayFrame
 	call MPGetJoypad
 	ld hl, hJoyDown
-	jrheldbutton D_UP, .up, 6
-	jrheldbutton D_DOWN, .down, 6
-	jrheldbutton D_LEFT, .left, 18
-	jrheldbutton D_RIGHT, .right, 18
+	jrbutton D_UP, .up, 6
+	jrbutton D_DOWN, .down, 6
+	jrbutton D_LEFT, .left, 18
+	jrbutton D_RIGHT, .right, 18
 	ld hl, hJoyPressed
 	jrbutton A_BUTTON, .a
 	jrbutton START | B_BUTTON, .start_b

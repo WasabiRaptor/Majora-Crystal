@@ -56,10 +56,6 @@ MovementPointers:
 	dw Movement_fast_jump_step_up     ; 35
 	dw Movement_fast_jump_step_left   ; 36
 	dw Movement_fast_jump_step_right  ; 37
-	dw Movement_diagonal_stairs_step_down
-	dw Movement_diagonal_stairs_step_up
-	dw Movement_diagonal_stairs_step_left
-	dw Movement_diagonal_stairs_step_right
 	dw Movement_remove_sliding        ; 38
 	dw Movement_set_sliding           ; 39
 	dw Movement_remove_fixed_facing   ; 3a
@@ -94,7 +90,19 @@ MovementPointers:
 	dw Movement_rock_smash            ; 57
 	dw Movement_return_dig            ; 58
 	dw Movement_skyfall_top           ; 59
-	
+	dw Movement_run_step_down         ; 5a
+	dw Movement_run_step_up           ; 5b
+	dw Movement_run_step_left         ; 5c
+	dw Movement_run_step_right        ; 5d
+	dw Movement_fast_step_down        ; 5e
+	dw Movement_fast_step_up          ; 5f
+	dw Movement_fast_step_left        ; 60
+	dw Movement_fast_step_right       ; 61
+	dw Movement_diagonal_stairs_step_down
+	dw Movement_diagonal_stairs_step_up
+	dw Movement_diagonal_stairs_step_left
+	dw Movement_diagonal_stairs_step_right
+
 
 Movement_teleport_from:
 	ld hl, OBJECT_STEP_TYPE
@@ -444,51 +452,88 @@ TurnHead:
 
 Movement_slow_step_down:
 	ld a, STEP_SLOW << 2 | DOWN
-	jp NormalStep
+	jp Movement_do_step
 
 Movement_slow_step_up:
 	ld a, STEP_SLOW << 2 | UP
-	jp NormalStep
+	jp Movement_do_step
 
 Movement_slow_step_left:
 	ld a, STEP_SLOW << 2 | LEFT
-	jp NormalStep
+	jp Movement_do_step
 
 Movement_slow_step_right:
 	ld a, STEP_SLOW << 2 | RIGHT
-	jp NormalStep
+	jp Movement_do_step
 
 Movement_step_down:
 	ld a, STEP_WALK << 2 | DOWN
-	jp NormalStep
+	jr Movement_do_step
 
 Movement_step_up:
 	ld a, STEP_WALK << 2 | UP
-	jp NormalStep
+	jr Movement_do_step
 
 Movement_step_left:
 	ld a, STEP_WALK << 2 | LEFT
-	jp NormalStep
+	jr Movement_do_step
 
 Movement_step_right:
 	ld a, STEP_WALK << 2 | RIGHT
-	jp NormalStep
+	jr Movement_do_step
+
+Movement_fast_step_down:
+	ld a, STEP_RUN << 2 | DOWN
+	jr Movement_do_step
+
+Movement_fast_step_up:
+	ld a, STEP_RUN << 2 | UP
+	jr Movement_do_step
+
+Movement_fast_step_left:
+	ld a, STEP_RUN << 2 | LEFT
+	jr Movement_do_step
+
+Movement_fast_step_right:
+	ld a, STEP_RUN << 2 | RIGHT
+	jr Movement_do_step
 
 Movement_big_step_down:
 	ld a, STEP_BIKE << 2 | DOWN
-	jp NormalStep
+	jr Movement_do_step
 
 Movement_big_step_up:
 	ld a, STEP_BIKE << 2 | UP
-	jp NormalStep
+	jr Movement_do_step
 
 Movement_big_step_left:
 	ld a, STEP_BIKE << 2 | LEFT
-	jp NormalStep
+	jr Movement_do_step
 
 Movement_big_step_right:
 	ld a, STEP_BIKE << 2 | RIGHT
+Movement_do_step:
+	ld d, OBJECT_ACTION_STEP
+Movement_normal_step:
 	jp NormalStep
+
+Movement_run_step_down:
+	ld a, STEP_RUN << 2 | DOWN  ; STEP_RUN
+	jr Movement_do_run
+
+Movement_run_step_up:
+	ld a, STEP_RUN << 2 | UP    ; STEP_RUN
+	jr Movement_do_run
+
+Movement_run_step_left:
+	ld a, STEP_RUN << 2 | LEFT  ; STEP_RUN
+	jr Movement_do_run
+
+Movement_run_step_right:
+	ld a, STEP_RUN << 2 | RIGHT ; STEP_RUN
+Movement_do_run:
+	ld d, OBJECT_ACTION_RUN
+	jr Movement_normal_step
 
 Movement_turn_away_down:
 	ld a, STEP_SLOW << 2 | DOWN
@@ -681,26 +726,33 @@ TurnStep:
 	ld [hl], STEP_TYPE_HALF_STEP
 	ret
 
-NormalStep:
+NormalStep: ; 5412
+	push de
 	call InitStep
 	call UpdateTallGrassFlags
 	ld hl, OBJECT_ACTION
 	add hl, bc
 	ld [hl], OBJECT_ACTION_STEP
+	pop de
+	ld [hl], d
 
 	ld hl, OBJECT_NEXT_TILE
 	add hl, bc
 	ld a, [hl]
-	call CheckSuperTallGrassTile
+	cp COLL_LONG_GRASS
+	jr z, .shake_grass
+	cp COLL_TALL_GRASS
 	jr z, .shake_grass
 
-	call CheckGrassTile
-	jr c, .skip_grass
+	cp COLL_PUDDLE
+	jr nz, .skip_effect
+	call SplashPuddle
+	jr .skip_effect
 
 .shake_grass
 	call ShakeGrass
 
-.skip_grass
+.skip_effect
 	ld hl, wCenteredObject
 	ldh a, [hMapObjectIndexBuffer]
 	cp [hl]
@@ -767,7 +819,7 @@ SlideStep:
 
 JumpStep:
 	call InitStep
-	ld hl, OBJECT_1F
+	ld hl, OBJECT_31
 	add hl, bc
 	ld [hl], $0
 
@@ -800,7 +852,7 @@ JumpStep:
 ;diagonal stairs 
 DiagonalStairsStep: ;the issue on turning is not here
 	call InitStep
-	ld hl, OBJECT_1F
+	ld hl, OBJECT_31
 	add hl, bc
 	ld [hl], $0
 

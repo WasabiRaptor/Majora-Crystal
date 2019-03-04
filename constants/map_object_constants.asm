@@ -33,6 +33,10 @@
 	const OBJECT_30
 	const OBJECT_31
 	const OBJECT_RANGE
+OBJECT_1C EQU OBJECT_28   
+OBJECT_1D EQU OBJECT_29
+OBJECT_1E EQU OBJECT_30
+OBJECT_1F EQU OBJECT_31
 
 ; object_struct OBJECT_FACING values
 OW_DOWN  EQU DOWN  << 2
@@ -41,9 +45,33 @@ OW_LEFT  EQU LEFT  << 2
 OW_RIGHT EQU RIGHT << 2
 
 ; object_struct OBJECT_FLAGS1 bit flags
+	const_def
+	const INVISIBLE_F     ; 0
+	const WONT_DELETE_F   ; 1
+	const FIXED_FACING_F  ; 2
+	const SLIDING_F       ; 3
+	const NOCLIP_TILES_F  ; 4
+	const MOVE_ANYWHERE_F ; 5
+	const NOCLIP_OBJS_F   ; 6
+	const EMOTE_OBJECT_F  ; 7
+
+; object_struct OBJECT_FLAGS1 bit flags
 FIXED_FACING EQU 2
 SLIDING      EQU 3
 EMOTE_OBJECT EQU 7
+
+; object_struct OBJECT_FLAGS2 bit flags
+	const_def
+	const LOW_PRIORITY_F  ; 0
+	const HIGH_PRIORITY_F ; 1
+	const OBJ_FLAGS2_2    ; 2
+	const OVERHEAD_F      ; 3
+	const USE_OBP1_F      ; 4
+
+WONT_DELETE   EQU 1 << WONT_DELETE_F
+NOCLIP_TILES  EQU 1 << NOCLIP_TILES_F
+MOVE_ANYWHERE EQU 1 << MOVE_ANYWHERE_F
+NOCLIP_OBJS   EQU 1 << NOCLIP_OBJS_F
 
 ; object_struct OBJECT_FLAGS2 bit flags
 INVISIBLE    EQU 0
@@ -51,7 +79,7 @@ OVERHEAD     EQU 3
 OBJECT_DISABLE_STEP_TYPE EQU 5
 
 
-; map object struct
+; map_object struct members (see macros/wram.asm)
 	const_def
 	const MAPOBJECT_OBJECT_STRUCT_ID ; 0
 	const MAPOBJECT_SPRITE ; 1
@@ -69,9 +97,18 @@ OBJECT_DISABLE_STEP_TYPE EQU 5
 	const MAPOBJECT_FLAG_HI ; d
 OBJECT_LENGTH EQU const_value
 
-MAPOBJECT_SCREEN_HEIGHT EQU 11
-MAPOBJECT_SCREEN_WIDTH EQU 12
+; SpriteMovementData struct members (see data/sprites/map_objects.asm)
+	const_def
+	const SPRITEMOVEATTR_MOVEMENT ; 0
+	const SPRITEMOVEATTR_FACING   ; 1
+	const SPRITEMOVEATTR_ACTION   ; 2
+	const SPRITEMOVEATTR_FLAGS1   ; 3
+	const SPRITEMOVEATTR_FLAGS2   ; 4
+	const SPRITEMOVEATTR_PALFLAGS ; 5
+NUM_SPRITEMOVEDATA_FIELDS EQU const_value
 
+MAPOBJECT_SCREEN_WIDTH  EQU (SCREEN_WIDTH / 2) + 2
+MAPOBJECT_SCREEN_HEIGHT EQU (SCREEN_HEIGHT / 2) + 2
 
 ; sprite movement data table indices
 ; see data/sprites/map_objects.asm
@@ -180,34 +217,37 @@ SPRITEMOVEDATA_FIELDS EQU 6
 	const STEP_TYPE_TRACKING_OBJECT ; 13
 	const STEP_TYPE_14              ; 14
 	const STEP_TYPE_SKYFALL_TOP     ; 15
+	const STEP_TYPE_NPC_DIAGONAL_STAIRS
+	const STEP_TYPE_PLAYER_DIAGONAL_STAIRS
+
 
 ; see engine/map_object_action.asm:Pointers445f
 	const_def
-	const PERSON_ACTION_00              ; 00
-	const PERSON_ACTION_STAND           ; 01
-	const PERSON_ACTION_STEP            ; 02
-	const PERSON_ACTION_BUMP            ; 03
-	const PERSON_ACTION_SPIN            ; 04
-	const PERSON_ACTION_SPIN_FLICKER    ; 05
-	const PERSON_ACTION_FISHING         ; 06
-	const PERSON_ACTION_SHADOW          ; 07
-	const PERSON_ACTION_EMOTE           ; 08
-	const PERSON_ACTION_BIG_SNORLAX     ; 09
-	const PERSON_ACTION_BOUNCE          ; 0a
-	const PERSON_ACTION_WEIRD_TREE      ; 0b
-	const PERSON_ACTION_BIG_DOLL        ; 0c
-	const PERSON_ACTION_BOULDER_DUST    ; 0d
-	const PERSON_ACTION_GRASS_SHAKE     ; 0e
-	const PERSON_ACTION_PUDDLE_SPLASH   ; 0f
-	const PERSON_ACTION_CUT_TREE        ; 10
-	const PERSON_ACTION_SKYFALL         ; 11
-	const PERSON_ACTION_BIG_GYARADOS    ; 12
-	const PERSON_ACTION_STAND_FLIP      ; 13
-	const PERSON_ACTION_POKECOM_NEWS    ; 14
-	const PERSON_ACTION_ARCH_TREE       ; 15
-	const PERSON_ACTION_RUN             ; 16
-	const PERSON_ACTION_SAILBOAT_TOP    ; 17
-	const PERSON_ACTION_SAILBOAT_BOTTOM ; 18
+	const OBJECT_ACTION_00              ; 00
+	const OBJECT_ACTION_STAND           ; 01
+	const OBJECT_ACTION_STEP            ; 02
+	const OBJECT_ACTION_BUMP            ; 03
+	const OBJECT_ACTION_SPIN            ; 04
+	const OBJECT_ACTION_SPIN_FLICKER    ; 05
+	const OBJECT_ACTION_FISHING         ; 06
+	const OBJECT_ACTION_SHADOW          ; 07
+	const OBJECT_ACTION_EMOTE           ; 08
+	const OBJECT_ACTION_BIG_SNORLAX     ; 09
+	const OBJECT_ACTION_BOUNCE          ; 0a
+	const OBJECT_ACTION_WEIRD_TREE      ; 0b
+	const OBJECT_ACTION_BIG_DOLL        ; 0c
+	const OBJECT_ACTION_BOULDER_DUST    ; 0d
+	const OBJECT_ACTION_GRASS_SHAKE     ; 0e
+	const OBJECT_ACTION_PUDDLE_SPLASH   ; 0f
+	const OBJECT_ACTION_CUT_TREE        ; 10
+	const OBJECT_ACTION_SKYFALL         ; 11
+	const OBJECT_ACTION_BIG_GYARADOS    ; 12
+	const OBJECT_ACTION_STAND_FLIP      ; 13
+	const OBJECT_ACTION_POKECOM_NEWS    ; 14
+	const OBJECT_ACTION_ARCH_TREE       ; 15
+	const OBJECT_ACTION_RUN             ; 16
+	const OBJECT_ACTION_SAILBOAT_TOP    ; 17
+	const OBJECT_ACTION_SAILBOAT_BOTTOM ; 18
 
 ; see data/sprites/facings.asm:Facings
 	const_def
@@ -257,3 +297,18 @@ SPRITEMOVEDATA_FIELDS EQU 6
 	const FACING_ARCH_TREE_RIGHT ; 2b
 	const FACING_SAILBOAT_TOP    ; 2c
 	const FACING_SAILBOAT_BOTTOM ; 2d
+
+; DoPlayerMovement.DoStep arguments (see engine/overworld/player_movement.asm)
+	const_def
+	const STEP_SLOW          ; 0
+	const STEP_WALK          ; 1
+	const STEP_BIKE          ; 2
+	const STEP_RUN			 ; 3
+	const STEP_LEDGE         ; 4
+	const STEP_ICE           ; 5
+	const STEP_TURN          ; 6
+	const STEP_BACK_LEDGE    ; 7
+	const STEP_WALK_IN_PLACE ; 8
+	const STEP_SPIN
+	const STEP_FAST ; same as STEP_RUN but without doubling animation speed
+	const STEP_DIAGONAL_STAIRS; 11

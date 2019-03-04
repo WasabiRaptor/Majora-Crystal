@@ -289,20 +289,20 @@ _GetSpritePalette:: ; 142c4
 
 .is_pokemon
 	ld a, [wMapGroup]
-	cp GROUP_KRISS_HOUSE_2F
+	;cp GROUP_KRISS_HOUSE_2F
 	jr nz, .not_doll
 	ld a, [wMapNumber]
-	cp MAP_KRISS_HOUSE_2F
+	;cp MAP_KRISS_HOUSE_2F
 	jr nz, .not_doll
 	farcall GetMonIconPalette
 	ld c, a
 	ret
 
 .not_doll
-	cp GROUP_ROUTE_34
+	;cp GROUP_ROUTE_34
 	jr nz, .not_daycare
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_34
+	;cp MAP_ROUTE_34
 	jr nz, .not_daycare
 	farcall GetMonIconPalette
 	cp PAL_OW_GRAY

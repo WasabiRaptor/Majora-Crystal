@@ -22,7 +22,6 @@ SECTION "Home", ROM0
 
 INCLUDE "home/init.asm"
 INCLUDE "home/vblank.asm"
-INCLUDE "home/rtc.asm"
 INCLUDE "home/fade.asm"
 INCLUDE "home/lcd.asm"
 INCLUDE "home/time.asm"
@@ -361,20 +360,9 @@ ClearPalettes:: ; 3317
 
 ; Fill wBGPals and wOBPals with $ffff (white)
 	ld hl, wBGPals
-if !DEF(MONOCHROME)
 	ld bc, 16 palettes
 	ld a, $ff
 	call ByteFill
-else
-	ld b, (16 palettes) / 2
-.mono_loop
-	ld a, PAL_MONOCHROME_WHITE % $100
-	ld [hli], a
-	ld a, PAL_MONOCHROME_WHITE / $100
-	ld [hli], a
-	dec b
-	jr nz, .mono_loop
-endc
 
 	pop af
 	ld [rSVBK], a
@@ -542,14 +530,8 @@ GetBasePokemonName:: ; 3420
 	ld a, [hl]
 	cp "@"
 	jr z, .quit
-	cp "♂"
-	jr z, .end
-	cp "♀"
-	jr z, .end
 	inc hl
 	jr .loop
-.end
-	ld [hl], "@"
 .quit
 	pop hl
 	ret
