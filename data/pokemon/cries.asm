@@ -3,7 +3,7 @@ mon_cry: MACRO
 	dw \1, \2, \3
 ENDM
 
-PokemonCries::
+CryHeaders::
 ; entries correspond to constants/pokemon_constants.asm
 	mon_cry CRY_VENONAT,     $088,  $0e0 ; EEVEE
 	mon_cry CRY_VENONAT,     $0aa,  $17f ; VAPOREON

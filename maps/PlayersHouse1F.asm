@@ -34,8 +34,8 @@ MeetMomRightScript:
 	applymovement PLAYERSHOUSE1F_MOM1, MomWalksToPlayerMovement
 MeetMomScript:
 	opentext
-	givepoke ZORUA, 5, BERRY ; TEMP
-	givepoke NINETALES, 5, BERRY ; TEMP
+	givepoke ZORUA, 5, ORAN_BERRY ; TEMP
+	givepoke NINETALES, 5, ORAN_BERRY ; TEMP
 
 	;writetext ElmsLookingForYouText
 	;buttonsound

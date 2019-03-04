@@ -34,6 +34,18 @@ BASEMON_STRUCT_LENGTH EQUS "(BaseData1 - BaseData0)"
 	const FAST
 	const SLOW
 
+; wBaseGrowthRate values
+; GrowthRates indexes (see data/growth_rates.asm)
+	const_def
+	const GROWTH_MEDIUM_FAST
+	const GROWTH_SLIGHTLY_FAST
+	const GROWTH_SLIGHTLY_SLOW
+	const GROWTH_MEDIUM_SLOW
+	const GROWTH_FAST
+	const GROWTH_SLOW
+	const GROWTH_ERRATIC
+	const GROWTH_FLUCTUATING
+
 ; gender ratios
 	const_def
 	const ALL_MALE
@@ -47,6 +59,13 @@ BASEMON_STRUCT_LENGTH EQUS "(BaseData1 - BaseData0)"
 	const ALL_FEMALE
 
 GENDERLESS EQU %1111
+GENDER_UNKNOWN EQU GENDERLESS
+GENDER_F0      EQU ALL_MALE
+GENDER_F12_5   EQU FEMALE_12_5
+GENDER_F25     EQU FEMALE_25
+GENDER_F50     EQU FEMALE_50
+GENDER_F75     EQU FEMALE_75
+GENDER_F100    EQU ALL_FEMALE
 
 ; egg group constants
 	const_def 1
@@ -65,6 +84,23 @@ GENDERLESS EQU %1111
 	const LADIES_MAN   ; d
 	const REPTILE      ; e
 	const NO_EGGS      ; f
+
+	const_def 1
+	const EGG_MONSTER       ; 1
+	const EGG_WATER_1       ; 2 (Amphibian)
+	const EGG_BUG           ; 3
+	const EGG_FLYING        ; 4
+	const EGG_FIELD         ; 5
+	const EGG_FAIRY         ; 6
+	const EGG_GRASS         ; 7
+	const EGG_HUMAN_LIKE    ; 8
+	const EGG_WATER_3       ; 9 (Invertebrate)
+	const EGG_MINERAL       ; a
+	const EGG_AMORPHOUS     ; b
+	const EGG_WATER_2       ; c (Fish)
+	const EGG_DITTO         ; d
+	const EGG_DRAGON        ; e
+	const EGG_NONE          ; f (Undiscovered)
 
 
 ; pokemon structure in RAM

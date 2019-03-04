@@ -187,8 +187,12 @@ VaryColorsByDVs::
 	ld bc, wColorVaryDVs
 
 	ld a, [wColorVarySpecies]
-	cp SMEARGLE
-	jr z, .Smeargle
+	cp FLABEBE
+	jr z, .flabebe
+	cp FLOETTE
+	jr z, .flabebe
+	cp FLORGES
+	jr z, .flabebe
 
 ;;; LiteRed ~ HPDV, aka, rrrrr ~ hhhh
 ; store HPDV in e
@@ -260,7 +264,7 @@ VaryColorsByDVs::
 ; * DarkRed' = DarkRed + (HPDV & %0100 >> 2) - (HPDV & %1000 >> 3)
 ; * DarkGrn' = DarkGrn + (AtkDV & %0100 >> 2) - (AtkDV & %1000 >> 3)
 ; * DarkBlu' = DarkBlu + (DefDV & %0100 >> 2) - (DefDV & %1000 >> 3)
-.Smeargle:
+.flabebe:
 ; a = (AtkDV & %11) << 2 | (DefDV & %11)
 	ld a, [bc]
 	and %11

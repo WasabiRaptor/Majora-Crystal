@@ -1,4 +1,4 @@
-AltFormSpeciesTable:
+VariantSpeciesTable:
 	db LYCANROC
 	db MEOWTH
 	db PERSIAN
@@ -22,7 +22,7 @@ AltFormSpeciesTable:
     db ZYGARDE
 	db -1
 
-AltFormAnimPointerTable:
+VariantAnimPointerTable:
     dbbww LYCANROC,     BANK(LycanrocAnimations), LycanrocAnimationPointers, LycanrocAnimationIdlePointers
     dbbww MEOWTH,       BANK(MeowthAnimations), MeowthAnimationPointers, MeowthAnimationIdlePointers
 	dbbww PERSIAN,      BANK(PersianAnimations), PersianAnimationPointers, PersianAnimationIdlePointers
@@ -46,7 +46,7 @@ AltFormAnimPointerTable:
     dbbww ZYGARDE,      BANK(ZygardeAnimations), ZygardeAnimationPointers, ZygardeAnimationIdlePointers
 	dbbww -1,           BANK(PicAnimations), AnimationPointers, AnimationIdlePointers
 
-AltFormFramesPointerTable:
+VariantFramesPointerTable:
 	dbbba LYCANROC,     BANK(LycanrocFrames), LycanrocFramesPointers
     dbbba MEOWTH,       BANK(MeowthFrames), MeowthFramesPointers
     dbbba PERSIAN,      BANK(PersianFrames), PersianFramesPointers
@@ -70,7 +70,7 @@ AltFormFramesPointerTable:
     dbbba ZYGARDE,      BANK(ZygardeFrames), ZygardeFramesPointers
 	dbbba -1,           BANK(KantoFrames), FramesPointers
 
-AltFormBitmasksPointerTable:
+VariantBitmasksPointerTable:
 	dbba LYCANROC,      LycanrocBitmasksPointers
     dbba MEOWTH,        MeowthBitmasksPointers
     dbba PERSIAN,       PersianBitmasksPointers

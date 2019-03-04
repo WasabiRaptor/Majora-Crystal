@@ -71,7 +71,7 @@ MAP_NONE   EQU 0
 ; Overcast indexes
 	const_def
 	const NOT_OVERCAST
-	const AZALEA_OVERCAST
+	const IS_OVERCAST
 
 ; SpawnPoints indexes (see data/maps/spawn_points.asm)
 const_value = -1

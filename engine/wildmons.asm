@@ -70,11 +70,11 @@ FindNest: ; 2a01f
 
 	; assume that navel rock is the first off-screen map, and end the search early
 	ld a, [hli]
-	cp GROUP_NAVEL_ROCK_INSIDE
+	;cp GROUP_NAVEL_ROCK_INSIDE
 	jr nz, .not_navel_rock_group
 	ld b, a
 	ld a, [hli]
-	cp MAP_NAVEL_ROCK_INSIDE
+	;cp MAP_NAVEL_ROCK_INSIDE
 	jr nz, .not_navel_rock_map
 	pop hl
 	ret
@@ -476,10 +476,10 @@ _ChooseWildEncounter:
 	ld [wTempWildMonSpecies], a
 
 	ld a, [wMapGroup]
-	cp GROUP_SOUL_HOUSE_B1F ; Soul House or Lavender Radio Tower
+	;cp GROUP_SOUL_HOUSE_B1F ; Soul House or Lavender Radio Tower
 	jr nz, .not_ghost
 	ld a, [wMapNumber]
-	cp MAP_SOUL_HOUSE_B1F ; first Ghost map in its group
+	;cp MAP_SOUL_HOUSE_B1F ; first Ghost map in its group
 	jr c, .not_ghost
 	ld a, SILPHSCOPE2
 	ld [wCurItem], a
@@ -747,16 +747,16 @@ InitRoamMons: ; 2a2a0
 ;	ld [wRoamMon3Level], a
 
 ; raikou starting map
-	ld a, GROUP_ROUTE_42
-	ld [wRoamMon1MapGroup], a
-	ld a, MAP_ROUTE_42
-	ld [wRoamMon1MapNumber], a
+	;ld a, GROUP_ROUTE_42
+	;ld [wRoamMon1MapGroup], a
+	;ld a, MAP_ROUTE_42
+	;ld [wRoamMon1MapNumber], a
 
 ; entei starting map
-	ld a, GROUP_ROUTE_37
-	ld [wRoamMon2MapGroup], a
-	ld a, MAP_ROUTE_37
-	ld [wRoamMon2MapNumber], a
+	;ld a, GROUP_ROUTE_37
+	;ld [wRoamMon2MapGroup], a
+	;ld a, MAP_ROUTE_37
+	;ld [wRoamMon2MapNumber], a
 
 ; suicune starting map
 ;	ld a, GROUP_ROUTE_38

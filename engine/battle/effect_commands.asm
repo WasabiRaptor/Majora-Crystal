@@ -7020,14 +7020,6 @@ BattleCommand_Recoil: ; 36cb2
 	ld hl, RecoilText
 	jp StdBattleTextBox
 
-.StruggleRecoil
-	ld hl, GetQuarterMaxHP
-	call CallBattleCore
-	ld hl, SubtractHPFromUser
-	call CallBattleCore
-	call UpdateUserInParty
-	jp .recoil_text
-
 .OneThirdRecoil
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
@@ -7046,6 +7038,13 @@ BattleCommand_Recoil: ; 36cb2
 	ld b, a
 	jr .recoil_floor
 
+.StruggleRecoil
+	ld hl, GetQuarterMaxHP
+	call CallBattleCore
+	ld hl, SubtractHPFromUser
+	call CallBattleCore
+	call UpdateUserInParty
+	jp .recoil_text
 ; 36d1d
 
 

@@ -14,6 +14,7 @@ SECTION "Evolutions and Attacks", ROMX
 ; - Learnset (in increasing level order):
 ;    * db level, move
 ; - db 0 ; no more level-up moves
+INCLUDE "data/pokemon/evolution_moves.asm"
 
 INCLUDE "data/pokemon/evos_attacks_pointers.asm"
 INCLUDE "data/pokemon/variant_evos_attacks_pointers.asm"

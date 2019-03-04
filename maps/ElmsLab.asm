@@ -178,7 +178,7 @@ AbomasnowPokeBallScript:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
-	givepoke ABOMASNOW, 5, BERRY
+	givepoke ABOMASNOW, 5, ORAN_BERRY
 	closetext
 	checkcode VAR_FACING
 	ifequal RIGHT, ElmDirectionsScript
@@ -208,7 +208,7 @@ TotodilePokeBallScript:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
-	givepoke TOTODILE, 5, BERRY
+	givepoke TOTODILE, 5, ORAN_BERRY
 	closetext
 	applymovement PLAYER, AfterTotodileMovement
 	jump ElmDirectionsScript
@@ -236,7 +236,7 @@ MedititePokeBallScript:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
-	givepoke CHIKORITA, 5, BERRY
+	givepoke CHIKORITA, 5, ORAN_BERRY
 	closetext
 	applymovement PLAYER, AfterMedititeMovement
 	jump ElmDirectionsScript
@@ -338,7 +338,7 @@ ElmAfterTheftScript:
 	buttonsound
 	setevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	setflag ENGINE_MAIN_MENU_MOBILE_CHOICES
-	setmapscene ROUTE_29, SCENE_ROUTE29_CATCH_TUTORIAL
+	;setmapscene ROUTE_29, SCENE_ROUTE29_CATCH_TUTORIAL
 	writetext ElmAfterTheftText6
 	waitbutton
 	closetext
