@@ -27,39 +27,39 @@ connection: MACRO
 if "\1" == "north"
 	map_id \3
 	dw \2_Blocks + \3_WIDTH * (\3_HEIGHT - 3) + \5
-	dw wOverworldMapBlocks + \4 + 3
+	dw wOverworldMap + \4 + 3
 	db \6
 	db \3_WIDTH
 	db \3_HEIGHT * 2 - 1
 	db (\4 - \5) * -2
-	dw wOverworldMapBlocks + \3_HEIGHT * (\3_WIDTH + 6) + 1
+	dw wOverworldMap + \3_HEIGHT * (\3_WIDTH + 6) + 1
 elif "\1" == "south"
 	map_id \3
 	dw \2_Blocks + \5
-	dw wOverworldMapBlocks + (CURRENT_MAP_HEIGHT + 3) * (CURRENT_MAP_WIDTH + 6) + \4 + 3
+	dw wOverworldMap + (CURRENT_MAP_HEIGHT + 3) * (CURRENT_MAP_WIDTH + 6) + \4 + 3
 	db \6
 	db \3_WIDTH
 	db 0
 	db (\4 - \5) * -2
-	dw wOverworldMapBlocks + \3_WIDTH + 7
+	dw wOverworldMap + \3_WIDTH + 7
 elif "\1" == "west"
 	map_id \3
 	dw \2_Blocks + (\3_WIDTH * \5) + \3_WIDTH - 3
-	dw wOverworldMapBlocks + (CURRENT_MAP_WIDTH + 6) * (\4 + 3)
+	dw wOverworldMap + (CURRENT_MAP_WIDTH + 6) * (\4 + 3)
 	db \6
 	db \3_WIDTH
 	db (\4 - \5) * -2
 	db \3_WIDTH * 2 - 1
-	dw wOverworldMapBlocks + \3_WIDTH * 2 + 6
+	dw wOverworldMap + \3_WIDTH * 2 + 6
 elif "\1" == "east"
 	map_id \3
 	dw \2_Blocks + (\3_WIDTH * \5)
-	dw wOverworldMapBlocks + (CURRENT_MAP_WIDTH + 6) * (\4 + 3 + 1) - 3
+	dw wOverworldMap + (CURRENT_MAP_WIDTH + 6) * (\4 + 3 + 1) - 3
 	db \6
 	db \3_WIDTH
 	db (\4 - \5) * -2
 	db 0
-	dw wOverworldMapBlocks + \3_WIDTH + 7
+	dw wOverworldMap + \3_WIDTH + 7
 endc
 ENDM
 	map_attributes Town1, TOWN_1, $61, SOUTH | WEST | EAST
@@ -168,15 +168,16 @@ ENDM
 	connection south, RouteFakeExitLoop, ROUTE_FAKE_EXIT_LOOP, 0, 0, 10
 
 
-	map_attributes DayCare, DAY_CARE, $00, 0
+	map_attributes Daycare, DAYCARE, $00, 0
 
 	map_attributes Pokecenter2F, POKECENTER_2F, $00, 0
 	map_attributes TradeCenter, TRADE_CENTER, $00, 0
 	map_attributes Colosseum, COLOSSEUM, $00, 0
-	map_attributes TimeCapsule, TIME_CAPSULE, $00, 0
+	map_attributes HiddenTreeGrotto, HIDDEN_TREE_GROTTO, $35, 0
+	map_attributes HiddenCaveGrotto, HIDDEN_CAVE_GROTTO, $9, 0
 
-	map_attributes PlayersHouse1F, PLAYERS_HOUSE_1F, $00, 0
-	map_attributes PlayersHouse2F, PLAYERS_HOUSE_2F, $00, 0
+	map_attributes KrissHouse1F, KRISS_HOUSE_1F, $00, 0
+	map_attributes KrissHouse2F, KRISS_HOUSE_2F, $00, 0
 
 	map_attributes MysteryDungeonNorthSouthEastWest, MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST, $61, 0
 

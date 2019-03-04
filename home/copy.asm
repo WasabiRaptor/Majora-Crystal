@@ -334,7 +334,7 @@ HBlankCopy1bpp:
 	ld a, [hTilesPerCycle]
 	dec a
 	ld [hTilesPerCycle], a
-	jr nz, .outerLoop
+	jp nz, .outerLoop
 	jr DoneHBlankCopy
 
 ContinueHBlankCopy:

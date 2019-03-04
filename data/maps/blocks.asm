@@ -13,17 +13,22 @@ Colosseum_Blocks:
 	INCBIN "maps/Colosseum.ablk.lz"
 
 TradeCenter_Blocks:
-TimeCapsule_Blocks:
 	INCBIN "maps/TradeCenter.ablk.lz"
 
-PlayersHouse1F_Blocks:
-	INCBIN "maps/PlayersHouse1F.ablk.lz"
+KrissHouse1F_Blocks:
+	INCBIN "maps/KrissHouse1F.ablk.lz"
 
-PlayersHouse2F_Blocks:
-	INCBIN "maps/PlayersHouse2F.ablk.lz"
+KrissHouse2F_Blocks:
+	INCBIN "maps/KrissHouse2F.ablk.lz"
 
-DayCare_Blocks:
-	INCBIN "maps/DayCare.ablk.lz"
+HiddenTreeGrotto_Blocks:
+	INCBIN "maps/HiddenTreeGrotto.ablk.lz"
+
+HiddenCaveGrotto_Blocks:
+	INCBIN "maps/HiddenCaveGrotto.ablk.lz"
+
+Daycare_Blocks:
+	INCBIN "maps/Daycare.ablk.lz"
 
 SECTION "Overworld Map Blocks", ROMX
 

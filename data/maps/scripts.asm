@@ -1,8 +1,8 @@
 SECTION "StartingTown Map Scripts", ROMX
 
-INCLUDE "maps/PlayersHouse1F.asm"
-INCLUDE "maps/PlayersHouse2F.asm"
-INCLUDE "maps/DayCare.asm"
+INCLUDE "maps/KrissHouse1F.asm"
+INCLUDE "maps/KrissHouse2F.asm"
+INCLUDE "maps/Daycare.asm"
 INCLUDE "maps/MoveDeletersHouse.asm"
 
 
@@ -11,7 +11,8 @@ SECTION "Utility Map Scripts", ROMX
 INCLUDE "maps/Pokecenter2F.asm"
 INCLUDE "maps/TradeCenter.asm"
 INCLUDE "maps/Colosseum.asm"
-INCLUDE "maps/TimeCapsule.asm"
+INCLUDE "maps/HiddenTreeGrotto.asm"
+INCLUDE "maps/HiddenCaveGrotto.asm" ; shares text with HiddenTreeGrotto.asm
 
 
 SECTION "Overworld Map Scripts", ROMX

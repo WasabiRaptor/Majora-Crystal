@@ -501,7 +501,7 @@ TryObjectEvent: ; 969b5
 	ret
 
 .pointers:
-	dw .script   ; PERSONTYPE_SCRIPT
+	dw .script   ; OBJECTTYPE_SCRIPT
 	dw .pokeball ; PERSONTYPE_POKEBALL
 	dw .trainer  ; PERSONTYPE_TRAINER
 	dw .trainer  ; PERSONTYPE_GENERICTRAINER
@@ -906,7 +906,7 @@ CountStep: ; 96b79
 	jr nz, .hatch
 
 .skip_egg
-	; Increase the EXP of (both) DayCare Pokemon by 1.
+	; Increase the EXP of (both) Daycare Pokemon by 1.
 	farcall DaycareStep
 
 	; Every four steps, deal damage to all Poisoned Pokemon

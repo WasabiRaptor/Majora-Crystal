@@ -35,7 +35,7 @@ _AnimateTileset:: ; fc000
 ; fc01b
 
 
-TilesetJohto1Anim::
+TilesetInvarAnim::
 	dw VTiles2 tile $14, AnimateWaterTile
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation

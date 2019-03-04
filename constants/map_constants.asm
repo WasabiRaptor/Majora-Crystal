@@ -31,13 +31,14 @@ ENDM
 	map_const POKECENTER_2F,                                8,  4 ;  1
 	map_const TRADE_CENTER,                                 5,  4 ;  2
 	map_const COLOSSEUM,                                    5,  4 ;  3
-	map_const TIME_CAPSULE,                                 5,  4 ;  4
+	map_const HIDDEN_TREE_GROTTO,                          5,  9 ;  4
+	map_const HIDDEN_CAVE_GROTTO,                         20, 45 ;  5
 
 	newgroup ;2
 
-	map_const PLAYERS_HOUSE_1F,                             5,  4 ;  1
-	map_const PLAYERS_HOUSE_2F,                             4,  3 ;  2
-	map_const DAY_CARE,                                     5,  4 ;  3
+	map_const KRISS_HOUSE_1F,                              6,  4 ;  6
+	map_const KRISS_HOUSE_2F,                              4,  3 ;  7
+	map_const DAYCARE,                                     4,  4 ; 30
 
 	newgroup ;3
 
@@ -79,11 +80,6 @@ ENDM
 	map_const ROUTE_FAKE_EXIT_LOOP,               	10,  9  ;  25
 
 	newgroup ;4
-
-	map_const HIDDEN_TREE_GROTTO,                          5,  9 ;  4
-	map_const HIDDEN_CAVE_GROTTO,                         20, 45 ;  5
-
-	newgroup
 ;every way crossroads
 	map_const MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST,	    5,  5 ;  1
 

@@ -908,49 +908,49 @@ Hatch_ShellFragmentLoop: ; 17418 (5:7418)
 	jr nz, .loop
 	ret
 
-Special_DayCareMon1: ; 17421
-	ld hl, DayCareMon1Text
+Special_DaycareMon1: ; 17421
+	ld hl, DaycareMon1Text
 	call PrintText
 	ld a, [wBreedMon1Species]
 	call PlayCry
 	ld a, [wDaycareLady]
 	bit 0, a
-	jr z, DayCareMonCursor
+	jr z, DaycareMonCursor
 	call ButtonSound
 	ld hl, wBreedMon2Nick
-	call DayCareMonCompatibilityText
+	call DaycareMonCompatibilityText
 	jp PrintText
 
-Special_DayCareMon2: ; 17440
-	ld hl, DayCareMon2Text
+Special_DaycareMon2: ; 17440
+	ld hl, DaycareMon2Text
 	call PrintText
 	ld a, [wBreedMon2Species]
 	call PlayCry
 	ld a, [wDaycareMan]
 	bit 0, a
-	jr z, DayCareMonCursor
+	jr z, DaycareMonCursor
 	call ButtonSound
 	ld hl, wBreedMon1Nick
-	call DayCareMonCompatibilityText
+	call DaycareMonCompatibilityText
 	jp PrintText
 
-DayCareMonCursor: ; 1745f
+DaycareMonCursor: ; 1745f
 	jp WaitPressAorB_BlinkCursor
 ; 17462
 
-DayCareMon2Text: ; 0x17462
+DaycareMon2Text: ; 0x17462
 	; It's @ that was left with the DAY-CARE LADY.
 	text_jump UnknownText_0x1c0df3
 	db "@"
 ; 0x17467
 
-DayCareMon1Text: ; 0x17467
+DaycareMon1Text: ; 0x17467
 	; It's @ that was left with the DAY-CARE MAN.
 	text_jump UnknownText_0x1c0e24
 	db "@"
 ; 0x1746c
 
-DayCareMonCompatibilityText: ; 1746c
+DaycareMonCompatibilityText: ; 1746c
 	push bc
 	ld de, wStringBuffer1
 	ld bc, NAME_LENGTH

@@ -622,8 +622,8 @@ SentGetPkmnIntoFromBox: ; db3f
 ; Sents/Gets Pkmn into/from Box depending on Parameter
 ; wPokemonWithdrawDepositParameter == 0: get Pkmn into Party
 ; wPokemonWithdrawDepositParameter == 1: sent Pkmn into Box
-; wPokemonWithdrawDepositParameter == 2: get Pkmn from DayCare
-; wPokemonWithdrawDepositParameter == 3: put Pkmn into DayCare
+; wPokemonWithdrawDepositParameter == 2: get Pkmn from Daycare
+; wPokemonWithdrawDepositParameter == 3: put Pkmn into Daycare
 
 	ld a, BANK(sBoxCount)
 	call GetSRAMBank

@@ -31,9 +31,9 @@ SpecialsPointers::
 	add_special HealParty
 	add_special PokemonCenterPC
 	add_special Special_KrissHousePC
-	add_special Special_DayCareMan
-	add_special Special_DayCareLady
-	add_special Special_DayCareManOutside
+	add_special Special_DaycareMan
+	add_special Special_DaycareLady
+	add_special Special_DaycareManOutside
 	add_special MoveDeletion
 	add_special Special_BankOfMom
 	add_special Special_MagnetTrain
@@ -67,8 +67,8 @@ SpecialsPointers::
 	add_special Special_FindAtLeastThatHappy ; unused
 	add_special Special_FindThatSpecies
 	add_special Special_FindThatSpeciesYourTrainerID
-	add_special Special_DayCareMon1
-	add_special Special_DayCareMon2
+	add_special Special_DaycareMon1
+	add_special Special_DaycareMon2
 	add_special Special_SelectRandomBugContestContestants
 	add_special Special_ActivateFishingSwarm
 	add_special ToggleMaptileDecorations

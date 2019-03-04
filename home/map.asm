@@ -1272,11 +1272,11 @@ LoadTileset:: ; 2821
 	ld [rSVBK], a
 
 	ld a, [wTileset]
-	cp TILESET_JOHTO_TRADITIONAL
+	cp TILESET_INVAR
 	jr z, .load_roof
-	cp TILESET_JOHTO_MODERN
+	cp TILESET_INVAR_MODERN
 	jr z, .load_roof
-	cp TILESET_JOHTO_OVERCAST
+	cp TILESET_INVAR_OVERCAST
 	jr nz, .skip_roof
 
 .load_roof

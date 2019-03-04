@@ -958,7 +958,7 @@ wCianwoodCityTrigger:: ds 1
 wCinnabarLabTrigger:: ds 1
 wColosseumTrigger:: ds 1
 wDarkCaveVioletEntranceTrigger:: ds 1
-wDayCareTrigger:: ds 1
+wDaycareTrigger:: ds 1
 wDragonsDenB1FTrigger:: ds 1
 wDragonShrineTrigger:: ds 1
 wEcruteakGymTrigger:: ds 1

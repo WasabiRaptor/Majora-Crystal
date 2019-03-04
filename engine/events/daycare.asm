@@ -20,67 +20,67 @@
 	const DAYCARETEXT_COME_AGAIN
 	const DAYCARETEXT_13
 
-Special_DayCareMan: ; 166d6
+Special_DaycareMan: ; 166d6
 	ld hl, wDaycareMan
 	bit 0, [hl]
 	jr nz, .AskWithdrawMon
 	ld hl, wDaycareMan
 	ld a, DAYCARETEXT_MAN_INTRO
-	call DayCareManIntroText
+	call DaycareManIntroText
 	jr c, .cancel
-	call DayCareAskDepositPokemon
+	call DaycareAskDepositPokemon
 	jr c, .print_text
 	farcall DepositMonWithDaycareMan
 	ld hl, wDaycareMan
 	set 0, [hl]
-	call DayCare_DepositPokemonText
-	jp DayCare_InitBreeding
+	call Daycare_DepositPokemonText
+	jp Daycare_InitBreeding
 
 .AskWithdrawMon:
 	farcall GetBreedMon1LevelGrowth
 	ld hl, wBreedMon1Nick
 	call GetPriceToRetrieveBreedmon
-	call DayCare_AskWithdrawBreedMon
+	call Daycare_AskWithdrawBreedMon
 	jr c, .print_text
 	farcall RetrievePokemonFromDaycareMan
-	call DayCare_TakeMoney_PlayCry
+	call Daycare_TakeMoney_PlayCry
 	ld hl, wDaycareMan
 	res 0, [hl]
 	res 5, [hl]
 	jr .cancel
 
 .print_text
-	call PrintDayCareText
+	call PrintDaycareText
 
 .cancel
 	ld a, DAYCARETEXT_13
-	jp PrintDayCareText
+	jp PrintDaycareText
 ; 1672a
 
-Special_DayCareLady: ; 1672a
+Special_DaycareLady: ; 1672a
 	ld hl, wDaycareLady
 	bit 0, [hl]
 	jr nz, .AskWithdrawMon
 	ld hl, wDaycareLady
 	ld a, DAYCARETEXT_LADY_INTRO
-	call DayCareLadyIntroText
+	call DaycareLadyIntroText
 	jr c, .cancel
-	call DayCareAskDepositPokemon
+	call DaycareAskDepositPokemon
 	jr c, .print_text
 	farcall DepositMonWithDaycareLady
 	ld hl, wDaycareLady
 	set 0, [hl]
-	call DayCare_DepositPokemonText
-	jp DayCare_InitBreeding
+	call Daycare_DepositPokemonText
+	jp Daycare_InitBreeding
 
 .AskWithdrawMon:
 	farcall GetBreedMon2LevelGrowth
 	ld hl, wBreedMon2Nick
 	call GetPriceToRetrieveBreedmon
-	call DayCare_AskWithdrawBreedMon
+	call Daycare_AskWithdrawBreedMon
 	jr c, .print_text
 	farcall RetrievePokemonFromDaycareLady
-	call DayCare_TakeMoney_PlayCry
+	call Daycare_TakeMoney_PlayCry
 	ld hl, wDaycareLady
 	res 0, [hl]
 	ld hl, wDaycareMan
@@ -88,30 +88,30 @@ Special_DayCareLady: ; 1672a
 	jr .cancel
 
 .print_text
-	call PrintDayCareText
+	call PrintDaycareText
 
 .cancel
 	ld a, DAYCARETEXT_13
-	jp PrintDayCareText
+	jp PrintDaycareText
 ; 16781
 
-DayCareLadyIntroText: ; 16781
+DaycareLadyIntroText: ; 16781
 	bit 7, [hl]
-	jr nz, DayCarePersonIntroText
+	jr nz, DaycarePersonIntroText
 	inc a
-DayCareManIntroText: ; 1678f
+DaycareManIntroText: ; 1678f
 	set 7, [hl]
-DayCarePersonIntroText
-	call PrintDayCareText
+DaycarePersonIntroText
+	call PrintDaycareText
 	jp YesNoBox
 ; 16798
 
-DayCareAskDepositPokemon: ; 16798
+DaycareAskDepositPokemon: ; 16798
 	ld a, [wPartyCount]
 	cp 2
 	jr c, .OnlyOneMon
 	ld a, DAYCARETEXT_WHICH_ONE
-	call PrintDayCareText
+	call PrintDaycareText
 	ld b, 6
 	farcall SelectTradeOrDaycareMon
 	jr c, .Declined
@@ -159,32 +159,32 @@ DayCareAskDepositPokemon: ; 16798
 	ret
 ; 167f1
 
-DayCare_DepositPokemonText: ; 167f6
+Daycare_DepositPokemonText: ; 167f6
 	ld a, DAYCARETEXT_DEPOSIT
-	call PrintDayCareText
+	call PrintDaycareText
 	ld a, [wCurPartySpecies]
 	call PlayCry
 	ld a, DAYCARETEXT_COME_BACK_LATER
-	jp PrintDayCareText
+	jp PrintDaycareText
 ; 16807
 
-DayCare_AskWithdrawBreedMon: ; 16807
+Daycare_AskWithdrawBreedMon: ; 16807
 	ld a, [wStringBuffer2 + 1]
 	and a
 	jr nz, .grew_at_least_one_level
 	ld a, DAYCARETEXT_PARTY_FULL
-	call PrintDayCareText
+	call PrintDaycareText
 	call YesNoBox
 	jr c, .refused
 	jr .check_money
 
 .grew_at_least_one_level
 	ld a, DAYCARETEXT_GENIUSES
-	call PrintDayCareText
+	call PrintDaycareText
 	call YesNoBox
 	jr c, .refused
 	ld a, DAYCARETEXT_ASK_WITHDRAW
-	call PrintDayCareText
+	call PrintDaycareText
 	call YesNoBox
 	jr c, .refused
 
@@ -215,16 +215,16 @@ DayCare_AskWithdrawBreedMon: ; 16807
 	ret
 ; 16850
 
-DayCare_TakeMoney_PlayCry: ; 16850
+Daycare_TakeMoney_PlayCry: ; 16850
 	ld bc, wStringBuffer2 + 2
 	ld de, wMoney
 	farcall TakeMoney
 	ld a, DAYCARETEXT_WITHDRAW
-	call PrintDayCareText
+	call PrintDaycareText
 	ld a, [wCurPartySpecies]
 	call PlayCry
 	ld a, DAYCARETEXT_TOO_SOON
-	jp PrintDayCareText
+	jp PrintDaycareText
 ; 1686d
 
 GetPriceToRetrieveBreedmon: ; 1686d
@@ -250,7 +250,7 @@ GetPriceToRetrieveBreedmon: ; 1686d
 	ret
 ; 1689b
 
-PrintDayCareText: ; 1689b
+PrintDaycareText: ; 1689b
 	ld e, a
 	ld d, 0
 	ld hl, .TextTable
@@ -263,10 +263,10 @@ PrintDayCareText: ; 1689b
 ; 168aa
 
 .TextTable: ; 168aa
-	dw .DayCareManIntro ; 00
-	dw .DayCareManOddEgg ; 01
-	dw .DayCareLadyIntro ; 02
-	dw .DayCareLadyOddEgg ; 03
+	dw .DaycareManIntro ; 00
+	dw .DaycareManOddEgg ; 01
+	dw .DaycareLadyIntro ; 02
+	dw .DaycareLadyOddEgg ; 03
 	dw .WhichOne ; 04
 	dw .OkayIllRaiseYourMon ; 05
 	dw .CantAcceptEgg ; 06
@@ -285,25 +285,25 @@ PrintDayCareText: ; 1689b
 	dw .ComeAgain ; 13
 ; 168d2
 
-.DayCareManIntro: ; 0x168d2
+.DaycareManIntro: ; 0x168d2
 	; I'm the DAY-CARE MAN. Want me to raise a #MON?
 	text_jump UnknownText_0x1bdaa9
 	db "@"
 ; 0x168d7
 
-.DayCareManOddEgg: ; 0x168d7
+.DaycareManOddEgg: ; 0x168d7
 	; I'm the DAY-CARE MAN. Do you know about EGGS? I was raising #MON with my wife, you see. We were shocked to find an EGG! How incredible is that? So, want me to raise a #MON?
 	text_jump UnknownText_0x1bdad8
 	db "@"
 ; 0x168dc
 
-.DayCareLadyIntro: ; 0x168dc
+.DaycareLadyIntro: ; 0x168dc
 	; I'm the DAY-CARE LADY. Should I raise a #MON for you?
 	text_jump UnknownText_0x1bdb85
 	db "@"
 ; 0x168e1
 
-.DayCareLadyOddEgg: ; 0x168e1
+.DaycareLadyOddEgg: ; 0x168e1
 	; I'm the DAY-CARE LADY. Do you know about EGGS? My husband and I were raising some #MON, you see. We were shocked to find an EGG! How incredible could that be? Should I raise a #MON for you?
 	text_jump UnknownText_0x1bdbbb
 	db "@"
@@ -405,7 +405,7 @@ PrintDayCareText: ; 1689b
 	db "@"
 ; 0x16936
 
-Special_DayCareManOutside: ; 16936
+Special_DaycareManOutside: ; 16936
 	ld hl, wDaycareMan
 	bit 6, [hl]
 	jr nz, .AskGiveEgg
@@ -426,10 +426,10 @@ Special_DayCareManOutside: ; 16936
 	ld a, [wPartyCount]
 	cp PARTY_LENGTH
 	jr nc, .PartyFull
-	call DayCare_GiveEgg
+	call Daycare_GiveEgg
 	ld hl, wDaycareMan
 	res 6, [hl]
-	call DayCare_InitBreeding
+	call Daycare_InitBreeding
 	ld hl, .GotEggText
 	call PrintText
 	ld de, SFX_GET_EGG_FROM_DAYCARE_LADY
@@ -486,7 +486,7 @@ Special_DayCareManOutside: ; 16936
 	db "@"
 ; 0x169ac
 
-DayCare_GiveEgg: ; 169ac
+Daycare_GiveEgg: ; 169ac
 	ld a, [wEggMonLevel]
 	ld [wCurPartyLevel], a
 	ld hl, wPartyCount
@@ -509,19 +509,19 @@ DayCare_GiveEgg: ; 169ac
 
 	ld hl, wPartyMonNicknames
 	ld bc, PKMN_NAME_LENGTH
-	call DayCare_GetCurrentPartyMember
+	call Daycare_GetCurrentPartyMember
 	ld hl, wEggNick
 	rst CopyBytes
 
 	ld hl, wPartyMonOT
 	ld bc, NAME_LENGTH
-	call DayCare_GetCurrentPartyMember
+	call Daycare_GetCurrentPartyMember
 	ld hl, wEggOT
 	rst CopyBytes
 
 	ld hl, wPartyMon1
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call DayCare_GetCurrentPartyMember
+	call Daycare_GetCurrentPartyMember
 	ld hl, wEggMon
 	ld bc, wEggMonEnd - wEggMon
 	rst CopyBytes
@@ -559,7 +559,7 @@ DayCare_GiveEgg: ; 169ac
 	ret
 ; 16a31
 
-DayCare_GetCurrentPartyMember:
+Daycare_GetCurrentPartyMember:
 	ld a, [wPartyCount]
 	dec a
 	rst AddNTimes
@@ -720,7 +720,7 @@ InheritDV:
 	or 1
 	ret
 
-DayCare_InitBreeding: ; 16a3b
+Daycare_InitBreeding: ; 16a3b
 	ld a, [wDaycareLady]
 	bit 0, a
 	ret z
