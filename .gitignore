@@ -41,3 +41,21 @@
 
 # swap files for gedit
 *~
+
+# build files
+build/*
+*.dimensions
+*.gbcpal
+*.2bpp
+*.1bpp
+*.lz
+*.animated.tilemap
+*.pcm
+gfx/pokemon/*/bitmask.asm
+gfx/pokemon/*/frames.asm
+!gfx/pokemon/*/shiny.pal
+!gfx/trainer_card/badges.pal
+
+.vs/*
+.vscode/*
+.DS_Store
