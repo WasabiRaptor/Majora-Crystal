@@ -58,4 +58,4 @@ gfx/pokemon/*/frames.asm
 
 .vs/*
 .vscode/*
-.DS_Store
+*.DS_Store
