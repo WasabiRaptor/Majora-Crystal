@@ -3055,10 +3055,10 @@ PlayerMonFaintedAnimation: ; 3d43b
 	; fallthrough
 
 MonFaintedAnimation: ; 3d444
-	ld a, [InputFlags]
+	ld a, [wInputFlags]
 	push af
 	set 6, a
-	ld [InputFlags], a
+	ld [wInputFlags], a
 	ld b, 7
 
 .OuterLoop:
@@ -3101,7 +3101,7 @@ MonFaintedAnimation: ; 3d444
 	jr nz, .OuterLoop
 
 	pop af
-	ld [InputFlags], a
+	ld [wInputFlags], a
 	ret
 ; 3d488
 

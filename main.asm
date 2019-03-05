@@ -16,13 +16,14 @@ LoadPushOAM:: ; 4031
 
 PushOAMCode: ; 403f
 	ld a, wSprites / $100
-	ld [rDMA], a
+	ldh [rDMA], a
 	ld a, 40
 .loop
 	dec a
 	jr nz, .loop
 	ret
-PushOAMCodeEnd
+PushOAMCodeEnd:
+
 
 ReanchorBGMap_NoOAMUpdate:: ; 6454
 	ld a, [hOAMUpdate]

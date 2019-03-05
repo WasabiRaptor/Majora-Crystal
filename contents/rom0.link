@@ -22,9 +22,9 @@ ROM0
 	"lcd"
 	org $0050
 	"timer"
-	org $0058
+	org $0056
 	"serial"
-	org $005B
+	org $005A
 	"joypad"
 	"High Home"
 	org $0100

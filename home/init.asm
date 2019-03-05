@@ -10,7 +10,7 @@ SoftReset:: ; 150
 	ld [rIE], a
 	ei
 
-	ld hl, InputFlags
+	ld hl, wInputFlags
 	set 7, [hl]
 
 	ld c, 32
@@ -144,6 +144,8 @@ Init:: ; 17d
 	ld [hBGMapAddress + 1], a
 	xor a ; VBGMap1 % $100
 	ld [hBGMapAddress], a
+
+	farcall UpdateTime
 
 	xor a
 	ld [MBC5SRamEnable], a
