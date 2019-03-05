@@ -24,6 +24,10 @@ ROM0
 	"timer"
 	org $0058
 	"serial"
-	org $0060
+	org $005B
 	"joypad"
 	"High Home"
+	org $0100
+	"Header"
+	org $0150
+	"Home"

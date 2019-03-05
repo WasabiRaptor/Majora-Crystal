@@ -44,6 +44,7 @@ INCLUDE "home/farcall.asm"
 INCLUDE "home/predef.asm"
 INCLUDE "home/window.asm"
 INCLUDE "home/flag.asm"
+
 INCLUDE "home/restore_music.asm"
 
 DisableSpriteUpdates:: ; 0x2ed3
