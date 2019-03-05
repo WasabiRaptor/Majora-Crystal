@@ -788,7 +788,7 @@ Script_UsedWaterfall: ; 0xcb20
 	ret
 
 .WaterfallStep: ; cb4f
-	turn_waterfall UP
+	turn_waterfall_up
 	step_end
 
 .Text_UsedWaterfall: ; 0xcb51
@@ -1271,23 +1271,23 @@ Script_UsedWhirlpool: ; 0xce0f
 	end
 
 .UpMovementData:
-	slow_step UP
-	slow_step UP
+	slow_step_up
+	slow_step_up
 	step_end
 
 .RightMovementData:
-	slow_step RIGHT
-	slow_step RIGHT
+	slow_step_right
+	slow_step_right
 	step_end
 
 .DownMovementData:
-	slow_step DOWN
-	slow_step DOWN
+	slow_step_down
+	slow_step_down
 	step_end
 
 .LeftMovementData:
-	slow_step LEFT
-	slow_step LEFT
+	slow_step_left
+	slow_step_left
 	step_end
 
 TryWhirlpoolOW:: ; ce3e

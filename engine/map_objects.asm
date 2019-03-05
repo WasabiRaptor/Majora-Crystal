@@ -1877,13 +1877,13 @@ ApplyMovementToFollower: ; 54b8
 	cp d
 	ret nz
 	ld a, e
-	cp movement_step_sleep
+	cp movement_step_sleep_1
 	ret z
 	cp movement_step_end
 	ret z
 	cp movement_step_bump
 	ret z
-	cp movement_slow_step
+	cp movement_turn_step_right + 1
 	ret c
 	push af
 	ld hl, wFollowerMovementQueueLength

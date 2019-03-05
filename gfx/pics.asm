@@ -96,7 +96,10 @@ BaltoyFrontpic:    INCBIN "gfx/pokemon/baltoy/front.animated.2bpp.lz"
 MareepFrontpic:     INCBIN "gfx/pokemon/mareep/front.animated.2bpp.lz"
 ChandelureFrontpic:    INCBIN "gfx/pokemon/chandelure/front.animated.2bpp.lz"
 PorygonZFrontpic:    INCBIN "gfx/pokemon/porygonz/front.animated.2bpp.lz"
+
 AltariaFrontpic:    INCBIN "gfx/pokemon/altaria/front.animated.2bpp.lz"
+AltariaBackpic:     INCBIN "gfx/pokemon/altaria/back.2bpp.lz"
+
 FloatzelFrontpic:  INCBIN "gfx/pokemon/floatzel/front.animated.2bpp.lz"
 DoubladeFrontpic:     INCBIN "gfx/pokemon/doublade/front.animated.2bpp.lz"
 KrookodileFrontpic:   INCBIN "gfx/pokemon/krookodile/front.animated.2bpp.lz"
@@ -667,12 +670,24 @@ Zygarde_CompleteBackpic:    INCBIN "gfx/pokemon/zygarde_complete/back.2bpp.lz"
 
 SECTION "Pokemon Pics 20", ROMX
 
-BeautyPortrait: 		INCBIN "gfx/portraits/beauty.2bpp.lz"
-ZygardeNeutralPortrait: INCBIN "gfx/portraits/Zygarde_neutral.2bpp.lz"
-ZygardeAngryPortrait: 	INCBIN "gfx/portraits/Zygarde_angry.2bpp.lz"
-CelebiNeutralPortrait:  INCBIN "gfx/portraits/Celebi_neutral.2bpp.lz"
-
+SylveonFrontpic:   INCBIN "gfx/pokemon/sylveon/front.animated.2bpp.lz"
+PhantumpFrontpic:    INCBIN "gfx/pokemon/phantump/front.animated.2bpp.lz"
+SnoverFrontpic:    INCBIN "gfx/pokemon/snover/front.animated.2bpp.lz"
+TimburrFrontpic:   INCBIN "gfx/pokemon/timburr/front.animated.2bpp.lz"
+SandileFrontpic:   INCBIN "gfx/pokemon/sandile/front.animated.2bpp.lz"
+MamoswineFrontpic:      INCBIN "gfx/pokemon/mamoswine/front.animated.2bpp.lz"
+MagnemiteFrontpic:    INCBIN "gfx/pokemon/magnemite/front.animated.2bpp.lz"
+SandshrewFrontpic:    INCBIN "gfx/pokemon/sandshrew/front.animated.2bpp.lz"
+MagearnaFrontpic:   INCBIN "gfx/pokemon/magearna/front.animated.2bpp.lz"
+TyrogueFrontpic:     INCBIN "gfx/pokemon/tyrogue/front.animated.2bpp.lz"
+CrustleFrontpic:      INCBIN "gfx/pokemon/crustle/front.animated.2bpp.lz"
+TogeticFrontpic:       INCBIN "gfx/pokemon/togetic/front.animated.2bpp.lz"
+RioluFrontpic:      INCBIN "gfx/pokemon/riolu/front.animated.2bpp.lz"
+PersianFrontpic:      INCBIN "gfx/pokemon/persian/front.animated.2bpp.lz"
+UmbreonFrontpic:   INCBIN "gfx/pokemon/umbreon/front.animated.2bpp.lz"
+FerroseedFrontpic:     INCBIN "gfx/pokemon/ferroseed/front.animated.2bpp.lz"
 EggPic:                   INCBIN "gfx/pokemon/egg/front.animated.2bpp.lz"
+
 
 SECTION "Unown Pics 1", ROMX
 
@@ -787,10 +802,19 @@ SECTION "Gyarados Pics", ROMX
 ;GyaradosPlainBackpic:
 ;GyaradosRedBackpic:       INCBIN "gfx/pokemon/gyarados/back.2bpp.lz"
 
+
 SECTION "Mewtwo Pics", ROMX
 
 ;MewtwoArmoredFrontpic:    INCBIN "gfx/pokemon/mewtwo_armored/front.animated.2bpp.lz"
 ;MewtwoArmoredBackpic:     INCBIN "gfx/pokemon/mewtwo_armored/back.2bpp.lz"
+
+
+SECTION "Portrait Pics", ROMX
+
+BeautyPortrait: 		INCBIN "gfx/portraits/beauty.2bpp.lz"
+ZygardeNeutralPortrait: INCBIN "gfx/portraits/Zygarde_neutral.2bpp.lz"
+ZygardeAngryPortrait: 	INCBIN "gfx/portraits/Zygarde_angry.2bpp.lz"
+CelebiNeutralPortrait:  INCBIN "gfx/portraits/Celebi_neutral.2bpp.lz"
 
 
 SECTION "Trainer Pics 1", ROMX

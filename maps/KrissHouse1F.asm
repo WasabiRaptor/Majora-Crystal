@@ -44,7 +44,7 @@ MomTrigger2:
 	playmusic MUSIC_MOM
 	showemote EMOTE_SHOCK, KRISSHOUSE1F_MOM1, 15
 	turnobject KRISSHOUSE1F_MOM1, RIGHT
-	applyonemovement PLAYER, slow_step LEFT
+	applyonemovement PLAYER, slow_step_left
 	jump MomEventScript
 
 MomTrigger3:
@@ -63,7 +63,7 @@ MomTrigger4:
 	playmusic MUSIC_MOM
 	showemote EMOTE_SHOCK, KRISSHOUSE1F_MOM1, 15
 	turnobject KRISSHOUSE1F_MOM1, UP
-	applyonemovement PLAYER, slow_step DOWN
+	applyonemovement PLAYER, slow_step_down
 MomEventScript:
 	opentext
 	writetext MomIntroText

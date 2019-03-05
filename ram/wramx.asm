@@ -218,7 +218,10 @@ ENDU
 
 ENDU
 
-	ds 12 ; unused
+wMysteryDungeonX:: db
+wMysteryDungeonY:: db
+wMysteryDungeonSeed:: db
+	ds 9 ;unused
 
 wTMHMMoveNameBackup:: ds MOVE_NAME_LENGTH
 

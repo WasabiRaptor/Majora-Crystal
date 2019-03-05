@@ -15,12 +15,12 @@ MysteryDungeonEnterScript:
 	end
 MysteryDungeonSetup:
 	ld a, 5
-	ld [hMysteryDungeonX], a
-	ld [hMysteryDungeonY], a
+	ld [wMysteryDungeonX], a
+	ld [wMysteryDungeonY], a
 	ld a, 8
 	call RandomRange
 	add 8
-	ld [hMysteryDungeonSeed], a
+	ld [wMysteryDungeonSeed], a
 	ld a, SPAWN_MYSTERY_DUNGEON
 	ld [wDefaultSpawnpoint], a
 	ret

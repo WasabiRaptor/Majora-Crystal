@@ -62,9 +62,9 @@
 	tilecoll WALL, WALL, WALL, WALL
 	tilecoll WALL, WALL, WALL, WALL
 	tilecoll WALL, WALL, WALL, WALL
-	tilecoll WALL, TOP_WALL, WALL, FLOOR
-	tilecoll TOP_WALL, TOP_WALL, FLOOR, FLOOR
-	tilecoll TOP_WALL, WALL, FLOOR, WALL
+	tilecoll WALL, UP_WALL, WALL, FLOOR
+	tilecoll UP_WALL, UP_WALL, FLOOR, FLOOR
+	tilecoll UP_WALL, WALL, FLOOR, WALL
 	tilecoll FLOOR, FLOOR, FLOOR, WALL
 	tilecoll WALL, FLOOR, WALL, FLOOR
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR

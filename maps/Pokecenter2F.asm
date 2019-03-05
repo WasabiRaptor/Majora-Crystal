@@ -40,12 +40,12 @@ Pokecenter2FTileCallback:
 	callasm .CheckPokecenter2FRegion
 	ifequal $0, .done
 	ifequal $2, .shamouti2f
-	changemap KantoPokecenter2F_BlockData
+	;changemap KantoPokecenter2F_BlockData
 .done
 	return
 
 .shamouti2f
-	changemap KantoPokecenter2F_BlockData
+	;changemap KantoPokecenter2F_BlockData
 	changeblock 0, 6, $3c
 	changeblock 2, 0, $4a
 	return
@@ -271,8 +271,8 @@ Pokecenter2F_CheckGender:
 	end
 
 Pokecenter2FMovementData_ReceptionistWalksUpAndLeft_LookRight:
-	slow_step UP
-	slow_step LEFT
+	slow_step_up
+	slow_step_left
 Pokecenter2FMovementData_ReceptionistLooksRight:
 	turn_head_right
 	step_end
@@ -292,8 +292,8 @@ Pokecenter2FMovementData_PlayerTakesTwoStepsDown:
 	step_end
 
 Pokecenter2FMovementData_ReceptionistStepsRightAndDown:
-	slow_step RIGHT
-	slow_step DOWN
+	slow_step_right
+	slow_step_down
 	step_end
 
 Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingRight:

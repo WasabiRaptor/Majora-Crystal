@@ -579,10 +579,10 @@ Special_SurfStartStep: ; 8379
 	ret
 
 .movement_data
-	slow_step DOWN
-	slow_step UP
-	slow_step LEFT
-	slow_step RIGHT
+	slow_step_down
+	slow_step_up
+	slow_step_left
+	slow_step_right
 
 FollowNotExact:: ; 839e
 	push bc
@@ -807,12 +807,12 @@ QueueFollowerFirstStep: ; 848a
 	jr z, .check_y
 	jr c, .left
 	and a
-	ld a, movement_step + RIGHT
+	ld a, movement_step_right
 	ret
 
 .left
 	and a
-	ld a, movement_step + LEFT
+	ld a, movement_step_left
 	ret
 
 .check_y
@@ -823,12 +823,12 @@ QueueFollowerFirstStep: ; 848a
 	jr z, .same_xy
 	jr c, .up
 	and a
-	ld a, movement_step + DOWN
+	ld a, movement_step_down
 	ret
 
 .up
 	and a
-	ld a, movement_step + UP
+	ld a, movement_step_up
 	ret
 
 .same_xy

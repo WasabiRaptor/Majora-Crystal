@@ -41,19 +41,19 @@ DungeonStepFromWest::
 
 
 MovementFromNorth_NBT::
-	step DOWN
+	step_down
 	step_end
 
 MovementFromSouth_NBT::
-	step UP
+	step_up
 	step_end
 
 MovementFromEast_NBT::
-	step LEFT
+	step_left
 	step_end
 
 MovementFromWest_NBT::
-	step RIGHT
+	step_right
 	step_end
 
 DungeonWarpNorth::
@@ -67,9 +67,9 @@ DungeonWarpNorth::
 	end
 
 GoingNorth::
-	ld a, [hMysteryDungeonY]
+	ld a, [wMysteryDungeonY]
 	inc a
-	ld [hMysteryDungeonY], a
+	ld [wMysteryDungeonY], a
 	ret
 
 DungeonWarpSouth::
@@ -83,9 +83,9 @@ DungeonWarpSouth::
 	end
 
 GoingSouth::
-	ld a, [hMysteryDungeonY]
+	ld a, [wMysteryDungeonY]
 	dec a
-	ld [hMysteryDungeonY], a
+	ld [wMysteryDungeonY], a
 	ret
 
 DungeonWarpEast::
@@ -99,9 +99,9 @@ DungeonWarpEast::
 	end
 
 GoingEast::
-	ld a, [hMysteryDungeonX]
+	ld a, [wMysteryDungeonX]
 	inc a
-	ld [hMysteryDungeonX], a
+	ld [wMysteryDungeonX], a
 	ret
 
 DungeonWarpWest::
@@ -116,9 +116,9 @@ DungeonWarpWest::
 	end
 
 GoingWest::
-	ld a, [hMysteryDungeonX]
+	ld a, [wMysteryDungeonX]
 	dec a
-	ld [hMysteryDungeonX], a
+	ld [wMysteryDungeonX], a
 	ret
 
 SouthToNorthConnections::

@@ -248,6 +248,33 @@ SPRITEMOVEDATA_FIELDS EQU 6
 	const OBJECT_ACTION_RUN             ; 16
 	const OBJECT_ACTION_SAILBOAT_TOP    ; 17
 	const OBJECT_ACTION_SAILBOAT_BOTTOM ; 18
+	
+	const_def
+	const PERSON_ACTION_00              ; 00
+	const PERSON_ACTION_STAND           ; 01
+	const PERSON_ACTION_STEP            ; 02
+	const PERSON_ACTION_BUMP            ; 03
+	const PERSON_ACTION_SPIN            ; 04
+	const PERSON_ACTION_SPIN_FLICKER    ; 05
+	const PERSON_ACTION_FISHING         ; 06
+	const PERSON_ACTION_SHADOW          ; 07
+	const PERSON_ACTION_EMOTE           ; 08
+	const PERSON_ACTION_BIG_SNORLAX     ; 09
+	const PERSON_ACTION_BOUNCE          ; 0a
+	const PERSON_ACTION_WEIRD_TREE      ; 0b
+	const PERSON_ACTION_BIG_DOLL        ; 0c
+	const PERSON_ACTION_BOULDER_DUST    ; 0d
+	const PERSON_ACTION_GRASS_SHAKE     ; 0e
+	const PERSON_ACTION_PUDDLE_SPLASH   ; 0f
+	const PERSON_ACTION_CUT_TREE        ; 10
+	const PERSON_ACTION_SKYFALL         ; 11
+	const PERSON_ACTION_BIG_GYARADOS    ; 12
+	const PERSON_ACTION_STAND_FLIP      ; 13
+	const PERSON_ACTION_POKECOM_NEWS    ; 14
+	const PERSON_ACTION_ARCH_TREE       ; 15
+	const PERSON_ACTION_RUN             ; 16
+	const PERSON_ACTION_SAILBOAT_TOP    ; 17
+	const PERSON_ACTION_SAILBOAT_BOTTOM ; 18
 
 ; see data/sprites/facings.asm:Facings
 	const_def
