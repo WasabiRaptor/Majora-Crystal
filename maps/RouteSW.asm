@@ -1,12 +1,11 @@
 	const_def 2 ; object constants
 
-RouteSW_MapScripts:
+RouteSW_MapScriptHeader:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
 RouteSW_MapEvents:
-	db 0, 0 ; filler
 
 	db 0 ; warp events
 

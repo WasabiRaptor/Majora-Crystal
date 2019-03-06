@@ -1,11 +1,10 @@
-HiddenTreeGrotto_MapScripts:
+HiddenTreeGrotto_MapScriptHeader:
 	db 0 ; scene scripts
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, HiddenGrottoCallback
 
 HiddenTreeGrotto_MapEvents:
-	db 0, 0 ; filler
 
 	db 2 ; warp events
 	warp_event  4, 15, HIDDEN_TREE_GROTTO, -1

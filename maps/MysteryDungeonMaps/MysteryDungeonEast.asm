@@ -1,6 +1,6 @@
 	const_def 2 ; object constants
 
-MysteryDungeonEast_MapScripts:
+MysteryDungeonEast_MapScriptHeader:
 	db 2 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_DEFAULT
 	scene_script .DummyScene1 ; SCENE_FINISHED

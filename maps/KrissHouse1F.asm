@@ -1,10 +1,9 @@
-KrissHouse1F_MapScripts:
+KrissHouse1F_MapScriptHeader:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
 KrissHouse1F_MapEvents:
-	db 0, 0 ; filler
 
 	db 3 ; warp events
 	warp_event  8,  7, TOWN_1, 1

@@ -1,12 +1,11 @@
 	const_def 2 ; object constants
 
-RouteSE3_MapScripts:
+RouteSE3_MapScriptHeader:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
 RouteSE3_MapEvents:
-	db 0, 0 ; filler
 
 	db 0 ; warp events
 

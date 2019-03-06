@@ -1,4 +1,4 @@
-TradeCenter_MapScripts:
+TradeCenter_MapScriptHeader:
 	db 1 ; scene scripts
 	scene_script TradeCenterTrigger0
 
@@ -6,7 +6,6 @@ TradeCenter_MapScripts:
 	callback MAPCALLBACK_OBJECTS, TradeCenter_SetWhichChris
 
 TradeCenter_MapEvents:
-	db 0, 0 ; filler
 
 	db 2 ; warp events
 	warp_event  4,  7, POKECENTER_2F, 2

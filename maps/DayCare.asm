@@ -1,4 +1,4 @@
-Daycare_MapScripts:
+Daycare_MapScriptHeader:
 	db 1 ; scene scripts
 	scene_script DaycareTrigger0
 
@@ -7,7 +7,7 @@ Daycare_MapScripts:
 
 Daycare_MapEvents:
 
-	;db 4 ; warp events
+	db 0 ; warp events
 	;warp_event  0,  4, ROUTE_34, 3
 	;warp_event  0,  5, ROUTE_34, 4
 	;warp_event  2,  7, ROUTE_34, 5

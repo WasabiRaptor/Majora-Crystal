@@ -1,12 +1,11 @@
 	const_def 2 ; object constants
 
-Lake2_MapScripts:
+Lake2_MapScriptHeader:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
 Lake2_MapEvents:
-	db 0, 0 ; filler
 
 	db 0 ; warp events
 

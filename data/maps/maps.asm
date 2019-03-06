@@ -7,8 +7,9 @@ map: MACRO
 ;\6: phone service flag: TRUE to prevent phone calls
 ;\7: time of day: a PALETTE_* constant
 ;\8: fishing group: a FISHGROUP_* constant
-	db BANK(\1_MapAttributes), \2, \3
-	dw \1_MapAttributes
+\1_MapHeader:
+	db BANK(\1_SecondMapHeader), \2, \3
+	dw \1_SecondMapHeader
 	db \4, \5
 	dn \6, \7
 	db \8

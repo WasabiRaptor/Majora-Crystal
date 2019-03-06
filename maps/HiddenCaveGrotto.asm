@@ -1,11 +1,10 @@
-HiddenCaveGrotto_MapScripts:
+HiddenCaveGrotto_MapScriptHeader:
 	db 0 ; scene scripts
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, HiddenGrottoCallback
 
 HiddenCaveGrotto_MapEvents:
-	db 0, 0 ; filler
 
 	db 1 ; warp events
 	warp_event 35, 85, HIDDEN_CAVE_GROTTO, -1

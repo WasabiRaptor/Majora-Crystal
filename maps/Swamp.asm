@@ -1,12 +1,11 @@
 	const_def 2 ; object constants
 
-Swamp_MapScripts:
+Swamp_MapScriptHeader:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
 Swamp_MapEvents:
-	db 0, 0 ; filler
 
 	db 0 ; warp events
 

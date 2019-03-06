@@ -1,4 +1,4 @@
-Colosseum_MapScripts:
+Colosseum_MapScriptHeader:
 	db 1 ; scene scripts
 	scene_script ColosseumTrigger0
 
@@ -7,7 +7,6 @@ Colosseum_MapScripts:
 	callback MAPCALLBACK_NEWMAP, ColosseumScript_InitializeCB
 
 Colosseum_MapEvents:
-	db 0, 0 ; filler
 
 	db 2 ; warp events
 	warp_event  4,  7, POKECENTER_2F, 3

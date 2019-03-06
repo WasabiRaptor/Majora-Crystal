@@ -1,12 +1,11 @@
 	const_def 2 ; object constants
 
-RouteNE1_MapScripts:
+RouteNE1_MapScriptHeader:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
 RouteNE1_MapEvents:
-	db 0, 0 ; filler
 
 	db 0 ; warp events
 

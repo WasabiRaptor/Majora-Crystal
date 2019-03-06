@@ -1,12 +1,11 @@
 	const_def 2 ; object constants
 
-AshPlains1_MapScripts:
+AshPlains1_MapScriptHeader:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
 AshPlains1_MapEvents:
-	db 0, 0 ; filler
 
 	db 0 ; warp events
 

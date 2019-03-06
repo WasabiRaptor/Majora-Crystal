@@ -1,12 +1,11 @@
 	const_def 2 ; object constants
 
-Town3_MapScripts:
+Town3_MapScriptHeader:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
 Town3_MapEvents:
-	db 0, 0 ; filler
 
 	db 0 ; warp events
 

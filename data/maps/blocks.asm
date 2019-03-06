@@ -1,108 +1,108 @@
 SECTION "Map Blocks 1", ROMX
 
-Pokecenter1F_Blocks:
+Pokecenter1F_BlockData:
 	INCBIN "maps/Pokecenter1F.ablk.lz"
 
-Pokecenter2F_Blocks:
+Pokecenter2F_BlockData:
 	INCBIN "maps/Pokecenter2F.ablk.lz"
 
 GenericMart_BlockData:: ; used by tilesets/palettes.asm:LoadSpecialMapPalette
 	INCBIN "maps/Mart.ablk.lz"
 
-Colosseum_Blocks:
+Colosseum_BlockData:
 	INCBIN "maps/Colosseum.ablk.lz"
 
-TradeCenter_Blocks:
+TradeCenter_BlockData:
 	INCBIN "maps/TradeCenter.ablk.lz"
 
-KrissHouse1F_Blocks:
+KrissHouse1F_BlockData:
 	INCBIN "maps/KrissHouse1F.ablk.lz"
 
-KrissHouse2F_Blocks:
+KrissHouse2F_BlockData:
 	INCBIN "maps/KrissHouse2F.ablk.lz"
 
-HiddenTreeGrotto_Blocks:
+HiddenTreeGrotto_BlockData:
 	INCBIN "maps/HiddenTreeGrotto.ablk.lz"
 
-HiddenCaveGrotto_Blocks:
+HiddenCaveGrotto_BlockData:
 	INCBIN "maps/HiddenCaveGrotto.ablk.lz"
 
-Daycare_Blocks:
+Daycare_BlockData:
 	INCBIN "maps/Daycare.ablk.lz"
 
 SECTION "Overworld Map Blocks", ROMX
 
-Town1_Blocks:
+Town1_BlockData:
 	INCBIN "maps/Town1.ablk.lz"
-Bridge_Blocks:
+Bridge_BlockData:
 	INCBIN "maps/Bridge.ablk.lz"
-Town2_Blocks:
+Town2_BlockData:
 	INCBIN "maps/Town2.ablk.lz"
 
 
-RouteNE1_Blocks:
+RouteNE1_BlockData:
 	INCBIN "maps/RouteNE1.ablk.lz"
-Crevasse_Blocks:
+Crevasse_BlockData:
 	INCBIN "maps/Crevasse.ablk.lz"
-RouteNE2_Blocks:
+RouteNE2_BlockData:
 	INCBIN "maps/RouteNE2.ablk.lz"
 
 
-Town3_Blocks:
+Town3_BlockData:
 	INCBIN "maps/Town3.ablk.lz"
 
 
-RouteW1_Blocks:
+RouteW1_BlockData:
 	INCBIN "maps/RouteW1.ablk.lz"
-RouteW2_Blocks:
+RouteW2_BlockData:
 	INCBIN "maps/RouteW2.ablk.lz"
 
 
-AshPlains1_Blocks:
+AshPlains1_BlockData:
 	INCBIN "maps/AshPlains1.ablk.lz"
-AshPlains2_Blocks:
+AshPlains2_BlockData:
 	INCBIN "maps/AshPlains2.ablk.lz"
 
 
-Town4_Blocks:
+Town4_BlockData:
 	INCBIN "maps/Town4.ablk.lz"
 
 
-RouteS_Blocks:
+RouteS_BlockData:
 	INCBIN "maps/RouteS.ablk.lz"
-Swamp_Blocks:
+Swamp_BlockData:
 	INCBIN "maps/Swamp.ablk.lz"
-RouteSW_Blocks:
+RouteSW_BlockData:
 	INCBIN "maps/RouteSW.ablk.lz"
 
 
-Town5_Blocks:
+Town5_BlockData:
 	INCBIN "maps/Town5.ablk.lz"
 
 
-RouteSE1_Blocks:
+RouteSE1_BlockData:
 	INCBIN "maps/RouteSE1.ablk.lz"
-RouteSE2_Blocks:
+RouteSE2_BlockData:
 	INCBIN "maps/RouteSE2.ablk.lz"
-RouteSE3_Blocks:
+RouteSE3_BlockData:
 	INCBIN "maps/RouteSE3.ablk.lz"
 
 
-Town6_Blocks:
+Town6_BlockData:
 	INCBIN "maps/Town6.ablk.lz"
 
 
-Lake1_Blocks:
+Lake1_BlockData:
 	INCBIN "maps/Lake1.ablk.lz"
-Lake2_Blocks:
+Lake2_BlockData:
 	INCBIN "maps/Lake2.ablk.lz"
-Lake3_Blocks:
+Lake3_BlockData:
 	INCBIN "maps/Lake3.ablk.lz"
 
 
-RouteFakeExit_Blocks:
+RouteFakeExit_BlockData:
 	INCBIN "maps/RouteFakeExit.ablk.lz"
-RouteFakeExitLoop_Blocks:
+RouteFakeExitLoop_BlockData:
 	INCBIN "maps/RouteFakeExitLoop.ablk.lz"
 
 
@@ -110,37 +110,37 @@ RouteFakeExitLoop_Blocks:
 
 SECTION "Mystery Dungeon Map Blocks", ROMX
 
-MysteryDungeonNorthSouthEastWest_Blocks:
+MysteryDungeonNorthSouthEastWest_BlockData:
 	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNorthSouthEastWest.ablk.lz"
 
-MysteryDungeonNorthSouthEast_Blocks:
+MysteryDungeonNorthSouthEast_BlockData:
 	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNorthSouthEast.ablk.lz"
-MysteryDungeonNorthSouthWest_Blocks:
+MysteryDungeonNorthSouthWest_BlockData:
 	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNorthSouthWest.ablk.lz"
-MysteryDungeonNorthEastWest_Blocks:
+MysteryDungeonNorthEastWest_BlockData:
 	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNorthEastWest.ablk.lz"
-MysteryDungeonSouthEastWest_Blocks:
+MysteryDungeonSouthEastWest_BlockData:
 	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonSouthEastWest.ablk.lz"
 
-MysteryDungeonNorthSouth_Blocks:
+MysteryDungeonNorthSouth_BlockData:
 	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNorthSouth.ablk.lz"
-MysteryDungeonEastWest_Blocks:
+MysteryDungeonEastWest_BlockData:
 	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonEastWest.ablk.lz"
 
-MysteryDungeonNorthEast_Blocks:
+MysteryDungeonNorthEast_BlockData:
 	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNorthEast.ablk.lz"
-MysteryDungeonNorthWest_Blocks:
+MysteryDungeonNorthWest_BlockData:
 	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNorthWest.ablk.lz"
-MysteryDungeonSouthEast_Blocks:
+MysteryDungeonSouthEast_BlockData:
 	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonSouthEast.ablk.lz"
-MysteryDungeonSouthWest_Blocks:
+MysteryDungeonSouthWest_BlockData:
 	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonSouthWest.ablk.lz"
 
-MysteryDungeonNorth_Blocks:
+MysteryDungeonNorth_BlockData:
 	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonNorth.ablk.lz"
-MysteryDungeonSouth_Blocks:
+MysteryDungeonSouth_BlockData:
 	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonSouth.ablk.lz"
-MysteryDungeonEast_Blocks:
+MysteryDungeonEast_BlockData:
 	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonEast.ablk.lz"
-MysteryDungeonWest_Blocks:
+MysteryDungeonWest_BlockData:
 	INCBIN "maps/MysteryDungeonMaps/MysteryDungeonWest.ablk.lz"

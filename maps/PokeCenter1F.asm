@@ -1,4 +1,4 @@
-AzaleaPokeCenter1F_MapScripts:
+AzaleaPokeCenter1F_MapScriptHeader:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks

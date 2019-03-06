@@ -1,10 +1,9 @@
-MoveDeletersHouse_MapScripts:
+MoveDeletersHouse_MapScriptHeader:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
 MoveDeletersHouse_MapEvents:
-	db 0, 0 ; filler
 
 	db 2 ; warp events
 	;warp_event  2,  7, BLACKTHORN_CITY, 6

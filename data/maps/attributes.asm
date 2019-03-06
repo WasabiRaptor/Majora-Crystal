@@ -5,28 +5,27 @@ map_attributes: MACRO
 ;\4: connections: combo of NORTH, SOUTH, WEST, and/or EAST, or 0 for none
 CURRENT_MAP_WIDTH = \2_WIDTH
 CURRENT_MAP_HEIGHT = \2_HEIGHT
-\1_MapAttributes::
+\1_SecondMapHeader::
 	db \3
-	db CURRENT_MAP_HEIGHT, CURRENT_MAP_WIDTH
-	db BANK(\1_Blocks)
-	dw \1_Blocks
-	db BANK(\1_MapScripts) ; BANK(\1_MapEvents)
-	dw \1_MapScripts
-	dw \1_MapEvents
+	db \2_HEIGHT, \2_WIDTH
+	db BANK(\1_BlockData)
+	dw \1_BlockData
+	db BANK(\1_MapScriptHeader)
+	dw \1_MapScriptHeader
 	db \4
 ENDM
 
 ; Connections go in order: north, south, west, east
 connection: MACRO
 ;\1: direction
-;\2: map name
+;\2: map label
 ;\3: map id
-;\4: x offset for east/west, y offset for north/south
-;\5: distance offset?
+;\4: x (east/west) or y (north/south)
+;\5: offset?
 ;\6: strip length
 if "\1" == "north"
 	map_id \3
-	dw \2_Blocks + \3_WIDTH * (\3_HEIGHT - 3) + \5
+	dw wDecompressScratch + \3_WIDTH * (\3_HEIGHT - 3) + \5
 	dw wOverworldMap + \4 + 3
 	db \6
 	db \3_WIDTH
@@ -35,7 +34,7 @@ if "\1" == "north"
 	dw wOverworldMap + \3_HEIGHT * (\3_WIDTH + 6) + 1
 elif "\1" == "south"
 	map_id \3
-	dw \2_Blocks + \5
+	dw wDecompressScratch + \5
 	dw wOverworldMap + (CURRENT_MAP_HEIGHT + 3) * (CURRENT_MAP_WIDTH + 6) + \4 + 3
 	db \6
 	db \3_WIDTH
@@ -44,7 +43,7 @@ elif "\1" == "south"
 	dw wOverworldMap + \3_WIDTH + 7
 elif "\1" == "west"
 	map_id \3
-	dw \2_Blocks + (\3_WIDTH * \5) + \3_WIDTH - 3
+	dw wDecompressScratch + (\3_WIDTH * \5) + \3_WIDTH - 3
 	dw wOverworldMap + (CURRENT_MAP_WIDTH + 6) * (\4 + 3)
 	db \6
 	db \3_WIDTH
@@ -53,7 +52,7 @@ elif "\1" == "west"
 	dw wOverworldMap + \3_WIDTH * 2 + 6
 elif "\1" == "east"
 	map_id \3
-	dw \2_Blocks + (\3_WIDTH * \5)
+	dw wDecompressScratch + (\3_WIDTH * \5)
 	dw wOverworldMap + (CURRENT_MAP_WIDTH + 6) * (\4 + 3 + 1) - 3
 	db \6
 	db \3_WIDTH

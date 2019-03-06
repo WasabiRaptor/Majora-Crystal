@@ -1,4 +1,4 @@
-Pokecenter2F_MapScripts:
+Pokecenter2F_MapScriptHeader:
 	db 3 ; scene scripts
 	scene_script Pokecenter2FDummyTrigger
 	scene_script Pokecenter2FLeftTradeCenterTrigger

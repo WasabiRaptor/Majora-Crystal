@@ -2,7 +2,7 @@
 	const TEMP_MYSTERY_DUNGEON_NPC
 	const TEMP_BUGSY
 
-Town1_MapScripts:
+Town1_MapScriptHeader:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
@@ -33,7 +33,6 @@ TempBugsyScript:
 	end
 
 Town1_MapEvents:
-	db 0, 0 ; filler
 
 	db 1 ; warp events
 	warp_event  3,  3, KRISS_HOUSE_1F, 2

@@ -1,4 +1,4 @@
-KrissHouse2F_MapScripts:
+KrissHouse2F_MapScriptHeader:
 	db 0 ; scene scripts
 
 	db 2 ; callbacks
@@ -6,8 +6,6 @@ KrissHouse2F_MapScripts:
 	callback MAPCALLBACK_TILES, KrissHouse2FSetSpawn
 
 KrissHouse2F_MapEvents:
-	db 0, 0 ; filler
-
 	db 1 ; warp events
 	warp_event  7,  0, KRISS_HOUSE_1F, 3
 
