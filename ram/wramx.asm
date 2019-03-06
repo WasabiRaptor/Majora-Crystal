@@ -558,12 +558,15 @@ wMoveSelectionMenuType:: ds 1
 
 wCurBaseData::
 wBaseStats::
+wBaseDexNo:: ds 1
 wBaseHP:: ds 1
 wBaseAttack:: ds 1
 wBaseDefense:: ds 1
 wBaseSpeed:: ds 1
 wBaseSpecialAttack:: ds 1
 wBaseSpecialDefense:: ds 1
+wBaseEVYield1:: ds 1
+wBaseEVYield2:: ds 1
 wBaseType::
 wBaseType1:: ds 1
 wBaseType2:: ds 1
@@ -578,9 +581,8 @@ wBaseAbility2:: ds 1
 wBaseHiddenAbility:: ds 1
 wBaseGrowthRate:: ds 1
 wBaseEggGroups:: ds 1
-wBaseEVYield1:: ds 1
-wBaseEVYield2:: ds 1
 wBaseTMHM:: flag_array NUM_TMHMS
+wCurBaseDataEnd::
 
 wCurDamage:: ds 2
 
