@@ -58,8 +58,6 @@ if DEF(DEBUG)
 
 	opentext
 	; time
-	special Special_SetDayOfWeek
-	special Special_InitialClearDSTFlag
 	; full pokegear
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD

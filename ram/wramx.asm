@@ -771,7 +771,7 @@ wNoRTCHours::   ds 1 ; copied to hRTCHours
 wNoRTCMinutes:: ds 1 ; copied to hRTCMinutes
 wNoRTCSeconds:: ds 1 ; copied to hRTCSeconds
 
-	ds 1
+wCycleProgress:: db
 
 wObjectFollow_Leader:: ds 1
 wObjectFollow_Follower:: ds 1

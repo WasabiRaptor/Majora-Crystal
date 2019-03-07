@@ -621,7 +621,6 @@ Continue_DisplayGameTime: ; 5f84
 ; 5f99
 
 ProfElmSpeech: ; 0x5f99
-	farcall InitClock
 	call RotateFourPalettesLeft
 	call ClearTileMap
 

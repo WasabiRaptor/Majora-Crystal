@@ -136,30 +136,73 @@ UpdateGameTimer:: ; 20ad
 
 ;; add a second to the no-RTC fake real-time clock
 UpdateNoRTC::
-	; set our modulus
-	ld a, 60
-	ld b, a
+	xor a
+	ld [hl], a
 
-	ld hl, wNoRTCMinutes
+	ld hl, hMinutes
+	ld a, [hl]
+	inc a
 
-; +1 minute
+	;just add some more 'inc a' here if you need to speed up the clock for testing purposes but make sure its a factor of 60
+
+	cp 60 ;seconds/ingame hour
+	jr nc, .ingameHour
+	ld [hl], a
+	ret
+
+.ingameHour
+	xor a
+	ld [hl], a
+
+	ld hl, hHours
+	ld a, [hl]
+	inc a
+
+	cp 24 ;minutes/ingame day
+	jr nc, .ingameDay
+	ld [hl], a
+
+	;check some time based things hopefully, this might be where the issues are
+	ld a, [wCurDay]
+	cp SATURDAY 
+	ret nz
+
+	ld hl, hHours
+	ld a, [hl]
+	cp 18
+	ld b, 4
+	jr z, .updatecycleprogress
+
+	cp 12
+	ld b, 3
+	jr z, .updatecycleprogress
+
+	cp 6
+	ld b, 2
+	jr z, .updatecycleprogress
+	ret
+
+.ingameDay
+	xor a
+	ld [hl], a
+
+	ld a, [wCurDay]
+	inc a
+	ld [wCurDay], a
+	cp 7 ;use weekdays in allcaps or 0-6 here to test for actual days, if its 7 that means time is up
+	ld b, 1
+	jr nc, .updatecycleprogress
+	cp 1
+	ld b, 10
+	jr z, .updatecycleprogress
+	cp 2
+	ld b, 9
+	jr z, .updatecycleprogress
+	cp 3
+	ld b, 8
+	jr z, .updatecycleprogress
+	ret
+.updatecycleprogress
 	ld a, b
-	inc [hl]
-	sub [hl]
-	ret nz
-	ld [hld], a
-
-; +1 hour
-	ld a, 24
-	inc [hl]
-	sub [hl]
-	ret nz
-	ld [hld], a
-
-; We do not need to check for days overflow! Pokémon Crystal always keeps the
-; RTC within a 140 day loop (see time.asm/FixDays)!
-; Since the no-RTC patch is not running the clock when the GameBoy is off,
-; it is not possible for the clock to stray beyond 140 days, let alone the
-; RTC hardware limit of 512 days!
-	inc [hl]
+	ld [wCycleProgress], a
 	ret

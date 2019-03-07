@@ -22,53 +22,6 @@ TimesOfDay:
 	db 24, NITE
 	db -1, MORN
 
-_InitTime::
-	call GetClock
-	ld hl, hRTCSeconds
-	ld de, wStartSecond
-	ld bc, wStringBuffer2 + 3
-; seconds
-	ld a, [bc]
-	sub [hl]
-	dec hl
-	jr nc, .ok_secs
-	add 60
-.ok_secs
-	ld [de], a
-	dec de
-	dec bc
-; minutes
-	ld a, [bc]
-	sbc [hl]
-	dec hl
-	jr nc, .ok_mins
-	add 60
-.ok_mins
-	ld [de], a
-	dec de
-	dec bc
-; hours
-	ld a, [bc]
-	sbc [hl]
-	dec hl
-	jr nc, .ok_hrs
-	add 24
-.ok_hrs
-	ld [de], a
-	dec de
-	dec bc
-; days
-	ld a, [bc]
-	sbc [hl]
-	dec hl
-	jr nc, .ok_days
-	add 140
-	ld c, 7
-	call SimpleDivide
-.ok_days
-	ld [de], a
-	ret
-
 _InitializeStartDay: ; 113d6
 	jp InitializeStartDay
 ; 113da

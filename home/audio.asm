@@ -485,7 +485,6 @@ music_map: MACRO
 	dw \2
 ENDM
 	db 0 ; end
-SECTION "Home 2", ROM0
 
 CheckSFX:: ; 3dde
 ; Return carry if any SFX channels are active.

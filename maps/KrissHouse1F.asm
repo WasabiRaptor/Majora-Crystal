@@ -63,7 +63,6 @@ MomTrigger4:
 	applyonemovement PLAYER, slow_step_down
 MomEventScript:
 	opentext
-	writetext MomIntroText
 	buttonsound
 	stringtotext GearName, $1
 	callstd receiveitem
@@ -73,30 +72,6 @@ MomEventScript:
 	setscene $1
 	setevent EVENT_KRISS_HOUSE_MOM_1
 	clearevent EVENT_KRISS_HOUSE_MOM_2
-	writetext MomPokegearText
-	buttonsound
-	special Special_SetDayOfWeek
-.InitialSetDSTFlag:
-	writetext MomDSTText
-	yesorno
-	iffalse .NotDST
-	special Special_InitialSetDSTFlag
-	yesorno
-	iffalse .InitialSetDSTFlag
-	jump .InitializedDSTFlag
-.NotDST:
-	special Special_InitialClearDSTFlag
-	yesorno
-	iffalse .InitialSetDSTFlag
-.InitializedDSTFlag:
-	writetext MomRunningShoesText
-	yesorno
-	iftrue .NoInstructions
-	writetext MomInstructionsText
-	buttonsound
-.NoInstructions:
-	writetext MomOutroText
-	waitbutton
 	closetext
 	turnobject KRISSHOUSE1F_MOM1, LEFT
 	special RestartMapMusic
