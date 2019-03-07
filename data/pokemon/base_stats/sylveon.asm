@@ -1,4 +1,4 @@
-	db SYLVEON ; 009
+
 	db  95,  65,  65,  60, 110, 130
     evs  0,   0,   0,   0,   0,   2
 	;   hp  atk  def  spd  sat  sdf

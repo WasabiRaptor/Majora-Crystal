@@ -15,10 +15,12 @@ Town1_MapScriptHeader:
 	db 0 ; bg events
 
 	db 2 ; object events
-	object_event 7, 6, SPRITE_KRIS,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MysteryDungeonEnterScript, -1
-	object_event 7, 7, SPRITE_BUGSY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TempBugsyScript, -1
+	object_event 7, 6, SPRITE_KRIS,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MysteryDungeonEnterScript, -1
+	object_event 7, 7, SPRITE_REAL_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, PERSONTYPE_TRAINER, 3, TrainerYoungsterJoey, -1
 
 MysteryDungeonEnterScript:
+	givepoke VAPOREON, 10
+	end
 	callasm MysteryDungeonSetup
 	special WarpToSpawnPoint
 	newloadmap MAPSETUP_TELEPORT
@@ -37,9 +39,34 @@ MysteryDungeonSetup:
 	ret
 
 ; TEMP
-TempBugsyScript:
-	loadtrainer YOUNGSTER, JOEY1
-	startbattle
-	reloadmapafterbattle
+TrainerYoungsterJoey:
+	trainer YOUNGSTER, JOEY1, EVENT_BEAT_YOUNGSTER_JOEY, YoungsterJoey1SeenText, YoungsterJoey1BeatenText, 0, .Script
+.Script:
 	end
 
+YoungsterJoey1SeenText:
+	text "I just lost, so"
+	line "I'm trying to find"
+	cont "more #mon."
+
+	para "Wait! You look"
+	line "weak! Come on,"
+	cont "let's battle!"
+	done
+
+YoungsterJoey1BeatenText:
+	text "Ack! I lost again!"
+	line "Doggone it!"
+	done
+
+YoungsterJoey1AfterText:
+	text "Do I have to have"
+	line "more #mon in"
+
+	para "order to battle"
+	line "better?"
+
+	para "No! I'm sticking"
+	line "with this one no"
+	cont "matter what!"
+	done
