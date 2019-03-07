@@ -1473,7 +1473,7 @@ wSurfWaveBGEffectEnd::
 SECTION "WRAM 6", WRAMX
 
 UNION
-wDecompressScratch:: ds $80 tiles
+wDecompressScratch:: ds $100 tiles
 NEXTU
 wScratchTileMap:: ds BG_MAP_WIDTH * BG_MAP_HEIGHT
 wScratchAttrMap:: ds BG_MAP_WIDTH * BG_MAP_HEIGHT

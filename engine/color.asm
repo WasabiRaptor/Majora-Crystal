@@ -854,22 +854,7 @@ GetPaintingPalettePointer:
 INCLUDE "data/events/paintings/palettes.asm"
 
 GetMonPalettePointer:
-	push af
-	cp GYARADOS
-	jr nz, .continue
-
-	inc bc ; Form is in the byte after Shiny
-	ld a, [bc]
-	dec bc
-	and FORM_MASK
-	cp GYARADOS_RED_FORM
-	jr nz, .continue
-	;ld hl, RedGyaradosPalette
-	pop af
-	;ret
-
-.continue
-	pop af
+	dec a
 	ld l, a
 	ld h, $0
 	add hl, hl

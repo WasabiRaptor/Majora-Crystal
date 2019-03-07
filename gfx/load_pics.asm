@@ -71,7 +71,7 @@ FrontpicPredef: ; 5108b
 	jp CloseSRAM
 
 _GetFrontpic: ; 510a5
-	ld a, BANK(sScratch)
+	ld a, BANK(sEnemyFrontpicTileCount)
 	call GetSRAMBank
 	push de
 	call GetBaseData
@@ -91,14 +91,14 @@ _GetFrontpic: ; 510a5
 	ld a, d
 	and $f0
 	or e
-	ld [sScratch], a
+	ld [sEnemyFrontpicTileCount], a
 	pop bc
-	ld hl, sScratch + 1 tiles
+	ld hl, sPaddedEnemyFrontpic
 	ld de, wDecompressScratch
 	call PadFrontpic
 	pop hl
 	push hl
-	ld de, sScratch + 1 tiles
+	ld de, sPaddedEnemyFrontpic
 	ld c, 7 * 7
 	ld a, [hROMBank]
 	ld b, a
@@ -126,10 +126,8 @@ GetFrontpicPointer: ; 510d7
 	ret
 
 GetAnimatedFrontpic: ; 51103
-	ld a, $1
-	ld [rVBK], a
 	push hl
-	ld de, sScratch + 1 tiles
+	ld de, sPaddedEnemyFrontpic
 	ld c, 7 * 7
 	ld a, [hROMBank]
 	ld b, a
@@ -154,7 +152,7 @@ GetAnimatedFrontpic: ; 51103
 	ld de, wDecompressScratch + 7 * 7 tiles
 .got_dims
 	; Get animation size (total - base sprite size)
-	ld a, [sScratch]
+	ld a, [sEnemyFrontpicTileCount]
 	sub c
 	ret z ; Return if there's no animation
 	ld c, a
@@ -174,7 +172,7 @@ GetAnimatedFrontpic: ; 51103
 	jr c, .no_overflow
 	; Otherwise, we load the first part...
 	inc a
-	ld [sScratch], a
+	ld [sEnemyFrontpicTileCount], a
 	ld c, (127 - 7 * 7)
 	call Get2bpp
 	; Then move up a bit and load the rest
@@ -182,7 +180,7 @@ GetAnimatedFrontpic: ; 51103
 	ld hl, VTiles4
 	ld a, [hROMBank]
 	ld b, a
-	ld a, [sScratch]
+	ld a, [sEnemyFrontpicTileCount]
 	ld c, a
 .no_overflow
 	jp Get2bpp

@@ -64,6 +64,7 @@ MomTrigger4:
 MomEventScript:
 	opentext
 	buttonsound
+	givepoke EEVEE, 5
 	stringtotext GearName, $1
 	callstd receiveitem
 	setflag ENGINE_POKEGEAR

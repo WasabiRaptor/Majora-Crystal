@@ -69,17 +69,15 @@ FindNest: ; 2a01f
 	push hl
 
 	; assume that navel rock is the first off-screen map, and end the search early
-	ld a, [hli]
+	;ld a, [hli]
 	;cp GROUP_NAVEL_ROCK_INSIDE
-	jr nz, .not_navel_rock_group
-	ld b, a
-	ld a, [hli]
+	;jr nz, .not_navel_rock_group
+	;ld b, a
+	;ld a, [hli]
 	;cp MAP_NAVEL_ROCK_INSIDE
-	jr nz, .not_navel_rock_map
-	pop hl
-	ret
-
-	ld a, [hli]
+	;jr nz, .not_navel_rock_map
+	;pop hl
+	;ret
 .not_navel_rock_group
 	ld b, a
 	ld a, [hli]
@@ -477,17 +475,17 @@ _ChooseWildEncounter:
 
 	ld a, [wMapGroup]
 	;cp GROUP_SOUL_HOUSE_B1F ; Soul House or Lavender Radio Tower
-	jr nz, .not_ghost
-	ld a, [wMapNumber]
+	;jr nz, .not_ghost
+	;ld a, [wMapNumber]
 	;cp MAP_SOUL_HOUSE_B1F ; first Ghost map in its group
-	jr c, .not_ghost
-	ld a, SILPHSCOPE2
-	ld [wCurItem], a
-	ld hl, wNumKeyItems
-	call CheckItem
-	jr c, .not_ghost
-	ld a, BATTLETYPE_GHOST
-	ld [wBattleType], a
+	;jr c, .not_ghost
+	;ld a, SILPHSCOPE2
+	;ld [wCurItem], a
+	;ld hl, wNumKeyItems
+	;call CheckItem
+	;jr c, .not_ghost
+	;ld a, BATTLETYPE_GHOST
+	;ld [wBattleType], a
 .not_ghost
 
 .startwildbattle

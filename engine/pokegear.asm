@@ -738,7 +738,7 @@ TownMap_ConvertLineBreakCharacters: ; 1de2c5
 	jp PlaceString
 
 TownMap_GetJohtoLandmarkLimits:
-	;lb de, SILVER_CAVE, NEW_BARK_TOWN
+	lb de, NEW_BARK_TOWN, NEW_BARK_TOWN
 	ret
 
 TownMap_GetKantoLandmarkLimits: ; 910e8
