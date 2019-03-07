@@ -5,8 +5,6 @@ Town4_MapScriptHeader:
 
 	db 0 ; callbacks
 
-Town4_MapEvents:
-
 	db 0 ; warp events
 
 	db 0 ; coord events

@@ -5,8 +5,6 @@ Lake2_MapScriptHeader:
 
 	db 0 ; callbacks
 
-Lake2_MapEvents:
-
 	db 0 ; warp events
 
 	db 0 ; coord events

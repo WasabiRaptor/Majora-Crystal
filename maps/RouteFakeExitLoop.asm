@@ -5,8 +5,6 @@ RouteFakeExitLoop_MapScriptHeader:
 
 	db 0 ; callbacks
 
-RouteFakeExitLoop_MapEvents:
-
 	db 0 ; warp events
 
 	db 0 ; coord events

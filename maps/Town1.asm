@@ -7,6 +7,17 @@ Town1_MapScriptHeader:
 
 	db 0 ; callbacks
 
+	db 1 ; warp events
+	warp_event  3,  3, KRISS_HOUSE_1F, 2
+
+	db 0 ; coord events
+
+	db 0 ; bg events
+
+	db 2 ; object events
+	object_event 7, 6, SPRITE_KRIS,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MysteryDungeonEnterScript, -1
+	object_event 7, 7, SPRITE_BUGSY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TempBugsyScript, -1
+
 MysteryDungeonEnterScript:
 	callasm MysteryDungeonSetup
 	special WarpToSpawnPoint
@@ -32,15 +43,3 @@ TempBugsyScript:
 	reloadmapafterbattle
 	end
 
-Town1_MapEvents:
-
-	db 1 ; warp events
-	warp_event  3,  3, KRISS_HOUSE_1F, 2
-
-	db 0 ; coord events
-
-	db 0 ; bg events
-
-	db 2 ; object events
-	object_event 7, 6, SPRITE_KRIS,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MysteryDungeonEnterScript, -1
-	object_event 7, 7, SPRITE_BUGSY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TempBugsyScript, -1

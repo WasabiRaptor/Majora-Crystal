@@ -5,8 +5,6 @@ RouteS_MapScriptHeader:
 
 	db 0 ; callbacks
 
-RouteS_MapEvents:
-
 	db 0 ; warp events
 
 	db 0 ; coord events

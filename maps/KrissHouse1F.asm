@@ -3,8 +3,6 @@ KrissHouse1F_MapScriptHeader:
 
 	db 0 ; callbacks
 
-KrissHouse1F_MapEvents:
-
 	db 3 ; warp events
 	warp_event  8,  7, TOWN_1, 1
 	warp_event  9,  7, TOWN_1, 1

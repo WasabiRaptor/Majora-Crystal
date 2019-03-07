@@ -6,8 +6,6 @@ Colosseum_MapScriptHeader:
 	callback MAPCALLBACK_OBJECTS, ColosseumScript_SetWhichChris
 	callback MAPCALLBACK_NEWMAP, ColosseumScript_InitializeCB
 
-Colosseum_MapEvents:
-
 	db 2 ; warp events
 	warp_event  4,  7, POKECENTER_2F, 3
 	warp_event  5,  7, POKECENTER_2F, 3

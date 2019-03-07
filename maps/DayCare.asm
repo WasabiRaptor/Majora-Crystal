@@ -5,8 +5,6 @@ Daycare_MapScriptHeader:
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, DaycareEggCheckCallback
 
-Daycare_MapEvents:
-
 	db 0 ; warp events
 	;warp_event  0,  4, ROUTE_34, 3
 	;warp_event  0,  5, ROUTE_34, 4
