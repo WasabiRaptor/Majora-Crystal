@@ -528,12 +528,9 @@ GetBasePokemonName:: ; 3420
 
 	ld hl, wStringBuffer1
 .loop
-	ld a, [hl]
+	ld a, [hli]
 	cp "@"
-	jr z, .quit
-	inc hl
-	jr .loop
-.quit
+	jr nz, .loop
 	pop hl
 	ret
 

@@ -8,7 +8,7 @@ MapTriggers::
 	scene_var POKECENTER_2F,                               wPokecenter2FSceneID
 	scene_var TRADE_CENTER,                                wTradeCenterSceneID
 	scene_var COLOSSEUM,                                   wColosseumSceneID
-	scene_var KRISS_HOUSE_1F,                            wPlayersHouse1FSceneID
+	scene_var KRISS_HOUSE_1F,                              wPlayersHouse1FSceneID
 
 	scene_var MYSTERY_DUNGEON_NORTH_SOUTH_EAST_WEST,	   wMysteryDungeonNorthSouthEastWestSceneID
 

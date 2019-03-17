@@ -964,8 +964,6 @@ LureBallMultiplier:
 
 MoonBallMultiplier:
 ; multiply catch rate by 4 if mon evolves with moon stone
-GLOBAL EvosAttacksPointers
-
 	push bc
 	ld a, [wTempEnemyMonSpecies]
 	dec a

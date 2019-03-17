@@ -169,8 +169,6 @@
 	const HITMONTOP     ; 95
 	const RIOLU     	; 96
 	const LUCARIO       ; 97
-
-JOHTO_POKEMON EQU const_value
 	const MEDITITE      ; 98
 	const MEDICHAM      ; 99
 	const SNOVER        ; 9a
@@ -275,6 +273,7 @@ JOHTO_POKEMON EQU const_value
 	const MEWTWO     	; fd
 NUM_POKEMON EQU const_value + -1
 	const EGG        ; fe
+	const CANCEL     ; $ff
 
 ; Unown forms
 ; indexes for:
@@ -311,6 +310,8 @@ NUM_POKEMON EQU const_value + -1
 	const UNOWN_X ; 24
 	const UNOWN_Y ; 25
 	const UNOWN_Z ; 26
+	const UNOWN_EXCLAMATION_MARK
+	const UNOWN_QUESTION_MARK
 NUM_UNOWN EQU const_value + -1 ; 26
 
 	const_def 1
