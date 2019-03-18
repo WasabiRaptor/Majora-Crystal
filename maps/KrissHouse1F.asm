@@ -115,7 +115,12 @@ TVScript:
 	line "rolling too!"
 	done
 
-MomScript:
+MomScript:	
+	opentext
+	buttonsound
+	givepoke SYLVEON, 100
+	end
+
 	faceplayer
 	checkscene
 	iffalse .MomEvent
