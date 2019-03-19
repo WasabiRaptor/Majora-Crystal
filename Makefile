@@ -84,9 +84,11 @@ $(roms): $(BUILD_DIR) $(brass_obj) pokebrass.link
 
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
+	mkdir -p $(BUILD_DIR)data
 	mkdir -p $(BUILD_DIR)data/text
 	mkdir -p $(BUILD_DIR)data/maps
 	mkdir -p $(BUILD_DIR)data/pokemon
+	mkdir -p $(BUILD_DIR)engine
 	mkdir -p $(BUILD_DIR)engine/movie
 	mkdir -p $(BUILD_DIR)engine/overworld
 	mkdir -p $(BUILD_DIR)gfx
